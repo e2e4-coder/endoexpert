@@ -1,0 +1,24 @@
+@quacol-main-color: #24488d;
+
+@edu-module-color-1: #59be00;
+@edu-module-color-2: #db4a27;
+@edu-module-color-3: #24488d;
+
+@main-color: #3498db;
+@secondary-color: #24488d;
+
+.placeholder(@rules) {
+
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+  &:-moz-placeholder {
+    @rules();
+  }
+  &::-moz-placeholder {
+    @rules();
+  }
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}

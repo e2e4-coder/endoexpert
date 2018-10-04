@@ -1,0 +1,110 @@
+@import "variables";
+
+.edu-module-result-block {
+
+  color: @quacol-main-color;
+
+  background: #a7e76f;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+  text-align: center;
+  padding: 0 0 20px 0;
+
+  .block-title {
+    height: 37px;
+    background-color: #63c20f;
+    line-height: 37px;
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+
+  }
+
+  .answer-count {
+    margin-bottom: 35px;
+
+    &-digits {
+
+      display: inline-block;
+      background: #fff;
+
+      height: 41px;
+      line-height: 41px;
+      font-size: 30px;
+      font-weight: 500;
+      padding: 0 16px;
+      margin-bottom: 10px;
+
+      b {font-weight: 900}
+    }
+
+    &-count {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+  }
+
+  .result-points {
+
+    margin-bottom: 30px;
+
+    &-caption {
+
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+    }
+
+    .point-item {
+
+      display: inline-block;
+      margin: 0 9px;
+      font-size: 16px;
+      font-weight: 500;
+
+      b {
+        display: inline-block;
+        width: 46px;height: 46px;
+        border-radius: 100%;
+        background: #fff;
+        line-height: 46px;
+        font-weight: 900;
+        font-size: 18px;
+        margin-right: 3px;
+      }
+
+      span {font-weight: 900}
+
+    }
+
+  }
+
+
+  .result-actions {
+    margin-bottom: 35px;
+
+    &-note {
+      font-weight: 500;font-size: 14px;
+    }
+
+  }
+
+
+  &.-not-passed {
+
+    background: #ffc9bc;
+
+    .block-title {background: #db4a27;}
+
+  }
+
+
+
+
+
+}

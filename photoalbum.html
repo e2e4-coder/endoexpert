@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Фотоальбом</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="local/lib/frontend/PhotoSwipe/photoswipe.css">
+    <link rel="stylesheet" href="local/lib/frontend/PhotoSwipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="local/lib/frontend/masonry/masonry.pkgd.min.js"></script>
+    <script src="local/lib/frontend/PhotoSwipe/photoswipe.min.js"></script>
+    <script src="local/lib/frontend/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+    <script src="local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/quacol.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+<div class="container" style="width: 940px;margin: 0 auto;">
+
+
+    <div class="photo-album">
+
+        <div class="album-edit-link"><a href="#">Редактировать альбом</a></div>
+
+        <h1>Название альбома номер 1</h1>
+
+        <div class="album-date">13.05.2018</div>
+
+        <div class="album-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+
+        <div class="album-top-items">
+
+            <div class="cloud-link"><a href="#">Ссылка на архив в облаке</a></div>
+
+            <div class="invite-form">
+                <form>
+                    <label>Пригласить коллегу</label>
+                    <input name="email" type="text" placeholder="ivan@gmail.com">
+                    <button type="submit"></button>
+                </form>
+            </div>
+
+            <div class="share-block">
+                <script type="text/javascript">(function() {
+                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                  }})();</script>
+                <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=04" data-services="facebook,twitter,vkontakte,odnoklassniki,google,livejournal"></div>
+            </div>
+
+        </div>
+
+
+        <div class="photo-list">
+
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/600/400" data-photo-id="1" data-rating="2.7" data-width="600" data-height="400" title="Title..."><img src="img/tmp/photo_1.jpg" alt="" height="239" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/900/1200" data-photo-id="2" data-rating="1" data-voted="1" data-width="900" data-height="1200" title="Title..."><img src="img/tmp/photo_3.jpg" alt="" height="415" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/600/400" data-photo-id="3" data-rating="2" data-width="600" data-height="400" title="Title..."><img src="img/tmp/photo_4.jpg" alt="" height="305" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/900/1200" data-photo-id="4" data-rating="4" data-width="900" data-height="1200" title="Title..."><img src="img/tmp/photo_5.jpg" alt="" height="305" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/600/400" data-photo-id="5" data-rating="5" data-width="600" data-height="400" title="Title..."><img src="img/tmp/photo_2.jpg" alt="" height="416" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+            <div class="photo-item">
+
+                <div class="item-image">
+                    <a href="https://placekitten.com/900/1200" data-photo-id="6" data-rating="1" data-width="900" data-height="1200" title="Title..."><img src="img/tmp/photo_6.jpg" alt="" height="236" width="300"></a>
+                </div>
+
+                <div class="item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="endoexpert-comments">
+
+        <h2>Комментарии</h2>
+
+        <div class="comments-list">
+
+            <div class="comment-item">
+                <div class="comment-author"><b>Иванов Иван</b> (12.12.18 12:46)</div>
+                <div class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-author"><b>Иванов Иван</b> (12.12.18 12:46)</div>
+                <div class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-author"><b>Иванов Иван</b> (12.12.18 12:46)</div>
+                <div class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+
+        </div>
+
+        <div class="comment-form">
+
+            <form>
+                <textarea placeholder="Ваш комментарий"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<script>
+
+  $(document).ready(function () {
+
+    var gallery;
+
+    $.magnificPopup.open({
+      items: {
+        src: '#for-guests-popup'
+      },
+      type: 'inline',
+      modal: true,
+
+      tClose: 'Закрыть (Esc)',
+      tLoading: 'Загрузка...',
+    });
+
+    $('.photo-album .photo-list').masonry({
+      columnWidth: 300,
+      gutter: 20,
+      itemSelector: '.photo-item'
+    });
+
+    var photoItems = [];
+
+
+    var $thumbnailsWrapper = $('#pswp-thumbnails').find('.swiper-wrapper');
+
+
+    $('.photo-album .item-image a').click(function (e)  {
+
+      openPhotoSwipe($(this).parent().parent().index());
+
+      e.preventDefault();
+      return false;
+
+    }).each(function () {
+
+      photoItems.push({
+        src: $(this).attr('href'),
+        title: $(this).attr('title'),
+        w: $(this).data('width'),
+        h: $(this).data('height'),
+        rating: parseFloat($(this).data('rating')),
+        id: $(this).data('photo-id'),
+        voted: $(this).data('voted')
+      });
+
+
+      $thumbnailsWrapper.append('<div class="swiper-slide"><div class="slide-img" style="background-image: url('+$(this).find('img').attr('src')+')"></div></div>');
+
+
+
+
+    });
+
+    $('#pswp-rating').barrating({
+      theme: 'css-stars-fractional',
+      allowEmpty: true,
+      emptyValue: 0,
+      initialRating: 0,
+      onSelect:onRatingSelect
+
+    });
+
+    function onRatingSelect(value, text, event) {
+
+      if (event) {
+
+        $.magnificPopup.open({
+          items: {
+            src: '#photo-vote-popup'
+          },
+          type: 'inline',
+          modal: true,
+
+          tClose: 'Закрыть (Esc)',
+          tLoading: 'Загрузка...',
+        });
+
+
+
+
+      }
+
+    }
+
+    $('.quacol-popup-close-button').click(function () {
+
+      $('#pswp-rating').barrating('clear');
+      $.magnificPopup.close();
+
+    });
+
+    $('#photo-vote-popup-yes-button').click(function () {
+
+      $.post('/json/post-rating.json', $('#pswp-rating-form').serialize(), function (data) {
+
+
+        if (data) {
+
+          photoItems[gallery.getCurrentIndex()].voted = 1;
+          photoItems[gallery.getCurrentIndex()].rating = parseFloat(data);
+
+          updateRatingForm(gallery.getCurrentIndex());
+        }
+
+      });
+
+
+
+
+
+      $.magnificPopup.close();
+
+
+    });
+
+
+    function updateRatingForm(index) {
+
+
+      $('#pswp-rating').barrating('destroy');
+
+      $('#pswp-rating').barrating({
+        theme: 'css-stars-fractional',
+        allowEmpty: true,
+        emptyValue: 0,
+        initialRating: Math.round(photoItems[index].rating * 2) / 2,
+        readonly : !!photoItems[index].voted,
+        onSelect:onRatingSelect
+
+      });
+
+      $('#pswp-rating-form').find('input[name=id]').val(photoItems[index].id);
+
+    }
+
+    function sendPhotoStat(photoId) {
+
+      $.post('stat.php', {id: photoId});
+
+    }
+
+    function openPhotoSwipe(index) {
+
+      var pswpElement = $('.pswp')[0];
+
+      var options = {
+        index: index,
+        shareEl: false,
+        closeOnScroll: false
+      };
+
+      gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, photoItems, options);
+      gallery.init();
+
+      sendPhotoStat(photoItems[index].id);
+
+      var mySwiper = new Swiper ('#pswp-thumbnails', {
+
+        initialSlide : index,
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        allowTouchMove: false
+
+
+
+      });
+
+      mySwiper.on('slideChange', function () {
+       gallery.goTo(mySwiper.activeIndex);
+      });
+
+      gallery.listen('afterChange', function() {
+
+
+        mySwiper.slideTo(gallery.getCurrentIndex());
+        updateRatingForm(gallery.getCurrentIndex());
+        sendPhotoStat(photoItems[gallery.getCurrentIndex()].id);
+
+      });
+
+      updateRatingForm(index);
+
+
+
+    }
+
+  });
+
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+
+                <div class="pswp__caption__center"></div>
+            </div>
+
+            <form id="pswp-rating-form">
+                <input type="hidden" name="id" value="0">
+                <select id="pswp-rating" name="rating">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </form>
+
+            <div class="pswp__thumbnails">
+                <div id="pswp-thumbnails" class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="photo-vote-popup" class="quacol-popup mfp-hide">
+
+    <p>Я подтверждаю свой голос</p>
+
+    <div class="popup-buttons">
+        <button id="photo-vote-popup-yes-button" class="lk-button -orange">Да</button>
+        <button class="lk-button quacol-popup-close-button">Нет</button>
+    </div>
+
+
+</div>
+
+<div id="for-guests-popup" class="quacol-popup mfp-hide">
+
+    <h2>Заголовок</h2>
+
+    <p>Текст...</p>
+
+    <div class="popup-buttons">
+
+        <button class="lk-button -orange quacol-popup-close-button">Ok</button>
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>
+

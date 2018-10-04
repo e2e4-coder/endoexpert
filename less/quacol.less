@@ -1,0 +1,436 @@
+@import "inc/variables";
+@import "inc/edu-module";
+@import "inc/edu-module-detail";
+@import "inc/edu-module-test-block";
+@import "inc/edu-module-review-block";
+@import "inc/edu-module-result-block";
+@import "inc/edu-module-invite-block";
+@import "inc/edu-module-feedback-block";
+@import "inc/quacol-qa";
+@import "inc/quacol-experts";
+@import "inc/quacol-events";
+@import "inc/quacol-icheckbox";
+@import "inc/quacol-request-form";
+
+
+
+.quacol-header {
+
+  margin-bottom: 15px;
+
+  display: flex;
+
+  .quacol-logo { margin-right: 50px;}
+
+  .quacol-top-menu {
+    height: 68px;
+    background: url("../img/line.png") bottom center no-repeat;
+
+    flex-grow: 1;
+    ul {list-style: none;display: block;margin: 0;padding: 0;}
+    //ul ul {display: none;}
+    a {color: #fff;text-decoration: none;}
+
+    >ul {
+
+      display: flex;
+
+      height: 54px;
+      background: @quacol-main-color;
+
+      >li {
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        flex-grow: 1;text-align: center;padding: 0 11px 0 10px;display: flex;flex-direction: column;justify-content: center;
+        background: center right no-repeat url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAiAQMAAACk4yFSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEX///8AAABVwtN+AAAAAXRSTlOArV5bRgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAMSURBVAjXY2CgHAAAAEQAAQbAV6IAAAAASUVORK5CYII=');
+
+        &:last-child {background: none;}
+        &:hover ul {display: block;}
+
+        ul {
+          display: none;
+          position: absolute;top:54px;left: 0;background: fade(@quacol-main-color, 85%);
+          padding-bottom: 10px;
+          font-size: 14px;
+          z-index: 999;
+          border-top:3px solid #fff;
+          font-weight: 500;
+
+          li a {
+            display:block;font-weight: 500;min-height: 28px;line-height: 28px;white-space: nowrap;padding: 0 30px;text-align: left;
+            &:hover {background: @quacol-main-color;}
+
+
+
+          }
+
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.quacol-page-title {
+
+  text-transform: uppercase;
+  background: @quacol-main-color;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  font-size: 18px;
+  height: 42px;
+  line-height: 42px;
+  margin: 0 0 30px 0;
+
+}
+
+#quacol-main-slider {
+
+  margin-bottom: 20px;
+
+
+  .swiper-pagination-bullet {background: none;opacity: 1;border: 1px solid #fff;}
+
+  .swiper-pagination-bullet-active {background: #f3b500;border: 1px solid #f3b500;}
+
+  .swiper-slide {position: relative;}
+
+  .slider-text {
+    position: absolute;
+    top: 40px;left: 0;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    p {
+
+      color: #fff;
+      margin: 0;
+
+
+      &.slider-text-1 {
+        margin-bottom: 40px;
+        font-size: 48px;
+        line-height: 60px;
+        span {background-color: rgba(36, 72, 141, 0.8);box-shadow: 0.5em 0 0 rgba(36, 72, 141, 0.8),-0.5em 0 0 rgba(36, 72, 141, 0.8);}
+      }
+
+      &.slider-text-2 {
+        font-size: 30px;
+        line-height: 40px;
+        span {background-color: rgba(89, 190, 0, 0.8);box-shadow: 0.5em 0 0 rgba(89, 190, 0, 0.8),-0.5em 0 0 rgba(89, 190, 0, 0.8);}
+      }
+
+    }
+  }
+
+
+
+}
+
+.quacol-event-block {
+
+  display: flex;
+  box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+  margin-bottom: 40px;
+
+  .left {
+    width: 470px;
+    position: relative;
+
+    img {display: block;}
+
+    .caption {
+      padding-left: 120px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 450px;
+      min-height: 37px;
+      box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+      background: #fff;
+      font-size: 21px;
+      line-height: 37px;
+      text-decoration: none;
+      color: @quacol-main-color;
+      font-weight: 500;
+
+      .date {
+        position: absolute;top:0;left: 0;
+        width: 105px;
+        height: 37px;
+        line-height: 37px;
+        background: @quacol-main-color;
+        color: #fff;
+        text-align: center;
+      }
+
+
+    }
+
+  }
+
+  .right {
+    flex-grow: 1;
+
+    text-align: center;
+    padding-top: 45px;
+    color: @quacol-main-color;
+    font-weight: 500;
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      background: @quacol-main-color;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      width: 250px;
+      height: 31px;
+      line-height: 31px;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin: 0 auto 12px auto;
+      border-radius: 10px;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 1.5;
+
+      a {color: @quacol-main-color;text-decoration: underline;}
+
+    }
+
+  }
+
+}
+
+.quacol-news-block {
+
+  h2 {font-size: 21px;text-transform: uppercase;text-align: center;color: @quacol-main-color;margin: 0 0 20px 0;font-weight: 900;}
+
+  .quacol-news-slider-wrapper {
+
+    position: relative;
+
+    .swiper-slide {float: left;width: 301px;margin-right: 16px;}
+
+    .swiper-container {height: 333px;padding: 0 3px;margin: 0 -5px;}
+
+    .swiper-button-prev {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjYxIiB2aWV3Qm94PSIwIDAgMjAgNjEiPiAgPGRlZnM+ICAgIDxzdHlsZT4gICAgICAuY2xzLTIgeyAgICAgICAgc3Ryb2tlOiAjMjQ0ODhkOyAgICAgICAgc3Ryb2tlLXdpZHRoOiAzcHg7ICAgICAgICBmaWxsOiBub25lOyAgICAgICAgb3BhY2l0eTogMC4yOyAgICAgIH0gICAgPC9zdHlsZT4gIDwvZGVmcz4gIDxwYXRoIGQ9Ik0xOC41NzEsNTguNzI1IEMxOC41NzEsNTguNzI1IDEuNTAwLDMxLjExNiAxLjUwMCwzMS4xMTYgQzEuNTAwLDMxLjExNiAxOC41NzEsMS41MTUgMTguNTcxLDEuNTE1ICIgaWQ9InBhdGgtMSIgY2xhc3M9ImNscy0yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+      left: -31px;
+      width: 18px;
+      height: 58px;
+      background-size: contain;
+    }
+
+    .swiper-button-next {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjIxIiBoZWlnaHQ9IjYxIiB2aWV3Qm94PSIwIDAgMjEgNjEiPiAgPGRlZnM+ICAgIDxzdHlsZT4gICAgICAuY2xzLTIgeyAgICAgICAgc3Ryb2tlOiAjMjQ0ODhkOyAgICAgICAgc3Ryb2tlLXdpZHRoOiAzcHg7ICAgICAgICBmaWxsOiBub25lOyAgICAgICAgb3BhY2l0eTogMC4yOyAgICAgIH0gICAgPC9zdHlsZT4gIDwvZGVmcz4gIDxwYXRoIGQ9Ik0xLjQ4OCw2MC4xOTQgQzEuNDg4LDYwLjE5NCAxOC41NTksMzIuNTg1IDE4LjU1OSwzMi41ODUgQzE4LjU1OSwzMi41ODUgMS40ODgsMi45ODQgMS40ODgsMi45ODQgIiBpZD0icGF0aC0xIiBjbGFzcz0iY2xzLTIiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+      right: -31px;
+      width: 18px;
+      height: 58px;
+      background-size: contain;
+    }
+
+
+
+
+
+
+  }
+
+
+  .news-item {
+
+    height: 326px;
+    width: 301px;
+    box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+
+    position: relative;
+
+    .item-img {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      img {display: block;}
+
+    }
+
+    .item-date {position: absolute;top: 10px;left: 0;height: 29px;width: 83px;text-align: center;line-height: 29px;color: #fff;background: @quacol-main-color;font-weight: 500;font-size: 16px;}
+
+    .item-title {
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      padding: 0 14px;
+
+      b, strong {font-weight: 900;}
+
+      a {color: @quacol-main-color;text-decoration: none;}
+
+      a:after {
+        content: ' ';
+        display: inline-block;
+        width: 7px;
+        height: 15px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAPCAMAAAAf3yWMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEUAAADztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQDztQAAAABlCS0PAAAALHRSTlMAbpt+WwPA8iUc7M0GTf6Nk0sHzusaKPu6cnhE/KsBINILCs/uJKdHc3dio/dgwVEAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAVElEQVQI1yXKRxKAIBBEUcwZE2bMWbn/+YR2Nq9r6hNNJzhDmNCyHRfD84MQI6LxnyQ0hVnOCoyyqmEjWkXH+0EysmmWLOu2q+/BT8UlbrTPqxryAcgZBJOyppq4AAAAAElFTkSuQmCC');
+        margin-left: 10px;
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+    }
+
+
+  }
+
+  .subscribe-link {
+
+    text-align: center;margin: 20px 0 40px 0;
+    font-size: 16px;
+    font-weight: 500;
+
+    a {color: @quacol-main-color;}
+
+  }
+
+}
+
+.quacol-video-block {
+
+  margin-bottom: 40px;
+
+  h2 {font-size: 21px;text-transform: uppercase;text-align: center;color: @quacol-main-color;margin: 0 0 20px 0;font-weight: 900;}
+
+}
+
+.quacol-photo-block {
+
+  h2 {font-size: 21px;text-transform: uppercase;text-align: center;color: @quacol-main-color;margin: 0 0 20px 0;font-weight: 900;}
+
+  margin-bottom: 40px;
+
+  .photo-items {
+    box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+    text-align: center;
+    padding: 18px 0;
+  }
+
+  .photo-item {
+    display: inline-block;
+    img {display: block;}
+    margin: 0 2px;
+  }
+
+
+
+}
+
+.quacol-modules-block {
+
+  margin-bottom: 40px;
+
+  h2 {font-size: 21px;text-transform: uppercase;text-align: center;color: @quacol-main-color;margin: 0 0 20px 0;font-weight: 900;}
+
+  .edu-module {margin-bottom: 35px;}
+
+
+}
+
+
+.quacol-up-button-wrapper {
+  margin-bottom: 40px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 111px;
+    height: 43px;
+    line-height: 43px;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background: #f3b500;
+    border-radius: 10px;
+  }
+}
+
+.edu-module-button {
+
+  width: 110px;
+  height: 31px;
+  line-height: 28px;
+  box-sizing: border-box;
+  border: 2px solid @quacol-main-color;
+  border-radius: 6px;
+  margin: 0 6px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: @quacol-main-color;
+  font-family: inherit;
+  padding: 0;
+
+  &.-dark {
+    background: @quacol-main-color;
+    color: #fff;
+  }
+
+
+}
+
+.quacol-checkbox {
+  color: @quacol-main-color;
+}
+
+.quacol-popup {
+  background: #fff;
+  width: 760px;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0 auto;
+  color: @quacol-main-color;
+  font-size: 18px;line-height: 30px;
+
+  a {color: inherit;}
+
+  h2 {font-size: 36px;line-height:48px;text-align: center;font-weight: bold;margin: 0 0 50px 0;}
+
+  .popup-buttons {
+
+    text-align: center;
+    margin-top: 30px;
+
+    button {
+      font-size: 18px;
+      height: 43px;
+      line-height: 43px;
+      vertical-align: middle;
+    }
+
+  }
+}
+
+.mfp-bg {z-index: 2000;}
+.mfp-wrap {z-index: 2000;}
+.br-theme-css-stars .br-widget a {outline: none;}

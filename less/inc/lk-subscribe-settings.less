@@ -1,0 +1,107 @@
+@import "variables";
+
+.lk-subscribe-settings {
+
+  table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+
+    th {
+      vertical-align: bottom;
+      color: #231e20;
+      font-size: 18px;
+      text-align: center;
+      border: 1px solid #d3d3d3;
+      border-top:none;
+      padding: 10px;
+
+      &:first-child {border-left: none;}
+      &:last-child {border-right: none;}
+    }
+
+    td {
+
+      text-align: center;
+      padding: 15px 0;
+      font-size: 18px;
+      color: @quacol-main-color;
+      font-weight: bold;
+      border: 1px solid #d3d3d3;
+      position: relative;
+
+
+      &:first-child {text-align: left;padding-right: 10px;border-left: none;}
+
+    }
+
+    tr.colored td {
+      background: @main-color;
+      color: #fff;
+
+      &:first-child {padding-left: 25px;}
+
+    }
+
+  }
+
+  .summary-points {
+
+    text-align: right;
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: @quacol-main-color;
+    line-height: 28px;
+
+    b {display: inline-block;width: 73px;text-align: center;}
+
+  }
+
+  .form-actions {
+    text-align: center;
+
+    .lk-button {
+
+      height: 43px;
+      line-height: 43px;
+      font-size: 18px;
+      margin-right: 20px;
+
+    }
+
+  }
+
+  .points-hint {
+    position: absolute;
+    text-align: left;
+    z-index: 100;
+    top:50%;
+    margin-top: 7px;
+    left: 50%;
+    user-select: none;
+    color: @quacol-main-color;
+
+    span {
+
+      white-space: nowrap;
+      display: inline-block;
+      text-align: left;
+      background: #fff;
+      font-size: 14px;
+      border: 1px solid @quacol-main-color;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      padding: 3px 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+
+    }
+
+  }
+
+
+
+
+
+}

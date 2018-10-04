@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Форма заявки</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="js/quacol.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="container" style="width: 940px;margin: 0 auto;">
+
+    <h1 class="quacol-page-title">Форма заявки</h1>
+
+
+    <div class="quacol-request-form">
+
+        <div id="quacol-request-form-switch" class="form-switch">Свернуть форму</div>
+
+        <div class="form-title">
+            Приглашаем Вас на QUACOL!
+        </div>
+
+        <div id="quacol-request-form-wrapper" class="form-wrapper">
+
+
+            <div class="event-title">
+                Заявка на ОЧНОЕ участие в конференции 26.05.2018 "QuaCol" МОСКВА
+            </div>
+
+
+            <form>
+
+                <div class="form-item">
+                    <label>ФИО</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Ваш город</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Место работы (ЛПУ)</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Специальность</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Должность в ЛПУ\Кафедре</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Контактный телефоне</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item">
+                    <label>Ваш e-mail</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-item -checkbox">
+
+                    <input class="i-check" type="checkbox">
+
+                    <a href="#">Согласен на обработку Персональный данных согласно закону Федеральный закон "О персональных данных" от 27.07.2006 N 152-ФЗ</a>
+
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="lk-button -orange">Отправить</button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+
+
+
+              $('#quacol-request-form-switch').click(function () {
+
+                $('#quacol-request-form-wrapper').slideToggle();
+
+                if ($(this).text() === 'Свернуть форму') {
+
+                  $(this).text('Развернуть форму');
+
+                } else {
+
+                  $(this).text('Свернуть форму');
+                }
+
+              });
+
+            });
+        </script>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

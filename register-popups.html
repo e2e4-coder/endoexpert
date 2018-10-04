@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Формы регистрации</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/popup-forms.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="container" style="width: 940px;margin: 0 auto;">
+
+    <p><button onclick="openRegSiteMedWorkerPopup()">Регистрация на сайте Мед.работника</button></p>
+    <p><button onclick="openRegSiteCompanyAgentPopup()">Регистрация на сайте Представителя компании</button></p>
+    <p><button onclick="openRegSitePatientPopup()">Регистрация на сайте Пациента</button></p>
+
+
+</div>
+
+<script>
+
+    function openRegSiteMedWorkerPopup() {
+      $.magnificPopup.open({
+        items: {
+          src: '#reg-site-med-worker-popup'
+        },
+        type: 'inline',
+        tClose: 'Закрыть (Esc)',
+        tLoading: 'Загрузка...',
+      });
+    }
+
+    function openRegSiteCompanyAgentPopup() {
+      $.magnificPopup.open({
+        items: {
+          src: '#reg-site-company-agent-popup'
+        },
+        type: 'inline',
+        tClose: 'Закрыть (Esc)',
+        tLoading: 'Загрузка...',
+      });
+    }
+
+    function openRegSitePatientPopup() {
+      $.magnificPopup.open({
+        items: {
+          src: '#reg-site-patient-popup'
+        },
+        type: 'inline',
+        tClose: 'Закрыть (Esc)',
+        tLoading: 'Загрузка...',
+      });
+    }
+    
+
+  $(document).ready(function () {
+
+
+
+
+
+  });
+
+</script>
+
+
+<div id="reg-site-med-worker-popup" class="endoexpert-popup mfp-hide">
+
+    <h2>Регистрация на сайте Мед.работника</h2>
+
+    <p style="text-align: center"><b>Зарегистрируйтесь чтобы получить полный доступ к материалам
+        и сервисам EndoExpert. Потребуется заполнить анкету</b></p>
+
+
+
+    <form method="post">
+
+        <div class="form-item">
+            <input type="text" placeholder="E-mail" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <select title="Выберите Вашу основную специализацию" class="-empty">
+                <option value="0" selected>Выберите Вашу основную специализацию</option>
+                <option value="1">Пункт 1</option>
+                <option value="2">Пункт 2</option>
+                <option value="3">Пункт 3</option>
+            </select>
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Пароль" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Подтвердите пароль" class="form-text">
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a>
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Подписаться на новости
+        </div>
+
+        <p style="color: #878787;margin-top: 15px;"><b>Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалиацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.</b></p>
+
+        <div class="g-recaptcha" data-sitekey="6Lc2a3EUAAAAAI_hEPqiixC9RmYJXesAWkkUJWgf"></div>
+
+        <div class="popup-buttons">
+
+            <button type="submit" class="endoexpert-button -orange">Регистрация</button>
+        </div>
+
+    </form>
+
+
+
+
+
+</div>
+
+<div id="reg-site-company-agent-popup" class="endoexpert-popup mfp-hide">
+
+    <h2>Регистрация на сайте Представителя компании</h2>
+
+    <p style="text-align: center"><b>Зарегистрируйтесь чтобы получить полный доступ к сервисам портала
+        и узнать возможные варианты взаимодействия</b></p>
+
+
+
+    <form method="post">
+
+        <div class="form-item">
+            <input type="text" placeholder="Фамилия" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="text" placeholder="Имя" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="text" placeholder="Укажите название компании" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="text" placeholder="Укажите должность" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="text" placeholder="Контактный телефон" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Пароль" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Подтвердите пароль" class="form-text">
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a>
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Подписаться на новости
+        </div>
+
+        <p style="color: #878787;margin-top: 15px;"><b>Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалиацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.</b></p>
+
+        <div class="g-recaptcha" data-sitekey="6Lc2a3EUAAAAAI_hEPqiixC9RmYJXesAWkkUJWgf"></div>
+
+        <div class="popup-buttons">
+
+            <button type="submit" class="endoexpert-button -orange">Регистрация</button>
+        </div>
+
+    </form>
+
+
+
+
+
+</div>
+
+
+<div id="reg-site-patient-popup" class="endoexpert-popup mfp-hide">
+
+    <h2>Регистрация на сайте Пациента</h2>
+
+    <p style="text-align: center"><b>Зарегистрируйтесь чтобы получить полный доступ к сервисам EndoExpert,
+        возможность голосовать, оставлять отзывы, задавать вопросы экспертам.</b></p>
+
+
+
+    <form method="post">
+
+        <div class="form-item">
+            <input type="text" placeholder="E-mail" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Пароль" class="form-text">
+        </div>
+
+        <div class="form-item">
+            <input type="password" placeholder="Подтвердите пароль" class="form-text">
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a>
+        </div>
+
+        <div class="form-item form-item-checkbox">
+            <input type="checkbox" class="i-check" checked="checked"> Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>
+        </div>
+
+        <p style="color: #878787;margin-top: 15px;"><b>Общедоступная часть портала представлена для ознакомления. перед любым действием в отношении здоровья Вы должны проконсультироваться с вашим врачем. Администрация портала не несет ответственности за использовние и применение контента и материалов размещенных на портале.</b></p>
+
+        <div class="g-recaptcha" data-sitekey="6Lc2a3EUAAAAAI_hEPqiixC9RmYJXesAWkkUJWgf"></div>
+
+        <div class="popup-buttons">
+
+            <button type="submit" class="endoexpert-button -orange">Регистрация</button>
+        </div>
+
+    </form>
+
+
+
+
+
+</div>
+
+</body>
+</html>
+

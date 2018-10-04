@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Анкета</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="js/anketa.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="container" style="width: 1050px;margin: 0 auto;">
+
+
+        <div class="endoexpert-anketa">
+
+            <h1>Личные данные (заполнение Анкеты не займет более 10 минут)</h1>
+
+            <form method="post">
+
+                <div class="form-item form-item-checkbox">
+                    <input type="checkbox" class="i-check" > Согласен на <a href="#" target="_blank">обработку персональных данных</a>
+                </div>
+
+
+                <div class="anketa-top">
+
+                    <div class="anketa-photo">
+
+                        <img id="photo-placeholder" src="img/anketa_photo_placeholder.jpg">
+
+                        <input id="anketa-photo-upload" type="file" class="form-file" accept="image/*">
+
+                    </div>
+
+                    <div class="photo-upload-link">
+
+                        <a id="photo-upload-link">Загрузите Вашу фотографию</a>
+
+                    </div>
+
+                    <div class="about-field">
+
+                        <textarea class="form-textarea" placeholder="О себе (укажите информацию, которую считаете необходимым) будет отображаться в Вашем профиле внутри портала. Коммерческая реклама без согласования с администрацией запрещена."></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <div class="form-item">
+                        <div class="form-placeholder">E-mail <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Фамилия <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Имя <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Отчество <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Дата рождения</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Город <sup>*</sup></div>
+                        <input type="text" class="form-text -required" list="city-list">
+                        <datalist id="city-list">
+                            <option value="Москва"></option>
+                            <option value="Санкт-Петербург"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Страна</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Основная специальность</div>
+                        <input type="text" class="form-text" list="speciality-list">
+                        <datalist id="speciality-list">
+                            <option value="Хирургия"></option>
+                            <option value="Другая специальность"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-item-wrapper">
+
+                        <div class="form-item">
+                            <div class="form-placeholder">Дополнительня специальность</div>
+                            <input name="array[]" type="text" class="form-text" list="speciality-list">
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-item form-item-add-more">
+                        <a>Добавить еще одну</a>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Стаж по основной специальности</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="form-section -grey">
+
+                    <h2>Данные о месте работы</h2>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Полное название Учреждения <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Адрес Учреждения <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Должность в ЛПУ <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Доп. должность в ЛПУ</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Ссылка на сайт ЛПУ</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Рабочий телефон в отделение или справочной </div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Специализация отделения <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <hr>
+
+                    <table style="margin-bottom: 15px;">
+                        <tr>
+                            <td style="width: 270px;"><h2 style="margin: 0 0 26px 0;">Отделение оказывет</h2></td>
+                            <td style="width: 160px;">
+                                <div class="form-item form-item-checkbox">
+                                    <input type="checkbox" class="i-check" > Платные услуги
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-item form-item-checkbox">
+                                    <input type="checkbox" class="i-check" > Медицинские услуги детям
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 220px;">
+                                <div class="radios-block">
+                                    <label>Обработка эндоскопов</label>
+                                    <div class="radios-item">
+                                        <input type="radio" name="r1" class="i-check" > Репроцессоры
+                                    </div>
+                                    <div class="radios-item">
+                                        <input type="radio" name="r1" class="i-check" > Ручная
+                                    </div>
+                                    <div class="radios-item">
+                                        <input type="radio" name="r1" class="i-check" > Ручная и репроцессоры
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radios-block">
+                                    <label>Комплектация отделения</label>
+                                    <div class="radios-item">
+                                        <input type="checkbox" class="i-check" > Электрохирургический блок
+                                    </div>
+                                    <div class="radios-item">
+                                        <input type="checkbox" class="i-check" > ВидеоЭндоскопы
+                                    </div>
+                                    <div class="radios-item">
+                                        <input type="checkbox" class="i-check" > Исследования под седацией (наркозом)
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <hr>
+
+
+                    <h2>Кафедра</h2>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Должность на кафедре</div>
+                        <input type="text" class="form-text" list="cathedra-posts-list">
+                        <datalist id="cathedra-posts-list">
+                            <option value="Должность 1"></option>
+                            <option value="Должность 2"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Полное название кафедры</div>
+                        <input type="text" class="form-text" list="cathedra-names-list">
+                        <datalist id="cathedra-names-list">
+                            <option value="Название 1"></option>
+                            <option value="Название 2"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Ссылка на сайт кафедры</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Ученая степень</div>
+                        <input type="text" class="form-text" list="degrees-list">
+                        <datalist id="degrees-list">
+                            <option value="Степень 1"></option>
+                            <option value="Степень 2"></option>
+                        </datalist>
+                    </div>
+
+                    <hr>
+
+                    <h2>Отделение</h2>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Руководитель отделения (ФИО) <sup>*</sup></div>
+                        <input type="text" class="form-text -required">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Врачи отделения</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Старшая сестра</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Медсестры отделения</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">№ отделения</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Главный врач</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                </div>
+
+                <div class="form-section">
+
+                    <h2>Подписки</h2>
+
+
+
+                    <div class="radios-block -inline">
+                        <label>Хотите ли Вы получать рассылку о НОВОСТЯХ  по Вашей специальности? <sup>*</sup></label>
+                        <div class="radios-item">
+                            <input type="radio" name="r2" class="i-check" > Да, ежедневно
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r2" class="i-check" > Да, раз в неделю
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r2" class="i-check" > Да, раз в месяц
+                        </div>
+
+                        <div class="radios-item">
+                            <input type="radio" name="r2" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                    <div class="radios-block -inline">
+                        <label>Хотите ли Вы получать рассылку о предстоящих СОБЫТИЯХ (конференции\тренинги) по Эндоскопии, Колопроктологии, Гастроэнтерологии, Онкологии и Хирургии?</label>
+                        <div class="radios-item">
+                            <input type="radio" name="r5" class="i-check" > Да, ежедневно
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r5" class="i-check" > Да, раз в неделю
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r5" class="i-check" > Да, раз в месяц
+                        </div>
+
+                        <div class="radios-item">
+                            <input type="radio" name="r5" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                    <div class="radios-block -inline">
+                        <label>Хотите ли Вы получать рассылку о новом контенте по специальности?</label>
+                        <div class="radios-item">
+                            <input type="radio" name="r3" class="i-check" > Да, ежедневно
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r3" class="i-check" > Да, раз в неделю
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r3" class="i-check" > Да, раз в месяц
+                        </div>
+
+                        <div class="radios-item">
+                            <input type="radio" name="r3" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                    <div class="radios-block -inline">
+                        <label>Готовы ли Вы принять участие в ОПРОСАХ?</label>
+                        <div class="radios-item">
+                            <input type="radio" name="r4" class="i-check" > Да
+                        </div>
+                        <div class="radios-item">
+                            <input type="radio" name="r4" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                    <div class="radios-block -inline">
+                        <label>Хотите ли Вы получать электронную версию журнала <a href="#" target="_blank">«Дайджест EndoExpert.ru»</a>:</label>
+                        <div class="radios-item">
+                            <input type="radio" name="r6" class="i-check" > Да
+                        </div>
+
+                        <div class="radios-item">
+                            <input type="radio" name="r6" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                    <div class="radios-block -inline">
+                        <label>Подписка на вакансии по Вашей специальности в  Вашем городе?</label>
+                        <div class="radios-item">
+                            <input type="radio" name="r7" class="i-check" > Да
+                        </div>
+
+                        <div class="radios-item">
+                            <input type="radio" name="r7" class="i-check" > Нет
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-section -grey">
+
+                    <h2>Согласия</h2>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Согласен на размещение информации обо мне в общем доступе в реестре Врачей специалистов на EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Опубликовать рабочий номер телефона
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Опубликовать также номер мобильного телефона указать
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Опубликовать фото в реестре врачей специалистов
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Опубликовать информацию «О себе» в реестре
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h2>Ваши интересы</h2>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Хочу пройти обучение "на рабочем месте" у коллег в своем городе (без получения свидетельства)
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Могу обучать коллег "на рабочем месте" у себя в отделении
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > Хочу пройти обучение "на рабочем месте" у ведущих специалистов по России (т.е.готовы к командировке)
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какую существующую информацию о медицине Вы ищете и не можете найти?</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Обзор на какую тему по Вашей специальности, Вы бы хотели, чтобы мы опубликовали в следующем номере Дайджеста EndoExpert.ru</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какие направления в Медицине Вас интересуют и чему бы Вы хотели научиться?</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                </div>
+
+
+                <div class="form-section -grey">
+
+                    <h2>Опросы</h2>
+
+                    <div class="radios-block">
+                        <label>Состоите ли Вы в группах Endoscopy в социальных сетях</label>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > Facebook <a href="https://www.facebook.com/groups/EndoExpert.ru" target="_blank">https://www.facebook.com/groups/EndoExpert.ru/</a>
+                        </div>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > Доктор на работе <a href="https://www.doktornarabote.ru/group/595" target="_blank">https://www.doktornarabote.ru/group/595</a>
+                        </div>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > VK <a href="https://vk.com/club130357526" target="_blank">https://vk.com/club130357526</a>
+                        </div>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > Telegram канал Endoscopy <a href="https://t.me/EndoExpertRU" target="_blank">https://t.me/EndoExpertRU</a>
+                        </div>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > Instagram <a href="https://www.instagram.com/endoexpert.ru" target="_blank">https://www.instagram.com/endoexpert.ru/</a>
+                        </div>
+                        <div class="radios-item">
+                            <input type="checkbox" class="i-check" > не люблю соц.сети
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какие ресурсы интренета используете для того, чтобы быть в курсе событий, новостей, статей, видео по специальности</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какие журналы по специальности Вы читаете\простматриваете</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+
+                    <div>&nbsp;</div>
+
+
+                    <h3>Подготовка к колоноскопии</h3>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Как Ваши пациенты узнают назначенную Вами подготовку к колоноскопии и гастроскопии?</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой % применения препарата в Вашем ЛПУ сейчас (1=10%) [МОВИПРЕП]</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой % применения препарата в Вашем ЛПУ сейчас (1=10%) [Фортранс]</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой % применения препарата в Вашем ЛПУ сейчас (1=10%) [Лавакол]</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой % применения препарата в Вашем ЛПУ сейчас (1=10%) [Пикопреп]</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой % применения препарата в Вашем ЛПУ сейчас (1=10%) [Эндофальк]</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой препарат назначаете для лечения изжоги?</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Какой ИПП назначаете для лечения язвеной болезни?</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h2>Сотрудничество. Подработка. Волонтерство.</h2>
+
+
+                    <h3>Английский язык</h3>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > A0 — Нулевой уровень владения английским
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > А1 — начальный уровень владения английским — Beginner
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > A2 — базовый уровень владения английским — Elementary
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > B1 — Средний уровень владения английским — Intermediate
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > B2 — Высший средний уровень — Upper-Intermediate
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > C1 — продвинутый уровень владения английским — Advanced
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input name="r8" type="radio" class="i-check" > C2 — профессиональный уровень владения — Proficient
+                    </div>
+
+                    <div>&nbsp;</div>
+
+                    <h3>Могу помочь\содействовать</h3>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > <span style="display: inline-block;width: 90%;position: relative;top:8px;">заранее оповещать о предстоящих событиях Эндоскопии\Гастроэнтерологии\Колопроктологии\Хирургии\ Онкологии для размещения на портале EndoExpert.ru</span>
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > договориться с организаторами об онлайн-трансляции на EndoExpert.ru конференций\вебинаров и т.п.
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > договориться с издательством о размещении статей\обзоров из печатных\интернет журналов на EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > договориться о размещении материалов (лекций\доклатов\презентаций) с Авторами и правообладателями
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > договориться с онлайн-библиотекой о доступе для пользователей EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > организовать тренинг\лекцию\семинар\конференцию для пользователей EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > организовать вебинар\онлайн-конференцию для пользователей EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > предоставить зал\помещение для проведение тренинга\лекции\семинара\конференции
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > привлечь спонсоров для оплаты работы операторов онлайн-трансляции
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > готов стать спонсором раздела\страницы на EndoExpert.ru
+                    </div>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > <span style="display: inline-block;width: 90%;position: relative;top:8px;">могу рекомендовать хорошего и недорого дизайнера, копирайтера, журналиста, иллюстратора, контент-менеджера, программиста</span>
+                    </div>
+
+                    <div>&nbsp;</div>
+
+
+                    <h3>Подработка и Работа</h3>
+
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > не нужна подработка
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу писать статьи\обзоры по Эндоскопии, Гастроэнтерологии, Колопроктологии, Хирургии
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу переводить статьи\обзоры с Английского языка
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу писать статьи по организации здравоохранения, правовым вопросам, СанПин
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу размещать контент на сайте (1С Битрикс)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу писать прессрелизы, новости, копирайт\рерайт, интервьюирование, отчеты о событиях (журналистика)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу выполнить верстку журнала ( в Adobe Illustrator и Indesign)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу производить иллюстрации (графику, инфографику, обработка в графическом редакторе)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу обрабатывать видео (в видеоредакторе: Sony Vegas, Adobe и др.)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу проводить профессиональную видеосъемку (конференции: репортажная съемка)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу проводить профессиональную фотосъемку (конференции: репортажная съемка)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу программировать (1С Битрикс, Эксель)
+                    </div>
+                    <div class="form-item form-item-checkbox">
+                        <input type="checkbox" class="i-check" > могу агрегировать новости, события
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Ваши предложения...</div>
+                        <input type="text" class="form-text">
+                    </div>
+
+                </div>
+
+
+                <div class="form-section -grey">
+
+                    <h2>Навыки</h2>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Владение эндоскопическими методиками</div>
+                        <input type="text" class="form-text">
+
+                        <div class="field-tags">
+                            <span>семианр</span>
+                            <span>корпоратив</span>
+                            <span>конференция</span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-placeholder">Владение эндоскопическими интервенции</div>
+                        <input type="text" class="form-text">
+
+                        <div class="field-tags">
+                            <span>семианр</span>
+                            <span>корпоратив</span>
+                            <span>конференция</span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <textarea class="form-textarea" placeholder="Ваши идеи по улучшению портала EndoExpert.ru, информации, эндоскопии" style="height: 110px;"></textarea>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button class="endoexpert-button -orange" type="submit">Отправить</button>
+                    <a class="endoexpert-button" href="#">Отмена</a>
+
+                </div>
+
+
+
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    <script>
+
+      $(document).ready(function () {
+
+
+      });
+
+    </script>
+
+
+</div>
+</body>
+</html>
+

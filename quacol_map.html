@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Карта</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/quacol.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="container" style="width: 940px;margin: 0 auto;">
+
+    <a name="top"></a>
+
+
+    <div class="quacol-header">
+
+        <div class="quacol-logo"><a href="#"><img src="img/quacol_logo.png" width="143" height="58" alt="QuaCol"></a></div>
+
+        <div class="quacol-top-menu">
+            <ul>
+                <li><a href="#">О QuaСol</a>
+
+                    <ul>
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Эксперты</a></li>
+                        <li><a href="#">Учебные модули</a></li>
+                        <li><a href="#">Брошюра</a></li>
+                        <li><a href="#">Предстоящие QuaСol</a></li>
+                        <li><a href="#">Рейтинги</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Новости<br>и материалы</a></li>
+                <li><a href="#">Вопросы<br>Экспертам</a></li>
+                <li><a href="#">Образовательные<br>модули</a></li>
+                <li><a href="#">Подготовка<br>к обследованию</a></li>
+
+
+
+
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="lk-fixed-link">
+        <div class="link-wrapper">
+            <a class="lk-button">Личный кабинет</a>
+        </div>
+
+    </div>
+
+
+    <div class="quacol-events-map">
+
+        <div class="quacol-events-map-header">
+            <h2>КАРТА QuaCol</h2>
+        </div>
+
+        <div id="quacol-events-map"></div>
+
+
+
+    </div>
+
+    <script>
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('quacol-events-map', {
+          center: [55.76, 37.64],
+          zoom: 7,
+          behaviors: ['default','scrollZoom'],
+          controls: ['zoomControl', 'fullscreenControl']
+            }, {
+              searchControlProvider: 'yandex#search'
+            });
+
+        var data = [
+          {
+            "ID": "1635",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Радуга",
+            "UF_NAME": "Аптека \"Кедр\"",
+            "UF_ADDR": "г.Санкт-Петербург г, Обводного канала наб.,   д.183",
+            "UF_PHONE": "7 ()(812)5751302",
+          },
+          {
+            "ID": "1636",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Родник здоровья/ЛекОптТорг/ОФТ",
+            "UF_NAME": "Аптека \"ЛекОптТорг\"",
+            "UF_ADDR": "г.Санкт-Петербург, Старо-петергофский,  проспект д.43/45",
+            "UF_PHONE": "7 (812)6410101",
+          },
+          {
+            "ID": "1637",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Хэлпер",
+            "UF_NAME": "Аптека \"Лекрус\"",
+            "UF_ADDR": "г.Санкт-Петербург г, Марата,   д.86",
+            "UF_PHONE": "7 ()(812)3273542",
+          },
+          {
+            "ID": "1638",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "",
+            "UF_NAME": "Аптека \"БАЛТИКА-МЕД\"",
+            "UF_ADDR": "г.г Санкт-Петербург, Казначейская,  улица д.д 6/13",
+            "UF_PHONE": "",
+          },
+          {
+            "ID": "1639",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "",
+            "UF_NAME": "Аптека \"Биофарм\" №38",
+            "UF_ADDR": "г.Санкт-Петербург, Декабристов,  улица д.27, ул.Глинки, 3-5-7",
+            "UF_PHONE": "7 (812)5715755",
+          },
+          {
+            "ID": "1640",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "",
+            "UF_NAME": "Аптека \"Ника Фарм\"",
+            "UF_ADDR": "г.Санкт-Петербург, Старопетергофский,  проспект д.21 к.4",
+            "UF_PHONE": "7 (812)5753249#(812)7660411",
+          },
+          {
+            "ID": "1641",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "",
+            "UF_NAME": "Аптека \"Фармасеть\" №2",
+            "UF_ADDR": "г.Санкт-Петербург, Клинский/Серпуховская,  проспект д.18/20",
+            "UF_PHONE": "",
+          }
+        ];
+
+        var dataPrev = [
+          {
+            "ID": "1631",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Аптека для бережливых",
+            "UF_NAME": "Аптека \"Для бережливых\"",
+            "UF_ADDR": "г.Санкт-Петербург, Московский,  проспект д.4",
+            "UF_PHONE": "7 (800)2347851",
+          },
+          {
+            "ID": "1632",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Невис",
+            "UF_NAME": "Аптека \"Невис\" № 408",
+            "UF_ADDR": "г.г Санкт-Петербург, пр-кт Вознесенский,   д.д 47",
+            "UF_PHONE": "",
+          },
+          {
+            "ID": "1633",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Невис",
+            "UF_NAME": "Аптека \"Невис\" №22",
+            "UF_ADDR": "г.Санкт-Петербург, Большая Подьяческая/Римского-Корсакова,  улица д.17/21",
+            "UF_PHONE": "7 (812)3149573#(812)7034530",
+          },
+          {
+            "ID": "1634",
+            "UF_CITY": "Адмиралтейский",
+            "UF_DISTRICT": "Адмиралтейский",
+            "UF_NETWORK": "Опека",
+            "UF_NAME": "Аптека \"Планета Здоровья\"",
+            "UF_ADDR": "г.Санкт-Петербург, Сенная,  площадь д.13",
+            "UF_PHONE": "7 (812)3863354",
+          },
+
+        ];
+
+        var collection = new ymaps.GeoObjectCollection({}, {});
+
+        var collectionPrev = new ymaps.GeoObjectCollection({}, {});
+
+        myMap.geoObjects.add(collection);
+
+
+        loadPlacemarks(data, false, collection, myMap);
+        loadPlacemarks(dataPrev, true, collectionPrev, myMap);
+
+
+
+
+
+
+
+        //myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){ if(myMap.getZoom() > 10) {}});
+
+
+        $('#prev-events-switch').on('ifChecked', function () {
+
+
+          myMap.geoObjects.add(collectionPrev);
+
+            myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){ if(myMap.getZoom() > 10) {}});
+
+
+        }).on('ifUnchecked', function () {
+
+          myMap.geoObjects.remove(collectionPrev);
+
+
+          myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){ if(myMap.getZoom() > 10) {}});
+
+
+        });
+
+
+
+
+      });
+
+      function loadPlacemarks(data, isPrev, collection, myMap) {
+
+        var requests = [];
+
+        for (var i=0;i<data.length;i++) {requests.push(data[i].UF_ADDR)}
+
+        var geoCoder = new MultiGeocoder;
+
+        geoCoder.geocode(requests, {results : 1}).then(function (res) {
+
+
+          for (var i=0;i<res.geoObjects._childrenCount;i++) {
+
+
+            var object = res.geoObjects.get(i);
+            var coords = object.geometry.getCoordinates();
+            //console.log(object);
+
+            var data_index = getDataIndexFromRequest(object.geocoder_request, data);
+
+
+            var baloonContent =
+                '<b>' + data[data_index].UF_NAME + '</b>' +
+                '<p>' + data[data_index].UF_ADDR + '</p>';
+
+
+            if (data[data_index].UF_PHONE) {
+
+              baloonContent = baloonContent + '<p>Телефон: ' + data[data_index].UF_PHONE.replace('#', ', 7 ') + '</p>';
+
+            }
+
+            collection.add(new ymaps.Placemark(coords, {
+              hintContent: data[data_index].UF_NAME,
+              balloonContent: baloonContent,
+              //iconContent: i+1
+            }, {
+              iconLayout: 'default#imageWithContent',
+              iconImageHref: isPrev ? 'img/quacol_placemark_prev.png' : 'img/quacol_placemark.png',
+              // Размеры метки.
+              iconImageSize: [32, 41],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-16, -20],
+              // Смещение слоя с содержимым относительно слоя с картинкой.
+              iconContentOffset: [0, 15],
+              // Макет содержимого.
+              //iconContentLayout: MyIconContentLayout
+            }));
+
+          }
+
+
+
+          myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){ if(myMap.getZoom() > 10) {}});
+
+
+
+
+
+
+        });
+
+
+
+      }
+      
+      function getDataIndexFromRequest(request, data) {
+
+        for (var i=0;i<data.length;i++) {
+
+          if (request === data[i].UF_ADDR) return i
+
+        }
+
+        return -1;
+
+      }
+
+      /* Класс для геокодирования списка адресов или координат.
+      * @class
+      * @name MultiGeocoder
+      * @param {Object} [options={}] Дефолтные опции мультигеокодера.
+      */
+      function MultiGeocoder(options) {
+        this._options = options || {results : 1};
+      }
+
+      /**
+       * Функция множественнеого геокодирования.
+       * @function
+       * @requires ymaps.util.extend
+       * @see http://api.yandex.ru/maps/doc/jsapi/2.x/ref/reference/util.extend.xml
+       * @requires ymaps.util.Promise
+       * @see http://api.yandex.ru/maps/doc/jsapi/2.x/ref/reference/util.Promise.xml
+       * @name MultiGeocoder.geocode
+       * @param {Array} requests Массив строк-имен топонимов и/или геометрий точек (обратное геокодирование)
+       * @returns {Object} Как и в обычном геокодере, вернем объект-обещание.
+       */
+      MultiGeocoder.prototype.geocode = function (requests, options) {
+        var self = this,
+            size = requests.length,
+            defer = new ymaps.vow.defer(),
+            geoObjects = new ymaps.Collection();
+
+        requests.forEach(function (request, index) {
+          ymaps.geocode(request, ymaps.util.extend({}, self._options, options))
+              .then(
+                  function (response) {
+
+                    //console.log(response.metaData.geocoder.request);
+
+                    var geoObject = response.geoObjects.get(0);
+
+                    geoObject.geocoder_request = response.metaData.geocoder.request;
+
+                    geoObject && geoObjects.add(geoObject, index);
+                    --size || defer.resolve({ geoObjects : geoObjects });
+                  },
+                  function (err) {
+                    defer.reject(err);
+                  }
+              );
+        });
+
+        return defer.promise();
+      };
+    </script>
+
+    <div class="quacol-previous-events-checkbox quacol-checkbox">
+        <label>
+            <input id="prev-events-switch" type="checkbox" class="i-check"> Показать предыдущие мероприятия
+        </label>
+    </div>
+
+
+    <div class="quacol-events -color-1">
+
+        <div class="quacol-events-header">
+            <h2>Ближайшие события</h2>
+        </div>
+
+        <div class="quacol-events-items">
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">04 Апр 2019 - 06 Апр 2019</div>
+                    <div class="event-title"><a href="#">ESGE Days 2019</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Prague,<br>Czech Republic
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Записаться</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">28 Мар 2019 - 30 Мар 2019</div>
+                    <div class="event-title"><a href="#">Kонференция «Актуальные вопросы эндоскопии» 2019</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Санкт-Петербург
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Записаться</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">01 Мар 2019 - 02 Мар 2019</div>
+                    <div class="event-title"><a href="#">Научно-практическая конференция «Стандарты качества диагностики и терапии заболеваний верхних отделов ЖКТ»</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Москва
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Записаться</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="quacol-events -color-3">
+
+        <div class="quacol-events-header">
+            <h2>Прошедшие события</h2>
+        </div>
+
+        <div class="quacol-events-items">
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">04 Апр 2019 - 06 Апр 2019</div>
+                    <div class="event-title"><a href="#">ESGE Days 2019</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Prague,<br>Czech Republic
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Подробнее</button>
+                        <button class="edu-module-button">Материалы</button>
+                        <button class="edu-module-button">Фотографии</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">28 Мар 2019 - 30 Мар 2019</div>
+                    <div class="event-title"><a href="#">Kонференция «Актуальные вопросы эндоскопии» 2019</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Санкт-Петербург
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Подробнее</button>
+                        <button class="edu-module-button">Материалы</button>
+                        <button class="edu-module-button">Фотографии</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quacol-events-item">
+
+                <div class="col-1">
+                    <img src="img/tmp/event.jpg" alt="">
+
+                    <div class="info-bar">
+                        <span class="comments-count">20</span>
+                        <span class="views-count">3000</span>
+                        <span class="stars-count">5</span>
+                    </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="event-date">01 Мар 2019 - 02 Мар 2019</div>
+                    <div class="event-title"><a href="#">Научно-практическая конференция «Стандарты качества диагностики и терапии заболеваний верхних отделов ЖКТ»</a></div>
+                </div>
+
+                <div class="col-3">
+                    <div class="event-place">
+                        Москва
+                    </div>
+                </div>
+
+                <div class="col-4">
+
+                    <div class="button-wrapper">
+                        <button class="edu-module-button">Подробнее</button>
+                        <button class="edu-module-button">Материалы</button>
+                        <button class="edu-module-button">Фотографии</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+

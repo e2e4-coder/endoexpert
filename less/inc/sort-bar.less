@@ -1,0 +1,42 @@
+@import "variables";
+
+.sort-bar {
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 30px 0;
+  align-items: center;
+
+
+  .sort-label {
+    color: @quacol-main-color;
+  }
+
+  .sort-item {
+
+    a {
+      color: #7e7e7e;
+    }
+
+    &.-active a {color: @main-color;}
+
+
+
+  }
+
+  .sort-icon {
+    display: inline-block;
+    width: 17px;
+    height: 13px;
+    vertical-align: middle;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAMAAAB4p3UoAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAPFBMVEX///+rq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6v///99QHc3AAAAEnRSTlMABrE2M5mo7SqW4R6B1RK0w35rPE5lAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAE5JREFUCNdjYGBgYGRiZgABFiFWBghgE2LnQBHhFBIS4uJGEuERAgFePrgICz+/gBAXP78gsjkwFhkiSObB5BB2wlXD3YXQD3M7QgTiPwAjQASvGVZsSQAAAABJRU5ErkJggg==');
+  }
+
+  .lk-button {
+    vertical-align: middle;
+    padding: 0 8px;
+    margin: 0;
+  }
+
+}

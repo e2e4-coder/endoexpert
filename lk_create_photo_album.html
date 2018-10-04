@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Создать фотоальбом</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="css/build.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="js/lk_create_photo_album.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <a name="top"></a>
+    <div id="lk">
+
+
+
+        <div class="lk-main-wrapper">
+
+            <div class="lk-create-photo-album">
+                <h1>Создать альбом</h1>
+
+
+                <form>
+
+                    <div class="form-item">
+
+                        <label>Название фотоальбома</label>
+                        <input id="album-name" type="text" class="form-text" maxlength="112">
+                        <div id="album-name-char-counter"></div>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label>Дата мероприятия</label>
+                        <input type="text" class="date-picker form-text  -date">
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label>Описание мероприятия</label>
+                        <textarea class="form-textarea"></textarea>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label>Ссылка на архив с оригиналами</label>
+                        <input type="text" class="form-text">
+
+                    </div>
+
+                    <div class="checkboxes-block">
+
+                        <div class="col-1">
+                            <label>
+                                <input type="checkbox" class="i-check" checked="checked"> Отображать на странице «Мовипреп»
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="i-check" > Отображать на странице «StandUP»
+                            </label>
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <label>
+                                <input type="checkbox" class="i-check" > Отображать на странице «QUACOL»
+                            </label>
+
+
+
+
+                            <div class="checkbox-wrapper">
+                                <label>
+                                    <input type="checkbox" class="i-check" > Водяной знак ко всему альбому
+                                </label>
+
+                                <button id="watermark-select" type="button">Выбрать</button>
+                                <input id="selected-watermark-id" type="hidden" >
+
+                                <button id="file-watermark-select" type="button">Загрузить свой</button>
+                                <input id="file-watermark" type="file" class="form-file" accept="image/*">
+
+                                <div id="watermark-preview-wrapper">
+                                    <img src="">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <!--
+                    <div class="radios-block">
+
+                        <div class="block-label">Система голосования за фото:</div>
+
+
+                        <label>
+                            <input type="radio" name="rating-type" class="i-check" checked="checked"> 5 звезд
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating-type" class="i-check" > 10 звезд
+                        </label>
+
+
+
+                    </div>
+                    -->
+                    <div class="form-item -select-link">
+
+                        <label>Кто может просматривать этот альбом?</label>
+
+                        <div class="select-link">
+                            <input type="hidden" value="0">
+                            <a>Только я</a>
+                            <div class="select-link-options">
+                                <div data-value="0">Только я</div>
+                                <div data-value="1">Вариант 1</div>
+                                <div data-value="2">Вариант 2</div>
+                                <div data-value="3">Вариант 3</div>
+                                <div data-value="4">Вариант 4</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-item -select-link">
+
+                        <label>Кто может комментировать фотографии?</label>
+
+                        <div class="select-link">
+                            <input type="hidden" value="0">
+                            <a>Все пользователи</a>
+                            <div class="select-link-options">
+                                <div data-value="0">Все пользователи</div>
+                                <div data-value="1">Вариант 1</div>
+                                <div data-value="2">Вариант 2</div>
+                                <div data-value="3">Вариант 3</div>
+                                <div data-value="4">Вариант 4</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label>Пригласить к просмотру (введите имейлы через запятую)</label>
+                        <input type="text" class="form-text">
+
+                    </div>
+
+                    <div class="form-item -image-upload">
+
+                        <label>Загрузка альбома</label>
+
+                        <div class="upload-images">
+
+                            <div id="upload-album-button" class="image-item upload-button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAeBAMAAAAm3NivAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEX///////////////////////+65XQCAAAABXRSTlMAu3ciRI+lclYAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAALklEQVQY02NgAANBQUEBBmQQGhoaMOQEVENRgAJtBExcQADIDAEzDAaN90kXAAD99T7vjUlohwAAAABJRU5ErkJggg==" width="31" height="30" alt=""></div>
+
+                            <input type="file" class="form-file" multiple accept="image/*">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-item -image-upload">
+
+                        <label>Загрузка обложки или главного фото альбома</label>
+
+                        <div class="upload-images">
+
+                            <div id="upload-album-cover-button" class="image-item upload-button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAeBAMAAAAm3NivAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEX///////////////////////+65XQCAAAABXRSTlMAu3ciRI+lclYAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAALklEQVQY02NgAANBQUEBBmQQGhoaMOQEVENRgAJtBExcQADIDAEzDAaN90kXAAD99T7vjUlohwAAAABJRU5ErkJggg==" alt=""></div>
+
+                            <input type="file" class="form-file" accept="image/*">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label>Теги (для фильтров и поиска, выбрать не более 10 штук)</label>
+                        <input type="text" class="form-text">
+
+                        <div class="tags-helper">
+                            <span>семианр</span>
+                            <span>корпоратив</span>
+                            <span>конференция</span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label style="margin-bottom: 7px;">
+                            <input type="checkbox" class="i-check" > Создать новость о размещении альбома (автоматичексий текст с картинкой)
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button class="-orange" type="submit">Создать и опубликовать сейчас</button>
+
+                        <button type="submit">Создать и опубликовать позже</button>
+
+                        <a href="#">Отмена</a>
+
+                    </div>
+
+
+                </form>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="lk-sidebar-wrapper">
+
+            <div class="lk-sidebar">
+
+                <div class="sidebar-block -head">Избранное</div>
+
+                <div class="sidebar-block -info">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAulBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///+NEPzTAAAAPHRSTlMAYcXx56Q0A5/zvsv7UG2oGj/pIuTiCUx/kwfwu40G7b/ZAjyIfZILK7jho7P9RoDf+c70GxVW90Nc5pcPqi7PAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHtJREFUCNc1jGsXgVAURIe8rkIIlUfKO0TIc/7/73LPtcyHvdaeNecAKJWtSrUGSb1B1bTptETa7LhAt6f6WrzBULoRfU0GZh2OJyJTI7NorhnFiciCS80V1xtgG5sH4Y7p/nCkysz6dGZ+yXnNfse3AneHjyf+eb2tzxeyVgsphCoZbAAAAABJRU5ErkJggg==" width="12" height="12" alt="">
+                    <a href="#">Продвинутый поиск</a><br>
+                    13113 баллов ЭндоЭксперт.ру<br>
+                    540 баллов НМО<br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">17 видео</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">20 фотографий</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv////+JRB2AAAAIXRSTlMABikwKAQ1++AxiUXMQ27NO/ZvM/5w6T0nKyL39dTrrAE2kW0bAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFFJREFUCNeNzEcSgCAQRFGCmBExYrbvf0mFmrJ051/12zTjQkoZKc58cQIgzfKA4t4oNSoP7WFq2OZB28H2hGF0bpoJoUW9sP6DVd8Dse3UcV7aJQ3nzJodiwAAAABJRU5ErkJggg==" width="12" height="13" alt="">
+                    <a href="#">11 файлов</a><br>
+                    <br>
+                    Ваш рейтинг: <span>745 / 6933</span><br>
+                    Ваш рейтинг QauCol: <span>523 / 700</span><br>
+
+                </div>
+
+                <div class="sidebar-block -head"><a href="#">Кабинет статистики</a></div>
+
+                <div class="sidebar-block -links">
+                    <a href="#">Предложить новость</a>
+                    <br>
+                    <a href="#">Загрузить видео/фото/файл</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Сообщения (2)</a><br>
+                    <a href="#">Текущие опросы</a><br>
+                    <a href="#">Подать завяку на QuaCol</a><br>
+                    <a href="#">Подать завяку на мероприятие</a><br>
+                    <a href="#">Органайзер</a><br>
+                    <a href="#">Управление подпиской</a><br>
+                    <a href="#">Опросы</a><br>
+                    <a href="#">Голосования</a><br>
+                    <a href="#">Рейтинги</a><br>
+                    <a href="#">Реестры</a><br>
+                    <a href="#">Топ 100</a><br>
+                    <a href="#">Новое видео</a><br>
+                    <a href="#">Случайная выборка</a>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Тратить баллы<br>ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Зарабатывание<br>баллов ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Баллы НМО/Сертификаты</a><br>
+                    <a href="#">Чат по специальности</a><br>
+                    <a href="#">Чат заведующих отделениями</a><br>
+
+                </div>
+
+                <div class="sidebar-block -ask-question">
+
+                    <div class="item">
+                        <img src="img/ask_question_engineer.jpg" width="122" height="159" alt="">
+                        <br>
+                        <a href="#">Задать вопрос инженеру</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/ask_question_medpred.jpg" width="167" height="160" alt="">
+                        <br>
+                        <a href="#">Задать вопрос медпреду</a>
+                    </div>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Вызов медпреда</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Запрос инструкций</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div id="select-watermark-popup" class="endoexpert-popup mfp-hide">
+
+    <h2>Выбор водяного знака</h2>
+
+    <div class="watermark-select-list">
+
+
+    </div>
+
+    <div class="popup-buttons">
+
+        <button id="select-watermark-popup-ok" disabled="disabled" type="button" class="endoexpert-button -orange">Выбрать</button>
+
+        <button  id="select-watermark-popup-cancel" type="button" class="endoexpert-button">Отмена</button>
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>

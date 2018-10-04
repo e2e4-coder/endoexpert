@@ -1,0 +1,83 @@
+@import "variables";
+
+.quacol-request-form {
+
+  color: @quacol-main-color;
+  width: 700px;
+  margin-bottom: 40px;
+
+  position: relative;
+
+  .form-switch {
+    position: absolute;top: 0;right: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #ffa430;
+    cursor: pointer;
+  }
+
+  .form-title {
+
+    color: #231e20;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 45px;
+
+  }
+
+  .event-title {
+
+    font-size: 30px;font-weight: bold;
+    margin-bottom: 45px;
+
+  }
+
+  .form-item {
+    margin-bottom: 20px;
+    width: 590px;
+
+    label {
+      font-size: 16px;font-weight: bold;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    input[type=text] {
+
+
+      border: 1px solid lightgrey;
+      outline: none;
+      border-radius: 5px;
+      height: 46px;
+      line-height: 46px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      width: 100%;
+
+
+    }
+
+    &.-checkbox {
+      margin-top: 30px;
+
+      box-sizing: border-box;
+      position: relative;
+      padding-left: 37px;
+      font-size: 16px;
+
+      a {color: inherit}
+
+      .icheckbox_quacol {
+        position: absolute;top: 0;left: 0;
+      }
+
+    }
+
+  }
+
+  .form-actions {
+    margin-top: 40px;
+  }
+
+}

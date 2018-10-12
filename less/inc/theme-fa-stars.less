@@ -1,0 +1,60 @@
+@import "variables";
+
+.br-theme-fa-stars .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-fa-stars .br-widget a {
+  font: normal normal normal 25px/25px "Font Awesome 5 Free";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  margin-right: 2px;
+}
+.br-theme-fa-stars .br-widget a:after {
+  content: '\f005';
+  color: @main-color;
+}
+.br-theme-fa-stars .br-widget a.br-active:after {
+  content: '\f005';
+  color: @main-color;
+  font-weight: 900;
+}
+.br-theme-fa-stars .br-widget a.br-selected:after {
+  content: '\f005';
+  color: @main-color;
+  font-weight: 900;
+}
+.br-theme-fa-stars .br-widget a.br-fractional:after {
+  content: '\f123';
+  color: @main-color;
+}
+.br-theme-fa-stars .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-fa-stars .br-readonly a {
+  cursor: default;
+}
+.br-theme-fa-stars .br-reverse a.br-fractional {
+  display: inline-block;
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+@media print {
+  .br-theme-fa-stars .br-widget a:after {
+    content: '\f006';
+    color: black;
+  }
+  .br-theme-fa-stars .br-widget a.br-active:after,
+  .br-theme-fa-stars .br-widget a.br-selected:after {
+    content: '\f005';
+    color: black;
+  }
+  .br-theme-fa-stars .br-widget a.br-fractional:after {
+    content: '\f123';
+    color: black;
+  }
+}

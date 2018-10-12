@@ -1,0 +1,68 @@
+[
+  {
+    "id" : 1,
+    "first_name": "Иван",
+    "patronymic": "Иванович",
+    "last_name": "Иванов",
+    "speciality": "Гастроэтеролог",
+    "rating": 40,
+    "online" : true,
+    "best_friend" : false,
+    "image": "img/tmp/friend.jpg"
+  },
+  {
+    "id" : 2,
+    "first_name": "Петр",
+    "patronymic": "Иванович",
+    "last_name": "Петров",
+    "speciality": "Гастроэтеролог",
+    "rating": 10,
+    "online" : true,
+    "best_friend" : false,
+    "image": "img/tmp/friend.jpg"
+  },
+  {
+    "id" : 3,
+    "first_name": "Вася",
+    "patronymic": "Иванович",
+    "last_name": "Сидоров",
+    "speciality": "Гастроэтеролог",
+    "rating": 5,
+    "online" : false,
+    "best_friend" : true,
+    "image": "img/tmp/friend.jpg"
+  },
+  {
+    "id" : 4,
+    "first_name": "Иван",
+    "patronymic": "Иванович",
+    "last_name": "Иванов",
+    "speciality": "Гастроэтеролог",
+    "rating": 40,
+    "online" : true,
+    "best_friend" : false,
+    "image": "img/tmp/friend.jpg"
+  },
+  {
+    "id" : 5,
+    "first_name": "Петр",
+    "patronymic": "Иванович",
+    "last_name": "Петров",
+    "speciality": "Гастроэтеролог",
+    "rating": 10,
+    "online" : true,
+    "best_friend" : false,
+    "image": "img/tmp/friend.jpg"
+  },
+  {
+    "id" : 6,
+    "first_name": "Вася",
+    "patronymic": "Иванович",
+    "last_name": "Сидоров",
+    "speciality": "Гастроэтеролог",
+    "rating": 5,
+    "online" : false,
+    "best_friend" : true,
+    "image": "img/tmp/friend.jpg"
+  }
+]

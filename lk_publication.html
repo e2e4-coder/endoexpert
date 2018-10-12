@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Публикация</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="local/lib/frontend/jquery.flip/jquery.flip.min.js"></script>
+    <script src="local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://unpkg.com/vuejs-paginate@latest"></script>
+
+
+    <script src="js/lk.js"></script>
+    <script src="js/lk_publication.js"></script>
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <a name="top"></a>
+    <div id="lk">
+
+        <div class="lk-main-wrapper">
+
+            <div class="endoexpert-breadcrumbs">
+
+                <a href="#">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Образовательный проект QuaCol МОСКВА 2018</span>
+
+            </div>
+
+            <div class="lk-news-module -color-3 -video -no-shadow">
+
+                <div class="lk-news-module-header">
+
+                    <div class="module-title"><a href="#">Название рубрики</a></div>
+
+                    <div class="module-header-right">
+
+                        <div class="add-to-buttons">
+
+                            Добавить в <span class="add-to-favorite"><span class="button-hint">в избранное</span></span> или <span class="add-to-learn"><span class="button-hint">для изучения</span></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="endoexpert-publication">
+
+                <div class="publication-top">
+                    <img class="main-image" src="img/tmp/publication_image.jpg" width="264" height="278">
+
+                    <div class="right-side">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscg elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
+
+                        <div class="publication-authors">
+                            Иванов И.И., Сидиров А.А., Иванов И.И., Сидиров А.А.,<br>
+                            Иванов И.И., Сидиров А.А., Иванов И.И., Сидиров А.А.,  
+                        </div>
+
+                        <p class="-light-grey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+
+                <p class="-grey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+
+
+                <div class="publication-info">
+                    Источник: <a href="https://ru.wikipedia.org/wiki/Lorem_ipsum" target="_blank">https://ru.wikipedia.org/wiki/Lorem_ipsum</a>
+                    <br>
+                    06.09.18 &nbsp;&nbsp;&nbsp; 12:45 &nbsp;&nbsp;&nbsp; Иванов В.В.
+                </div>
+
+
+                <div class="publication-rating">
+
+                    <div class="rating-label">Оцените материал: </div>
+
+                    <select id="publication-rating-select" title="Рейтинг" data-publication-id="234234" data-current-rating="2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                </div>
+
+                <div class="subscribe-settings">
+
+                    <div class="form-item">
+                        <input id="publication-subscribe-topic" class="i-check" type="checkbox" data-topic-id="23423"> Подписаться на новые сообщения этой темы
+                    </div>
+
+                    <div class="form-item">
+                        <input id="publication-subscribe-author" class="i-check" type="checkbox" data-author-id="123456"> Подписаться на новые сообщения Автора
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="endoexpert-poll">
+
+                <div class="poll-question front">
+
+                    <form>
+
+                        <button class="flip-toggle flip-toggle-top"></button>
+
+                        <div class="question-wrapper">
+                            <h2>Опрос</h2>
+
+                            <div class="question-title">Правильным определением социальной гигиены как науки является:</div>
+
+                            <div class="form-item">
+                                <label><input name="r1" type="radio" value="1" class="i-check"> Социальная гигиена - наука об общественном здоровье и здравоохранении</label>
+                            </div>
+
+                            <div class="form-item">
+                                <label><input name="r1" type="radio" value="2" class="i-check"> Социальная гигиена - наука о социальных проблемах медицины и здравоохранения</label>
+                            </div>
+
+                            <div class="form-item">
+                                <label><input name="r1" type="radio" value="3" class="i-check"> Социальная гигиена - система мероприятий по охране здоровья населения</label>
+                            </div>
+                        </div>
+
+                        <button class="flip-toggle flip-toggle-bottom">Нажмите чтобы перевернуть</button>
+
+                    </form>
+
+
+                </div>
+
+                <div class="poll-results back">
+
+                    <div class="result-item">
+                        <div class="item-text">
+                            Социальная гигиена - наука об общественном здоровье и здравоохранении
+                        </div>
+
+                        <div class="item-bar">
+                            <div><div style="width: 60%;background: #3598fe;">60%</div></div>
+                        </div>
+
+                    </div>
+
+                    <div class="result-item">
+                        <div class="item-text">
+                            Социальная гигиена - наука о социальных проблемах медицины и здравоохранения
+                        </div>
+
+                        <div class="item-bar">
+                            <div><div style="width: 20%;background: #4300cc;">20%</div></div>
+                        </div>
+
+                    </div>
+
+                    <div class="result-item">
+                        <div class="item-text">
+                            Социальная гигиена - система мероприятий по охране здоровья населения
+                        </div>
+
+                        <div class="item-bar">
+                            <div><div style="width: 20%;background: #ff8702;">20%</div></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="invite-friends-wrapper">
+
+                <button id="invite-friends-button" type="button" class="invite-friends-button">Пригласить из списка друзей</button>
+
+                <div id="invite-friends-popup" class="endoexpert-popup mfp-hide">
+
+                    <div id="invite-friends-app" data-topic-id="34534">
+
+                        <div class="sort-panel">
+
+                            <span class="panel-label">Сортировать по:</span>
+
+                            <span class="sort-item" v-bind:class="{'-active': sort_by == 'speciality'}" v-on:click="sortItems('speciality')">Специальности</span>
+                            <span class="sort-item" v-bind:class="{'-active': sort_by == 'first_name'}" v-on:click="sortItems('first_name')">Имени</span>
+                            <span class="sort-item" v-bind:class="{'-active': sort_by == 'last_name'}" v-on:click="sortItems('last_name')">Фамилии</span>
+                            <span class="sort-item" v-bind:class="{'-active': sort_by == 'rating'}" v-on:click="sortItems('rating')">Рейтингу</span>
+
+                            <span class="filter-item -first">
+                                <label><input id="invite-app-set-online-filter" type="checkbox" class="i-check2" v-model="online_filter"> Сейчас на сайте</label>
+                            </span>
+
+                            <span class="filter-item">
+                                <label><input id="invite-app-set-best-friends-filter" type="checkbox" class="i-check2"> Лучшие друзья</label>
+                            </span>
+
+                        </div>
+
+                        <div class="search-panel">
+                            <div class="search-text">
+                                <input type="text" placeholder="Введите фамилию или имя" v-model="text_filter">
+                            </div>
+
+                            <div class="search-alphabet">
+                                <span v-bind:class="{'-active': letter == letter_filter}" v-for="letter in alphabet" v-on:click="handleLetterClick($event)">{{letter}}</span>
+
+                            </div>
+                        </div>
+
+                        <div class="friends-list">
+
+                            <div v-for="item in page_items" class="list-item" v-on:click="handleFriendClick(item.id)" v-bind:class="{'-selected': selected_items.indexOf(item.id) !== -1}">
+
+                                <div class="item-image">
+                                    <img v-bind:src="item.image">
+                                </div>
+
+                                <div class="item-title"><span>{{ item.first_name }} {{ item.patronymic }} {{ item.last_name }}</span></div>
+
+                                <div class="item-speciality"><span>{{ item.speciality }}</span></div>
+
+
+                            </div>
+
+                            <p v-if="!items.length" style="text-align: center;padding-top: 50px;width: 100%;">Ничего не найдено. Уточните параметры поиска.</p>
+
+
+
+                        </div>
+
+                        <paginate v-if="pages_count"
+                                v-model="page"
+                                :page-count="pages_count"
+                                :page-range="3"
+                                :margin-pages="3"
+                                :first-last-button="true"
+                                :click-handler="selectPage"
+                                :prev-text="''"
+                                :next-text="''"
+                                :last-button-text="'<span class=last><span>'"
+                                :first-button-text="'<span class=first><span>'"
+                                :container-class="'vue-pagination'"
+                                :break-view-link-class="'break-view'"
+                                :next-link-class="'next'"
+                                :prev-link-class="'previous'"
+                                :page-class="'page-item'">
+                        </paginate>
+
+
+                        <div class="popup-buttons">
+
+                            <button :disabled="selected_items.length === 0" type="button" class="lk-button -orange" v-on:click="sendInvitation()">Пригласить</button>
+
+                            <button type="button" class="lk-button" onclick="$.magnificPopup.close()">Отмена</button>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+                <div id="invite-friends-popup-success" class="endoexpert-popup mfp-hide">
+
+                    <p>Приглашение успешно отправлено!</p>
+
+                    <div class="popup-buttons">
+                        <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="endoexpert-related-articles">
+
+                <h2>Статьи по теме</h2>
+
+                <div class="lk-news-block">
+
+                    <div class="news-item">
+
+                        <a class="item-img" href="#">
+                            <img src="img/tmp/news_1.jpg" alt="">
+                            <div class="item-date">18.03.18</div>
+                            <div class="lk-comments-views-rating">
+
+                                <span class="comments-count">20</span>
+                                <span class="views-count">3000</span>
+
+                                <div class="rating">
+                                    <select title="Рейтинг" data-current-rating="2.5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </a>
+
+                        <div class="item-title"><a href="#">Встречайте! <b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU</a></div>
+
+                    </div>
+
+                    <div class="news-item">
+
+                        <a class="item-img" href="#">
+                            <img src="img/tmp/news_2.jpg" alt="">
+                            <div class="item-date">17.03.18</div>
+                            <div class="lk-comments-views-rating">
+
+                                <span class="comments-count">20</span>
+                                <span class="views-count">3000</span>
+
+                                <div class="rating">
+                                    <select title="Рейтинг" data-current-rating="2.5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </a>
+
+                        <div class="item-title"><a href="#"><b>28.03.18 Санкт-Петербург</b> образовательный проект "QuaCol" — (quality of colonoscopy — качественная колоноскопия)</a></div>
+
+                    </div>
+
+                    <div class="news-item">
+
+                        <a class="item-img" href="#">
+                            <img src="img/tmp/news_3.jpg" alt="">
+                            <div class="item-date">14.03.18</div>
+                            <div class="lk-comments-views-rating">
+
+                                <span class="comments-count">20</span>
+                                <span class="views-count">3000</span>
+
+                                <div class="rating">
+                                    <select title="Рейтинг" data-current-rating="2.5">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </a>
+
+                        <div class="item-title"><a href="#"><b>INVENDOSCOPY E200 SYSTEM</b> — прототип стерильного одноразового колоноскопа</a></div>
+
+                    </div>
+
+                </div>
+
+                <div class="load-more-wrapper">
+                    <button type="button" class="lk-button -orange">Показать еще</button>
+                </div>
+            </div>
+
+            <div class="endoexpert-related-articles">
+
+                <h2>Рекоммендуемые статьи</h2>
+
+                <div class="lk-short-news-item">
+                    <a href="#">
+                        <span class="item-date">11.03.2018</span>
+                        <div class="lk-comments-views-rating-small">
+                            <span class="comments-count"><i class="fas fa-comment"></i> 20</span>
+                            <span class="views-count"><i class="fas fa-eye"></i> 300</span>
+                            <span class="rating"><i class="fas fa-star"></i> 5</span>
+                        </div>
+                        <span class="item-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                    </a>
+                </div>
+
+                <div class="lk-short-news-item">
+                    <a href="#">
+                        <span class="item-date">11.03.2018</span>
+                        <div class="lk-comments-views-rating-small">
+                            <span class="comments-count"><i class="fas fa-comment"></i> 20</span>
+                            <span class="views-count"><i class="fas fa-eye"></i> 300</span>
+                            <span class="rating"><i class="fas fa-star"></i> 5</span>
+                        </div>
+                        <span class="item-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                    </a>
+                </div>
+
+                <div class="lk-short-news-item">
+                    <a href="#">
+                        <span class="item-date">11.03.2018</span>
+                        <div class="lk-comments-views-rating-small">
+                            <span class="comments-count"><i class="fas fa-comment"></i> 20</span>
+                            <span class="views-count"><i class="fas fa-eye"></i> 300</span>
+                            <span class="rating"><i class="fas fa-star"></i> 5</span>
+                        </div>
+                        <span class="item-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                    </a>
+                </div>
+
+                <div class="load-more-wrapper">
+                    <button type="button" class="lk-button -orange">Показать еще</button>
+                </div>
+
+            </div>
+
+            <div class="endoexpert-tag-list">
+
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция</a>
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция квакол</a>
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция</a>
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция квакол</a>
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция</a>
+                <a href="#">семианр</a>
+                <a href="#">корпоратив</a>
+                <a href="#">конференция квакол</a>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+        <div class="lk-sidebar-wrapper">
+
+            <div class="lk-sidebar">
+
+                <div class="sidebar-block -head">Избранное</div>
+
+                <div class="sidebar-block -info">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAulBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///+NEPzTAAAAPHRSTlMAYcXx56Q0A5/zvsv7UG2oGj/pIuTiCUx/kwfwu40G7b/ZAjyIfZILK7jho7P9RoDf+c70GxVW90Nc5pcPqi7PAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHtJREFUCNc1jGsXgVAURIe8rkIIlUfKO0TIc/7/73LPtcyHvdaeNecAKJWtSrUGSb1B1bTptETa7LhAt6f6WrzBULoRfU0GZh2OJyJTI7NorhnFiciCS80V1xtgG5sH4Y7p/nCkysz6dGZ+yXnNfse3AneHjyf+eb2tzxeyVgsphCoZbAAAAABJRU5ErkJggg==" width="12" height="12" alt="">
+                    <a href="#">Продвинутый поиск</a><br>
+                    13113 баллов ЭндоЭксперт.ру<br>
+                    540 баллов НМО<br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">17 видео</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">20 фотографий</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv////+JRB2AAAAIXRSTlMABikwKAQ1++AxiUXMQ27NO/ZvM/5w6T0nKyL39dTrrAE2kW0bAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFFJREFUCNeNzEcSgCAQRFGCmBExYrbvf0mFmrJ051/12zTjQkoZKc58cQIgzfKA4t4oNSoP7WFq2OZB28H2hGF0bpoJoUW9sP6DVd8Dse3UcV7aJQ3nzJodiwAAAABJRU5ErkJggg==" width="12" height="13" alt="">
+                    <a href="#">11 файлов</a><br>
+                    <br>
+                    Ваш рейтинг: <span>745 / 6933</span><br>
+                    Ваш рейтинг QauCol: <span>523 / 700</span><br>
+
+                </div>
+
+                <div class="sidebar-block -head"><a href="#">Кабинет статистики</a></div>
+
+                <div class="sidebar-block -links">
+                    <a href="#">Предложить новость</a>
+                    <br>
+                    <a href="#">Загрузить видео/фото/файл</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Сообщения (2)</a><br>
+                    <a href="#">Текущие опросы</a><br>
+                    <a href="#">Подать завяку на QuaCol</a><br>
+                    <a href="#">Подать завяку на мероприятие</a><br>
+                    <a href="#">Органайзер</a><br>
+                    <a href="#">Управление подпиской</a><br>
+                    <a href="#">Опросы</a><br>
+                    <a href="#">Голосования</a><br>
+                    <a href="#">Рейтинги</a><br>
+                    <a href="#">Реестры</a><br>
+                    <a href="#">Топ 100</a><br>
+                    <a href="#">Новое видео</a><br>
+                    <a href="#">Случайная выборка</a>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Тратить баллы<br>ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Зарабатывание<br>баллов ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Баллы НМО/Сертификаты</a><br>
+                    <a href="#">Чат по специальности</a><br>
+                    <a href="#">Чат заведующих отделениями</a><br>
+
+                </div>
+
+                <div class="sidebar-block -ask-question">
+
+                    <div class="item">
+                        <img src="img/ask_question_engineer.jpg" width="122" height="159" alt="">
+                        <br>
+                        <a href="#">Задать вопрос инженеру</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/ask_question_medpred.jpg" width="167" height="160" alt="">
+                        <br>
+                        <a href="#">Задать вопрос медпреду</a>
+                    </div>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Вызов медпреда</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Запрос инструкций</a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+</body>
+</html>

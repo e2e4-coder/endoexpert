@@ -1,0 +1,212 @@
+@import "variables";
+
+
+.endoexpert-footer-menu {
+
+  background: #2e2f2f;
+  padding: 77px 0 0 0;
+  color: #b8b7c5;
+  font-size: 16px;
+
+  a {color: inherit;text-decoration: none;&:hover {text-decoration: underline;}}
+
+  .footer-menu-wrapper {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-section {
+    width: 237px;
+    padding-bottom: 60px;
+
+    h3 {
+      font-size: 21px;
+      font-weight: normal;
+      height: 50px;
+      box-sizing: border-box;
+      padding-left: 65px;
+      padding-top: 7px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 65px;
+        height: 50px;
+        position: absolute;top: 0;left: 0;
+        background: center center no-repeat;
+      }
+      
+      &.-novosti:before {background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_novosti.png")}
+      &.-atlasy:before {background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_atlasy.png")}
+      &.-biblioteki:before {background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_biblioteki.png")}
+      &.-quacol:before {background-position: left center;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_quacol.png")}
+      &.-pravo:before {background-position: left center;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_pravo.png")}
+      &.-servisy:before {background-position: left center;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_servisy.png")}
+      &.-obuchenie:before {background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_obuchenie.png")}
+      &.-spravochniki:before {left:-10px;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_spravochniki.png")}
+      &.-obzory:before {background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_obzory.png")}
+      &.-partnery:before {background-position: left center;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_partnery.png")}
+      &.-pacientu:before {background-position: left center;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_pacientu.png")}
+      &.-eshe-pacientu:before {width:77px;left:-15px;background-image: url("/bitrix/templates/main/img/bottom_menu_icons/ico_eshe_pacientu.png")}
+
+    }
+
+    ul {
+      padding: 0;margin: 0;
+      list-style: none;
+
+      li {
+        padding: 0;
+        margin: 0 0 8px 0;
+      }
+
+    }
+  }
+
+
+
+}
+
+.endoexpert-footer {
+
+  background: #020709;
+  border-bottom: 2px solid #161717;
+  padding: 20px 0;
+  color: #b8b7c5;
+
+  a {color: inherit;text-decoration: none; &:hover {text-decoration: underline;}}
+
+  .button-wrapper {
+
+    margin-bottom: 20px;
+
+    .lk-button {height: 40px;line-height: 40px;padding: 0 25px;text-decoration: none;}
+
+  }
+
+  .footer-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-section {
+
+    font-size: 16px;
+
+    &.-section-1 {width: 200px;}
+    &.-section-2 {width: 130px;}
+
+    ul {
+      padding: 0;margin: 0;
+      list-style: none;
+
+      li {
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+
+
+    }
+
+
+  }
+
+  .footer-copyright {
+
+    width: 535px;
+    text-align: right;
+
+    p {
+      margin: 0 0 30px 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+  }
+
+  .social-links {
+
+    a {
+      display: inline-block;
+      background: @main-color center center no-repeat;
+      width: 39px;height: 39px;
+      border-radius: 100%;
+      margin-left: 2px;
+    }
+
+    a.-tw {background-image: url("/bitrix/templates/main/img/social_icons/ico_tw.png");background-size: 23px 19px;}
+    a.-fb {background-image: url("/bitrix/templates/main/img/social_icons/ico_fb.png");background-size: 12px 21px;}
+    a.-in {background-image: url("/bitrix/templates/main/img/social_icons/ico_in.png");background-size: 22px 22px;}
+    a.-yt {background-image: url("/bitrix/templates/main/img/social_icons/ico_yt.png");background-size: 24px 17px;}
+    a.-li {background-image: url("/bitrix/templates/main/img/social_icons/ico_li.png");background-size: 20px 19px;}
+    a.-gp {background-image: url("/bitrix/templates/main/img/social_icons/ico_gp.png");background-size: 26px 17px;}
+
+  }
+
+
+}
+
+.endoexpert-footer-partners {
+
+  padding: 25px 0 15px 0;
+  background: #020709;
+
+  h2 {
+    margin: 0 0 25px 0;
+    font-weight: normal;
+    font-size: 24px;
+    color: #fff;
+  }
+
+
+}
+
+
+.partners-slider-wrapper {
+
+  position: relative;
+  padding: 0 25px;
+  margin-bottom: 40px;
+
+
+  .swiper-button-prev {
+
+    width: 8px;
+    height: 20px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUCAMAAACHxYxZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEX/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD///9+g+RIAAAAEXRSTlMAA9vGTlfA5wYqe5n2FTBa5BlpPB8AAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWUlEQVQI11WOWw6AIAwECyLy1rn/ZW1JMPK1m+ljV0TEeThUJQCnmQhXUs0KioEKrav2BtVA0cmw2wuigVNBMHOAd5u51yit5Xme5f/wi5CxQq3G47Zis+oLorsErOXi7WAAAAAASUVORK5CYII=');
+    background-size: contain;
+    margin-top: -10px;
+    left: 0;
+  }
+
+  .swiper-button-next {
+
+    width: 8px;
+    height: 20px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUCAMAAACHxYxZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEX/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD///9+g+RIAAAAEXRSTlMAxtsDV04G58B7KhX2mTBa5KXrp6wAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWElEQVQI11WOVw7AMAhDs/eo73/Z4qhEKj88GTA2FnDeSAUAkZAyUAimitQIfQDzSBMYnbBkVo9UgHwcokiB4B1gf8DR1uUkvem5Gt4XfLp4+3wxbjCN+gKkbgSzz9D+wQAAAABJRU5ErkJggg==');
+    background-size: contain;
+    margin-top: -10px;
+    right: 0;
+  }
+
+  .footer-partners-slider {
+
+    height: 40px;
+
+
+    .swiper-slide {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+    }
+
+
+  }
+
+
+
+}

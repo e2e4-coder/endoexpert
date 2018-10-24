@@ -8,7 +8,17 @@
     "rating": 40,
     "online" : true,
     "best_friend" : false,
-    "image": "img/tmp/friend.jpg"
+    "image": "img/tmp/friend.jpg",
+    "rank" : 3,
+    "label_q" : true,
+    "label_ee" : true,
+    "label_st_up" : true,
+    "stat_1" : 70,
+    "stat_2" : 50,
+    "stat_3" : 90,
+    "stat_4" : 80
+
+
   },
   {
     "id" : 2,

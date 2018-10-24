@@ -261,7 +261,7 @@
                             </div>
                         </div>
 
-                        <button class="flip-toggle flip-toggle-bottom">Нажмите чтобы перевернуть</button>
+                        <button class="flip-toggle flip-toggle-bottom">Ответить</button>
 
                     </form>
 
@@ -351,6 +351,29 @@
 
                                 <div class="item-image">
                                     <img v-bind:src="item.image">
+
+                                    <div class="stat-line -stat-1" v-if="item.stat_1" v-bind:style="{ height: item.stat_1 + '%' }"></div>
+                                    <div class="stat-line -stat-2" v-if="item.stat_1" v-bind:style="{ height: item.stat_2 + '%' }"></div>
+                                    <div class="stat-line -stat-3" v-if="item.stat_1" v-bind:style="{ height: item.stat_3 + '%' }"></div>
+                                    <div class="stat-line -stat-4" v-if="item.stat_1" v-bind:style="{ height: item.stat_4 + '%' }"></div>
+
+                                    <div class="letter-labels">
+                                        <b v-if="item.label_q">Q</b>
+                                        <b v-if="item.label_ee">EE</b>
+                                        <b v-if="item.label_st_up">StUp</b>
+                                    </div>
+
+                                    <div class="item-rank" v-if="item.rank">
+
+                                        <b v-for="n in item.rank"></b>
+
+                                    </div>
+
+                                    <div class="item-links">
+                                        <a v-bind:href="'/link/?uid='+ item.id" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
+                                        <a v-bind:href="'/link/?uid='+ item.id" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+                                    </div>
+
                                 </div>
 
                                 <div class="item-title"><span>{{ item.first_name }} {{ item.patronymic }} {{ item.last_name }}</span></div>

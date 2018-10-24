@@ -21,6 +21,7 @@
     <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
 
     <script src="js/lk.js"></script>
+    <script src="js/lk_section.js"></script>
 
 
 </head>
@@ -594,7 +595,16 @@
             </div>
 
             <div class="sort-bar" style="margin-top: 10px">
-                <a href="#" class="lk-button -orange">Вид</a>
+                <div class="view-button-wrapper">
+                    <button id="select-view-button" type="button" class="lk-button -orange">Вид</button>
+                    <div id="select-view-popup" class="select-view-popup">
+                        <a class="-default -active"></a>
+                        <a href="#" class="-view-1"></a>
+                        <a href="#" class="-view-2"></a>
+                        <a href="#" class="-view-3"></a>
+                    </div>
+                </div>
+
                 <div class="sort-label">Сортировать:</div>
                 <div class="sort-item -active"><a href="#">Количеству просомотров</a> <span class="sort-icon"></span></div>
                 <div class="sort-item"><a href="#">Популярности</a> <span class="sort-icon"></span></div>

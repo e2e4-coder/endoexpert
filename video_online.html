@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Видео online</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/build.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+
+    <script src="js/common.js"></script>
+
+
+
+</head>
+<body style="background: #101011;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="container wrapper-1050">
+
+        <div class="page-video-online">
+
+            <a class="share-button" href="#"></a>
+
+            <h1>ОНЛАЙН ВСЕРОССИЙСКАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ С МЕЖДУНАРОДНЫМ УЧАСТИЕМ, ПОСВЯЩЕННАЯ 80-ЛЕТИЮ ЧЕЛЯБИНСКОЙ ОБЛАСТНОЙ КЛИНИЧЕСКОЙ БОЛЬНИЦЫ</h1>
+
+
+            <div class="columns-layout">
+
+                <div class="col-1">
+
+                    <div id="player" data-src="http://mirrors.standaloneinstaller.com/video-sample/jellyfish-25-mbps-hd-hevc.mp4" data-poster="/img/tmp/video_poster.jpg"></div>
+
+
+                </div>
+
+                <div class="col-2">
+
+                    <div id="time-counter">
+
+                        <div class="counter-label">Учёт присутствия:</div>
+
+                        <div class="counter-digits">
+                            <span class="d1">0</span>
+                            <span class="d2">0</span>
+                            <span class="d3">0</span>
+                            <span class="d4">0</span>
+                            <div class="hours-label">часов</div>
+                            <div class="minutes-label">минут</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <script>
+
+              $(document).ready(function () {
+
+
+                var $player = $('#player');
+
+                var player = new Clappr.Player({
+                  parentId: "#player",
+                  source: $player.data('src'),
+                  poster: $player.data('poster'),
+                  width: 788,
+                  height: 400
+                });
+
+
+
+                var $timeCounter = $('#time-counter');
+
+                var minutesCount = 0;
+
+                setInterval(function () {
+
+                  if (player.isPlaying()) {
+
+                    setTime(++minutesCount);
+
+                  }
+
+                }, 60000);
+
+
+                function setTime(t) {
+
+                  var minutes = (t % 60).toString();
+
+                  $timeCounter.find('.d4').text(minutes.slice(-1));
+                  $timeCounter.find('.d3').text(minutes.length > 1 ? minutes.slice(0, 1) : 0);
+
+                  var hours = Math.floor(t / 60).toString();
+
+                  $timeCounter.find('.d2').text(hours.slice(-1));
+                  $timeCounter.find('.d1').text(hours.length > 1 ? hours.slice(0, 1) : 0);
+
+                }
+
+              });
+
+            </script>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="endoexpert-footer-menu">
+
+        <div class="footer-menu-wrapper wrapper-1050">
+
+            <div class="menu-section">
+
+                <h3 class="-novosti"><a href="#">Новости</a></h3>
+
+                <ul>
+                    <li><a href="#">Новости медицины</a></li>
+                    <li><a href="#">Новости по специальности</a></li>
+                    <li><a href="#">График конференций</a></li>
+                    <li><a href="#">Отчеты о конференциях</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-atlasy"><a href="#">Атласы</a></h3>
+
+                <ul>
+                    <li><a href="#">Эндоскопический атлас</a></li>
+                    <li><a href="#">Схемы операций</a></li>
+                    <li><a href="#">Записи операций</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-biblioteki"><a href="#">Библиотеки</a></h3>
+
+                <ul>
+                    <li><a href="#">Правовая библиотека</a></li>
+                    <li><a href="#">Клиническая библиотека</a></li>
+                    <li><a href="#">Журналы, статьи, дайджест</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-quacol"><a href="#">QuaCol</a></h3>
+
+                <ul>
+                    <li><a href="#">Лекции и семинары QuaCol</a></li>
+                    <li><a href="#">Брошюра/справочник QuaCol</a></li>
+                    <li><a href="#">Задать вопрос Экспертам QuaCol</a></li>
+                    <li><a href="#">Образовательные модули QuaCol</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-pravo"><a href="#">Право</a></h3>
+
+                <ul>
+                    <li><a href="#">Клинические рекомендации России, Европы, Японии, США</a></li>
+                    <li><a href="#">Приказы, законы</a></li>
+                    <li><a href="#">Порядки по оказанию медицинской помощи</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-servisy"><a href="#">Сервисы</a></h3>
+
+                <ul>
+                    <li><a href="#">Форум для специалистов</a></li>
+                    <li><a href="#">Экстренный консилиум</a></li>
+                    <li><a href="#">Телемедицина</a></li>
+                    <li><a href="#">Куда направить пациента</a></li>
+                    <li><a href="#">Second opinion</a></li>
+                    <li><a href="#">Фото и видео хостинг</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-obuchenie"><a href="#">Обучение</a></h3>
+
+                <ul>
+                    <li><a href="#">Лекции и семинары</a></li>
+                    <li><a href="#">Вебинары</a></li>
+                    <li><a href="#">Тесты для специалистов</a></li>
+                    <li><a href="#">Аккредитация, НМО</a></li>
+                    <li><a href="#">Онлайн-конференции</a></li>
+                    <li><a href="#">Онлайн-семинары</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-spravochniki"><a href="#">Справочники</a></h3>
+
+                <ul>
+                    <li><a href="#">Реестр ЛПУ</a></li>
+                    <li><a href="#">Реестр Врачей-Специалистов</a></li>
+                    <li><a href="#">Каталоги инструментов</a></li>
+                    <li><a href="#">Каталоги оборудования</a></li>
+                    <li><a href="#">Реестр учебных центров</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-obzory"><a href="#">Обзоры</a></h3>
+
+                <ul>
+                    <li><a href="#">Обзоры инструментов</a></li>
+                    <li><a href="#">Обзоры оборудования</a></li>
+                    <li><a href="#">Обсуждение препаратов</a></li>
+                    <li><a href="#">Отчёты о стажировке</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-partnery"><a href="#">Партнеры</a></h3>
+
+                <ul>
+                    <li><a href="#">Поиск сервис-центров</a></li>
+                    <li><a href="#">Поиск диллера</a></li>
+                    <li><a href="#">Поиск медпредставителя</a></li>
+                    <li><a href="#">Подбор оборудования</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-pacientu"><a href="#">Пациенту</a></h3>
+
+                <ul>
+                    <li><a href="#">Записаться на приём</a></li>
+                    <li><a href="#">Написать/читать отзыв</a></li>
+                    <li><a href="#">Определение состояния здоровья</a></li>
+                    <li><a href="#">Онлайн-тесты</a></li>
+                    <li><a href="#">Рейтинг клиник и врачей</a></li>
+                </ul>
+
+            </div>
+
+            <div class="menu-section">
+
+                <h3 class="-eshe-pacientu"><a href="#">Еще пациенту</a></h3>
+
+                <ul>
+                    <li><a href="#">Где пройти исследования</a></li>
+                    <li><a href="#">Найти врача рядом</a></li>
+                    <li><a href="#">Рекомендации от экспертов</a></li>
+                    <li><a href="#">Подготовка к колоноскопии</a></li>
+                    <li><a href="#">Подготовка к операциям</a></li>
+                    <li><a href="#">Задать вопрос врачу</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="endoexpert-footer">
+
+        <div class="footer-wrapper wrapper-1050">
+
+            <div class="button-wrapper"><a href="#" class="lk-button -orange">Помощь проекту</a></div>
+
+            <div class="footer-menu-wrapper">
+
+                <div class="menu-section -section-1">
+
+                    <ul>
+                        <li><a href="#">Карта сайта</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Помощь проекту</a></li>
+                        <li><a href="#">Правила портала</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="menu-section -section-2">
+
+                    <ul>
+                        <li><a href="#">Связаться с нами</a></li>
+                        <li><a href="#">Для партнеров</a></li>
+                        <li><a href="#">Спонсоры</a></li>
+                        <li><a href="#">Наши партнеры</a></li>
+                        <li><a href="#">Разработчик</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-copyright">
+
+                    <p>
+                        Согласно ст. 1255 ГК РФ интеллектуальные права на произведения науки, литературы и искусства являются авторскими правами. Автору произведения принадлежат следующие права: исключительное право на произведение; право авторства; право автора на имя; право на неприкосновенность произведения; право на обнародование произведения.
+                    </p>
+
+                    <div class="social-links">
+                        <a class="-tw" href="#" target="_blank"></a>
+                        <a class="-fb" href="#" target="_blank"></a>
+                        <a class="-in" href="#" target="_blank"></a>
+                        <a class="-yt" href="#" target="_blank"></a>
+                        <a class="-li" href="#" target="_blank"></a>
+                        <a class="-gp" href="#" target="_blank"></a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="endoexpert-footer-partners">
+
+        <div class="wrapper-1050">
+
+            <h2>Спонсоры</h2>
+
+            <div class="partners-slider-wrapper">
+
+                <div id="footer-sponsors-slider" class="footer-partners-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                    </div>
+                </div>
+
+                <div id="footer-sponsors-slider-prev" class="swiper-button-prev"></div>
+                <div id="footer-sponsors-slider-next" class="swiper-button-next"></div>
+
+            </div>
+
+            <h2>Партнеры</h2>
+
+            <div class="partners-slider-wrapper">
+
+                <div id="footer-partners-slider" class="footer-partners-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_1.png" width="72" height="27"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_2.png" width="81" height="28"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_3.png" width="89" height="21"></a></div>
+                        <div class="swiper-slide"><a href="#" target="_blank"><img src="img/tmp/partner_4.png" width="167" height="36"></a></div>
+
+                    </div>
+                </div>
+
+                <div id="footer-partners-slider-prev" class="swiper-button-prev"></div>
+                <div id="footer-partners-slider-next" class="swiper-button-next"></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+</body>
+</html>
+

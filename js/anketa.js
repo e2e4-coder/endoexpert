@@ -44,6 +44,12 @@ $(document).ready(function () {
 
     if (!$(this).val()) $(this).prev().show();
 
+  }).find('.form-textarea, .form-text').each(function () {
+
+
+    if ($(this).val()) {$(this).prev('.form-placeholder').hide();}
+
+
   });
 
 

@@ -1,0 +1,100 @@
+<div class="sort-panel">
+
+    <span class="panel-label">Сортировать по:</span>
+
+    <span class="sort-item" v-bind:class="{'-active': sort_by == 'speciality'}" v-on:click="sortItems('speciality')">Специальности</span>
+    <span class="sort-item" v-bind:class="{'-active': sort_by == 'first_name'}" v-on:click="sortItems('first_name')">Имени</span>
+    <span class="sort-item" v-bind:class="{'-active': sort_by == 'last_name'}" v-on:click="sortItems('last_name')">Фамилии</span>
+    <span class="sort-item" v-bind:class="{'-active': sort_by == 'rating'}" v-on:click="sortItems('rating')">Рейтингу</span>
+
+    <span class="filter-item -first">
+                                <label><input id="invite-app-set-online-filter" type="checkbox" class="i-check2" v-model="online_filter"> Сейчас на сайте</label>
+                            </span>
+
+    <span class="filter-item">
+                                <label><input id="invite-app-set-best-friends-filter" type="checkbox" class="i-check2"> Лучшие друзья</label>
+                            </span>
+
+</div>
+
+<div class="search-panel">
+    <div class="search-text">
+        <input type="text" placeholder="Введите фамилию или имя" v-model="text_filter">
+    </div>
+
+    <div class="search-alphabet">
+        <span v-bind:class="{'-active': letter == letter_filter}" v-for="letter in alphabet" v-on:click="handleLetterClick($event)">{{letter}}</span>
+
+    </div>
+</div>
+
+<div class="friends-list">
+
+    <div v-for="item in page_items" class="list-item" v-on:click="handleFriendClick(item.id)" v-bind:class="{'-selected': selected_items.indexOf(item.id) !== -1}">
+
+        <div class="user-pic">
+            <img v-bind:src="item.image">
+
+            <div class="stat-line -stat-1" v-if="item.stat_1" v-bind:style="{ height: item.stat_1 + '%' }"></div>
+            <div class="stat-line -stat-2" v-if="item.stat_1" v-bind:style="{ height: item.stat_2 + '%' }"></div>
+            <div class="stat-line -stat-3" v-if="item.stat_1" v-bind:style="{ height: item.stat_3 + '%' }"></div>
+            <div class="stat-line -stat-4" v-if="item.stat_1" v-bind:style="{ height: item.stat_4 + '%' }"></div>
+
+            <div class="letter-labels">
+                <b v-if="item.label_q">Q</b>
+                <b v-if="item.label_ee">EE</b>
+                <b v-if="item.label_st_up">StUp</b>
+            </div>
+
+            <div class="item-rank" v-if="item.rank">
+
+                <b v-for="n in item.rank"></b>
+
+            </div>
+
+            <div class="item-links">
+                <a v-bind:href="'/link/?uid='+ item.id" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
+                <a v-bind:href="'/link/?uid='+ item.id" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+            </div>
+
+        </div>
+
+        <div class="item-title"><span>{{ item.first_name }} {{ item.patronymic }} {{ item.last_name }}</span></div>
+
+        <div class="item-speciality"><span>{{ item.speciality }}</span></div>
+
+
+    </div>
+
+    <p v-if="!items.length" style="text-align: center;padding-top: 50px;width: 100%;">Ничего не найдено. Уточните параметры поиска.</p>
+
+
+
+</div>
+
+<paginate v-if="pages_count"
+          v-model="page"
+          :page-count="pages_count"
+          :page-range="3"
+          :margin-pages="3"
+          :first-last-button="true"
+          :click-handler="selectPage"
+          :prev-text="''"
+          :next-text="''"
+          :last-button-text="'<span class=last><span>'"
+          :first-button-text="'<span class=first><span>'"
+          :container-class="'vue-pagination'"
+          :break-view-link-class="'break-view'"
+          :next-link-class="'next'"
+          :prev-link-class="'previous'"
+          :page-class="'page-item'">
+</paginate>
+
+
+<div class="popup-buttons">
+
+    <button :disabled="selected_items.length === 0" type="button" class="lk-button -orange" v-on:click="sendInvitation()">Пригласить</button>
+
+    <button type="button" class="lk-button" onclick="$.magnificPopup.close()">Отмена</button>
+
+</div>

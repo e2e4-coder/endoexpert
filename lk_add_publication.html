@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Добавить публикацию</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/build.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="local/lib/frontend/jquery-autoresize-textarea/autoresize-textarea.js"></script>
+    <script src="local/lib/frontend/jquery-char-counter/char-counter.js"></script>
+    <script src="local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="local/lib/frontend/includeHTML/includeHTML.js"></script>
+
+    <!-- development version, includes helpful console warnings -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vuejs-paginate@latest"></script>
+
+
+
+    <script src="js/common.js"></script>
+    <script src="js/invite_friends_app.js"></script>
+    <script src="js/lk_add_publication.js"></script>
+
+
+
+</head>
+<body style="background: #fff;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="img/endoexpert_logo_color.png" width="53" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <a name="top"></a>
+    <div id="lk">
+
+        <div class="lk-main-wrapper">
+
+            <div class="lk-add-publication">
+
+                <div class="help-links">
+                    <div class="link-item">
+                        Подробнее о возможностях редактора публикаций читайте <a href="#" target="_blank">здесь</a>
+                    </div>
+                    <div class="link-item">
+                        О баллах за публикации читайте <a href="#" target="_blank">здесь</a>
+                    </div>
+                </div>
+
+                <form method="post" enctype="multipart/form-data">
+
+                    <table class="form-table">
+                        <tr>
+                            <th>
+                                <div class="field-name">Тип <sup>*</sup></div>
+
+                            </th>
+                            <td>
+                                <table class="type-table">
+                                    <tr>
+                                        <td><label><input type="radio" name="type" value="1" class="i-check" checked> Новость</label></td>
+                                        <td><label><input type="radio" name="type" value="2" class="i-check"> Статья</label></td>
+                                        <td><label><input type="radio" name="type" value="3" class="i-check"> Клинический случай</label></td>
+                                        <td><label><input type="radio" name="type" value="4" class="i-check"> Обзор</label></td>
+                                        <td><label><input type="radio" name="type" value="5" class="i-check"> Видео</label></td>
+                                        <td><label><input type="radio" name="type" value="6" class="i-check"> Мероприятие</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><label><input type="checkbox" name="type_konkurs" class="i-check"> Конкурс</label></td>
+                                        <td><label><input type="checkbox" name="type_konsilium" class="i-check"> <span class="-consilium">Консилиум</span></label></td>
+                                        <td><label><input type="radio" name="type" value="7" class="i-check"> Quiz</label></td>
+                                        <td><label><input type="radio" name="type" value="8" class="i-check"> Вакансию</label></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="field-name">Раздел <sup>*</sup></div>
+                                <div class="field-description">Выбрать<br>не более 4-х</div>
+                            </th>
+                            <td>
+
+                                <div id="sections-selects">
+
+                                    <div class="section-select-wrapper">
+
+                                        <select class="form-select" name="section[]">
+                                            <option value="0">Выберите раздел</option>
+                                            <option value="1">Раздел 1</option>
+                                            <option value="2">Раздел 2</option>
+                                            <option value="3">Раздел 3</option>
+                                        </select>
+
+                                        <div class="select-controls">
+                                            <span class="control-delete">Удалить<br></span>
+                                            <span class="control-add">Добавить еще один</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><hr></td>
+                        </tr>
+
+                    </table>
+
+                    <table class="form-table">
+
+                        <tr>
+                            <th style="padding-right: 0;"><div class="field-name">Анонс <sup>*</sup></div></th>
+
+                            <td>
+                                <div style="color: #8e8e8e;font-size: 14px;white-space: nowrap;">
+                                    Данная информация будет размещена в новости и видна поисковикам, и доступна незарегестрированным пользователям
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="teaser-fields-table">
+
+                        <tr class="first-row">
+                            <th>Название рубрики</th>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr class="second-row">
+                            <th>
+                                <div class="image-wrapper">
+                                    <input id="file-teaser-image" type="file" name="teaser_image" accept="image/*">
+
+                                    <div class="upload-controls">
+
+                                        <span id="upload-teaser-image-button">Загрузите изображение</span>
+                                        <br>или<br>
+                                        <span id="select-teaser-image-button">Выберите изображение<br>из медиабиблиотеки</span>
+
+                                    </div>
+
+                                    <div class="control-delete" title="Удалить"></div>
+                                </div>
+
+                                <div class="image-hint">Рекомендуемый размер 900*900 пикселей</div>
+                            </th>
+                            <td>
+
+                                <div class="field-wrapper">
+
+                                    <table>
+                                        <tr>
+                                            <th>Тема:</th>
+                                            <td><textarea name="title" maxlength="112" class="form-textarea char-counter" placeholder="Введите заголовок материала"></textarea></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="field-description">(Максимальное допустимое количество символов заголовка - 112.)</div>
+
+                                </div>
+
+                                <div class="field-wrapper">
+
+                                    <table>
+                                        <tr>
+                                            <th>Автор:</th>
+                                            <td><input type="text" name="author" class="form-text" placeholder="Введите текст анонса публикации"></td>
+                                        </tr>
+                                    </table>
+
+
+                                </div>
+
+
+                                <div class="field-wrapper">
+
+                                    <table>
+                                        <tr>
+                                            <th>Анонс:</th>
+                                            <td><textarea name="teaser" maxlength="360" class="form-textarea char-counter" placeholder="Введите текст анонса публикации"></textarea></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="field-description">(Максимальное допустимое количество символов текста анонса - 360.)</div>
+
+                                </div>
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <table class="form-table">
+                        <tr>
+                            <td colspan="2">
+
+                                <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="crop_image"> Кадрировать изображение</label>
+                                <label><input type="checkbox" class="i-check" name="teaser_image_is_main"> Использовать изображение как основное в публикации</label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><div class="field-name">Ссылка на оригинал <sup>*</sup></div></th>
+                            <td>
+
+                                <input type="text" class="form-text" name="original_link">
+
+                                <div class="field-description">Если ссылки на оригинал нет - то ставиться знак ® (copyright), т.е. Вы автор публикации</div>
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+
+                                <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="is_exclusive"> <b>Материал эксклюзивен и будет опубликован только на EndoExpert.ru</b></label>
+
+                                <span class="points-label-1">+1000 баллов</span>
+                                <span class="points-label-1">+1000 EndoExpert баллов</span>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <th><div class="field-name">Основной <br>текст <sup>*</sup></div></th>
+                            <td>
+                                <textarea name="text" style="width: 100%;height: 100px;">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Загрузите изображение основной публикации<sup>*</sup></div></th>
+
+                            <td>
+
+                                <input type="file" id="file-main-image" name="main_image" accept="image/*">
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div id="main-image-wrapper">
+
+                                                <div class="control-delete" title="Удалить"></div>
+                                            </div>
+                                        </td>
+
+                                        <td class="points-info">
+
+                                            +200 баллов за публикацию больше 2000 знаков<br>
+                                            +400 баллов за публикацию больше 4000 знаков<br>
+                                            +300 баллов за наилучшие просмотры<br>
+                                            +300 баллов за лучшее месяца
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+
+
+
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Вывод <sup>*</sup></div></th>
+                            <td>
+
+                                <div class="auto-resize-wrapper char-counter-wrapper">
+                                    <textarea class="auto-resize char-counter" name="conclusion" maxlength="200"></textarea>
+                                </div>
+
+                                <div class="field-description">Опишите в двух предложениях суть публикации</div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>
+                                <div id="attach-files-app">
+
+
+                                    <div class="control-buttons">
+                                        <b>Прикрепить:</b>
+                                        <span>Изображение</span>
+                                        <span>Файл</span>
+                                        <span>Видео</span>
+                                    </div>
+
+
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Опрос</div></th>
+                            <td>
+                                <a href="#">Добавить опрос после публикации</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <a href="#">Создать опрос перед публикацией</a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th><div class="field-name">Теги <sup>*</sup></div></th>
+                            <td>
+
+                                <input id="input-tags" type="text" class="form-text" name="tags">
+
+                                <div class="field-description">Выберите 7 тегов из предложенных и/или добавьте свои через запятую</div>
+
+                                <div class="tags-helper">
+                                    <span>семианр</span> <span>коропоратив</span> <span>коференция</span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Нозологии</div></th>
+                            <td>
+
+                                <input type="text" class="form-text" name="nozologii">
+
+                                <div class="field-description">Перечислите нозологии, которые упоминаються в публикации. Синонимы будут добаленны автоматически</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Лекарственные препараты</div></th>
+                            <td>
+
+                                <input type="text" class="form-text" name="lekarstva">
+
+                                <div class="field-description">Перечислите лекарственные препараты, которые упоминаються в публикации. Препараты с тем же действующим веществом будут добавленны автоматически.</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>
+                                <label><input type="checkbox" name="disable_comments" class="i-check"> Отключить комментарии</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Пригласить коллег <br>по e-mail</div></th>
+                            <td>
+
+                                <input type="text" class="form-text" name="invite_by_email" placeholder="ivanov@mail.ru, sidorov@mail.ru, ...">
+
+                                <div class="field-description">Выберите коллег которых хотите пригласить к обсуждению публикации.<br>Из списка или через e-mail.</div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th><div class="field-name">Пригласить коллег <br>на портале <sup>*</sup></div></th>
+                            <td>
+
+                                <input id="invite-friends-ids" type="hidden" name="invited_ids">
+
+                                <div id="invite-friends-field">
+                                    <button id="invite-friends-button" type="button">Друзья</button>
+
+                                    <div id="invite-friends-counter">Выбрано: <span>0</span></div>
+
+                                </div>
+
+
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+
+
+                    <div class="points-counter-section">
+
+                        <div class="section-title">Счетчик зарабатываемых баллов</div>
+
+                        <table class="points-table">
+                            <tr>
+                                <th>Дата и время</th>
+                                <th>Основные</th>
+                                <th>Кол&#8209;во</th>
+                                <th>Утверждено администратором</th>
+                                <th>Комментарий администратора</th>
+                            </tr>
+                            <tr>
+                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
+                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
+                                <td>100</td>
+                                <td><input type="checkbox" class="i-check" disabled checked></td>
+                                <td>Пример</td>
+                            </tr>
+                            <tr>
+                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
+                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
+                                <td>100</td>
+                                <td><input type="checkbox" class="i-check" disabled></td>
+                                <td>-10 неверное оформление</td>
+                            </tr>
+                            <tr>
+                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
+                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
+                                <td>100</td>
+                                <td><input type="checkbox" class="i-check" disabled checked></td>
+                                <td>+1000 эксклюзив</td>
+                            </tr>
+                            <tr>
+                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
+                                <td class="-grey">Отсутствует картинка</td>
+                                <td>-100</td>
+                                <td><input type="checkbox" class="i-check" disabled checked></td>
+                                <td>-100</td>
+                            </tr>
+                        </table>
+
+                        <div class="dispute-button-wrapper">
+                            <button type="button" class="lk-button -orange">Диспут</button>
+                        </div>
+
+                        <div class="summary-table-wrapper">
+
+                            <table class="summary-table">
+                                <tr>
+                                    <th>ИТОГО:</th>
+                                    <td>
+                                        <span>+1900 баллов из 2000 баллов</span>
+                                        <br>
+                                        +200 баллов EndoExpert
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+                        <button type="submit" class="lk-button -orange">Опубликовать</button>
+
+                        <button type="submit" class="lk-button -blue">Предпросмотр</button>
+                    </div>
+
+
+                </form>
+
+
+                <div id="invite-friends-popup" class="endoexpert-popup mfp-hide">
+
+                    <div id="invite-friends-app" data-topic-id="34534" data-choose-only="1"></div>
+
+                    <script>includeHTML('html_includes/invite-friends-app.html', document.getElementById('invite-friends-app'));</script>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="lk-sidebar-wrapper">
+
+            <div class="lk-sidebar">
+
+                <div class="sidebar-block -head">Избранное</div>
+
+                <div class="sidebar-block -info">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAulBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///+NEPzTAAAAPHRSTlMAYcXx56Q0A5/zvsv7UG2oGj/pIuTiCUx/kwfwu40G7b/ZAjyIfZILK7jho7P9RoDf+c70GxVW90Nc5pcPqi7PAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHtJREFUCNc1jGsXgVAURIe8rkIIlUfKO0TIc/7/73LPtcyHvdaeNecAKJWtSrUGSb1B1bTptETa7LhAt6f6WrzBULoRfU0GZh2OJyJTI7NorhnFiciCS80V1xtgG5sH4Y7p/nCkysz6dGZ+yXnNfse3AneHjyf+eb2tzxeyVgsphCoZbAAAAABJRU5ErkJggg==" width="12" height="12" alt="">
+                    <a href="#">Продвинутый поиск</a><br>
+                    13113 баллов ЭндоЭксперт.ру<br>
+                    540 баллов НМО<br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">17 видео</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv///9o0cpcAAAAQnRSTlMAARMOEBYJFAsX7ZO7XeauDSO5W9Wd8eAVIte2UtKX79uM5939+v782OjJ39mBsk3k3syHt/TaqCvLgvDOhuVXkgpuSdvHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIlJREFUCNdlzccSgkAQRdEHhjEHUDCgmMaAWVTA7Pz/RzmvXLjwrvpUdVfDMFNIZ3RZiJyBfKGIktKVUanWUFeW3SCbtuO20Fa/OkKz6/U49z1/QA5hfW9HY3Iip+RMqjm5CBxyGcgVucaG3GK3Jw+hSx7D01n8P4rihPMlvupl83ZH9NA9kbzeH8FdHZAeqs64AAAAAElFTkSuQmCC" width="14" height="13" alt="">
+                    <a href="#">20 фотографий</a><br>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///80mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNs0mNv////+JRB2AAAAIXRSTlMABikwKAQ1++AxiUXMQ27NO/ZvM/5w6T0nKyL39dTrrAE2kW0bAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFFJREFUCNeNzEcSgCAQRFGCmBExYrbvf0mFmrJ051/12zTjQkoZKc58cQIgzfKA4t4oNSoP7WFq2OZB28H2hGF0bpoJoUW9sP6DVd8Dse3UcV7aJQ3nzJodiwAAAABJRU5ErkJggg==" width="12" height="13" alt="">
+                    <a href="#">11 файлов</a><br>
+                    <br>
+                    Ваш рейтинг: <span>745 / 6933</span><br>
+                    Ваш рейтинг QauCol: <span>523 / 700</span><br>
+
+                </div>
+
+                <div class="sidebar-block -head"><a href="#">Кабинет статистики</a></div>
+
+                <div class="sidebar-block -links">
+                    <a href="#">Предложить новость</a>
+                    <br>
+                    <a href="#">Загрузить видео/фото/файл</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Сообщения (2)</a><br>
+                    <a href="#">Текущие опросы</a><br>
+                    <a href="#">Подать завяку на QuaCol</a><br>
+                    <a href="#">Подать завяку на мероприятие</a><br>
+                    <a href="#">Органайзер</a><br>
+                    <a href="#">Управление подпиской</a><br>
+                    <a href="#">Опросы</a><br>
+                    <a href="#">Голосования</a><br>
+                    <a href="#">Рейтинги</a><br>
+                    <a href="#">Реестры</a><br>
+                    <a href="#">Топ 100</a><br>
+                    <a href="#">Новое видео</a><br>
+                    <a href="#">Случайная выборка</a>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Тратить баллы<br>ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Зарабатывание<br>баллов ЭндоЭксперт</a>
+                </div>
+
+                <div class="sidebar-block -links-white">
+
+                    <a href="#">Баллы НМО/Сертификаты</a><br>
+                    <a href="#">Чат по специальности</a><br>
+                    <a href="#">Чат заведующих отделениями</a><br>
+
+                </div>
+
+                <div class="sidebar-block -ask-question">
+
+                    <div class="item">
+                        <img src="img/ask_question_engineer.jpg" width="122" height="159" alt="">
+                        <br>
+                        <a href="#">Задать вопрос инженеру</a>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/ask_question_medpred.jpg" width="167" height="160" alt="">
+                        <br>
+                        <a href="#">Задать вопрос медпреду</a>
+                    </div>
+
+
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v2">
+                    <a href="#">Вызов медпреда</a>
+                </div>
+
+                <div class="sidebar-block -large-link -large-link-v1">
+                    <a href="#">Запрос инструкций</a>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+</body>
+</html>

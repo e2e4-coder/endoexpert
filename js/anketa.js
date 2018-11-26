@@ -38,17 +38,43 @@ $(document).ready(function () {
 
   $('.endoexpert-anketa').on('focus', '.form-text, .form-textarea', function () {
 
-    $(this).prev().hide();
+    $(this).prev('.form-placeholder').hide();
 
   }).on('blur', '.form-text, .form-textarea', function () {
 
-    if (!$(this).val()) $(this).prev().show();
+    if (!$(this).val()) $(this).prev('.form-placeholder').show();
 
   }).find('.form-textarea, .form-text').each(function () {
 
 
     if ($(this).val()) {$(this).prev('.form-placeholder').hide();}
 
+
+  });
+
+
+  $('.endoexpert-anketa').on('change', '.form-item select', function () {
+
+    if ($(this).val()) {$(this).prev('.form-placeholder').hide()} else {$(this).prev().show();}
+
+  }).on('blur', '.form-item select', function () {
+
+    if (!$(this).val()) $(this).prev('.form-placeholder').show();
+
+  }).find('.form-item select').each(function () {
+
+    if ($(this).val()) {$(this).prev('.form-placeholder').hide();}
+
+
+  });
+
+
+  $('.field-spinner').each(function () {
+
+    $(this).spinner({
+      min: $(this).data('min'),
+      max: $(this).data('max')
+    })
 
   });
 

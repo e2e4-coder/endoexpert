@@ -6,6 +6,7 @@
 
     <title>Анкета</title>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="fonts/fonts.css">
 
@@ -15,6 +16,7 @@
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="local/lib/frontend/icheck-1.x/icheck.min.js"></script>
     <script src="js/anketa.js"></script>
 
@@ -182,9 +184,29 @@
                         <input type="text" class="form-text -required">
                     </div>
 
-                    <div class="form-item">
-                        <div class="form-placeholder">Дата рождения</div>
-                        <input type="text" class="form-text">
+                    <div class="form-item -birth-date">
+
+                        <div class="field-label">Дата рождения</div>
+
+                        <input class="form-text field-spinner -birth-day" value="15" data-min="1" data-max="31">
+
+                        <select class="form-select -birth-month">
+                            <option>Январь</option>
+                            <option>Февраль</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Июнь</option>
+                            <option>Июль</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                            <option>Октябрь</option>
+                            <option>Ноябрь</option>
+                            <option>Декабрь</option>
+                        </select>
+
+                        <input class="form-text field-spinner -birth-year" value="1975" data-min="1930" data-max="2000">
+
                     </div>
 
                     <div class="form-item">
@@ -226,8 +248,8 @@
                     </div>
 
                     <div class="form-item">
-                        <div class="form-placeholder">Стаж по основной специальности</div>
-                        <input type="text" class="form-text">
+
+                        <input type="text" class="form-text field-spinner" placeholder="Стаж по основной специальности">
                     </div>
 
 

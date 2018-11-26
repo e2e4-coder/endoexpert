@@ -52,9 +52,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: block;
 
     }
 
@@ -62,8 +60,8 @@
 
       background: @orange-color;
       color: #fff;
-      display: block;
-      width: 157px;
+      display: inline-block;
+      width: 156px;
       height: 41px;
       white-space: nowrap;
       font-size: 16px;
@@ -85,7 +83,32 @@
     p {margin: 1.5em 0;}
   }
 
-  #ls-lectors-slider {margin-bottom: 40px;}
+  #ls-lectors-slider {
+
+    margin-bottom: 40px;
+
+    .swiper-button-prev {
+
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAYAAAAi7kmXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwODk3NzI5RUZEMTExRTg5RUVFREQ3OUY3RUEyQ0VDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwODk3NzJBRUZEMTExRTg5RUVFREQ3OUY3RUEyQ0VDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTA4OTc3MjdFRkQxMTFFODlFRUVERDc5RjdFQTJDRUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTA4OTc3MjhFRkQxMTFFODlFRUVERDc5RjdFQTJDRUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7NRcthAAABC0lEQVR42qSVMQ6CQBBFFzDY2EFnC6dRe70A9noBPIBeAA/APdReOxNr7aisSDTrrFkSQuYPASb5BMI+dtmdP6O01kpQrvm4OGYAiIh0J3nMu4U0WwZmu5EcBE1JJQBX/1UCcA+gB2mEwID0BuC6GseBKYBepDECJ6QCgNv62Ca4AVBhP8qCPukJwF3zl+oPCYDMRoUI9OxWc3Hgjqy6WQKotMnAgiZfrwA8opQ0lxmAvqRYAk8AzCXLuWQRR/UJYakfUiQtVdqcTAJ7H4eyHuuVAG0pF0igbz3HRSqBynqus60GGbmtdPgSGArFKpFAZY+gc3kcVJBbW4DUdGLbdFzm3Vz1bHPnnwADAPyaf9XulLegAAAAAElFTkSuQmCC');
+      background-size: contain;
+      width: 14px;
+      height: 32px;
+      margin-top: -16px;
+
+    ;
+
+    }
+
+    .swiper-button-next {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAYAAAAi7kmXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIxNzgxRTAyRUZEMTExRThBQTY3OTAzMzI2MkUzMzg3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIxNzgxRTAzRUZEMTExRThBQTY3OTAzMzI2MkUzMzg3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjE3ODFFMDBFRkQxMTFFOEFBNjc5MDMzMjYyRTMzODciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjE3ODFFMDFFRkQxMTFFOEFBNjc5MDMzMjYyRTMzODciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz65kAqbAAAA70lEQVR42qyVMQ6CQBBFBzDa0EFHC6eRA+gFsJcL6AH0AnoAD4K9dibU0llZmWjWWTPlzE/c8JNHAy8MO7MLOec6p+fEkIW/zA3xw1RIjJirIR+Q6Fka4ospkDhhekPeI9HTGOKTyZE4ZQZD3iDR0xrig0mRmMpDWlokkpSlZZDPMcVMFkRLg0SSFmjppXWmWEjztSyQSDJuWi5+TKOfradkbkyi3KvRG0m2lpYuprA4VGolpcb/lnpEizN6O9AAJJaYh47c1pDuaMjRtlqPvpFnoUfHChxWWcjxuBv9QA7+BdSG9GZKJJ5DfnNfAQYABKyA1KsVhbgAAAAASUVORK5CYII=');
+      background-size: contain;
+      width: 14px;
+      height: 32px;
+      margin-top: -16px;
+
+    }
+
+  }
 
   .ls-experts-list {
 
@@ -175,6 +198,7 @@
       margin: 0;
       font-size: 24px;
       min-width: 250px;
+      line-height: 51px;
     }
 
     .pane-logos {
@@ -198,6 +222,33 @@
     padding: 25px 0 40px 0;
 
     img {vertical-align: middle;margin: 0 55px;}
+
+  }
+
+  .ls-contacts {
+
+    margin-bottom: 40px;
+
+    color: #020709;
+
+    a {color: @main-color}
+
+    h2 {font-size: 24px;margin: 0;text-transform: uppercase;}
+
+    table {
+
+      td {
+        padding-right: 50px;
+        vertical-align: top;
+        line-height: 20px;
+
+      }
+
+
+
+
+
+    }
 
   }
 

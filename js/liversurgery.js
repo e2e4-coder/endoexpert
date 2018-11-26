@@ -19,6 +19,10 @@ $(document).ready(function () {
     autoplay: {
       delay: 5000,
     },
+    navigation: {
+        nextEl: '#ls-lectors-slider .swiper-button-next',
+        prevEl: '#ls-lectors-slider .swiper-button-prev',
+    },
   });
 
   var $lsTimer = $('#ls-timer');

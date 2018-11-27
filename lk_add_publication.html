@@ -164,21 +164,24 @@
 
                             </th>
                             <td>
+                                <div class="points-sign-wrapper">
+                                    <div id="points-sign">+100 баллов</div>
+                                </div>
                                 <table class="type-table">
                                     <tr>
-                                        <td><label><input type="radio" name="type" value="1" class="i-check" checked> Новость</label></td>
-                                        <td><label><input type="radio" name="type" value="2" class="i-check"> Статья</label></td>
-                                        <td><label><input type="radio" name="type" value="3" class="i-check"> Клинический случай</label></td>
-                                        <td><label><input type="radio" name="type" value="4" class="i-check"> Обзор</label></td>
-                                        <td><label><input type="radio" name="type" value="5" class="i-check"> Видео</label></td>
-                                        <td><label><input type="radio" name="type" value="6" class="i-check"> Мероприятие</label></td>
+                                        <td><label><input type="radio" name="type" value="1" class="i-check" checked data-points="+200 баллов"> Новость</label></td>
+                                        <td><label><input type="radio" name="type" value="2" class="i-check" data-points="+300 баллов"> Статья</label></td>
+                                        <td><label><input type="radio" name="type" value="3" class="i-check" data-points="+400 баллов"> Клинический случай</label></td>
+                                        <td><label><input type="radio" name="type" value="4" class="i-check" data-points="+500 баллов"> Обзор</label></td>
+                                        <td><label><input type="radio" name="type" value="5" class="i-check" data-points="+600 баллов"> Видео</label></td>
+                                        <td><label><input type="radio" name="type" value="6" class="i-check" data-points="+700 баллов"> Мероприятие</label></td>
                                     </tr>
                                     <tr>
                                         <td>&nbsp;</td>
                                         <td><label><input type="checkbox" name="type_konkurs" class="i-check"> Конкурс</label></td>
                                         <td><label><input type="checkbox" name="type_konsilium" class="i-check"> <span class="-consilium">Консилиум</span></label></td>
-                                        <td><label><input type="radio" name="type" value="7" class="i-check"> Quiz</label></td>
-                                        <td><label><input type="radio" name="type" value="8" class="i-check"> Вакансию</label></td>
+                                        <td><label><input type="radio" name="type" value="7" class="i-check" data-points="+800 баллов"> Quiz</label></td>
+                                        <td><label><input type="radio" name="type" value="8" class="i-check" data-points="+900 баллов"> Вакансию</label></td>
                                         <td>&nbsp;</td>
                                     </tr>
                                 </table>
@@ -492,7 +495,7 @@
                                 <div id="invite-friends-field">
                                     <button id="invite-friends-button" type="button">Друзья</button>
 
-                                    <div id="invite-friends-counter">Выбрано: <span>0</span></div>
+                                    <div id="invite-friends-counter"><span></span></div>
 
                                 </div>
 

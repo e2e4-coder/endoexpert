@@ -53,6 +53,26 @@ function initInviteFiendsApp(onOkCallback) {
 
       },
 
+      selected_fio_list : function() {
+
+        var out = [];
+
+        for (var i=0;i<this.selected_items.length;i++) {
+
+          var item = this.findById(this.selected_items[i]);
+
+          if (item) {
+
+            out.push(item.last_name + ' ' + item.first_name[0] + '.' + item.patronymic[0] + '.');
+
+          }
+
+        }
+
+        return out.join(', ');
+
+      },
+
       page_items : function () {
 
         return this.items.slice((this.page-1)*this.items_per_page, (this.page-1)*this.items_per_page + this.items_per_page);
@@ -115,6 +135,21 @@ function initInviteFiendsApp(onOkCallback) {
     },
 
     methods : {
+
+      findById : function(id) {
+
+        for (var i=0;i<this.items.length;i++) {
+
+          if (this.items[i].id === id) {
+
+            return this.items[i];
+          }
+
+        }
+
+        return false;
+
+      },
 
       selectPage: function (page) {
 

@@ -129,7 +129,7 @@ $(document).ready(function () {
 
             $.magnificPopup.close();
 
-            $('#invite-friends-counter').find('span').text(inviteFriendsApp.selected_items.length);
+            $('#invite-friends-counter').find('span').text(inviteFriendsApp.selected_fio_list);
 
             $('#invite-friends-ids').val(inviteFriendsApp.selected_items.join(','));
 
@@ -140,6 +140,14 @@ $(document).ready(function () {
       });
 
     });
+
+
+    $('.type-table input[type=radio]').on('ifChanged', function () {
+
+
+      $('#points-sign').text($(this).data('points')).css('left', $(this).parent().position().left + 'px').show();
+
+    }).filter(':checked').trigger('ifChanged');
 
 
 

@@ -73,7 +73,13 @@ $(document).ready(function () {
 
     $(this).spinner({
       min: $(this).data('min'),
-      max: $(this).data('max')
+      max: $(this).data('max'),
+      spin: function(event, ui) {
+
+        $(event.target).val(ui.value);
+
+        buildBirthDate();
+      }
     })
 
   });
@@ -95,6 +101,15 @@ $(document).ready(function () {
 
 
   });
+
+  function buildBirthDate() {
+
+    $('#field-birth-date').val($('#field-birth-day').val() + '.' + $('#field-birth-month').val() + '.' + $('#field-birth-year').val());
+  };
+
+  $('#field-birth-month').change(buildBirthDate);
+
+
 
 
 

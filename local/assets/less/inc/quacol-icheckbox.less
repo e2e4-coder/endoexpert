@@ -1,0 +1,61 @@
+
+/* iCheck plugin Minimal skin, blue
+----------------------------------- */
+.icheckbox_quacol,
+.iradio_quacol {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: -2px 10px 0 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: url(/local/assets/img/quacol_icheckbox.png) no-repeat;
+  border: none;
+  cursor: pointer;
+
+}
+
+.icheckbox_quacol {
+  background-position: 0 0;
+}
+.icheckbox_quacol.hover {
+  background-position: -30px 0;
+}
+.icheckbox_quacol.checked {
+  background-position: -60px 0;
+}
+.icheckbox_quacol.disabled {
+  background-position: -90px 0;
+  cursor: default;
+}
+.icheckbox_quacol.checked.disabled {
+  background-position: -120px 0;
+}
+
+.iradio_quacol {
+  background-position: -150px 0;
+}
+.iradio_quacol.hover {
+  background-position: -180px 0;
+}
+.iradio_quacol.checked {
+  background-position: -210px 0;
+}
+.iradio_quacol.disabled {
+  background-position: -240px 0;
+  cursor: default;
+}
+.iradio_quacol.checked.disabled {
+  background-position: -270px 0;
+}
+
+/* HiDPI support
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-resolution: 1.25dppx) {
+  .icheckbox_quacol,
+  .iradio_quacol {
+    background-image: url(blue@2x.png);
+    -webkit-background-size: 200px 20px;
+    background-size: 200px 20px;
+  }
+}*/

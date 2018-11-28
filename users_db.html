@@ -209,7 +209,8 @@
             </div>
 
             <table class="db-table">
-                <tr>
+                <thead>
+                    <tr>
                     <th>
                         <div><input type="text"></div>
                         <a href="#" class="col-settings"></a>
@@ -301,9 +302,11 @@
                         <span>Поисковые запросы</span>
                     </th>
                 </tr>
+                </thead>
+                <tbody>
 
-                <tr>
-                    <td class="user-pic-cell">
+                    <tr>
+                        <td class="user-pic-cell">
                             <div class="user-pic">
                                 <img src="img/tmp/friend.jpg">
 
@@ -319,126 +322,131 @@
                                     <a href="/link/?uid=1" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
                                 </div>
                             </div>
-                    </td>
-                    <td><a href="#" target="_blank">Иванов Иван Иванович</a></td>
-                    <td>ivanov@gmail.com</td>
-                    <td><span style="color:#6fae43">Гастро</span></td>
-                    <td><span style="color:#c00000">Зав</span></td>
-                    <td>Профессор</td>
-                    <td>Москва</td>
-                    <td>Врач<br>Представитель компании<br>Пациент</td>
-                    <td class="cell-stats">
-                        <div>
-                            <span class="s1" style="height: 70%"></span>
-                            <span class="s2" style="height: 80%"></span>
-                            <span class="s3" style="height: 20%"></span>
-                            <span class="s4" style="height: 40%"></span>
-                            <span class="s5" style="height: 80%"></span>
-                            <span class="s6" style="height: 30%"></span>
-                        </div>
-                    </td>
-                    <td>11 780<br><b style="color: #2f74b5">560</b></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><input type="checkbox" checked class="i-check"></td>
-                    <td>1/12</td>
-                    <td><span style="color: #6fae43;">0</span></td>
-                    <td>Нет</td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><span style="color: #6fae43;">6 час в день</span></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                </tr>
-
-                <tr>
-                    <td class="user-pic-cell">
-                        <div class="user-pic">
-                            <img src="img/tmp/friend.jpg">
-
-                            <div class="stat-line -stat-1" style="height: 70%;"></div>
-                            <div class="stat-line -stat-2" style="height: 50%;"></div>
-                            <div class="stat-line -stat-3" style="height: 90%;"></div>
-                            <div class="stat-line -stat-4" style="height: 80%;"></div>
-
-                            <div class="letter-labels"><b>Q</b> <b>EE</b> <b>StUp</b></div>
-                            <div class="item-rank"><b></b><b></b><b></b></div>
-                            <div class="item-links">
-                                <a href="/link/?uid=1" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
-                                <a href="/link/?uid=1" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+                        </td>
+                        <td><a href="#" target="_blank">Иванов Иван Иванович</a></td>
+                        <td>ivanov@gmail.com</td>
+                        <td><span style="color:#6fae43">Гастро</span></td>
+                        <td><span style="color:#c00000">Зав</span></td>
+                        <td>Профессор</td>
+                        <td>Москва</td>
+                        <td>Врач<br>Представитель компании<br>Пациент</td>
+                        <td class="cell-stats">
+                            <div>
+                                <span class="s1" style="height: 70%"></span>
+                                <span class="s2" style="height: 80%"></span>
+                                <span class="s3" style="height: 20%"></span>
+                                <span class="s4" style="height: 40%"></span>
+                                <span class="s5" style="height: 80%"></span>
+                                <span class="s6" style="height: 30%"></span>
                             </div>
-                        </div>
-                    </td>
-                    <td><a href="#" target="_blank">Иванов Иван Иванович</a></td>
-                    <td>ivanov@gmail.com</td>
-                    <td><span style="color:#6fae43">Гастро</span></td>
-                    <td><span style="color:#c00000">Зав</span></td>
-                    <td>Профессор</td>
-                    <td>Москва</td>
-                    <td>Врач<br>Представитель компании<br>Пациент</td>
-                    <td class="cell-stats">
-                        <div>
-                            <span class="s1" style="height: 70%"></span>
-                            <span class="s2" style="height: 80%"></span>
-                            <span class="s3" style="height: 20%"></span>
-                            <span class="s4" style="height: 40%"></span>
-                            <span class="s5" style="height: 80%"></span>
-                            <span class="s6" style="height: 30%"></span>
-                        </div>
-                    </td>
-                    <td>11 780<br><b style="color: #2f74b5">560</b></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><input type="checkbox" checked class="i-check"></td>
-                    <td>1/12</td>
-                    <td><span style="color: #6fae43;">0</span></td>
-                    <td>Нет</td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><span style="color: #6fae43;">6 час в день</span></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                </tr>
+                        </td>
+                        <td>11 780<br><b style="color: #2f74b5">560</b></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><input type="checkbox" checked class="i-check"></td>
+                        <td>1/12</td>
+                        <td><span style="color: #6fae43;">0</span></td>
+                        <td>Нет</td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><span style="color: #6fae43;">6 час в день</span></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                    </tr>
 
-                <tr>
-                    <td class="user-pic-cell">
-                        <div class="user-pic">
-                            <img src="img/tmp/friend.jpg">
+                    <tr>
+                        <td class="user-pic-cell">
+                            <div class="user-pic">
+                                <img src="img/tmp/friend.jpg">
 
-                            <div class="stat-line -stat-1" style="height: 70%;"></div>
-                            <div class="stat-line -stat-2" style="height: 50%;"></div>
-                            <div class="stat-line -stat-3" style="height: 90%;"></div>
-                            <div class="stat-line -stat-4" style="height: 80%;"></div>
+                                <div class="stat-line -stat-1" style="height: 70%;"></div>
+                                <div class="stat-line -stat-2" style="height: 50%;"></div>
+                                <div class="stat-line -stat-3" style="height: 90%;"></div>
+                                <div class="stat-line -stat-4" style="height: 80%;"></div>
 
-                            <div class="letter-labels"><b>Q</b> <b>EE</b> <b>StUp</b></div>
-                            <div class="item-rank"><b></b><b></b><b></b></div>
-                            <div class="item-links">
-                                <a href="/link/?uid=1" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
-                                <a href="/link/?uid=1" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+                                <div class="letter-labels"><b>Q</b> <b>EE</b> <b>StUp</b></div>
+                                <div class="item-rank"><b></b><b></b><b></b></div>
+                                <div class="item-links">
+                                    <a href="/link/?uid=1" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
+                                    <a href="/link/?uid=1" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td><a href="#" target="_blank">Иванов Иван Иванович</a></td>
-                    <td>ivanov@gmail.com</td>
-                    <td><span style="color:#6fae43">Гастро</span></td>
-                    <td><span style="color:#c00000">Зав</span></td>
-                    <td>Профессор</td>
-                    <td>Москва</td>
-                    <td>Врач<br>Представитель компании<br>Пациент</td>
-                    <td class="cell-stats">
-                        <div>
-                            <span class="s1" style="height: 70%"></span>
-                            <span class="s2" style="height: 80%"></span>
-                            <span class="s3" style="height: 20%"></span>
-                            <span class="s4" style="height: 40%"></span>
-                            <span class="s5" style="height: 80%"></span>
-                            <span class="s6" style="height: 30%"></span>
-                        </div>
-                    </td>
-                    <td>11 780<br><b style="color: #2f74b5">560</b></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><input type="checkbox" checked class="i-check"></td>
-                    <td>1/12</td>
-                    <td><span style="color: #6fae43;">0</span></td>
-                    <td>Нет</td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                    <td><span style="color: #6fae43;">6 час в день</span></td>
-                    <td><span style="color: #6fae43;">7/7</span></td>
-                </tr>
+                        </td>
+                        <td><a href="#" target="_blank">Иванов Иван Иванович</a></td>
+                        <td>ivanov@gmail.com</td>
+                        <td><span style="color:#6fae43">Гастро</span></td>
+                        <td><span style="color:#c00000">Зав</span></td>
+                        <td>Профессор</td>
+                        <td>Москва</td>
+                        <td>Врач<br>Представитель компании<br>Пациент</td>
+                        <td class="cell-stats">
+                            <div>
+                                <span class="s1" style="height: 70%"></span>
+                                <span class="s2" style="height: 80%"></span>
+                                <span class="s3" style="height: 20%"></span>
+                                <span class="s4" style="height: 40%"></span>
+                                <span class="s5" style="height: 80%"></span>
+                                <span class="s6" style="height: 30%"></span>
+                            </div>
+                        </td>
+                        <td>11 780<br><b style="color: #2f74b5">560</b></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><input type="checkbox" checked class="i-check"></td>
+                        <td>1/12</td>
+                        <td><span style="color: #6fae43;">0</span></td>
+                        <td>Нет</td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><span style="color: #6fae43;">6 час в день</span></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="user-pic-cell">
+                            <div class="user-pic">
+                                <img src="img/tmp/friend.jpg">
+
+                                <div class="stat-line -stat-1" style="height: 70%;"></div>
+                                <div class="stat-line -stat-2" style="height: 50%;"></div>
+                                <div class="stat-line -stat-3" style="height: 90%;"></div>
+                                <div class="stat-line -stat-4" style="height: 80%;"></div>
+
+                                <div class="letter-labels"><b>Q</b> <b>EE</b> <b>StUp</b></div>
+                                <div class="item-rank"><b></b><b></b><b></b></div>
+                                <div class="item-links">
+                                    <a href="/link/?uid=1" target="_blank" title="Написать сообщение" onclick="event.stopPropagation()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABmUFkqAAAAQXRSTlMAw/XNMxYPfP4yCP1Q3Avy2MDHUfftc88M7kvdA/jvSPwh+d8TR/Yx4xJgOCcG5VL6yUx48wdcLey/MHTkhCKhdrQB5vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAn0lEQVQY02XQ5w6CQBAE4FXsYgFBORv23hV7Yd7/pbxEE+6W/fllJpsMkX6JpJFilM5kgVxeswKKZAIl1cqVqmVTDVDNcWXOpnojMs8R1ATQaiu5Tpd8aej1IxuInw1HSs6Nm/wxZuZNRMymM+PfnUePfSyW3FZrE6xLZG1oy83bYU8HCNXoKFOn4HzR9rpKvN31XR94vt5sa/qEASf6AtuaGtS/nrXcAAAAAElFTkSuQmCC" width="10" height="10"></a>
+                                    <a href="/link/?uid=1" target="_blank" title="Блог пользователя" onclick="event.stopPropagation()">B</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><a href="#" target="_blank">Петров Иван Иванович</a></td>
+                        <td>ivanov@gmail.com</td>
+                        <td><span style="color:#6fae43">Гастро</span></td>
+                        <td><span style="color:#c00000">Зав</span></td>
+                        <td>Профессор</td>
+                        <td>Москва</td>
+                        <td>Врач<br>Представитель компании<br>Пациент</td>
+                        <td class="cell-stats">
+                            <div>
+                                <span class="s1" style="height: 70%"></span>
+                                <span class="s2" style="height: 80%"></span>
+                                <span class="s3" style="height: 20%"></span>
+                                <span class="s4" style="height: 40%"></span>
+                                <span class="s5" style="height: 80%"></span>
+                                <span class="s6" style="height: 30%"></span>
+                            </div>
+                        </td>
+                        <td>11 780<br><b style="color: #2f74b5">560</b></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><input type="checkbox" checked class="i-check"></td>
+                        <td>1/12</td>
+                        <td><span style="color: #6fae43;">0</span></td>
+                        <td>Нет</td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                        <td><span style="color: #6fae43;">6 час в день</span></td>
+                        <td><span style="color: #6fae43;">7/7</span></td>
+                    </tr>
+
+                </tbody>
+
+
+
 
 
 

@@ -110,18 +110,19 @@ $(document).ready(function () {
   $('#field-birth-month').change(buildBirthDate);
 
 
+
+
+
   $.formUtils.addValidator({
-    name : 'rus',
+    name : 'only_letters',
     validatorFunction : function(value, $el, config, language, $form) {
 
+      var regexp = /^[a-zA-Zа-яА-ЯёЁ]*$/;
 
-      var regexp = /[а-яА-ЯёЁ]/i;
-
-      return !!regexp.test(value);
-
+      return regexp.test(value);
 
     },
-    errorMessage : 'Допускаются только русские буквы',
+    errorMessage : 'Допускаются только буквы ',
     errorMessageKey: 'badRusOnly'
   });
 

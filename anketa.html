@@ -17,6 +17,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
     <script src="/local/assets/js/anketa.js"></script>
 
@@ -168,22 +169,22 @@
 
                     <div class="form-item">
                         <div class="form-placeholder">E-mail <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required" data-validation="email">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Фамилия <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required" data-validation="required, rus">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Имя <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required" data-validation="required, rus">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Отчество <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required" data-validation="required, rus">
                     </div>
 
                     <div class="form-item -birth-date">
@@ -215,7 +216,7 @@
 
                     <div class="form-item">
                         <div class="form-placeholder">Город <sup>*</sup></div>
-                        <input type="text" class="form-text -required" list="city-list">
+                        <input type="text" class="form-text -required" list="city-list"  data-validation="required">
                         <datalist id="city-list">
                             <option value="Москва"></option>
                             <option value="Санкт-Петербург"></option>
@@ -267,17 +268,17 @@
 
                     <div class="form-item">
                         <div class="form-placeholder">Полное название Учреждения <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required"  data-validation="required">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Адрес Учреждения <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required"  data-validation="required">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Должность в ЛПУ <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required"  data-validation="required">
                     </div>
 
                     <div class="form-item">
@@ -297,7 +298,7 @@
 
                     <div class="form-item">
                         <div class="form-placeholder">Специализация отделения <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required" data-validation="required">
                     </div>
 
                     <hr>
@@ -394,12 +395,12 @@
 
                     <div class="form-item">
                         <div class="form-placeholder">Руководитель отделения (ФИО) <sup>*</sup></div>
-                        <input type="text" class="form-text -required">
+                        <input type="text" class="form-text -required"  data-validation="required">
                     </div>
 
                     <div class="form-item">
                         <div class="form-placeholder">Врачи отделения</div>
-                        <input type="text" class="form-text">
+                        <input type="text" class="form-text"  data-validation="required">
                     </div>
 
                     <div class="form-item">

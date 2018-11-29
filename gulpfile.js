@@ -8,13 +8,13 @@ var resolveRelativeUrls = require('gulp-css-resolve-relative-urls');
 
 gulp.task('BuildCSS', function() {
 
-  return buildCss('.');
+  return buildCss('./local/assets');
 
 });
 
 gulp.task('Watch', function() {
 
-  gulp.watch('./less/**/*.less', { }, ['BuildCSS']);
+  gulp.watch('./local/assets/less/**/*.less', { }, ['BuildCSS']);
 
 });
 

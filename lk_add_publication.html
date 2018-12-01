@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <form method="post" enctype="multipart/form-data">
+                <form id="add-publication-app" method="post" enctype="multipart/form-data">
 
                     <table class="form-table">
                         <tr>
@@ -165,23 +165,23 @@
                             </th>
                             <td>
                                 <div class="points-sign-wrapper">
-                                    <div id="points-sign">+100 баллов</div>
+                                    <div id="points-sign"></div>
                                 </div>
                                 <table class="type-table">
                                     <tr>
-                                        <td><label><input type="radio" name="type" value="1" class="i-check" checked data-points="+200 баллов"> Новость</label></td>
-                                        <td><label><input type="radio" name="type" value="2" class="i-check" data-points="+300 баллов"> Статья</label></td>
-                                        <td><label><input type="radio" name="type" value="3" class="i-check" data-points="+400 баллов"> Клинический случай</label></td>
-                                        <td><label><input type="radio" name="type" value="4" class="i-check" data-points="+500 баллов"> Обзор</label></td>
-                                        <td><label><input type="radio" name="type" value="5" class="i-check" data-points="+600 баллов"> Видео</label></td>
-                                        <td><label><input type="radio" name="type" value="6" class="i-check" data-points="+700 баллов"> Мероприятие</label></td>
+                                        <td><label><input type="radio" name="type" value="1" class="i-check" data-points="200" checked> Новость</label></td>
+                                        <td><label><input type="radio" name="type" value="2" class="i-check" data-points="300"> Статья</label></td>
+                                        <td><label><input type="radio" name="type" value="3" class="i-check" data-points="400"> Клинический случай</label></td>
+                                        <td><label><input type="radio" name="type" value="4" class="i-check" data-points="500"> Обзор</label></td>
+                                        <td><label><input type="radio" name="type" value="5" class="i-check" data-points="600"> Видео</label></td>
+                                        <td><label><input type="radio" name="type" value="6" class="i-check" data-points="700"> Мероприятие</label></td>
                                     </tr>
                                     <tr>
                                         <td>&nbsp;</td>
                                         <td><label><input type="checkbox" name="type_konkurs" class="i-check"> Конкурс</label></td>
                                         <td><label><input type="checkbox" name="type_konsilium" class="i-check"> <span class="-consilium">Консилиум</span></label></td>
-                                        <td><label><input type="radio" name="type" value="7" class="i-check" data-points="+800 баллов"> Quiz</label></td>
-                                        <td><label><input type="radio" name="type" value="8" class="i-check" data-points="+900 баллов"> Вакансию</label></td>
+                                        <td><label><input type="radio" name="type" value="7" class="i-check" data-points="800"> Quiz</label></td>
+                                        <td><label><input type="radio" name="type" value="8" class="i-check" data-points="900"> Вакансию</label></td>
                                         <td>&nbsp;</td>
                                     </tr>
                                 </table>
@@ -248,18 +248,18 @@
                         </tr>
                         <tr class="second-row">
                             <th>
-                                <div class="image-wrapper">
-                                    <input id="file-teaser-image" type="file" name="teaser_image" accept="image/*">
+                                <div class="image-wrapper" v-bind:class="{active : teaserImageSelected}">
+                                    <input id="file-teaser-image" type="file" name="teaser_image" accept="image/*" v-on:change="onTeaserImageChange($event)">
 
-                                    <div class="upload-controls">
+                                    <div v-if="!teaserImageSelected" class="upload-controls">
 
-                                        <span id="upload-teaser-image-button">Загрузите изображение</span>
+                                        <span id="upload-teaser-image-button" v-on:click="jQuery('#file-teaser-image').trigger('click');">Загрузите изображение</span>
                                         <br>или<br>
                                         <span id="select-teaser-image-button">Выберите изображение<br>из медиабиблиотеки</span>
 
                                     </div>
 
-                                    <div class="control-delete" title="Удалить"></div>
+                                    <div v-if="teaserImageSelected" class="control-delete" title="Удалить" v-on:click="onTeaserImageDelete()"></div>
                                 </div>
 
                                 <div class="image-hint">Рекомендуемый размер 900*900 пикселей</div>
@@ -315,7 +315,7 @@
                             <td colspan="2">
 
                                 <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="crop_image"> Кадрировать изображение</label>
-                                <label><input type="checkbox" class="i-check" name="teaser_image_is_main"> Использовать изображение как основное в публикации</label>
+                                <label><input id="field-teaser-image-is-main" type="checkbox" class="i-check" name="teaser_image_is_main" disabled> Использовать изображение как основное в публикации</label>
 
                             </td>
                         </tr>
@@ -333,10 +333,10 @@
                         <tr>
                             <td colspan="2">
 
-                                <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="is_exclusive"> <b>Материал эксклюзивен и будет опубликован только на EndoExpert.ru</b></label>
+                                <label style="margin-right: 20px;"><input id="checkbox-exclusive" type="checkbox" class="i-check" name="is_exclusive" data-points="1000" data-ee-points="100"> <b>Материал эксклюзивен и будет опубликован только на EndoExpert.ru</b></label>
 
                                 <span class="points-label-1">+1000 баллов</span>
-                                <span class="points-label-1">+1000 EndoExpert баллов</span>
+                                <span class="points-label-1">+100 EndoExpert баллов</span>
 
                             </td>
                         </tr>
@@ -345,7 +345,7 @@
 
                             <th><div class="field-name">Основной <br>текст <sup>*</sup></div></th>
                             <td>
-                                <textarea name="text" style="width: 100%;height: 100px;">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
+                                <textarea name="text" style="width: 100%;height: 100px;" data-over-2000-points="200" data-over-4000-points="400" v-on:change="onTextChange($event)">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
                             </td>
 
                         </tr>
@@ -355,14 +355,14 @@
 
                             <td>
 
-                                <input type="file" id="file-main-image" name="main_image" accept="image/*">
+                                <input type="file" id="file-main-image" name="main_image" accept="image/*" v-on:change="onMainImageChange($event)">
 
                                 <table>
                                     <tr>
                                         <td>
-                                            <div id="main-image-wrapper">
+                                            <div id="main-image-wrapper" v-bind:class="{active : mainImageSelected}" v-on:click="jQuery('#file-main-image').trigger('click');">
 
-                                                <div class="control-delete" title="Удалить"></div>
+                                                <div class="control-delete" title="Удалить" v-on:click="onMainImageDelete($event)"></div>
                                             </div>
                                         </td>
 
@@ -493,7 +493,7 @@
                                 <input id="invite-friends-ids" type="hidden" name="invited_ids">
 
                                 <div id="invite-friends-field">
-                                    <button id="invite-friends-button" type="button">Друзья</button>
+                                    <button id="invite-friends-button" type="button" v-on:click="onInviteFriendsClick()">Друзья</button>
 
                                     <div id="invite-friends-counter"><span></span></div>
 
@@ -514,6 +514,7 @@
                         <div class="section-title">Счетчик зарабатываемых баллов</div>
 
                         <table class="points-table">
+                            <thead>
                             <tr>
                                 <th>Дата и время</th>
                                 <th>Основные</th>
@@ -521,34 +522,15 @@
                                 <th>Утверждено администратором</th>
                                 <th>Комментарий администратора</th>
                             </tr>
-                            <tr>
-                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
-                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
-                                <td>100</td>
-                                <td><input type="checkbox" class="i-check" disabled checked></td>
-                                <td>Пример</td>
-                            </tr>
-                            <tr>
-                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
-                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
-                                <td>100</td>
-                                <td><input type="checkbox" class="i-check" disabled></td>
-                                <td>-10 неверное оформление</td>
-                            </tr>
-                            <tr>
-                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
-                                <td class="-grey">Опубликован обзор: «Пиво это хорошо»</td>
-                                <td>100</td>
-                                <td><input type="checkbox" class="i-check" disabled checked></td>
-                                <td>+1000 эксклюзив</td>
-                            </tr>
-                            <tr>
-                                <td class="-grey">08.09.18&nbsp;&nbsp;&nbsp;18:20</td>
-                                <td class="-grey">Отсутствует картинка</td>
-                                <td>-100</td>
-                                <td><input type="checkbox" class="i-check" disabled checked></td>
-                                <td>-100</td>
-                            </tr>
+
+                            </thead>
+
+                            <tbody>
+
+
+                            </tbody>
+
+
                         </table>
 
                         <div class="dispute-button-wrapper">
@@ -557,13 +539,13 @@
 
                         <div class="summary-table-wrapper">
 
-                            <table class="summary-table">
+                            <table v-if="totalPoints" class="summary-table">
                                 <tr>
                                     <th>ИТОГО:</th>
                                     <td>
-                                        <span>+1900 баллов из 2000 баллов</span>
+                                        <span>+{{totalPoints}} баллов</span>
                                         <br>
-                                        +200 баллов EndoExpert
+                                        <span v-if="totalEePoints" class="-ee">+{{totalEePoints}} баллов EndoExpert</span>
                                     </td>
                                 </tr>
                             </table>

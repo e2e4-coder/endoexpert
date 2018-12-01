@@ -309,11 +309,8 @@
         line-height: 30px;
         position: relative;
 
-        &.active {
-          .upload-controls {display: none;}
+        &:hover .control-delete {display: block;}
 
-          &:hover .control-delete {display: block;}
-        }
 
         .control-delete {
 
@@ -597,11 +594,13 @@
        }
 
        td {
-         color: @quacol-main-color;
+
          text-align: right;
 
 
          span {color: #f09d0b;}
+
+         span.-ee {color: @quacol-main-color;}
        }
 
      }

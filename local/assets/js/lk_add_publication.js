@@ -76,7 +76,7 @@ $(document).ready(function () {
 
         var self = this;
 
-        $('.i-check').iCheck({
+        $('.i-check-ee').iCheck({
           checkboxClass: 'icheckbox_ee',
           radioClass: 'iradio_ee'
         });

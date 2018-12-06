@@ -174,10 +174,32 @@ $(document).ready(function () {
 
           e.preventDefault();
           e.stopPropagation();
+          $(this).removeClass('-dragging');
+
+        });
+
+
+        $('.teaser-fields-table .image-wrapper').on('dragover', function (e) {
+
+          e.preventDefault();
+          e.stopPropagation();
+
+          $(this).addClass('-dragging');
+
+        }).on('dragleave', function (e) {
+
+          e.preventDefault();
+          e.stopPropagation();
 
           $(this).removeClass('-dragging');
 
+        }).on('drop', function (e) {
 
+          $('#file-teaser-image')[0].files = e.originalEvent.dataTransfer.files;
+
+          e.preventDefault();
+          e.stopPropagation();
+          $(this).removeClass('-dragging');
 
         });
 

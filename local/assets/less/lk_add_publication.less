@@ -247,6 +247,7 @@
             color: @quacol-main-color;
             vertical-align: top;
             white-space: nowrap;
+
           }
 
           td {
@@ -312,6 +313,14 @@
         color: @quacol-main-color;
         line-height: 30px;
         position: relative;
+        box-sizing: border-box;
+
+
+        &.-dragging {
+
+          border: 1px dashed lightgrey;
+
+        }
 
         &:hover .control-delete {display: block;}
 

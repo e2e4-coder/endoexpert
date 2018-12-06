@@ -283,13 +283,15 @@
 
                                     <table>
                                         <tr>
-                                            <th>Автор:</th>
-                                            <td><input type="text" name="author" class="form-text" placeholder="Введите текст анонса публикации"></td>
+                                            <th style="width: 160px">Авторы публикации:</th>
+                                            <td><textarea name="author" maxlength="50" class="form-textarea char-counter" placeholder="Введите авторов публикации"></textarea></td>
                                         </tr>
                                     </table>
 
+                                    <div class="field-description">(Максимальное допустимое количество символов для авторов - 50.)</div>
 
                                 </div>
+
 
 
                                 <div class="field-wrapper">
@@ -351,7 +353,7 @@
                         </tr>
 
                         <tr>
-                            <th><div class="field-name">Загрузите изображение основной публикации<sup>*</sup></div></th>
+                            <th><div class="field-name">Загрузите или перетащите изображение основной публикации<sup>*</sup></div></th>
 
                             <td>
 
@@ -388,7 +390,7 @@
                             <td>
 
                                 <div class="auto-resize-wrapper char-counter-wrapper">
-                                    <textarea class="auto-resize char-counter" name="conclusion" maxlength="200"></textarea>
+                                    <textarea class="auto-resize char-counter" name="conclusion" maxlength="1000"></textarea>
                                 </div>
 
                                 <div class="field-description">Опишите в двух предложениях суть публикации</div>
@@ -409,10 +411,18 @@
                                         <span>Изображение</span>
                                         <span>Файл</span>
                                         <span>Видео</span>
+                                        <span v-show="!youtubeLinkFieldVisible" v-on:click="onAddYoutubeLinkClick()">Ссылку на YouTube</span>
                                     </div>
 
 
                                 </div>
+                            </td>
+                        </tr>
+
+                        <tr v-show="youtubeLinkFieldVisible">
+                            <th><div class="field-name">Ссылка на YouTube</div></th>
+                            <td>
+                                <input v-model="youtubeLink" id="field-yotube-link" type="text" class="form-text" name="youtube_link" value="">
                             </td>
                         </tr>
 
@@ -433,7 +443,7 @@
 
                                 <input id="input-tags" type="text" class="form-text" name="tags">
 
-                                <div class="field-description">Выберите 7 тегов из предложенных и/или добавьте свои через запятую</div>
+                                <div class="field-description">Выберите не меньше 3-х тегов из предложенных и/или добавьте свои через запятую</div>
 
                                 <div class="tags-helper">
                                     <span>семианр</span> <span>коропоратив</span> <span>коференция</span>

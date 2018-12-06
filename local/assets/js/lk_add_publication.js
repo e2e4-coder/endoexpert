@@ -14,6 +14,8 @@ $(document).ready(function () {
         typePoints: 0,
         typeName: '',
         pointsTable: [],
+        youtubeLink: $('#field-yotube-link').val(),
+        youtubeLinkFieldVisible: !!$('#field-yotube-link').val(),
 
       },
 
@@ -147,6 +149,38 @@ $(document).ready(function () {
 
 
         });
+
+
+        /////
+
+
+        $('#main-image-wrapper').on('dragover', function (e) {
+
+          e.preventDefault();
+          e.stopPropagation();
+
+          $(this).addClass('-dragging');
+
+        }).on('dragleave', function (e) {
+
+          e.preventDefault();
+          e.stopPropagation();
+
+          $(this).removeClass('-dragging');
+
+        }).on('drop', function (e) {
+
+          $('#file-main-image')[0].files = e.originalEvent.dataTransfer.files;
+
+          e.preventDefault();
+          e.stopPropagation();
+
+          $(this).removeClass('-dragging');
+
+
+
+        });
+
 
 
 
@@ -367,6 +401,24 @@ $(document).ready(function () {
 
 
         },
+
+        onAddYoutubeLinkClick: function () {
+
+          this.youtubeLinkFieldVisible = !this.youtubeLinkFieldVisible;
+
+
+
+          if (this.youtubeLinkFieldVisible) {
+
+            this.$nextTick(function () {
+
+              $('#field-yotube-link').focus()
+
+            });
+
+            }
+
+        }
 
 
 

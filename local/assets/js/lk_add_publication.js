@@ -213,9 +213,14 @@ $(document).ready(function () {
 
         onTypeSelect : function (e) {
 
+          var typeName = $(e.target).closest('label').text().trim();
+
+          $('#field-rubric-name').val(typeName);
+          $('#rubric-name').text(typeName);
+
           $('#points-sign').text('+' + $(e.target).data('points') + ' баллов').css('left', $(e.target).parent().position().left + 'px').show();
 
-          this.addPointsTableRow('type-points', 'Публикация материала типа «'+$(e.target).closest('label').text().trim()+'»', $(e.target).data('points'), 0);
+          this.addPointsTableRow('type-points', 'Публикация материала типа «'+typeName+'»', $(e.target).data('points'), 0);
 
         },
 

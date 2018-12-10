@@ -185,6 +185,38 @@
 
   }
 
+  #drugs-inputs {
+
+    .form-text {
+
+      width: 370px;
+      margin-right: 20px;
+      vertical-align: middle;
+
+    }
+
+    .input-wrapper {
+      margin-bottom: 15px;
+
+      &:first-child .control-delete {display: none;}
+    }
+
+    .input-controls {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      line-height: 20px;
+      user-select: none;
+
+      span {
+        color: @main-color;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+  }
+
 
   .teaser-fields-table {
 
@@ -222,6 +254,7 @@
         padding: 10px 0 0 10px;
 
 
+
         .field-wrapper {
 
           background: #f2f2f2;
@@ -253,6 +286,9 @@
           td {
 
             vertical-align: top;
+            background: #fff;
+            border-radius: 5px;
+            padding: 4px 10px;
 
             .form-textarea {
               border: none;
@@ -302,7 +338,7 @@
 
       .image-wrapper {
 
-        height: 217px;
+        height: 234px;
         background: #f5f6fa center center no-repeat;
         background-size: cover;
         display: flex;
@@ -315,6 +351,13 @@
         position: relative;
         box-sizing: border-box;
 
+        &.-active {
+
+          .upload-controls {display: none;}
+
+          &:hover .control-delete {display: block;}
+        }
+
 
         &.-dragging {
 
@@ -322,7 +365,7 @@
 
         }
 
-        &:hover .control-delete {display: block;}
+
 
 
         .control-delete {
@@ -385,7 +428,7 @@
     position: relative;
     box-sizing: border-box;
 
-    &.active {
+    &.-active {
       background-size: contain;
     }
 
@@ -393,7 +436,7 @@
       border: 1px dashed lightgrey;
     }
 
-    &.active:hover .control-delete {display: block;}
+    &.-active:hover .control-delete {display: block;}
 
     .control-delete {
 
@@ -466,6 +509,60 @@
 
       span {color: @main-color;text-decoration: underline;cursor: pointer;}
     }
+
+  }
+
+  #attach-files-list {
+
+    margin: 20px 0;
+
+    input {display: none;}
+
+    td {
+      padding: 0 30px 0 0;
+      vertical-align: middle;
+      border-bottom: 1px dashed #d3d3d3;
+    }
+
+    .item-icon {
+
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url("/local/assets/img/ico_file.png") top left no-repeat;
+      background-size: cover;
+
+      &.-pdf {
+
+        background: url("/local/assets/img/ico_pdf.png") top left no-repeat;
+        background-size: cover;
+      }
+
+      &.-mp4 {
+
+        background: url("/local/assets/img/ico_mp4.png") top left no-repeat;
+        background-size: cover;
+      }
+
+    }
+
+    .control-delete {
+      display: inline-block;
+      cursor: pointer;
+      opacity: .8;
+
+      background: url("/local/assets/img/ico_delete.png") top left no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 19px;
+
+      &:hover {opacity: 1}
+
+    }
+
+
+
+
 
   }
 
@@ -549,6 +646,25 @@
       color: #f09d0b;
       font-size: 12px;
       padding: 5px 13px;
+    }
+
+  }
+
+
+  #nl-wrapper {
+
+    .form-select, .form-text {
+      width: 370px;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+
+    .field-toggle {
+      display: inline-block;
+      vertical-align: middle;
+      color: @main-color;
+      text-decoration: underline;
+      cursor: pointer;
     }
 
   }

@@ -27,7 +27,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
     <!-- production version, optimized for size and speed -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/vuejs-paginate@latest"></script>
+    <script src="/local/assets/local/lib/frontend/vuejs-paginate.js"></script>
 
 
 
@@ -251,18 +251,18 @@
                         </tr>
                         <tr class="second-row">
                             <th>
-                                <div class="image-wrapper" v-bind:class="{active : teaserImageSelected}">
-                                    <input id="file-teaser-image" type="file" name="teaser_image" accept="image/*" v-on:change="onTeaserImageChange($event)">
+                                <div class="image-wrapper">
+                                    <input id="file-teaser-image" type="file" name="teaser_image" accept="image/*">
 
-                                    <div v-if="!teaserImageSelected" class="upload-controls">
+                                    <div class="upload-controls">
 
-                                        <span id="upload-teaser-image-button" v-on:click="jQuery('#file-teaser-image').trigger('click');">Загрузите изображение</span>
+                                        <span id="upload-teaser-image-button">Загрузите изображение</span>
                                         <br>или<br>
                                         <span id="select-teaser-image-button">Выберите изображение<br>из медиабиблиотеки</span>
 
                                     </div>
 
-                                    <div v-if="teaserImageSelected" class="control-delete" title="Удалить" v-on:click="onTeaserImageDelete()"></div>
+                                    <div class="control-delete" title="Удалить"></div>
                                 </div>
 
                                 <div class="image-hint">Рекомендуемый размер 900*900 пикселей</div>
@@ -273,7 +273,7 @@
 
                                     <table>
                                         <tr>
-                                            <th>Тема:</th>
+                                            <th style="width: 60px;">Тема:</th>
                                             <td><textarea name="title" maxlength="112" class="form-textarea char-counter" placeholder="Введите заголовок материала"></textarea></td>
                                         </tr>
                                     </table>
@@ -301,7 +301,7 @@
 
                                     <table>
                                         <tr>
-                                            <th>Анонс:</th>
+                                            <th style="width: 60px;">Анонс:</th>
                                             <td><textarea name="teaser" maxlength="360" class="form-textarea char-counter" placeholder="Введите текст анонса публикации"></textarea></td>
                                         </tr>
                                     </table>
@@ -350,7 +350,7 @@
 
                             <th><div class="field-name">Основной <br>текст <sup>*</sup></div></th>
                             <td>
-                                <textarea name="text" style="width: 100%;height: 100px;" data-over-2000-points="200" data-over-4000-points="400" v-on:change="onTextChange($event)">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
+                                <textarea id="field-main-text" name="text" style="width: 100%;height: 100px;" data-over-2000-points="200" data-over-4000-points="400">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
                             </td>
 
                         </tr>
@@ -360,14 +360,14 @@
 
                             <td>
 
-                                <input type="file" id="file-main-image" name="main_image" accept="image/*" v-on:change="onMainImageChange($event)">
+                                <input type="file" id="file-main-image" name="main_image" accept="image/*">
 
                                 <table>
                                     <tr>
                                         <td>
-                                            <div id="main-image-wrapper" v-bind:class="{active : mainImageSelected}" v-on:click="jQuery('#file-main-image').trigger('click');">
+                                            <div id="main-image-wrapper">
 
-                                                <div class="control-delete" title="Удалить" v-on:click="onMainImageDelete($event)"></div>
+                                                <div class="control-delete" title="Удалить"></div>
                                             </div>
                                         </td>
 
@@ -411,21 +411,29 @@
 
                                     <div class="control-buttons">
                                         <b>Прикрепить:</b>
-                                        <span>Изображение</span>
-                                        <span>Файл</span>
-                                        <span>Видео</span>
-                                        <span v-show="!youtubeLinkFieldVisible" v-on:click="onAddYoutubeLinkClick()">Ссылку на YouTube</span>
+                                        <span id="control-attach-image" data-input-name="attach_image" data-accept="image/*">Изображение</span>
+                                        <span id="control-attach-pdf" data-input-name="attach_image" data-accept="application/pdf">Файл PDF</span>
+                                        <span id="control-attach-file" data-input-name="attach_file" data-accept="">Материал для скачивания</span>
+                                        <span id="control-attach-video" data-input-name="attach_video" data-accept="video/mp4">Видео</span>
+                                        <span id="control-field-youtube-link">Ссылку на YouTube</span>
                                     </div>
+
+                                    <table id="attach-files-list">
+
+
+
+
+                                    </table>
 
 
                                 </div>
                             </td>
                         </tr>
 
-                        <tr v-show="youtubeLinkFieldVisible">
+                        <tr id="row-field-yotube-link">
                             <th><div class="field-name">Ссылка на YouTube</div></th>
                             <td>
-                                <input v-model="youtubeLink" id="field-yotube-link" type="text" class="form-text" name="youtube_link" value="">
+                                <input id="field-youtube-link" type="text" class="form-text" name="youtube_link" value="">
                             </td>
                         </tr>
 
@@ -440,7 +448,7 @@
                         </tr>
 
 
-                        <tr>
+                        <tr id="row-tags">
                             <th><div class="field-name">Теги <sup>*</sup></div></th>
                             <td>
 
@@ -460,7 +468,19 @@
                             <th><div class="field-name">Нозологии</div></th>
                             <td>
 
-                                <input type="text" class="form-text" name="nozologii">
+                                <div id="nl-wrapper">
+                                    <input style="display: none" type="text" class="form-text" name="nozologii">
+
+                                    <select class="form-select" name="nozologii_select">
+                                        <option value="">Выберите...</option>
+                                        <option value="1">Вариант 1</option>
+                                        <option value="2">Вариант 2</option>
+                                        <option value="3">Вариант 3</option>
+                                    </select>
+
+                                    <span class="field-toggle">Ввести свой вариант</span>
+
+                                </div>
 
                                 <div class="field-description">Перечислите нозологии, которые упоминаються в публикации. Синонимы будут добаленны автоматически</div>
 
@@ -468,13 +488,29 @@
 
                         </tr>
 
-                        <tr>
+                        <tr id="row-drugs">
                             <th><div class="field-name">Лекарственные препараты</div></th>
                             <td>
 
-                                <input type="text" class="form-text" name="lekarstva">
+                                <div id="drugs-inputs">
+
+                                    <div class="input-wrapper">
+                                        <input type="text" class="form-text" name="drugs[]">
+                                        <div class="input-controls">
+                                            <span class="control-delete">Удалить<br></span>
+                                            <span class="control-add">Добавить еще один</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
 
                                 <div class="field-description">Перечислите лекарственные препараты, которые упоминаються в публикации. Препараты с тем же действующим веществом будут добавленны автоматически.</div>
+
+                                <div class="tags-helper">
+                                    <span>лекарство 1</span> <span>лекарство 2</span> <span>лекарство 3</span>
+                                </div>
 
                             </td>
 
@@ -506,7 +542,7 @@
                                 <input id="invite-friends-ids" type="hidden" name="invited_ids">
 
                                 <div id="invite-friends-field">
-                                    <button id="invite-friends-button" type="button" v-on:click="onInviteFriendsClick()">Друзья</button>
+                                    <button id="invite-friends-button" type="button">Друзья</button>
 
                                     <div id="invite-friends-counter"><span></span></div>
 
@@ -552,13 +588,13 @@
 
                         <div class="summary-table-wrapper">
 
-                            <table v-if="totalPoints" class="summary-table">
+                            <table class="summary-table">
                                 <tr>
                                     <th>ИТОГО:</th>
                                     <td>
-                                        <span>+{{totalPoints}} баллов</span>
+                                        <span id="total-points"></span>
                                         <br>
-                                        <span v-if="totalEePoints" class="-ee">+{{totalEePoints}} баллов EndoExpert</span>
+                                        <span id="total-ee-points" class="-ee"></span>
                                     </td>
                                 </tr>
                             </table>

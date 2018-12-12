@@ -87,6 +87,11 @@
   margin-bottom: 20px;
   margin-top: 20px;
 
+  &.-reset {
+    display: block;
+    margin: 0;
+  }
+
   &.-multi-row {
     flex-wrap: wrap;
     margin-bottom: 0;
@@ -100,6 +105,7 @@
     min-height: 300px;
     width: 255px;
     box-shadow: 0 2px 7.1px 1.9px rgba(13, 40, 93, 0.17);
+    background: #fff;
 
     position: relative;
 
@@ -150,6 +156,16 @@
     }
 
 
+    &.-w250 {
+
+      width: 250px;
+      min-height: 270px;
+
+      .item-img {height: 207px;}
+
+    }
+
+
   }
 
   &.-color-1 {
@@ -159,6 +175,18 @@
       .item-date {background: @edu-module-color-1}
 
       .lk-comments-views-rating {background: fade(@edu-module-color-1, 80%)}
+
+    }
+
+  }
+
+  &.-color-grey {
+
+    .news-item {
+
+      .item-date {background: fade(#030202, 62%)}
+
+      .lk-comments-views-rating {background: fade(#030202, 62%)}
 
     }
 

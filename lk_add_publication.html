@@ -319,18 +319,18 @@
                         <tr>
                             <td colspan="2">
 
-                                <label style="margin-right: 20px;"><input type="checkbox" class="i-check-ee" name="crop_image"> Кадрировать изображение</label>
-                                <label><input id="field-teaser-image-is-main" type="checkbox" class="i-check-ee" name="teaser_image_is_main" disabled> Использовать изображение как основное в публикации</label>
+                                <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="crop_image"> Кадрировать изображение</label>
+                                <label><input id="field-teaser-image-is-main" type="checkbox" class="i-check" name="teaser_image_is_main" disabled checked> Использовать изображение как основное в публикации</label>
 
                             </td>
                         </tr>
                         <tr>
-                            <th><div class="field-name">Ссылка на оригинал <sup>*</sup></div></th>
+                            <th><div class="field-name">Ссылка на оригинал</div></th>
                             <td>
 
                                 <input type="text" class="form-text" name="original_link">
 
-                                <div class="field-description">Если ссылки на оригинал нет - то ставиться знак ® (copyright), т.е. Вы автор публикации</div>
+                                <div class="field-description">Если ссылки на оригинал нет, то ставится знак ® (copyright), т.е. Вы автор публикации</div>
 
                             </td>
 
@@ -338,7 +338,7 @@
                         <tr>
                             <td colspan="2">
 
-                                <label style="margin-right: 20px;"><input id="checkbox-exclusive" type="checkbox" class="i-check-ee" name="is_exclusive" data-points="1000" data-ee-points="100"> <b>Материал эксклюзивен и будет опубликован только на EndoExpert.ru</b></label>
+                                <label style="margin-right: 20px;"><input id="checkbox-exclusive" type="checkbox" class="i-check" name="is_exclusive" data-points="1000" data-ee-points="100"> <b>Материал эксклюзивен и будет опубликован только на EndoExpert.ru</b></label>
 
                                 <span class="points-label-1">+1000 баллов</span>
                                 <span class="points-label-1">+100 EndoExpert баллов</span>
@@ -350,7 +350,10 @@
 
                             <th><div class="field-name">Основной <br>текст <sup>*</sup></div></th>
                             <td>
-                                <textarea id="field-main-text" name="text" style="width: 100%;height: 100px;" data-over-2000-points="200" data-over-4000-points="400">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
+                                <div class="main-text-wrapper">
+                                    <textarea id="field-main-text" name="text" style="width: 100%;height: 100px;" data-over-2000-points="200" data-over-4000-points="400">Сюда, я так понял, будет прикручен битриксовский редактор</textarea>
+                                </div>
+
                             </td>
 
                         </tr>
@@ -519,7 +522,7 @@
                         <tr>
                             <th>&nbsp;</th>
                             <td>
-                                <label><input type="checkbox" name="disable_comments" class="i-check-ee"> Отключить комментарии</label>
+                                <label><input type="checkbox" name="disable_comments" class="i-check"> Отключить комментарии</label>
                             </td>
                         </tr>
 

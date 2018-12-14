@@ -33,6 +33,12 @@ $(document).ready(function () {
       radioClass: 'iradio_ee'
     });
 
+    $('.i-check').iCheck({
+      checkboxClass: 'icheckbox_quacol',
+      radioClass: 'icheckbox_quacol',
+      //increaseArea: '20%' // optional
+    });
+
     $('.teaser-fields-table .form-textarea, .auto-resize').autoResize();
 
     $('.char-counter').charCounter();
@@ -149,11 +155,22 @@ $(document).ready(function () {
 
       if (checkImage($(this))) {
 
-        fileImageToBg($(this), $teaserImageWrapper);
+        fileImageToBg($(this), $teaserImageWrapper, function () {
+
+          if ($fieldTeaserImageIsMain.is(':checked')) {
+
+            $fieldTeaserImageIsMain.trigger('ifChecked');
+
+          }
+
+        });
 
         $teaserImageWrapper.addClass('-active');
 
         $fieldTeaserImageIsMain.iCheck('enable');
+
+
+
       }
     });
 
@@ -478,13 +495,15 @@ $(document).ready(function () {
 
     ///////////////////////////
 
-    function fileImageToBg($el, $imageWrapper) {
+    function fileImageToBg($el, $imageWrapper, callback) {
 
       var reader = new FileReader();
 
       reader.onload = function (e) {
 
         $imageWrapper.css('background-image', "url('" + e.target.result + "')");
+
+        if (callback !== undefined) callback();
 
       };
 

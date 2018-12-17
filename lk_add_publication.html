@@ -266,6 +266,10 @@
                                 </div>
 
                                 <div class="image-hint">Рекомендуемый размер 900*900 пикселей</div>
+
+                                <div class="image-checkbox">
+                                    <label><input id="field-teaser-image-is-main" type="checkbox" class="i-check" name="teaser_image_is_main" disabled checked> Использовать изображение<br>как основное в публикации</label>
+                                </div>
                             </th>
                             <td>
 
@@ -302,7 +306,7 @@
                                     <table>
                                         <tr>
                                             <th style="width: 60px;">Анонс:</th>
-                                            <td><textarea name="teaser" maxlength="360" class="form-textarea char-counter" placeholder="Введите текст анонса публикации"></textarea></td>
+                                            <td><textarea name="teaser" maxlength="360" class="form-textarea char-counter" placeholder="Введите текст анонса публикации" style="min-height: 65px;"></textarea></td>
                                         </tr>
                                     </table>
 
@@ -320,7 +324,23 @@
                             <td colspan="2">
 
                                 <label style="margin-right: 20px;"><input type="checkbox" class="i-check" name="crop_image"> Кадрировать изображение</label>
-                                <label><input id="field-teaser-image-is-main" type="checkbox" class="i-check" name="teaser_image_is_main" disabled checked> Использовать изображение как основное в публикации</label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><div class="field-name">Введите год публикации</div></th>
+                            <td>
+
+                                <input type="text" class="form-text" name="pub_year" value="2018" style="width: 100px;">
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+
+                                <label style="margin-right: 20px;"><input type="radio" class="i-check" name="visibility" value="1" checked> Видно всем</label>
+                                <label style="margin-right: 20px;"><input type="radio" class="i-check" name="visibility" value="2"> Видно только на портале</label>
 
                             </td>
                         </tr>

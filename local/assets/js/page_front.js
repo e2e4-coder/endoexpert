@@ -109,5 +109,45 @@ $(document).ready(function () {
 
     });
 
+
+    /////////////////////
+
+
+
+
+    var $bullets = $('#scroll-pagination a');
+
+
+
+    $(document).on('scroll', function () {
+
+      var offset = $(document).scrollTop();
+      var windowHeight = $(window).height();
+
+      for (var i=$bullets.length;i>=1;i--) {
+
+        if (offset >= $($($bullets).eq(i-1).attr('href')).offset().top) {
+
+          $bullets.removeClass('-active').eq(i-1).addClass('-active');
+          break;
+
+        }
+
+      }
+
+
+    });
+
+
+    $(document).on('click', 'a[href^="#"]', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+    });
+
+
+
+
   }
 });

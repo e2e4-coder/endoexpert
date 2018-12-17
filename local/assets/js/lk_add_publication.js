@@ -137,6 +137,92 @@ $(document).ready(function () {
 
     }
 
+    ///////////////////
+
+    var $equipmentInputs = $('#equipment-inputs');
+
+    if ($equipmentInputs.length) {
+
+
+      $equipmentInputs.on('click', '.control-add', function () {
+
+        if ($equipmentInputs.find('.input-wrapper').length >= 999) return false;
+
+        $(this).closest('.input-wrapper').clone().appendTo($equipmentInputs).find('input').val('');
+
+      });
+
+      $equipmentInputs.on('click', '.control-delete', function () {
+
+        $(this).closest('.input-wrapper').remove();
+
+      });
+
+
+      $('#row-equipment .tags-helper span').click(function () {
+
+        var that = this;
+
+        $equipmentInputs.find('input').each(function () {
+
+          if (!$(this).val().trim()) {
+
+            $(this).val($(that).text());
+
+            return false;
+
+          }
+
+        });
+
+      });
+
+
+    }
+
+    ////////////////////////
+
+    var $toolsInputs = $('#tools-inputs');
+
+    if ($toolsInputs.length) {
+
+
+      $toolsInputs.on('click', '.control-add', function () {
+
+        if ($toolsInputs.find('.input-wrapper').length >= 999) return false;
+
+        $(this).closest('.input-wrapper').clone().appendTo($toolsInputs).find('input').val('');
+
+      });
+
+      $toolsInputs.on('click', '.control-delete', function () {
+
+        $(this).closest('.input-wrapper').remove();
+
+      });
+
+
+      $('#row-tools .tags-helper span').click(function () {
+
+        var that = this;
+
+        $toolsInputs.find('input').each(function () {
+
+          if (!$(this).val().trim()) {
+
+            $(this).val($(that).text());
+
+            return false;
+
+          }
+
+        });
+
+      });
+
+
+    }
+
     ////////////////////////
 
     var $fileTeaserImage = $('#file-teaser-image');

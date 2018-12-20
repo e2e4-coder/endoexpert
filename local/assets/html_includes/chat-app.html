@@ -1,0 +1,35 @@
+<div id="chat-messages-list" class="messages-list">
+
+
+    <div v-for="message in messages" class="message-wrapper" v-bind:class="{'-right': userId == message.user_id, '-left': userId != message.user_id}">
+
+        <div class="message-item">
+
+            <div class="message-top">
+                <span class="message-name">{{message.name}}</span>
+                <span class="message-date">{{getFormattedDate(message.timestamp)}}</span>
+            </div>
+
+            <div class="message-text">{{message.message}}</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="message-form">
+
+    <div class="textarea-wrapper">
+        <textarea id="chat-message-field" placeholder="Введите сообщение"></textarea>
+
+    </div>
+
+    <div class="button-wrapper">
+        <button class="lk-button -orange" v-on:click="sendMessage($event)">Отправить</button>
+    </div>
+
+
+
+</div>
+

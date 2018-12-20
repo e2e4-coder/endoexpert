@@ -577,6 +577,41 @@ $(document).ready(function () {
     });
 
 
+    ///////////////////////////
+
+
+    includeHTML('/local/assets/html_includes/chat-app.html', document.getElementById('chat-app'), function () {
+
+      var $chatPopup = $('#chat-popup');
+
+      $chatPopup.on('click', '.btn-close', function () {
+
+        $chatPopup.fadeOut();
+        destroyChatApp();
+
+      });
+
+      $('#dispute-button').click(function () {
+
+        if ($chatPopup.is(':hidden')) {
+
+          initChatApp();
+          $chatPopup.fadeIn();
+
+        } else {
+
+          $chatPopup.fadeOut();
+          destroyChatApp();
+        }
+
+      });
+
+
+    });
+
+
+
+
 
 
     ///////////////////////////

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/malihu-custom-scrollbar-plugin-3.1.5/jquery.mCustomScrollbar.min.css">
 
     <link rel="stylesheet" href="/local/assets/css/build.css">
 
@@ -21,18 +22,20 @@
     <script src="/local/assets/local/lib/frontend/jquery-autoresize-textarea/autoresize-textarea.js"></script>
     <script src="/local/assets/local/lib/frontend/jquery-char-counter/char-counter.js"></script>
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/malihu-custom-scrollbar-plugin-3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
 
     <!-- development version, includes helpful console warnings -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- production version, optimized for size and speed -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
     <script src="/local/assets/local/lib/frontend/vuejs-paginate.js"></script>
 
 
 
     <script src="/local/assets/js/common.js"></script>
     <script src="/local/assets/js/invite_friends_app.js"></script>
+    <script src="/local/assets/js/chat_app.js"></script>
     <script src="/local/assets/js/lk_add_publication.js"></script>
 
 
@@ -662,8 +665,20 @@
                         </table>
 
                         <div class="dispute-button-wrapper">
-                            <button type="button" class="lk-button -orange">Диспут</button>
+                            <button id="dispute-button" type="button" class="lk-button -orange">Диспут</button>
                         </div>
+
+                        <div id="chat-popup">
+
+                            <span class="btn-close"></span>
+
+                            <h2>Диспут</h2>
+
+                            <div id="chat-app" data-api-url="/local/assets/json/chat.json" data-user-id="12345"></div>
+
+
+                        </div>
+
 
                         <div class="summary-table-wrapper">
 

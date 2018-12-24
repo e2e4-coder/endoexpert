@@ -2,6 +2,11 @@
 
 .endoexpert-header {
 
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
 
   margin-bottom: 10px;
 
@@ -9,12 +14,22 @@
 
   .header-wrapper {width: 1050px;margin: 0 auto;}
 
+  &:hover {
+
+    .header-top {
+      max-height: 40px;
+    }
+
+  }
+
   .header-top {
     background: #101011;
     color: #fff;
-    height: 40px;
+    max-height: 0;
     line-height: 40px;
     border-bottom: 1px solid #ffc000;
+    overflow: hidden;
+    transition: max-height 0.50s ease-in-out;
 
 
     .header-wrapper {display: flex;}

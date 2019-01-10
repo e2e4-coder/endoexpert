@@ -30,6 +30,34 @@ $(document).ready(function () {
   });
 
 
+  var $fixedBtn = $('#fixed-block .fixed-btn-2');
+
+  if ($fixedBtn.length){
+
+    $fixedBtn.click(function () {
+
+      $(this).parent().toggleClass('-active');
+
+      var that = this;
+
+      $fixedBtn.filter(function () {
+
+        if (this !== that) $(this).parent().removeClass('-active');
+
+      });
+
+    });
+
+
+    $('.i-check-ee').iCheck({
+      checkboxClass: 'icheckbox_ee',
+      radioClass: 'iradio_ee'
+    });
+
+
+  }
+
+
 
   var footerSponsorsSlider = new Swiper ('#footer-sponsors-slider', {
 

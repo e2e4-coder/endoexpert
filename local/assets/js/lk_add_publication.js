@@ -368,6 +368,72 @@ $(document).ready(function () {
     /////////////////////////////
 
 
+    var $dopImageDropZone = $('#dop-image-drop-zone');
+
+    $dopImageDropZone.click(function () {
+
+      $('.file-dop-image:last').trigger('click');
+
+    }).on('dragover', function (e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).addClass('-dragging');
+
+    }).on('dragleave', function (e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).removeClass('-dragging');
+
+    }).on('drop', function (e) {
+
+      $('.file-dop-image:last')[0].files = e.originalEvent.dataTransfer.files;
+
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).removeClass('-dragging');
+
+      $('.file-dop-image:last').trigger('change')
+
+    });;
+
+    $(document).on('change', '.file-dop-image', function () {
+
+      if (checkImage($(this))) {
+
+        $('.file-dop-image:last').clone().val('').insertAfter('.file-dop-image:last');
+
+        $('<div class="dop-image-item"><div class="control-delete" title="Удалить"></div></div>').insertBefore($dopImageDropZone);
+
+        fileImageToBg($(this), $('.dop-image-item:last'));
+
+      } else {
+
+        $(this).val('');
+
+      }
+
+    });
+
+    $('.dop-image-uploader').on('click', '.control-delete', function () {
+
+      $('.file-dop-image').eq($(this).parent().index()).remove();
+
+      $(this).parent().remove();
+
+    });
+
+
+
+
+
+
+    /////////////////////////////
+
+
     $fieldTeaserImageIsMain.on('ifChecked', function () {
 
       $mainImageWrapper.css('background-image', $teaserImageWrapper.css('background-image')).addClass('-active');
@@ -474,6 +540,18 @@ $(document).ready(function () {
 
     });
 
+    $fieldYt.on('input', function () {
+
+      if ($(this).val()) {
+
+        $('#control-attach-video').hide();
+
+      } else {
+        $('#control-attach-video').show();
+      }
+
+    });
+
 
     /////////////////////////////
 
@@ -509,6 +587,13 @@ $(document).ready(function () {
     $('#attach-files-list').on('click', '.control-delete', function () {
 
       $(this).closest('tr').remove();
+
+      var videoInputName = $('#control-attach-video').data('input-name');
+
+      if (!$('input[name='+videoInputName+']').length) {
+
+        $('#control-field-youtube-link').show();
+      }
 
     });
 
@@ -556,6 +641,10 @@ $(document).ready(function () {
           $row.find('.item-icon').addClass('-mp4');
 
           $row.show();
+
+          $fieldYt.val('');
+          $('#control-field-youtube-link').hide();
+          $rowYt.hide();
 
           return;
 

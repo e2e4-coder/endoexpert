@@ -11,6 +11,12 @@ $(document).ready(function () {
 
     var offset = $(document).scrollTop();
 
+    if (offset === 0) {
+      $header.addClass('-top-visible');
+    } else {
+      $header.removeClass('-top-visible');
+    }
+
     var panelHeight = $bxPanel.length ? $bxPanel.height() : 10;
 
     if (offset > panelHeight) {

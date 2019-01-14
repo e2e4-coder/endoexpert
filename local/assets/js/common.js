@@ -36,6 +36,10 @@ $(document).ready(function () {
 
     $fixedBtn.click(function () {
 
+      var $swipeBlock = $(this).next();
+
+      $swipeBlock.css('top', '-' + parseInt($swipeBlock.height()/2) + 'px');
+
       $(this).parent().toggleClass('-active');
 
       var that = this;

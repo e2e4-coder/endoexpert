@@ -1,0 +1,266 @@
+@import "inc/variables";
+
+
+#page-auth {
+
+  padding: 60px 0;
+
+  margin-top: -10px;
+
+  background: #2e2f2f url("/local/assets/img/page_front/bg_front.jpg") top center repeat-y;
+
+  font-family: Roboto, sans-serif;
+
+  font-weight: 300;
+
+  .blocks-wrapper {
+
+    display: flex;
+    justify-content: center;
+
+    .dark-block {
+
+      width: 390px;
+      margin: 0 6px;
+
+    }
+
+  }
+
+}
+
+
+.social-login-links {
+
+  a {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 66px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 43px;
+      height: 100%;
+      background: center center no-repeat;
+    }
+
+    &.-fb {
+      background: #3b5998;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_fb.png")}
+    }
+
+    &.-go {
+      color: #000;
+      background: #fff;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_go.png")}
+    }
+
+    &.-ok {
+      background: #dea047;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ok.png")}
+    }
+
+    &.-ma {
+      background: #005ff9;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ma.png")}
+    }
+
+    &.-ya {
+      color: #000;
+      background: #fff;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ya.png")}
+    }
+
+    &.-vk {
+      background: #4a76a8;
+      &:before {background-image: url("/local/assets/img/social_icons/ico_login_vk.png");left: 4px;}
+    }
+  }
+
+
+}
+
+
+.ee-login-form {
+
+  .form-item {
+    margin-bottom: 20px;
+
+    &.-password {
+      margin-bottom: 10px;
+    }
+
+    &.-captcha {
+
+      text-align: center;
+      margin: 15px 0;
+
+    }
+  }
+
+
+  .flex-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .checkbox-label {
+    font-size: 13px;
+    vertical-align: bottom;
+    .icheckbox_ee {
+      vertical-align: bottom;
+      top: 1px;
+    }
+  }
+
+  .forgot-link {
+    font-size: 13px;
+    text-decoration: none;
+    color: #dea047;
+  }
+
+  .form-actions {
+    margin-bottom: 20px;
+
+  }
+
+  .form-submit {
+
+    width: 100%;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: url("/local/assets/img/ico_auth_button.png") top center no-repeat;
+      width: 25px;
+      height: 31px;
+      margin-right: 20px;
+      vertical-align: middle;
+      margin-top: -5px;
+    }
+
+  }
+
+  .private-area-description {
+    font-size: 13px;
+    width: 190px;
+  }
+
+  .reg-link {
+
+    display: block;
+    width: 150px;
+    font-size: 13px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: url("/local/assets/img/ico_reg_button.png") top center no-repeat;
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      vertical-align: middle;
+
+    }
+
+
+  }
+
+
+
+
+}
+
+.ee-email-reg-form {
+
+  .form-item {
+
+    margin-bottom: 20px;
+
+    &.-checkbox {
+      margin-bottom: 10px;
+
+      font-size: 13px;
+
+      a {color: @main-color}
+
+    }
+
+    &.-captcha {
+
+      text-align: center;
+      margin: 15px 0;
+
+    }
+
+  }
+
+  .form-actions {
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-submit {
+
+    width: 150px;
+    font-size: 13px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: url("/local/assets/img/ico_reg_button.png") top center no-repeat;
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      vertical-align: middle;
+
+    }
+
+  }
+
+  .private-area-description {
+    font-size: 13px;
+  }
+
+}
+
+.ee-reset-password-form {
+
+  .form-item {
+    margin-bottom: 15px;
+  }
+
+  .form-actions {
+
+    margin-bottom: 15px;
+
+    .form-submit {width: 100%}
+
+  }
+
+  p {
+    font-size: 13px;
+    text-align: center;
+    margin: 0 0 25px 0;
+  }
+  a {
+    color: #dea047;
+    text-decoration: none;
+  }
+
+}

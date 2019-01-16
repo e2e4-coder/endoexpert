@@ -4,31 +4,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Видео online</title>
+    <title>Вход на сайт</title>
 
     <link rel="stylesheet" href="/local/assets/css/normalize.css">
     <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/malihu-custom-scrollbar-plugin-3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/local/assets/css/build.css">
 
 
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery.flip/jquery.flip.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/malihu-custom-scrollbar-plugin-3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="/local/assets/js/common.js"></script>
+    <script src="/local/assets/js/page_auth.js"></script>
 
 
 
 </head>
-<body style="background: #101011;">
+<body style="background: #fff;">
 
 <div class="page-wrapper">
 
 
 
-    <div class="endoexpert-header">
+    <div class="endoexpert-header -top-visible">
 
         <div class="header-top">
 
@@ -72,7 +81,7 @@
 
                 <div class="header-logo">
                     <div class="logo-wrapper">
-                        <a href="/"><img src="/local/assets/img/endoexpert_logo_color.png" width="53" height="38"></a>
+                        <a href="/"><img src="/local/assets/img/endoexpert_logo2_color.png" width="55" height="38"></a>
                     </div>
 
                 </div>
@@ -123,38 +132,70 @@
 
     </div>
 
-    <div class="container wrapper-1050">
 
-        <div class="page-video-online">
+    <div id="page-auth">
 
-            <a class="share-button" href="#"></a>
+        <div class="wrapper-1050">
 
-            <h1>ОНЛАЙН ВСЕРОССИЙСКАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ С МЕЖДУНАРОДНЫМ УЧАСТИЕМ, ПОСВЯЩЕННАЯ 80-ЛЕТИЮ ЧЕЛЯБИНСКОЙ ОБЛАСТНОЙ КЛИНИЧЕСКОЙ БОЛЬНИЦЫ</h1>
+            <div class="blocks-wrapper">
 
+                <div class="dark-block">
 
-            <div class="columns-layout">
+                    <h2>Вход на портал<br>через социальную сеть</h2>
 
-                <div class="col-1">
-
-                    <div id="player" data-src="http://mirrors.standaloneinstaller.com/video-sample/jellyfish-25-mbps-hd-hevc.mp4" data-poster="/img/tmp/video_poster.jpg"></div>
-
+                    <div class="social-login-links">
+                        <a href="#" class="-fb">Вход через Facebook</a>
+                        <a href="#" class="-go">Вход через Google</a>
+                        <a href="#" class="-ok">Вход через Одноклассники</a>
+                        <a href="#" class="-ma">Вход через Mail</a>
+                        <a href="#" class="-ya">Вход через Yandex</a>
+                        <a href="#" class="-vk">Вход через Вконтакте</a>
+                    </div>
 
                 </div>
 
-                <div class="col-2">
 
-                    <div id="time-counter">
+                <div class="dark-block">
 
-                        <div class="counter-label">Учёт присутствия:</div>
+                    <h2>Вход на портал<br>через email</h2>
 
-                        <div class="counter-digits">
-                            <span class="d1">0</span>
-                            <span class="d2">0</span>
-                            <span class="d3">0</span>
-                            <span class="d4">0</span>
-                            <div class="hours-label">часов</div>
-                            <div class="minutes-label">минут</div>
-                        </div>
+                    <div class="ee-login-form">
+
+                        <form>
+
+                            <div class="form-item">
+                                <input class="form-text ee-form-text-1" type="text" name="login" placeholder="Введите Ваш адрес электронной почты">
+                            </div>
+
+                            <div class="form-item -password">
+                                <input class="form-text ee-form-text-1" type="password" name="password" placeholder="Введите Ваш пароль">
+                            </div>
+
+                            <div class="flex-wrapper">
+
+                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee"> Запомнить меня</label>
+
+                                <a href="#" class="forgot-link">Забыли пароль?</a>
+
+                            </div>
+
+                            <div class="form-item -captcha">
+                                Сюда вставить капчу
+                            </div>
+
+                            <div class="form-actions">
+                                <button class="form-submit ee-button-1" type="submit">Вход</button>
+                            </div>
+
+                            <div class="flex-wrapper">
+
+                                <div class="private-area-description">Закрытая часть портала предназначена только для работников здравоохранения.</div>
+
+                                <a href="#" class="reg-link ee-button-1">Регистрация</a>
+
+                            </div>
+
+                        </form>
 
                     </div>
 
@@ -162,61 +203,164 @@
 
             </div>
 
-            <script>
 
-              $(document).ready(function () {
+            <br><br><br>
 
+            <div class="blocks-wrapper">
 
-                var $player = $('#player');
+                <div class="dark-block">
 
-                var player = new Clappr.Player({
-                  parentId: "#player",
-                  source: $player.data('src'),
-                  poster: $player.data('poster'),
-                  width: 788,
-                  height: 400
-                });
+                    <h2>Вход на портал<br>через социальную сеть</h2>
 
+                    <div class="social-login-links">
+                        <a href="#" class="-fb">Вход через Facebook</a>
+                        <a href="#" class="-go">Вход через Google</a>
+                        <a href="#" class="-ok">Вход через Одноклассники</a>
+                        <a href="#" class="-ma">Вход через Mail</a>
+                        <a href="#" class="-ya">Вход через Yandex</a>
+                        <a href="#" class="-vk">Вход через Вконтакте</a>
+                    </div>
 
-
-                var $timeCounter = $('#time-counter');
-
-                var minutesCount = 0;
-
-                setInterval(function () {
-
-                  if (player.isPlaying()) {
-
-                    setTime(++minutesCount);
-
-                  }
-
-                }, 60000);
+                </div>
 
 
-                function setTime(t) {
+                <div class="dark-block">
 
-                  var minutes = (t % 60).toString();
+                    <h2>Регистрация на портал<br>через email</h2>
 
-                  $timeCounter.find('.d4').text(minutes.slice(-1));
-                  $timeCounter.find('.d3').text(minutes.length > 1 ? minutes.slice(0, 1) : 0);
+                    <div class="ee-email-reg-form">
 
-                  var hours = Math.floor(t / 60).toString();
+                        <form>
 
-                  $timeCounter.find('.d2').text(hours.slice(-1));
-                  $timeCounter.find('.d1').text(hours.length > 1 ? hours.slice(0, 1) : 0);
+                            <div class="form-item">
+                                <input class="form-text ee-form-text-1" type="text" name="email" placeholder="Введите Ваш адрес электронной почты">
+                            </div>
 
-                }
+                            <div class="form-item -checkbox">
+                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee"> Я даю согласиена <a href="#" target="_blank">обработку персональных данных</a></label>
+                            </div>
 
-              });
+                            <div class="form-item -checkbox">
+                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a></label>
+                            </div>
 
-            </script>
+                            <div class="form-item -checkbox">
+                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee" checked> Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a></label>
+                            </div>
 
+                            <div class="form-item -captcha">
+                                Сюда вставить капчу
+                            </div>
+
+                            <div class="form-actions">
+                                <button class="form-submit ee-button-1" type="submit">Регистрация</button>
+                            </div>
+
+                            <div class="private-area-description">Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалищацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.</div>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <div class="blocks-wrapper">
+
+                <div class="dark-block">
+
+                    <h2>Сбросить пароль</h2>
+
+                    <div class="ee-reset-password-form">
+
+                        <form>
+
+                            <div class="form-item">
+                                <input class="form-text ee-form-text-1" type="text" name="email" placeholder="Введите Ваш адрес электронной почты">
+                            </div>
+
+                            <p>
+                                <a href="#">Запросить email для восстановления пароля</a>
+                            </p>
+
+
+                            <div class="form-actions">
+                                <button class="form-submit ee-button-1" type="submit">Сбросить пароль</button>
+                            </div>
+
+                            <p>Нужна помощь? <a href="#">Обратитесь в наш Центр поддержки.</a></p>
+
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="social-links-block">
+
+        <div class="wrapper-1050">
+
+            <h2>Присоединяйтесь к нам в социальных сетях</h2>
+
+            <div>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_te.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_tw.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_fb.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_in.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_yt.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_do.png" width="77" height="77"></a>
+            <a href="#" target="_blank"><img src="/local/assets/img/page_front/ico_vk.png" width="77" height="77"></a>
+            </div>
         </div>
 
 
 
     </div>
+
+    <div class="partners-block wrapper-1050">
+
+        <h2>Работаем и учимся при поддержке</h2>
+
+        <ul class="partners-list">
+
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_1.png" width="147" height="50"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_2.png" width="143" height="27"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_3.png" width="125" height="49"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_4.png" width="139" height="48"></a></li>
+
+        </ul>
+
+        <h2>Партнеры</h2>
+
+        <ul class="partners-list">
+
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_5.png" width="135" height="57"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_6_1.png" width="150" height="47"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_7.png" width="153" height="31"></a></li>
+            <li><a href="#"><img src="/local/assets/img/page_front/partner_8.png" width="148" height="50"></a></li>
+
+        </ul>
+
+
+    </div>
+
+
+
+
+
 
     <div class="endoexpert-footer-menu">
 
@@ -459,8 +603,6 @@
 
 
 
-
 </div>
 </body>
 </html>
-

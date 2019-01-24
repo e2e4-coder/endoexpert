@@ -23,6 +23,13 @@
       width: 390px;
       margin: 0 6px;
 
+
+      &.-status-select {
+
+        width: 620px;
+
+      }
+
     }
 
   }
@@ -213,6 +220,11 @@
 
     text-align: center;
     margin-bottom: 20px;
+
+    .ee-button-1 {
+      width: 162px;
+      margin: 0 3px;
+    }
   }
 
   .form-submit {
@@ -265,7 +277,7 @@
 
 }
 
-.ee-reset-password-confirm {
+.ee-reset-password-confirm, .ee-register-success {
 
   font-size: 13px;
 
@@ -356,5 +368,85 @@
   }
 
 
+
+}
+
+.ee-select-user-status {
+
+  font-size: 14px;
+
+  a {color: #dea047; }
+
+  .form-item {
+
+    margin-bottom: 20px;
+
+
+
+
+
+    &.-checkbox {
+      margin-bottom: 20px;
+
+      font-size: 13px;
+
+      a {color: @main-color}
+
+    }
+
+    &.-captcha {
+
+      text-align: center;
+      margin: 15px 0;
+
+    }
+
+  }
+
+  .private-area-description {
+
+    color: #878787;
+  }
+
+
+}
+
+#select-user-status-pics {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .status-item {
+
+    width: 200px;
+    background: #5a6a7a;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+
+    &.-selected {
+      background: #6b90c9;
+    }
+
+
+    .item-pic {
+
+      height: 148px;
+
+      &.-status-1 {background: url("/local/assets/img/ico_status_med_rab.png") center center no-repeat;}
+      &.-status-2 {background: url("/local/assets/img/ico_status_pred_comp.png") center center no-repeat;}
+      &.-status-3 {background: url("/local/assets/img/ico_status_pacient.png") center center no-repeat;}
+
+    }
+
+    .item-label {
+      height: 48px;
+      line-height: 48px;
+      background: fade(#2e2f2f, 55%);
+    }
+
+  }
 
 }

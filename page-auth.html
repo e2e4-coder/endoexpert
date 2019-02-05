@@ -451,15 +451,15 @@
 
 
                             <div class="form-item -checkbox">
-                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee"> Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></label>
+                                <label class="checkbox-label"><input name="name_1" type="checkbox" value="1" class="i-check-ee"> Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></label>
                             </div>
 
                             <div class="form-item -checkbox">
-                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a></label>
+                                <label class="checkbox-label"><input name="name_2" type="checkbox" class="i-check-ee"> Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a></label>
                             </div>
 
                             <div class="form-item -checkbox">
-                                <label class="checkbox-label"><input type="checkbox" class="i-check-ee" checked> Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a></label>
+                                <label class="checkbox-label"><input name="name_3" type="checkbox" class="i-check-ee" checked> Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a></label>
                             </div>
 
 
@@ -470,6 +470,42 @@
 
 
                         </form>
+
+                        <script>
+
+                            $(document).ready(function () {
+
+                              $('#select-user-status-pics .status-item').click(function () {
+
+                                $.post('/api-url', {status : $(this).data('value')}, function (data) {
+
+                                  console.log('success!')
+
+                                });
+
+                              });
+
+                              $('.ee-select-user-status input[type=checkbox]').on('ifToggled', function (e) {
+
+                                var form_data = {};
+
+                                form_data[$(e.target).attr('name')] = +$(e.target).is(':checked');
+
+                                //Отправляем 0 или 1 при клике на чекбокс
+
+                                $.post('/api-url', form_data, function (data) {
+
+                                  console.log('success!')
+
+                                });
+
+                              });
+
+
+
+                            });
+
+                        </script>
 
 
 

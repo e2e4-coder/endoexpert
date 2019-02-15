@@ -9,6 +9,9 @@
 
 @orange-color: #ffc000;
 
+
+@gold-color: #f1ad4a;
+
 .placeholder(@rules) {
 
   &::-webkit-input-placeholder {
@@ -23,4 +26,11 @@
   &:-ms-input-placeholder {
     @rules();
   }
+}
+
+
+.clearfix() {
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
 }

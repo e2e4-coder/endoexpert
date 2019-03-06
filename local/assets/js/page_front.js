@@ -21,6 +21,24 @@ $(document).ready(function () {
         nextEl: '#front-page-last-publications-slider-next',
         prevEl: '#front-page-last-publications-slider-prev',
       },
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 14
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+
+        530: {
+          slidesPerView: 1,
+
+        },
+
+      }
     });
 
     var popularSlider = new Swiper ('#front-page-popular-slider', {
@@ -33,6 +51,25 @@ $(document).ready(function () {
         nextEl: '#front-page-popular-slider-next',
         prevEl: '#front-page-popular-slider-prev',
       },
+
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 14
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+
+        530: {
+          slidesPerView: 1,
+
+        },
+
+      }
     });
 
     var facebookSlider = new Swiper ('#front-page-facebook-slider', {
@@ -45,6 +82,25 @@ $(document).ready(function () {
         nextEl: '#front-page-facebook-slider-next',
         prevEl: '#front-page-facebook-slider-prev',
       },
+
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 14
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+
+        530: {
+          slidesPerView: 1,
+
+        },
+
+      }
     });
 
     var expertsSlider = new Swiper ('#front-page-experts-slider', {
@@ -57,6 +113,25 @@ $(document).ready(function () {
         nextEl: '#front-page-experts-slider-next',
         prevEl: '#front-page-experts-slider-prev',
       },
+
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 14
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+
+        530: {
+          slidesPerView: 1,
+
+        },
+
+      }
     });
 
     var leadersSlider = new Swiper ('#front-page-leaders-slider', {
@@ -69,6 +144,25 @@ $(document).ready(function () {
         nextEl: '#front-page-leaders-slider-next',
         prevEl: '#front-page-leaders-slider-prev',
       },
+
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 14
+        },
+
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+
+        530: {
+          slidesPerView: 1,
+
+        },
+
+      }
     });
 
 

@@ -1,5 +1,31 @@
 $(document).ready(function () {
 
+  var Nav = $('.main-menu').hcOffcanvasNav({
+    maxWidth: 1024,
+    position: 'right',
+    insertClose : false,
+    labelBack : 'Назад',
+
+
+  });
+
+  Nav.on('open', function () {
+
+    $('.header-top .right-buttons').clone().appendTo('.nav-wrapper-0 >.nav-content');
+
+
+  });
+
+  Nav.on('close', function () {
+
+    $('.nav-wrapper .nav-content .right-buttons').remove();
+
+  });
+
+  //Nav.open();
+
+
+
 
   var $pageWrapper = $('.page-wrapper');
 

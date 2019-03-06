@@ -42,6 +42,29 @@ body {
 
   width: 1050px;
   margin: 0 auto;
+
+
+  @media @w1024 {
+
+    width: 1000px;
+
+  }
+
+  @media @w768 {
+
+    width: 748px;
+
+  }
+
+  @media @w320 {
+
+    width: 100%;
+    padding-left:10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+  }
+
 }
 
 
@@ -243,3 +266,25 @@ body {
 
 }
 
+
+.hc-offcanvas-nav .nav-container, .hc-offcanvas-nav .nav-wrapper, .hc-offcanvas-nav ul {
+
+  background: #101011;
+
+}
+
+.hc-offcanvas-nav a, .hc-offcanvas-nav .nav-item {
+
+  border-color: #606162;
+
+}
+
+.hc-offcanvas-nav a[href]:not([href="#"])>span.nav-next {
+  border-color: #606162;
+}
+
+.hc-offcanvas-nav li.nav-close a, .hc-offcanvas-nav li.nav-back a {
+  background: #606162;
+  border-top: 1px solid #606162;
+  border-bottom: 1px solid #606162;
+}

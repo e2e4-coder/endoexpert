@@ -40,7 +40,7 @@
     .left-buttons {
       padding-top: 6px;
       float: left;
-      width: 30%;
+      width: 33%;
 
       a {
         float: left;
@@ -335,6 +335,178 @@
 
   }
 
+  @media @w1024 {
 
+    .header-wrapper {
+      width: 990px;
+    }
+
+    .header-body {
+
+      .header-logo {
+        width: 60px;
+      }
+
+    }
+
+  }
+
+  @media @w768 {
+
+    .header-top {
+
+      .header-wrapper {
+
+        >.right-buttons {
+          display: none;
+        }
+
+        .left-buttons {padding-bottom: 6px;padding-left: 10px;}
+
+      }
+
+    }
+
+    .header-body {
+
+      .header-wrapper {
+
+        width: 748px;
+        position: relative;
+        justify-content: flex-start;
+
+
+
+      }
+
+      .search-block {
+        margin-left: 50px;
+      }
+
+
+
+    }
+
+
+
+    .header-top {
+
+      .left-buttons {
+        width: 100%;
+      }
+
+
+    }
+
+    .hc-nav-trigger {
+
+      left: auto;
+      right: 0;
+      top: 15px;
+
+      span {
+        background: #fff;
+        &:before, &:after {background: #fff}
+      }
+
+
+
+    }
+
+  }
+
+
+  @media @w320 {
+
+    .header-body {
+
+      .header-wrapper {
+
+        width: 100%;
+        padding-right: 60px;
+        box-sizing: border-box;
+      }
+
+      .search-block {
+
+        margin-left: 40px;
+        width: auto;
+        flex: 1 1 auto;
+
+      }
+
+    }
+
+    .hc-nav-trigger {
+
+      right: 10px;
+
+    }
+
+  }
+
+
+}
+
+
+.hc-offcanvas-nav {
+
+  .right-buttons {
+
+    text-align: center;
+
+    a {
+      border: none;
+      padding: 0;
+      display: inline;
+
+
+    }
+
+    a.button-add-publication {
+      display: inline-block;
+      text-decoration: none;
+      background: #ffc000;
+      height: 27px;
+      line-height: 27px;
+      padding: 0 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .button-wrapper {
+
+      display: block;
+      margin-bottom: 10px;
+
+    }
+
+    a.-settings {vertical-align: middle}
+    a.-settings:before {
+
+      content: '';
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      vertical-align: middle;
+      margin-right: 8px;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA2FBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+0oG7xAAAAR3RSTlMACrXyWTCMICTtmAFdegYM0NrY8cj6aov+4Tku/biXr5PPnzblq2lC5+mAGdf8iglE9pDEAmcaDd307nYDU7w9P60YhKgWzM4I5w0AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAkUlEQVQI1zWO1xKCUBBDg9hRwQ4KIirYy7X3rvn/P/Iq43nJJpPdWUCiRNQoQmLxRDLFtJbJ5gDdYL5AFktlVgCtajLEqslm3SadhkW60jQ9sqWg3aHqB/h2ujL1pfbg9MkBMBxxbEwwndkU82Ahl/UlsPrf9NbAZsudIM09eQCOp/PlKni7P56v8Dn9zeA3fABrfhhIbvxVDwAAAABJRU5ErkJggg==');
+
+    }
+
+    a.-user {vertical-align: middle}
+    a.-user:before {
+
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 12px;
+      height: 13px;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAWlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9jZLFEAAAAHXRSTlMABovofdj2fAxwuub35bhrCh3b1hisp+rpyfz90PI+Bk4AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAUElEQVQI123MVw6AMAwFwZdKC4Teff9rQsA0if3yyLIBQEilpMCZpj3NMAGGYQPs3+a4iRifb6/iJM2cywtfAlVNXNOio7sew4MR03zNy7oB2joIKqzUSQkAAAAASUVORK5CYII=');
+
+    }
+
+  }
 
 }

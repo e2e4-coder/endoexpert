@@ -11,6 +11,10 @@ $(document).ready(function () {
       loop: true
     });
 
+    var lastPublicationsSliderDelay = $('#front-page-last-publications-slider').data('autoplay-delay');
+
+    lastPublicationsSliderDelay = lastPublicationsSliderDelay ? {delay: lastPublicationsSliderDelay} : false;
+
     var lastPublicationsSlider = new Swiper ('#front-page-last-publications-slider', {
 
 
@@ -21,6 +25,9 @@ $(document).ready(function () {
         nextEl: '#front-page-last-publications-slider-next',
         prevEl: '#front-page-last-publications-slider-prev',
       },
+
+      autoplay: lastPublicationsSliderDelay,
+
       breakpoints: {
 
         1023: {
@@ -40,6 +47,10 @@ $(document).ready(function () {
 
       }
     });
+
+    var popularSliderDelay = $('#front-page-popular-slider').data('autoplay-delay');
+
+    popularSliderDelay = popularSliderDelay ? {delay: popularSliderDelay} : false;
 
     var popularSlider = new Swiper ('#front-page-popular-slider', {
 
@@ -52,6 +63,8 @@ $(document).ready(function () {
         prevEl: '#front-page-popular-slider-prev',
       },
 
+      autoplay: popularSliderDelay,
+
       breakpoints: {
 
         1023: {
@@ -71,6 +84,11 @@ $(document).ready(function () {
 
       }
     });
+
+
+    var facebookSliderDelay = $('#front-page-facebook-slider').data('autoplay-delay');
+
+    facebookSliderDelay = facebookSliderDelay ? {delay: facebookSliderDelay} : false;
 
     var facebookSlider = new Swiper ('#front-page-facebook-slider', {
 
@@ -83,6 +101,8 @@ $(document).ready(function () {
         prevEl: '#front-page-facebook-slider-prev',
       },
 
+      autoplay: facebookSliderDelay,
+
       breakpoints: {
 
         1023: {
@@ -102,6 +122,13 @@ $(document).ready(function () {
 
       }
     });
+
+
+
+    var expertsSliderDelay = $('#front-page-experts-slider').data('autoplay-delay');
+
+    expertsSliderDelay = expertsSliderDelay ? {delay: expertsSliderDelay} : false;
+
 
     var expertsSlider = new Swiper ('#front-page-experts-slider', {
 
@@ -114,6 +141,8 @@ $(document).ready(function () {
         prevEl: '#front-page-experts-slider-prev',
       },
 
+      autoplay: expertsSliderDelay,
+
       breakpoints: {
 
         1023: {
@@ -134,6 +163,10 @@ $(document).ready(function () {
       }
     });
 
+    var leadersSliderDelay = $('#front-page-leaders-slider').data('autoplay-delay');
+
+    leadersSliderDelay = leadersSliderDelay ? {delay: leadersSliderDelay} : false;
+
     var leadersSlider = new Swiper ('#front-page-leaders-slider', {
 
 
@@ -144,6 +177,8 @@ $(document).ready(function () {
         nextEl: '#front-page-leaders-slider-next',
         prevEl: '#front-page-leaders-slider-prev',
       },
+
+      autoplay: leadersSliderDelay,
 
       breakpoints: {
 
@@ -163,6 +198,48 @@ $(document).ready(function () {
         },
 
       }
+    });
+
+
+    var sponsorSliderDelay = $('#sponsors-slider').data('autoplay-delay');
+
+    sponsorSliderDelay = sponsorSliderDelay ? {delay: sponsorSliderDelay} : false;
+
+    var sponsorSlider = new Swiper ('#sponsors-slider', {
+
+
+      slidesPerView: 4,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '#sponsors-slider-next',
+        prevEl: '#sponsors-slider-prev',
+      },
+
+      autoplay: sponsorSliderDelay,
+
+
+    });
+
+
+    var partnersSliderDelay = $('#partners-slider').data('autoplay-delay');
+
+    partnersSliderDelay = partnersSliderDelay ? {delay: partnersSliderDelay} : false;
+
+    var partnersSlider = new Swiper ('#partners-slider', {
+
+
+      slidesPerView: 4,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '#sponsors-slider-next',
+        prevEl: '#sponsors-slider-prev',
+      },
+
+      autoplay: partnersSliderDelay,
+
+
     });
 
 

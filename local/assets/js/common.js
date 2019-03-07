@@ -68,6 +68,23 @@ $(document).ready(function () {
 
     $fixedBtn.click(function () {
 
+      if ($(this).hasClass('-up')) {
+
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+
+      }
+
+      if ($(this).hasClass('-down')) {
+
+        $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
+        return false;
+
+
+
+      }
+
+
       var $swipeBlock = $(this).next();
 
       $swipeBlock.css('top', '-' + parseInt($swipeBlock.height()/2) + 'px');

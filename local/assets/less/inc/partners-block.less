@@ -47,12 +47,17 @@
       flex-direction: column;
       justify-content: space-around;
 
+      img {max-width: 90%;height: auto;}
+
     }
 
   }
 
 
   @media @w768 {
+
+    .swiper-button-prev {display: none}
+    .swiper-button-next {display: none}
 
     ul.partners-list {
 
@@ -71,7 +76,13 @@
 
   @media @w320 {
 
+    padding-top: 20px;
+
     h2 {font-size: 26px}
+
+    .swiper-container {
+      margin-bottom: 30px;
+    }
 
   }
 

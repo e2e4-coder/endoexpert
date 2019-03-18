@@ -19,7 +19,9 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
       spaceBetween: 14,
+      loopedSlides: 4,
       loop: true,
       navigation: {
         nextEl: '#front-page-last-publications-slider-next',
@@ -31,20 +33,10 @@ $(document).ready(function () {
       breakpoints: {
 
         1023: {
-          slidesPerView: 3,
-          spaceBetween: 14
-        },
-
-        767: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
           spaceBetween: 10
-        },
-
-        530: {
-          slidesPerView: 1,
-
-        },
-
+        }
       }
     });
 
@@ -56,6 +48,8 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
+      loopedSlides: 4,
       spaceBetween: 14,
       loop: true,
       navigation: {
@@ -68,20 +62,10 @@ $(document).ready(function () {
       breakpoints: {
 
         1023: {
-          slidesPerView: 3,
-          spaceBetween: 14
-        },
-
-        767: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
           spaceBetween: 10
-        },
-
-        530: {
-          slidesPerView: 1,
-
-        },
-
+        }
       }
     });
 
@@ -94,6 +78,8 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
+      loopedSlides: 4,
       spaceBetween: 14,
       loop: true,
       navigation: {
@@ -106,20 +92,10 @@ $(document).ready(function () {
       breakpoints: {
 
         1023: {
-          slidesPerView: 3,
-          spaceBetween: 14
-        },
-
-        767: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
           spaceBetween: 10
-        },
-
-        530: {
-          slidesPerView: 1,
-
-        },
-
+        }
       }
     });
 
@@ -134,6 +110,8 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
+      loopedSlides: 4,
       spaceBetween: 10,
       loop: true,
       navigation: {
@@ -146,20 +124,10 @@ $(document).ready(function () {
       breakpoints: {
 
         1023: {
-          slidesPerView: 3,
-          spaceBetween: 14
-        },
-
-        767: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-
-        530: {
-          slidesPerView: 1,
-
-        },
-
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
+          spaceBetween: 6
+        }
       }
     });
 
@@ -171,6 +139,8 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
+      loopedSlides: 4,
       spaceBetween: 10,
       loop: true,
       navigation: {
@@ -183,20 +153,10 @@ $(document).ready(function () {
       breakpoints: {
 
         1023: {
-          slidesPerView: 3,
-          spaceBetween: 14
-        },
-
-        767: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-
-        530: {
-          slidesPerView: 1,
-
-        },
-
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
+          spaceBetween: 20
+        }
       }
     });
 
@@ -209,6 +169,7 @@ $(document).ready(function () {
 
 
       slidesPerView: 4,
+      slidesPerGroup: 4,
       spaceBetween: 10,
       loop: true,
       navigation: {
@@ -231,10 +192,11 @@ $(document).ready(function () {
 
       slidesPerView: 4,
       spaceBetween: 10,
+      slidesPerGroup: 4,
       loop: true,
       navigation: {
-        nextEl: '#sponsors-slider-next',
-        prevEl: '#sponsors-slider-prev',
+        nextEl: '#partners-slider-next',
+        prevEl: '#partners-slider-prev',
       },
 
       autoplay: partnersSliderDelay,
@@ -315,6 +277,15 @@ $(document).ready(function () {
       $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
       }, 500);
+    });
+
+
+    $('.expand-text-button-wrapper button').click(function () {
+
+      $(this).parent().hide().prev().slideDown();
+
+
+
     });
 
 

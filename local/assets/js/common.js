@@ -24,6 +24,14 @@ $(document).ready(function () {
 
   //Nav.open();
 
+  $('#btn-mobile-search-toggle').click(function () {
+
+    $('.endoexpert-header .search-block').toggle();
+
+
+
+  });
+
 
 
 
@@ -133,6 +141,28 @@ $(document).ready(function () {
 
     spaceBetween: 20,
     slidesPerView: 'auto'
+
+  });
+
+  var footerMenuSlider = new Swiper ('#footer-menu-slider', {
+
+    navigation: {
+      nextEl: '#footer-menu-slider-next',
+      prevEl: '#footer-menu-slider-prev',
+    },
+
+    spaceBetween: 2,
+    slidesPerView: 4,
+    slidesPerColumn: 3,
+    slidesPerColumnFill: 'row',
+
+    breakpoints: {
+
+      1023: {
+        slidesPerView: 'auto',
+        slidesPerColumn: 1,
+      }
+    }
 
   });
 

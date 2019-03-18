@@ -8,17 +8,22 @@
   color: #b8b7c5;
   font-size: 16px;
 
+  #footer-menu-slider-prev {display: none}
+  #footer-menu-slider-next {display: none}
+
   a {color: inherit;text-decoration: none;&:hover {text-decoration: underline;}}
 
   .footer-menu-wrapper {
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    position: relative;
+
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
   }
 
   .menu-section {
-    width: 237px;
+    width: 238px;
     padding-bottom: 60px;
 
     h3 {
@@ -67,13 +72,62 @@
 
 
 
+  @media @w768 {
+
+    .footer-menu-wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .swiper-slide {width: auto;}
+
+    .menu-section {padding-right: 20px;}
+
+    #footer-menu-slider-prev {
+
+      display: block;
+      background: url("/local/assets/img/touch_arrow_left.png");
+      width: 52px;
+      height: 51px;
+      margin-top: -25px;
+      background-size: cover;
+      left: -25px;
+      z-index: 200;
+      opacity: 1;
+
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+
+    }
+
+    #footer-menu-slider-next{
+
+      display: block;
+      background: url("/local/assets/img/touch_arrow_right.png");
+      width: 52px;
+      height: 51px;
+      margin-top: -25px;
+      background-size: cover;
+      right: -25px;
+      z-index: 200;
+      opacity: 1;
+
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+
+    }
+
+  }
+
   @media @w320 {
 
     padding-top: 0;
 
     .menu-section {
-      width: 100%;
-      padding-bottom: 20px;
+
+      padding-bottom: 0;
     }
 
   }
@@ -105,6 +159,8 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .footer-menu-mobile {display: none;}
 
   .menu-section {
 
@@ -168,7 +224,35 @@
 
     .footer-menu-wrapper {
 
+      display: none;
       flex-wrap: wrap;
+
+    }
+
+    .footer-menu-mobile {
+      display: block;
+
+      padding-bottom: 30px;
+
+      padding-left: 20px;
+      font-size: 15px;
+
+      p {margin: 20px 0;padding-left: 10px;}
+
+      ul {
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 0 0 10px 0;
+          padding: 0 0 0 10px;
+          border-left: 1px solid #fff;
+        }
+
+
+      }
 
     }
 

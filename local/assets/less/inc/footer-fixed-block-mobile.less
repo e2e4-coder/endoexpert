@@ -1,0 +1,94 @@
+@import "variables";
+
+.footer-fixed-block-mobile {
+
+  display: none;
+
+  box-shadow: 0 0 38px rgba(255, 255, 255, 0.35);
+
+  box-sizing: border-box;
+  background: #010204;
+  height: 44px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 900;
+
+  .buttons-wrapper {
+
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+
+  }
+
+  .block-button {
+
+    display: inline-block;
+    box-sizing: border-box;
+    height: 43px;
+    width: 43px;
+    margin: 0 4px;
+    background: #5a5858 center center no-repeat;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    vertical-align: bottom;
+    position: relative;
+
+    span {
+      color: #fff;
+      font-size: 13px;
+      background: #fc0707;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 100%;
+      font-family: Roboto, sans-serif;
+      font-weight: normal;
+      left: 5px;
+      top: 5px;
+
+
+    }
+
+
+    &.-rotate {
+      background-image: url("/local/assets/img/ico_rotate.png");
+    }
+
+    &.-notify {
+      background-image: url("/local/assets/img/ico_notify_small.png");
+      background-position: 22px 19px;
+    }
+
+    &.-plus {
+      background-image: url("/local/assets/img/ico_plus.png");
+      border-color: @gold-color;
+      width: 49px;
+      height: 49px;
+    }
+
+    &.-home {
+      background-image: url("/local/assets/img/ico_home.png");
+    }
+
+    &.-settings {
+      background-image: url("/local/assets/img/ico_settings.png");
+    }
+
+
+
+
+  }
+
+
+
+
+
+  @media @w768 {display: block;}
+
+
+}

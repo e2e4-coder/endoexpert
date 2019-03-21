@@ -359,13 +359,14 @@
 
       .list-item {
 
-        position: relative;
-        min-height: 77px;
-        margin-bottom: 15px;
-        padding: 0 0 0 156px;
-        font-size: 18px;
 
+        position: relative;
+        min-height: 110px;
+        margin-bottom: 15px;
+        padding: 0 0 0 170px;
+        font-size: 18px;
         color: #fff;
+
 
         a {color: inherit;text-decoration: none;}
 
@@ -373,11 +374,13 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: 126px;
+          background: #cfdef1;
+          width: 140px;
+          height: 79px;
+          overflow: hidden;
 
           img {width: 100%;height: auto}
 
-          overflow: hidden;
         }
 
         .item-date {
@@ -1003,19 +1006,33 @@
 
   @media @w768 {
 
-    height: 400px;
+    height: auto;
+
+    background: url("/local/assets/img/page_front/bg_front.jpg");
 
     .swiper-slide {
 
-      background-size: cover !important;
+      background-size: contain !important;
+
+      padding-top: 37%;
+
+
+
+
+      .wrapper-1050 {
+        height: auto;
+      }
 
       .slide-numbers {
 
+        position: relative;
+        bottom: 0;
+
         .numbers-item {
 
-          font-size: 18px;
+          font-size: 14px;
 
-          b {font-size: 36px}
+          b {font-size: 28px}
         }
 
 

@@ -2,13 +2,18 @@ $(document).ready(function () {
 
   if ($('#page-front').length) {
 
+    var frontPageSliderDelay = $('#front-page-slider').data('autoplay-delay');
+
+    frontPageSliderDelay = frontPageSliderDelay ? {delay: frontPageSliderDelay} : false;
+
     var frontPageSlider = new Swiper ('#front-page-slider', {
 
       pagination: {
         el: '#front-page-slider .swiper-pagination',
         clickable: true
       },
-      loop: true
+      loop: true,
+      autoplay: frontPageSliderDelay
     });
 
     var lastPublicationsSliderDelay = $('#front-page-last-publications-slider').data('autoplay-delay');

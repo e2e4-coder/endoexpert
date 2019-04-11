@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Публикация</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/local/assets/css/normalize.css">
+    <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/local/assets/css/build.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
+    <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
+
+
+    <script src="/local/assets/js/common.js"></script>
+    <script src="/local/assets/js/page_publication.js"></script>
+    <script src="/local/assets/js/ee_article_image_slider.js"></script>
+    <script src="/local/assets/js/invite_friends_app.js"></script>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://unpkg.com/vuejs-paginate@latest"></script>
+
+
+</head>
+<body style="background: #2e2f2f;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header -top-visible">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="/local/assets/img/endoexpert_logo2_color.png" width="55" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <a name="top"></a>
+
+
+    <div class="ee-inner-page page-publication">
+
+        <div class="wrapper-1050">
+
+            <div class="ee-breadcrumbs">
+
+                <a href="#">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Рубрика</span>
+
+            </div>
+
+            <div class="columns-layout">
+
+                <div class="ee-main-wrapper">
+
+                    <h1>Обзор литературы: Cтентирование при заболеваниях толстой кишки</h1>
+
+                    <div class="toolbar-1">
+
+                        <div class="share-icon-wrapper">
+                            <i class="ico-share"></i>
+                        </div>
+
+                        <div class="share-widget">
+                            <div style="color: #fff">тут будет виджет шаринга</div>
+                        </div>
+
+                        <div class="right-side">
+                            <i class="ico-notification"></i>
+                            <span class="sep"></span>
+                            <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <span class="sep"></span>
+                            <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <span class="sep"></span>
+                            <i class="ico-timer"></i>
+                            <span class="time-text">130 мин</span>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <table class="authors-info">
+                        <tr>
+                            <td>Авторы:</td>
+                            <td>
+                                <span class="author-name">Иванов А. И. <sup>1</sup></span>
+                                <span class="author-name">Сидоров А.А. <sup>2</sup></span>
+                                <span class="author-name">2019</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Об авторах:</td>
+                            <td>
+                                1. Городская больница №1, Санкт-Петербург<br>
+                                2. Городская больница №1, Санкт-Петербург
+                            </td>
+                        </tr>
+                    </table>
+
+                    <a name="p1" id="p1"></a>
+                    <div class="text-section -grey">
+                        <h3>Анонс:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    </div>
+
+                    <a name="p2" id="p2"></a>
+                    <div class="text-section">
+                        <h3>Аннотация:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+
+                    <a name="p3" id="p3"></a>
+                    <div class="text-section -grey">
+                        <h3>Заполненный блок:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+
+                    </div>
+
+
+                    <a name="p4" id="p4"></a>
+                    <div class="ee-article-image-slider">
+
+
+                        <div class="sliders-wrapper">
+
+                            <div class="slider-large">
+
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="620" height="348">
+                                            <div class="image-description">
+                                                <b>Иллюстрация №1: Описание фотографии внутренностей и медицинского чуда</b>, 1 тайтл<br>
+                                                Вторая строка: к примеру : описание изображения
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="620" height="348">
+                                            <div class="image-description">
+                                                <b>Иллюстрация №2: Описание фотографии внутренностей и медицинского чуда</b>, 1 тайтл<br>
+                                                Вторая строка: к примеру : описание изображения
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="620" height="348">
+                                            <div class="image-description">
+                                                <b>Иллюстрация №3: Описание фотографии внутренностей и медицинского чуда</b>, 1 тайтл<br>
+                                                Вторая строка: к примеру : описание изображения
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="620" height="348">
+                                            <div class="image-description">
+                                                <b>Иллюстрация №4: Описание фотографии внутренностей и медицинского чуда</b>, 1 тайтл<br>
+                                                Вторая строка: к примеру : описание изображения
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="slider-small">
+
+
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="160" height="90">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="160" height="90">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="160" height="90">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/section-slide.jpg" width="160" height="90">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="button-prev"><i class="fas fa-angle-up"></i></div>
+                                <div class="button-next"><i class="fas fa-angle-down"></i></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="slide-description">
+
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+                    <a name="p5" id="p5"></a>
+                    <div class="text-section">
+                        <h3>Полный текст статьи:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+
+                    <a name="p6" id="p6"></a>
+                    <div class="ee-locked-section -unlocked">
+
+                        <div class="section-head">
+                            <span class="section-caption">Открыт общий доступ к полному тексту статьи</span>
+                            <span class="cc-sign"><img src="/local/assets/img/cc-sign.png" width="88" height="31"></span>
+                            <span class="expand-button"><span>раскрыть <i class="fas fa-angle-down"></i></span></span>
+                        </div>
+                        <div class="locked-section-text">
+                            <div class="text-section">
+                                <h3>Полный текст статьи:</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="ee-locked-section">
+                        <div class="section-head">
+                            <span class="section-caption">Полный текст доступен зарегистрированным пользователям</span>
+                            <span class="cc-sign"><img src="/local/assets/img/cc-sign.png" width="88" height="31"></span>
+                            <span class="expand-button"><span>раскрыть <i class="fas fa-angle-down"></i></span></span>
+                        </div>
+                    </div>
+
+                    <div class="ee-locked-section">
+                        <div class="section-head">
+                            <span class="section-caption">Полный текст доступен только пользователям с доступом «Врач»</span>
+                            <span class="expand-button"><span>раскрыть <i class="fas fa-angle-down"></i></span></span>
+                        </div>
+                    </div>
+
+                    <a name="p7" id="p7"></a>
+                    <div class="text-conclusion">
+                        <p>Корткий вывод в шаблоне есть, по умолчанию идет после поного текста материала или видео. Корткий вывод в шаблоне есть, по умолчанию идет после поного текста материала или видео. Три строки максимум.</p>
+                    </div>
+
+                    <a name="p8" id="p8"></a>
+                    <div class="video-section">
+
+                        <div class="video-title">Заголовок видео</div>
+
+                        <div class="video-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/__" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+
+                    </div>
+
+                    <a name="p9" id="p9"></a>
+                    <div class="text-section -grey">
+                        <h3>Выводы:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+
+                    <a name="p10" id="p10"></a>
+                    <div class="text-section">
+                        <h3>Список литературы:</h3>
+
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                        <div class="expandable-block">
+
+                            <div class="expandable-text">
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
+                                <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                            </div>
+
+                            <div class="button-wrapper">
+                                <button>раскрыть <i class="fas fa-angle-down"></i></button>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="publication-bottom-info">
+
+                        <div class="authors-and-source">
+                            06.09.18    © Иванов В.В.     <a href="#" class="author-link">Связаться с автором</a>
+                            <br>
+                            Источник:  <a href="#" target="_blank">https://ru.wikipedia.org/</a>
+                        </div>
+
+                        <div class="subscribe-checkboxes">
+
+                            <label><input id="publication-subscribe-author" data-api-url="/local/assets/json/get-one.json" data-author-id="23452" type="checkbox" class="i-check-ee"> Подписаться на новые сообщения этой темы</label><br>
+                            <label><input id="publication-subscribe-topic" data-api-url="/local/assets/json/get-one.json" data-topic-id="23452" type="checkbox" class="i-check-ee"> Подписаться на новые сообщения Автора</label>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="toolbar-2">
+
+                        <div class="left-side">
+
+                            <a onclick="window.print();"><i class="ico-print"></i></a>
+                            <span class="sep"></span>
+                            <i class="ico-download"></i>
+                            <span class="sep"></span>
+                            <i class="ico-share"></i>
+                            <span class="sep"></span>
+                            <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <span class="sep"></span>
+                            <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <span class="sep"></span>
+                            <i class="ico-notification"></i>
+                            <span class="sep"></span>
+                            <i class="ico-comments"></i>
+                            <span class="sep"></span>
+                            <i class="ico-link"></i>
+                            <span class="sep"></span>
+
+                            <span class="rating-form">
+                                    <span class="rating-label">Оцените материал: </span>
+
+                                    <select id="publication-rating-select" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="2.5">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                            </span>
+
+
+                        </div>
+
+                        <div class="right-side">
+
+                            <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-down"></i></span>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="bg-dark">
+
+                        <div class="publication-sponsors-block">
+
+                            <h3>Материал опубликован при поддержке:</h3>
+
+                            <div class="logos-list">
+
+                                <div class="logo-img"><img src="/local/assets/img/tmp/sponsor_1.png" width="126" height="42"></div>
+                                <div class="logo-img"><img src="/local/assets/img/tmp/sponsor_2.png" width="113" height="43"></div>
+                                <div class="logo-img"><img src="/local/assets/img/tmp/sponsor_3.png" width="116" height="22"></div>
+
+                            </div>
+
+                            <div class="block-text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="publication-ee-comment-block">
+
+                            <div class="block-img"></div>
+
+                            <h3>От редакции EndoExpert.ru</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specim</p>
+
+                        </div>
+
+                        <div class="publication-expert-comments">
+
+                            <h2>Комментарии Эксперта</h2>
+
+                            <div class="comment-item">
+
+                                <div class="face-block">
+                                    <a href="#" class="face-img">
+                                        <img src="/local/assets/img/tmp/face_2.png" width="190" height="190" alt="">
+                                    </a>
+                                    <a href="#" class="face-name">
+                                        <b>Иван Васильевич ПЕТРОВ</b>
+                                        <br>
+                                        доктор хирург тратата
+                                        <br>
+                                        г.Москва
+                                    </a>
+                                </div>
+
+                                <div class="item-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
+                                </div>
+
+                            </div>
+
+                            <div class="comment-item">
+
+                                <div class="face-block">
+                                    <a href="#" class="face-img">
+                                        <img src="/local/assets/img/tmp/face_2.png" width="190" height="190" alt="">
+                                    </a>
+                                    <a href="#" class="face-name">
+                                        <b>Иван Васильевич ПЕТРОВ</b>
+                                        <br>
+                                        доктор хирург тратата
+                                        <br>
+                                        г.Москва
+                                    </a>
+                                </div>
+
+                                <div class="item-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="prev-next-block">
+
+                            <a href="#"><<  предыдущая публикация</a>   |   <a href="#">следущая публикация  >></a>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="bg-grey">
+
+                        <div class="publication-test-block">
+
+                            <h2>Проверьте Ваши знания</h2>
+
+                            <div class="block-text">
+
+                                <ul>
+                                    <li>Проверяйте и расширяйте Ваши профессиональные знания     <a class="test-link" href="#">Пройдите тест >></a></li>
+                                    <li>Набирайте <a href="#">Баллы EndoExpert.ru</a></li>
+                                    <li>Не забывайте <a href="#">оценить материал</a></li>
+                                </ul>
+
+                                <p>
+                                    Каждый месяц Вы определяете лучшие публикации, Авторы которых получают повышенные баллы и поднимаются в рейтинге <a href="#">ТОП-Авторов EndoExpert.ru</a>!<br>
+                                    Каждый месяц  у Вас есть возможность получить повышенное количество баллов EndoExpert.ru и попасть в <a href="#">ТОП- Активных Пользователей</a> портала! Подробная информация <a href="#">о баллах EndoExpert.ru</a> и возможности их потратить читайте в разделе: <a href="#">Рейтинги и Баллы на EndoExpert.ru</a>
+                                </p>
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="bg-lightgrey">
+
+                        <div class="invite-friends-wrapper">
+
+                            <button id="invite-friends-button" type="button" class="invite-friends-button">Пригласить из списка друзей</button>
+
+                            <div id="invite-friends-popup" class="endoexpert-popup mfp-hide">
+
+                                <div id="invite-friends-app" data-topic-id="34534"></div>
+
+                                <script>includeHTML('/local/assets/html_includes/invite-friends-app.html', document.getElementById('invite-friends-app'));</script>
+
+
+                            </div>
+
+                            <div id="invite-friends-popup-success" class="endoexpert-popup mfp-hide">
+
+                                <p>Приглашение успешно отправлено!</p>
+
+                                <div class="popup-buttons">
+                                    <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ee-invite-by-email-form">
+
+                            <form action="/">
+                                <input type="hidden" name="element_id" value="34534">
+                                <input class="form-text" name="email" placeholder="Введите email" type="text">
+                                <input class="form-submit" type="submit" value="Пригласить">
+                            </form>
+
+
+                            <div id="invite-by-email-popup-success" class="endoexpert-popup mfp-hide">
+
+                                <p>Приглашение успешно отправлено!</p>
+
+                                <div class="popup-buttons">
+                                    <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="related-articles-block">
+
+                            <h2>Статьи по теме</h2>
+
+                            <div class="ee-publication-teaser-v1">
+
+                                <div class="teaser-date">11.03.2018</div>
+                                <div class="teaser-stats">
+                                    <span><i class="fas fa-comment"></i> 20</span>
+                                    <span><i class="fas fa-eye"></i> 3000</span>
+                                    <span><i class="fas fa-star"></i> 5</span>
+                                </div>
+
+                                <div class="teaser-title">
+                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
+                                </div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v1">
+
+                                <div class="teaser-date">11.03.2018</div>
+                                <div class="teaser-stats">
+                                    <span><i class="fas fa-comment"></i> 20</span>
+                                    <span><i class="fas fa-eye"></i> 3000</span>
+                                    <span><i class="fas fa-star"></i> 5</span>
+                                </div>
+
+                                <div class="teaser-title">
+                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
+                                </div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v1">
+
+                                <div class="teaser-date">11.03.2018</div>
+                                <div class="teaser-stats">
+                                    <span><i class="fas fa-comment"></i> 20</span>
+                                    <span><i class="fas fa-eye"></i> 3000</span>
+                                    <span><i class="fas fa-star"></i> 5</span>
+                                </div>
+
+                                <div class="teaser-title">
+                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
+                                </div>
+
+                            </div>
+
+                            <div class="load-more-wrapper">
+                                <button class="ee-button-2">Показать еще</button>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="recommend-articles-block">
+
+                            <h2>Рекоммендуемые статьи</h2>
+
+                            <div class="teasers-list">
+
+                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                    <div class="publication-image">
+                                        <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                    </div>
+
+                                    <div class="publication-info">
+
+                                        <span class="comments-count">20</span>
+                                        <span class="views-count">3000</span>
+                                        <div class="rating">
+                                            <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                </div>
+
+                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                    <div class="publication-image">
+                                        <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                    </div>
+
+                                    <div class="publication-info">
+
+                                        <span class="comments-count">20</span>
+                                        <span class="views-count">3000</span>
+                                        <div class="rating">
+                                            <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                </div>
+
+                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                    <div class="publication-image">
+                                        <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                    </div>
+
+                                    <div class="publication-info">
+
+                                        <span class="comments-count">20</span>
+                                        <span class="views-count">3000</span>
+                                        <div class="rating">
+                                            <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                </div>
+                            </div>
+
+                            <div class="load-more-wrapper">
+                                <button class="ee-button-2">Показать еще</button>
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="tags-helper">
+                            <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a>
+
+                        </div>
+
+
+                        <div class="create-publication-button-wrapper">
+                            <a href="#" class="ee-button-2">Создайте вашу публикацию</a>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="ee-sidebar">
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Содержание</h2>
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="publication-toc">
+                                <a href="#p1">Анонс</a>
+                                <a href="#p2">Аннотация</a>
+                                <a href="#p3">Ключевые слова</a>
+                                <a href="#p4">Введение</a>
+                                <a href="#p5">Полный текст статьи</a>
+                                <a href="#p6">Иллюстрации</a>
+                                <a href="#p7">Вывод</a>
+                                <a href="#p8">Список литературы</a>
+                                <a href="#p9">Лицензия</a>
+                                <a href="#p10">Дисклеймер</a>
+                                <a href="#">Конфликт интересов</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-create-publication-button-wrapper">
+                        <a class="ee-button-2" href="#">Создайте Вашу публикацию</a>
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Популярное</h2>
+
+                            <span class="expand-toggle"></span>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Рекоммендуем</h2>
+
+                            <span class="expand-toggle"></span>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Мероприятия</h2>
+
+                            <span class="expand-toggle"></span>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head -online">
+                            <h2>Онлайн трансляции</h2>
+
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div><img src="/local/assets/img/sidebar-online.png" width="229" height="33"></div>
+
+                            <div class="online-digits">
+                                <b>3</b><b>6</b><b>5</b>&nbsp;&nbsp;<b>2</b><b>0</b>&nbsp;&nbsp;<b>1</b><b>8</b>&nbsp;&nbsp;<b>1</b><b>2</b>
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Топ 10 авторов</h2>
+                        </div>
+
+                        <div class="block-body -dark">
+
+
+                            <div class="sidebar-faces-slider swiper-container" data-autoplay-delay="3000">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="face-block">
+                                            <a href="#" class="face-img">
+                                                <img src="/local/assets/img/tmp/face_2.png" width="190" height="190" alt="">
+                                            </a>
+                                            <a href="#" class="face-name">
+                                                <b>Иван Васильевич ПЕТРОВ</b>
+                                                <br>
+                                                доктор хирург тратата
+                                                <br>
+                                                г.Москва
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Топ 10 пользователей</h2>
+                        </div>
+
+                        <div class="block-body -dark">
+
+
+                            <div class="sidebar-faces-slider swiper-container" data-autoplay-delay="3000">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="face-block">
+                                            <a href="#" class="face-img">
+                                                <img src="/local/assets/img/tmp/face_2.png" width="190" height="190" alt="">
+                                            </a>
+                                            <a href="#" class="face-name">
+                                                <b>Иван Васильевич ПЕТРОВ</b>
+                                                <br>
+                                                доктор хирург тратата
+                                                <br>
+                                                г.Москва
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Инструменты</h2>
+                            <span class="expand-toggle"></span>
+                        </div>
+
+                        <div class="block-body -dark">
+
+                            <div class="sidebar-tools">
+
+                                <a href="#">Распечатать</a>
+                                <a href="#">Отправить другу</a>
+                                <a href="#">Экспортная ссылка</a>
+                                <a href="#">Продвинутый поиск</a>
+                                <a href="#">Статистика</a>
+                                <a href="#">Скачать статью</a>
+                                <a href="#">Скачать доп. материалы</a>
+                                <a href="#">Поделиться</a>
+                                <a href="#">Написать автору</a>
+                                <a href="#">Добавить в избранное</a>
+                                <a href="#">В личный кабинет</a>
+                                <a href="#">Оцените статью</a>
+                                <a href="#">Проверьте Ваши знания</a>
+                                <a href="#">Обсудить</a>
+                                <a href="#">Подписаться</a>
+                                <a href="#">Отключить рекламу</a>
+                                <a class="-highlighted" href="#">Создать свою публикацию</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Новые публикации</h2>
+
+                            <span class="expand-toggle"></span>
+
+                        </div>
+
+                        <div class="block-body">
+
+
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Рейтинги</h2>
+
+                            <span class="expand-toggle"></span>
+
+                        </div>
+
+                        <div class="block-body">
+
+
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v3">
+
+                                <a href="#">Обзор литературы: стентирование при заболеваниях толстой кишки</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Видео</h2>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -video -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+                            <div class="ee-publication-teaser-v2 -video -shadow -bg-white">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                </div>
+
+                                <div class="publication-info">
+
+                                    <span class="comments-count">20</span>
+                                    <span class="views-count">3000</span>
+                                    <div class="rating">
+                                        <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <h2>Quiz</h2>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white -no-proportional -auto-height">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/quiz1.png" width="230" height="154" alt=""></a>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-sidebar-block">
+
+                        <div class="block-head -red">
+                            <h2>Пройти опрос</h2>
+
+                        </div>
+
+                        <div class="block-body">
+
+                            <div class="ee-publication-teaser-v2 -shadow -bg-white -no-proportional -auto-height">
+
+                                <div class="publication-image">
+                                    <a href="#"><img src="/local/assets/img/quiz2.png" width="230" height="154" alt=""></a>
+                                </div>
+
+                                <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

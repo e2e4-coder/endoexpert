@@ -1,0 +1,64 @@
+@import "variables";
+
+.br-theme-fa-stars-gold .br-widget {
+  height: 19px;
+  white-space: nowrap;
+}
+.br-theme-fa-stars-gold .br-widget a {
+  font: normal normal normal 19px/19px "Font Awesome 5 Free";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  margin-right: 2px;
+  display: inline-block;
+  width: 22px;
+
+}
+.br-theme-fa-stars-gold .br-widget a:after {
+  content: '\f005';
+  color: #fff;
+}
+.br-theme-fa-stars-gold .br-widget a.br-active:after {
+  content: '\f005';
+  color: @gold-color;
+  font-weight: 900;
+}
+.br-theme-fa-stars-gold .br-widget a.br-selected:after {
+  content: '\f005';
+  color: @gold-color;
+  font-weight: 900;
+}
+.br-theme-fa-stars-gold .br-widget a.br-fractional:after {
+  content: '\f5c0';
+  color: @gold-color;
+  font-weight: 900;
+}
+.br-theme-fa-stars-gold .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-fa-stars-gold .br-readonly a {
+  cursor: default;
+}
+.br-theme-fa-stars-gold .br-reverse a.br-fractional {
+  display: inline-block;
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+@media print {
+  .br-theme-fa-stars-gold .br-widget a:after {
+    content: '\f006';
+    color: black;
+  }
+  .br-theme-fa-stars-gold .br-widget a.br-active:after,
+  .br-theme-fa-stars-gold .br-widget a.br-selected:after {
+    content: '\f005';
+    color: black;
+  }
+  .br-theme-fa-stars-gold .br-widget a.br-fractional:after {
+    content: '\f123';
+    color: black;
+  }
+}

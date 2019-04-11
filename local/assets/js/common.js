@@ -167,4 +167,13 @@ $(document).ready(function () {
   });
 
 
+  $('.ee-sidebar-block .expand-toggle').click(function () {
+
+    $(this).parent().next().slideToggle();
+
+    $(this).parent().parent().toggleClass('-collapsed');
+
+  });
+
+
 });

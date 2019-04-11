@@ -1,4 +1,6 @@
 @import "inc/variables";
+@import "inc/icons";
+@import "inc/buttons";
 @import "inc/photo";
 @import "inc/comments";
 @import "inc/endoexpert-header";
@@ -9,6 +11,7 @@
 @import "inc/endoexpert-pagination";
 @import "inc/endoexpert-publication";
 @import "inc/theme-fa-stars";
+@import "inc/theme-fa-stars-gold";
 @import "inc/endoexpert-poll";
 @import "inc/invite-friends-app";
 @import "inc/endoexpert-footer";
@@ -22,10 +25,16 @@
 @import "inc/dark-block";
 @import "inc/partners-block";
 @import "inc/social-links-block";
+@import "inc/ee-publication-teaser-v1";
 @import "inc/ee-publication-teaser-v2";
+@import "inc/ee-publication-teaser-v3";
 @import "inc/footer-fixed-block-mobile";
 @import "inc/slider-wrapper-type-1";
 @import "inc/ee-search-block";
+@import "inc/ee-article-image-slider";
+@import "inc/ee-locked-section";
+@import "inc/ee-invite-by-email-form";
+@import "inc/ee-sidebar-block";
 
 body {
   font-family: Eurostile, Arial, sans-serif;
@@ -199,31 +208,7 @@ body {
 
 }
 
-.ee-button-1 {
 
-  display: inline-block;
-  text-align: center;
-  border: none;
-  outline: none;
-  height: 43px;
-  line-height: 43px;
-  background: #dea047;
-  color: #fff !important;
-  border-radius: 5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  text-decoration: none;
-
-  &.-grey {
-
-    background: #606162;
-
-  }
-
-}
 
 .ee-breadcrumbs {
 
@@ -258,10 +243,23 @@ body {
 
   background: #2e2f2f;
 
+  .columns-layout {
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
 
   .ee-main-wrapper {
 
     width: 800px;
+
+  }
+
+  .ee-sidebar {
+
+    width: 230px;
 
   }
 

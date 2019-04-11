@@ -1,0 +1,75 @@
+@import "variables";
+
+.ee-locked-section {
+
+  margin: 10px 0;
+
+  .section-head {
+
+    background: #5a5858;
+    display: flex;
+    padding-left: 50px;
+    position: relative;
+    min-height: 31px;
+
+    &:before {
+
+      content: '';
+      position: absolute;
+      top: 0;left: 0;
+      background: #9e9e9e url("/local/assets/img/icons/ico_locked.png") center center no-repeat;
+      width: 50px;
+      height: 100%;
+    }
+
+
+
+
+    .section-caption {
+
+      font-size: 16px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      flex: 1 1 auto;
+
+    }
+
+    .cc-sign {
+      flex: 0 0 auto;
+      width: 88px;
+      img {display: block}
+
+    }
+
+    .expand-button {
+      flex: 0 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: @gold-color;
+      white-space: nowrap;
+      cursor: pointer;
+      font-weight: 500;
+      background: #2e2f2f;
+      user-select: none;
+
+      i {margin-left: 10px;}
+
+    }
+
+
+  }
+
+  .locked-section-text {
+    display: none;
+  }
+
+  &.-unlocked .section-head:before {background-image: url("/local/assets/img/icons/ico_unlocked.png")}
+
+
+}

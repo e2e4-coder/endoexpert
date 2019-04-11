@@ -1,0 +1,142 @@
+@import "variables";
+
+.ee-sidebar-block {
+
+  margin-bottom: 20px;
+
+  .block-head {
+
+    text-align: center;
+    background: #101011;
+    color: #fff;
+    padding: 7px 0;
+    position: relative;
+
+
+    h2 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 21px;
+
+    }
+
+
+    .expand-toggle {
+      color: @gold-color;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      cursor: pointer;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+
+      &:before {
+        content: "\f107";
+      }
+
+
+
+    }
+
+
+    &.-online h2:before {
+
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      border-radius: 100%;
+      background: #5a5858;
+      margin-right: 5px;
+      vertical-align: middle;
+
+    }
+
+    &.-red {
+
+      background: #f73103;
+
+    }
+
+
+  }
+
+  .block-body {
+    padding-top: 10px;
+
+    &.-dark {
+
+      background: #2e2f2f;
+      color: #fff;
+
+    }
+  }
+
+
+  &.-collapsed .block-head .expand-toggle:before {content: "\f106"}
+
+
+  .online-digits {
+
+    margin-top: 10px;
+    background: #606162;
+    padding: 7px 0;
+    text-align: center;
+
+    b {
+      font-weight: 500;
+      font-size: 18px;
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 2px 3px;
+      margin: 0 1px;
+      border-radius: 3px;
+    }
+
+  }
+
+  .face-block {
+    padding: 10px 0;
+
+    .face-img {
+      border: none;
+    }
+  }
+
+
+  .sidebar-tools {
+
+    padding: 0 10px 10px 10px;
+    font-size: 14px;
+
+    a {
+      display: block;
+      margin: 0 0 10px 0;
+      text-decoration: none;
+      padding-left: 20px;
+      position: relative;
+
+      &:hover {text-decoration: underline;}
+
+      &:before {
+        content: '\f105';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        top: -2px;left: 0;
+        color: @gold-color;
+        font-size: 16px;
+
+      }
+
+      &.-highlighted {
+        color: @gold-color;
+      }
+
+    }
+
+  }
+
+
+}

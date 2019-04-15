@@ -166,48 +166,7 @@ $(document).ready(function () {
     });
 
 
-    var sponsorSliderDelay = $('#sponsors-slider').data('autoplay-delay');
 
-    sponsorSliderDelay = sponsorSliderDelay ? {delay: sponsorSliderDelay} : false;
-
-    var sponsorSlider = new Swiper ('#sponsors-slider', {
-
-
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 10,
-      loop: true,
-      navigation: {
-        nextEl: '#sponsors-slider-next',
-        prevEl: '#sponsors-slider-prev',
-      },
-
-      autoplay: sponsorSliderDelay,
-
-
-    });
-
-
-    var partnersSliderDelay = $('#partners-slider').data('autoplay-delay');
-
-    partnersSliderDelay = partnersSliderDelay ? {delay: partnersSliderDelay} : false;
-
-    var partnersSlider = new Swiper ('#partners-slider', {
-
-
-      slidesPerView: 4,
-      spaceBetween: 10,
-      slidesPerGroup: 4,
-      loop: true,
-      navigation: {
-        nextEl: '#partners-slider-next',
-        prevEl: '#partners-slider-prev',
-      },
-
-      autoplay: partnersSliderDelay,
-
-
-    });
 
 
 

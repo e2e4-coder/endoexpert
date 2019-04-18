@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Moviprep</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/local/assets/css/normalize.css">
+    <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/css/build.css">
+    <link rel="stylesheet" href="/local/assets/css/build_moviprep.css">
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
+
+
+
+    <script src="/local/assets/js/common.js"></script>
+    <script src="/local/assets/js/moviprep.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full&lazy=true" defer></script>
+
+
+
+</head>
+<body style="background: #2e2f2f;">
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header -top-visible">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="/local/assets/img/endoexpert_logo2_color.png" width="55" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="mv-header">
+
+        <div class="mv-header-top">
+
+            <div class="mv-container">
+                <a class="mv-logo" href="#"><img src="/local/assets/img_moviprep/logo.png" width="298" height="30"></a>
+            </div>
+        </div>
+
+        <div class="mv-header-bottom">
+
+            <div class="mv-top-menu mv-container">
+
+                <ul>
+                    <li><a href="#instruction">Инструкция</a></li>
+                    <li><a href="#schema">Схемы подготовки</a></li>
+                    <li><a href="#diet">Диета</a></li>
+                    <li><a href="#faq">Вопросы и ответы</a></li>
+                    <li><a href="#faq-form">Задать вопрос</a></li>
+                    <li><a href="#buy">Где купить</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a name="top"></a>
+
+    <div class="page-moviprep">
+
+        <a id="instruction" name="instruction"></a>
+
+        <div class="mv-section-first">
+
+            <div class="mv-container">
+
+                <div class="left-side">
+                    <img src="/local/assets/img_moviprep/img_item.png" width="502" height="319">
+                </div>
+
+                <div class="right-side">
+                    <div class="section-title">
+                        <img src="/local/assets/img_moviprep/logo_dark.png" width="298" height="30">
+                        Отличная видимость -
+                        точный диагноз!
+                    </div>
+
+                    <div class="section-text">
+                        <b>МОВИПРЕП<sup>®</sup></b> – инновационный препарат для очищения кишечника перед обследованиями (эндоскопическими, рентгенологическими и другими) и операциями.
+                    </div>
+
+                    <div class="section-buttons">
+                        <a class="mv-btn -orange" href="#">Купить онлайн</a>
+                        <a class="mv-btn" href="#">Скачать инструкцию</a>
+                        <a class="mv-btn" href="#">Вызвать медпредставителя в один клик</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="mv-section-advantages">
+
+            <div class="mv-container">
+                <h2>Преимущества МОВИПРЕП<sup>®</sup></h2>
+
+                <div class="advantages-list">
+
+                    <div class="list-item">
+                        <img src="/local/assets/img_moviprep/adv_1.png" width="114" height="114">
+                        <p><b>Экспертное качество подготовки кишечника всего в 2 литрах раствора препарата<sup>1,2</sup></b></p>
+                        <p>Обладает высоким качеством очищения кишечника, что по эффективности равняется приёму 4-литровых препаратов.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="/local/assets/img_moviprep/adv_2.png" width="114" height="114">
+                        <p><b>Более благоприятный профиль безопасности<sup>4</sup></b></p>
+                        <p>В отличие от солевых слабительных<sup>*</sup>, сбалансирован электролитами и основан на макроголе, который не поступает в системный кровоток.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="/local/assets/img_moviprep/adv_3.png" width="114" height="114">
+                        <p><b>Более эффективное очищение правых отделов толстой кишки<sup>3</sup></b></p>
+                        <p>Превосходит 4-литровые препараты в отношении качества подготовки труднодоступных правых отделов толстой кишки.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="/local/assets/img_moviprep/adv_4.png" width="114" height="114">
+                        <p><b>Улучшенный лимонный вкус</b></p>
+                        <p>В сравнении с высокообъёмными 4-литровыми препаратами обладает более приятным лимонным вкусом, по мнению потребителей.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a id="schema" name="schema"></a>
+
+        <div class="mv-section-schema">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">Схема для качественной подготовки мовипреп<sup>®</sup></h2>
+
+                <div class="expandable-block">
+
+                    <div class="schema-title">
+                        <b><span>5</span> простых шагов</b><br>
+                        для качественного очищения кишечника<sup>*</sup>
+                    </div>
+
+                    <div class="day-evening-switcher">
+
+                        <div class="switcher-label">
+                            Ваше обследование назначено на:
+                        </div>
+
+                        <div class="switcher-button">
+                            <img class="-active" data-tab="schema-tab-day" src="/local/assets/img_moviprep/icon_nav_1.svg" width="190" height="124">
+                        </div>
+
+                        <div class="switcher-button">
+                            <img data-tab="schema-tab-evening" src="/local/assets/img_moviprep/icon_nav_2.svg" width="190" height="124">
+                        </div>
+
+                    </div>
+
+
+                    <div class="schema-tab-day">
+
+                        <h3>Сплит схема (двухэтапная)</h3>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number"><span>1</span>шаг</span>
+                                Рекомендации по питанию за 1–3 дня до обследования
+                            </h4>
+
+                            <div class="eat-columns">
+
+                                <div class="to-eat">
+                                    <p><b>Разрешено есть:</b></p>
+
+                                    <ul>
+                                        <li>Нежирные кисломолочные продукты, сыр, сметана, сливочное масло, йогурт без добавок и наполнителей</li>
+                                        <li>Яйца</li>
+                                        <li>Мясо, птица и рыба нежирных сортов (в отварном, паровом или тушёном виде)</li>
+                                        <li>Хорошо проваренный белый рис (кроме плова)</li>
+                                        <li>Сахар, мёд (не в сотах)</li>
+                                    </ul>
+
+                                    <p><i>Разрешённые продукты не должны содержать мелкие косточки, зёрна, семена, отруби</i></p>
+
+                                    <p><b>Разрешено пить:</b></p>
+
+                                    <ul>
+                                        <li>Бульоны (прозрачные, процеженные)</li>
+                                        <li>Сок без мякоти</li>
+                                        <li>Чай</li>
+                                        <li>Вода</li>
+                                        <li>Безалкогольные негазированные, неокрашенные напитки</li>
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="not-to-eat">
+
+                                    <p><b>Запрещено есть:</b></p>
+
+                                    <ul>
+                                        <li>Хлебобулочные, мучные и макаронные изделия</li>
+                                        <li>Овощи, включая капусту, картофель, зелень, грибы, морскую капусту, специи</li>
+                                        <li>Крупы, каши, бобовые, злаковые, орехи, семечки, кунжут, мак, зёрна, отруби и другие семена</li>
+                                        <li>Жёсткое мясо с хрящами, консервы, сосиски, колбасы, морепродукты</li>
+                                        <li>Фрукты, ягоды, включая сухофрукты, варенье, джем, мармелад, желе</li>
+                                        <li>Чипсы, гамбургеры, шоколад</li>
+                                    </ul>
+
+                                    <p><i>Любые другие продукты, не входящие в список разрешённых</i></p>
+
+                                    <p><b>Запрещено пить:</b></p>
+
+                                    <ul>
+                                        <li>Алкоголь</li>
+                                        <li>Газированные напитки</li>
+                                        <li>Кофе</li>
+                                        <li>Компот</li>
+                                        <li>Кисель</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <div class="step-notes">
+                                При хронических запорах рекомендации по питанию нужно соблюдать в течение 5 дней. За 3–5 дней до обследования начать или продолжить приём слабительных препаратов по рекомендации врача-гастроэнтеролога.
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number"><span>2</span>шаг</span>
+                                Режим приёма пищи в день накануне обследования
+                            </h4>
+
+                            <div class="step-text-block-1">
+
+                                <p><b>Завтрак и обед</b></p>
+
+                                <ul><li>Согласно списку разрешённых продуктов</li></ul>
+
+                                <p><b>Ужин</b></p>
+
+                                <ul><li>Согласно списку разрешённых жидкостей</li></ul>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number"><span>3</span>шаг</span>
+                                Вечером накануне обследования приём первого литра МОВИПРЕП<sup>®</sup>
+                            </h4>
+
+                            <p class="step-subtitle"><b>Необходимо принять 1 литр препарата и 500 мл. разрешённой жидкости</b></p>
+
+                            <div class="step-info">
+                                <div class="img-box">
+                                    <img src="/local/assets/img_moviprep/img_step_product.png" alt="">
+                                </div>
+                                <span class="name">Приготовление первого литра раствора препарата:</span>
+                                <img class="img-steps" src="/local/assets/img_moviprep/img_step_3.svg" alt="Схема">
+                                <ol class="number-step">
+                                    <li>Содержимое одного пакетика (саше) <strong>А</strong> и одного пакетика <strong>Б</strong> развести в небольшом количестве воды до полного растворения.</li>
+                                    <li>Доливая воду, довести объём раствора до 1 литра.</li>
+                                    <li>Хорошо перемешать.</li>
+                                </ol>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number"><span>4</span>шаг</span>
+                                Рано утром в день обследования приём второго литра МОВИПРЕП<sup>®</sup>
+                            </h4>
+
+                            <p class="step-subtitle"><b>Необходимо принять 1 литр препарата и 500 мл. разрешённой жидкости<br>
+                                (важно окончить приём не позже, чем за 4 часа до начала обследования)</b></p>
+
+                            <div class="step-info">
+                                <div class="img-box">
+                                    <img src="/local/assets/img_moviprep/img_step_product.png" alt="">
+                                </div>
+                                <span class="name">Приготовление второго литра раствора препарата:</span>
+                                <img class="img-steps" src="/local/assets/img_moviprep/img_step_3.svg" alt="Схема">
+                                <ol class="number-step">
+                                    <li>Содержимое оставшихся второго пакетика (саше) <strong>А</strong> и второго пакетика <strong>Б</strong> развести в небольшом количестве воды до полного растворения.</li>
+                                    <li>Доливая воду, довести объём раствора до 1 литра.</li>
+                                    <li>Хорошо перемешать.</li>
+                                </ol>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number"><span>5</span>шаг</span>
+                                Рекомендации по приёму раствора препарата:
+                            </h4>
+
+
+                            <ul class="step_recommendations">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_1"></i>
+                                    </div>
+                                    С момента начала приёма препарата МОВИПРЕП<sup>®</sup> <strong>не следует употреблять пищу</strong>, при этом разрешенную жидкость можно пить в неограниченном количестве. При анестезии/седации приём жидкостей окончить не позже 2 часов до начала процедуры
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_2"></i>
+                                    </div>
+                                    <strong>Уменьшать объём воды</strong> для приготовления раствора Мовипреп<sup>®</sup> и дополнительной жидкости <strong>нельзя</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_3"></i>
+                                    </div>
+                                    Раствор препарата принимать дробно, <strong>по 250 мл каждые 15 минут</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_4"></i>
+                                    </div>
+                                    При специфическом вкусовом восприятии препарата можно пить раствор охлаждённым, через коктейльную трубочку, рассасывать леденцовую карамель или жевательную резинку, чередовать с небольшим количеством разрешённой жидкости.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_5"></i>
+                                    </div>
+                                    Во время приёма раствора препарата нужно соблюдать двигательную активность: ходить, выполнять круговые движения корпусом, наклоны в стороны, вперед-назад, приседания.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_6"></i>
+                                    </div>
+                                    Препарат начинает действовать индивидуально: в среднем <strong>через 1–2 часа от начала приёма</strong> появляется первый стул.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_7"></i>
+                                    </div>
+                                    Активное действие препарата продолжается индивидуально: в среднем <strong>в течение 2 часов</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_8"></i>
+                                    </div>
+                                    К моменту окончания подготовки <strong>стул должен измениться на прозрачную бесцветную или слегка окрашенную жидкость</strong>, что свидетельствует о готовности к обследованию.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_9"></i>
+                                    </div>
+                                    <strong>Не требуется</strong> дополнительно проводить очищение клизмами.
+
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_10"></i>
+                                    </div>
+                                    Необходимо <strong>рассчитать соответствующий временной интервал</strong> для поездки в клинику.
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                        <div class="download-button-wrapper">
+                            <a href="#" class="mv-btn -orange">Скачать/Распечатать</a>
+                        </div>
+
+
+                        <div class="tab-bottom">
+                            <img src="/local/assets/img_moviprep/img_shema_.png" alt="">
+                            <p><b>Согласно современным научным рекомендациям, данная схема более предпочтительна, чем вечерняя одноэтапная схема (когда весь объём препарата необходимо принять вечером накануне обследования), т.к. достигается более качественная подготовка кишечника при окончании приёма препарата не позже, чем за 4 часа до начала обследования. Обязательно проконсультируйтесь с врачом для выбора схемы приёма.</b></p>
+                        </div>
+
+                        <div class="tab-final">
+                            <sup>*</sup>Процесс подготовки к колоноскопии, описанный в данном материале, подготовлен на основании данных: 1. Клинические рекомендации Российского эндоскопического общества «Подготовка пациентов к эндоскопическому исследованию толстой кишки», Издание третье, переработанное и дополненное, Москва, 2017. 2. Ponchon T. et al. A low-volume polyethylene glycol plus ascorbate solution for bowel cleansing prior to colonoscopy: The NORMO randomised clinical trial. Digestive and Liver Disease 45 (2013) 820-826. 3. Matro R. et al. Efficacy of Morning-Only Compared With Split-Dose Polyethylene Glycol Electrolyte Solution for Afternoon Colonoscopy: A Randomized Controlled Single-Blind Study. Am J Gastroenterol 2010; 105:1954-61. 4. C. Hassan et al. Bowel preparation for colonoscopy: European Society of Gastrointestinal Endoscopy (ESGE) Guideline. Endoscopy 2013; 45: 142–150.
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="schema-tab-evening" style="display: none">
+
+                        <h3>Утренняя схема (одноэтапная)</h3>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number -blue"><span>1</span>шаг</span>
+                                Рекомендации по питанию за 1–3 дня до обследования
+                            </h4>
+
+                            <div class="eat-columns">
+
+                                <div class="to-eat">
+                                    <p><b>Разрешено есть:</b></p>
+
+                                    <ul>
+                                        <li>Нежирные кисломолочные продукты, сыр, сметана, сливочное масло, йогурт без добавок и наполнителей</li>
+                                        <li>Яйца</li>
+                                        <li>Мясо, птица и рыба нежирных сортов (в отварном, паровом или тушёном виде)</li>
+                                        <li>Хорошо проваренный белый рис (кроме плова)</li>
+                                        <li>Сахар, мёд (не в сотах)</li>
+                                    </ul>
+
+                                    <p><i>Разрешённые продукты не должны содержать мелкие косточки, зёрна, семена, отруби</i></p>
+
+                                    <p><b>Разрешено пить:</b></p>
+
+                                    <ul>
+                                        <li>Бульоны (прозрачные, процеженные)</li>
+                                        <li>Сок без мякоти</li>
+                                        <li>Чай</li>
+                                        <li>Вода</li>
+                                        <li>Безалкогольные негазированные, неокрашенные напитки</li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="not-to-eat">
+
+                                    <p><b>Запрещено есть:</b></p>
+
+                                    <ul>
+                                        <li>Хлебобулочные, мучные и макаронные изделия</li>
+                                        <li>Овощи, включая капусту, картофель, зелень, грибы, морскую капусту, специи</li>
+                                        <li>Крупы, каши, бобовые, злаковые, орехи, семечки, кунжут, мак, зёрна, отруби и другие семена</li>
+                                        <li>Жёсткое мясо с хрящами, консервы, сосиски, колбасы, морепродукты</li>
+                                        <li>Фрукты, ягоды, включая сухофрукты, варенье, джем, мармелад, желе</li>
+                                        <li>Чипсы, гамбургеры, шоколад</li>
+                                    </ul>
+
+                                    <p><i>Любые другие продукты, не входящие в список разрешённых</i></p>
+
+                                    <p><b>Запрещено пить:</b></p>
+
+                                    <ul>
+                                        <li>Алкоголь</li>
+                                        <li>Газированные напитки</li>
+                                        <li>Кофе</li>
+                                        <li>Компот</li>
+                                        <li>Кисель</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <div class="step-notes">
+                                При хронических запорах рекомендации по питанию нужно соблюдать в течение 5 дней. За 3–5 дней до обследования начать или продолжить приём слабительных препаратов по рекомендации врача-гастроэнтеролога.
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number -blue"><span>2</span>шаг</span>
+                                Режим приёма пищи в день накануне обследования
+                            </h4>
+
+                            <div class="step-text-block-1">
+
+                                <p><b>Завтрак и обед</b></p>
+
+                                <ul><li>Согласно списку разрешённых продуктов</li></ul>
+
+                                <p><b>Ужин</b></p>
+
+                                <ul><li>Согласно списку разрешённых жидкостей</li></ul>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number -blue"><span>3</span>шаг</span>
+                                Режим приёма пищи в день обследования
+                            </h4>
+
+                            <div class="step-text-block-1" style="column-count: 1">
+
+                                <p><b>Завтрак</b></p>
+
+                                <ul><li>Согласно списку разрешённых жидкостей</li></ul>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number -blue"><span>4</span>шаг</span>
+                                Утром в день обследования приём 2 литров МОВИПРЕП<sup>®</sup>
+                            </h4>
+
+                            <p class="step-subtitle"><b>Необходимо принять 2 литра препарата и 1 литр разрешённой жидкости<br>
+                                (важно окончить приём не позже, чем за 4 часа до начала обследования)</b></p>
+
+                            <div class="step-info">
+                                <div class="img-box">
+                                    <img src="/local/assets/img_moviprep/img_step_product.png" alt="">
+                                </div>
+                                <span class="name">Приготовление первого литра раствора препарата:</span>
+                                <img class="img-steps" src="/local/assets/img_moviprep/img_step_3.svg" alt="Схема">
+                                <ol class="number-step">
+                                    <li>Содержимое оставшихся второго пакетика (саше) <strong>А</strong> и второго пакетика <strong>Б</strong> развести в небольшом количестве воды до полного растворения.</li>
+                                    <li>Доливая воду, довести объём раствора до 1 литра.</li>
+                                    <li>Хорошо перемешать.</li>
+                                </ol>
+                                <span class="name">Приготовление второго литра раствора препарата:</span>
+                                <span>Повторить алгоритм, используя оставшиеся пакетики А и Б.</span>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="schema-step">
+
+                            <h4>
+                                <span class="number -blue"><span>5</span>шаг</span>
+                                Рекомендации по приёму раствора препарата:
+                            </h4>
+
+
+                            <ul class="step_recommendations">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_1"></i>
+                                    </div>
+                                    С момента начала приёма препарата МОВИПРЕП<sup>®</sup> <strong>не следует употреблять пищу</strong>, при этом разрешенную жидкость можно пить в неограниченном количестве. При анестезии/седации приём жидкостей окончить не позже 2 часов до начала процедуры
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_2"></i>
+                                    </div>
+                                    <strong>Уменьшать объём воды</strong> для приготовления раствора Мовипреп<sup>®</sup> и дополнительной жидкости <strong>нельзя</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_3"></i>
+                                    </div>
+                                    Раствор препарата принимать дробно, <strong>по 250 мл каждые 15 минут</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_4"></i>
+                                    </div>
+                                    При специфическом вкусовом восприятии препарата можно пить раствор охлаждённым, через коктейльную трубочку, рассасывать леденцовую карамель или жевательную резинку, чередовать с небольшим количеством разрешённой жидкости.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_5"></i>
+                                    </div>
+                                    Во время приёма раствора препарата нужно соблюдать двигательную активность: ходить, выполнять круговые движения корпусом, наклоны в стороны, вперед-назад, приседания.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_6"></i>
+                                    </div>
+                                    Препарат начинает действовать индивидуально: в среднем <strong>через 1–2 часа от начала приёма</strong> появляется первый стул.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_7"></i>
+                                    </div>
+                                    Активное действие препарата продолжается индивидуально: в среднем <strong>в течение 2 часов</strong>.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_8"></i>
+                                    </div>
+                                    К моменту окончания подготовки <strong>стул должен измениться на прозрачную бесцветную или слегка окрашенную жидкость</strong>, что свидетельствует о готовности к обследованию.
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_9"></i>
+                                    </div>
+                                    <strong>Не требуется</strong> дополнительно проводить очищение клизмами.
+
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon_recom_10"></i>
+                                    </div>
+                                    Необходимо <strong>рассчитать соответствующий временной интервал</strong> для поездки в клинику.
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                        <div class="download-button-wrapper">
+                            <a href="#" class="mv-btn -orange">Скачать/Распечатать</a>
+                        </div>
+
+
+                        <div class="tab-bottom">
+                            <img src="/local/assets/img_moviprep/img_shema_.png" alt="">
+                            <p><b>Согласно современным научным рекомендациям, данная схема более предпочтительна, чем вечерняя одноэтапная схема (когда весь объём препарата необходимо принять вечером накануне обследования), т.к. достигается более качественная подготовка кишечника при окончании приёма препарата не позже, чем за 4 часа до начала обследования. Обязательно проконсультируйтесь с врачом для выбора схемы приёма.</b></p>
+                        </div>
+
+                        <div class="tab-final">
+                            <sup>*</sup>Процесс подготовки к колоноскопии, описанный в данном материале, подготовлен на основании данных: 1. Клинические рекомендации Российского эндоскопического общества «Подготовка пациентов к эндоскопическому исследованию толстой кишки», Издание третье, переработанное и дополненное, Москва, 2017. 2. Ponchon T. et al. A low-volume polyethylene glycol plus ascorbate solution for bowel cleansing prior to colonoscopy: The NORMO randomised clinical trial. Digestive and Liver Disease 45 (2013) 820-826. 3. Matro R. et al. Efficacy of Morning-Only Compared With Split-Dose Polyethylene Glycol Electrolyte Solution for Afternoon Colonoscopy: A Randomized Controlled Single-Blind Study. Am J Gastroenterol 2010; 105:1954-61. 4. C. Hassan et al. Bowel preparation for colonoscopy: European Society of Gastrointestinal Endoscopy (ESGE) Guideline. Endoscopy 2013; 45: 142–150.
+                        </div>
+
+                        <div class="tab-final">
+                            <sup>**</sup>**Материал подготовлен совместно с центрами: Отделение клинической гастроэнтерологии и эндоскопии клиники научного института Humanitas, г. Милан, Италия; Отделение эндоскопии больницы Nuovo Regina Margherita, г. Рим, Италия; Государственный научный центр колопроктологии им. А.Н. Рыжих Минздрава России, г. Москва; Кафедра гастроэнтерологии ФДПО Российского национального исследовательского медицинского университета им. Н.И. Пирогова, г. Москва; Отделение диагностической и оперативной эндоскопии Ярославской областной клинической онкологической больницы, г. Ярославль; Консультативно-диагностический центр МЕДСИ на Красной Пресне, г. Москва.
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <a id="diet" name="diet"></a>
+        <div class="mv-section-samples">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">Примеры подготовки препаратом мовипреп<sup>®</sup></h2>
+
+
+                <div class="expandable-block">
+                    <div class="title_timing">
+
+                        <p class="timing_diagnostic_only" style="display: block;">Ниже приведены примеры расчёта даты и времени по каждому этапу подготовки. Корректируйте их, ориентируясь на время начала Вашего исследования и расстояния до клиники, соблюдая указанные интервалы.</p>
+                        <p class="timing_surgery_only" style="display: none;">Ниже приведены примеры расчёта даты и времени по каждому этапу подготовки. Корректируйте их, ориентируясь на время начала Вашей операции и расстояние до клиники, соблюдая указанные интервалы.</p>
+                        <div class="timing_nav">
+                            <div class="btn_center">
+                                <a href="#" class="mv-btn -orange -active" data-scheme="timing_diagnostic">Перед диагностическим исследованием</a>
+                            </div>
+                            <div class="btn_center">
+                                <a href="#" class="mv-btn -orange" data-scheme="timing_surgery">Перед хирургическим вмешательством</a>
+                            </div>
+                        </div>
+                        <span class="sub_text">Активное действие препарата продолжается индивидуально: в среднем в течение 2 часов после каждого принятого литра. <br>
+                        <div class="timing_diagnostic_only" style="display: block;">Необходимо пройти исследование не позже, чем через 4 часа после окончания приёма препарата!</div> Учитывайте время, необходимое на дорогу до клиники и сон!</span>
+                    </div>
+
+
+                    <div class="tab_elem timing_diagnostic" style="">
+                        <div class="timing">
+                            <div class="timing_col">
+						<span class="timing_name">
+							<img src="/local/assets/img_moviprep/img_timing_1.png" alt="">
+							Время Вашего обследования
+						</span>
+                                <h3>Двухэтапная схема</h3>
+                                <ul class="list_timing">
+                                    <li>
+                                        <p><strong>За 3 дня</strong> до обследования:</p>
+                                        <div class="timing_info color">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>За 2 дня</strong> до обследования:</p>
+                                        <div class="timing_info color">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>День накануне</strong> обследования:</p>
+                                        <div class="timing_info color">
+                                            <span class="name">Завтрак и лёгкий обед до 13:00</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                            <span class="name">Ужин</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Только разрешённые прозрачные жидкости
+									</span>
+                                            <span class="name">20:00–21:00</span>
+                                            <span class="check">
+										Принять первый литр раствора препарата
+									</span>
+                                            <span class="name">21:00–21:30</span>
+                                            <span class="check">
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>День обследования:</strong></p>
+                                        <div class="timing_info color">
+                                            <span class="name">05:00–06:00</span>
+                                            <span class="check">
+										Принять второй литр раствора препарата
+									</span>
+                                            <span class="name">06:00–06:30</span>
+                                            <span class="check">
+
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                            <span class="name">08:00–09:00</span>
+                                            <span class="check">
+
+										Время на дорогу до клиники
+									</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timing_col">
+						<span class="timing_name">
+							<img src="/local/assets/img_moviprep/img_timing_2.png" alt="">
+							Время Вашего обследования
+						</span>
+                                <h3>Одноэтапная утренняя схема</h3>
+                                <ul class="list_timing">
+                                    <li>
+                                        <p><strong> За 3 дня</strong> до обследования:</p>
+                                        <div class="timing_info">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>За 2 дня</strong> до обследования:</p>
+                                        <div class="timing_info">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>День накануне</strong> обследования:</p>
+                                        <div class="timing_info">
+                                            <span class="name">Завтрак, обед и лёгкий ужин до 18:00</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>День обследования:</strong></p>
+                                        <div class="timing_info">
+                                            <span class="name">Завтрак</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Только разрешённые прозрачные жидкости
+									</span>
+                                            <span class="name">07:30–08:30</span>
+                                            <span class="check">
+										Принять первый литр раствора препарата
+									</span>
+                                            <span class="name">08:30–09:00</span>
+                                            <span class="check">
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                            <span class="name">09:00–10:00</span>
+                                            <span class="check">
+										Принять второй литр раствора препарата
+									</span>
+                                            <span class="name">10:00–10:30</span>
+                                            <span class="check">
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                            <span class="name">12:00–14:00</span>
+                                            <span class="check">
+										Время на дорогу до клиники
+									</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab_elem timing_surgery" style="display: none;">
+                        <div class="timing">
+
+                            <div class="timing_col">
+                                <h3>Одноэтапная вечерняя схема</h3>
+                                <ul class="list_timing">
+                                    <li>
+                                        <p><strong> За 3 дня</strong> до операции:</p>
+                                        <div class="timing_info">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>За 2 дня</strong> до операции:</p>
+                                        <div class="timing_info">
+									<span class="check">
+										<i class="icon-check"></i>
+										Диета согласно списку разрешённых продуктов
+									</span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <p><strong>День накануне</strong> операции:</p>
+                                        <div class="timing_info">
+                                            <span class="name">Завтрак</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Согласно списку разрешённых продуктов
+									</span>
+                                            <span class="name">Обед и ужин</span>
+                                            <span class="check">
+										<i class="icon-check"></i>
+										Только разрешённые прозрачные жидкости
+									</span>
+                                            <span class="name">18:00–19:00</span>
+                                            <span class="check">
+										Принять первый литр раствора препарата
+									</span>
+                                            <span class="name">19:00–19:30</span>
+                                            <span class="check">
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                            <span class="name">19:30–20:30</span>
+                                            <span class="check">
+										Принять второй литр раствора препарата
+									</span>
+                                            <span class="name">20:30–21:00</span>
+                                            <span class="check">
+										Принять 500 мл разрешённой жидкости
+									</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+        <a id="faq" name="faq"></a>
+        <div class="mv-section-faq">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ О ПОДГОТОВКЕ МОВИПРЕП<sup>®</sup></h2>
+
+                <div class="expandable-block">
+
+                    <div class="faq-list">
+
+                        <div class="list-question"><a href="#">Зачем проходить процедуру подготовки кишечника?</a></div>
+
+                        <div class="list-answer">
+                            <p>От качества подготовки кишечника зависит успех проведённого обследования, а следовательно точность постановки диагноза и при необходимости назначение своевременного лечения! Поэтому важно тщательно следовать рекомендациям по приёму препарата.</p>
+                        </div>
+
+                        <div class="list-question"><a href="#">По какой шкале рекоммендуется оценивать подготовку кишечника?</a></div>
+
+                        <div class="list-answer">
+
+                            <h3><img src="/local/assets/img_moviprep/icon_ok.svg" width="32" height="32"> Качественная подготовка</h3>
+
+                            <p class="list-img">
+                                <img src="/local/assets/img_moviprep/img_ok_1.jpg" width="295" height="135">
+                                <img src="/local/assets/img_moviprep/img_ok_2.jpg" width="295" height="135">
+                            </p>
+
+                            <p>Соблюдение рекомендаций позволяет качественно провести исследование и выявить даже небольшие уплощенные полипы (эпителиальные образования). На фото идеально чистый просвет кишки (двухэтапная подготовка МОВИПРЕП® в сочетании с симетиконом).</p>
+
+                            <h3><img src="/local/assets/img_moviprep/icon_ok_no.svg" width="32" height="32"> Недостаточная подготовка</h3>
+
+                            <p class="list-img">
+                                <img src="/local/assets/img_moviprep/img_ok_no_1.jpg" width="295" height="132">
+                                <img src="/local/assets/img_moviprep/img_ok_no_2.jpg" width="295" height="132">
+                            </p>
+
+                            <p>Несоблюдение рекомендаций по подготовке приводит к неполному очищению толстой кишки и невозможности полноценной качественной колоноскопии. Пример возможной недостаточной подготовки, в том числе без использования пеногасителя (симетикона).</p>
+                        </div>
+
+
+                        <div class="list-question -collapsed"><a href="#">Можно ли принимать препарат для подготовки экстренных пациентов?</a></div>
+
+                        <div class="list-answer -collapsed">
+                            <p>Текст...</p>
+                        </div>
+
+                        <div class="list-question -collapsed"><a href="#">Можно ли принимать препарат для подготовки экстренных пациентов?</a></div>
+
+                        <div class="list-answer -collapsed">
+                            <p>Каково качество очищения кишечника после МОВИПРЕП<sup>®</sup>?</p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-list-buttons">
+                        <button class="mv-btn -orange-text">Показать ещё 10 вопросов</button>
+
+                        <button class="mv-btn">Показать все</button>
+
+                    </div>
+
+
+                    <a id="faq-form" name="faq-form"></a>
+
+                    <div class="faq-form">
+
+
+
+                        <div class="form-text">
+                            <h3>Не нашли ответ?</h3>
+                            <p><b>Задайте вопрос эксперту в один клик.<br>
+                                Ответ придет Вам в личный кабинет.</b></p>
+                        </div>
+
+                        <form>
+                            <div class="form-item">
+                                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="mv-btn -orange">Задать вопрос</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mv-section-video">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">Видео о мовипреп<sup>®</sup></h2>
+
+                <div class="expandable-block">
+
+                    <div class="mv-video-slider">
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <iframe width="420" height="235" src="https://www.youtube.com/embed/___" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="swiper-slide">
+                                    <iframe width="420" height="235" src="https://www.youtube.com/embed/___" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="swiper-slide">
+                                    <iframe width="420" height="235" src="https://www.youtube.com/embed/___" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="mv-section-news">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">Новости quacol и статьи о мовипреп<sup>®</sup></h2>
+
+                <div class="expandable-block">
+
+                    <div class="mv-news-slider">
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+
+                                    <div class="mv-news-teaser">
+                                        <div class="teaser-img">
+                                            <a href="#"><img src="/local/assets/img_moviprep/tmp/news1.jpg" width="290" height="226"></a>
+                                        </div>
+                                        <div class="teaser-title">
+                                            <a href="#">Обработка и дезинфекция гибких эндоскопов</a>
+                                        </div>
+                                        <div class="teaser-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                        <div class="teaser-more-link">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+
+                                    <div class="mv-news-teaser">
+                                        <div class="teaser-img">
+                                            <a href="#"><img src="/local/assets/img_moviprep/tmp/news2.jpg" width="290" height="226"></a>
+                                        </div>
+                                        <div class="teaser-title">
+                                            <a href="#">Обработка и дезинфекция гибких эндоскопов</a>
+                                        </div>
+                                        <div class="teaser-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                        <div class="teaser-more-link">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+
+                                    <div class="mv-news-teaser">
+                                        <div class="teaser-img">
+                                            <a href="#"><img src="/local/assets/img_moviprep/tmp/news3.jpg" width="290" height="226"></a>
+                                        </div>
+                                        <div class="teaser-title">
+                                            <a href="#">Обработка и дезинфекция гибких эндоскопов</a>
+                                        </div>
+                                        <div class="teaser-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                        <div class="teaser-more-link">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+
+                                    <div class="mv-news-teaser">
+                                        <div class="teaser-img">
+                                            <a href="#"><img src="/local/assets/img_moviprep/tmp/news1.jpg" width="290" height="226"></a>
+                                        </div>
+                                        <div class="teaser-title">
+                                            <a href="#">Обработка и дезинфекция гибких эндоскопов</a>
+                                        </div>
+                                        <div class="teaser-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                        <div class="teaser-more-link">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="mv-section-recommendations">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">Клинические рекомендации применения мовипреп<sup>®</sup></h2>
+
+                <div class="expandable-block">
+
+                    <div class="mv-recommendations-list">
+
+                        <div class="list-item">
+
+                            <img class="item-flag" src="/local/assets/img_moviprep/flag_usa.png" width="78" height="60">
+
+                            <p><img src="/local/assets/img_moviprep/recommend_1.png" width="824" height="148"></p>
+
+                            <p>Рекомендации Американского Общества Желудочно-Кишечной Эндоскопии, 2015 г.</p>
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <img class="item-flag" src="/local/assets/img_moviprep/flag_euro.png" width="79" height="60">
+
+                            <p><img src="/local/assets/img_moviprep/recommend_2.png" width="820" height="191"></p>
+
+                            <p>Рекомендации Европейского Общества Желудочно-Кишечной Эндоскопии, 2012 г. и 2013 г.</p>
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <img class="item-flag" src="/local/assets/img_moviprep/flag_euro.png" width="79" height="60">
+
+                            <p><img src="/local/assets/img_moviprep/recommend_3.png" width="504" height="141"></p>
+
+                            <p>Консенсус европейских специалистов в области колоноскопии, 2013 г</p>
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <img class="item-flag" src="/local/assets/img_moviprep/flag_russia.png" width="78" height="53">
+
+                            <p>Клинические рекомендации Российского эндоскопического общества (РЭНДО), 2017 г</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <a id="buy" name="buy"></a>
+
+        <div class="mv-section-map">
+
+            <div class="mv-container">
+
+                <h2 class="-with-toggle">ГДЕ КУПИТЬ МОВИПРЕП<sup>®</sup>?</h2>
+
+            </div>
+
+            <div class="expandable-block">
+
+                <div class="mv-container">
+
+                    <p>О наличии препарата уточняйте по указанному номеру телефона выбранной Вами аптеки или в аптечных справочных своего города. Если Вы не нашли препарат, то можете его заказать, обратившись в любую аптеку города</p>
+                </div>
+
+                <div class="map-wrapper">
+
+                    <div class="mv-container">
+                        <div id="map">
+                            map
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="mv-section-footer">
+
+            <div class="mv-container">
+
+                <div class="footer-notes">
+                    
+                    <ul>
+                        <li>Солевые слабительные C препараты на основе фосфата натрия (Флит/Фосфо-сода, Колокит),
+                            на основе сульфатов (Эзиклен, Пикопреп).</li>
+                    </ul>
+
+                    <p>Адаптировано из материалов:</p>
+                    
+                    <ol>
+                        <li>Ell C et all. Randomized Trial of Low-Volume PEG Solution Versus Standard PEG + Electrolytes for Bowel Cleaning Before Colonoscopy.
+                            Am j Gastroenter. 2008 Apr;103(4):883-893.</li>
+
+                        <li>Ponchon T. et al. A low-volume polyethylene glycol plus ascorbate solution for bowel cleaning prior to colonoscopy:
+                            The NORMO randomised clinical trial. Digestive and Liver Disease 45 (2013) 820-826.</li>
+
+                        <li>C. Rodríguez de Miguela et al. for the PROCOLON group . Ascorbic acid PEG-2L is superior for early morning colonoscopies
+                            in colorectal cancer screening programs: A prospective non-randomized controlled trial. Gastroenterol Hepatol. 2015;38(2):62---70</li>
+
+                        <li>Адаптировано из Инструкций по медицинскому применению лекарственных препаратов : Фонтанс, Эндофальк, Лавакол,
+                            Мовипреп, Фосфо-сода, Колокит, Эзиклен и Пикопреп. Информация с сайта ГРЛС, доступ от 15.04.2019</li>
+
+                        <li>Qingsong Xie et all. A Meta-Analysis of Randomized Controlled Trials of Low-Volume Polyethylene Glycol plus Ascorbic Acid versus
+                            Standard-Volume Polyethylene Glycol Solution as Bowel Preparations for Colonoscopy. PLOS ONE www.plosone.org 5 June 2014
+                            Volume 9 lssue 6 e99092</li>
+
+                        <li>Qingsong Xie et all. A Meta-Analysis of Randomized Controlled Trials of Low-Volume Polyethylene Glycol plus Ascorbic Acid versus
+                            Standard-Volume Polyethylene Glycol Solution as Bowel Preparations for Colonoscopy. PLOS ONE www.plosone.org 5 June 2014
+                            Volume 9 lssue 6 e99092</li>
+                    </ol>
+
+                </div>
+
+                <div class="footer-info">
+
+                    <div class="info-logo">
+                        <img src="/local/assets/img_moviprep/logo_takeda.png" width="167" height="61">
+                    </div>
+
+                    <div class="info-logo">
+                        <img src="/local/assets/img_moviprep/logo_norgine.png" width="106" height="69">
+                    </div>
+
+                    <div class="info-text">
+                        <p>ООО «Такеда Фармасьютикалс»: 119048, Москва, ул. Усачёва, 2, стр. 1, БЦ «Фьюжн Парк». Телефон горячей линии: 8 800 555-5579   <a href="http://www.takeda.com/ru-ru" target="_blank">www.takeda.com/ru-ru</a>
+                            Мовипреп<sup>®</sup> — зарегистрированный товарный знак компании Норджин.</p>
+                        <p>Информация, представленная на данном сайте, не должна
+                        использоваться для самостоятельной диагностики и лечения, а также
+                            не может служить заменой очной консультации врача.</p>
+                    </div>
+
+                    <div class="info-logo">
+                        <img src="/local/assets/img_moviprep/logo_25.png" width="163" height="68">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-line">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

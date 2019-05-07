@@ -189,6 +189,29 @@ $(document).ready(function () {
   });
 
 
+
+  $('.toolbar-2 .attachments-button').click(function () {
+
+    var $i = $(this).find('i.fas');
+
+    if ($i.hasClass('fa-angle-up')) {
+
+      $i.removeClass('fa-angle-up').addClass('fa-angle-down');
+
+      $('.attachments-list').slideUp();
+
+    } else {
+
+      $i.removeClass('fa-angle-down').addClass('fa-angle-up');
+
+      $('.attachments-list').slideDown();
+    }
+
+
+
+  });
+
+
   $(document).on('click', 'a[href^="#"]', function(e) {
     e.preventDefault();
     $('html, body').animate({

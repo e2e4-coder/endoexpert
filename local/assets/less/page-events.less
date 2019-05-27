@@ -614,9 +614,14 @@
           font-size: 12px;
           position: absolute;
           cursor: pointer;
-          top: 7px;
-          &:first-child {left: 7px}
-          &:last-child {right: 7px}
+          top: 3px;
+          background: #78797a;
+          border-radius: 5px;
+          width: 30px;
+          height: 19px;
+          line-height: 19px;
+          &:first-child {left: 3px}
+          &:last-child {right: 3px}
         }
 
 
@@ -646,6 +651,20 @@
       .ui-state-active {
         background: #000 !important;
         color: #fff !important;
+      }
+
+      .ui-state-range {
+        background: #000 !important;
+        a {
+          background: none !important;
+          &.ui-state-default {
+            color: #fff;
+          }
+
+        }
+
+
+
       }
 
 

@@ -5,8 +5,26 @@
   padding: 7px;
   border: 1px solid #fff;
   background: #040505;
+  position: relative;
 
   &.-gold-border {border-color: @gold-color}
+
+  &.-top-star {
+
+    .event-body .event-title {
+      padding-right: 50px;
+    }
+
+
+    .round-buttons {
+      position: absolute;
+      padding-top: 5px !important;
+      padding-right: 5px !important;
+      top: 0;
+      right: 0;
+    }
+
+  }
 
 
   .event-top {
@@ -31,6 +49,12 @@
       margin-right: 15px;
 
       img {max-width: 100%;height: auto;border: 3px solid @gold-color;box-sizing: border-box;}
+
+    }
+
+    .event-right-side {
+
+      flex: 1 1 auto;
 
     }
 

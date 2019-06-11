@@ -37,6 +37,7 @@ $(document).ready(function () {
     theme: 'fa-stars-gold',
     initialRating: $('#publication-rating-select').data('current-rating'),
     allowEmpty: true,
+    readonly: !!$('#publication-rating-select').data('voted'),
     emptyValue: 0,
   });
 

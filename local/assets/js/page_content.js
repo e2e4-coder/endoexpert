@@ -35,8 +35,8 @@ $(document).ready(function () {
       slidesPerView: 4,
       slidesPerGroup: 4,
       spaceBetween: 14,
-      loopedSlides: 4,
-      loop: true,
+      //loopedSlides: 4,
+      //loop: true,
       navigation: {
         nextEl: id + '-next',
         prevEl: id + '-prev',

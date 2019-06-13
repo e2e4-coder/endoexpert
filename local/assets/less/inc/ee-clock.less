@@ -1,0 +1,147 @@
+.ee-clock {
+  background: #ececec;
+  width: 125px;
+  height: 125px;
+  margin: 8% auto 0;
+  border-radius: 50%;
+  border: 5px solid #079bfd;
+  position: relative;
+  box-shadow: 0 2vw 4vw -1vw rgba(0,0,0,0.8);
+
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 4px -1px black;
+  }
+
+  .hour-hand {
+    position: absolute;
+    z-index: 5;
+    width: 4px;
+    height: 28px;
+    background: #333;
+    top: 33px;
+    transform-origin: 50% 30px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  .minute-hand {
+    position: absolute;
+    z-index: 6;
+    width: 4px;
+    height: 41px;
+    background: #666;
+    top: 19px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: 50% 43px;
+  }
+
+  .second-hand {
+    position: absolute;
+    z-index: 7;
+    width: 2px;
+    height: 49px;
+    background: red;
+    top: 11px;
+    lefT: 50%;
+    margin-left: -1px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: 50% 51px;
+  }
+
+  span {
+    display: inline-block;
+    position: absolute;
+    color: #333;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    z-index: 4;
+  }
+
+  .h12 {
+    top: 14px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  .h3 {
+    top: 57px;
+    right: 15px;
+  }
+  .h6 {
+    bottom: 12px;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .h9 {
+    left: 15px;
+    top: 57px;
+  }
+
+  .diallines {
+    position: absolute;
+    z-index: 2;
+    width: 1px;
+    height: 5px;
+    background: #666;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin: 50% 62px;
+  }
+  .diallines:nth-of-type(5n) {
+    position: absolute;
+    z-index: 2;
+    width: 3px;
+    height: 10px;
+    background: #666;
+    left: 50%;
+    margin-left: -2px;
+    transform-origin: 50% 62px;
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    border-radius: 7px;
+    background: #ccc;
+    text-align: center;
+    line-height: 20px;
+    color: #000;
+    font-size: 11px;
+    top: 200px;
+    left: 50%;
+    margin-left: -60px;
+    font-family: "Poiret One";
+    font-weight: 700;
+    z-index: 3;
+    letter-spacing: 3px;
+    margin-left: -60px;
+    left: 50%;
+  }
+  .date {
+    top: 80px;
+  }
+  .day {
+    top: 200px;
+  }
+}
+

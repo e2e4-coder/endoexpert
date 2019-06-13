@@ -224,4 +224,29 @@ $(document).ready(function () {
   });
 
 
+  $('.js-add-to-favorite').click(function () {
+
+    var that = this;
+
+    $(this).toggleClass('-active');
+
+    $.ajax({
+      url: $(this).data('api-url'),
+      dataType: 'json',
+      data: {element_id : $(this).data('element-id')},
+      success: function (data) {
+
+        $(that).toggleClass('-active', data == "1");
+
+      },
+      error: function () {
+
+        $(that).removeClass('-active');
+      }
+    });
+
+
+  });
+
+
 });

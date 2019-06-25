@@ -276,8 +276,16 @@ $(document).ready(function () {
 
   }).blur(function () {
 
-    $('.search-block button').hide();
-    $(this).removeClass('-focused');
+    var that = this;
+
+    setTimeout(function () {
+
+      $('.search-block button').hide();
+      $(that).removeClass('-focused');
+
+    }, 500);
+
+
   });
 
 

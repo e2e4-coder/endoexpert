@@ -8,7 +8,19 @@ $(document).ready(function () {
 
   $('.ee-locked-section .expand-button').click(function () {
 
-    if ($(this).parent().hasClass('-unlocked') && $(this).find('>span').html() === 'раскрыть <i class="fas fa-angle-down"></i>') {$(this).find('>span').html('свернуть <i class="fas fa-angle-up"></i>')} else  {$(this).find('>span').html('раскрыть <i class="fas fa-angle-down"></i>')}
+    if ($(this).closest('.ee-locked-section').hasClass('-unlocked') && $(this).find('>span').html() === 'раскрыть <i class="fas fa-angle-down"></i>') {
+
+      $(this).find('>span').html('свернуть <i class="fas fa-angle-up"></i>');
+
+      $(this).closest('.ee-locked-section').prev().removeClass('-bottom-gradient');
+
+    } else  {
+
+      $(this).find('>span').html('раскрыть <i class="fas fa-angle-down"></i>');
+
+      $(this).closest('.ee-locked-section').prev().addClass('-bottom-gradient');
+
+    }
 
     $(this).parent().next('.locked-section-text').slideToggle()
   });
@@ -17,7 +29,9 @@ $(document).ready(function () {
 
     if ($(this).html() === 'раскрыть <i class="fas fa-angle-down"></i>') {$(this).html('свернуть <i class="fas fa-angle-up"></i>')} else  {$(this).html('раскрыть <i class="fas fa-angle-down"></i>')}
 
-    $(this).parent().prev('.expandable-text').slideToggle()
+    $(this).parent().prev('.expandable-text').slideToggle();
+
+    $(this).parent().parent().toggleClass('-collapsed');
   });
 
 
@@ -141,7 +155,7 @@ $(document).ready(function () {
   });
 
 
-  $('#publication-subscribe-author').on('ifChanged', function (event) {
+  $('#publication-subscribe-author').on('change', function (event) {
 
     $.post('/local/assets/json/get-one.json', {
       action : $(event.target).is(':checked') ? 'subscribe' : 'unsubscribe',
@@ -155,7 +169,7 @@ $(document).ready(function () {
     });
   });
 
-  $('#publication-subscribe-topic').on('ifChanged', function (event) {
+  $('#publication-subscribe-topic').on('change', function (event) {
 
     $.post('/local/assets/json/get-one.json', {
       action : $(event.target).is(':checked') ? 'subscribe' : 'unsubscribe',
@@ -231,6 +245,16 @@ $(document).ready(function () {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 80
     }, 500);
+  });
+
+
+  $('.publication-expert-comments .expand-button').click(function () {
+
+    $(this).parent().toggleClass('-expanded');
+
+    if ($(this).text() === 'Развернуть') {$(this).text('Свернуть')} else {$(this).text('Развернуть')}
+
+
   });
 
 

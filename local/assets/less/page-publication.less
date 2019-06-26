@@ -2,7 +2,7 @@
 
 .page-publication {
 
-  background: #2e2f2f;
+  background: #2e2f2f url("/local/assets/img/page_front/bg_front.jpg") top center repeat-y;
   padding-top: 1px;
   padding-bottom: 50px;
   font-size: 16px;
@@ -10,8 +10,12 @@
   a {color: inherit}
 
   >.wrapper-1050 {
-    background: #fff;
-    padding-top: 20px;
+
+
+  }
+
+  .ee-breadcrumbs {
+    padding-left: 0;
   }
 
   h1 {
@@ -22,8 +26,9 @@
 
   .ee-main-wrapper {
 
-    width: 780px;
-    padding: 0 15px;
+    width: 770px;
+    padding: 0;
+    background: #2e2f2f;
 
 
   }
@@ -34,7 +39,8 @@
     height: 36px;
     display: flex;
     margin-bottom: 10px;
-    margin-left: -10px;
+    margin-left: -15px;
+    margin-right: -15px;
 
     .share-icon-wrapper {
 
@@ -94,8 +100,8 @@
     background:#5a5858;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    margin-left: -10px;
+    margin-left: -15px;
+    margin-right: -15px;
 
     .left-side {
       height: 32px;
@@ -145,6 +151,24 @@
 
   }
 
+  .toolbar-3 {
+
+    background:#5a5858;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 18px;
+    padding: 0 10px 0 0;
+
+    .subscribe-checkboxes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
   table.authors-info {
 
     color: #5a5858;
@@ -187,6 +211,58 @@
 
     &.-grey {background: #f3f3f3;}
 
+    &.-bottom-gradient {
+
+      position: relative;
+      max-height: 120px;
+      overflow: hidden;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#fff 100%);
+      }
+
+
+
+
+    }
+
+    &.-lit {
+      position: relative;
+
+      .expandable-block {
+
+        position: relative;
+
+        &.-collapsed:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#fff 100%);
+        }
+
+        button {
+          position: absolute;
+          bottom: -48px;
+          right: 0;
+          background: none;
+          color: #000;
+          font-weight: 300;
+          i {color: @gold-color}
+        }
+
+      }
+
+    }
+
     h3 {
       font-weight: 300;
       margin: 10px 0 5px 0;
@@ -206,6 +282,8 @@
     background: #9e9e9e;
     line-height: 1.4;
     padding: 10px 10px;
+    margin-right: -15px;
+    margin-left: -15px;
 
 
     p {margin: 0}
@@ -298,12 +376,17 @@
   }
 
 
+  .bg-white {
+    background: #fff;
+    padding: 20px 15px 0 15px;
+    margin: 0 -15px;
+
+  }
   .bg-dark {
 
     background: #2e2f2f;
     padding-top: 35px;
     padding-bottom: 35px;
-    padding-right: 30px;
     margin: 0 -15px;
 
 
@@ -323,10 +406,9 @@
 
   .bg-lightgrey {
 
-    background: #e6e6e8;
+    background: #2e2f2f;
     padding-top: 25px;
     padding-bottom: 35px;
-    padding-right: 30px;
     padding-left: 15px;
     margin: 0 -15px;
 
@@ -446,6 +528,8 @@
       padding: 35px 20px 35px 245px;
       position: relative;
       margin-bottom: 140px;
+      box-sizing: border-box;
+
 
       .face-block {
         width: 200px;
@@ -455,11 +539,52 @@
       }
 
       .item-text {
+
+        max-height: 88px;
+        overflow: hidden;
+        transition: max-height .5s ease-in;
+
         p {margin: 0}
 
         line-height: 1.4;
         color: #fff;
 
+      }
+
+      &.-expanded {
+
+        .item-text {
+          max-height: 1000px;
+
+        }
+
+        .expand-button:after {transform: rotate(180deg)}
+      }
+
+      .expand-button {
+        position: absolute;
+        bottom: -53px;
+        right: 0;
+        color: #6295d1;
+        cursor: pointer;
+
+        &:after {
+          content: '\f078';
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          display: inline-block;
+          vertical-align: middle;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          line-height: 44px;
+          font-size: 30px;
+          border: 2px solid #6295d1;
+          color: #6295d1;
+          margin-left: 10px;
+          border-radius: 100%;
+          font-style: normal;
+        }
       }
     }
 
@@ -538,6 +663,11 @@
 
   .ee-invite-by-email-form {
     margin: 15px 0 40px 0;
+
+    .form-submit {
+      border: 1px solid #fff;
+    }
+
   }
 
   .related-articles-block {
@@ -551,12 +681,11 @@
       margin: 0 0 25px 0;
     }
 
-    .ee-publication-teaser-v1 {
-      margin-bottom: 30px;
-    }
+
 
     .load-more-wrapper {
       text-align: center;
+      margin-bottom: 20px;
     }
 
   }
@@ -584,6 +713,7 @@
 
     .load-more-wrapper {
       text-align: center;
+      margin-bottom: 20px;
     }
 
   }
@@ -600,18 +730,26 @@
 
 
   .ee-sidebar {
-    background: #f3f3f3;
+    background: #606162;
     margin-right: 5px;
 
     .ee-publication-teaser-v2 {
 
       width: 100%;
       margin-bottom: 10px;
+
+      .publication-info {
+
+        background: #57595c;
+
+      }
     }
 
     .ee-publication-teaser-v3 {
       margin-bottom: 10px;
     }
+
+
 
   }
 
@@ -629,6 +767,7 @@
       box-shadow: 0 0 6px rgba(6, 4, 4, 0.15);
       background: #fff;
       text-decoration: none;
+      border-radius: 0 5px 5px 0;
 
       &:hover {
 
@@ -656,6 +795,19 @@
 
   .attachments-list {
     padding: 20px 0;
+  }
+
+  .ee-locked-section {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .tags-helper-v2 {
+    margin: 30px 0;
+
+    a {
+      color: #686666;
+    }
   }
 
 }

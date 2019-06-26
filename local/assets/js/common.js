@@ -289,6 +289,25 @@ $(document).ready(function () {
   });
 
 
+  $('.ee-link-widget .widget-btn').click(function () {
+
+    $(this).prev().find('input').select();
+    document.execCommand("Copy");
+    $(this).prev().find('input').blur();
+
+    if (window.getSelection) {
+      if (window.getSelection().empty) {  // Chrome
+        window.getSelection().empty();
+      } else if (window.getSelection().removeAllRanges) {  // Firefox
+        window.getSelection().removeAllRanges();
+      }
+    } else if (document.selection) {  // IE?
+      document.selection.empty();
+    }
+
+  });
+
+
 
 
 });

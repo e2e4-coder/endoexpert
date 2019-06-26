@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
@@ -34,6 +34,7 @@
     <script src="/local/assets/js/page_publication.js"></script>
     <script src="/local/assets/js/ee_article_image_slider.js"></script>
     <script src="/local/assets/js/invite_friends_app.js"></script>
+    <script src="/local/assets/js/ee-flip-slider.js"></script>
 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -151,15 +152,19 @@
 
         <div class="wrapper-1050">
 
-            <div class="ee-breadcrumbs">
 
-                <a href="#">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Рубрика</span>
-
-            </div>
 
             <div class="columns-layout">
 
                 <div class="ee-main-wrapper">
+
+                    <div class="bg-white">
+
+                    <div class="ee-breadcrumbs">
+
+                        <a href="#">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Рубрика</span>
+
+                    </div>
 
                     <h1>Обзор литературы: Cтентирование при заболеваниях толстой кишки</h1>
 
@@ -319,33 +324,27 @@
 
 
                     <a name="p5" id="p5"></a>
-                    <div class="text-section">
+                    <div class="text-section -bottom-gradient">
                         <h3>Полный текст статьи:</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                     </div>
 
-                    <a name="p6" id="p6"></a>
                     <div class="ee-locked-section -unlocked">
 
                         <div class="section-head">
                             <span class="section-caption">Открыт общий доступ к полному тексту статьи</span>
-                            <span class="cc-sign"><img src="/local/assets/img/cc-sign.png" width="88" height="31"></span>
+                            <span class="cc-sign"><img src="/local/assets/img/cc-signs/creative-commons_by_nc_sa.png" width="88" height="31"></span>
                             <span class="expand-button"><span>раскрыть <i class="fas fa-angle-down"></i></span></span>
                         </div>
-                        <div class="locked-section-text">
-                            <div class="text-section">
-                                <h3>Полный текст статьи:</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                        </div>
-
 
                     </div>
 
                     <div class="ee-locked-section">
                         <div class="section-head">
                             <span class="section-caption">Полный текст доступен зарегистрированным пользователям</span>
-                            <span class="cc-sign"><img src="/local/assets/img/cc-sign.png" width="88" height="31"></span>
+                            <span class="cc-sign"><img src="/local/assets/img/cc-signs/creative-commons_AllRR.png" width="88" height="31"></span>
                             <span class="expand-button"><span>раскрыть <i class="fas fa-angle-down"></i></span></span>
                         </div>
                     </div>
@@ -384,7 +383,7 @@
                     </div>
 
                     <a name="p10" id="p10"></a>
-                    <div class="text-section">
+                    <div class="text-section -lit">
                         <h3>Список литературы:</h3>
 
                         <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
@@ -393,7 +392,7 @@
                         <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
                         <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
                         <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
-                        <div class="expandable-block">
+                        <div class="expandable-block -collapsed">
 
                             <div class="expandable-text">
                                 <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a><br>
@@ -417,43 +416,60 @@
 
                         <div class="authors-and-source">
                             06.09.18    © Иванов В.В.     <a href="#" class="author-link">Связаться с автором</a>
-                            <br>
-                            Источник:  <a href="#" target="_blank">https://ru.wikipedia.org/</a>
-                        </div>
-
-                        <div class="subscribe-checkboxes">
-
-                            <label><input id="publication-subscribe-author" data-api-url="/local/assets/json/get-one.json" data-author-id="23452" type="checkbox" class="i-check-ee"> Подписаться на новые сообщения этой темы</label><br>
-                            <label><input id="publication-subscribe-topic" data-api-url="/local/assets/json/get-one.json" data-topic-id="23452" type="checkbox" class="i-check-ee"> Подписаться на новые сообщения Автора</label>
-
-
                         </div>
 
                     </div>
 
+                        <div class="toolbar-3">
 
-                    <div class="toolbar-2">
+                            <div class="ee-link-widget">
+                                <div class="widget-label">Источник:</div>
+                                <div class="widget-field"><input readonly type="text" value="https://endoexpert.ru/razdely/verkhnie-ot"></div>
+                                <div class="widget-btn"></div>
+                            </div>
 
-                        <div class="left-side">
 
-                            <a onclick="window.print();"><i class="ico-print"></i></a>
-                            <span class="sep"></span>
-                            <i class="ico-download"></i>
-                            <span class="sep"></span>
-                            <i class="ico-share"></i>
-                            <span class="sep"></span>
-                            <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
-                            <span class="sep"></span>
-                            <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
-                            <span class="sep"></span>
-                            <i class="ico-notification"></i>
-                            <span class="sep"></span>
-                            <i class="ico-comments"></i>
-                            <span class="sep"></span>
-                            <i class="ico-link" title="Ссылка скопирована в буфер"></i>
-                            <span class="sep"></span>
+                            <div class="subscribe-checkboxes">
 
-                            <span class="rating-form">
+                                <div>
+                                    <label class="ee-checkbox-1"><input id="publication-subscribe-author" data-api-url="/local/assets/json/get-one.json" data-author-id="23452" type="checkbox"> <span>Подписаться на новые сообщения этой темы</span></label>
+                                    <br>
+                                    <label  class="ee-checkbox-1"><input id="publication-subscribe-topic" data-api-url="/local/assets/json/get-one.json" data-topic-id="23452" type="checkbox"> <span>Подписаться на новые сообщения Автора</span></label>
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="toolbar-2">
+
+                            <div class="left-side">
+
+                                <a onclick="window.print();"><i class="ico-print"></i></a>
+                                <span class="sep"></span>
+                                <i class="ico-download"></i>
+                                <span class="sep"></span>
+                                <i class="ico-share"></i>
+                                <span class="sep"></span>
+                                <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <span class="sep"></span>
+                                <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <span class="sep"></span>
+                                <i class="ico-notification"></i>
+                                <span class="sep"></span>
+                                <i class="ico-comments"></i>
+                                <span class="sep"></span>
+                                <i class="ico-link" title="Ссылка скопирована в буфер"></i>
+                                <span class="sep"></span>
+                                <i class="ico-cite"></i>
+                                <span class="sep"></span>
+
+                                <span class="rating-form">
                                     <span class="rating-label">Оцените материал: </span>
 
                                     <select id="publication-rating-select" data-voted="1" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="2.5">
@@ -467,19 +483,26 @@
                             </span>
 
 
+                            </div>
+
+                            <div class="right-side">
+
+                                <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-down"></i></span>
+
+
+                            </div>
+
+
+
+
                         </div>
-
-                        <div class="right-side">
-
-                            <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-down"></i></span>
-
-
-                        </div>
-
-
-
 
                     </div>
+
+
+
+
+
 
                     <div class="attachments-list" style="display: none">
 
@@ -561,8 +584,10 @@
                                 </div>
 
                                 <div class="item-text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to, when an unknown printer took a galley of type and scrambled it to, when an unknown printer took a galley of type and scrambled it to, when an unknown printer took a galley of type and scrambled it to, when an unknown printer took a galley of type and scrambled it to, when an unknown printer took a galley of type and scrambled it to</p>
                                 </div>
+
+                                <div class="expand-button">Развернуть</div>
 
                             </div>
 
@@ -584,6 +609,8 @@
                                 <div class="item-text">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
                                 </div>
+
+                                <div class="expand-button">Развернуть</div>
 
                             </div>
 
@@ -689,53 +716,58 @@
 
                             <h2>Статьи по теме</h2>
 
-                            <div class="ee-publication-teaser-v1">
+                            <div class="ee-publication-teaser">
 
-                                <div class="teaser-date">11.03.2018</div>
-                                <div class="teaser-stats">
-                                    <span><i class="fas fa-comment"></i> 20</span>
-                                    <span><i class="fas fa-eye"></i> 3000</span>
-                                    <span><i class="fas fa-star"></i> 5</span>
-                                </div>
+                                <div class="publication-body">
 
-                                <div class="teaser-title">
-                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
-                                </div>
+                                    <div class="publication-title">
+                                        <a href="#">Материал опубликован при поддержке материал опубликован при поддержке крутых спонсоров материал опубликован при поддержке Материал опубликован при поддержке</a>
+                                    </div>
 
-                            </div>
+                                    <div class="publication-text">
+                                        <b>Статья</b> | 2019 | И.А. Петров, П.В. Иванов
+                                    </div>
 
-                            <div class="ee-publication-teaser-v1">
+                                    <div class="publication-more-link">
+                                        <a href="#">»</a>
+                                    </div>
 
-                                <div class="teaser-date">11.03.2018</div>
-                                <div class="teaser-stats">
-                                    <span><i class="fas fa-comment"></i> 20</span>
-                                    <span><i class="fas fa-eye"></i> 3000</span>
-                                    <span><i class="fas fa-star"></i> 5</span>
-                                </div>
-
-                                <div class="teaser-title">
-                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
                                 </div>
 
                             </div>
 
-                            <div class="ee-publication-teaser-v1">
+                            <div class="ee-publication-teaser">
 
-                                <div class="teaser-date">11.03.2018</div>
-                                <div class="teaser-stats">
-                                    <span><i class="fas fa-comment"></i> 20</span>
-                                    <span><i class="fas fa-eye"></i> 3000</span>
-                                    <span><i class="fas fa-star"></i> 5</span>
-                                </div>
+                                <div class="publication-body">
 
-                                <div class="teaser-title">
-                                    <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</a>
+                                    <div class="publication-title">
+                                        <a href="#">Материал опубликован при поддержке материал опубликован при поддержке крутых спонсоров материал опубликован при поддержке Материал опубликован при поддержке</a>
+                                    </div>
+
+                                    <div class="publication-text">
+                                        <b>Статья</b> | 2019 | И.А. Петров, П.В. Иванов
+                                    </div>
+
+                                    <div class="publication-more-link">
+                                        <a href="#">»</a>
+                                    </div>
+
                                 </div>
 
                             </div>
+
+
+
+
 
                             <div class="load-more-wrapper">
-                                <button class="ee-button-2">Показать еще</button>
+                                <button class="ee-button-3">Показать еще</button>
+                            </div>
+
+                            <div class="ee-pagination-short">
+
+                                <a href="#">&lt;&lt;</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">&gt;&gt;</a>
+
                             </div>
 
 
@@ -748,7 +780,7 @@
 
                             <div class="teasers-list">
 
-                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+                                <div class="ee-publication-teaser-v2">
 
                                     <div class="publication-image">
                                         <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
@@ -773,7 +805,7 @@
 
                                 </div>
 
-                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+                                <div class="ee-publication-teaser-v2">
 
                                     <div class="publication-image">
                                         <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
@@ -798,7 +830,7 @@
 
                                 </div>
 
-                                <div class="ee-publication-teaser-v2 -shadow -bg-white">
+                                <div class="ee-publication-teaser-v2">
 
                                     <div class="publication-image">
                                         <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
@@ -825,22 +857,97 @@
                             </div>
 
                             <div class="load-more-wrapper">
-                                <button class="ee-button-2">Показать еще</button>
+                                <button class="ee-button-3">Показать еще</button>
+                            </div>
+
+                            <div class="ee-pagination-short">
+
+                                <a href="#">&lt;&lt;</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">&gt;&gt;</a>
+
                             </div>
 
 
 
                         </div>
 
+                        <div class="ee-flip-slider swiper-container">
 
-                        <div class="tags-helper">
-                            <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a>
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide flip-slide-type-1">
+
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+
+                                    <div class="pub-title">Заголовок публикации: Lorem ipsum dolor sit amet, consectetur adipiscg elit, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt</div>
+
+                                    <div class="id-label">2 из 6 &nbsp;&nbsp; id=645329</div>
+
+
+                                    <div class="slide-description">
+
+                                        <div class="description-title">
+
+                                            <span style="font-size: 28px;font-family: 'Comic Sans MS';color: #888888;">#EndoEnglish: <span style="color: #ffdb4a">What is this?</span></span>
+                                        </div>
+
+                                        <div class="description-text">
+                                            Комментарии к тесту препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+                                <div class="swiper-slide flip-slide-type-1">
+
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+
+                                    <div class="pub-title">Заголовок публикации: Lorem ipsum dolor sit amet, consectetur adipiscg elit, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt</div>
+
+                                    <div class="id-label">2 из 6 &nbsp;&nbsp; id=645329</div>
+
+
+                                    <div class="slide-description">
+
+                                        <div class="description-title">
+
+                                            <span style="font-size: 28px;font-family: 'Comic Sans MS';color: #888888;">#EndoEnglish: <span style="color: #ffdb4a">What is this?</span></span>
+                                        </div>
+
+                                        <div class="description-text">
+                                            Комментарии к тесту препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <i class="fas fa-star js-add-to-favorite" data-api-url="/local/assets/json/get-one.json" data-element-id="123456"></i>
+
+                            <div class="flip-toggle"></div>
+
+                        </div>
+
+
+                        <div class="tags-helper-v2">
+                            <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#" style="color: #139ed8">семианр</a> <a href="#" style="color: #139ed8">корпоратив</a>
 
                         </div>
 
 
                         <div class="create-publication-button-wrapper">
-                            <a href="#" class="ee-button-2">Создайте вашу публикацию</a>
+                            <a href="#" class="ee-button-3">Создайте вашу публикацию</a>
                         </div>
 
                     </div>
@@ -860,6 +967,10 @@
                 <div class="ee-sidebar">
 
                     <div class="ee-sidebar-block">
+
+                        <div class="block-head">
+                            <a href="#">Пройдите опрос</a>
+                        </div>
 
                         <div class="block-head">
                             <h2>Содержание</h2>
@@ -1186,7 +1297,7 @@
 
                         <div class="block-body">
 
-                            <div><img src="/local/assets/img/sidebar-online.png" width="229" height="33"></div>
+                            <div style="text-align: center"><img src="/local/assets/img/sidebar-online.png?1" width="211" height="31"></div>
 
                             <div class="online-digits">
                                 <b>3</b><b>6</b><b>5</b>&nbsp;&nbsp;<b>2</b><b>0</b>&nbsp;&nbsp;<b>1</b><b>8</b>&nbsp;&nbsp;<b>1</b><b>2</b>
@@ -1229,7 +1340,7 @@
                             <h2>Топ 10 авторов</h2>
                         </div>
 
-                        <div class="block-body -dark">
+                        <div class="block-body">
 
 
                             <div class="sidebar-faces-slider swiper-container" data-autoplay-delay="3000">
@@ -1264,7 +1375,7 @@
                             <h2>Топ 10 пользователей</h2>
                         </div>
 
-                        <div class="block-body -dark">
+                        <div class="block-body">
 
 
                             <div class="sidebar-faces-slider swiper-container" data-autoplay-delay="3000">
@@ -1301,7 +1412,7 @@
                             <span class="expand-toggle"></span>
                         </div>
 
-                        <div class="block-body -dark">
+                        <div class="block-body">
 
                             <div class="sidebar-tools">
 

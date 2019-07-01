@@ -308,6 +308,22 @@ $(document).ready(function () {
   });
 
 
+  $('.ee-expandable-text .expand-toggle span').click(function () {
+
+    $(this).parent().prev().slideToggle();
+
+    if ($(this).hasClass('-expanded')) {
+
+      $(this).text('Развернуть').removeClass('-expanded');
+
+    } else {
+
+      $(this).text('Свернуть').addClass('-expanded');
+    }
+
+  });
+
+
 
 
 });

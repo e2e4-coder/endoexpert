@@ -1,0 +1,53 @@
+@import "variables";
+
+.ee-countdown-section {
+
+  background: #575758;
+  padding: 35px 15px 15px 15px;
+  color: #fff;
+
+
+  .section-top {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    .ee-timer {
+
+      padding-left: 85px;
+      position: relative;
+      width: 390px;
+      flex: 0 0 auto;
+      box-sizing: border-box;
+      margin-right: 25px;
+
+      .timer-digits .digits-group .group-label {color: #fff}
+
+      &:before {
+        content: '';
+        position: absolute;top: -15px;left: -5px;
+        background: url("/local/assets/img/icons/ico_countdown.png") top left no-repeat;
+        width: 72px;
+        height: 66px;
+      }
+    }
+
+    .countdown-title {
+      font-size: 21px;
+      padding-right: 20px;
+    }
+
+  }
+
+  .ee-expandable-text {
+
+    line-height: 1.5;
+
+  }
+
+
+
+
+
+}

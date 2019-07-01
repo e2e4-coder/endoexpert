@@ -42,6 +42,37 @@
     margin-left: -15px;
     margin-right: -15px;
 
+    .points-bage {
+      flex: 0 0 auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #5a5858;
+      font-size: 18px;
+
+
+      span,a {
+
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        padding: 3px 10px;
+        min-width: 58px;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+
+      }
+
+      &.-gold {
+        background: none;
+        span,a {border-color: @gold-color}
+      }
+    }
+
     .share-icon-wrapper {
 
       width: 48px;
@@ -273,6 +304,10 @@
 
 
 
+  }
+
+  .ee-countdown-section {
+    margin: -20px -15px 15px -15px;
   }
 
 

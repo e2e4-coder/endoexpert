@@ -312,6 +312,31 @@ $(document).ready(function () {
   });
 
 
+  $('.js-rating-select').each(function () {
+
+    $(this).change(function () {
+
+      $.post($(this).data('api-url'), {
+
+        rating : $(this).val(),
+        id : $(this).data('publication-id'),
+
+      }, function () {
+
+
+      });
+
+    }).barrating({
+      theme: 'fa-stars-gold',
+      initialRating: $(this).data('current-rating'),
+      allowEmpty: true,
+      readonly: !!$(this).data('voted'),
+      emptyValue: 0
+    });
+
+
+  });
+
 
 
 });

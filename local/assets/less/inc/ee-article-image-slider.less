@@ -20,6 +20,7 @@
 
     width: 620px;
     flex: 0 0 auto;
+    cursor: zoom-in;
 
     .image-description {display: none;}
 
@@ -73,6 +74,153 @@
     line-height: 1.4;
 
     b, strong { font-size: 18px;}
+
+  }
+
+
+  .full-screen-wrapper {
+
+    display: none;
+
+    position: fixed;
+    z-index: 999;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    box-sizing: border-box;
+
+    .slides-counter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 90px;
+      color: #999;
+      font-weight: 500;
+      border-left: 3px solid #671719;
+      padding: 15px 10px;
+    }
+
+    .control-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+
+    }
+
+    .rows-layout {
+
+      max-width: 90%;
+      height: 100%;
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+
+      .row-item {
+
+        flex: 1 1 auto;
+
+        &:first-child {
+
+          flex: 0 0 auto;
+          height: 60px;
+        }
+
+
+        &:last-child {
+
+          flex: 0 0 auto;
+          height: 120px;
+        }
+
+      }
+
+    }
+
+    .rating-form {
+
+      text-align: center;
+
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+        height: 32px;
+      }
+
+      > span {
+        display: inline-block;
+        vertical-align: middle;
+        color: #bcbcbc;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      .br-theme-fa-stars-gold .br-widget a {
+        font-size: 32px;
+        line-height: 32px;
+        width: 40px;
+      }
+    }
+
+    #full-screen-slide-description {
+      flex: 0 0 auto;
+      padding: 25px 0;
+      line-height: 1.4;
+      b {font-size: 18px;}
+    }
+
+    .full-screen-large-slider-wrapper {
+
+      position: relative;
+      height: 100%;
+    }
+
+    #full-screen-large-slider {
+
+      height: 100%;
+
+      .swiper-wrapper {
+        height: 100%;
+      }
+
+
+      .swiper-slide {
+
+        height: 100%;
+        background: center center no-repeat;
+        background-size: contain;
+
+
+
+        .image-description {
+          display: none;
+        }
+
+      }
+
+    }
+
+    #full-screen-small-slider {
+
+      .swiper-slide {
+
+        width: auto;
+        cursor: pointer;
+
+        &.-selected {
+
+          border: 1px solid #fff;
+
+        }
+
+      }
+
+    }
 
   }
 

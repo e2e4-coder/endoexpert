@@ -564,7 +564,18 @@
         margin: 0 -200px;
         padding: 22px 200px 7px 200px;
 
-        input {height: 27px;line-height: 28px;}
+        input {
+          width: 100% !important;
+          height: 35px;line-height: 35px;position: relative;
+
+          &.-focused {
+            width: 100% !important;
+          }
+        }
+
+        button {
+          display: block !important;
+        }
       }
 
 

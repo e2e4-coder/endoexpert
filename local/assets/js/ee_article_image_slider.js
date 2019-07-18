@@ -30,8 +30,8 @@ $(document).ready(function () {
 
     var smallSlider = new Swiper ($(this).find('.slider-small .swiper-container'), {
 
-      direction : 'vertical',
-      slidesPerView: 3,
+      direction : $(window).width() > 768 ? 'vertical' : 'horizontal',
+      slidesPerView: $(window).width() > 768 ? 3 : 'auto',
       spaceBetween: 10,
       navigation: {
         nextEl: $(this).find('.button-next'),

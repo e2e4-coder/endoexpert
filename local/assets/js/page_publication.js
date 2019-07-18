@@ -258,6 +258,36 @@ $(document).ready(function () {
   });
 
 
+  var recommendSliderDelay = $('#publication-page-recommend-slider').data('autoplay-delay');
+
+  recommendSliderDelay = recommendSliderDelay ? {delay: recommendSliderDelay} : false;
+
+  var recommendSlider = new Swiper ('#publication-page-recommend-slider', {
+
+
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    loopedSlides: 3,
+    spaceBetween: 14,
+    loop: false,
+    navigation: {
+      nextEl: '#publication-page-recommend-slider-next',
+      prevEl: '#publication-page-recommend-slider-prev',
+    },
+
+    autoplay: recommendSliderDelay,
+
+    breakpoints: {
+
+      1023: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+        spaceBetween: 10
+      }
+    }
+  });
+
+
 
 
 });

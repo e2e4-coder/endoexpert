@@ -72,4 +72,35 @@
   &.-unlocked .section-head:before {background-image: url("/local/assets/img/icons/ico_unlocked.png")}
 
 
+  @media @w320 {
+
+     .section-head {
+
+       justify-content: space-between;
+
+       .section-caption {
+
+         visibility: hidden;
+         width: 1px;
+         height: 1px;
+         overflow:hidden;
+         flex: 0 0 auto;
+
+       }
+
+       .expand-button {
+
+         background: none;
+
+       }
+
+       .cc-sign {
+         flex: 1 1 auto;
+       }
+
+
+     }
+
+  }
+
 }

@@ -12,13 +12,13 @@ $(document).ready(function () {
 
       $(this).find('>span').html('свернуть <i class="fas fa-angle-up"></i>');
 
-      $(this).closest('.ee-locked-section').prev().removeClass('-bottom-gradient');
+      $(this).closest('.ee-locked-section').prev().addClass('-expanded');
 
     } else  {
 
       $(this).find('>span').html('раскрыть <i class="fas fa-angle-down"></i>');
 
-      $(this).closest('.ee-locked-section').prev().addClass('-bottom-gradient');
+      $(this).closest('.ee-locked-section').prev().removeClass('-expanded');
 
     }
 

@@ -240,6 +240,8 @@
     color: #101011;
     font-weight: 300;
 
+    p {margin: 0 0 1em;}
+
     img {
       max-width: 100%;
       height: auto;
@@ -253,6 +255,12 @@
       max-height: 120px;
       overflow: hidden;
 
+      &.-expanded {
+        max-height: none !important;
+
+        &:after {display: none;}
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -262,6 +270,7 @@
         height: 100px;
         background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#fff 100%);
       }
+
 
 
 

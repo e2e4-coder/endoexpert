@@ -311,6 +311,14 @@ $(document).ready(function () {
 
   });
 
+  $('.ee-expandable-text-2 .title-toggle').click(function () {
+
+    $(this).next().slideToggle();
+
+    $(this).toggleClass('-expanded');
+
+  });
+
 
   $('.js-rating-select').each(function () {
 

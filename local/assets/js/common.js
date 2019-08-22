@@ -291,7 +291,15 @@ $(document).ready(function () {
 
   $('.ee-link-widget .widget-btn').click(function () {
 
-    copyToClipboard($(this).prev().text());
+    var text = $(this).prev().text();
+
+    if (!text.trim()) {
+
+      text = $(this).prev().find('input').val();
+
+    }
+
+    copyToClipboard(text);
 
   });
 
@@ -318,6 +326,22 @@ $(document).ready(function () {
     $(this).toggleClass('-expanded');
 
   });
+
+  $('.ee-expandable-text-3').each(function () {
+
+    var wrapper = $(this).data('height') ? '<div class="hidden-text" style="max-height: '+$(this).data('height')+'px"></div>' : '<div class="hidden-text"></div>';
+
+    $(this).wrapInner(wrapper).append('<span class="expand-toggle">раскрыть</span>');
+
+  }).on('click', '.expand-toggle', function () {
+
+    $(this).text($(this).text() === 'раскрыть' ? 'свернуть' : 'раскрыть');
+
+    $(this).parent().toggleClass('-expanded');
+
+  });
+
+
 
 
   $('.js-rating-select').each(function () {

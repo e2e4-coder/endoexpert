@@ -171,6 +171,23 @@ $(document).ready(function () {
   });
 
 
+  delay = $('#expert-review-slider').data('autoplay-delay');
+  delay = delay ? {delay: delay} : false;
+
+  var expertReviewSlider = new Swiper ('#expert-review-slider', {
+
+    loop: true,
+    navigation: {
+      nextEl: '.event-expert-review-block .swiper-button-next',
+      prevEl: '.event-expert-review-block .swiper-button-prev',
+    },
+
+    autoplay: delay,
+
+
+  });
+
+
   $('.program-table-block select').each(function () {
 
     $(this).change(function () {

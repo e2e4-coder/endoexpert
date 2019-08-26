@@ -359,7 +359,7 @@ $(document).ready(function () {
       });
 
     }).barrating({
-      theme: 'fa-stars-gold',
+      theme: $(this).data('theme') ? $(this).data('theme') : 'fa-stars-gold',
       initialRating: $(this).data('current-rating'),
       allowEmpty: true,
       readonly: !!$(this).data('voted'),

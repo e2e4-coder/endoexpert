@@ -1,0 +1,58 @@
+@import "variables";
+
+.ee-slider-2 {
+
+  box-sizing: border-box;
+  width: 545px;
+  padding: 0 20px;
+  position: relative;
+
+  .swiper-slide {
+    img {
+      display: block;
+    }
+  }
+
+  .button-nav {
+
+    background: fade(#c5e2f5, 50%);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 100;
+    //font-family: "Font Awesome 5 Free";
+    color: #195b76;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      //opacity: .5;
+      cursor: auto;
+    }
+
+    &.-prev {
+
+      left: 0;
+    }
+
+    &.-next {
+
+      right: 0;
+
+    }
+
+    &.-zoom {
+      margin-top: 0;
+      top: auto;
+      bottom: 5px;
+      right: 25px;
+    }
+
+  }
+
+
+}

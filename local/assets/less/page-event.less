@@ -799,6 +799,183 @@
   .event-place-block {
 
     background: #2f2f2f;
+    padding-bottom: 20px;
+
+    .event-place-item {
+
+      margin-bottom: 20px;
+
+      .item-title {
+
+        font-size: 21px;
+        margin-bottom: 20px;
+
+      }
+
+      .layout-columns {
+        display: flex;
+        justify-content: space-between;
+
+        .col-1 {
+          margin-right: 30px;
+        }
+
+        .col-2 {
+
+          line-height: 1.3;
+
+          p {margin: 0 0 1em 0}
+
+          .buttons-wrapper {
+
+            .ee-button-3 {margin-right: 10px;}
+
+          }
+
+        }
+
+      }
+
+
+
+    }
+
+
+
+
+
+  }
+
+  .event-online-block {
+
+    background: #040505;
+    padding: 30px 0;
+
+  }
+
+  .event-info-block {
+
+    line-height: 1.5em;
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0;
+        padding: 0 0 0 35px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "•";
+          color: @gold-color;
+
+        }
+
+      }
+    }
+
+    .buttons-list {
+
+      margin: 15px 0;
+
+      .ee-button-3 {
+        font-weight: 300;
+        margin: 0 10px 13px 0;
+        padding: 0 15px;
+      }
+
+    }
+
+  }
+
+  .event-lk-block {
+
+    background: #78797a;
+    padding: 35px 0 50px 0;
+
+    .ee-button-3 {
+      width: 190px;
+      margin-right: 15px;
+      font-weight: 300;
+    }
+
+    .more-info-link {
+
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 18px;
+
+      &:after {
+        content: " >>";
+        color: @gold-color;
+      }
+
+    }
+
+  }
+
+  .event-expert-review-block {
+
+    .slider-wrapper {
+
+      padding: 0 130px;
+
+      .swiper-button-prev {left: 0}
+      .swiper-button-next {right: 0}
+
+    }
+
+  }
+
+  .toolbar-1 {
+
+    display: flex;
+    justify-content: stretch;
+    background: #5a5858;
+    border: 1px solid #000;
+
+    .ee-link-widget {
+      border: none;
+      border-right: 1px solid #000;
+      margin-right: 15px;
+
+      .widget-field {
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+      }
+    }
+
+    .pub-info {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 12px;
+      color: #bcbcbc;
+      padding: 10px 0;
+    }
+
+    .comments-views-rating {
+
+      padding-right: 25px;
+      white-space: nowrap;
+      line-height: 40px;
+
+      .br-widget {height: 18px}
+
+      > div {display: inline-block;vertical-align: middle;margin-left: 25px;}
+
+    }
 
   }
 

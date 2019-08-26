@@ -957,6 +957,37 @@
 
     }
 
+    .slide-text {
+
+      position: absolute;
+      bottom: 70px;
+      padding: 1em 0;
+
+      color:#dea047;
+
+      width: 100%;
+      background: rgba(0,0,0, 0.5);
+
+      font-size: 24px;
+      line-height: 1.4em;
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      &.-two-columns .wrapper-1050 {
+        column-count: 2;
+        column-gap: 20px;
+
+      }
+
+    }
+
   }
 
 
@@ -1004,6 +1035,16 @@
 
       }
 
+      .slide-text {
+
+        position: relative;
+        bottom: 0;
+
+        font-size: 16px;
+
+
+      }
+
     }
 
 
@@ -1039,6 +1080,14 @@
           }
 
         }
+
+      }
+
+      .slide-text {
+
+        &.-two-columns .wrapper-1050 { column-count: 1}
+
+
 
       }
 

@@ -6,6 +6,7 @@ var less = require('gulp-less');
 var resolveRelativeUrls = require('gulp-css-resolve-relative-urls');
 var gcmq = require('gulp-group-css-media-queries');
 var autoprefixer = require('gulp-autoprefixer');
+var spritesmith = require('gulp.spritesmith');
 
 
 gulp.task('BuildCSS', function() {
@@ -66,3 +67,13 @@ function buildCssProd(lessPath, cssPath, buildFilename) {
       .pipe(gulp.dest(cssPath))
 
 }
+
+
+gulp.task('Sprites', function () {
+  var spriteData = gulp.src('local/assets/sprites/*.png').pipe(spritesmith({
+    imgName: '../img/sprites.png',
+    cssName: '../less/inc/sprites.less',
+    imgPath: '/local/assets/img/sprites.png'
+  }));
+  return spriteData.pipe(gulp.dest('local/assets/css'));
+});

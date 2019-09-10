@@ -69,15 +69,62 @@
     height: 38px;
     margin-bottom: 2px;
 
-    &.-reg {background-image: url("/local/assets/img/ico_fixed_btn_reg.png");}
-    &.-bug {background-image: url("/local/assets/img/ico_fixed_btn_bug.png");background-position: 6px 2px;}
-    &.-search {background-image: url("/local/assets/img/ico_fixed_btn_search.png");background-position: 5px 6px;}
-    &.-message {background-image: url("/local/assets/img/ico_fixed_btn_message.png");background-position: 6px 8px;}
-    &.-qr {background-image: url("/local/assets/img/ico_fixed_btn_qr.png");background-position: 9px 5px;}
-    &.-tools {background-image: url("/local/assets/img/ico_fixed_btn_tools.png");background-position: 3px 8px;}
+    &.-reg {
+      &:before {
+        content: '';position: absolute;top: 4px;left: 6px;
+        .sprite(@ico-fixed-btn-reg);
+      }
+    }
+    &.-bug {
+      &:before {
+        content: '';position: absolute;top: 4px;left: 6px;
+        .sprite(@ico-fixed-btn-bug);
+      }
+    }
+    &.-search {
+      &:before {
+        content: '';position: absolute;top: 7px;left: 6px;
+        .sprite(@ico-fixed-btn-search);
+      }
+    }
+    &.-message {
+      &:before {
+        content: '';position: absolute;top: 9px;left: 7px;
+        .sprite(@ico-fixed-btn-message);
+      }
+    }
+    &.-qr {
+      &:before {
+        content: '';position: absolute;top: 6px;left: 10px;
+        .sprite(@ico-fixed-btn-qr);
+      }
+    }
+    &.-tools {
+      &:before {
+        content: '';position: absolute;top: 8px;left: 4px;
+        .sprite(@ico-fixed-btn-tools);
+      }
+    }
 
-    &.-up {border-radius: 100%;background-image: url("/local/assets/img/ico_fixed_btn_up.png");background-position: center center;}
-    &.-down {margin-bottom:10px;border-radius: 100%;background-image: url("/local/assets/img/ico_fixed_btn_down.png");background-position: center center;}
+    &.-up {
+
+      border-radius: 100%;
+
+      &:before {
+        content: '';position: absolute;top: 15px;left: 13px;
+        .sprite(@ico-fixed-btn-up);
+      }
+    }
+    &.-down {
+
+      margin-bottom:10px;border-radius: 100%;
+
+      &:before {
+        content: '';position: absolute;top: 15px;left: 13px;
+        .sprite(@ico-fixed-btn-down);
+      }
+
+    }
 
 
 

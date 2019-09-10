@@ -56,8 +56,7 @@
     &:before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
       width: 43px;
       height: 100%;
       background: center center no-repeat;
@@ -65,34 +64,34 @@
 
     &.-fb {
       background: #3b5998;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_fb.png")}
+      &:before {.sprite(@ico-login-fb);margin-top: -@ico-login-fb-height/2;left: (43-@ico-login-fb-width)/2;}
     }
 
     &.-go {
       color: #000;
       background: #fff;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_go.png")}
+      &:before {.sprite(@ico-login-go);margin-top: -@ico-login-go-height/2;left: (43-@ico-login-go-width)/2;}
     }
 
     &.-ok {
       background: #dea047;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ok.png")}
+      &:before {.sprite(@ico-login-ok);margin-top: -@ico-login-ok-height/2;left: (43-@ico-login-ok-width)/2;}
     }
 
     &.-ma {
       background: #005ff9;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ma.png")}
+      &:before {.sprite(@ico-login-ma);margin-top: -@ico-login-ma-height/2;left: (43-@ico-login-ma-width)/2;}
     }
 
     &.-ya {
       color: #000;
       background: #fff;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_ya.png")}
+      &:before {.sprite(@ico-login-ya);margin-top: -@ico-login-ya-height/2;left: (43-@ico-login-ya-width)/2;}
     }
 
     &.-vk {
       background: #4a76a8;
-      &:before {background-image: url("/local/assets/img/social_icons/ico_login_vk.png");left: 4px;}
+      &:before {.sprite(@ico-login-vk);margin-top: -@ico-login-vk-height/2;left: (43-@ico-login-vk-width)/2+3;}
     }
   }
 
@@ -152,9 +151,7 @@
     &:before {
       content: '';
       display: inline-block;
-      background: url("/local/assets/img/ico_auth_button.png") top center no-repeat;
-      width: 25px;
-      height: 31px;
+      .sprite(@ico-auth-button);
       margin-right: 20px;
       vertical-align: middle;
       margin-top: -5px;
@@ -176,9 +173,7 @@
     &:before {
       content: '';
       display: inline-block;
-      background: url("/local/assets/img/ico_reg_button.png") top center no-repeat;
-      width: 32px;
-      height: 32px;
+      .sprite(@ico-reg-button);
       margin-right: 10px;
       vertical-align: middle;
 
@@ -235,9 +230,7 @@
     &:before {
       content: '';
       display: inline-block;
-      background: url("/local/assets/img/ico_reg_button.png") top center no-repeat;
-      width: 32px;
-      height: 32px;
+      .sprite(@ico-reg-button);
       margin-right: 10px;
       vertical-align: middle;
 
@@ -326,9 +319,7 @@
         top: -2px;
         left: 0;
         content: '';
-        background: url("/local/assets/img/bullet_1.png") 0 0 no-repeat;
-        width: 17px;
-        height: 17px;
+        .sprite(@ico-bullet-1);
 
       }
 
@@ -358,9 +349,7 @@
     &:before {
       content: '';
       display: inline-block;
-      background: url("/local/assets/img/ico_auth_button.png") top center no-repeat;
-      width: 25px;
-      height: 31px;
+      .sprite(@ico-auth-button);
       margin-right: 20px;
       vertical-align: middle;
       margin-top: -5px;

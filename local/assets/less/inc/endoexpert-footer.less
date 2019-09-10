@@ -42,19 +42,24 @@
         position: absolute;top: 0;left: 0;
         background: center center no-repeat;
       }
-      
-      &.-novosti:before {background-image: url("/local/assets/img/bottom_menu_icons/ico_novosti.png")}
-      &.-atlasy:before {background-image: url("/local/assets/img/bottom_menu_icons/ico_atlasy.png")}
-      &.-biblioteki:before {background-image: url("/local/assets/img/bottom_menu_icons/ico_biblioteki.png")}
-      &.-quacol:before {background-position: left center;background-image: url("/local/assets/img/bottom_menu_icons/ico_quacol.png")}
-      &.-pravo:before {background-position: left center;background-image: url("/local/assets/img/bottom_menu_icons/ico_pravo.png")}
-      &.-servisy:before {background-position: left center;background-image: url("/local/assets/img/bottom_menu_icons/ico_servisy.png")}
-      &.-obuchenie:before {background-image: url("/local/assets/img/bottom_menu_icons/ico_obuchenie.png")}
-      &.-spravochniki:before {left:-10px;background-image: url("/local/assets/img/bottom_menu_icons/ico_spravochniki.png")}
-      &.-obzory:before {background-image: url("/local/assets/img/bottom_menu_icons/ico_obzory.png")}
-      &.-partnery:before {background-position: left center;background-image: url("/local/assets/img/bottom_menu_icons/ico_partnery.png")}
-      &.-pacientu:before {background-position: left center;background-image: url("/local/assets/img/bottom_menu_icons/ico_pacientu.png")}
-      &.-eshe-pacientu:before {width:77px;left:-15px;background-image: url("/local/assets/img/bottom_menu_icons/ico_eshe_pacientu.png")}
+
+      &:after {
+        content: '';
+        position: absolute;
+      }
+
+      &.-novosti:after {.sprite(@ico-bm-novosti);top:6px;left: 14px;}
+      &.-atlasy:after {.sprite(@ico-bm-atlasy);top:6px;left: 10px;}
+      &.-biblioteki:after {.sprite(@ico-bm-biblioteki);top:6px;left: 8px;}
+      &.-quacol:after {.sprite(@ico-bm-quacol);top:6px;left: 0px;}
+      &.-pravo:after {.sprite(@ico-bm-pravo);top:6px;left: 1px;}
+      &.-servisy:after {.sprite(@ico-bm-servisy);top:10px;left: 0px;}
+      &.-obuchenie:after {.sprite(@ico-bm-obuchenie);top:6px;left: 14px;}
+      &.-spravochniki:after {.sprite(@ico-bm-spravochniki);top:8px;left: -8px;}
+      &.-obzory:after {.sprite(@ico-bm-obzory);top:4px;left: 20px;}
+      &.-partnery:after {.sprite(@ico-bm-partnery);top:7px;left: 0px;}
+      &.-pacientu:after {.sprite(@ico-bm-pacientu);top:6px;left: 0px;}
+      &.-eshe-pacientu:after {.sprite(@ico-bm-eshe-pacientu);top:6px;left: -16px;}
 
     }
 
@@ -205,18 +210,27 @@
 
     a {
       display: inline-block;
-      background: @main-color center center no-repeat;
+      background: @main-color;
       width: 39px;height: 39px;
       border-radius: 100%;
       margin-left: 2px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: scale(0.5);
+      }
     }
 
-    a.-tw {background-image: url("/local/assets/img/social_icons/ico_tw.png");background-size: 23px 19px;}
-    a.-fb {background-image: url("/local/assets/img/social_icons/ico_fb.png");background-size: 12px 21px;}
-    a.-in {background-image: url("/local/assets/img/social_icons/ico_in.png");background-size: 22px 22px;}
-    a.-yt {background-image: url("/local/assets/img/social_icons/ico_yt.png");background-size: 24px 17px;}
-    a.-li {background-image: url("/local/assets/img/social_icons/ico_li.png");background-size: 20px 19px;}
-    a.-gp {background-image: url("/local/assets/img/social_icons/ico_gp.png");background-size: 26px 17px;}
+    a.-tw:before {.sprite(@ico-soc-tw);margin-left: -@ico-soc-tw-width/2;margin-top: -@ico-soc-tw-height/2;}
+    a.-fb:before {.sprite(@ico-soc-fb);margin-left: -@ico-soc-fb-width/2;margin-top: -@ico-soc-fb-height/2;}
+    a.-in:before {.sprite(@ico-soc-in);margin-left: -@ico-soc-in-width/2;margin-top: -@ico-soc-in-height/2;}
+    a.-yt:before {.sprite(@ico-soc-yt);margin-left: -@ico-soc-yt-width/2;margin-top: -@ico-soc-yt-height/2;}
+    a.-li:before {.sprite(@ico-soc-li);margin-left: -@ico-soc-li-width/2;margin-top: -@ico-soc-li-height/2;}
+    a.-gp:before {.sprite(@ico-soc-gp);margin-left: -@ico-soc-gp-width/2;margin-top: -@ico-soc-gp-height/2;}
 
   }
 
@@ -279,54 +293,6 @@
     font-size: 24px;
     color: #fff;
   }
-
-
-}
-
-
-.partners-slider-wrapper {
-
-  position: relative;
-  padding: 0 25px;
-  margin-bottom: 40px;
-
-
-  .swiper-button-prev {
-
-    width: 8px;
-    height: 20px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUCAMAAACHxYxZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEX/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD///9+g+RIAAAAEXRSTlMAA9vGTlfA5wYqe5n2FTBa5BlpPB8AAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWUlEQVQI11WOWw6AIAwECyLy1rn/ZW1JMPK1m+ljV0TEeThUJQCnmQhXUs0KioEKrav2BtVA0cmw2wuigVNBMHOAd5u51yit5Xme5f/wi5CxQq3G47Zis+oLorsErOXi7WAAAAAASUVORK5CYII=');
-    background-size: contain;
-    margin-top: -10px;
-    left: 0;
-  }
-
-  .swiper-button-next {
-
-    width: 8px;
-    height: 20px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUCAMAAACHxYxZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEX/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD/wAD///9+g+RIAAAAEXRSTlMAxtsDV04G58B7KhX2mTBa5KXrp6wAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWElEQVQI11WOVw7AMAhDs/eo73/Z4qhEKj88GTA2FnDeSAUAkZAyUAimitQIfQDzSBMYnbBkVo9UgHwcokiB4B1gf8DR1uUkvem5Gt4XfLp4+3wxbjCN+gKkbgSzz9D+wQAAAABJRU5ErkJggg==');
-    background-size: contain;
-    margin-top: -10px;
-    right: 0;
-  }
-
-  .footer-partners-slider {
-
-    height: 40px;
-
-
-    .swiper-slide {
-      width: auto;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-    }
-
-
-  }
-
 
 
 }

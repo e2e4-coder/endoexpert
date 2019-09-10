@@ -80,25 +80,38 @@
 
         .info-date {
 
-          background: url("/local/assets/img/icons/ico_calendar2.png") 0 5px no-repeat;
           padding: 0 40px 0 40px;
           text-align: center;
           font-size: 25px;
           margin-bottom: 15px;
           font-weight: 500;
+          position: relative;
 
           span {
             font-size: 38px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;top: 5px;left: 0;
+            .sprite(@ico-calendar2);
           }
 
         }
 
         .info-addr {
 
-          background: url("/local/assets/img/icons/ico_city2.png") top left no-repeat;
           padding: 0 30px 0 30px;
           text-align: center;
           margin-bottom: 40px;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;top: 0;left: 0;
+            .sprite(@ico-city2);
+
+          }
 
         }
 

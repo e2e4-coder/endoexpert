@@ -53,7 +53,14 @@
 
     cursor: pointer;
     width: 50px;
-    background: url("/local/assets/img/icons/ico_copy.png") center center no-repeat;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;top: 6px;left: 14px;
+      .sprite(@ico-copy);
+    }
 
   }
 

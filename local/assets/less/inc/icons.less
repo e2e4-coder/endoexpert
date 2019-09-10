@@ -1,40 +1,34 @@
+@import "variables";
+
 i.ico-share {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_share.png");
-  width: 15px;
-  height: 17px;
+  .sprite(@ico-share2);
 
 }
 
 i.ico-notification {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_notification.png");
-  width: 14px;
-  height: 15px;
+  .sprite(@ico-notification);
 
 }
 
 i.ico-favorite {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_favorite.png");
-  width: 18px;
-  height: 17px;
+  .sprite(@ico-star);
 
-  &.-active {background-position: 0 -17px}
+  &.-active {.sprite(@ico-star-gold);}
 
 }
 
 i.ico-learn {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_learn.png");
-  width: 16px;
-  height: 22px;
+  .sprite(@ico-learn-white);
 
-  &.-active {background-position: 0 -22px}
+  &.-active {.sprite(@ico-learn-gold);}
 
 }
 
@@ -42,36 +36,28 @@ i.ico-learn {
 i.ico-timer {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_timer.png");
-  width: 18px;
-  height: 18px;
+  .sprite(@ico-timer);
 
 }
 
 i.ico-print {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_print.png");
-  width: 26px;
-  height: 23px;
+  .sprite(@ico-print);
 
 }
 
 i.ico-download {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_download.png");
-  width: 23px;
-  height: 21px;
+  .sprite(@ico-download);
 
 }
 
 i.ico-comments {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_comments.png");
-  width: 21px;
-  height: 15px;
+  .sprite(@ico-comments);
 
 }
 
@@ -79,27 +65,21 @@ i.ico-comments {
 i.ico-link {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_link.png");
-  width: 18px;
-  height: 18px;
+  .sprite(@ico-link);
 
 }
 
 i.ico-cite {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_cite.png");
-  width: 19px;
-  height: 16px;
+  .sprite(@ico-cite);
 
 }
 
 i.ico-attach {
 
   display: inline-block;
-  background-image: url("/local/assets/img/icons/ico_attach.png");
-  width: 20px;
-  height: 23px;
+  .sprite(@ico-attach);
 
 }
 
@@ -108,33 +88,52 @@ i.ico-stats {
 
   display: inline-block;
   box-sizing: border-box;
-  background: url("/local/assets/img/icons/ico_stat.png") 6px 6px no-repeat;
   width: 43px;
   height: 43px;
   border-radius: 100%;
   border: 1px solid #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;top: 6px;left: 6px;
+    .sprite(@ico-stat)
+  }
+
 }
 
 i.ico-pay {
 
   display: inline-block;
   box-sizing: border-box;
-  background: url("/local/assets/img/icons/ico_pay.png") 6px 6px no-repeat;
   width: 43px;
   height: 43px;
   border-radius: 100%;
   border: 1px solid #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;top: 6px;left: 6px;
+    .sprite(@ico-pay)
+  }
 }
 
 i.ico-play {
 
   display: inline-block;
   box-sizing: border-box;
-  background: url("/local/assets/img/icons/ico_play_red.png") 14px 9px no-repeat;
   width: 43px;
   height: 43px;
   border-radius: 100%;
   border: 1px solid #c41c05;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;top: 9px;left: 14px;
+    .sprite(@ico-play-red)
+  }
 }
 
 i.ico-favorite2 {
@@ -147,8 +146,17 @@ i.ico-favorite2 {
   border-radius: 100%;
   border: 1px solid #fff;
   cursor: pointer;
+  position: relative;
 
-  &.-active {
-    background-position: -1px -44px;
+  &:before {
+    content: "";
+    position: absolute;top: 12px;left: 12px;
+    .sprite(@ico-star-grey);
+
+  }
+
+
+  &.-active:before {
+    .sprite(@ico-star-gold);
   }
 }

@@ -56,27 +56,53 @@
 
 
     &.-rotate {
-      background-image: url("/local/assets/img/ico_rotate.png");
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 6px;left: 6px;
+        .sprite(@ico-rotate)
+      }
     }
 
     &.-notify {
-      background-image: url("/local/assets/img/ico_notify_small.png");
-      background-position: 22px 19px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;left: 20px;
+        .sprite(@ico-notify-small)
+      }
     }
 
     &.-plus {
-      background-image: url("/local/assets/img/ico_plus.png");
+
       border-color: @gold-color;
       width: 49px;
       height: 49px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 12px;left: 12px;
+        .sprite(@ico-plus)
+      }
     }
 
     &.-home {
-      background-image: url("/local/assets/img/ico_home.png");
+      &:before {
+        content: '';
+        position: absolute;
+        top: 9px;left: 9px;
+        .sprite(@ico-home)
+      }
     }
 
     &.-settings {
-      background-image: url("/local/assets/img/ico_settings.png");
+      &:before {
+        content: '';
+        position: absolute;
+        top: 11px;left: 11px;
+        .sprite(@ico-settings-3)
+      }
     }
 
 

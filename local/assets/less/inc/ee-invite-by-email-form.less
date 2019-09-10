@@ -5,7 +5,14 @@
   padding-left: 55px;
   height: 41px;
 
-  background: url("/local/assets/img/invite_friends.png") center left no-repeat;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;top: 0;left: 0;
+    .sprite(@ico-invite-friends);
+  }
+
 
   form {
     display: flex;

@@ -9,15 +9,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^4.0.1",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-css-resolve-relative-urls": "0.0.2",
+    "gulp-dependents": "^1.2.3",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-less": "^3.3.2",
     "gulp-livereload": "^3.8.1",
+    "gulp-remember": "^1.0.1",
     "gulp-sourcemaps": "^2.6.1",
     "gulp.spritesmith": "^6.10.1"
   }

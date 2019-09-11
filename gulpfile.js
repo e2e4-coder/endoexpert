@@ -3,70 +3,58 @@ var minifyCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
-var resolveRelativeUrls = require('gulp-css-resolve-relative-urls');
 var gcmq = require('gulp-group-css-media-queries');
 var autoprefixer = require('gulp-autoprefixer');
 var spritesmith = require('gulp.spritesmith');
+var remember = require('gulp-remember');
+var gs = gulp.series;
+var cached  = require('gulp-cached');
+var dependents = require('gulp-dependents');
 
 
-gulp.task('BuildCSS', function() {
-
-  return buildCss('./local/assets/less','./local/assets/css', 'build.css');
-
-});
-
-gulp.task('Watch', function() {
-
-  gulp.watch('./local/assets/less/**/*.less', { }, ['BuildCSS']);
-
-});
-
-gulp.task('BuildCSS Moviprep', function() {
-
-  return buildCss('./local/assets/less_moviprep','./local/assets/css', 'build_moviprep.css');
-
-});
-
-gulp.task('Watch Moviprep', function() {
-
-  gulp.watch('./local/assets/less_moviprep/**/*.less', { }, ['BuildCSS Moviprep']);
-
-});
 
 
-gulp.task('BuildCSS Prod', function() {
 
-  return buildCssProd('./local/assets/less','./local/assets/css', 'build.css');
+var lessSrc = ['./local/assets/less/inc/*.less', './local/assets/less/*.less', './local/assets/less/blocks/*.less'];
 
-});
 
-function buildCss(lessPath, cssPath, buildFilename) {
-
-  return gulp.src([lessPath+'/*.less'])
-      //.pipe(resolveRelativeUrls(themePath))
+gulp.task('Build CSS', function ()  {
+  return gulp.src(lessSrc)
       .pipe(sourcemaps.init())
+      .pipe(cached('css'))
+      //.pipe(dependents())
       .pipe(less())
-      .pipe(concat(buildFilename))
-      //.pipe(minifyCSS({level: {1: {specialComments: 0}}}))
+      .pipe(remember('css'))
+      .pipe(concat('build.css'))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest(cssPath))
+      .pipe(gulp.dest('./local/assets/css'));
+});
 
-}
-
-function buildCssProd(lessPath, cssPath, buildFilename) {
-
-  return gulp.src([lessPath+'/*.less'])
-
+gulp.task('Build CSS Prod', function ()  {
+  return gulp.src(lessSrc)
       .pipe(less())
       .pipe(autoprefixer({
         cascade: false
       }))
-      .pipe(concat(buildFilename))
+      .pipe(concat('build.css'))
       .pipe(gcmq())
       .pipe(minifyCSS({level: {1: {specialComments: 0}}}))
-      .pipe(gulp.dest(cssPath))
+      .pipe(gulp.dest('./local/assets/css'));
+});
 
-}
+
+gulp.task('Watch', function () {
+  gulp.watch('./local/assets/less/**/*.less', gs('Build CSS'))
+      .on('change', function (event) {
+        console.log("event happened:"+JSON.stringify(event));
+        if (event.type === 'deleted') {
+          //delete from gulp-remember cache
+          //emember.forget('sass', event.path);
+          //delete from gulp-cached cache
+          delete cache.caches['css'][event.path];
+        }
+      });
+});
 
 
 gulp.task('Sprites', function () {

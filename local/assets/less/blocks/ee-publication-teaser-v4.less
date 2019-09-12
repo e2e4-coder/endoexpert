@@ -1,0 +1,155 @@
+@import "../inc/variables";
+
+.ee-publication-teaser-v4 {
+
+  background: #606162;
+
+
+  height: 280px;
+
+  display: flex;
+
+  .publication-image {
+
+    position: relative;
+    width: 240px;
+    flex: 0 0 auto;
+    margin-right: 15px;
+
+
+
+
+    > a {
+
+
+      position: absolute;
+      top: 0;left: 0;right: 0;bottom: 0;
+      background: center center no-repeat;
+
+      background-size: contain;
+
+      &:hover {
+
+        background-size: cover;
+
+      }
+    }
+
+    &:hover {
+
+      .publication-info {
+
+        background: #090909;
+      }
+
+    }
+
+  }
+
+  .publication-info {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 5px 0 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    z-index: 100;
+    background: fade(#090909, 50%);
+
+    .comments-count {
+      vertical-align: middle;
+
+      &:before {
+        vertical-align: middle;
+        font-family: "Font Awesome 5 Free"; font-weight: 900;
+        content: '\f075';
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 16px;
+
+      }
+
+    }
+
+    .views-count {
+      vertical-align: middle;
+
+      &:before {
+        vertical-align: middle;
+        font-family: "Font Awesome 5 Free"; font-weight: 900;
+        content: '\f06e';
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 16px;
+      }
+
+
+    }
+
+    .rating {
+      //padding-top: 8px;
+
+      .br-widget a {margin-right: 0}
+
+
+    }
+
+  }
+
+  .publication-body {
+
+    position: relative;
+    padding: 10px 10px 30px 0;
+    font-size: 14px;
+
+
+
+
+
+  }
+
+  .publication-title {
+
+    font-weight: bold;
+    margin-bottom: 15px;
+
+    a {text-decoration: none}
+
+  }
+
+  .publication-text {
+
+
+    p {margin: 0 0 15px;}
+
+  }
+
+  .publication-more-link {
+
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+
+    a {text-decoration: none;}
+    a:before {
+
+      content: '›';
+      font-size: 37px;
+      color: @gold-color;
+    }
+
+  }
+
+
+
+
+
+}

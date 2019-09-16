@@ -44,7 +44,7 @@ gulp.task('Build CSS Prod', function ()  {
 
 
 gulp.task('Watch', function () {
-  gulp.watch('./local/assets/less/**/*.less', gs('Build CSS'))
+  gulp.watch(lessSrc, gs('Build CSS'))
       .on('change', function (event) {
         console.log("event happened:"+JSON.stringify(event));
         if (event.type === 'deleted') {

@@ -61,7 +61,7 @@ gulp.task('Sprites', function () {
   var spriteData = gulp.src('local/assets/sprites/*.png').pipe(spritesmith({
     imgName: '../img/sprites.png',
     cssName: '../less/inc/sprites.less',
-    imgPath: '/local/assets/img/sprites.png'
+    imgPath: '/local/assets/img/sprites.png?' + Math.floor(Date.now() / 1000)
   }));
   return spriteData.pipe(gulp.dest('local/assets/css'));
 });

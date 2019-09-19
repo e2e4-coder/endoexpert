@@ -248,6 +248,65 @@ $(document).ready(function () {
 
   });
 
+  $('.js-add-to-learn').click(function () {
+
+    var that = this;
+
+    $(this).toggleClass('-active');
+
+    $.ajax({
+      url: $(this).data('api-url'),
+      dataType: 'json',
+      data: {element_id : $(this).data('element-id')},
+      success: function (data) {
+
+        $(that).toggleClass('-active', data == "1");
+
+      },
+      error: function () {
+
+        $(that).removeClass('-active');
+      }
+    });
+
+
+  });
+
+  $('.ee-like-dislike-control i').click(function () {
+
+    if ($(this).hasClass('-active')) return false;
+
+    var that = this;
+
+    var delta = $(this).hasClass('-up') ? 1 : -1;
+
+    $(this).addClass('-active').prev().text(parseInt($(this).prev().text())+1);
+
+    $.ajax({
+      url: $(this).parent().data('api-url'),
+      dataType: 'json',
+      data: {element_id : $(this).parent().data('element-id'), delta : delta},
+      success: function (data) {
+
+        if (data != "1") {
+          $(that).removeClass('-active').prev().text(parseInt($(that).prev().text())-1);
+        }
+
+      },
+      error: function () {
+
+        $(that).removeClass('-active').prev().text(parseInt($(that).prev().text())-1);
+      }
+    });
+
+
+
+
+
+
+
+  });
+
 
   var headerOffset = $('.header-wrapper')[0].offsetLeft;
   var headerWidth = $('.header-wrapper').outerWidth();

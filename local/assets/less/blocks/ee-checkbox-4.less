@@ -1,0 +1,47 @@
+@import "../inc/variables";
+
+.ee-checkbox-4 {
+
+  user-select: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+
+  input {display: none}
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background: #78797a;
+      width: 28px;
+      height: 28px;
+      border-radius: 3px;
+      border: 1px solid #fff;
+      vertical-align: middle;
+      margin-right: 15px;
+      margin-top: -2px;
+      text-align: center;
+      line-height: 28px;
+      font-size: 14px;
+      color: @gold-color;
+    }
+  }
+
+  input:checked + span:before {
+
+
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+
+  }
+
+
+}

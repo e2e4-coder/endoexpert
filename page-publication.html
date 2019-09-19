@@ -28,6 +28,7 @@
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-char-counter/char-counter.js"></script>
 
 
     <script src="/local/assets/js/common.js"></script>
@@ -35,6 +36,7 @@
     <script src="/local/assets/js/ee_article_image_slider.js"></script>
     <script src="/local/assets/js/invite_friends_app.js"></script>
     <script src="/local/assets/js/ee-flip-slider.js"></script>
+    <script src="/local/assets/js/ee_comments.js"></script>
 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -807,6 +809,481 @@
 
 
                     </div>
+
+
+                    <div class="comments-section">
+
+
+                        <div class="ee-comments-form">
+
+                            <form>
+
+                                <div class="form-tabs">
+
+                                    <span class="tab-item -large -active" data-value="0">Комментарии</span>
+                                    <span class="tab-item" data-value="1">Докладчику</span>
+                                    <span class="tab-item" data-value="2">Медпредставителю</span>
+                                    <span class="tab-item" data-value="3">Организаторам</span>
+
+                                </div>
+
+                                <input id="comment-to" name='to' type="hidden" value="0">
+
+
+
+                                <div class="form-item form-item-textarea">
+
+                                    <textarea class="char-counter" maxlength="500" name="comment" placeholder="Ваш комментарий"></textarea>
+
+                                </div>
+
+                                <div class="form-bottom">
+
+                                        <div class="form-checkboxes">
+
+                                            <label class="ee-checkbox-4">
+                                                <input type="radio" name="from" value="1" checked>
+                                                <span>от своего имени</span>
+                                            </label>
+
+                                            <label class="ee-checkbox-4">
+                                                <input type="radio" name="from" value="1" checked>
+                                                <span>анонимно</span>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="attach-buttons">
+
+                                            <span class="btn-photo"></span>
+                                            <span class="btn-video"></span>
+                                            <span class="btn-document"></span>
+                                            <span class="btn-youtube"></span>
+
+                                            <div style="display: none">
+
+                                                <input id="file-photos" type="file" name="photos" multiple accept="image/jpeg, image/png">
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-actions">
+
+                                            <input class="ee-button-4" type="submit" value="Отправить">
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+
+
+                            </form>
+
+                        </div>
+
+
+                        <div class="ee-comments">
+
+                            <div class="top-toolbar">
+
+                                <div class="sort-control">
+
+                                    <span class="sort-label">Сортировать по:</span>
+                                    <a class="sort-link -active" href="#">Времени</a>
+                                    <a class="sort-link" href="#">Популярности</a>
+
+                                </div>
+
+                                <div class="disable-adds-checkbox">
+
+                                    <label class="ee-checkbox-3">
+                                        <input type="checkbox">
+                                        <span></span>
+
+                                    </label>
+
+                                    <a href="#">Отключить рекламу</a>
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="ee-comment">
+
+                                <div class="comment-header">
+
+                                    <div class="comment-author">
+
+                                        <div class="author-photo" style="background:#3498db;">
+
+                                            <img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">
+
+                                            <span>М</span>
+
+                                        </div>
+
+                                        <div class="author-name-and-date">
+
+                                            <div class="author-name">Anonysmous</div>
+                                            <div class="comment-date">03.09.18, 12:45</div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="add-tag-button-wrapper">
+
+                                        <a class="ee-button-5" href="#">Добавить тег</a>
+
+                                    </div>
+
+                                    <div class="admin-controls">
+
+                                        <a class="control-favorite" href="#"></a>
+                                        <a class="control-up"></a>
+                                        <a class="control-select"></a>
+                                        <a class="control-paint"></a>
+                                        <a class="control-box"></a>
+                                        <a class="control-delete"></a>
+                                        <a class="control-ok"></a>
+
+                                    </div>
+
+                                    <div class="user-controls">
+
+                                        <span class="control-add-to-learn js-add-to-learn" data-api-url="local/assets/json/get-one.json" data-element-id="12345">Добавить</span>
+
+                                        <div class="ee-like-dislike-control" data-api-url="local/assets/json/get-one.json" data-element-id="12345">
+
+                                            <span class="-down">0</span> <i class="fas fa-thumbs-down -down"></i>
+                                            <span class="-up">12</span>  <i class="fas fa-thumbs-up -up"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="comment-body">
+
+                                    <div class="comment-text">
+
+                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="comment-footer">
+
+                                    <div class="row-1">
+
+                                        <div class="admin-notes">
+                                            <a href="#">Admin:</a> Штраф 1000 баллов за нецензурную речь.
+                                        </div>
+
+                                        <div class="points-bages">
+
+                                            <span>+200</span>
+                                            <span class="-ee">+100 EE</span>
+
+                                        </div>
+
+                                        <div class="action-links">
+                                            <a href="#" class="-gold">Закрепить вверху чата</a>
+                                            <a>Цитировать текст</a>
+                                            <a>Имя</a>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="row-2">
+
+                                        <div class="visibility-switcher">
+                                            Видно: <a href="#" class="-active">всем</a>  /  <a href="#">пользователю</a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="ee-comment-line"></div>
+
+                            <div class="ee-comment">
+
+                                <div class="comment-header">
+
+                                    <div class="comment-author">
+
+                                        <div class="author-photo" style="background:#3498db;">
+
+                                            <!--<img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">-->
+
+                                            <span>М</span>
+
+                                        </div>
+
+                                        <div class="author-name-and-date">
+
+                                            <div class="author-name">Anonysmous</div>
+                                            <div class="comment-date">03.09.18, 12:45</div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="add-tag-button-wrapper">
+
+                                        <a class="ee-button-5" href="#">Добавить тег</a>
+
+                                    </div>
+
+                                    <div class="admin-controls">
+
+                                        <a class="control-favorite" href="#"></a>
+                                        <a class="control-up"></a>
+                                        <a class="control-select"></a>
+                                        <a class="control-paint"></a>
+                                        <a class="control-box"></a>
+                                        <a class="control-delete"></a>
+                                        <a class="control-ok"></a>
+
+                                    </div>
+
+                                    <div class="user-controls">
+
+                                        <span class="control-add-to-learn js-add-to-learn" data-api-url="local/assets/json/get-one.json" data-element-id="12345">Добавить</span>
+
+                                        <div class="ee-like-dislike-control" data-api-url="local/assets/json/get-one.json" data-element-id="12345">
+
+                                            <span class="-down">0</span> <i class="fas fa-thumbs-down -down"></i>
+                                            <span class="-up">12</span>  <i class="fas fa-thumbs-up -up"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="comment-body">
+
+                                    <div class="comment-text">
+
+                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                                    </div>
+
+                                    <div class="comment-banner">
+
+                                        <div class="banner-wrapper">
+                                            <!-- сюда баннер img вместь div -->
+                                            <div style="width: 100%;height: 92px;background: #bcbcbc"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="comment-footer">
+
+                                    <div class="row-1">
+
+                                        <div class="admin-notes">
+                                            <a href="#">Admin:</a> Штраф 1000 баллов за нецензурную речь.
+                                        </div>
+
+                                        <div class="points-bages">
+
+                                            <span>+200</span>
+                                            <span class="-ee">+100 EE</span>
+
+                                        </div>
+
+                                        <div class="action-links">
+                                            <a href="#" class="-gold">Закрепить вверху чата</a>
+                                            <a>Цитировать текст</a>
+                                            <a>Имя</a>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="row-2">
+
+                                        <div class="visibility-switcher">
+                                            Видно: <a href="#" class="-active">всем</a>  /  <a href="#">пользователю</a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="ee-comment-line"></div>
+
+                            <div class="ee-comment">
+
+                                <div class="comment-header">
+
+                                    <div class="comment-author">
+
+                                        <div class="author-photo" style="background:#3498db;">
+
+                                            <!--<img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">-->
+
+                                            <span>М</span>
+
+                                        </div>
+
+                                        <div class="author-name-and-date">
+
+                                            <div class="author-name">Anonysmous</div>
+                                            <div class="comment-date">03.09.18, 12:45</div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="add-tag-button-wrapper">
+
+                                        <a class="ee-button-5" href="#">Добавить тег</a>
+
+                                    </div>
+
+                                    <div class="admin-controls">
+
+                                        <a class="control-favorite" href="#"></a>
+                                        <a class="control-up"></a>
+                                        <a class="control-select"></a>
+                                        <a class="control-paint"></a>
+                                        <a class="control-box"></a>
+                                        <a class="control-delete"></a>
+                                        <a class="control-ok"></a>
+
+                                    </div>
+
+                                    <div class="user-controls">
+
+                                        <span class="control-add-to-learn js-add-to-learn" data-api-url="local/assets/json/get-one.json" data-element-id="12345">Добавить</span>
+
+                                        <div class="ee-like-dislike-control" data-api-url="local/assets/json/get-one.json" data-element-id="12345">
+
+                                            <span class="-down">0</span> <i class="fas fa-thumbs-down -down"></i>
+                                            <span class="-up">12</span>  <i class="fas fa-thumbs-up -up"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="comment-body">
+
+                                    <div class="comment-text">
+
+                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                                    </div>
+
+                                    <div class="comment-banner -two-columns">
+
+                                        <div class="banner-wrapper">
+                                            <!-- сюда баннер img вместь div -->
+                                            <div style="width: 100%;height: 92px;background: #bcbcbc"></div>
+
+                                        </div>
+
+                                        <div class="banner-wrapper">
+                                            <!-- сюда баннер img вместь div -->
+                                            <div style="width: 100%;height: 92px;background: #bcbcbc"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="comment-footer">
+
+                                    <div class="row-1">
+
+                                        <div class="admin-notes">
+                                            <a href="#">Admin:</a> Штраф 1000 баллов за нецензурную речь.
+                                        </div>
+
+                                        <div class="points-bages">
+
+                                            <span>+200</span>
+                                            <span class="-ee">+100 EE</span>
+
+                                        </div>
+
+                                        <div class="action-links">
+                                            <a href="#" class="-gold">Закрепить вверху чата</a>
+                                            <a>Цитировать текст</a>
+                                            <a>Имя</a>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="row-2">
+
+                                        <div class="visibility-switcher">
+                                            Видно: <a href="#" class="-active">всем</a>  /  <a href="#">пользователю</a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="ee-comment-line"></div>
+
+                            <div class="load-more-wrapper">
+                                <a class="ee-button-3" href="#">Показать все</a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
 
 
                     <div class="bg-lightgrey">

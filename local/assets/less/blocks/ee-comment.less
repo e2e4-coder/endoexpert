@@ -1,0 +1,261 @@
+@import "../inc/variables";
+
+.ee-comment {
+
+
+  .comment-header {
+
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 25px;
+
+    .comment-author {
+
+      display: flex;
+      margin-right: 20px;
+      flex: 0 0 auto;
+
+      .author-photo {
+        width: 39px;
+        height: 39px;
+        overflow: hidden;
+        border-radius: 100%;
+        font-size: 16px;
+        text-align: center;
+        line-height: 39px;
+        margin-right: 15px;
+      }
+
+      .author-name-and-date {
+
+        color: #bcbcbc;
+
+        .author-name {font-size: 16px;margin-bottom: 4px;padding-top: 3px;}
+
+        .comment-date {
+          font-size: 12px;
+        }
+
+      }
+
+
+
+    }
+
+    .add-tag-button-wrapper {
+      margin-right: 20px;
+      flex: 0 0 auto;
+    }
+
+    .admin-controls {
+
+      flex: 1 1 auto;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: bottom;
+        margin: 0 7px;
+      }
+
+      .control-favorite {
+        &:before {
+          content: "\f005";
+          color: #6295d1;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      }
+
+      .control-up {
+        .sprite(@ico-up-blue)
+      }
+
+      .control-select {
+        .sprite(@ico-selection-blue)
+      }
+
+      .control-paint {
+        .sprite(@ico-brush-blue)
+      }
+
+      .control-box {
+        .sprite(@ico-box-blue)
+      }
+
+      .control-delete {
+        .sprite(@ico-trash-blue)
+      }
+
+      .control-ok {
+        .sprite(@ico-ok2-blue)
+      }
+
+    }
+
+    .user-controls {
+
+      flex: 1 1 auto;
+      text-align: right;
+      padding-top: 10px;
+
+      .control-add-to-learn {
+        display: inline-block;
+        font-size: 14px;
+        color: #bcbcbc;
+        cursor: pointer;
+        margin-right: 15px;
+        vertical-align: middle;
+
+        &:after {
+          margin-left: 10px;
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          .sprite(@ico-add-to-learn-grey);
+        }
+
+        &.-active {
+
+          color: #6295d1;
+
+          &:after {
+
+            .sprite(@ico-add-to-learn-blue);
+          }
+
+        }
+
+      }
+
+      .ee-like-dislike-control {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+
+    }
+
+  }
+
+  .comment-body {
+
+    .comment-text {
+
+      font-size: 14px;
+      color: #8c8c8c;
+      line-height: 24px;
+
+    }
+
+    .comment-banner {
+
+      margin: 0 -10px;
+
+      &.-two-columns {
+
+        display: flex;
+        justify-content: space-between;
+
+
+        .banner-wrapper {
+
+          width: 400px;
+          flex: 0 0 auto;
+
+        }
+
+      }
+
+
+
+
+    }
+
+  }
+
+  .comment-footer {
+
+    margin-top: 20px;
+
+    .row-1 {
+      display: flex;
+      justify-content: stretch;
+      font-size: 14px;
+
+      .admin-notes {
+        margin-right: 10px;
+        color: #bcbcbc;
+
+        a {
+          color: #6295d1;
+        }
+
+
+      }
+
+      .points-bages {
+
+        margin-right: 10px;
+        margin-top: -5px;
+
+        span {
+          display: inline-block;
+          color: #fff;
+          background: @gold-color;
+          padding: 5px 10px;
+          border-radius: 5px;
+
+          &.-ee {
+            background: #6295d1;
+          }
+        }
+
+      }
+
+      .action-links {
+        flex: 1 1 auto;
+        text-align: right;
+
+        a, span {text-decoration: underline;color: #6295d1;display: inline-block;margin-left: 5px;}
+
+        .-gold {
+          color: @gold-color;
+        }
+      }
+
+    }
+
+    .row-2 {
+
+      .visibility-switcher {
+        font-size: 12px;
+        color: #bcbcbc;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+
+          &.-active {color: #6295d1}
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+
+}
+
+.ee-comment-line {
+
+  height: 1px;
+  background: #bcbcbc;
+
+  margin: 5px -10px 25px -10px;
+
+}

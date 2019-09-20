@@ -56,9 +56,18 @@
     font-weight: 500;
   }
 
-  tr.-gold {
+  tr.-gold, tr:hover {
 
-    border: 2px solid @gold-color;
+
+    td {
+
+      border-top: 2px solid @gold-color;
+      border-bottom: 2px solid @gold-color;
+
+      &:first-child {border-left: 2px solid @gold-color}
+      &:last-child {border-right: 2px solid @gold-color}
+
+    }
 
     //td {border-top: 2px solid @gold-color;border-bottom: 2px solid @gold-color;}
     //td:first-child {border-left: 2px solid @gold-color;}

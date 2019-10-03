@@ -4,7 +4,7 @@
 
   position: fixed;
   z-index: 200;
-  right: 0;
+  right: 2px;
 
   top: 50%;
   margin-top: -147px;
@@ -109,18 +109,20 @@
     &.-up {
 
       border-radius: 100%;
+      height: 46px;
 
       &:before {
-        content: '';position: absolute;top: 15px;left: 13px;
+        content: '';position: absolute;top: 19px;left: 13px;
         .sprite(@ico-fixed-btn-up);
       }
     }
     &.-down {
 
+      height: 46px;
       margin-bottom:10px;border-radius: 100%;
 
       &:before {
-        content: '';position: absolute;top: 15px;left: 13px;
+        content: '';position: absolute;top: 19px;left: 13px;
         .sprite(@ico-fixed-btn-down);
       }
 
@@ -146,7 +148,7 @@
 
     position: absolute;
     top: 0;
-    left: 46px;
+    left: 48px;
     width: 340px;
     border: 1px solid #5a5858;
     border-radius: 5px;

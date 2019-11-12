@@ -160,3 +160,89 @@ i.ico-favorite2 {
     .sprite(@ico-star-gold);
   }
 }
+
+.ico-swipe-right {
+  display: inline-block;
+
+  .sprite(@ico-swipe-right);
+
+}
+
+.ico-swipe-left {
+  display: inline-block;
+
+  .sprite(@ico-swipe-left);
+
+}
+
+.ico-play2-red {
+
+  display: inline-block;
+  width: 67px;
+  height: 67px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 2px solid #c41c05;
+  background: #040505;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    .sprite(@ico-play2-red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -9px;
+  }
+
+}
+
+.ico-play2-grey {
+
+  display: inline-block;
+  width: 67px;
+  height: 67px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 2px solid #5a5858;
+  background: #040505;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    .sprite(@ico-play2-grey);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -9px;
+  }
+
+}
+
+.ico-mobile {
+
+  display: inline-block;
+  width: 67px;
+  height: 67px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 3px solid @gold-color;
+  background: #040505;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    .sprite(@ico-mobile);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -23px;
+  }
+
+}

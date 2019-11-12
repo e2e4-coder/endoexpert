@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
 
-  $('.ee-event-teaser .ico-favorite2').click(function () {
+  $('.ico-favorite2').click(function () {
 
     var that = this;
 
@@ -45,6 +45,35 @@ $(document).ready(function () {
     $('.ee-search-block-2 .form-text').val($(this).text());
 
   });
+
+  $('.ee-search-block-2 .last-queries .expand-toggle').click(function () {
+
+    $(this).parent().addClass('-expanded');
+
+  });
+
+  $('.js-swipe-left').click(function () {
+
+    $(this).parent().addClass('-active');
+
+  });
+
+  $('.js-swipe-right').click(function () {
+
+    $(this).closest('.event-swipe-block').removeClass('-active');
+
+  });
+
+
+  $('.ee-about-block .expand-text-button-wrapper button').click(function () {
+
+    $(this).parent().hide().prev().slideDown();
+
+
+
+  });
+
+
 
 
 

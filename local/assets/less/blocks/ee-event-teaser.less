@@ -55,6 +55,10 @@
     .event-right-side {
 
       flex: 1 1 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-bottom: 5px;
 
     }
 
@@ -84,6 +88,12 @@
       margin-right: 15px;
       width: 270px;
       flex: 0 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      div:last-child {margin-bottom: 5px}
 
       .event-date {
         padding-left: 32px;
@@ -133,7 +143,7 @@
     .event-buttons {
 
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       flex-direction: column;
       flex: 1 1 auto;
 

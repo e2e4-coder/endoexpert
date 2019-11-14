@@ -35,27 +35,6 @@ $(document).ready(function () {
   });
 
 
-  $('#publication-rating-select').change(function () {
-
-    $.post($(this).data('api-url'), {
-
-      rating : $(this).val(),
-      id : $(this).data('publication-id'),
-
-    }, function () {
-
-
-    });
-
-  }).barrating({
-    theme: 'fa-stars-gold',
-    initialRating: $('#publication-rating-select').data('current-rating'),
-    allowEmpty: true,
-    readonly: !!$('#publication-rating-select').data('voted'),
-    emptyValue: 0,
-  });
-
-
   $('#invite-friends-button').click(function () {
 
     $.magnificPopup.open({

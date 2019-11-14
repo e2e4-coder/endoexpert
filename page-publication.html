@@ -623,13 +623,19 @@
                                 <span class="rating-form">
                                     <span class="rating-label">Оцените материал: </span>
 
-                                    <select id="publication-rating-select" data-voted="1" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="2.5">
+
+                                    <select title="Рейтинг" data-current-rating="2.5" data-api-url="/local/assets/json/post-rating.json" class="js-rating-select" data-theme="fa-stars-gold" data-voted="1">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
                                         <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
                                     </select>
                             </span>
 
@@ -638,7 +644,7 @@
 
                             <div class="right-side">
 
-                                <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-down"></i></span>
+                                <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-up"></i></span>
 
 
                             </div>
@@ -655,7 +661,7 @@
 
 
 
-                    <div class="attachments-list" style="display: none">
+                    <div class="attachments-list" style="display: block">
 
                         <div class="ee-attachments">
 
@@ -770,7 +776,7 @@
 
                         <div class="prev-next-block">
 
-                            <a href="#"><<  предыдущая публикация</a>   |   <a href="#">следущая публикация  >></a>
+                            <a href="#" title="Название предыдущей публикации"><<  предыдущая публикация</a>   |   <a href="#" title="Название следующей публикации">следущая публикация  >></a>
 
                         </div>
 

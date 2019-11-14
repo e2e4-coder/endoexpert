@@ -1,6 +1,13 @@
 
 $(document).ready(function () {
 
+  $(document).on('click', 'a[href^="#"]', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+  });
+
 
   $('.event-rating select').each(function () {
 
@@ -231,6 +238,66 @@ $(document).ready(function () {
     return false;
 
   });
+
+
+  var $timer = $('.ee-timer');
+
+  var d = parseInt($timer.find('.-d1').text() +  $timer.find('.-d2').text() + $timer.find('.-d3').text());
+  var h = parseInt($timer.find('.-h1').text() +  $timer.find('.-h2').text());
+  var m = parseInt($timer.find('.-m1').text() +  $timer.find('.-m2').text());
+  var s = parseInt($timer.find('.-s1').text() +  $timer.find('.-s2').text());
+
+  var time = s + m*60 + h*60*60 + d*60*60*24;
+
+  function pad (str, max) {
+    str = str.toString();
+    return str.length < max ? pad("0" + str, max) : str;
+  }
+
+  setInterval(function () {
+
+    if (time > 0) {
+
+      time--;
+
+      var tmp = time;
+
+      var d = Math.floor(tmp/60/60/24);
+      tmp = tmp - d*60*60*24;
+
+      var h = Math.floor(tmp/60/60);
+      tmp = tmp - h*60*60;
+
+      var m = Math.floor(tmp/60);
+      s = tmp - m*60;
+
+      d = pad(d, 3);
+      h = pad(h, 2);
+      m = pad(m, 2);
+      s = pad(s, 2);
+
+      $timer.find('.-s1').text(s.charAt(0));
+      $timer.find('.-s2').text(s.charAt(1));
+
+      $timer.find('.-m1').text(m.charAt(0));
+      $timer.find('.-m2').text(m.charAt(1));
+
+      $timer.find('.-h1').text(h.charAt(0));
+      $timer.find('.-h2').text(h.charAt(1));
+
+      $timer.find('.-d1').text(d.charAt(0));
+      $timer.find('.-d2').text(d.charAt(1));
+      $timer.find('.-d3').text(d.charAt(2));
+
+
+
+    }
+
+
+
+  }, 1000);
+
+
 
 
 

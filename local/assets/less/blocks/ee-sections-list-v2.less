@@ -1,0 +1,54 @@
+@import "../inc/variables";
+
+.ee-sections-list-v2 {
+
+  font-size: 16px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-count: 2;
+    column-gap: 20px;
+
+    li {
+      margin: 0 0 20px 0;
+      padding: 0 0 0 20px;
+      position: relative;
+      box-sizing: border-box;
+
+      p {
+       margin: 0 0 7px 0;
+        color: #b7b7b7;
+      }
+
+      .item-bullet {
+        width: 9px;
+        height: 12px;
+        position: absolute;
+        top: 2px;
+        left: 0;
+      }
+
+      .item-title {
+        font-weight: 500;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+    }
+  }
+
+  @media @w768 {
+
+    ul {
+      column-count: 1;
+    }
+
+  }
+
+}
+

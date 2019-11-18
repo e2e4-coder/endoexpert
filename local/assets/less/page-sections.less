@@ -1,0 +1,65 @@
+@import "inc/variables";
+
+.page-sections {
+
+  background: #2e2f2f url("/local/assets/img/page_front/bg_front.jpg") top center repeat-y;
+  padding-top: 0;
+
+  .ee-main-wrapper {
+    background: fade(#101011, 50%);
+    padding: 10px 20px 0 20px;
+  }
+
+  .select-view-buttons {
+
+    margin-bottom: 20px;
+
+    .ee-button-3 {
+      height: 32px;
+      line-height: 30px;
+      font-size: 14px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      margin-right: 4px;
+
+      &.-selected {
+        color: #959595 !important;
+        border-color: #959595;
+      }
+    }
+
+  }
+
+  @media @w768 {
+
+
+    >.wrapper-1050 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .select-view-buttons {
+      text-align: center;
+
+      a {
+        display: none;
+      }
+    }
+
+    .ee-sections-list {
+
+      .list-wrapper {
+        flex-wrap: wrap;
+      }
+
+      .section-card {
+        margin-right: 6px !important;
+        margin-left: 6px !important;
+      }
+
+    }
+
+
+  }
+
+}

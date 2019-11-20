@@ -30,8 +30,21 @@
 
   }
 
+  .ee-sections-list {
+
+    .section-card {
+
+      margin: 0 4px 7px 3px;
+    }
+
+  }
+
   @media @w768 {
 
+    .ee-main-wrapper {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
     >.wrapper-1050 {
       padding-left: 0;
@@ -50,11 +63,26 @@
 
       .list-wrapper {
         flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -8px;
+
       }
 
       .section-card {
-        margin-right: 6px !important;
-        margin-left: 6px !important;
+        margin-right: 2px !important;
+        margin-left: 2px !important;
+        margin-bottom: 4px !important;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        .front .card-title {
+
+          height: 36px !important;
+          font-size: 11px !important;
+
+        }
+
       }
 
     }

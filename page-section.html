@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/css/build.css">
 
 
@@ -23,6 +24,7 @@
     <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
     <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
     <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
+    <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
 
 
     <script src="/local/assets/js/common.js"></script>
@@ -167,6 +169,28 @@
                 <div class="ee-section-slide">
 
                     <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="789" height="443"></a>
+
+                </div>
+
+                <div class="-w320">
+
+                    <div class="ee-search-block-2">
+
+                        <div class="search-wrapper">
+
+                            <div class="form-wrapper">
+
+                                <input type="text" class="form-text" name="q" placeholder="Поиск по разделу">
+
+                                <button type="submit">Найти</button>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -557,6 +581,10 @@
 
                     <button>Показать еще</button>
 
+                    <div class="amount-select -w320">
+                        по <span class="-selected">4</span> | <span>8</span> | <span>16</span>
+                    </div>
+
                 </div>
 
                 <div class="ee-pagination-short">
@@ -565,144 +593,466 @@
 
                 </div>
 
+                <div class="-w320">
 
-                <div class="publications-list">
+                    <div class="publications-list">
 
-                    <h2>Рекомендуем</h2>
+                        <h2>Статьи по теме</h2>
 
-                    <div class="ee-publication-teaser">
+                        <div class="ee-publication-teaser">
 
-                        <div class="publication-image-wrapper">
-                            <div class="publication-image">
-
-
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
 
 
-                                <div class="publication-controls">
 
-                                    <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
-                                    <span title="Поделиться" class="control-share"></span>
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
 
                                 </div>
+                            </div>
 
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
 
                             </div>
+
                         </div>
 
+                        <div class="ee-publication-teaser">
 
-                        <div class="publication-body">
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
 
-                            <div class="publication-title">
-                                <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+
+
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
+
+                                </div>
                             </div>
 
-                            <div class="publication-text">
-                                2019 |  И.А. Петров, П.В. Иванов  |
-                                <br>
-                                <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
+
                             </div>
 
-                            <div class="publication-more-link">
-                                <a href="#">»</a>
+                        </div>
+
+                        <div class="ee-publication-teaser">
+
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
+
+
+
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div class="ee-publication-teaser">
+                    <div class="ee-load-more-wrapper">
 
-                        <div class="publication-image-wrapper">
-                            <div class="publication-image">
+                        <button>Показать еще</button>
 
-
-
-
-                                <div class="publication-controls">
-
-                                    <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
-                                    <span title="Поделиться" class="control-share"></span>
-
-                                </div>
-
-
-                            </div>
+                        <div class="amount-select -w320">
+                            по <span class="-selected">4</span> | <span>8</span> | <span>16</span>
                         </div>
 
+                    </div>
 
-                        <div class="publication-body">
+                    <div class="ee-pagination-short">
 
-                            <div class="publication-title">
-                                <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                        <a href="#"><<</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">>></a>
+
+                    </div>
+
+                </div>
+
+                <div class="-w1920">
+
+                    <div class="publications-list">
+
+                        <h2>Рекомендуем</h2>
+
+                        <div class="ee-publication-teaser">
+
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
+
+
+
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
+
+                                </div>
                             </div>
 
-                            <div class="publication-text">
-                                2019 |  И.А. Петров, П.В. Иванов  |
-                                <br>
-                                <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
+
                             </div>
 
-                            <div class="publication-more-link">
-                                <a href="#">»</a>
+                        </div>
+
+                        <div class="ee-publication-teaser">
+
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
+
+
+
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="ee-publication-teaser">
+
+                            <div class="publication-image-wrapper">
+                                <div class="publication-image">
+
+
+
+
+                                    <div class="publication-controls">
+
+                                        <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
+                                        <span title="Поделиться" class="control-share"></span>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="publication-body">
+
+                                <div class="publication-title">
+                                    <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
+                                </div>
+
+                                <div class="publication-text">
+                                    2019 |  И.А. Петров, П.В. Иванов  |
+                                    <br>
+                                    <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
+                                </div>
+
+                                <div class="publication-more-link">
+                                    <a href="#">»</a>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div class="ee-publication-teaser">
+                    <div class="ee-load-more-wrapper">
 
-                        <div class="publication-image-wrapper">
-                            <div class="publication-image">
+                        <button>Показать еще</button>
 
+                    </div>
 
+                    <div class="ee-pagination-short">
 
-
-                                <div class="publication-controls">
-
-                                    <span data-element-id="123" data-api-url="/local/assets/json/get-one.json" title="Добавить в список для изучения" class="control-add-to-learn"></span>
-                                    <span title="Поделиться" class="control-share"></span>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
-                        <div class="publication-body">
-
-                            <div class="publication-title">
-                                <a href="#">Материал опубликован при поддержке опубликован при поддержке 3 строки заголовок при поддержке опубликован при поддержке 3 строки заголовок</a>
-                            </div>
-
-                            <div class="publication-text">
-                                2019 |  И.А. Петров, П.В. Иванов  |
-                                <br>
-                                <b>Видео</b> | Обзор литературы | ЯБ | ДПК | Хеликобактер | ИПП
-                            </div>
-
-                            <div class="publication-more-link">
-                                <a href="#">»</a>
-                            </div>
-
-                        </div>
+                        <a href="#"><<</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">>></a>
 
                     </div>
 
                 </div>
 
-                <div class="ee-load-more-wrapper">
+                <div class="-w320">
 
-                    <button>Показать еще</button>
+                    <div class="publications-list">
+
+                        <h2>Рекомендуемые статьи</h2>
+
+                        <div class="slider-wrapper slider-wrapper-type-1">
+
+                            <div class="swiper-container" data-autoplay-delay="2000">
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+
+                                        <div class="ee-publication-teaser-v2 -front">
+
+                                            <div class="publication-image">
+                                                <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                            </div>
+
+                                            <div class="publication-info">
+
+                                                <span class="comments-count">20</span>
+                                                <span class="views-count">3000</span>
+                                                <div class="rating">
+                                                    <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+
+                                        <div class="ee-publication-teaser-v2 -front">
+
+                                            <div class="publication-image">
+                                                <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                            </div>
+
+                                            <div class="publication-info">
+
+                                                <span class="comments-count">20</span>
+                                                <span class="views-count">3000</span>
+                                                <div class="rating">
+                                                    <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+
+                                        <div class="ee-publication-teaser-v2 -front">
+
+                                            <div class="publication-image">
+                                                <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                            </div>
+
+                                            <div class="publication-info">
+
+                                                <span class="comments-count">20</span>
+                                                <span class="views-count">3000</span>
+                                                <div class="rating">
+                                                    <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+
+                                        <div class="ee-publication-teaser-v2 -front">
+
+                                            <div class="publication-image">
+                                                <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                            </div>
+
+                                            <div class="publication-info">
+
+                                                <span class="comments-count">20</span>
+                                                <span class="views-count">3000</span>
+                                                <div class="rating">
+                                                    <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-load-more-wrapper">
+
+                        <button>Показать еще</button>
+
+                        <div class="amount-select -w320">
+                            по <span class="-selected">4</span> | <span>8</span> | <span>16</span>
+                        </div>
+
+                    </div>
+
+                    <div class="ee-pagination-short">
+
+                        <a href="#"><<</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">>></a>
+
+                    </div>
 
                 </div>
 
-                <div class="ee-pagination-short">
 
-                    <a href="#"><<</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">>></a>
 
-                </div>
 
 
                 <div class="ee-sponsors-block">
@@ -757,18 +1107,29 @@
                 </div>
 
 
-                <div class="ee-search-block">
+                <div class="ee-search-block-2 -w1920">
 
                     <div class="search-wrapper">
 
-                        <form method="get">
+                        <div class="form-wrapper">
 
-                            <input type="text" class="form-text" name="q" placeholder="Продвинутый поиск по сайту: введите Ваш поисковый запрос">
+                            <input type="text" class="form-text" name="q" placeholder="Поиск по разделу">
+
                             <button type="submit">Найти</button>
 
-                        </form>
+                        </div>
 
-                        <div class="last-queries">Последние поисковые запросы: клипсы, приказ действующий СанПин</div>
+                        <div class="last-queries">
+                            <span>QuaCol</span>
+                            <span>StandUp</span>
+                            <span>Тренинг Olympus</span>
+                            <span>Бронхоскопия Pentax</span>
+                            <span>Заседание общества</span>
+                            <span>Школа РГА, Гастрошкола</span>
+                            <span>IEEF</span>
+                            <span>Тренинг EndoStars</span>
+                            <div class="expand-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
 
                     </div>
 
@@ -830,6 +1191,84 @@
 
                 <div class="section-banner">
                     <a href="#"><img src="/local/assets/img/tmp/olympus_banner.jpg" width="785" height="408"></a>
+
+                </div>
+
+
+                <div class="-w320">
+
+
+                    <div class="ee-flip-slider swiper-container">
+
+                        <div class="swiper-wrapper">
+
+
+                            <div class="swiper-slide flip-slide-type-1">
+
+                                <img src="/local/assets/img/tmp/section-slide.jpg">
+
+                                <div class="pub-title">Заголовок публикации: Lorem ipsum dolor sit amet, consectetur adipiscg elit, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt, sed do eiusmod tempor incididunt</div>
+
+                                <div class="id-label">1 из 3 &nbsp;&nbsp; id=645329</div>
+
+
+                                <div class="slide-description">
+
+                                    <div class="description-title">
+
+                                        <span style="font-size: 28px;font-family: 'Comic Sans MS';color: #888888;">#EndoEnglish: <span style="color: #ffdb4a">What is this?</span></span>
+                                    </div>
+
+                                    <div class="description-text">
+                                        Комментарии к тесту препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?  Какой препарат для подготовки колоноскопии Вы назначаете?
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="tags-helper-v2">
+                        <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#">семианр</a> <a href="#">корпоратив</a> <a href="#" style="color: #139ed8">семианр</a> <a href="#" style="color: #139ed8">корпоратив</a>
+
+                    </div>
+
+                    <div class="ee-invite-by-email-form">
+
+                        <form action="/" _lpchecked="1">
+                            <input type="hidden" name="element_id" value="34534">
+                            <input class="form-text" name="email" placeholder="Введите email" type="text">
+                            <input class="form-submit" type="submit" value="Пригласить">
+                        </form>
+
+
+                        <div id="invite-by-email-popup-success" class="endoexpert-popup mfp-hide">
+
+                            <p>Приглашение успешно отправлено!</p>
+
+                            <div class="popup-buttons">
+                                <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 

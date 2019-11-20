@@ -58,4 +58,79 @@ $(document).ready(function () {
 
   });
 
+
+  $('.slider-wrapper-type-1').each(function () {
+
+    var $swiper = $(this).find('.swiper-container');
+
+    var delay  = $swiper.data('autoplay-delay') ? {delay: $swiper.data('autoplay-delay')} : false;
+
+    new Swiper ($swiper, {
+
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      loopedSlides: 4,
+      spaceBetween: 14,
+      loop: true,
+      navigation: {
+        nextEl: $(this).find('.swiper-button-next'),
+        prevEl: $(this).find('.swiper-button-prev'),
+      },
+
+      autoplay: delay,
+
+      breakpoints: {
+
+        1023: {
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
+          spaceBetween: 10
+        }
+      }
+    });
+
+
+
+
+
+  });
+
+  $('.ee-invite-by-email-form form').submit(function (e) {
+
+    e.preventDefault();
+
+    if ($(this).find('.form-text').val().trim()) {
+
+      $.ajax({
+        url: '/local/assets/json/get-one.json',
+        type: 'post',
+        data: $(this).serialize(),
+        cache: false,
+        success: function(data){
+
+          if (data == 1) {
+            $.magnificPopup.open({
+              items: {
+                src: '#invite-by-email-popup-success'
+              },
+              type: 'inline',
+              tClose: 'Закрыть (Esc)',
+              tLoading: 'Загрузка...',
+
+            });
+          }
+
+        },
+        error: function(){
+          alert('error!');
+        }
+      });
+
+    }
+
+
+    return false;
+
+  });
+
 });

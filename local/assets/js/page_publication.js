@@ -266,26 +266,21 @@ $(document).ready(function () {
 
 
   var $timer = $('.ee-timer');
-
-  var d = parseInt($timer.find('.-d1').text() +  $timer.find('.-d2').text() + $timer.find('.-d3').text());
-  var h = parseInt($timer.find('.-h1').text() +  $timer.find('.-h2').text());
-  var m = parseInt($timer.find('.-m1').text() +  $timer.find('.-m2').text());
-  var s = parseInt($timer.find('.-s1').text() +  $timer.find('.-s2').text());
-
-  var time = s + m*60 + h*60*60 + d*60*60*24;
+  var targetDate = new Date($timer.data('date'));
+  var seconds = Math.round((targetDate.getTime() - Date.now())/1000);
 
   function pad (str, max) {
     str = str.toString();
     return str.length < max ? pad("0" + str, max) : str;
   }
 
-  setInterval(function () {
+  function renderTime() {
 
-    if (time > 0) {
+    if (seconds > 0) {
 
-      time--;
+      seconds--;
 
-      var tmp = time;
+      var tmp = seconds;
 
       var d = Math.floor(tmp/60/60/24);
       tmp = tmp - d*60*60*24;
@@ -294,7 +289,7 @@ $(document).ready(function () {
       tmp = tmp - h*60*60;
 
       var m = Math.floor(tmp/60);
-      s = tmp - m*60;
+      var s = tmp - m*60;
 
       d = pad(d, 3);
       h = pad(h, 2);
@@ -317,10 +312,11 @@ $(document).ready(function () {
 
 
     }
+  }
 
+  renderTime();
 
-
-  }, 1000);
+  setInterval(renderTime, 1000);
 
 
 

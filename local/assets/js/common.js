@@ -456,3 +456,20 @@ function copyToClipboard(str) {
 
 
 }
+
+window.showPopup = function (options) {
+
+  $.magnificPopup.open({
+    items: {
+      src: options.src
+    },
+    modal: false,
+    type: 'inline',
+    tClose: 'Закрыть (Esc)',
+    tLoading: 'Загрузка...',
+    callbacks: {
+
+    }
+  });
+
+};

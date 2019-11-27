@@ -1,0 +1,72 @@
+@import "../inc/variables";
+
+.ee-popup {
+
+  padding: 25px;
+  background: #101011;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  max-width: 790px;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .mfp-close {
+    color: #78797a;
+  }
+
+  .popup-header {
+
+    text-align: center;
+    color: @gold-color;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+  }
+
+  .popup-body {
+
+    a {color: @link-color;text-decoration: none;&:hover {text-decoration: underline;}}
+
+    ul {
+      list-style: none;
+      padding: 0;margin: 1em 0;
+
+      li {
+        position: relative;
+        padding: 0 0 0 35px;
+        margin: 5px 0;
+
+        &:before {
+          content: "•";
+          position: absolute;
+          top: 2px;
+          left: 17px;
+          color: @gold-color;
+        }
+      }
+    }
+
+  }
+
+  .popup-footer {
+    margin-top: 25px;
+
+    a {color: @gold-color;text-decoration: none;&:hover {text-decoration: underline;}}
+  }
+
+  .red-highlight {
+
+    background: #f82003;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 0;
+    margin-left: -10px;
+    margin-right: -10px;
+
+  }
+
+
+
+}

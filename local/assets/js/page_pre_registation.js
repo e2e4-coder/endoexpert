@@ -43,6 +43,21 @@ $(document).ready(function () {
 
   });
 
+
+  $('.ico-link').click(function () {
+
+
+    copyToClipboard(window.location.href);
+
+
+  }).tooltipster({
+    animation: 'fade',
+    delay: 200,
+    theme: 'tooltipster-punk',
+    trigger: 'click',
+    timer: 2000
+  });
+
 });
 
 function getNoun(number, one, two, five) {

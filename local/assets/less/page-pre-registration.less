@@ -69,6 +69,7 @@
 
         display: inline;
 
+
         span {
           display: inline-block;
           font-size: 12px;
@@ -80,6 +81,7 @@
           margin-right: 10px;
           cursor: pointer;
           margin-bottom: 17px;
+          background: #101011;
         }
 
         &.-color-text span {color: @link-color}
@@ -266,4 +268,121 @@
   }
 
 
+
+  @media @w320 {
+
+    background-image: none;
+
+    .ee-main-wrapper h1 {font-size: 24px}
+
+    .ee-breadcrumbs {
+      display: none;
+    }
+
+    .bg-gradient {
+      width: 100%;
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+
+      .ico-link {
+        top: 10px;
+      }
+    }
+
+    .form-text {
+      font-size: 17px;
+    }
+
+    .pre-reg-form {
+
+      .event-parts-checkboxes {
+
+        margin-bottom: 15px;
+
+        label span {margin-bottom: 10px;}
+
+      }
+
+      .timer-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        .timer-label {
+          display: block;
+          white-space: normal;
+          margin-bottom: 10px;
+        }
+
+        .timer-digits {
+          display: block;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+
+      .form-items-wrapper {
+
+        display: block;
+
+        .form-item {
+
+          margin-bottom: 25px;
+
+          &.-half {width: 100%}
+
+          .add-more-control .control-counter {display: none}
+
+        }
+
+        .form-text, .form-select {
+
+          height: 36px;
+          line-height: 36px;
+
+        }
+
+        .checkboxes-wrapper {
+          flex-wrap: wrap;
+          height: auto;
+
+          .ee-checkbox-4 {
+            margin-right: 10px;
+
+            span {
+
+              position: relative;
+              line-height: 16px;
+              padding-left: 40px;
+
+              &:before {
+                position: absolute;top: -5px;left: 0;
+              }
+
+            }
+
+          }
+        }
+
+      }
+
+
+      .form-actions {
+
+        text-align: center;
+
+        .ee-button-1 {font-size: 16px;margin-bottom: 10px;}
+
+      }
+
+
+
+    }
+
+
+
+  }
 }

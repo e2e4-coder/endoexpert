@@ -66,7 +66,7 @@ $(document).ready(function () {
 
       $('.slider-large .swiper-slide').each(function () {
 
-        $('#full-screen-large-slider .swiper-wrapper').append('<div class="swiper-slide" style="background-image: url('+$(this).find('img').attr('src')+')"></div>');
+        $('#full-screen-large-slider .swiper-wrapper').append('<div class="swiper-slide" style="background-image: url('+$(this).find('img').data('full-src')+')"></div>');
 
       });
 

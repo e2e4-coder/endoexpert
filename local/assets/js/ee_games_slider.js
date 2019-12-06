@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.slider-wrapper-type-1').not('.js-skip').each(function () {
+  $('.ee-games-slider').each(function () {
 
     var $swiper = $(this).find('.swiper-container');
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
       slidesPerView: 4,
       slidesPerGroup: 4,
       loopedSlides: 4,
-      spaceBetween: 14,
+      spaceBetween: 0,
       loop: true,
       navigation: {
         nextEl: $(this).find('.swiper-button-next'),

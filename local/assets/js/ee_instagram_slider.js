@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.slider-wrapper-type-1').not('.js-skip').each(function () {
+  $('.ee-instagram-slider').each(function () {
 
     var $swiper = $(this).find('.swiper-container');
 
@@ -8,11 +8,9 @@ $(document).ready(function () {
 
     new Swiper ($swiper, {
 
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      loopedSlides: 4,
-      spaceBetween: 14,
-      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 4,
+      //loop: true,
       navigation: {
         nextEl: $(this).find('.swiper-button-next'),
         prevEl: $(this).find('.swiper-button-prev'),
@@ -20,14 +18,7 @@ $(document).ready(function () {
 
       autoplay: delay,
 
-      breakpoints: {
 
-        1023: {
-          slidesPerView: 'auto',
-          slidesPerGroup: 1,
-          spaceBetween: 10
-        }
-      }
     });
 
 

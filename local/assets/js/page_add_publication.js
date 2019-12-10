@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  $('.ee-button-select').ee_button_select();
+
   $('.form-item-categories').on('click', '.-add',function () {
 
     var $rows = $('.form-item-categories .select-wrapper');

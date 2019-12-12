@@ -47,7 +47,7 @@ $(document).ready(function () {
   $('.ico-link').click(function () {
 
 
-    copyToClipboard(window.location.href);
+    copyToClipboard($(this).data('link') ? $(this).data('link') : window.location.href);
 
 
   }).tooltipster({

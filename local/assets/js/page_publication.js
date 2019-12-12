@@ -77,6 +77,7 @@ $(document).ready(function () {
 
   });
 
+  /*
 
   $('.ee-invite-by-email-form form').submit(function (e) {
 
@@ -116,6 +117,7 @@ $(document).ready(function () {
 
   });
 
+  */
 
   $('.sidebar-faces-slider').each(function () {
 

@@ -246,3 +246,48 @@ i.ico-favorite2 {
   }
 
 }
+
+.ico-nom-gold, .ico-nom-silver, .ico-nom-bronze, .ico-nom-red{
+
+  display: inline-block;
+  text-align: center;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -1px;
+  user-select: none;
+
+  b {
+    font-weight: normal !important;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
+  }
+
+  .sprite(@ico-nom-gold);
+
+}
+
+.ico-nom-silver {.sprite(@ico-nom-silver);}
+.ico-nom-bronze {.sprite(@ico-nom-bronze);}
+.ico-nom-red {.sprite(@ico-nom-red);}
+
+
+.ico-thumb-up-black {
+
+  display: inline-block;
+  margin-bottom: -1px;
+
+  .sprite(@ico-thumb-up-black);
+
+}
+
+.ico-study-black {
+
+  display: inline-block;
+  margin-right: -2px;
+  margin-bottom: -2px;
+
+  .sprite(@ico-study-black);
+
+}

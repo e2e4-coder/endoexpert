@@ -1,0 +1,42 @@
+@import "../inc/variables";
+
+.ee-info-list-block {
+
+  background: #040505;
+  border: 1px solid #fff;
+  padding: 30px 30px 30px 60px;
+
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2;
+
+    li {
+      margin: 0 0 30px 0;
+      padding: 0 0 0 20px;
+      position: relative;
+
+      &:before {
+        content: "•";
+        color: @link-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 41px;
+        line-height: 20px;
+
+      }
+
+      &.-no-bull:before {display: none}
+    }
+
+  }
+
+  a.-gold {
+    color: @gold-color;
+    text-decoration: none;
+  }
+
+}

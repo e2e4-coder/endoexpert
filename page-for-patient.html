@@ -28,6 +28,7 @@
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery.flip/jquery.flip.min.js"></script>
 
 
     <script src="/local/assets/js/common.js"></script>
@@ -168,36 +169,57 @@
                     <li><a href="#">Симптомы</a></li>
                     <li><a href="#">Болезни</a></li>
                     <li><a href="#">Диеты</a></li>
-                    <li class="-dark"><a href="#">Задать вопрос врачу</a></li>
+                    <li class="-dark"><a>Задать вопрос врачу</a></li>
                     <li><a href="#">Лекарственные препараты</a></li>
-                    <li class="-dark"><a href="#">Калькулятор: оценка здоровья</a></li>
+                    <li class="-dark"><a>Калькулятор: оценка здоровья</a></li>
                     <li><a href="#">Интересные факты</a></li>
                     <li><a href="#">Статьи</a></li>
                     <li><a href="#">Видео</a></li>
                     <li><a href="#">Онлайн игры</a></li>
                 </ul>
 
-                <div class="main-description">
+                <div class="main-slider slider-wrapper slider-wrapper-type-1 js-skip">
 
-                    <div class="description-image">
+                    <div class="swiper-container" data-autoplay-delay="3000">
 
-                        <img src="/local/assets/img/for_patient.jpg" width="789" height="484">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+
+                                <div class="main-description">
+
+                                    <div class="description-image">
+
+                                        <img src="/local/assets/img/for_patient.jpg" width="789" height="484">
+
+                                    </div>
+
+                                    <div class="description-text">
+
+                                        <p style="text-align: center">
+                                            <img src="/local/assets/img/for_patient_main_icon.png" width="104" height="96">
+                                        </p>
+
+                                        <p>
+                                            Fujifilm – одна из крупнейших мировых компаний, специализирующаяся на разработке эндоскопов, медтехники, нутрицевтической продукции. Оборудование Фуджифильм поставляется в российские клиники. Это стало возможным после подписания соглашения между японским производителем и отечественной компанией Р-Фарм. В рамках этих договорённостей, в гастроэнтерологические центры будут поставляться эндоскопические системы последнего поколения, построенные на инновационной технологии Multi Light.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-                    <div class="description-text">
-
-                        <p style="text-align: center">
-                            <img src="/local/assets/img/for_patient_main_icon.png" width="104" height="96">
-                        </p>
-
-                        <p>
-                            Fujifilm – одна из крупнейших мировых компаний, специализирующаяся на разработке эндоскопов, медтехники, нутрицевтической продукции. Оборудование Фуджифильм поставляется в российские клиники. Это стало возможным после подписания соглашения между японским производителем и отечественной компанией Р-Фарм. В рамках этих договорённостей, в гастроэнтерологические центры будут поставляться эндоскопические системы последнего поколения, построенные на инновационной технологии Multi Light.
-                        </p>
-
-                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
 
                 </div>
+
+
 
                 <div class="bg-dark bg-full-width">
 
@@ -206,108 +228,198 @@
                         <div class="list-wrapper">
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/1.png"></div>
-                                    <div class="card-title">О эндоскопии</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/1.png"></div>
+                                        <div class="card-title">О эндоскопии</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/2.png"></div>
-                                    <div class="card-title">О гастроэнтерологии и колопротологии</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/2.png"></div>
+                                        <div class="card-title">О гастроэнтерологии и колопротологии</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/3.png"></div>
-                                    <div class="card-title"> О хирургии  |  О онкологии</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/3.png"></div>
+                                        <div class="card-title"> О хирургии  |  О онкологии</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/4.png"></div>
-                                    <div class="card-title">Лекарственные препараты  |  Лечение</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/4.png"></div>
+                                        <div class="card-title">Лекарственные препараты  |  Лечение</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/5.png"></div>
-                                    <div class="card-title">Симптомы</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/5.png"></div>
+                                        <div class="card-title">Симптомы</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/6.png"></div>
-                                    <div class="card-title">Приказы | Стандарты | Правовая информация</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/6.png"></div>
+                                        <div class="card-title">Приказы | Стандарты | Правовая информация</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/7.png"></div>
-                                    <div class="card-title">Справочник заболеваний  мед. энциклопедия</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/7.png"></div>
+                                        <div class="card-title">Справочник заболеваний  мед. энциклопедия</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/8.png"></div>
-                                    <div class="card-title">Онлайн-тесты на состояние здоровья</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/8.png"></div>
+                                        <div class="card-title">Онлайн-тесты на состояние здоровья</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/9.png"></div>
-                                    <div class="card-title">Статьи и видео</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/9.png"></div>
+                                        <div class="card-title">Статьи и видео</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/10.png"></div>
-                                    <div class="card-title">Часто задаваемые вопросы</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/10.png"></div>
+                                        <div class="card-title">Часто задаваемые вопросы</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/11.png"></div>
-                                    <div class="card-title">Записаться на прием</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/11.png"></div>
+                                        <div class="card-title">Записаться на прием</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/12.png"></div>
-                                    <div class="card-title">Где пройти обследование</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/12.png"></div>
+                                        <div class="card-title">Где пройти обследование</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/13.png"></div>
-                                    <div class="card-title">Рекомендации экспертов</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/13.png"></div>
+                                        <div class="card-title">Рекомендации экспертов</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/14.png"></div>
-                                    <div class="card-title">Подготовка к диагностике исследованиям, операциям</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/14.png"></div>
+                                        <div class="card-title">Подготовка к диагностике исследованиям, операциям</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
                             <div class="section-card">
-                                <a href="#">
-                                    <div class="card-img"><img src="/local/assets/img/for_patient_cards/15.png"></div>
-                                    <div class="card-title">Диеты и рациональное питание</div>
-                                </a>
+                                <div class="front">
+                                    <a href="#">
+                                        <div class="card-img"><img src="/local/assets/img/for_patient_cards/15.png"></div>
+                                        <div class="card-title">Диеты и рациональное питание</div>
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" class="back-text">Какой-то текст...</a>
+                                </div>
+
                             </div>
 
 

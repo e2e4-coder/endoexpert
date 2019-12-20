@@ -199,6 +199,30 @@ i.ico-favorite2 {
 
 }
 
+.ico-play2-red-small {
+
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 2px solid #c41c05;
+  background: #040505;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    .sprite(@ico-play-red-small);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -4px;
+  }
+
+}
+
 .ico-play2-grey {
 
   display: inline-block;
@@ -289,5 +313,12 @@ i.ico-favorite2 {
   margin-bottom: -2px;
 
   .sprite(@ico-study-black);
+
+}
+
+.ico-settings-3 {
+  display: inline-block;
+
+  .sprite(@ico-settings-3);
 
 }

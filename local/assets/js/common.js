@@ -11,18 +11,21 @@ $(document).ready(function () {
 
   Nav.on('open', function () {
 
-    $('.header-top .right-buttons').clone().appendTo('.nav-wrapper-0 >.nav-content');
+    var $el = $('.header-top .right-buttons-mobile').clone().show().appendTo('.nav-wrapper-0 >.nav-content');
 
+
+    $el.find('.js-add-to-favorite').click(toggleEvent);
+    $el.find('.js-add-to-learn').click(toggleEvent);
 
   });
 
   Nav.on('close', function () {
 
-    $('.nav-wrapper .nav-content .right-buttons').remove();
+    $('.nav-wrapper .nav-content .right-buttons-mobile').remove();
 
   });
 
-  //Nav.open();
+  Nav.open();
 
   $('#btn-mobile-search-toggle').click(function () {
 
@@ -223,32 +226,7 @@ $(document).ready(function () {
 
   });
 
-
-  $('.js-add-to-favorite').click(function () {
-
-    var that = this;
-
-    $(this).toggleClass('-active');
-
-    $.ajax({
-      url: $(this).data('api-url'),
-      dataType: 'json',
-      data: {element_id : $(this).data('element-id')},
-      success: function (data) {
-
-        $(that).toggleClass('-active', data == "1");
-
-      },
-      error: function () {
-
-        $(that).removeClass('-active');
-      }
-    });
-
-
-  });
-
-  $('.js-add-to-learn').click(function () {
+  function toggleEvent() {
 
     var that = this;
 
@@ -270,7 +248,11 @@ $(document).ready(function () {
     });
 
 
-  });
+  }
+
+  $('.js-add-to-favorite').click(toggleEvent);
+
+  $('.js-add-to-learn').click(toggleEvent);
 
   $('.ee-like-dislike-control i').click(function () {
 

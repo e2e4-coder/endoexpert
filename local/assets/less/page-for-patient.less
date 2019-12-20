@@ -112,15 +112,22 @@
   }
 
   .slider-alphabet {
-    margin-bottom: 20px;
+    margin:0 -9px 20px -10px;
     display: flex;
-    justify-content: space-between;
+
+
+    > a, > span {
+      margin: 0 10px 0 9px;
+    }
+
+    a {text-decoration: none;}
 
     span {
       cursor: pointer;
       font-size: 24px;
       font-weight: 500;
       color: #aaaaab;
+
 
       &.-active {color: #fff}
     }

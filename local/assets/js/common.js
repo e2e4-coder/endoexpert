@@ -14,9 +14,6 @@ $(document).ready(function () {
     var $el = $('.header-top .right-buttons-mobile').clone().show().appendTo('.nav-wrapper-0 >.nav-content');
 
 
-    $el.find('.js-add-to-favorite').click(toggleEvent);
-    $el.find('.js-add-to-learn').click(toggleEvent);
-
   });
 
   Nav.on('close', function () {

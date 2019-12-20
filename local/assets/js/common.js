@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   });
 
-  Nav.open();
+  //Nav.open();
 
   $('#btn-mobile-search-toggle').click(function () {
 

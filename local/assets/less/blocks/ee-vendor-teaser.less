@@ -1,0 +1,62 @@
+@import "../inc/variables";
+
+.ee-vendor-teaser {
+
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+
+  &.-grey {background: #606162}
+
+  .row-1 {
+    display: flex;
+    margin-bottom: 8px;
+
+    .col-1 {margin-right: 10px;}
+  }
+
+  .row-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .item-logo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 256px;
+    height: 114px;
+    background: #fff;
+    border: 2px solid @gold-color;
+    border-radius: 5px;
+    overflow: hidden;
+
+  }
+
+  .item-title {
+    font-size: 19px;
+    margin-bottom: 10px;
+
+    a {text-decoration: none;color: @gold-color}
+  }
+
+  .item-btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #606162;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 8px;
+
+    &.-gold {background: #e4c655};
+    &.-silver {background: #9f9f9f};
+    &.-bronze {background: #bbb17c};
+    &.-black {background: #040505};
+
+  }
+
+}

@@ -1,0 +1,260 @@
+@import "inc/variables";
+
+
+.page-vendor-detail {
+
+  background: #030102;
+
+  .ee-main-wrapper {
+    background: inherit;
+  }
+
+
+  .vendor-top {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .col-1 {
+      img {
+        display: block;
+        border: 3px solid @gold-color;
+      }
+    }
+
+    .col-2 {
+      width: 300px;
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .vendor-logo {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      width: 256px;
+      height: 114px;
+      background: #fff;
+      border: 3px solid @gold-color;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+    }
+
+    .vendor-title {
+      font-size: 19px;
+      color: @gold-color;
+      margin-bottom: 15px;
+    }
+
+    .info-table {
+
+      margin-bottom: 20px;
+
+      tr:first-child td {vertical-align: bottom}
+
+      td {
+        font-size: 14px;
+        vertical-align: top;
+        padding-bottom: 10px;
+      }
+
+      td:first-child {
+        padding-right: 10px;
+      }
+
+      td:last-child {
+        font-weight: 500;
+      }
+
+    }
+
+    .ee-link-widget {
+
+      margin-top: 5px;
+
+      .widget-label {
+        width: 70px;
+        box-sizing: border-box;
+        background: #5a5858;
+        margin-right: 1px;
+      }
+
+      .widget-field input{background: #e7e2e2;}
+
+      .widget-btn {
+        margin-left: 1px;
+        background: #5a5858;
+      }
+
+    }
+
+  }
+
+  .ee-buttons-menu {
+    margin-bottom: 20px;
+  }
+
+  .partner-info {
+
+    display: flex;
+    margin-bottom: 30px;
+
+    .col-1 {
+      white-space: nowrap;
+      margin-right: 20px;
+    }
+
+    .col-2 {
+
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.4;
+
+      p {margin: 0};
+    }
+
+    .info-logo {
+      background: #101011;
+      width: 123px;
+      height: 123px;
+      border: 3px solid #fff;
+      border-radius: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .info-title {
+      color: #c3c6c8;
+      display: inline-block;
+      font-size: 21px;
+      line-height: 1.4;
+      padding:5px 20px 5px 0;
+      border-right: 4px solid #606162;
+    }
+
+
+    &.-gold {
+
+      .info-logo {border-color: @gold-color}
+      .info-title span {color: @gold-color}
+
+
+    }
+
+  }
+
+  .bg-grey {
+
+    background: #2e2f2f;
+    padding: 30px 0 15px 0;
+    margin-bottom: 30px;
+
+
+    a {
+      color: @link-color;
+    }
+  }
+
+  .content-section {
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+
+
+
+
+
+    h2 {
+      font-weight: 300;
+      color: @gold-color;
+      font-size: 28px;
+      margin: 0 0 25px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 22px;
+      color: #858688;
+      margin: 0 0 20px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        position: relative;
+
+        &:before {
+          content: "•";
+          position: absolute;
+          top: -8px;
+          left: -20px;
+          color: @gold-color;
+          font-size: 25px;
+        }
+      }
+
+      &.-blue li:before {color: @link-color}
+    }
+
+    .ee-event-teaser-small {margin-bottom: 30px;}
+
+    &.-bordered {
+      border: 1px solid #fff;
+      padding: 20px 0 10px 0;
+
+      h2 {
+        padding-left: 10px;
+
+
+      }
+    }
+
+
+  }
+
+  .buttons-table {
+
+    border-spacing: 10px;
+
+    .ee-button-6 {
+      width: 100%;
+      box-sizing: border-box;
+      background: none;
+      height: 42px;
+      line-height: 40px;
+    }
+
+  }
+
+  .ee-expandable-text-2 .title-toggle {font-weight: 300;text-transform: uppercase}
+
+
+  .ee-status-block {
+    margin-bottom: 40px;
+  }
+
+
+  .tags-helper-v2 {
+    margin-bottom: 40px;
+
+    a {
+      color: #686666;
+    }
+  }
+
+
+
+}

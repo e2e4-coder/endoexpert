@@ -64,4 +64,31 @@
 
   }
 
+  &.-small {
+
+    .widget-label {
+      font-size: 14px;
+    }
+
+    .widget-field {
+
+      input {
+        height: 21px;
+        line-height: 21px;
+      }
+
+    }
+
+    .widget-btn {
+
+      &:before {
+
+        position: absolute;top: 3px;left: 19px;
+        .sprite_2x(@ico-copy);
+      }
+
+    }
+
+  }
+
 }

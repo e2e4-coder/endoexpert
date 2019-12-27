@@ -1,0 +1,36 @@
+@import "../inc/variables";
+
+.ee-status-block {
+
+  background: #6295d0;
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .text-status {
+
+    font-size: 38px;
+
+    span {
+      display: inline-block;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      padding: 5px 20px;
+
+      &.-active {
+        background: @gold-color;
+        color: #040505;
+      }
+    }
+
+  }
+
+  .text-updated {
+    text-align: right;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

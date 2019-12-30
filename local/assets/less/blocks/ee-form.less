@@ -1,0 +1,84 @@
+@import "../inc/variables";
+
+.ee-form {
+
+  .form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-actions {
+    padding-top: 5px;
+    text-align: right;
+  }
+
+  .form-item {
+
+    margin-bottom: 15px;
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    &.-half {
+      width: ~"calc(50% - 7px)";
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 5px;
+
+      sup.-required {
+        color: #fd0404;
+        font-size: 20px;
+        top: 0;
+      }
+
+    }
+  }
+
+  .form-text, .form-select {
+
+    height: 48px;
+    box-sizing: border-box;
+    line-height: 46px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #606162;
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
+    font-family: inherit;
+    outline:none;
+
+  }
+
+  .select-wrapper {
+    position: relative;
+
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f078';
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      margin-top: -8px;
+      pointer-events: none;
+    }
+  }
+
+  .form-select {
+
+    padding-right: 25px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+
+  }
+
+}

@@ -5,7 +5,6 @@
 
   padding: 60px 0;
 
-  margin-top: -10px;
 
   background: #2e2f2f url("/local/assets/img/page_front/bg_front.jpg") top center repeat-y;
 
@@ -30,6 +29,43 @@
 
       }
 
+      .ee-checkbox-5 {
+        position: relative;
+        display: block;
+        padding-left: 30px;
+
+        span:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+    }
+
+  }
+
+  @media @w320 {
+
+    .blocks-wrapper {
+      display: block;
+      margin: 0 -10px;
+
+      .dark-block {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+
+        &.-status-select {
+          width: 100%;
+        }
+
+        h2 {
+          margin-top: 0;
+        }
+
+      }
     }
 
   }
@@ -182,6 +218,25 @@
 
   }
 
+  @media @w320 {
+
+    .flex-wrapper:last-child {
+      flex-direction: column-reverse;
+
+      > * {
+        width: 100%;
+      }
+    }
+
+    .reg-link {
+      margin-bottom: 20px;
+
+    }
+
+    .form-submit {
+      background: #ec170d;
+    }
+  }
 
 
 
@@ -194,7 +249,7 @@
     margin-bottom: 20px;
 
     &.-checkbox {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       font-size: 13px;
 
@@ -240,6 +295,16 @@
 
   .private-area-description {
     font-size: 13px;
+  }
+
+
+
+  @media @w320 {
+
+    .form-actions .ee-button-1 {
+      width: 47%;
+    }
+
   }
 
 }
@@ -434,6 +499,28 @@
       height: 48px;
       line-height: 48px;
       background: fade(#2e2f2f, 55%);
+    }
+
+  }
+
+  @media @w320 {
+
+    .status-item {
+      width: 100%/3;
+
+      .item-pic {
+        background-size: 50% !important;
+        height: 95px;
+      }
+
+
+      .item-label {
+        font-size: 13px;
+        line-height: 15px;
+        height: 35px;
+        padding-top: 5px;
+      }
+
     }
 
   }

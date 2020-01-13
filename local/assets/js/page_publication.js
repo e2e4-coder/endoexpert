@@ -321,6 +321,23 @@ $(document).ready(function () {
   setInterval(renderTime, 1000);
 
 
+  $('.js-nominate').click(function (e) {
+
+    $('.ee-nominate-popup').toggle();
+
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+
+  });
+
+  $(document).click(function (e) {
+
+    if (!$(e.target).closest('.ee-nominate-popup').length) $('.ee-nominate-popup').hide();
+
+
+  });
+
 
 
 });

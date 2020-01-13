@@ -348,9 +348,11 @@ $(document).ready(function () {
 
     if ($(this).hasClass('-expanded')) {
 
-      $(this).text('Развернуть').removeClass('-expanded');
+      $(this).text($(this).data('expand-text') || 'Развернуть').removeClass('-expanded');
 
     } else {
+
+      $(this).attr('data-expand-text', $(this).text());
 
       $(this).text('Свернуть').addClass('-expanded');
     }

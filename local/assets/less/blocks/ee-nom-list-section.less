@@ -1,0 +1,65 @@
+@import "../inc/variables";
+
+.ee-nom-list-section, .page-nominations-month .nom-list-section  {
+
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px 6px 15px 6px;
+  background: #101011;
+
+
+
+  h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 15px 0;
+    padding-left: 15px;
+  }
+
+  ul {
+    background: #78797a;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 0 15px 0;
+    list-style: none;
+    column-count: 3;
+    font-size: 13px;
+
+    li {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+
+      a {
+        text-decoration: none;
+
+        &:hover {text-decoration: underline}
+      }
+    }
+
+
+  }
+
+  .section-buttons {
+
+    text-align: right;
+
+    a {
+      display: inline-block;
+      margin-left: 5px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      background: #78797a;
+      padding: 4px 15px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+
+      &.-blue {background: @link-color}
+      &.-gold {background: @gold-color;color: #101011;}
+    }
+
+  }
+
+
+}

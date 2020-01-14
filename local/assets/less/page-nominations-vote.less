@@ -1,0 +1,122 @@
+@import "inc/variables";
+
+
+.page-nominations-vote {
+
+
+  background: #030102;
+
+  .ee-main-wrapper {
+    background: #030102;
+  }
+
+  .view-all-wrapper {
+    text-align: right;
+    margin-top: 15px;
+
+    font-size: 16px;
+    a {color: @gold-color;text-decoration: none}
+  }
+
+  .ee-publication-teaser-v2 {
+    border: none;width: 252px;
+
+    .publication-info {
+      background: #030102;
+    }
+
+  }
+
+  .timer-section {
+
+    display: flex;
+    min-height: 111px;
+    margin-bottom: 30px;
+
+    >.col-1 {
+      width: 440px;
+      padding-left: 140px;
+      padding-top: 15px;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      margin-right: 25px;
+
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;top: 0;left: -20px;
+        .sprite(@ico-countdown2);
+      }
+
+
+    }
+
+    >.col-2 {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+
+
+  }
+
+  .ee-toolbar-1 {
+    margin-bottom: 30px;
+  }
+
+  .nominees-section {
+
+    margin-bottom: 80px;
+
+    h2 {
+      font-weight: 300;
+      color: @gold-color;
+      font-size: 38px;
+      margin: 0 0 20px 0;
+    }
+
+    .title-stripe {
+      background: @link-color;
+      height: 10px;
+      margin-bottom: 20px;
+    }
+
+    .nominees-list {
+
+      .list-item {
+
+        margin-bottom: 40px;
+        padding-bottom: 50px;
+        border-bottom: 2px solid #5a5858;
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  .ee-nom-list-section {
+    margin-bottom: 80px;
+  }
+
+  .ee-reg-block {
+    margin-bottom: 40px;
+  }
+
+  .ee-comments-section {
+    margin-bottom: 20px;
+  }
+
+  .ee-info-list-block {
+    margin-bottom: 20px;
+  }
+
+
+}

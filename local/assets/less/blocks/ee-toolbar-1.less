@@ -1,0 +1,127 @@
+@import "../inc/variables";
+
+.ee-toolbar-1 {
+
+  display: flex;
+  justify-content: space-between;
+  background: #101011;
+  border: 1px solid #3d3b3c;
+  padding: 5px;
+  height: 29px;
+  user-select: none;
+
+  >.col-1 {
+
+
+    line-height: 27px;
+
+    >* {
+      display: inline-block;
+
+      vertical-align: middle;
+    }
+
+  }
+
+  >.col-2 {
+
+    line-height: 27px;
+
+    >* {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .ico-share {
+    margin: 0 10px;
+  }
+
+  .sep {
+    width: 1px;
+    background: #7a7979;
+    display: inline-block;
+    height: 13px;
+    margin: 0 4px;
+  }
+
+  .points-bage {
+
+    padding: 0 5px;
+    font-size: 18px;
+
+
+    span,a {
+
+      text-decoration: none;
+      display: block;
+      color: #fff;
+      padding: 0 10px;
+      min-width: 58px;
+      text-align: center;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-sizing: border-box;
+
+
+    }
+
+    &.-gold {
+      background: none;
+      span,a {border-color: @gold-color}
+    }
+  }
+
+  .invite-form {
+
+    .form-title {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .field-wrapper {
+
+      background:#424141;
+      border: 1px solid #7b7a7a;
+      border-radius: 5px;
+      display: inline-block;
+      overflow:hidden;
+      vertical-align: middle;
+      height: 27px;
+
+    }
+
+    .form-text {
+      border: none;
+      outline: none;
+      background: none;
+      color: #fff;
+      font-family: inherit;
+      vertical-align: top;
+      height: 27px;
+      line-height: 27px;
+      padding: 0 10px;
+      width: 190px;
+      display: inline-block;
+      box-sizing: border-box;
+
+    }
+
+    .form-submit {
+      vertical-align: top;
+      border: none;
+      outline: none;
+      .sprite(@ico-letter);
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: -1px;
+    }
+
+  }
+
+}

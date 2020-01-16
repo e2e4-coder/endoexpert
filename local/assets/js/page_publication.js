@@ -210,12 +210,6 @@ $(document).ready(function () {
 
 
 
-  }).tooltipster({
-    animation: 'fade',
-    delay: 200,
-    theme: 'tooltipster-punk',
-    trigger: 'click',
-    timer: 2000
   });
 
 

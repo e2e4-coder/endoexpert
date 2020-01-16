@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
     <link rel="stylesheet" href="/local/assets/css/build.css">
 
 
@@ -601,30 +602,30 @@
 
                             <div class="left-side">
 
-                                <a onclick="window.print();"><i class="ico-print"></i></a>
+                                <a onclick="window.print();" class="tooltip" title="Печать"><i class="ico-print"></i></a>
                                 <span class="sep"></span>
-                                <i class="ico-download"></i>
+                                <i class="ico-download tooltip" title="Скачать"></i>
                                 <span class="sep"></span>
-                                <i class="ico-share"></i>
+                                <i class="ico-share tooltip" title="Поделиться"></i>
                                 <span class="sep"></span>
-                                <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <i class="ico-favorite tooltip" title="В избранное" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
                                 <span class="sep"></span>
-                                <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <i class="ico-learn tooltip" title="В изучение" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
                                 <span class="sep"></span>
-                                <i class="ico-notification"></i>
+                                <i class="ico-notification tooltip" title="Напоминание"></i>
                                 <span class="sep"></span>
-                                <i class="ico-comments"></i>
+                                <i class="ico-comments tooltip" title="Комментировать"></i>
                                 <span class="sep"></span>
-                                <i class="ico-link" title="Ссылка скопирована в буфер"></i>
+                                <i class="ico-link tooltip" title="Копировать ссылку"></i>
                                 <span class="sep"></span>
-                                <i class="ico-cite"></i>
+                                <i class="ico-cite tooltip" title="Ваши цитаты"></i>
                                 <span class="sep"></span>
 
                                 <span class="rating-form">
-                                    <span class="rating-label">Оцените материал: </span>
+                                    <span class="rating-label">Оцените: </span>
 
 
-                                    <select title="Рейтинг" data-current-rating="2.5" data-api-url="/local/assets/json/post-rating.json" class="js-rating-select" data-theme="fa-stars-gold" data-voted="1">
+                                    <select title="Рейтинг" data-current-rating="2.5" data-api-url="/local/assets/json/post-rating.json" class="js-rating-select" data-theme="fa-stars-gold" data-voted="0">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -639,12 +640,17 @@
                                     </select>
                             </span>
 
+                                <span class="sep"></span>
+
+                                <span class="current-rating">Рейтинг: 10 <i class="fas fa-star"></i></span>
+
+
 
                             </div>
 
                             <div class="right-side">
 
-                                <span class="attachments-button"><i class="ico-attach"></i> <i class="fas fa-angle-up"></i></span>
+                                <span class="attachments-button tooltip" title="Файлы для скачивания"><i class="ico-attach"></i> <i class="fas fa-angle-up"></i></span>
 
 
                             </div>
@@ -653,6 +659,118 @@
 
 
                         </div>
+
+                        <div><br></div>
+
+                        <div class="toolbar-2">
+
+                            <div class="left-side">
+
+                                <a onclick="window.print();" class="tooltip" title="Печать"><i class="ico-print"></i></a>
+                                <span class="sep"></span>
+                                <i class="ico-download tooltip" title="Скачать"></i>
+                                <span class="sep"></span>
+                                <i class="ico-share tooltip" title="Поделиться"></i>
+                                <span class="sep"></span>
+                                <i class="ico-favorite tooltip" title="В избранное" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <span class="sep"></span>
+                                <i class="ico-learn tooltip" title="В изучение" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                                <span class="sep"></span>
+                                <i class="ico-notification tooltip" title="Напоминание"></i>
+                                <span class="sep"></span>
+                                <i class="ico-comments tooltip" title="Комментировать"></i>
+                                <span class="sep"></span>
+                                <i class="ico-link tooltip" title="Копировать ссылку"></i>
+                                <span class="sep"></span>
+                                <i class="ico-cite tooltip" title="Ваши цитаты"></i>
+                                <span class="sep"></span>
+
+                                <span class="rating-form">
+                                    <span class="rating-label">Оцените: </span>
+
+
+                                    <select title="Рейтинг" data-current-rating="2.5" data-api-url="/local/assets/json/post-rating.json" class="js-rating-select" data-theme="fa-stars-gold" data-voted="0">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                            </span>
+
+                                <span class="sep"></span>
+
+                                <button class="ee-button-8" onclick="showPopup({src:'#nom-popup'})">Конкурс голосование</button>
+
+
+
+                            </div>
+
+                            <div class="right-side">
+
+                                <span class="attachments-button tooltip" title="Файлы для скачивания"><i class="ico-attach"></i> <i class="fas fa-angle-up"></i></span>
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div id="nom-popup" class="ee-popup-v2">
+
+                            <div class="popup-body">
+
+                                <p class="-text-shadow">Вы успешно номинировали публикацию 	id=324522 	от 23.09.18</p>
+
+                                <ul class="ee-popup-checkboxes-list">
+
+                                    <li><label class="ee-checkbox-1"><input checked type="checkbox" name="arr[]"><span>Лучший клинический случай «Диагностика»</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший клинический случай «Операции и интервенции»</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучшая статья</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший обзор</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучшие фотоиллюстрации</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший видеоcиллюстрации</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший автор</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>На конкурс ЭндоАрт</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший ответ</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший вопрос</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Конкурс: Экзотический случай</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Конкурс Креатива</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучшие предложения и идеи</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший  практический совет</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучшая клиническая задача Quiz</span></label></li>
+                                    <li><label class="ee-checkbox-1"><input type="checkbox" name="arr[]"><span>Лучший образовательный материал</span></label></li>
+
+                                </ul>
+
+
+                                <p class="-text-shadow">Если это произошло случайно,  для отмены данного  действия есть 1 сутки, нужно просто нажать кнопку отмена</p>
+
+
+                            </div>
+
+                            <div class="popup-footer">
+
+                                <button class="ee-button-9" type="button" onclick="$.magnificPopup.close()">Отменить</button>
+                                <button class="ee-button-9 -gold" type="button">Перейти к голосованию</button>
+
+                            </div>
+
+                        </div>
+
+                        <script>
+                          showPopup({src:'#nom-popup'});
+                        </script>
+
+
 
                     </div>
 

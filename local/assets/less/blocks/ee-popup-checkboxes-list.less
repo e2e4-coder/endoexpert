@@ -1,0 +1,42 @@
+@import "../inc/variables";
+
+.ee-popup-checkboxes-list {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  column-count: 2;
+
+  li {
+    margin: 0;
+    padding: 3px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .ee-checkbox-1 {
+    color: #b1b1b2;
+
+
+    span:before {border-color: #b1b1b2}
+
+
+    input:checked + span {color: @gold-color;}
+    input:checked + span:before {
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      background: none;
+      font-size: 9px;
+      text-align: center;
+      line-height: 13px;
+      color: @gold-color;
+      border-color: @gold-color;
+
+
+    }
+  }
+
+
+}

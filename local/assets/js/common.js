@@ -14,6 +14,13 @@ $(document).ready(function () {
     var $el = $('.header-top .right-buttons-mobile').clone().show().appendTo('.nav-wrapper-0 >.nav-content');
 
 
+    $('.close-burger').show().on('click', function () {
+
+      $(this).hide();
+      Nav.close();
+
+    });
+
   });
 
   Nav.on('close', function () {

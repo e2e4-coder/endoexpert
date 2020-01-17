@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+
+  var target = document.querySelector('body');
+
+
+
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+
+      if (mutation.addedNodes.length) {
+
+        var $el = $(mutation.addedNodes.item(0));
+
+        if ($el.hasClass('hc-offcanvas-nav')) {
+
+          var $el = $('.header-top .right-buttons-mobile').clone().show().appendTo('.nav-wrapper-0 >.nav-content');
+
+          $('.close-burger').show().on('click', function () {
+
+            $(this).hide();
+            Nav.close();
+
+          });
+        }
+      }
+
+    });
+  });
+
+  var config = { attributes: false, childList: true, characterData: false };
+
+  observer.observe(target, config);
+
+  //observer.disconnect();
+
   var Nav = $('.main-menu').hcOffcanvasNav({
     maxWidth: 1024,
     position: 'right',
@@ -11,21 +45,7 @@ $(document).ready(function () {
 
   Nav.on('open', function () {
 
-    var $el = $('.header-top .right-buttons-mobile').clone().show().appendTo('.nav-wrapper-0 >.nav-content');
-
-
-    $('.close-burger').show().on('click', function () {
-
-      $(this).hide();
-      Nav.close();
-
-    });
-
-  });
-
-  Nav.on('close', function () {
-
-    $('.nav-wrapper .nav-content .right-buttons-mobile').remove();
+    $('.close-burger').show();
 
   });
 
@@ -424,7 +444,11 @@ $(document).ready(function () {
   });
 
 
-  $('.tooltip').tooltipster({theme: 'tooltipster-shadow'});
+  if ($.tooltipster) {
+    $('.tooltip').tooltipster({theme: 'tooltipster-shadow'});
+  }
+
+
 
 });
 

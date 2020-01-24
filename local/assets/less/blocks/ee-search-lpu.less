@@ -1,0 +1,158 @@
+@import "../inc/variables";
+
+.ee-search-lpu {
+
+  border: 1px solid #333332;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 35px;
+
+  padding: 45px 5px 0 5px;
+
+}
+
+.ee-search-lpu-form {
+  margin-bottom: 10px;
+
+  .row-1 {
+    display: flex;
+    margin-bottom: 30px;
+
+    >.col-1 {
+      flex: 1 1 auto;
+    }
+
+    >.col-2 {
+      flex: 0 0 auto;
+
+      label {
+        font-size: 14px;
+        margin-right: 20px;
+      }
+
+    }
+
+  }
+
+  .radio-links {
+    font-size: 24px;
+    text-align: center;
+
+    a, span {
+      display: inline-block;
+    }
+
+    .links-label {
+      color: @gold-color;
+      margin-right: 60px;
+    }
+
+    .links-item {
+      text-decoration: none;
+      margin-left: 30px;
+      padding-right: 50px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 17px;
+        height: 17px;
+        border: 1px solid #808284;
+        border-radius: 100%;
+      }
+
+      &.-active {
+
+        color: @gold-color;
+
+        &:before {border-color: @gold-color}
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 11px;
+          right: 6px;
+          width: 7px;
+          height: 7px;
+          background: @gold-color;
+          border-radius: 100%;
+        }
+
+      }
+
+
+    }
+
+  }
+
+  select+.select2 {width: 190px !important;}
+
+  .selects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -11px;
+
+    .list-item {
+      width: 190px;
+      flex: 0 0 auto;
+      margin: 0 11px 30px 11px;
+
+      label {
+        display: block;
+        font-size: 13px;
+        color: #959799;
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+}
+
+.ee-search-lpu-map {
+
+  margin: 0 -5px;
+
+  .map-tabs {
+
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+    border-bottom: 4px solid @link-color;
+
+
+    li {
+
+      font-size: 14px;
+      color: @link-color;
+      cursor: pointer;
+      padding: 5px 30px;
+      border: 2px solid @link-color;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      background: #fff;
+
+      &.-active {
+        background: @link-color;
+        font-weight: 500;
+        color: #fff;
+        padding: 7px 30px;
+        margin: -4px -5px 0 -5px;
+        z-index: 100;
+      }
+
+    }
+
+
+
+  }
+
+  .lpu-map {
+    height: 500px;
+  }
+
+}

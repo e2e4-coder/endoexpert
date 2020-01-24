@@ -102,6 +102,31 @@ i.ico-stats {
 
 }
 
+i.ico-star {
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  position: relative;
+  font-style: normal;
+
+  &:before {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;top: 11px;left: 11px;
+    color: #5c5d5e;
+  }
+
+  &.-active:before {color: @gold-color}
+
+  &.js-add-to-favorite {cursor: pointer}
+
+}
+
 i.ico-pay {
 
   display: inline-block;

@@ -36,7 +36,9 @@
     <script src="/local/assets/js/page_lpu.js"></script>
     <script src="/local/assets/js/ee-select-1.js"></script>
     <script src="/local/assets/js/ee-clinic-teaser.js"></script>
+    <script src="/local/assets/js/ee-doctor-teaser.js"></script>
     <script src="/local/assets/js/slider_type_1.js"></script>
+    <script src="/local/assets/js/ee-date-time-picker.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
@@ -350,30 +352,32 @@
                         <div id="lpu-map" class="lpu-map" data-json-src="/local/assets/json/lpu.json"></div>
 
                         <script>
-                          ymaps.ready(function () {
-
-                            var myMap = new ymaps.Map('lpu-map', {
-                              center: [55.76, 37.64],
-                              zoom: 7,
-                              behaviors: ['default','scrollZoom'],
-                              controls: ['zoomControl', 'fullscreenControl']
-                            }, {
-                              searchControlProvider: 'yandex#search'
-                            });
-
-                            $.getJSON($('#lpu-map').data('json-src'), function (data) {
 
 
-                              var collection = new ymaps.GeoObjectCollection({}, {});
+                        ymaps.ready(function () {
 
-                              myMap.geoObjects.add(collection);
+                          var myMap = new ymaps.Map('lpu-map', {
+                            center: [55.76, 37.64],
+                            zoom: 7,
+                            behaviors: ['default','scrollZoom'],
+                            controls: ['zoomControl', 'fullscreenControl']
+                          }, {
+                            searchControlProvider: 'yandex#search'
+                          });
 
-                              loadPlacemarks(data, collection, myMap);
+                          $.getJSON($('#lpu-map').data('json-src'), function (data) {
 
-                            });
 
+                            var collection = new ymaps.GeoObjectCollection({}, {});
+
+                            myMap.geoObjects.add(collection);
+
+                            loadPlacemarks(data, collection, myMap);
 
                           });
+
+
+                        });
 
 
                           function loadPlacemarks(data, collection, myMap) {
@@ -878,6 +882,221 @@
 
                 </div>
 
+                <div class="letter-section">
+
+                    <h2>по алфавиту: <span>В</span></h2>
+
+                    <div class="title-stripe bg-full-width"></div>
+
+                    <div class="ee-doctor-teaser">
+
+                        <i class="ico-star js-add-to-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                        <i class="ico-stats"></i>
+
+                        <div class="row-1">
+
+                            <div class="col-1">
+
+                                <div class="doctor-photo">
+                                    <img src="/local/assets/img/tmp/face_1.png" width="190" height="190">
+                                </div>
+
+                            </div>
+
+                            <div class="col-2">
+
+                                <div class="doctor-base-info">
+
+                                    <div class="doctor-spec">Эндоскопист</div>
+
+                                    <div class="doctor-name">Подольская Глафира Петровна</div>
+
+                                    <div class="doctor-stage">Стаж 15 лет</div>
+
+                                    <div class="doctor-qualification">Врач высшей категории</div>
+
+                                    <div class="doctor-rating">
+
+                                        Рейтинг специалиста<br>
+                                        <select class="js-rating-select" data-theme="fa-stars-gold2" data-voted="0" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="3">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+
+                                    </div>
+
+                                    <a href="#" class="ee-button-3">Оставьте отзыв</a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-3">
+
+                                <form>
+
+                                    <div class="ee-date-time-picker" data-api-url="/local/assets/json/doctor-times.json">
+
+                                        <input class="js-date" name="date" type="hidden" value="2020-01-04">
+                                        <input class="js-time" name="time" type="hidden" value="11.05">
+
+                                        <div class="picker-title">декабрь-январь</div>
+
+                                        <div class="day-slider">
+
+                                            <div class="swiper-container">
+
+                                                <div class="swiper-wrapper">
+
+                                                    <div data-date="2020-01-01" class="swiper-slide"><div>ПН</div><div>01</div></div>
+                                                    <div data-date="2020-01-02" class="swiper-slide"><div>ВТ</div><div>02</div></div>
+                                                    <div data-date="2020-01-03" class="swiper-slide"><div>СР</div><div>03</div></div>
+                                                    <div data-date="2020-01-04" class="swiper-slide -selected"><div>ЧТ</div><div>04</div></div>
+                                                    <div data-date="2020-01-05" class="swiper-slide"><div>ПТ</div><div>05</div></div>
+                                                    <div data-date="2020-01-06" class="swiper-slide -disabled"><div>СБ</div><div>06</div></div>
+                                                    <div data-date="2020-01-07" class="swiper-slide -disabled"><div>ВС</div><div>07</div></div>
+                                                    <div data-date="2020-01-08" class="swiper-slide"><div>ПН</div><div>08</div></div>
+                                                    <div data-date="2020-01-09" class="swiper-slide"><div>ВТ</div><div>09</div></div>
+                                                    <div data-date="2020-01-10" class="swiper-slide"><div>СР</div><div>10</div></div>
+                                                    <div data-date="2020-01-11" class="swiper-slide"><div>ЧТ</div><div>11</div></div>
+                                                    <div data-date="2020-01-12" class="swiper-slide"><div>ПТ</div><div>12</div></div>
+                                                    <div data-date="2020-01-13" class="swiper-slide"><div>СБ</div><div>13</div></div>
+                                                    <div data-date="2020-01-14" class="swiper-slide"><div>ВС</div><div>14</div></div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+
+                                        </div>
+
+                                        <div class="times-list">
+                                            <span>08.00</span>
+                                            <span>08.45</span>
+                                            <span>09.15</span>
+                                            <span>10.00</span>
+                                            <span>10.15</span>
+                                            <span>10.45</span>
+                                            <span class="-selected">11.05</span>
+                                            <span class="-disabled">11.25</span>
+                                            <span class="-disabled">11.55</span>
+                                            <span class="-disabled">12.20</span>
+                                            <span>12.45</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+                                            <span>12.00</span>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row-1-1">
+                                        <div class="col-1">
+                                            <div class="price-title">Стоимость приема:</div>
+
+                                            <div class="price-values">
+                                                <span class="value-main">1500 р</span>
+                                                <span class="value-old">1000 р</span>
+                                                <span class="value-percent">-50%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <input type="submit" class="ee-button-10" value="Записаться">
+                                        </div>
+                                    </div>
+
+                                    <div class="row-1-2">
+                                        <div class="col-1">
+                                            <div class="doctor-phone">8 (499) 456  **   **</div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <a class="ee-button-3" href="#">Показать номер</a>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="hidden-part">
+
+                            <div class="row-2">
+
+                                <div class="col-1">
+
+                                    <div class="doctor-description">
+
+                                        <p><b>Владение эндоскопическими методиками:</b><br>
+                                            Эзофагогастродуоденоскопия, Колоноскопия, Бронхоскопия,
+                                            Эндоскопическая ультрасонография, ЭРХПГ, Капсульная эндоскопия,
+                                            Эндобронхиальная ультрасонография (EBUS)</p>
+
+
+                                        <p><b>Владение оперативными методиками:</b><br>
+                                            Полипэктомия, резекция слизистой оболочки (EMR), Стентирование желудочно-кишечного тракта, Стентирование трахеи и бронхов, Балонная дилятация/бужирование, Гастростомия, Эндоскопическая диссекция в подлизистом слое (ESD), Лигирование ВРВП, Папиллотомия, сфиктеротомия, ЭПТ, ПСТ литэкстракция, Литотрипсия, Пероральная эндоскопическая миотомия ПОЭМ POEM, Тонкоигольная пункция под контролем эндосонографии, Цистогастростомия (Цистодуоденостомия ) под контролем эндосонографии, Трансбронхиальная биопсия под контролем EBUS</p>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+
+                                    <table class="info-table">
+
+
+                                        <tr><td>Клиника:</td>   		<td>ООО "ИНТО-СТИЛ" Клиника МД-Плюс</td></tr>
+                                        <tr><td>Адрес:</td>   			<td>г. Москва, ул. Маршала Жукова 24/1</td></tr>
+                                        <tr><td>Специализация:</td>	<td>эндоскопия, диагностическое, ургентная эндоскопия, оперативная эндоскопия</td></tr>
+                                        <tr><td>Режим работы:</td>	<td>Пн-Пт с 09.00-21.00<br>Сб: 10.00-20.00, Вс: 10.30- 19.00</td></tr>
+                                        <tr><td>Сайт:</td> 			<td><a href="#">www.ufamdplus.ru</a> (подключаемый показ)</td></tr>
+
+                                    </table>
+
+                                    <div class="teaser-tags">
+
+                                        <span>видеоэндоскопы</span>  |  <a href="#">cедация</a>  |  <a href="#">наркоз</a>  |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="expand-toggle"><i class="fas fa-chevron-down"></i></div>
+
+
+                    </div>
+
+
+
+                </div>
+
                 <div class="ee-load-more-wrapper">
 
                     <button>Показать еще</button>
@@ -1043,13 +1262,13 @@
 
 
                     <p>
-                    <b>Как выбрать клинику в Москве?</b><br>
-                    В столице более 2 500 лечебных учреждений разной формы собственности. Все они оказывают медицинские услуги, но имеют свою специфику. Как выбрать подходящую клинику в Москве, на что обратить внимание?
+                        <b>Как выбрать клинику в Москве?</b><br>
+                        В столице более 2 500 лечебных учреждений разной формы собственности. Все они оказывают медицинские услуги, но имеют свою специфику. Как выбрать подходящую клинику в Москве, на что обратить внимание?
                     </p>
 
                     <p>
-                    <b>Частная или государственная?</b><br>
-                    И государственная, и частная медицина имеют свои плюсы. Эти две системы не исключают друг друга. Напротив, некоторые отрасли развиты у нас только в рамках государственной медицины, другие доступные только в рамках коммерческих учреждений (некоторые косметологические процедуры, например).
+                        <b>Частная или государственная?</b><br>
+                        И государственная, и частная медицина имеют свои плюсы. Эти две системы не исключают друг друга. Напротив, некоторые отрасли развиты у нас только в рамках государственной медицины, другие доступные только в рамках коммерческих учреждений (некоторые косметологические процедуры, например).
                     </p>
                 </div>
 

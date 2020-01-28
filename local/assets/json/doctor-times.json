@@ -1,0 +1,14 @@
+[
+  {
+    "time": "11.00",
+    "disabled": false
+  },
+  {
+    "time": "12.00",
+    "disabled": true
+  },
+  {
+    "time": "13.00",
+    "disabled": false
+  }
+]

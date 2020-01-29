@@ -66,6 +66,12 @@ $(document).ready(function () {
 
   });
 
+  $('.ee-search-block-2 .last-queries .expand-toggle').click(function () {
+
+    $(this).parent().addClass('-expanded');
+
+  });
+
   $('.ee-sections-cards-list .section-card').flip({trigger: 'hover'});
 
   $(document).on('click', 'a[href^="#"]', function(e) {

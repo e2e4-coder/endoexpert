@@ -1,3 +1,5 @@
+@import "../inc/variables";
+
 .ee-sections-cards-list {
 
   margin-bottom: 35px;
@@ -94,6 +96,40 @@
     box-sizing: border-box;
     background: fade(#2e2f2f, 55%);
 
+
+  }
+
+  @media @w320 {
+
+
+    .section-card {
+
+      width: ~"calc(50vw - 16px)";
+      height: ~"calc(50vw - 16px)";
+
+      a {
+        padding-bottom: 24px;
+      }
+
+
+
+    }
+
+    .card-img {
+
+      text-align: center;
+
+      img {
+        width: 65%;
+        height: auto;
+      }
+    }
+
+    .card-title {
+      font-size: 12px;
+      min-height: 34px;
+      padding: 4px;
+    }
 
   }
 

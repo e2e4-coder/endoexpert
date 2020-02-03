@@ -122,7 +122,19 @@ $(document).ready(function () {
 
       var $swipeBlock = $(this).next();
 
-      $swipeBlock.css('top', '-' + parseInt($swipeBlock.height()/2) + 'px');
+      var top;
+
+      if ($(this).offset().top - $(window).scrollTop() + $swipeBlock.height() > $(window).height()) {
+
+        top = $(window).height() - ($(this).offset().top - $(window).scrollTop()) - $swipeBlock.height() -40;
+
+      } else {
+
+        top = - parseInt($swipeBlock.height()/2);
+      }
+
+
+      $swipeBlock.css('top', top  + 'px');
 
       $(this).parent().toggleClass('-active');
 
@@ -449,6 +461,65 @@ $(document).ready(function () {
   }
 
 
+  $('.ee-select-user-status-pics .status-item').click(function () {
+
+    $(this).parent().find('.status-item').removeClass('-selected');
+
+    $(this).addClass('-selected');
+
+    $(this).parent().find('input[type=hidden]').val($(this).data('value'))
+
+  });
+
+
+
+
+  var $swiper = $('#viewed-pages-slider');
+
+  var delay  = $swiper.data('autoplay-delay') ? {delay: $swiper.data('autoplay-delay')} : false;
+
+  new Swiper ($swiper, {
+
+    slidesPerView: 1,
+    navigation: {
+      nextEl: $swiper.parent().find('.swiper-button-next'),
+      prevEl: $swiper.parent().find('.swiper-button-prev'),
+    },
+    autoplay: delay,
+  });
+
+
+
+
+
+  $('#fixed-block .random-block .welcome-part .ee-button-7').click(function () {
+
+    $('#fixed-block .random-block .ajax-wrapper').load($('#fixed-block .random-block').data('api-url'), function () {
+
+      $("#fixed-block .random-block .ajax-wrapper").mCustomScrollbar({
+        theme: "light-thick",
+        scrollButtons:{ enable: true }
+
+      });
+
+      $('#fixed-block .random-block .js-add-to-favorite').click(toggleEvent);
+
+      $('#fixed-block .random-block .js-add-to-learn').click(toggleEvent);
+
+    });
+
+    $('#fixed-block .random-block .welcome-part').hide();
+    $('#fixed-block .random-block .main-part').fadeIn();
+
+  });
+
+  $('#fixed-block .random-block .js-try-again').click(function () {
+
+    $("#fixed-block .random-block .ajax-wrapper").mCustomScrollbar('destroy').html('');
+
+    $('#fixed-block .random-block .welcome-part .ee-button-7').trigger('click');
+
+  });
 
 });
 

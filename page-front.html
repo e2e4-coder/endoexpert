@@ -20,7 +20,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-1.12.4.min.js"></script>
     <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
     <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
     <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
@@ -384,9 +384,7 @@
             <a href="#p8"></a>
         </div>
 
-        <div class="fixed-btn-2-wrapper">
-            <a class="fixed-btn-2 -down"></a>
-        </div>
+
 
 
         <!--
@@ -414,9 +412,76 @@
             <div class="fixed-swipe-block">
                 <h2>Регистрация</h2>
 
-                <a class="reg-button" href="#">Медицинский работник</a>
-                <a class="reg-button" href="#">Представитель компании</a>
-                <a class="reg-button" href="#">Пациент</a>
+                <div class="ee-select-user-status">
+
+                    <h3>Выберите Ваш статус:</h3>
+
+                    <form>
+
+                        <div class="ee-select-user-status-pics">
+
+                            <input type="hidden" name="status" value="1">
+
+                            <div class="status-item -selected" data-value="1">
+
+                                <div class="item-pic -status-1">
+
+                                </div>
+
+                                <div class="item-label"><span>Медицинский работник</span></div>
+
+                            </div>
+
+                            <div class="status-item" data-value="2">
+
+                                <div class="item-pic -status-2">
+
+                                </div>
+
+                                <div class="item-label"><span>Представитель компании</span></div>
+
+                            </div>
+
+                            <div class="status-item" data-value="3">
+
+                                <div class="item-pic -status-3">
+
+                                </div>
+
+                                <div class="item-label"><span>Пациент</span></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-item -checkbox">
+                            <label class="checkbox-label ee-checkbox-3 -bg-white"><input name="name_1" type="checkbox" value="1"><span>Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></span></label>
+                        </div>
+
+                        <div class="form-item -checkbox">
+                            <label class="checkbox-label ee-checkbox-3 -bg-white"><input name="name_2" type="checkbox" value="1"><span>Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a></span></label>
+                        </div>
+
+                        <div class="form-item -checkbox">
+                            <label class="checkbox-label ee-checkbox-3 -bg-white"><input name="name_3" type="checkbox" value="1" checked=""><span>Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a></span></label>
+                        </div>
+
+
+
+
+
+                        <div class="private-area-description">Закрытая часть портала предназначена только для работников здравоохранения. Сделав выбор Вашего статуса и указывая свой e-mail, Вы подтверждаете: что ознакомились с текстом соглашения и поняли его.</div>
+
+
+                    </form>
+
+
+                    <p>Нужна помощь? <a href="#">Обратитесь в наш Центр поддержки.</a></p>
+
+
+                </div>
+
 
 
             </div>
@@ -430,71 +495,200 @@
 
                 <form>
 
-                    <table class="search-form-table form-table">
+                    <div class="ee-fixed-block-search">
 
-                        <tr>
-                            <td>
-                                <div class="form-item-checkbox-2">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name=""> По всему сайту
-                                    </label>
-                                </div>
-                            </td>
+                        <table>
 
-                            <td>
-                                <div class="form-item-checkbox-2">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name=""> По странице
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><label class="ee-checkbox-5"><input type="checkbox" name="n1"><span>По всему сайту</span></label></td>
+                                <td><label class="ee-checkbox-5"><input type="checkbox" name="n2"><span>По странице</span></label></td>
+                            </tr>
+                            <tr>
+                                <td><label class="ee-checkbox-5"><input type="checkbox" name="n3"><span>По разделу</span></label></td>
+                                <td><label class="ee-checkbox-5"><input type="checkbox" name="n4"><span>В избраном</span></label></td>
+                            </tr>
 
-                        <tr>
-                            <td>
-                                <div class="form-item-checkbox-2">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name=""> По разделу
-                                    </label>
-                                </div>
-                            </td>
+                        </table>
 
-                            <td>
-                                <div class="form-item-checkbox-2">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name=""> В избраном
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
+                        <div class="form-item">
+                            <input class="form-text" name="">
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <input class="form-text" name="">
-                            </td>
-                        </tr>
+                        <div class="form-description">
+                            Последние поисковые запросы:<br>
+                            клипсы, приказ действующий СанПин,<br>
+                            клипсы, приказ действующий СанПин
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-description">
-                                    Последние поисковые запросы:<br>
-                                    клипсы, приказ действующий СанПин,<br>
-                                    клипсы, приказ действующий СанПин
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2" class="form-actions">
-                                <button class="form-submit-2" type="submit">Найти</button>
-                            </td>
-                        </tr>
+                        <div class="form-actions">
+                            <button class="ee-button-7" type="submit">Найти</button>
+                        </div>
 
 
+                    </div>
 
-                    </table>
+
 
                 </form>
+
+
+            </div>
+
+        </div>
+
+        <div class="fixed-btn-2-wrapper">
+            <a class="fixed-btn-2 -views"></a>
+            <div class="fixed-swipe-block">
+                <h2>Просмотренные страницы</h2>
+
+                <div class="slider-wrapper-type-2">
+
+                    <div id="viewed-pages-slider" class="swiper-container" data-autoplay-delay="0">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+
+                                <div class="ee-publication-teaser-v2">
+
+                                    <div class="publication-image">
+                                        <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                    </div>
+
+                                    <div class="publication-info">
+
+                                        <span class="comments-count">20</span>
+                                        <span class="views-count">3000</span>
+                                        <div class="rating">
+                                            <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <div class="ee-publication-teaser-v2">
+
+                                    <div class="publication-image">
+                                        <a href="#"><img src="/local/assets/img/tmp/section-slide.jpg" width="252" height="141" alt=""></a>
+                                    </div>
+
+                                    <div class="publication-info">
+
+                                        <span class="comments-count">20</span>
+                                        <span class="views-count">3000</span>
+                                        <div class="rating">
+                                            <div class="br-wrapper br-theme-small-white-stars"><select title="Рейтинг" data-current-rating="2.5" style="display: none;"><option value="0"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select><div class="br-widget br-readonly"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected br-current"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-fractional br-fractional-50"></a><a href="#" data-rating-value="4" data-rating-text="4"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">2</div></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="publication-title"><a href="#"><b>«ЭЛЕКТРОХИРУРГИЯ»</b> — новый раздел на ENDOEXPERT.RU новый раздел </a></div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="fixed-btn-2-wrapper">
+            <a class="fixed-btn-2 -qr"></a>
+            <div class="fixed-swipe-block">
+
+                <h2>QR-код этой страницы</h2>
+
+                <div style="text-align: center">
+                    <img src="https://endoexpert.ru/upload/altasib/qrcode/e41c14846cab7468b4db0678a6864fba.png">
+                </div>
+
+                <p>Для продолжения изучения на мобильном устройстве ПРОСКАНИРУЙТЕ QR-код с помощью спец. программы или фотокамеры мобильного устройства</p>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="fixed-btn-2-wrapper -random">
+            <a class="fixed-btn-2 -random"></a>
+            <div class="fixed-swipe-block">
+
+                <div class="random-block" data-api-url="/local/assets/html_includes/ajax-random-article.html">
+
+                    <div class="welcome-part">
+
+                        <h2>Случайный выбор</h2>
+
+                        <p>данная функция, случайным образом выбирает информацию для Вашего изучения,<br>
+                            запустите  выбор нажав кнопку ниже</p>
+
+                        <p><img src="/local/assets/img/random.png" width="354" height="288"></p>
+
+                        <p><button class="ee-button-7" type="button">Запустить</button></p>
+
+                    </div>
+
+                    <div class="main-part" style="display: none">
+
+                        <h2>Случайный выбор</h2>
+
+                        <div class="top-buttons">
+                            <a href="#" class="ee-button-7">Перейти к изучению</a>
+                            <button class="js-try-again ee-button-7" type="button">Попробовать еще</button>
+                        </div>
+
+                        <div class="ajax-wrapper">
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
 
 
             </div>
@@ -507,93 +701,95 @@
                 <h2>Обратная связь<br>Напишите нам</h2>
 
                 <form>
-                    <table class="form-table">
 
-                        <tr>
-                            <th>Имя: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Фамилия: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Телефон: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>E-mail: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Сообщение: <sup>*</sup></th>
-                            <td>
+                    <div class="ee-fixed-block-form">
+
+                        <div class="form-header">
+                            Поделитесь своими идеями по улучшению нашей работы.
+                        </div>
+
+                        <div class="form-item">
+                            <label>Имя: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>Фамилия: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>Телефон: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>E-mail: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="grey-wrapper">
+
+                            <div class="form-item">
+                                <label>Тема: <sup>*</sup></label>
+                                <input type="text" class="form-text" name="">
+                            </div>
+
+                            <div class="form-item -textarea">
+                                <label>Сообщение: <sup>*</sup></label>
                                 <textarea class="form-textarea" name=""></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Я даю согласие<br>
-                                        на <a href="#" target="_blank">обработку персональных данных</a>
-                                    </label>
-                                </div>
+                            </div>
 
-                            </td>
-                        </tr>
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Я принимаю условия<br>
-                                        <a href="#" target="_blank">пользовательского соглашения</a>
-                                    </label>
-                                </div>
+                        <div class="form-item -checkbox">
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a> <sup>*</sup>
+                                </span>
+                            </label>
+                        </div>
 
-                            </td>
-                        </tr>
+                        <div class="form-item -checkbox">
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a> <sup>*</sup>
+                                </span>
+                            </label>
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Подписаться на новости<br>
-                                        <a href="#" target="_blank">(зарегистрироваться на сайте)</a>
-                                    </label>
-                                </div>
+                        <div class="form-item -checkbox">
 
-                            </td>
-                        </tr>
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a> <sup>*</sup>
+                                </span>
+                            </label>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-description">
-                                    Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалищацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.
-                                </div>
+                        </div>
 
-                            </td>
-                        </tr>
+                        <div class="form-description">
+                            Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалищацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <button type="submit" class="form-submit">Отправить</button>
-                            </td>
-                        </tr>
+                        <div class="form-actions">
+
+                            <div class="form-captcha">
+
+                                <span style="border: 1px dashed red;display: inline-block;height: 60px">Сюда вставить капчу</span>
+
+                            </div>
+
+                            <button type="submit" class="ee-button-11">Отправить</button>
+
+                        </div>
 
 
+                    </div>
 
-
-
-
-
-
-
-                    </table>
                 </form>
 
             </div>
@@ -606,115 +802,96 @@
                 <h2>Сообщение об ошибке<br>Что улучшить?</h2>
 
                 <form>
-                    <table class="form-table">
 
-                        <tr>
-                            <td colspan="2">
-                                Поделитесь своими идеями по улучшению нашей работы.
-                            </td>
-                        </tr>
+                    <div class="ee-fixed-block-form">
 
-                        <tr>
-                            <th>Имя: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Фамилия: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Телефон: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>E-mail: <sup>*</sup></th>
-                            <td><input type="text" class="form-text" name=""></td>
-                        </tr>
-                        <tr>
-                            <th>Сообщение: <sup>*</sup></th>
-                            <td>
+                        <div class="form-header">
+                            Поделитесь своими идеями по улучшению нашей работы.
+                        </div>
+
+                        <div class="form-item">
+                            <label>Имя: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>Фамилия: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>Телефон: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="form-item">
+                            <label>E-mail: <sup>*</sup></label>
+                            <input type="text" class="form-text" name="">
+                        </div>
+
+                        <div class="grey-wrapper">
+
+                            <div class="form-item">
+                                <label>Тема: <sup>*</sup></label>
+                                <input type="text" class="form-text" name="">
+                            </div>
+
+                            <div class="form-item -textarea">
+                                <label>Сообщение: <sup>*</sup></label>
                                 <textarea class="form-textarea" name=""></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Я даю согласие<br>
-                                        на <a href="#" target="_blank">обработку персональных данных</a>
-                                    </label>
-                                </div>
+                            </div>
 
-                            </td>
-                        </tr>
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Я принимаю условия<br>
-                                        <a href="#" target="_blank">пользовательского соглашения</a>
-                                    </label>
-                                </div>
+                        <div class="form-item -checkbox">
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a> <sup>*</sup>
+                                </span>
+                            </label>
+                        </div>
 
-                            </td>
-                        </tr>
+                        <div class="form-item -checkbox">
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Я принимаю условия <a href="#" target="_blank">пользовательского соглашения</a> <sup>*</sup>
+                                </span>
+                            </label>
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-item-checkbox">
-                                    <label>
-                                        <input class="i-check-ee" type="checkbox" name="">
-                                        Подписаться на новости<br>
-                                        <a href="#" target="_blank">(зарегистрироваться на сайте)</a>
-                                    </label>
-                                </div>
+                        <div class="form-item -checkbox">
 
-                            </td>
-                        </tr>
+                            <label class="ee-checkbox-5">
+                                <input type="checkbox" name="">
+                                <span>
+                                Подписаться на новости <a href="#" target="_blank">(зарегистрироваться на сайте)</a> <sup>*</sup>
+                                </span>
+                            </label>
 
-                        <tr>
-                            <td colspan="2">
-                                <div class="form-description">
-                                    Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалищацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.
-                                </div>
+                        </div>
 
-                            </td>
-                        </tr>
+                        <div class="form-description">
+                            Закрытая часть портала предназначена для только для работников здравоохранения. Оставив свой e-mail и специалищацию, Вы подтверждаете, что являетесь работником здравоохранения и что Вы ознакомились с текстом и поняли его.
+                        </div>
 
-                        <tr>
-                            <td colspan="2">
-                                <button type="submit" class="form-submit">Отправить</button>
-                            </td>
-                        </tr>
+                        <div class="form-actions">
+
+                            <div class="form-captcha">
+
+                                <span style="border: 1px dashed red;display: inline-block;height: 60px">Сюда вставить капчу</span>
+
+                            </div>
+
+                            <button type="submit" class="ee-button-11">Отправить</button>
+
+                        </div>
 
 
+                    </div>
 
-
-
-
-
-
-
-                    </table>
                 </form>
-            </div>
-
-        </div>
-
-        <div class="fixed-btn-2-wrapper">
-            <a class="fixed-btn-2 -qr"></a>
-            <div class="fixed-swipe-block">
-
-                <div style="float: left;margin-right: 20px;"><img src="https://endoexpert.ru/upload/altasib/qrcode/e41c14846cab7468b4db0678a6864fba.png"></div>
-
-                <div>Для продолжения изучения на мобильном устройстве ПРОСКАНИРУЙТЕ QR-код</div>
-
-
-
-
             </div>
 
         </div>
@@ -722,18 +899,38 @@
         <div class="fixed-btn-2-wrapper">
             <a class="fixed-btn-2 -tools"></a>
             <div class="fixed-swipe-block">
-                <h2>Заголовок</h2>
+                <h2>Сервисы</h2>
 
-                <p>Текст</p>
+                <div class="ee-fixed-block-tools">
+
+                    <p>Функционал данного сервиса доступен только зарегистрированным и авторизованным пользователям.</p>
+
+                    <div class="block-buttons">
+
+                        <a class="ee-button-7" href="#">Авторизоваться</a>
+                        <a class="ee-button-7 -red" href="#">Зарегистрироваться</a>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
 
+        <div class="fixed-btn-2-wrapper">
+            <a class="fixed-btn-2 -down"></a>
+        </div>
 
 
+        <script>
+            $(document).ready(function () {
 
+              $('.fixed-btn-2.-search').trigger('click');
 
-
+            });
+        </script>
 
 
     </div>

@@ -207,8 +207,21 @@ $(document).ready(function () {
 
   $('.toolbar-2 .ico-link').click(function () {
 
+    copyToClipboard(window.location.href);
+
+    var that = this;
+
+    setTimeout(function () {
+
+      $(that).tooltipster('content', 'Скопировано в буфер');
+      $(that).tooltipster('open');
+
+    }, 500);
 
 
+  }).tooltipster('instance').on('closing', function (e) {
+
+    $(e.origin).tooltipster('content', 'Копировать ссылку');
 
   });
 

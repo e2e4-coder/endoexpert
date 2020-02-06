@@ -366,7 +366,10 @@ $(document).ready(function () {
   });
 
 
-  $('.ee-link-widget .widget-btn').click(function () {
+  $('.ee-link-widget .widget-btn').tooltipster({
+    trigger : 'click',
+    content : 'Cкопировано в буфер'
+  }).click(function () {
 
     var text = $(this).prev().text();
 

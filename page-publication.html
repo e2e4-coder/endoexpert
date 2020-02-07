@@ -181,19 +181,21 @@
                             <div style="color: #fff">тут будет виджет шаринга</div>
                         </div>
 
-                        <div class="points-bage -gold"><span>110</span></div>
+                        <div class="points-bage -gold tooltip" title="баллы EndoExpert"><span>110</span></div>
 
-                        <div class="points-bage"><span>10</span></div>
+                        <div class="points-bage tooltip" title="баллы активности"><span>10</span></div>
 
                         <div class="right-side">
-                            <i class="ico-notification"></i>
+                            <i class="ico-notification tooltip" title="подписаться на обновления"></i>
                             <span class="sep"></span>
-                            <i class="ico-favorite" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <i class="ico-favorite tooltip" title="в избранное" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
                             <span class="sep"></span>
-                            <i class="ico-learn" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
+                            <i class="ico-learn tooltip" title="добавить к изучению" data-element-id="234" data-api-url="/local/assets/json/get-one.json"></i>
                             <span class="sep"></span>
-                            <i class="ico-timer"></i>
-                            <span class="time-text">130 мин</span>
+                            <span class="tooltip" title="время чтения">
+                                <i class="ico-timer"></i>
+                                <span class="time-text">130 мин</span>
+                            </span>
 
                         </div>
 
@@ -577,7 +579,7 @@
                                     <input readonly type="text" value="https://gastroendoscopy.ru/a65.php">
 
                                 </div>
-                                <div class="widget-btn"></div>
+                                <span class="tooltip" title="Копировать ссылку"><div class="widget-btn"></div></span>
                             </div>
 
 
@@ -976,10 +978,10 @@
 
                                         <div class="attach-buttons">
 
-                                            <span class="btn-photo"></span>
-                                            <span class="btn-video"></span>
-                                            <span class="btn-document"></span>
-                                            <span class="btn-youtube"></span>
+                                            <span class="btn-photo tooltip" title="прикрепить фото"></span>
+                                            <span class="btn-video tooltip" title="прикрепить видео"></span>
+                                            <span class="btn-document tooltip" title="прикрепить файл"></span>
+                                            <span class="btn-youtube tooltip" title="вставить видео YouTube"></span>
 
                                             <div style="display: none">
 
@@ -1070,19 +1072,19 @@
 
                                     <div class="admin-controls">
 
-                                        <a class="control-favorite" href="#"></a>
-                                        <a class="control-up"></a>
-                                        <a class="control-select"></a>
-                                        <a class="control-paint"></a>
-                                        <a class="control-box"></a>
-                                        <a class="control-delete"></a>
-                                        <a class="control-ok"></a>
+                                        <a title="отметить звездой" class="tooltip control-favorite" href="#"></a>
+                                        <a title="поднять" class="tooltip control-up"></a>
+                                        <a title="выделить" class="tooltip control-select"></a>
+                                        <a title="редактировать" class="tooltip control-paint"></a>
+                                        <a title="архивировать" class="tooltip control-box"></a>
+                                        <a title="удалить" class="tooltip control-delete"></a>
+                                        <a title="одобрить" class="tooltip control-ok"></a>
 
                                     </div>
 
                                     <div class="user-controls">
 
-                                        <span class="control-add-to-learn js-add-to-learn" data-api-url="local/assets/json/get-one.json" data-element-id="12345">Добавить</span>
+                                        <span title="к изучению" class="tooltip control-add-to-learn js-add-to-learn" data-api-url="local/assets/json/get-one.json" data-element-id="12345">Добавить</span>
 
                                         <div class="ee-like-dislike-control" data-api-url="local/assets/json/get-one.json" data-element-id="12345">
 

@@ -483,7 +483,8 @@ $(document).ready(function () {
 
   new Swiper ($swiper, {
 
-    slidesPerView: 1,
+    slidesPerView: 3,
+    spaceBetween: 20,
     navigation: {
       nextEl: $swiper.parent().find('.swiper-button-next'),
       prevEl: $swiper.parent().find('.swiper-button-prev'),

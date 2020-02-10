@@ -92,6 +92,8 @@
         content: '';position: absolute;top: 10px;left: 6px;
         .sprite(@ico-eye);
       }
+
+      +.fixed-swipe-block {width: 800px;padding-bottom: 30px}
     }
     &.-message {
       &:before {
@@ -165,7 +167,13 @@
         left: -826px;
       }
 
+      &.-views {
+        left: -826px;
+      }
+
     }
+
+
 
 
   }
@@ -243,13 +251,21 @@
 
   .slider-wrapper-type-2 {
 
-    width: 258px;
+
     margin: 0 auto;
+    width: 730px;
 
     a {color: #fff}
 
+    .swiper-slide {
+      width: 230px;
+    }
+
     .ee-publication-teaser-v2 {
       border: none;
+      border-radius: 0;
+      width: 230px;
+
 
     }
 

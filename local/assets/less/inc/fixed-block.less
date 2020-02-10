@@ -423,6 +423,16 @@
 
     }
 
+    &.-attach {
+
+      padding-left: 0;
+
+      .ee-attach-field {
+        margin: -5px 0 25px 0;
+      }
+
+    }
+
   }
 
   .grey-wrapper {
@@ -522,6 +532,40 @@
     }
   }
 
+
+
+}
+
+.ee-attach-field {
+
+  font-size: 12px;
+
+  input {display: none}
+
+  .control-delete {display: none;color: red;cursor: pointer}
+
+  i {vertical-align: middle;margin-right: 15px;margin-top: -3px}
+
+  span {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .field-title {
+    color: @link-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .field-file {
+    display: none;
+    max-width: 60%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #c2bebe;
+    margin-right: 10px;
+  }
 
 
 }

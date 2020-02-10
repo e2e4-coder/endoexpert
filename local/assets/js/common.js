@@ -524,6 +524,52 @@ $(document).ready(function () {
 
   });
 
+
+
+
+
+  $('.ee-attach-field').each(function () {
+
+    var that = this;
+
+    $(this).find('input[type=file]').change(function () {
+
+      if (this.files.length) {
+
+        $(that).find('.field-file').text(this.files[0].name).css('display', 'inline-block');
+
+        $(that).find('.control-delete').css('display', 'inline-block');
+
+        $(that).find('.field-title').hide();
+
+      }
+
+    });
+
+
+    $(this).find('.field-title').click(function () {
+
+      $(that).find('input[type=file]').trigger('click');
+
+
+
+    });
+
+    $(this).find('.control-delete').click(function () {
+
+      $(this).hide();
+      $(that).find('.field-file').hide().text('');
+      $(that).find('input[type=file]').val('');
+      $(that).find('.field-title').css('display', 'inline-block');
+
+
+    });
+
+  });
+
+
+
+
 });
 
 

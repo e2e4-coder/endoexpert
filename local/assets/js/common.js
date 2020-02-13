@@ -510,6 +510,8 @@ $(document).ready(function () {
 
       $('#fixed-block .random-block .js-add-to-learn').click(toggleEvent);
 
+      $('#fixed-block .random-block .js-go-to-learn').attr('href', $(this).find('.article-title a').attr('href'));
+
     });
 
     $('#fixed-block .random-block .welcome-part').hide();

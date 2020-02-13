@@ -43,6 +43,12 @@ body {
 
   }
 
+  @media print {
+
+    width: 100%;
+
+  }
+
 }
 
 
@@ -230,6 +236,16 @@ body {
   }
 
 
+  @media print {
+
+    .ee-sidebar {
+      display: none;
+    }
+
+    .ee-main-wrapper {
+      width: 100%;
+    }
+  }
 
 }
 
@@ -275,5 +291,9 @@ body {
   cursor: pointer;
 
   i {display: block}
+
+  @media print {
+    display: none;
+  }
 
 }

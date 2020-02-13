@@ -56,7 +56,19 @@
 
 
 
+  @media print {
 
+    .hidden-text {
+      display: block !important;
+      max-height:unset !important;
+
+      &:after {display: none;}
+
+    }
+
+    .expand-toggle {display: none;}
+
+  }
 
 
 

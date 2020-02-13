@@ -1360,4 +1360,46 @@
 
   }
 
+  @media print {
+
+    .toolbar-1, .toolbar-2, .toolbar-3 {
+      display: none;
+    }
+
+    .bg-white {
+      padding: 0;
+      margin: 0;
+
+      >* {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    }
+
+    .text-section.-bottom-gradient {
+
+      max-height: unset !important;
+
+      &:after {display: none}
+
+    }
+
+    .publication-expert-comments {
+
+      .comment-item .item-text {
+        max-height: unset !important;
+      }
+
+      .comment-item .expand-button {display: none}
+    }
+
+    .comments-section+.bg-lightgrey {
+      display: none;
+    }
+
+
+
+  }
+
 }

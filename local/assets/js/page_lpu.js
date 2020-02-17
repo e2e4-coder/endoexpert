@@ -8,6 +8,12 @@ $(document).ready(function () {
 
   });
 
+  $('.ee-search-block-2 .last-queries .expand-toggle').click(function () {
+
+    $(this).parent().addClass('-expanded');
+
+  });
+
 
 });
 

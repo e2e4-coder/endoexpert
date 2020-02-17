@@ -297,3 +297,22 @@ body {
   }
 
 }
+
+.-only-for-mobile {
+
+  display: none !important;
+
+  @media @w320 {
+
+    display: block !important;
+  }
+
+}
+
+.-only-for-desktop {
+
+  @media @w320 {
+
+    display: none !important;
+  }
+}

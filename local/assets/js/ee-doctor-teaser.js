@@ -21,12 +21,29 @@ $(document).ready(function () {
       navigation: {
         nextEl: $(this).find('.swiper-button-next'),
         prevEl: $(this).find('.swiper-button-prev'),
+      },
+
+      breakpoints: {
+
+        414: {
+          slidesPerView: 5,
+        },
+        330: {
+          slidesPerView: 4,
+        }
       }
 
     });
 
   });
 
+  $('.ee-doctor-teaser .ee-mobile-expandable-block.-schedule').on('updated', function () {
+
+    $(this).find('.swiper-container')[0].swiper.update();
+
+
+
+  });
 
 
 

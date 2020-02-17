@@ -38,6 +38,26 @@
     }
   }
 
+  &.-only-mobile {
+
+    .expand-toggle {display: none}
+
+    .hidden-text {display: block;}
+
+  }
+
+  @media @w320 {
+
+    &.-only-mobile {
+
+      .expand-toggle {display: block}
+
+      .hidden-text {display: none;}
+
+    }
+
+  }
+
 
   @media print {
 

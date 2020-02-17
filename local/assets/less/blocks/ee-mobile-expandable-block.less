@@ -1,0 +1,54 @@
+@import "../inc/variables";
+
+.ee-mobile-expandable-block {
+
+
+
+  .block-title {
+
+    display: none;
+
+    padding-right: 30px;
+    color: @link-color;
+    text-align: right;
+    border-bottom: 3px solid #393b3b;
+    padding-bottom: 2px;
+    position: relative;
+
+    &:after {
+
+      content: '\f078';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      bottom: -11px;right: 0px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid @link-color;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 11px;
+      line-height: 20px;
+      background: #030102;
+      color: @link-color;
+
+
+
+    }
+
+    &.-active:after {transform: rotate(180deg);}
+
+  }
+
+
+  @media @w320 {
+
+    .block-title { display: block;}
+
+    .block-body {padding-top: 10px;display: none}
+
+
+
+  }
+
+}

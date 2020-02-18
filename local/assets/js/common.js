@@ -126,7 +126,7 @@ $(document).ready(function () {
 
       if ($(this).offset().top - $(window).scrollTop() + $swipeBlock.height() > $(window).height()) {
 
-        top = $(window).height() - ($(this).offset().top - $(window).scrollTop()) - $swipeBlock.height() -40;
+        top = $(window).height() - ($(this).offset().top - $(window).scrollTop()) - $swipeBlock.height() -120;
 
       } else {
 

@@ -1,0 +1,68 @@
+@import "inc/variables";
+
+.page-faq {
+
+  background: #2e2f2f url(/local/assets/img/page_front/bg_front.jpg) top center repeat-y;
+
+  .ee-main-wrapper {
+    background: none;
+    width: 810px;
+  }
+
+  .ee-section-slide {
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .ask-question-form {
+
+    background: #101011;
+    padding: 15px 10px;
+    margin-bottom: 30px;
+
+    textarea.-question {height: 80px}
+    textarea.-info {height: 80px}
+
+  }
+
+
+
+  .ee-publication-teaser-v2 {
+    border-color: #6295d1;
+
+  }
+
+
+
+  @media @w320 {
+
+    background-image: none;
+
+    .ee-main-wrapper {
+      width: 100%;
+
+    }
+
+    .ee-search-block-2 {margin-bottom: 20px}
+
+    .ee-default-section.-top-authors {display: none}
+
+    .ask-question-form {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+
+  }
+
+}
+
+.mfp-content .add-answer-form {
+
+  textarea.-answer {height: 80px;resize: vertical}
+
+}

@@ -12,13 +12,18 @@
   input {display: none}
 
   span {
-    display: inline-block;
-    vertical-align: middle;
+
+    position: relative;
+    display: block;
+    padding-left: 50px;
+
 
 
     &:before {
       content: "";
-      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       background: #78797a;
       width: 28px;
       height: 28px;

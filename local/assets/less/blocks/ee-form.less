@@ -11,6 +11,11 @@
   .form-actions {
     padding-top: 5px;
     text-align: right;
+
+    .ee-button-3 {
+      font-weight: 300;
+    }
+
   }
 
   .form-item {
@@ -38,7 +43,7 @@
     }
   }
 
-  .form-text, .form-select {
+  .form-text, .form-select, .form-textarea, .admin-notes {
 
     height: 48px;
     box-sizing: border-box;
@@ -51,6 +56,21 @@
     color: #fff;
     font-family: inherit;
     outline:none;
+    font-weight: 300;
+
+  }
+
+  .admin-notes {
+    height: auto;
+    line-height: 1.3;
+    padding: 10px 15px;
+  }
+
+  .form-textarea {
+
+    resize: none;
+    line-height: 1.3;
+    padding: 10px 15px;
 
   }
 
@@ -81,4 +101,36 @@
 
   }
 
+  .ee-checkbox-4 {
+
+    color: #989899;
+
+  }
+
+  .char-counter-wrapper {
+
+    position: relative;
+
+    .chars-remaining {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 10px;
+      color: #9c9696;
+    }
+  }
+
+  .form-checkboxes-group {
+
+    margin: 20px 0;
+  }
+
+
+  @media @w320 {
+
+    .form-item {width: 100% !important;}
+
+  }
+
 }
+

@@ -13,7 +13,8 @@ $(document).ready(function () {
         clickable: true
       },
       loop: true,
-      autoplay: frontPageSliderDelay
+      autoplay: frontPageSliderDelay,
+      lazy: true
     });
 
     var lastPublicationsSliderDelay = $('#front-page-last-publications-slider').data('autoplay-delay');
@@ -34,6 +35,8 @@ $(document).ready(function () {
       },
 
       autoplay: lastPublicationsSliderDelay,
+      lazy: true,
+      watchSlidesVisibility: true,
 
       breakpoints: {
 
@@ -63,6 +66,8 @@ $(document).ready(function () {
       },
 
       autoplay: popularSliderDelay,
+      lazy: true,
+      watchSlidesVisibility: true,
 
       breakpoints: {
 
@@ -93,6 +98,8 @@ $(document).ready(function () {
       },
 
       autoplay: facebookSliderDelay,
+      lazy: true,
+      watchSlidesVisibility: true,
 
       breakpoints: {
 
@@ -125,6 +132,8 @@ $(document).ready(function () {
       },
 
       autoplay: expertsSliderDelay,
+      lazy: true,
+      watchSlidesVisibility: true,
 
       breakpoints: {
 
@@ -154,6 +163,8 @@ $(document).ready(function () {
       },
 
       autoplay: leadersSliderDelay,
+      lazy: true,
+      watchSlidesVisibility: true,
 
       breakpoints: {
 

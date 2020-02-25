@@ -200,6 +200,8 @@ $(document).ready(function () {
     },
 
     autoplay: sponsorSliderDelay,
+    lazy: true,
+    watchSlidesVisibility: true,
 
 
   });
@@ -222,6 +224,8 @@ $(document).ready(function () {
     },
 
     autoplay: partnersSliderDelay,
+    lazy: true,
+    watchSlidesVisibility: true,
 
 
   });

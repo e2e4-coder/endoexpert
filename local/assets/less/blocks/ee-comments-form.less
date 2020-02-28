@@ -7,6 +7,13 @@
   border-radius: 5px;
   padding: 10px;
 
+  .form-title {
+    font-size: 38px;
+    color: @gold-color;
+    margin: 0 0 30px 0;
+    padding-top: 10px;
+  }
+
 
   .form-tabs {
 
@@ -66,6 +73,22 @@
 
     position: relative;
 
+    padding-left: 50px;
+
+    .user-avatar {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      border-radius: 5px;
+
+      img {
+        display: block;
+      }
+    }
+
+
     textarea {
 
       width: 100%;
@@ -100,6 +123,9 @@
 
 
   .form-bottom {
+
+    padding-left: 50px;
+    position: relative;
 
     display: flex;
     justify-content: stretch;
@@ -158,6 +184,20 @@
 
     }
 
+    .lk-link {
+
+      flex: 1 1 auto;
+      text-align: right;
+      padding-right: 25px;
+
+      .ee-button-3 {
+
+        margin-left: 25px;
+        padding: 0 22px;
+      }
+
+    }
+
 
   }
 
@@ -174,6 +214,24 @@
     }
 
 
+
+  }
+
+  &.-wide {
+
+    padding-bottom: 25px;
+
+    .form-item-textarea {padding-right: 220px;}
+
+    .form-actions {
+      position: absolute;
+      right: 0;
+      top: -66px;
+
+      .ee-button-4 {
+        padding: 0 55px;
+      }
+    }
 
   }
 

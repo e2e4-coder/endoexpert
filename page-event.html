@@ -30,6 +30,7 @@
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-char-counter/char-counter.js"></script>
 
 
 
@@ -38,6 +39,21 @@
     <script src="/local/assets/js/page_event.js"></script>
     <script src="/local/assets/js/ee-clock.js"></script>
     <script src="/local/assets/js/ee_slider_2.js"></script>
+    <script src="/local/assets/js/invite_friends_app.js"></script>
+    <script src="/local/assets/js/ee-invite-by-email-form.js"></script>
+    <script src="/local/assets/js/ee-gallery-slider.js"></script>
+    <script src="/local/assets/js/ee-contacts-slider.js"></script>
+    <script src="/local/assets/js/ee-faq-list.js"></script>
+    <script src="/local/assets/js/ee-insta-event-slider.js"></script>
+    <script src="/local/assets/js/ee-single-image-slider.js"></script>
+
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://unpkg.com/vuejs-paginate@latest"></script>
 
 
 
@@ -2047,6 +2063,1096 @@
 
                 </div>
 
+                <div class="bg-2 bg-full-width">
+
+                    <div class="event-block -from-redaction">
+
+                        <div class="ee-from-redaction">
+
+                            <div class="block-img"></div>
+
+                            <div class="block-title">От редакции EndoExpert.ru</div>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specim</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="toolbar-2">
+
+                        <i class="ico-share"></i>
+
+                        <span class="share-widget">сюда вставить виджет шаринга</span>
+
+                    </div>
+
+
+                    <div class="invite-friends-wrapper">
+
+                       <div id="invite-friends-popup" class="endoexpert-popup mfp-hide">
+
+                            <div id="invite-friends-app" data-topic-id="34534"></div>
+
+                            <script>includeHTML('/local/assets/html_includes/invite-friends-app.html', document.getElementById('invite-friends-app'));</script>
+
+
+                        </div>
+
+                        <div id="invite-friends-popup-success" class="endoexpert-popup mfp-hide">
+
+                            <p>Приглашение успешно отправлено!</p>
+
+                            <div class="popup-buttons">
+                                <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-invite-by-email-form">
+
+                        <i class="ico-invite-friends js-invite-friends"></i>
+
+                        <form action="/">
+                            <input type="hidden" name="element_id" value="34534">
+                            <input class="form-text" name="email" placeholder="Введите email" type="text">
+                            <input class="form-submit" type="submit" value="Пригласить">
+                        </form>
+
+
+                        <div id="invite-by-email-popup-success" class="endoexpert-popup mfp-hide">
+
+                            <p>Приглашение успешно отправлено!</p>
+
+                            <div class="popup-buttons">
+                                <button class="lk-button -orange" type="button" onclick="$.magnificPopup.close()">OK</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="event-block -photo-archive">
+
+                    <h2>Фотоархив мероприятия</h2>
+
+
+                    <div class="ee-gallery-slider">
+
+                        <div class="sliders-wrapper">
+
+                            <div class="slider-large">
+
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="1046" height="700">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="slider-small">
+
+
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/local/assets/img/tmp/gallery_photo_1.jpg" data-full-src="/local/assets/img/tmp/conf_photos/1.jpg" width="185" height="124">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="slider-bottom-links">
+
+                            <a href="#">cмотреть фотоархив мероприятия в фотогаллерее EndoExpert.ru  >></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="event-block -view-1">
+
+                    <h2>Трансфер</h2>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288">
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="event-block -view-1">
+
+                    <h2>Питание</h2>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <img src="/local/assets/img/tmp/event_food.jpg" width="430" height="288">
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="event-block -view-1">
+
+                    <h2>Бронирование гостиниц</h2>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <img src="/local/assets/img/tmp/event_hotel.jpg" width="430" height="288">
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <h2>Стоимость пакета участника / стоимость участия</h2>
+
+
+                    <div class="ee-expandable-text">
+
+                        <p>Вход на научные заседания конференции свободный.<br>
+                            Для получения полного пакета участника, необходима предварительная регистрация и оплата участия.</p>
+
+                        <p class="-color-gold">СТОИМОСТЬ ПАКЕТА УЧАСТНИКА КОНФЕРЕНЦИИ:<br>
+                            УЧАСТНИКИ ИЗ РОССИИ</p>
+
+                        <p><b>Предварительная оплата (до 22 марта)</b><br>
+                            •   Врач зарегистрированный на EndoExpert.ru - 1 руб.<br>
+                            •   Врач – эндоскопист (член Российского Эндоскопического Общества)- 1500 руб.<br>
+                            •   Врач – эндоскопист – 2000 руб.<br>
+                            •   Медсестра – 1000 руб.</p>
+
+                        <p><b>Оплата на месте (27-28 марта)</b><br>
+                            •   Врач зарегистрированный на EndoExpert.ru - 1 руб.<br>
+                            •   Врач – эндоскопист (член Российского Эндоскопического Общества) - 3500 руб.<br>
+                            •   Врач – эндоскопист – 3500 руб.<br>
+                            •   Медсестра зарегистрированная на EndoExpert.ru - 1 руб.<br>
+                            •   Медсестра – 2000 руб.</p>
+
+                        <p class="-color-gold">ИНОСТРАННЫЕ УЧАСТНИКИ</p>
+
+                        <p><b>Оплата только на месте (27-28 марта)</b><br>
+                            •   Врач зарегистрированный на EndoExpert.ru - 1 руб.<br>
+                            •   Врач – эндоскопист – 3500 руб.<br>
+                            •   Медсестра зарегистрированная на EndoExpert.ru - 1 руб.<br>
+                            •   Медсестра – 2000 руб.</p>
+
+                        <p>* ндс не облагается</p>
+
+
+                        <div class="hidden-text" style="display: none;">
+
+                            <p>Разворачиваемый текст...</p>
+
+                        </div>
+
+                        <div class="expand-toggle -large">
+                            <div class="download-wrapper"><b>Публичный договор-оферта:</b> <a href="#"><span>Скачать</span></a></div>
+                            <span data-expand-text="Развернуть">Развернуть</span>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <h2>Способы оплаты</h2>
+
+                    <div class="ee-expandable-text">
+
+                        <p class="-color-gold">КАК ОПЛАТИТЬ ПАКЕТ УЧАСТНИКА: <a class="ee-button-3 -thin -btn-inline" href="#">Перейти к оплате</a> <a class="ee-button-3 -thin -btn-inline" href="#">Личный кабинет</a></p>
+
+                        <p><b>ПРЕДВАРИТЕЛЬНАЯ ОПЛАТА</b><br>
+                        •   По квитанции в отделении любого банка на территории РФ<br>
+                        •   Через форму онлайн-платежей в любом интернет-банке (при оплате через интернет-банк, пожалуйста, указывайте в назначение платежа ФИО участника)<br>
+                            •   Также оплата может быть проведена от юридического лица (Вашей организацией по месту работы)</p>
+
+                        <p><b>ОПЛАТА НА МЕСТЕ (27-28 МАРТА)</b><br>
+                            •   Только наличный расчет в рублях (банковские карты и иностранная валюта не принимаются)</p>
+
+                        <p class="-color-gold">ОБРАТИТЕ ВНИМАНИЕ, ПРЕДВАРИТЕЛЬНАЯ ОПЛАТА НАМНОГО ВЫГОДНЕЕ!</p>
+
+
+
+
+                        <div class="hidden-text" style="display: none;">
+
+                            <p>Разворачиваемый текст...</p>
+
+                        </div>
+
+                        <div class="expand-toggle -large">
+                            <span data-expand-text="Развернуть">Развернуть</span>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>Требования к тезисам</h2>
+
+                    <p>Для получения полного пакетДля освещения актуальных вопросов и обмена опытом по теме конференции ежегодно выпускается сборник материалов Конференции «Актуальные вопросы эндоскопии». Просим направлять материалы, отражающие современные возможности эндоскопии по следующим разделам:</p>
+                    <p>• Детская эндоскопия<br/>
+                        • Современная гастроэнтерология и эндоскопия<br/>
+                        • Диагностическая и лечебная бронхоскопия<br/>
+                        • Экстренная эндоскопия<br/>
+                        • Капсульная эндоскопия<br/>
+                        • Диагностика и лечение раннего рака желудочно-кишечного тракта. <br/>
+                        • Скрининг рака желудка и рака толстой кишки<br/>
+                        • Осложнения диагностической и лечебной эндоскопии<br/>
+                        • Новые технологии в эндоскопии<br/>
+                        Для удобства и ускорения обработки присланных тезисов просим Вас внимательно прочитать и соблюдать следующие несложные правила.
+                    </p>
+                    <p class="-color-gold">СРОК ПОДАЧИ ТЕЗИСОВ - 4 ФЕВРАЛЯ 2019 Г.</p>
+                    <p><b>Требования к оформлению тезисов:</b><br/>
+                        • Название файла с тезисами должно начинаться с фамилии авторов.<br/>
+                        • Шрифт – Times New Roman (русский) размером 12 пт, обычный; межстрочный интервал – полуторный; расстановка переносов – автоматическая,<br/>
+                        • Объем тезисов - не более 4 страниц формата А4
+                    </p>
+                    <p><b>Последовательность расположения информации:</b><br/>
+                        • название доклада,<br/>
+                        • фамилии авторов и инициалы, должность, место работы,<br/>
+                        • город,<br/>
+                        • текст тезисов.
+                    </p>
+                    <p>- К тексту тезисов просим приложить цветную фотографию автора/докладчика (при наличии технической возможности фото авторов и цветные иллюстрации будут опубликованы в тексте тезисов).</p>
+                    <p>- Фотографии (картинки), содержащиеся в тексте тезисов, прилагаются отдельным файлом, названия фотографий (картинок) должны соответствовать именам авторов в тексте тезисов.</p>
+                    <p>- Фотографии (картинки) публикуются при наличии технической возможности (просим получать подтверждение от оргкомитета), допускается наличие диаграмм и таблиц.</p>
+                    <p>- Не используйте сокращений в названиях тезисов, при использовании сокращений терминов в тексте в первый раз термин указывается полностью, вслед за ним в скобках – сокращение.</p>
+                    <p>Тезисы, оформленные с нарушением этих требований и/или без соблюдения норм русского языка, рассматриваться не будут. Оргкомитет Конференции оставляет за собой право корректировать тезисы, изменять форму представления материалов или, даже, не принимать их к публикации. Тезисы будут публиковаться без корректорской и редакторской правки.</p>
+                    <p>Тезисы направлять по электронной почте <a href="#">EndoExpert@cdkscenter.ru</a></p>
+                    <p>Просим в названии файла первым словом указать фамилию автора. При пересылке тезисов убедитесь, пожалуйста, в получении подтверждения их регистрации, не забудьте в письме указать Ваши контактные данные, адрес и телефон для связи.</p>
+                    <p>Оргкомитет не будет рассматривать тезисы, присланные по факсу, а также в виде файлов, формат которых отличается от файлов .doc (Word)</p>
+                    <p>Требования к подаче тезисов <a class="ee-button-12 -btn-inline" href="#">Скачать</a> </p>
+                    <p><b>По вопросам, связанным с публикацией тезисов, просим обращаться в оргкомитет:</b><br/>
+                        Дирекция Центра деловых контактов и сотрудничества:<br/>
+                        тел.: <a href="#">+7(812) 635-70-15</a>, <a href="#">635-70-16</a>, <a href="#">635-65-64</a>, <a href="#">635-65-63</a><br/>
+                        e-mail: <a href="#">EndoExpert@cdkscenter.ru</a><br/>
+                        Координатор конференции Бармина Ольга Михайловнаа участника, необходима предварительная регистрация и оплата участия.
+                    </p>
+
+                </div>
+
+
+                <div class="event-block -expandable -expanded">
+
+                    <span class="ee-button-12"></span>
+
+                    <h2>Заявка на участие в конкурсе<br>«Лучший клинический случай»</h2>
+
+                    <div class="block-body">
+
+
+                        <p class="-color-gold">ПОРЯДОК ПОДАЧИ ЗАЯВКИ </p>
+
+                        <p><strong>Через форму на портале EndoExpert.ru:</strong> <a href="#" class="ee-button-3 -btn-inline" style="padding: 0 20px">ПОДАТЬ ЗАЯВКУ НА «ЛУЧШИЙ КЛИНИЧЕСКИЙ СЛУЧАЙ»</a>  <a href="#" class="ee-button-3 -btn-inline -thin" style="padding: 0 20px">Личный кабинет</a></p>
+
+                        <p>или <strong>заявка отсылается на электронный адрес:</strong> <br/>
+                            <a href="http://№">info@akr-forum.ru</a> с пометкой «Заявка на доклад. Форум в Самаре» с последующим получением подтверждения о принятии и рассмотрения заявки.
+                        </p>
+                        <p><strong>В теле письма-заявки необходимо указать: </strong><br>
+                            - тему доклада <br/>
+                            - полное ФИО автора <br/>
+                            - город и место работы <br/>
+                            <span class="-color-gold">! Приложить: тезис с кратким содержанием доклада</span>
+                        </p>
+                        <p><strong>Порядок оформления документа (вложения в письмо-заявку) <br/>
+                        </strong>• Гарнитура шрифта — Таймс (Times New Roman). <br/>
+                            • Размер шрифта — 12 пунктов. <br/>
+                            • Межстрочный интервал — 1,5 пт. <br/>
+                            • Текст не более 2300 знаков, включая пробелы.
+                        </p>
+                        <p><strong>Форма представления научных материалов <br/>
+                        </strong>Научный комитет Форума формирует программу устной сессии с учетом пожеланий потенциальных лекторов, подавших заявки для рассмотрения к участию в научной программе в тезисной (текстовой) форме с пометкой к письму: "Устное выступление"<br/>
+                            Длительность выступления – не более 15 минут. <br/>
+                            <span class="-color-gold">Заявки принимаются до 25 июля 2019 г.</span>
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="event-block -expandable -expanded">
+
+                    <span class="ee-button-12"></span>
+
+                    <h2>Заявка на участие в конкурсе «ЭндоАрт»</h2>
+
+                    <div class="block-body">
+
+
+                        <p class="-color-gold">ПОРЯДОК ПОДАЧИ ЗАЯВКИ </p>
+
+                        <p><strong>Через форму на портале EndoExpert.ru:</strong> <a href="#" class="ee-button-3 -btn-inline" style="padding: 0 20px">ПОДАТЬ ЗАЯВКУ НА УЧАСТИЕ В КОНКУРСЕ «ЭНДОАРТ»</a>  <a href="#" class="ee-button-3 -btn-inline -thin" style="padding: 0 20px">Личный кабинет</a></p>
+
+
+                        <p>
+                            <span class="-color-gold">Заявки принимаются до 25 июля 2019 г.</span>
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="event-block -expandable -expanded">
+
+                    <span class="ee-button-12"></span>
+
+                    <h2>Заявка на представление стендового доклада<br>(постерная сессия)</h2>
+
+                    <div class="block-body">
+
+
+                        <p class="-color-gold">ПОРЯДОК ПОДАЧИ ЗАЯВКИ </p>
+
+                        <p><strong>Через форму на портале EndoExpert.ru:</strong> <a href="#" class="ee-button-3 -btn-inline" style="padding: 0 3px">ПОДАТЬ ЗАЯВКУ НА ПРЕДОСТАВЛЕНИЕ СТЕНДОВОГО ДОКЛАДА</a>  <a href="#" class="ee-button-3 -btn-inline -thin" style="padding: 0 20px">Личный кабинет</a></p>
+
+                        <p>или <strong>заявка отсылается на электронный адрес</strong>: <br/>
+                        <a href="#">info@akr-forum.ru</a> с пометкой «Заявка на доклад. Форум в Самаре» с последующим получением подтверждения о принятии и рассмотрения заявки.
+                    </p>
+                        <p><strong>В теле письма-заявки необходимо указать: <br/>
+                        </strong>- тему доклада <br/>
+                            - полное ФИО автора <br/>
+                            - город и место работы <br/>
+                            <span class="-color-gold">! Приложить: тезис с кратким содержанием доклада</span>
+                        </p>
+                        <p><strong>Порядок оформления документа (вложения в письмо-заявку) <br/>
+                        </strong>• Гарнитура шрифта — Таймс (Times New Roman). <br/>
+                            • Размер шрифта — 12 пунктов. <br/>
+                            • Межстрочный интервал — 1,5 пт. <br/>
+                            • Текст не более 2300 знаков, включая пробелы.
+                        </p>
+                        <p><strong>Форма представления научных материалов <br/>
+                        </strong>Научный комитет Форума формирует программу устной сессии с учетом пожеланий потенциальных лекторов, подавших заявки для рассмотрения к участию в научной программе в тезисной (текстовой) форме с пометкой к письму: "Устное выступление"<br/>
+                            Длительность выступления – не более 15 минут.
+                        </p>
+                        <p class="-color-gold">ПРИГЛАШАЕМ ВАС ПРИНЯТЬ УЧАСТИЕ В РАБОТЕ II ПОСТЕРНОЙ СЕССИИ!</p>
+                        <p>Представить свою работу на Постерной сессии могут все молодые специалисты в возрасте до 40 лет.<br/>
+                            Победителя определяет комиссия из членов правления Российского эндоскопичексого общества. <br/>
+                            Приз победителю - участие в ХI Конференции «Актуальные вопросы эндоскопии - 2020»<br/>
+                            Для участия необходимо отправить заявку в оргкомитет в срок до 15 марта 2019г.
+                        </p>
+                        <p>Заявка на участие в Постерной сессии <a class="ee-button-12 -btn-inline" href="#">скачать</a></p>
+                        <p><strong>Требования, предъявляемые к стендовому докладу:<br/>
+                        </strong>Стендовый доклад должен быть представлен (распечатан) на 1 листе формата А0 (841 x 1189 мм)вертикальной ориентации.
+                        </p>
+                        <p><strong>На стенде обязательно должно присутствовать: <br/>
+                        </strong>• название стендового доклада, ФИО автора (ов), ФИО докладчика, Больница, Город<br/>
+                            • цель работы <br/>
+                            • основной текст <br/>
+                            • выводы<br/>
+                            • таблицы, графические и фотоматериалы (на усмотрение автора) <br/>
+                            Плакат со стендовым докладом необходимо будет самостоятельно прикрепить двусторонним скотчем на указанную Организатором стеновую панель.<br/>
+                            Во время работы конкурсной комиссии необходимо находиться рядом со своим стендовым докладом и быть готовым ответить на вопросы членов комиссии (время работы конкурсной комиссии будет определено за неделю до конференции и сообщено дополнительно).
+                        </p>
+                        <p><span class="-color-gold">РЕКОМЕНДАЦИИ ПО СОДЕРЖАНИЮ И ОФОРМЛЕНИЮ СТЕНДА:</span><br/>
+                            Чем меньше текстовой информации, тем лучше воспринимается стендовый доклад.<br/>
+                            • Текст не должен занимать более трети от площади плаката и должен быть напечатан крупным шрифтом.<br/>
+                            • Текст и все подписи должны читаться с расстояния не менее одного метра<br/>
+                            • Минимальный шрифт текста – 16 кегль через 1,5 интервал<br/>
+                            • Текст должен обязательно содержать цели и задачи работы, методики и выводы<br/>
+                            • Результаты лучше представить в виде графиков, таблиц и небольшого текста<br/>
+                            • Используйте фотографии (картинки) хорошего качества (оптимальное разрешение - 300 dpi)
+                        </p>
+                        <p><b>Расположение материалов на стенде:</b><br/>
+                            • шапка: Название стендового доклада, ФИО автора (ов), ФИО докладчика, Больница, Город<br/>
+                            • левый верхний угол - цель работы<br/>
+                            • нижний правый угол - выводы<br/>
+                            • располагайте информацию структурированно, в 2 или 3 столбца<br/>
+                            • избегайте пустых участков на плакате выделяйте заголовки и важную информацию жирным<br/>
+                            • не используйте на одном стенде более 3х типов шрифта
+                        </p>
+
+
+                        <p>
+                            <span class="-color-gold">Заявки принимаются до 25 июля 2019 г.</span>
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <a name="question" id="question"></a>
+
+                    <div class="ee-comments-form -wide">
+
+                        <form>
+
+                            <div class="form-title">Задать вопрос докладчикам</div>
+
+
+                            <div class="form-item form-item-textarea">
+
+                                <div class="user-avatar">
+                                    <img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">
+                                </div>
+
+                                <div class="char-counter-wrapper">
+                                    <textarea class="char-counter" maxlength="500" name="comment" placeholder="Ваш комментарий"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="form-bottom">
+
+                                <div class="form-checkboxes">
+
+                                    <label class="ee-checkbox-4">
+                                        <input type="radio" name="from" value="1" checked>
+                                        <span>от своего имени</span>
+                                    </label>
+
+                                    <label class="ee-checkbox-4">
+                                        <input type="radio" name="from" value="1" checked>
+                                        <span>анонимно</span>
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="lk-link">
+
+                                    <span>Ответ будет направлен в </span> <a href="#" class="ee-button-3 -thin">Личный кабинет</a>
+
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <input class="ee-button-4" type="submit" value="Отправить">
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>Информационная поддержка</h2>
+
+                    <div class="ee-publication-teaser -sponsor">
+
+                        <div class="publication-image-wrapper">
+                            <div class="publication-image">
+
+                                <a href="#">
+                                    <img src="/local/assets/img/logo_with_text.png" width="230">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                Информационно-образовательный медицинский портал EndoExpert.ru
+                            </div>
+
+                            <div class="publication-text">
+                                Вид 2 спонсоров (если будет один спонсор, возможен текст
+                                и сноска на спонсора. Вид 2 спонсоров (если будет один спонсор,
+                                возможен текст
+                                и сноска на спонсора
+                                <br>
+                                <a href="#" target="_blank"><b>www.site.ru</b></a> | +7 902 143 67 54 |
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-publication-teaser -sponsor">
+
+                        <div class="publication-image-wrapper">
+                            <div class="publication-image">
+
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/sponsor_1.png" width="230">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                Спонсор раздела ООО «Ромашка сбыт» вид 2
+                            </div>
+
+                            <div class="publication-text">
+                                Вид 2 спонсоров (если будет один спонсор, возможен текст
+                                и сноска на спонсора. Вид 2 спонсоров (если будет один спонсор,
+                                возможен текст
+                                и сноска на спонсора
+                                <br>
+                                <a href="#" target="_blank"><b>www.site.ru</b></a> | +7 902 143 67 54 |
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-publication-teaser -sponsor">
+
+                        <div class="publication-image-wrapper">
+                            <div class="publication-image">
+
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/sponsor_1.png" width="230">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                Спонсор раздела ООО «Ромашка сбыт» вид 2
+                            </div>
+
+                            <div class="publication-text">
+                                Вид 2 спонсоров (если будет один спонсор, возможен текст
+                                и сноска на спонсора. Вид 2 спонсоров (если будет один спонсор,
+                                возможен текст
+                                и сноска на спонсора
+                                <br>
+                                <a href="#" target="_blank"><b>www.site.ru</b></a> | +7 902 143 67 54 |
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-publication-teaser -sponsor">
+
+                        <div class="publication-image-wrapper">
+                            <div class="publication-image">
+
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/sponsor_1.png" width="230">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                Спонсор раздела ООО «Ромашка сбыт» вид 2
+                            </div>
+
+                            <div class="publication-text">
+                                Вид 2 спонсоров (если будет один спонсор, возможен текст
+                                и сноска на спонсора. Вид 2 спонсоров (если будет один спонсор,
+                                возможен текст
+                                и сноска на спонсора
+                                <br>
+                                <a href="#" target="_blank"><b>www.site.ru</b></a> | +7 902 143 67 54 |
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>Технический организатор</h2>
+
+                    <div class="ee-publication-teaser -sponsor">
+
+                        <div class="publication-image-wrapper">
+                            <div class="publication-image">
+
+                                <a href="#">
+                                    <img src="/local/assets/img/logo_with_text.png" width="230">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                Информационно-образовательный медицинский портал EndoExpert.ru
+                            </div>
+
+                            <div class="publication-text">
+                                Вид 2 спонсоров (если будет один спонсор, возможен текст
+                                и сноска на спонсора. Вид 2 спонсоров (если будет один спонсор,
+                                возможен текст
+                                и сноска на спонсора
+                                <br>
+                                <a href="#" target="_blank"><b>www.site.ru</b></a> | +7 902 143 67 54 |
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <div class="ee-comments-form -wide">
+
+                        <form>
+
+                            <div class="form-title">Задать вопрос организаторам</div>
+
+
+                            <div class="form-item form-item-textarea">
+
+                                <div class="user-avatar">
+                                    <img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">
+                                </div>
+
+                                <div class="char-counter-wrapper">
+                                    <textarea class="char-counter" maxlength="500" name="comment" placeholder="Ваш комментарий"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-bottom">
+
+
+
+
+
+                                <div class="lk-link">
+
+                                    <span>Ответ будет направлен в </span> <a href="#" class="ee-button-3 -thin">Личный кабинет</a>
+
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <input class="ee-button-4" type="submit" value="Отправить">
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <a name="contacts" id="contacts"></a>
+
+                    <h2>Контакты</h2>
+
+                    <div class="ee-contacts-slider slider-wrapper-type-1">
+
+                        <div class="swiper-container">
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+
+                                    <div class="ee-contacts-card">
+
+                                        <div class="card-title">Координатор проекта</div>
+
+                                        <p>Елена Поликарпова</p>
+                                        <p><b>+7 (499) 199-97-23</b></p>
+                                        <p><a href="mailto:polikarpova-e@yandex.ru"><b>polikarpova-e@yandex.ru</b></a></p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <div class="ee-contacts-card">
+
+                                        <div class="card-title">По вопросам размещения и проживания</div>
+
+                                        <p>Елена Поликарпова</p>
+                                        <p><b>+7 (499) 199-97-23</b></p>
+                                        <p><a href="mailto:polikarpova-e@yandex.ru"><b>polikarpova-e@yandex.ru</b></a></p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <div class="ee-contacts-card">
+
+                                        <div class="card-title">По вопросам трансферов</div>
+
+                                        <p>Елена Поликарпова</p>
+                                        <p><b>+7 (499) 199-97-23</b></p>
+                                        <p><a href="mailto:polikarpova-e@yandex.ru"><b>polikarpova-e@yandex.ru</b></a></p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <div class="ee-contacts-card">
+
+                                        <div class="card-title">По вопросам трансферов</div>
+
+                                        <p>Елена Поликарпова</p>
+                                        <p><b>+7 (499) 199-97-23</b></p>
+                                        <p><a href="mailto:polikarpova-e@yandex.ru"><b>polikarpova-e@yandex.ru</b></a></p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <h2>Часто задаваемые вопросы о мероприятии</h2>
+
+                    <div class="ee-faq-list">
+
+                        <div class="list-wrapper">
+
+                            <div class="list-item">
+
+                                <div class="item-question">Планируется онлайн трансляция?</div>
+                                <div class="item-answer">
+                                    <b>Ответ:</b> Да, смотрите на EndoExpert.ru для этого пройдите <a href="#">по ссылке</a>
+                                </div>
+
+                            </div>
+
+                            <div class="list-item">
+
+                                <div class="item-question">Где скачать фотографии?</div>
+                                <div class="item-answer" style="display: none">
+                                    <b>Ответ:</b> Да, смотрите на EndoExpert.ru для этого пройдите <a href="#">по ссылке</a>
+                                </div>
+
+                            </div>
+
+                            <div class="list-item">
+
+                                <div class="item-question">Где скачать тезисы?</div>
+                                <div class="item-answer" style="display:none">
+                                    <b>Ответ:</b> Да, смотрите на EndoExpert.ru для этого пройдите <a href="#">по ссылке</a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="load-more-wrapper">
+
+                            <button class="ee-button-3 -thin">Показать еще 5 вопросов</button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="event-block">
+
+                    <a name="news" id="news"></a>
+
+                    <h2>Новости и публикации мероприятия</h2>
+
+                    <div class="ee-publication-teaser">
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                <a href="#">Материал опубликован при поддержке материал опубликован при поддержке крутых спонсоров материал опубликован при поддержке Материал опубликован при поддержке</a>
+                            </div>
+
+                            <div class="publication-text">
+                                <b>Статья</b> | 2019 | И.А. Петров, П.В. Иванов
+                            </div>
+
+                            <div class="publication-more-link">
+                                <a href="#">»</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-publication-teaser">
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                <a href="#">Материал опубликован при поддержке материал опубликован при поддержке крутых спонсоров материал опубликован при поддержке Материал опубликован при поддержке</a>
+                            </div>
+
+                            <div class="publication-text">
+                                <b>Статья</b> | 2019 | И.А. Петров, П.В. Иванов
+                            </div>
+
+                            <div class="publication-more-link">
+                                <a href="#">»</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-publication-teaser">
+
+                        <div class="publication-body">
+
+                            <div class="publication-title">
+                                <a href="#">Материал опубликован при поддержке материал опубликован при поддержке крутых спонсоров материал опубликован при поддержке Материал опубликован при поддержке</a>
+                            </div>
+
+                            <div class="publication-text">
+                                <b>Статья</b> | 2019 | И.А. Петров, П.В. Иванов
+                            </div>
+
+                            <div class="publication-more-link">
+                                <a href="#">»</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-load-more-wrapper">
+                        <button class="ee-button-3">Показать еще</button>
+                    </div>
+
+                    <div class="ee-pagination-short">
+
+                        <a href="#">&lt;&lt;</a>  <a href="#">1</a>...<span>56</span>...<a href="#">135</a> <a href="#">&gt;&gt;</a>
+
+                    </div>
+
+
+                </div>
 
                 <div class="event-block">
                     <div class="toolbar-1">
@@ -2091,6 +3197,1454 @@
 
                     </div>
                 </div>
+
+
+                <div class="event-block -comments">
+
+                    <div class="ee-comments-form -wide">
+
+                        <form>
+
+                            <div class="form-title">Комментарии</div>
+
+
+                            <div class="form-item form-item-textarea">
+
+                                <div class="user-avatar">
+                                    <img src="/local/assets/img/comment_default_avatar.png" width="39" height="39">
+                                </div>
+
+                                <div class="char-counter-wrapper">
+                                    <textarea class="char-counter" maxlength="500" name="comment" placeholder="Ваш комментарий"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-bottom">
+
+                                <div class="form-checkboxes">
+
+                                    <label class="ee-checkbox-4">
+                                        <input type="radio" name="from" value="1" checked>
+                                        <span>от своего имени</span>
+                                    </label>
+
+                                    <label class="ee-checkbox-4">
+                                        <input type="radio" name="from" value="1" checked>
+                                        <span>анонимно</span>
+                                    </label>
+
+                                </div>
+
+                                <div class="attach-buttons">
+
+                                    <span class="btn-photo tooltip" title="прикрепить фото"></span>
+                                    <span class="btn-video tooltip" title="прикрепить видео"></span>
+                                    <span class="btn-document tooltip" title="прикрепить файл"></span>
+                                    <span class="btn-youtube tooltip" title="вставить видео YouTube"></span>
+
+                                    <div style="display: none">
+
+                                        <input id="file-photos" type="file" name="photos" multiple accept="image/jpeg, image/png">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <input class="ee-button-4" type="submit" value="Отправить">
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <span style="color: red">Сюда вставить верстку комментов из page-publication.html</span>
+
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-key-dates">
+
+                                <div class="block-title">Ключевые даты</div>
+
+                                <div class="date-item">
+                                    Даты проведения форума<br>
+                                    <b>23 сентября / 28 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Открытие/окончание предварительной регистрации<br>
+                                    <span>(осталось 160 мест)</span><br>
+                                    <b>2 апреля / 20 сентября</b>
+                                </div>
+
+                                <div style="border-color:#3498db" class="date-item">
+                                    Открытие предварительной
+                                    регистрации на онлайн<br>
+                                    <b>2 апреля / 20 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Прием тезисов<br>
+                                    <b>15 апреля / 15 сентября</b>
+                                </div>
+
+                                <div style="border-color: #13ae25" class="date-item">
+                                    Прием электронных стендовых докладов<br>
+                                    <b>22 апреля / 15 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Окончание приема статей
+                                    и электронных стендовых докладов<br>
+                                    <b>12 июля / 15 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Бронирование гостиниц
+                                    и трансфер<br>
+                                    <b>2 апреля / 15 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Открытие предварительной
+                                    регистрации на тренинг<br>
+                                    <span>(осталось 160 мест)</span><br>
+                                    <b>2 апреля / 15 сентября</b>
+                                </div>
+
+                                <div style="border-color: #f23502" class="date-item">
+                                    Открытие предварительной
+                                    регистрации на мастер-класс<br>
+                                    <span>(осталось 160 мест)</span><br>
+                                    <b>2 апреля / 15 сентября</b>
+                                </div>
+
+                                <div class="date-item">
+                                    Открытие предварительной
+                                    регистрации на симпозиум<br>
+                                    <span>(осталось 160 мест)</span><br>
+                                    <b>2 апреля / 15 сентября</b>
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>#InstaEvent</h2>
+
+                    <p>#хештегмероприятия #эндоскопия #мероприятие #медицина2019</p>
+
+                    <div class="ee-insta-event-slider slider-wrapper-type-1">
+
+                        <div class="swiper-container">
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="/local/assets/img/tmp/insta_event.jpg" width="286" height="286"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="/local/assets/img/tmp/insta_event.jpg" width="286" height="286"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="/local/assets/img/tmp/insta_event.jpg" width="286" height="286"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="/local/assets/img/tmp/insta_event.jpg" width="286" height="286"></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>Итоги предыдущего мероприятия</h2>
+
+                    <div class="title-stripe bg-full-width"></div>
+
+                    <div class="ee-event-teaser -top-star">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <i class="ico-favorite2" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+
+                                            <div class="event-button">
+                                                <a href="#">Предстоящие</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Голосовать</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Материалы</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Видеозаписи</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Фотогаллерея</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span>История мероприятия</span>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser -top-star">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <i class="ico-favorite2" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+
+                                            <div class="event-button">
+                                                <a href="#">Предстоящие</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Голосовать</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Материалы</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Видеозаписи</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Фотогаллерея</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span>История мероприятия</span>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser -top-star">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <i class="ico-favorite2" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+
+                                            <div class="event-button">
+                                                <a href="#">Предстоящие</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Голосовать</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Материалы</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Видеозаписи</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Фотогаллерея</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span>История мероприятия</span>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-load-more-wrapper">
+                        <button class="ee-button-3">Показать все</button>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="event-block">
+
+                    <h2>Предстоящее мероприятие</h2>
+
+                    <div class="title-stripe bg-full-width"></div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-load-more-wrapper">
+                        <button class="ee-button-3">Показать все</button>
+                    </div>
+
+                </div>
+
+
+                <div class="event-block -view-1">
+
+                    <h2>Справочная и дополнительная информация</h2>
+
+                    <h3>О городе проведения мероприятия</h3>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <div class="ee-single-image-slider slider-wrapper-type-1">
+
+                                <div class="swiper-container">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Туры и экскурсии</h3>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <div class="ee-single-image-slider slider-wrapper-type-1">
+
+                                <div class="swiper-container">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><a class="ee-button-12" href="#">Подать заявку</a> <span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Билеты, контромарки, культурные мероприятия</h3>
+
+                    <div class="row-1">
+
+                        <div class="col-1">
+
+                            <div class="ee-single-image-slider slider-wrapper-type-1">
+
+                                <div class="swiper-container">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                        <div class="swiper-slide"><img src="/local/assets/img/tmp/event_transfer.jpg" width="430" height="288"></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="ee-expandable-text">
+
+                                <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                    Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                    Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                <div class="hidden-text" style="display: none;">
+
+                                    <p>Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах.
+                                        Присоединяйтесь к нашим 376 813 зарегистрированным пользователям. Присоединяйтесь к веб-сайту №1 по электронному обучению! Мы предлагаем первоклассный образовательный контент, предоставляемый всемирно известными специалистами во всех областях малоинвазивной хирургии. Все материалы соответствуют стандартам Health on the Net Foundation (HONCode), которые гарантируют качество и надежность.
+                                        Воспользуйтесь широким спектром специальностей бесплатно и без ограничений. Веб-сайт доступен на компьютерах, планшетах и ​​мобильных телефонах. </p>
+
+                                </div>
+
+                                <div class="expand-toggle -large"><a class="ee-button-12" href="#">Подать заявку</a> <span data-expand-text="Развернуть" class="">Развернуть</span></div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="event-block -from-redaction">
+
+                    <div class="ee-from-redaction">
+
+                        <div class="block-img"></div>
+
+                        <div class="block-title">От редакции EndoExpert.ru</div>
+                        <p>Настоящий портал, его контент и его услуги предоставляются «как есть». Администрация не несет каких-либо гарантий и обязательств по проверке достоверности информации, версий ее редакций и актуальности, если материалы не предоставлены организаторами в рамках контракта Информационного спонсора и\или других  <a href="#" style="color: #fff"><b><i>далее&nbsp;>></i></b></a></p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <h2>Рекоммендуемые мероприятия</h2>
+
+                    <div class="title-stripe bg-full-width"></div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-event-teaser">
+
+                        <div class="event-top">
+                            <div class="event-type">тип мероприятия: Межрегиональная тематическая конференция</div>
+                        </div>
+
+                        <div class="event-body">
+
+                            <div class="event-image">
+                                <a href="#">
+                                    <img src="/local/assets/img/tmp/section-slide.jpg">
+                                </a>
+                            </div>
+
+                            <div class="event-right-side">
+
+                                <div class="event-title">
+                                    <a href="#">Седьмая Ежегодная Международная конференция «Практические аспекты скрининга и ранней диагностики онкологических заболеваний» онкологических заболеваний»</a>
+                                </div>
+
+                                <div class="event-info-and-buttons">
+
+                                    <div class="event-info">
+
+                                        <div class="event-date">16 сентября - 28 сентября 2019</div>
+
+                                        <div class="event-city">Санкт-Петербург</div>
+
+                                        <div class="event-rating">
+                                            <div>рейтинг ожидания:
+                                                <span class="event-rating-stars">
+                                                        <select title="Рейтинг ожидания" data-current-rating="2">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </span>
+
+
+                                            </div>
+                                            <div>рейтинг мероприятия: 3/350</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="event-buttons">
+
+                                        <div class="round-buttons">
+
+                                            <a href="#"><i class="ico-stats"></i></a>
+                                            <a href="#"><i class="ico-pay"></i></a>
+                                            <a href="#"><i class="ico-play"></i></a>
+                                            <i class="ico-favorite2 -active" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i>
+
+                                        </div>
+
+                                        <div class="bottom-buttons">
+                                            <div class="event-button">
+                                                <a href="#">Регистрация на онлайн</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Приглашение на почту</a>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <span class="-grey">Вы зарегистрированы</span>
+                                            </div>
+
+                                            <div class="event-button">
+                                                <a href="#">Подробнее</a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="ee-load-more-wrapper">
+                        <button class="ee-button-3">Показать все</button>
+                    </div>
+
+                </div>
+
+                <div class="event-block">
+
+                    <div class="ee-reg-block">
+
+                        <div class="block-text">
+
+                            Зарегистрируйтесь или авторизуйтесь, чтобы видеть закрытые
+                            мероприятия и получить доступы к <a href="#">сервисам портала</a> <a class="-gold" href="#">>></a>
+
+                        </div>
+
+                        <div class="block-button">
+                            <a href="#">зарегистрироваться</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-block">
+
+                    <div class="ee-events-list-legend">
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+                                <div><img src="/local/assets/img/icons/ico_calendar.png"></div>
+                            </div>
+
+                            <div class="item-text">
+                                <p>Даты проведения мероприятия</p>
+                            </div>
+
+                        </div>
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+
+                                <div><img src="/local/assets/img/icons/ico_city.png"></div>
+
+                            </div>
+
+                            <div class="item-text">
+                                <p>Место проведения</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+
+                                <div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAOCAMAAAC4haQsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABRFBMVEUQEBFdQR2HKBEQEC5ijp6OYi4QLSbbrUrxmSRkEBEQabzo////6LxpEBGVhUbxrUrxrUG/RRGd0v////////fKji7xlCJPEBH/4bRTEBE6IxSjYybGmUTxrUTbgCajYx15LRRPGRE8U2JigJ6srLzS6Pfo0rysrJ6AYmJTPBEQEBvGqErpexkQEJbS9//3yoAQEBSVhT/xrT24PBEQEFOd0vD///DDeC6Oez24QRGWyvDDgD15dz0QED2Aw/AQNyjirUpdEBEQccPw//9iEBEQVDLxqDGOEBEQpdn//9KWEBFrcj3xrUjxrTmxLRFxw/D//+i7YhGcikrxrT/NchtdFBE6LR24j0HxrUbGTxGl2f/Zu5ZiLRE8aZ7D4ffSlhFPTyjGch1kGRE6Nx+4gCiVIxFTncPSu55pPBE8caXD0sOdUxEX20eeAAAAAWJLR0QTDLtclgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQFJREFUKM9jYIAARiYGdIApxMzCisJnY+fgRFOCRYiLm4cXmc/HLyCIpgRTiFlIWEQUxVx+fjFxNKswhLi4hYUlJKEcKUZpGX5+flk5eQVF3EJKyiqqwsLCImrqGpoMDFra/EhAB6QAi5CunjAS0GcwMERSYWQMUoJFyMQUSZOZOVCNBUKFJcQ1WIRMrBCarMEiNijG4hCytUOyCQTsHSBKOBzhurAIOTlDdPG4QPiuUIPd3OFKsAh5QO3y9ILwvYHSPkDs6wdXgkXIH6orIBDCD+IPDgkNC+ePiIQrwSIUJWwWHRMbJywcD+EnJCaBqOSUVLgSLEJp6RkgKjMrm4EBAKgiMVR7N78zAAAAAElFTkSuQmCC" width="53" height="14">
+                                </div>
+
+                            </div>
+
+                            <div class="item-text">
+                                <p>Рейтинг ожидания мероприятия,<br><a href="#">подробнее о рейтинге ожидания мероприятия</a>  <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+
+                                3/350
+
+                            </div>
+
+                            <div class="item-text">
+                                <p>Рейтинг мероприятия,<br><a href="#">подробнее о рейтинге мероприятия</a>  <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+                                <div><i class="ico-pay"></i></div>
+                            </div>
+
+                            <div class="item-text">
+                                <p>Посещение мероприятия платное,<br><a href="#">подробнее об оплате</a>   <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+                                <div><i class="ico-play"></i></div>
+                            </div>
+
+                            <div class="item-text">
+                                <p>Мероприятия с онлайн трансляцией на EndoExpert.ru  <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+                                <div><i class="ico-favorite2" data-api-url="/local/assets/json/get-one.json" data-element-id="12345"></i></div>
+                            </div>
+
+                            <div class="item-text">
+                                <p>Добавить в избранное и подписаться <br>на информационно-новостную рассылку   <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <div class="item-icon">
+                                <div><i class="ico-stats"></i></div>
+                            </div>
+
+                            <div class="item-text">
+                                <p>Переход на голосование: оценка научной программы мероприятия, организации, места проведения   <span>&gt;&gt;</span></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="event-block">
+
+                    <a href="#"><img src="/local/assets/img/tmp/olympus_banner2.jpg"></a>
+
+                </div>
+
+                <div class="event-block">
+
+                    <div class="ee-tags-list">
+
+                        <a href="#">QuaCol</a>
+                        <a href="#">StandUp</a>
+                        <a href="#">Тренинг Olympus</a>
+                        <a href="#">Бронхоскопия Pentax</a>
+                        <a href="#">Заседание общества</a>
+                        <a href="#">Школа РГА, Гастрошкола</a>
+                        <a href="#">IEEF</a>
+                        <a href="#">Тренинг EndoStars</a>
+                        <a href="#" class="-blue">QuaCol</a>
+                        <a href="#" class="-blue">StandUp</a>
+                        <a href="#" class="-blue">Тренинг Olympus</a>
+                        <a href="#" class="-blue">Бронхоскопия Pentax</a>
+                        <a href="#" class="-blue">Заседание общества</a>
+                        <a href="#" class="-blue">Школа РГА, Гастрошкола</a>
+                        <a href="#" class="-blue">IEEF</a>
+                        <a href="#" class="-blue">Тренинг EndoStars</a>
+
+                    </div>
+
+                </div>
+
+
+
 
 
 

@@ -294,6 +294,17 @@ $(document).ready(function () {
   setInterval(renderTime, 1000);
 
 
+  $('.event-block.-expandable .ee-button-12:first-child').click(function () {
+
+    $(this).parent().toggleClass('-expanded');
+    $(this).parent().find('.block-body').slideToggle();
+
+  });
+
+
+  $('.char-counter').charCounter();
+
+
 
 
 

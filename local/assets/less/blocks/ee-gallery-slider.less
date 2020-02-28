@@ -1,0 +1,59 @@
+@import "../inc/variables";
+
+.ee-gallery-slider {
+
+  .sliders-wrapper {
+    border: 2px solid #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+
+  .slider-large {
+
+
+    img {display: block}
+  }
+
+  .slider-small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px 25px 20px;
+    background: fade(#212121, 80%);
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .swiper-button-next {
+      .sprite(@ico-arrow-right);
+      background-size: initial;
+      margin-top: -10px;
+      right: 5px;
+    }
+
+    .swiper-button-prev {
+      .sprite(@ico-arrow-left);
+      background-size: initial;
+      margin-top: -10px;
+      left: 5px;
+    }
+
+
+  }
+
+  .slider-bottom-links {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 14px;
+
+    a {
+      color: @gold-color;
+      text-decoration: none;
+    }
+  }
+
+}

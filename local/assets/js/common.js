@@ -388,7 +388,7 @@ $(document).ready(function () {
   });
 
 
-  $('.ee-expandable-text .expand-toggle span').click(function () {
+  $('.ee-expandable-text .expand-toggle span:last-child').click(function () {
 
     $(this).parent().prev().slideToggle();
 

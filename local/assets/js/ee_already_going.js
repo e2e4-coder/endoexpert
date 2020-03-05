@@ -3,6 +3,8 @@ var openAGPopup = true;
 
 $(document).ready(function () {
 
+  if (!$('#ee-ag-popup').length) return;
+
   setTimeout(function () {
     openAGPopup = false;
   }, parseInt($('#ee-ag-popup').data('timeout'))*1000);

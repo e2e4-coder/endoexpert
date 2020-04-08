@@ -45,6 +45,14 @@ $(document).ready(function () {
           slidesPerGroup: 1,
           spaceBetween: 10
         }
+      },
+      on: {
+        slideChange : function () {
+
+          var observer = lozad();
+          observer.observe();
+
+        }
       }
     });
 
@@ -66,7 +74,6 @@ $(document).ready(function () {
       },
 
       autoplay: popularSliderDelay,
-      lazy: true,
       watchSlidesVisibility: true,
 
       breakpoints: {
@@ -75,6 +82,14 @@ $(document).ready(function () {
           slidesPerView: 'auto',
           slidesPerGroup: 1,
           spaceBetween: 10
+        }
+      },
+      on: {
+        slideChange : function () {
+
+          var observer = lozad();
+          observer.observe();
+
         }
       }
     });
@@ -132,7 +147,6 @@ $(document).ready(function () {
       },
 
       autoplay: expertsSliderDelay,
-      lazy: true,
       watchSlidesVisibility: true,
 
       breakpoints: {
@@ -141,6 +155,14 @@ $(document).ready(function () {
           slidesPerView: 'auto',
           slidesPerGroup: 1,
           spaceBetween: 6
+        }
+      },
+      on: {
+        slideChange : function () {
+
+          var observer = lozad();
+          observer.observe();
+
         }
       }
     });
@@ -154,7 +176,7 @@ $(document).ready(function () {
 
       slidesPerView: 4,
       slidesPerGroup: 4,
-      loopedSlides: 4,
+      //loopedSlides: 4,
       spaceBetween: 10,
       loop: true,
       navigation: {
@@ -163,7 +185,7 @@ $(document).ready(function () {
       },
 
       autoplay: leadersSliderDelay,
-      lazy: true,
+
       watchSlidesVisibility: true,
 
       breakpoints: {
@@ -173,12 +195,16 @@ $(document).ready(function () {
           slidesPerGroup: 1,
           spaceBetween: 20
         }
+      },
+      on: {
+        slideChange : function () {
+
+          var observer = lozad();
+          observer.observe();
+
+        }
       }
     });
-
-
-
-
 
 
     $("#front-page-events-list").mCustomScrollbar();

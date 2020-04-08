@@ -1141,5 +1141,156 @@
 
 
 
+  @media @w320 {
+
+    .ee-breadcrumbs {
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .ee-main-wrapper {
+
+      >.event-top {
+
+        margin: 0 -10px;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding: 0;
+
+        .block-image-and-info {
+          display: block;
+          padding: 0;
+
+          .block-image {
+            width: 100%;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+          }
+
+          .block-info {
+
+            padding: 10px 10px 0;
+
+            .ee-timer {
+              width: 250px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+          }
+        }
+
+        .online-block {
+          display: block;
+          height: auto;
+          background: none;
+          padding-bottom: 15px;
+          text-align: center;
+
+          .image-buttons {
+            display: none;
+          }
+
+          .block-title {display: none}
+
+          .block-buttons {
+            display: inline-block;
+          }
+        }
+
+      }
+
+
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0;
+
+
+    }
+
+    .event-top-buttons {
+      display: none;
+    }
+
+    .event-time-block {
+      display: block;
+
+      .clocks-widgets {
+        display: none;
+      }
+
+      table.info-table {
+
+        margin-bottom: 10px;
+
+        tr {
+
+          display: block;
+
+        }
+
+        td {
+         display: inline-block;
+         padding: 0;
+
+          &:nth-child(2n) {
+
+            display: inline;
+
+            &:after {
+              content: "\A";
+              white-space: pre;
+            }
+
+          }
+
+
+        }
+
+        .-w320-hide {display: none !important;}
+
+        .event-rating {
+          margin-bottom: -15px;
+        }
+
+
+
+      }
+
+      .block-buttons {
+        text-align: center;
+
+        a {margin-top: 10px}
+      }
+    }
+
+    .event-status-block {
+
+      display: block;
+      padding: 10px 0;
+
+      .text-status {
+        font-size: 20px;
+
+        span {
+          display: block;
+          text-align: center;
+          margin: 5px;
+        }
+      }
+
+      .text-updated {
+        font-size: 14px;
+      }
+    }
+
+  }
 }
 

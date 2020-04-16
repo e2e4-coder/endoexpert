@@ -1,0 +1,57 @@
+@import "../inc/variables";
+
+.ee-time-counter {
+
+  width: 140px;
+
+  .counter-label {
+    font-size: 12px;
+    color: #5b5c5b;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+  }
+
+  .counter-digits {
+
+    position: relative;
+
+    width: 124px;
+    height: 50px;
+
+    span {
+      position: absolute;
+      top: 0;
+      background: #5b5c5b;
+      width: 29px;
+      height: 34px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 36px;
+      font-size: 33px;
+      font-weight: 500;
+      color: #101011;
+
+      &.d1 {right: 95px;}
+      &.d2 {right: 64px;}
+      &.d3 {right: 31px;}
+      &.d4 {right: 0;}
+
+    }
+
+    div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5b5c5b;
+
+      &.minutes-label {left: 66px;}
+
+
+
+    }
+
+  }
+}

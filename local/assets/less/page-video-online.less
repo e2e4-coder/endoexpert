@@ -2,8 +2,24 @@
 
 .page-video-online {
 
+  background: #101012;
+
+  .ee-main-wrapper {
+
+    background: inherit;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 29px;
+      margin: 0 0 25px 0;
+      font-weight: 300;
+      padding-right: 180px;
+    }
+
+  }
+
   color: #b6b6b6;
-  padding-top: 50px;
+  padding-top: 20px;
   position: relative;
   margin-bottom: 160px;
 
@@ -14,27 +30,19 @@
     .sprite(@ico-share3);
   }
 
-  h1 {
-    text-transform: uppercase;
-    font-size: 18px;
-    margin: 0 0 25px 0;
-    padding-right: 180px;
-  }
+  .video-player-wrapper {
+    position: relative;
 
-  .columns-layout {
-    display: flex;
-    justify-content: space-between;
-
-    .col-1 {
-      width: 800px;
-      flex: 0 0 auto;
+    .ee-time-counter {
+      position: absolute;
+      top: 0;
+      right: -180px;
     }
-
   }
 
   #player {
 
-    height: 400px;
+    //height: 591px;
 
     .player-poster:before {
       content: '';
@@ -59,59 +67,6 @@
   }
 
 
-  #time-counter {
-
-    width: 250px;
-    height: 50px;
-    position: relative;
-
-    .counter-label {font-size: 14px;color: #fff;padding-top: 10px;}
-
-    .counter-digits {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 124px;
-
-      span {
-        position: absolute;
-        top: 0;
-        background: #5b5c5b;
-        width: 29px;
-        height: 34px;
-        border-radius: 5px;
-        text-align: center;
-        line-height: 36px;
-        font-size: 33px;
-        font-weight: 500;
-        color: #101011;
-
-        &.d1 {right: 95px;}
-        &.d2 {right: 64px;}
-        &.d3 {right: 31px;}
-        &.d4 {right: 0;}
-
-      }
-
-      div {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 12px;
-        font-weight: 500;
-        color: #5b5c5b;
-
-        &.minutes-label {left: 66px;}
-
-
-
-      }
-
-    }
-
-
-  }
 
 
 

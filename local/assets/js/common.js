@@ -434,6 +434,13 @@ $(document).ready(function () {
 
   });
 
+  $('.ee-expandable-text-5__title').click(function () {
+
+    $(this).next().slideToggle();
+    $(this).toggleClass('ee-expandable-text-5__title--active');
+
+  });
+
 
 
 

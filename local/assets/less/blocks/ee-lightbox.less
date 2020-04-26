@@ -1,0 +1,94 @@
+@import "../inc/variables";
+
+.ee-lightbox {
+
+  background: #000;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  color: #fff;
+
+  &-zoom {
+    cursor: zoom-in;
+  }
+
+  &__header {
+    height: 55px;
+    flex: 0 0 auto;
+    position: relative;
+
+    &-close {
+
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 21px;
+      cursor: pointer;
+
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+
+
+    &-wrapper {
+     position: relative;
+     padding: 0 70px;
+      height: 100%;
+    }
+  }
+
+  &__footer {
+    box-sizing: border-box;
+    height: 100px;
+    flex: 0 0 auto;
+    padding: 20px 80px 0;
+
+  }
+
+  .swiper-container {height: 100%}
+  .swiper-wrapper {height: 100%}
+
+  .swiper-slide {
+
+    height: 100%;
+    background: center center no-repeat;
+
+    background-size: contain;
+
+
+  }
+
+
+  @media @w320 {
+
+    .ee-lightbox {
+
+      &__body {
+        padding: 0;
+
+        &-wrapper {
+          padding: 0;
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+
+}

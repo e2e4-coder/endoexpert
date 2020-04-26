@@ -1,0 +1,44 @@
+@import "../inc/variables";
+
+.ee-expandable-text-5 {
+
+  &__title {
+    display: inline-block;
+    color: @link-color;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    &--active:after {transform: rotate(180deg)}
+
+
+    &:after {
+      content: '\f078';
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      vertical-align: middle;
+      width: 27px;
+      height: 27px;
+      text-align: center;
+      line-height: 31px;
+      font-size: 22px;
+      border: 2px solid #6295d1;
+      color: #6295d1;
+      margin-left: 10px;
+      border-radius: 100%;
+      font-style: normal;
+
+    }
+  }
+
+  &__text {
+
+    > * {
+      margin-top: 0;
+    }
+
+  }
+
+
+}

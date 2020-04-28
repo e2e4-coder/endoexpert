@@ -1,13 +1,13 @@
 @import "inc/variables";
 
-.page-quiz {
+.page-atlas {
 
   background: #030102;
 
 
   .ee-main-wrapper {
 
-    background: #030102;
+    background: #030102 !important;
 
   }
 
@@ -22,17 +22,57 @@
 
   }
 
-  .ee-quiz-card {
-    margin-bottom: 20px;
+  &__sort {
+
+    display: flex;
+    justify-content: space-between;
+
+    &-button {
+
+      width: 290px;
+      flex: 0 0 auto;
+
+      .ee-button-3 {
+        color: @gold-color !important;
+        font-weight: 300;
+        font-size: 18px;
+        white-space: nowrap;
+        height: 34px;
+        line-height: 34px;
+      }
+
+    }
+
+
   }
 
-  .ee-quiz-list {
-    margin-bottom: 50px;
+  .ee-sort-panel {
+    flex: 1 1 auto;
   }
+
+  &__anatomic-cards {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -0 35px;
+
+
+
+  }
+
+  .ee-atlas-list__title {
+    margin-top: 40px;
+  }
+
+  .ee-quiz-card {
+    margin-bottom: 40px;
+  }
+
+
 
   &__upload {
 
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     &-wrap {
 

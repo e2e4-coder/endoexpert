@@ -1,0 +1,70 @@
+@import "../inc/variables";
+
+.ee-quiz-list {
+
+
+
+  &__title {
+
+    font-size: 24px;
+    color: @gold-color;
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+
+  }
+
+  &__item {
+
+    margin: 0 6px 25px;
+    position: relative;
+    border-bottom: 1px solid #c5c0c0;
+
+    img {display: block;}
+
+    &-title {
+
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 26px;
+      color: fade(#fff, 43%);
+
+      background: fade(#2e2f2f, 62%);
+
+      padding: 10px;
+
+    }
+
+    &-lock {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: fade(#2e2f2f, 80%);
+      text-align: center;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 285px;
+        opacity: .8;
+        background: url("/local/assets/img/ico_lock.png") bottom center no-repeat;
+        margin-bottom: 20px;
+      }
+
+
+    }
+
+  }
+
+
+
+}

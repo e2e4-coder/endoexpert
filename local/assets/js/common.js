@@ -434,6 +434,13 @@ $(document).ready(function () {
 
   });
 
+  $('.ee-expandable-text-6 .expand-toggle span').click(function () {
+
+    $(this).parent().prev().slideToggle();
+    $(this).toggleClass('-expanded');
+
+  });
+
   $('.ee-expandable-text-5__title').click(function () {
 
     $(this).next().slideToggle();

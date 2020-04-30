@@ -1,0 +1,74 @@
+@import "../inc/variables";
+
+.ee-expandable-text-6 {
+
+  p {margin-top: 0}
+
+  .hidden-text {display: none;}
+
+  .expand-toggle {
+    text-align: right;
+
+    span {
+      display: inline-block;
+      color: #606162;
+      cursor: pointer;
+
+      &:after {
+
+        content: '\f078';
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        vertical-align: middle;
+        width: 27px;
+        height: 27px;
+        text-align: center;
+        line-height: 31px;
+        font-size: 22px;
+        border: 2px solid #6295d1;
+        color: #6295d1;
+        margin-left: 10px;
+        border-radius: 100%;
+        font-style: normal;
+
+
+      }
+
+      &.-expanded:after {
+        transform: rotate(180deg);
+      }
+
+    }
+  }
+
+  &.-only-mobile {
+
+    .expand-toggle {display: none}
+
+    .hidden-text {display: block;}
+
+  }
+
+  @media @w320 {
+
+    &.-only-mobile {
+
+      .expand-toggle {display: block}
+
+      .hidden-text {display: none;}
+
+    }
+
+  }
+
+
+  @media print {
+
+    .hidden-text {display: block !important;}
+
+    .expand-toggle {display: none;}
+
+  }
+
+}

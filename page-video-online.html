@@ -272,6 +272,34 @@
                 </video>
 
 
+                <h2>Youtube API test</h2>
+
+                <div id="video-placeholder"></div>
+
+                <script src="https://www.youtube.com/iframe_api"></script>
+
+                <script>
+                  var player;
+
+                  function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('video-placeholder', {
+                      width: 600,
+                      height: 400,
+                      videoId: 'HeuhlSohSEE',
+                      playerVars: {
+                        autoplay: 1,
+                        controls: 0,
+                        showinfo:0
+
+                      },
+                      events: {
+                       // onReady: initialize
+                      }
+                    });
+                  }
+                </script>
+
+
 
 
 

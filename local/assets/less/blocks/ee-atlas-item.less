@@ -2,8 +2,7 @@
 
 .ee-atlas-item {
 
-  width: 328px;
-  height: 342px;
+
   overflow: hidden;
   border-bottom: 1px solid #c5c0c0;
   position: relative;
@@ -12,6 +11,10 @@
   &__image {
     text-align: center;
     display: block;
+
+    img {
+      display: block;
+    }
   }
 
   &__info {
@@ -159,4 +162,24 @@
   }
 
 
+}
+
+@media @w320 {
+
+  .ee-atlas-item {
+
+    &__image {
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__lock:before {
+      height: 160px;
+    }
+
+
+  }
 }

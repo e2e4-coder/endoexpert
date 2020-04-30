@@ -4,6 +4,9 @@
 
   background: #030102;
 
+  .ee-breadcrumbs {
+    margin-bottom: 25px !important;
+  }
 
   .ee-main-wrapper {
 
@@ -112,6 +115,113 @@
       }
 
     }
+
+  }
+
+}
+
+@media @w320 {
+
+  .page-atlas {
+
+    .ee-section-title {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    &__wrap {
+      padding: 0;
+    }
+
+    &__upload {
+
+      padding-top: 20px;
+
+      border-top: 1px solid #4c4a4a;
+
+      &-wrap {
+        border-width: 1px;
+      }
+
+      .ee-expandable-text-5 {
+
+        &__title {
+
+          padding-right: 40px;
+          position: relative;
+
+          &:after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -16px;
+          }
+
+        }
+
+      }
+
+      .ee-upload-file-widget {
+
+        padding-bottom: 135px;
+
+        textarea {
+          height: 120px;
+        }
+
+      }
+
+    }
+
+
+    .ee-search-block-2 {
+
+      margin-bottom: 25px;
+    }
+
+    &__sort {
+      display: block;
+      margin-bottom: 25px;
+
+      &-button {
+        margin-bottom: 25px;
+      }
+
+      .panel-row {display: block !important;}
+    }
+
+    &__anatomic-cards {
+
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -3px;
+
+
+      .ee-color-card {
+        margin: 0 3px 6px 3px;
+        width: 48%;
+      }
+
+    }
+
+    .ee-atlas-list {
+
+      margin-top: 20px;
+
+      border-top: 1px solid #4c4a4a;
+
+      &__title {
+        margin-top: 20px;
+
+      }
+
+    }
+
 
   }
 

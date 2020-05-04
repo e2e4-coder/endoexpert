@@ -59,7 +59,7 @@ $(document).ready(function () {
   });
 
 
-  $('.slider-wrapper-type-1').each(function () {
+  $('.slider-wrapper-type-1').not('.js-skip').each(function () {
 
     var $swiper = $(this).find('.swiper-container');
 
@@ -130,6 +130,21 @@ $(document).ready(function () {
 
 
     return false;
+
+  });
+
+
+  var $anatomicCardsSlider = $('#anatomic-cards-slider');
+
+  new Swiper ($anatomicCardsSlider, {
+
+    slidesPerView: 'auto',
+    spaceBetween: 7,
+
+    navigation: {
+      nextEl: $anatomicCardsSlider.parent().find('.swiper-button-next'),
+      prevEl: $anatomicCardsSlider.parent().find('.swiper-button-prev'),
+    }
 
   });
 

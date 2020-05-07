@@ -258,7 +258,7 @@
                         width="640"
                         height="264"
                         poster="/local/assets/img/tmp/video_poster.jpg"
-                        data-setup='{"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/aGByQ7Ye_KI"}] }'
+
                 >
                     <source src="/local/assets/mp4/file_example_MP4_1920_18MG.mp4" type="video/mp4" />
 
@@ -270,6 +270,39 @@
                         >
                     </p>
                 </video>
+
+                <script>
+
+                    $(document).ready(function () {
+
+                      var options = {"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/aGByQ7Ye_KI"}] };
+
+                      var player = videojs('my-video', options, function onPlayerReady() {
+
+                        var $el = $(this.el_);
+
+                        $el.find('.vjs-control-bar').css('z-index', 999);
+
+
+
+                        this.on('play', function() {
+
+                          $el.prepend('<div class="ovr" style="z-index:100;position: absolute;top: 0;left: 0;width: 100%;height: 100%"></div>');
+
+
+                        });
+
+                        this.on('stop', function() {
+
+
+
+                        });
+
+                      });
+
+                    });
+
+                </script>
 
 
                 <h2>Youtube API test</h2>

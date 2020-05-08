@@ -13,18 +13,23 @@
 
   span {
     display: inline-block;
+    position: relative;
+    padding-left: 25px;
+
 
 
     &:before {
       content: "";
-      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 13px;
       height: 13px;
       border-radius: 3px;
       border: 1px solid #fff;
       vertical-align: middle;
       margin-right: 11px;
-      margin-top: -2px;
+
     }
   }
 

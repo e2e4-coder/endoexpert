@@ -32,6 +32,7 @@
     <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/lozad.min.js"></script>
 
     <script src="/local/assets/js/common.js"></script>
     <script src="/local/assets/js/page_front.js"></script>
@@ -2865,27 +2866,84 @@
 </div>
 
 
-<div id="ee-ag-popup" class="ee-ag-popup ee-popup mfp-hide" data-timeout="15">
+<div id="ee-ag-popup" class="ee-popup ee-qtl-popup mfp-hide" data-timeout="15">
 
-    <div class="popup-header">
-        Уже уходите?
-    </div>
 
-    <div class="popup-body">
+    <!--
 
-        <p>Какой-то текст...</p>
+    <div class="ee-ag-popup">
 
-    </div>
-
-    <div class="popup-footer">
-
-        <div class="footer-buttons">
-            <button class="ee-button-4" type="button" onclick="jQuery.magnificPopup.close()">Закрыть</button>
+        <div class="popup-header">
+            Уже уходите?
         </div>
 
+        <div class="popup-body">
+
+            <p>Какой-то текст...</p>
+
+        </div>
+
+        <div class="popup-footer">
+
+            <div class="footer-buttons">
+                <button class="ee-button-4" type="button" onclick="jQuery.magnificPopup.close()">Закрыть</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    -->
+
+    <div class="ee-qtl-popup__title">Вопрос Библиотекарю</div>
+
+    <div class="ee-qtl-popup__text">
+
+
+        <p>Не уходите!<br>
+            Не нашли нужную медицинскую информацию на портале EndoExpert.ru?</p>
+
+        <p class="--highlighted">Библиотекарь найдет ее для Вас и пришлет ссылку на материал в течении 2х дней!</p>
+
+        <p>Если такой статьи нет, возможно, по этой теме напишем обзор литературы!</p>
+
+        <form class="ee-qtl-popup__form">
+
+
+            <div class="ee-qtl-popup__form-item">
+
+                <textarea name="" class="ee-qtl-popup__form-textarea" placeholder="Вопрос:"></textarea>
+
+            </div>
+
+            <div class="ee-qtl-popup__form-item">
+
+                <label class="ee-qtl-popup__form-item-label">Введите e-mail:</label>
+
+                <input name="" class="ee-qtl-popup__form-text" value="хххх@mail.ru">
+
+            </div>
+
+            <div class="ee-qtl-popup__form-item">
+
+                <label class="ee-checkbox-1"><input checked="" type="checkbox"><span>Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></span></label>
+
+            </div>
+
+
+            <div class="ee-qtl-popup__form-actions">
+
+                <button class="ee-button-3" type="submit">Отправить</button>
+
+            </div>
+
+
+        </form>
 
 
     </div>
+
+
 
 
 

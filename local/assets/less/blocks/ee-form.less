@@ -58,6 +58,8 @@
     outline:none;
     font-weight: 300;
 
+    .placeholder({color: #bbbbbb});
+
   }
 
   .admin-notes {
@@ -123,6 +125,24 @@
   .form-checkboxes-group {
 
     margin: 20px 0;
+  }
+
+
+
+
+  &.-small {
+
+    .form-item {margin: 0 0 10px 0}
+
+    .form-text, .form-select, .form-textarea, .admin-notes {
+
+      height: 27px;
+      line-height: 25px;
+      font-size: 13px;
+      padding: 0 5px;
+
+    }
+
   }
 
 

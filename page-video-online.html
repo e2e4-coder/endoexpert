@@ -6,11 +6,14 @@
 
     <title>Видео online</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
     <link rel="stylesheet" href="/local/assets/css/normalize.css">
     <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
 
 
     <link rel="stylesheet" href="/local/assets/css/build.css">
@@ -21,6 +24,8 @@
     <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
     <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/imask.js"></script>
+
 
 
     <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
@@ -168,8 +173,120 @@
 
                     <div class="ee-fake-video-player" style="background-image: url('/local/assets/img/tmp/video_poster.jpg')">
 
+                        <!--<a href="#"><div class="play-button"></div></a>-->
 
-                        <a href="#"><div class="play-button"></div></a>
+                        <div class="ee-fake-video-player__login-auth-wrapper">
+
+                            <div class="ee-login-auth-block">
+
+                                <div class="ee-login-auth-block__row">
+
+                                    <div class="ee-login-auth-block__col">
+
+                                        <div class="ee-login-auth-block__title">Регистрация</div>
+
+                                        <form class="ee-form -small">
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Фамилия *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Имя *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Отчество *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <label class="ee-checkbox-4"><input checked="" type="checkbox"><span>Согласен на обработку, на передачу своих персональных данных (организаторам мероприятия) в любой форме, включая трансграничную передачу, в соответствии с Федеральным законом <a href="#" target="_blank">«О персональных данных» № 152-ФЗ от 27.7.2006	*</a></span></label>
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Страна *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Город *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Место работы *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Специальность *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Телефон *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="E-mail *">
+                                            </div>
+
+                                            <div class="form-actions">
+                                                <button type="submit" class="ee-button-3">Регистрация</button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                    <div class="ee-login-auth-block__col">
+
+                                        <div class="ee-login-auth-block__title">Авторизация</div>
+
+                                        <form class="ee-form -small">
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" placeholder="Login (e-mail) *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text" type="password" placeholder="Password *">
+                                            </div>
+
+                                            <div class="form-actions">
+                                                <button type="submit" class="ee-button-3">Авторизация</button>
+                                            </div>
+
+
+
+                                        </form>
+
+
+                                        <div class="ee-lock-code">
+                                            <input id="lock-code" type="text">
+
+                                        </div>
+
+                                        <script>
+                                          $(document).ready(function () {
+
+                                            IMask(
+                                                document.getElementById('lock-code'),
+                                                {
+                                                  mask: '000000',
+                                                  lazy : false
+                                                }
+                                            );
+
+                                          });
+                                        </script>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
@@ -320,7 +437,7 @@
                       height: 400,
                       videoId: 'HeuhlSohSEE',
                       playerVars: {
-                        autoplay: 1,
+                        autoplay: 0,
                         controls: 0,
                         showinfo:0
 

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
 
 
     <link rel="stylesheet" href="/local/assets/css/build.css">
@@ -26,6 +27,7 @@
     <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
     <script src="/local/assets/local/lib/frontend/imask.js"></script>
+    <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
 
 
 
@@ -159,6 +161,87 @@
 
                 <p>Для просмотра видео нужно <a href="#">зарегистрироваться</a> или <a href="#">авторизоваться</a>.</p>
 
+
+                <button type="button" onclick="showPopup({src:'#popup-1'})">Попап о неполноте данных</button>
+
+                <div id="popup-1" class="ee-popup mfp-hide">
+
+                    <div class="popup-body">
+
+
+                        <p>Глубокоуважаемый коллега, Ваши данные в системе неполные. Вы сможете перейти к просмотру прямо сейчас закрыв это сообщение нажав на крестик справа.</p>
+
+                        <p>Просим Вас ввести недостающие или изменившиеся данные в ближайшие 2 дня в удобное для Вас время пройдя по <a href="#">этой ссылке</a> или из письма, которое мы уже выслали Вам на почту.
+
+                        <p>Это делается всего 1 раз, необходимо для беспрепятственного доступа к «нашим» трансляциям, возможного начисления баллов и для обязательных отчетов организаторов.</p>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="video-player-wrapper">
+
+                    <div class="ee-fake-video-player" style="background-image: url('/local/assets/img/tmp/video_poster.jpg')">
+
+                        <!--<a href="#"><div class="play-button"></div></a>-->
+
+                        <div class="ee-fake-video-player__login-auth-wrapper ee-fake-video-player__login-auth-wrapper--auth-only">
+
+                            <div class="ee-login-auth-block">
+
+                                <div class="ee-login-auth-block__row">
+
+
+                                    <div class="ee-login-auth-block__col">
+
+                                        <div class="ee-login-auth-block__title">Авторизация</div>
+
+                                        <form class="ee-form -small">
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text -required" placeholder="Login (e-mail) *">
+                                            </div>
+
+                                            <div class="form-item">
+                                                <input name="" class="form-text -required" type="password" placeholder="Password *">
+                                            </div>
+
+                                            <div class="form-actions">
+                                                <button type="submit" class="ee-button-3">Авторизация</button>
+
+                                                <div class="form-links">
+                                                    <a href="#">Восстановаить пароль</a>
+                                                    <br>
+                                                    <a href="#">Регистрация</a>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <br><br><br>
 
                 <div class="video-player-wrapper">
 

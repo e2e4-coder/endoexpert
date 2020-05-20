@@ -27,6 +27,12 @@
       color: #8e8e8e;
       position: relative;
       z-index: 100;
+      font-size: 14px;
+
+      span {
+        text-decoration: underline;
+        color: @link-color;
+      }
 
       &.-mobile {display: none;}
     }
@@ -138,6 +144,40 @@
 
   }
 
+  .field-title {
+
+    position: relative;
+    margin-bottom: 10px;
+
+    input {
+
+      background: #d6d4cf;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+      box-sizing: border-box;
+      padding: 0 40px 0 10px;
+      height: 42px;
+      line-height: 40px;
+      font-weight: 300;
+    }
+
+    .chars-remaining {
+
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      color: #322f2f;
+      font-size: 10px;
+      margin-top: -5px;
+
+
+    }
+
+  }
+
   .field-description input {
 
     background: #d6d4cf;
@@ -172,14 +212,21 @@
 
   @media @w320 {
 
-    padding-bottom: 57px;
+    padding: 0;
 
+    .field-title {
+
+
+    }
 
     .field-description {
       width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+
+    }
+
+    .file-preview {
+      position: relative;
+
     }
 
     .file-preview .placeholder-text {

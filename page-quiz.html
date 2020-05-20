@@ -165,7 +165,7 @@
 
                     <h1>Endo Quiz</h1>
 
-                    <a href="/урл-на-лк-управление подписками" data-api-url="/local/assets/json/get-one.json" data-section-id="12345" class="add-to-favorite" title="Подписаться"><i class="fas fa-star"></i></a>
+                    <i class="ico-share"></i>
 
                 </div>
 
@@ -202,8 +202,8 @@
 
                         <div class="ee-quiz-card__title">Endo Quiz Time</div>
 
-                        <div class="ee-quiz-card__refresh">
-                            <button class="ee-button-3 -thin">Обновить</button>
+                        <div class="ee-quiz-card__refresh ee-quiz-card__refresh--top">
+                            <button class="js-next ee-button-3 -thin">Следующий</button>
                         </div>
 
                         <div class="ee-quiz-card__row-1">
@@ -212,6 +212,7 @@
 
                                 <a class="js-ee-light-box" href="/local/assets/img/tmp/gallery_photo_1.jpg" title="Какое Ваше заключение?" target="_blank"><img src="/local/assets/img/tmp/quiz_1.jpg" width="328" height="342"></a>
 
+                                <div class="ee-quiz-card__anatom">Толстая кишка</div>
 
                             </div>
 
@@ -238,6 +239,7 @@
                                 </div>
 
 
+                                <!--
                                 <div class="ee-quiz-card__actions">
 
                                     <i class="ico-learn js-add-to-learn" data-api-url="/local/assets/json/get-one.json" data-element-id="12345" title="Добавить в к изучению"></i>
@@ -245,6 +247,17 @@
                                     <a href="#"><i class="ico-share"></i></a>
 
                                 </div>
+                                -->
+
+                                <div class="ee-quiz-card__bottom-refresh-wrapper -only-for-mobile">
+
+                                    <div class="ee-quiz-card__refresh">
+                                        <button class="js-next ee-button-3 -thin">Следующий</button>
+                                    </div>
+
+                                </div>
+
+
 
 
 
@@ -254,6 +267,8 @@
                         </div>
 
 
+
+
                     </div>
 
 
@@ -261,11 +276,19 @@
 
                         <div class="ee-quiz-list__title">Выберите следующий Quiz:</div>
 
+                        <div class="ee-quiz-list__refresh-top-wrapper">
+
+                            <div class="ee-quiz-list__refresh">
+                                <button class="js-next ee-button-3 -thin">Обновить</button>
+                            </div>
+
+                        </div>
+
                         <div class="ee-quiz-list__wrap">
                             <div class="ee-quiz-list__item">
 
                                 <a href="#">
-                                    <img src="/local/assets/img/tmp/quiz_1.jpg" width="328" height="342">
+                                    <img src="/local/assets/img/tmp/quiz_1.jpg" width="328" height="328">
                                 </a>
 
                                 <div class="ee-quiz-list__item-title">
@@ -274,6 +297,7 @@
 
                                 <div class="js-data" data-id="54321" style="display: none">
 
+                                    <div class="js-anatom">Толстая кишка</div>
                                     <div class="js-question">Какое Ваше заключение???</div>
                                     <div class="js-author">Иванов Сергей Михайлович</div>
                                     <div class="js-text"><p>Sydney classification- assessment of deep mural injury after endoscopic mucosal resection.</p></div>
@@ -285,7 +309,7 @@
                             <div class="ee-quiz-list__item">
 
                                 <a href="#">
-                                    <img src="/local/assets/img/tmp/quiz_2.jpg" width="328" height="342">
+                                    <img src="/local/assets/img/tmp/quiz_2.jpg" width="328" height="328">
                                 </a>
 
                                 <div class="ee-quiz-list__item-title">
@@ -294,6 +318,7 @@
 
                                 <div class="js-data" data-id="54321" style="display: none">
 
+                                    <div class="js-anatom">Анатомическая область</div>
                                     <div class="js-question">Вопрос......</div>
                                     <div class="js-author">автор........</div>
                                     <div class="js-text"><p>текст....</p></div>
@@ -305,7 +330,7 @@
                             <div class="ee-quiz-list__item">
 
                                 <a href="#">
-                                    <img src="/local/assets/img/tmp/quiz_3.jpg" width="328" height="342">
+                                    <img src="/local/assets/img/tmp/quiz_3.jpg" width="328" height="328">
                                 </a>
 
                                 <div class="ee-quiz-list__item-title">
@@ -314,6 +339,7 @@
 
                                 <div class="js-data" data-id="54321" style="display: none">
 
+                                    <div class="js-anatom">Анатомическая область</div>
                                     <div class="js-question">Вопрос......</div>
                                     <div class="js-author">автор........</div>
                                     <div class="js-text"><p>текст....</p></div>
@@ -325,7 +351,7 @@
                             <div class="ee-quiz-list__item">
 
                                 <a href="#">
-                                    <img src="/local/assets/img/tmp/quiz_1.jpg" width="328" height="342">
+                                    <img src="/local/assets/img/tmp/quiz_1.jpg" width="328" height="328">
                                 </a>
 
                                 <div class="ee-quiz-list__item-title">
@@ -334,6 +360,7 @@
 
                                 <div class="js-data" data-id="54321" style="display: none">
 
+                                    <div class="js-anatom">Анатомическая область</div>
                                     <div class="js-question">Вопрос......</div>
                                     <div class="js-author">автор........</div>
                                     <div class="js-text"><p>текст....</p></div>
@@ -344,7 +371,7 @@
 
                             <div class="ee-quiz-list__item">
 
-                               <img src="/local/assets/img/tmp/quiz_2.jpg" width="328" height="342">
+                               <img src="/local/assets/img/tmp/quiz_2.jpg" width="328" height="328">
 
                                 <div class="ee-quiz-list__item-lock">
 
@@ -359,7 +386,7 @@
                             <div class="ee-quiz-list__item">
 
                                 <a href="#">
-                                    <img src="/local/assets/img/tmp/quiz_3.jpg" width="328" height="342">
+                                    <img src="/local/assets/img/tmp/quiz_3.jpg" width="328" height="328">
                                 </a>
 
                                 <div class="ee-quiz-list__item-title">
@@ -368,6 +395,7 @@
 
                                 <div class="js-data" data-id="54321" style="display: none">
 
+                                    <div class="js-anatom">Анатомическая область</div>
                                     <div class="js-question">Вопрос......</div>
                                     <div class="js-author">автор........</div>
                                     <div class="js-text"><p>текст....</p></div>
@@ -377,7 +405,14 @@
                             </div>
                         </div>
 
-                        <div class="ee-load-more-wrapper"><button>Показать еще</button></div>
+                        <div class="ee-load-more-wrapper">
+                            <button>Показать еще</button>
+
+                            <div class="ee-quiz-list__refresh -only-for-mobile">
+                                <button class="js-next ee-button-3 -thin">Обновить</button>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -402,8 +437,8 @@
                                             <input type="file" name="file" accept="image/jpeg,image/png">
 
                                             <div class="file-preview">
-                                                <div class="placeholder-text -desktop">Перетащите файл сюда</div>
-                                                <div class="placeholder-text -mobile">Кликните и загрузите файл</div>
+                                                <div class="placeholder-text -desktop">Перетащите файл сюда <br><span>или укажите путь на Вашем компьютере</span></div>
+                                                <div class="placeholder-text -mobile">Кликните и загрузите файл <br><span>или укажите путь на Вашем устройстве</span></div>
                                                 <div class="file-info">
                                                     <div class="file-icon"><i class="fas fa-file-image"></i></div>
                                                     <div class="file-name"></div>
@@ -412,9 +447,11 @@
                                                 <div class="control-delete">X</div>
                                             </div>
 
-                                            <div class="select-link js-from-computer">
-                                                <span class="-desktop">Или укажите путь на Вашем компьютере</span>
-                                                <span class="-mobile">Или укажите путь на Вашем устройстве</span>
+
+                                            <div class="field-title">
+
+                                                <input class="char-counter" type="text" name="file_title" placeholder="Название для иллюстрации в атлас" maxlength="100">
+
                                             </div>
 
                                             <div class="field-description">

@@ -2,6 +2,8 @@
 
 .ee-quiz-list {
 
+  position: relative;
+
 
 
   &__title {
@@ -9,6 +11,32 @@
     font-size: 24px;
     color: @gold-color;
     margin-bottom: 20px;
+  }
+
+  &__refresh-top-wrapper {
+
+    position: absolute;
+    top: -5px;
+    right: 0;
+  }
+
+  &__refresh {
+
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -85px;
+      background: url('/local/assets/img/random.png') top left no-repeat;
+      width: 60px;
+      height: 80px;
+      background-size: contain;
+    }
+
+
   }
 
   &__wrap {
@@ -54,7 +82,7 @@
       &:before {
         content: '';
         display: block;
-        height: 285px;
+        height: 255px;
         opacity: .8;
         background: url("/local/assets/img/ico_lock.png") bottom center no-repeat;
         margin-bottom: 20px;
@@ -91,6 +119,30 @@
       }
 
       &-lock:before {height: 245px}
+    }
+
+    &__refresh-top-wrapper {
+
+      position: relative;
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    &__refresh {
+
+
+      &:before {
+        top:4px;
+        left: 10px;
+        height: 32px;
+        width: 45px;
+        pointer-events: none;
+      }
+
+      .ee-button-3 {
+        padding: 0 10px 0 60px;
+      }
+
     }
 
   }

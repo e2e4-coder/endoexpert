@@ -397,6 +397,8 @@
 
                 <br><br><br>
 
+                <a name="player"></a>
+
                 <div class="video-player-wrapper">
 
                     <div class="ee-video-player">
@@ -438,6 +440,10 @@
                         </div>
 
                     </div>
+
+                    <i title="Ссылка скопирована в буфер" class="ico-link" data-link="http://endo.sommet-test.ru/page-video-online.html#player"></i>
+
+
                 </div>
 
 
@@ -476,6 +482,19 @@
 
 
 
+                    $('.ico-link').click(function () {
+
+
+                      copyToClipboard($(this).data('link') ? $(this).data('link') : window.location.href);
+
+
+                    }).tooltipster({
+                      animation: 'fade',
+                      delay: 200,
+                      theme: 'tooltipster-punk',
+                      trigger: 'click',
+                      timer: 2000
+                    });
 
 
 

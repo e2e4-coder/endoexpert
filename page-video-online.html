@@ -280,9 +280,10 @@
                                             </div>
 
                                             <div class="form-item">
-                                                <label>Страна *</label>
+
                                                 <div class="select-wrapper">
                                                     <select name="" class="form-select -required">
+                                                        <option value="">- Выберите страну -</option>
                                                         <option>Option 1</option>
                                                         <option>Option 2</option>
                                                         <option>Option 3</option>
@@ -291,9 +292,10 @@
                                             </div>
 
                                             <div class="form-item">
-                                                <label>Город *</label>
+
                                                 <div class="select-wrapper">
                                                     <select name="" class="form-select -required">
+                                                        <option value="">- Выберите город -</option>
                                                         <option>Option 1</option>
                                                         <option>Option 2</option>
                                                         <option>Option 3</option>
@@ -306,9 +308,10 @@
                                             </div>
 
                                             <div class="form-item">
-                                                <label>Специальность *</label>
+
                                                 <div class="select-wrapper">
                                                     <select name="" class="form-select -required">
+                                                        <option value="">- Выберите специальность -</option>
                                                         <option>Option 1</option>
                                                         <option>Option 2</option>
                                                         <option>Option 3</option>
@@ -334,7 +337,7 @@
 
                                     <div class="ee-login-auth-block__col">
 
-                                        <div class="ee-login-auth-block__title">Авторизация</div>
+                                        <div class="ee-login-auth-block__title" style="color: lightgreen">Авторизация</div>
 
                                         <p class="ee-login-auth-block__description">Вы уже регистрировались ранее? Для доступа необходимо пройти процедуру авторизации.</p>
 
@@ -443,7 +446,10 @@
 
                   $(document).ready(function () {
 
-                    var options = {"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/aGByQ7Ye_KI"}] };
+                    var options = {
+                      "playbackRates": [0.5, 1, 1.5, 2],
+                      "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/aGByQ7Ye_KI"}]
+                    };
 
                     var player = videojs('my-video', options, function onPlayerReady() {
 
@@ -455,7 +461,7 @@
 
                       this.on('play', function() {
 
-                        $el.prepend('<div class="ovr" style="z-index:100;position: absolute;top: 0;left: 0;width: 100%;height: 100%"></div>');
+                        $el.prepend('<div class="ee-video-js-overlay"></div>');
 
 
                       });

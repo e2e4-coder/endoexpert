@@ -42,6 +42,32 @@
 
   }
 
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -43px;
+    margin-top: -22px;
+    line-height: 45px;
+    height: 45px;
+    width: 86px;
+    border: 2px solid #fff;
+    background-color: red;
+
+    border-radius: 9px;
+    font-size: 30px;
+    text-align: center;
+
+
+    &:before {
+      content: "\f101";
+      font-family: VideoJS;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+  }
+
 
   &__login-auth-wrapper {
 
@@ -56,6 +82,8 @@
 
     .ee-login-auth-block {
 
+
+      z-index: 100;
       padding: 15px;
       background: fade(#101012, 85%);
       width: 640px;
@@ -66,12 +94,17 @@
 
       .ee-login-auth-block {
 
+        margin-top: 285px;
         width: 320px;
 
         &__col {
           width: 100%;
         }
 
+      }
+
+      .ee-fake-video-player__play-button {
+        background-color: rgba(43, 51, 63, 0.7);
       }
 
     }
@@ -102,8 +135,20 @@
 
       }
 
+      &--auth-only {
+
+        .ee-login-auth-block {
+
+          margin-top: 0;
+        }
+      }
 
 
+    }
+
+    &__play-button {
+     top: -100px;
+      background: red !important;
     }
 
 

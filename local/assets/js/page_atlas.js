@@ -4,6 +4,13 @@ $(document).ready(function () {
   $('.ee-search-block-2 .last-queries span').click(function () {
 
     $('.ee-search-block-2 .form-text').val($(this).text());
+    $('.ee-search-block-2 button[type=submit]').trigger('click');
+
+  });
+
+  $('.ee-search-block-2 .control-clear').click(function () {
+
+    $('.ee-search-block-2 .form-text').val('');
 
   });
 

@@ -50,7 +50,7 @@
           '<div class="ee-lightbox__header">' +
           '<div class="ee-lightbox__header-close"><i class="fas fa-times"></i></div>' +
           '</div> ' +
-          '<div class="ee-lightbox__body">' +
+          '<div class="ee-lightbox__body" style="height: 100%">' +
           '<div class="ee-lightbox__body-wrapper"><div class="swiper-container"><div class="swiper-wrapper"></div></div><div class="swiper-button-prev swiper-button-white"></div><div class="swiper-button-next swiper-button-white"></div></div> ' +
           '</div> ' +
           '<div class="ee-lightbox__footer">' +
@@ -74,7 +74,9 @@
 
       slides.map(function (item) {
 
-        $swiperWrapper.append('<div class="swiper-slide" style="background-image: url('+item.src+')"></div>');
+        var bg = "'"+encodeURI(item.src)+"'";
+
+        $swiperWrapper.append('<div class="swiper-slide" style="background-image: url('+bg+')"></div>');
 
       });
 

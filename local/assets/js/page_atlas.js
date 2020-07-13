@@ -23,6 +23,9 @@ $(document).ready(function () {
 
   $('.char-counter').charCounter();
 
+
+  $('textarea.char-counter').ee_autogrow();
+
   $('.ee-atlas-item__image').ee_lightbox({
     withRate: true
   });

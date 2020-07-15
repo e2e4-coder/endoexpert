@@ -6,6 +6,22 @@
 
   $.fn.ee_lightbox = function(opts) {
 
+    if (opts === 'refresh') {
+
+      slides = [];
+
+      return this.each(function (index) {
+
+        slides.push({
+          src: $(this).attr('href'),
+          title: $(this).attr('title')
+
+        });
+
+      });
+
+    }
+
     var options = {
 
 

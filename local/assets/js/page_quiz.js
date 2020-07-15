@@ -21,6 +21,11 @@ $(document).ready(function () {
 
     $card.find('.ee-quiz-card__col-1 img').attr('src', $(this).find('img').attr('src'));
 
+    $card.find('.ee-quiz-card__col-1 .js-ee-light-box').attr('href', $(this).find('img').data('full-src')).attr('title', $data.find('.js-question').text());
+
+
+
+
     $card.find('.ee-quiz-card__question span').text($data.find('.js-question').text());
     $card.find('.ee-quiz-card__author span').text($data.find('.js-author').text());
     $card.find('.ee-quiz-card__anatom').text($data.find('.js-anatom').text());
@@ -28,6 +33,8 @@ $(document).ready(function () {
     $card.find('.ee-expandable-text-5__title').removeClass('ee-expandable-text-5__title--active');
 
     $card.find('.js-add-to-learn').attr('data-element-id', $data.data('id'));
+
+    $('.js-ee-light-box').ee_lightbox('refresh');
 
 
     $([document.documentElement, document.body]).animate({

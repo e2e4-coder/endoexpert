@@ -17,7 +17,11 @@ $(document).ready(function () {
 
     e.preventDefault();
 
+
     var $data = $(this).parent().find('.js-data');
+
+    if (!$data[0]) return;
+
 
     $card.find('.ee-quiz-card__col-1 img').attr('src', $(this).find('img').attr('src'));
 

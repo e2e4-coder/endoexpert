@@ -420,6 +420,11 @@
                                 width="640"
                                 height="264"
                                 poster="/local/assets/img/tmp/video_poster.jpg"
+                                data-youtube-src="https://www.youtube.com/embed/8T9SFZDP60Q"
+                                data-api-url="/local/assets/json/get-one.json"
+                                data-stat-interval="5000"
+                                data-user-id="12345"
+                                data-video-id="54321"
 
                         >
                             <source src="/local/assets/mp4/file_example_MP4_1920_18MG.mp4" type="video/mp4" />
@@ -461,14 +466,26 @@
 
                   $(document).ready(function () {
 
+
+
                     var options = {
                       "playbackRates": [0.5, 1, 1.5, 2],
-                      "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/aGByQ7Ye_KI"}]
+                      "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": $('#my-video').data('youtube-src')}]
                     };
 
                     var player = videojs('my-video', options, function onPlayerReady() {
 
+                      var player = this;
                       var $el = $(this.el_);
+
+                      var apiUrl = $el.data('api-url');
+                      var userId = $el.data('user-id');
+                      var videoId = $el.data('video-id');
+                      var statInterval = $el.data('stat-interval');
+
+
+                      var canSendTimeUpdateEvent = false;
+
 
                       $el.find('.vjs-control-bar').css('z-index', 999);
 
@@ -478,14 +495,55 @@
 
                         $el.prepend('<div class="ee-video-js-overlay"></div>');
 
+                        sendVideoStats('play', {});
+
+                        setInterval(function () {
+
+                          canSendTimeUpdateEvent = true;
+
+                        }, statInterval);
+
 
                       });
 
                       this.on('stop', function() {
 
+                        sendVideoStats('stop', {});
 
 
                       });
+
+                      this.on('pause', function() {
+
+                        sendVideoStats('pause', {});
+
+
+                      });
+
+
+                      this.on('timeupdate', function(e,ee) {
+
+                        if (canSendTimeUpdateEvent) {
+
+                          sendVideoStats('timeupdate', {currentTime: player.currentTime()})
+                          canSendTimeUpdateEvent = false;
+
+                        }
+
+
+                      });
+
+
+                      function sendVideoStats(event, data) {
+
+                        $.post(apiUrl, {
+                          event: event,
+                          videoId: videoId,
+                          userId: userId,
+                          data:data
+                        });
+
+                      }
 
                     });
 

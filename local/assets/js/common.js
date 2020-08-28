@@ -676,7 +676,7 @@ window.showPopup = function (options) {
     items: {
       src: options.src
     },
-    modal: false,
+    modal: options.modal,
     type: 'inline',
     tClose: 'Закрыть (Esc)',
     tLoading: 'Загрузка...',

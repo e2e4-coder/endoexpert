@@ -423,6 +423,7 @@
                                 data-youtube-src="https://www.youtube.com/embed/8T9SFZDP60Q"
                                 data-api-url="/local/assets/json/get-one.json"
                                 data-stat-interval="5000"
+                                data-confirm-interval="1"
                                 data-user-id="12345"
                                 data-video-id="54321"
 
@@ -461,6 +462,34 @@
                 </div>
 
 
+                <div id="confirm-popup" class="ee-popup mfp-hide">
+
+                    <div class="popup-header">
+                        Подтвердите Ваше присутствие
+                    </div>
+
+                    <div class="popup-body">
+
+                        <p>Какой-то текст...</p>
+
+                    </div>
+
+                    <div class="popup-footer ">
+
+                        <div class="footer-buttons">
+
+                            <button id="confirm-watching" class="ee-button-7">Подтвердить</button>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
                 <script>
 
 
@@ -482,6 +511,9 @@
                       var userId = $el.data('user-id');
                       var videoId = $el.data('video-id');
                       var statInterval = $el.data('stat-interval');
+                      var confirmInterval = $el.data('confirm-interval') * 60 * 1000;
+
+                      var confirmTimeout;
 
 
                       var canSendTimeUpdateEvent = false;
@@ -492,6 +524,8 @@
 
 
                       this.on('play', function() {
+
+                        confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
                         $el.prepend('<div class="ee-video-js-overlay"></div>');
 
@@ -508,12 +542,16 @@
 
                       this.on('stop', function() {
 
+                        clearTimeout(confirmTimeout);
+
                         sendVideoStats('stop', {});
 
 
                       });
 
                       this.on('pause', function() {
+
+                        clearTimeout(confirmTimeout);
 
                         sendVideoStats('pause', {});
 
@@ -525,10 +563,22 @@
 
                         if (canSendTimeUpdateEvent) {
 
-                          sendVideoStats('timeupdate', {currentTime: player.currentTime()})
+                          sendVideoStats('timeupdate', {currentTime: player.currentTime()});
                           canSendTimeUpdateEvent = false;
 
                         }
+
+
+                      });
+
+
+                      $('#confirm-watching').click(function () {
+
+                          $.magnificPopup.close();
+
+                          sendVideoStats('confirm', {currentTime: player.currentTime()});
+
+                          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
 
                       });
@@ -542,6 +592,12 @@
                           userId: userId,
                           data:data
                         });
+
+                      }
+
+                      function showConfirmPopup() {
+
+                          showPopup({src:'#confirm-popup', modal: true});
 
                       }
 

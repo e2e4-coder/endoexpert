@@ -426,6 +426,7 @@
                                 data-confirm-interval="1"
                                 data-user-id="12345"
                                 data-video-id="54321"
+                                data-counter-start="7"
 
                         >
                             <source src="/local/assets/mp4/file_example_MP4_1920_18MG.mp4" type="video/mp4" />
@@ -623,22 +624,18 @@
 
                     var $timeCounter = $('#time-counter');
 
-                    var minutesCount = 0;
-
-                    /*
+                    var minutesCount = $(player.el_).data('counter-start');
+                    setTime(minutesCount);
 
                     setInterval(function () {
 
-                      if (player.isPlaying()) {
+                      if (!player.paused()) {
 
                         setTime(++minutesCount);
 
                       }
 
                     }, 60000);
-
-
-                     */
 
 
                     function setTime(t) {

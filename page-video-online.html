@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
 
 
     <link rel="stylesheet" href="/local/assets/css/build.css">
@@ -28,6 +29,7 @@
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
     <script src="/local/assets/local/lib/frontend/imask.js"></script>
     <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
 
 
 
@@ -427,8 +429,10 @@
                                 data-user-id="12345"
                                 data-video-id="54321"
                                 data-counter-start="7"
+                                data-vote-popup-time="2020-09-20 09:00:00"
 
                         >
+
                             <source src="/local/assets/mp4/file_example_MP4_1920_18MG.mp4" type="video/mp4" />
 
                             <p class="vjs-no-js">
@@ -439,6 +443,12 @@
                                 >
                             </p>
                         </video>
+
+                        <div class="ee-video-player__overlay-banner" style="display: none">
+
+                            Тут можно вставить любой контент...
+
+                        </div>
 
                     </div>
 
@@ -490,6 +500,62 @@
 
                 </div>
 
+                <div id="vote-popup" class="ee-popup mfp-hide">
+
+                    <form id="vote-popup-form" action="/local/assets/json/post-rating.json">
+
+                        <input type="hidden" name="video_id" value="234234">
+
+                        <div class="popup-header">
+                            Оцените трансляцию
+                        </div>
+
+                        <div class="popup-body">
+
+                            <div class="ee-vote-popup-form">
+
+                                <div class="ee-vote-popup-form__item">
+
+                                    <select title="Оцените трансляцию" name="vote">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                                <div class="ee-vote-popup-form__item">
+
+                                    <textarea name="comment" placeholder="Ваш комментарий"></textarea>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="popup-footer ">
+
+                            <div class="footer-buttons">
+
+                                <button type="submit" class="ee-button-7">ОК</button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
 
                 <script>
 
@@ -514,17 +580,41 @@
                       var statInterval = $el.data('stat-interval');
                       var confirmInterval = $el.data('confirm-interval') * 60 * 1000;
 
+                      var votePopupTime = $el.data('vote-popup-time');
+                      var canShowVotePopup = !!votePopupTime;
+
+                      var votePopupTimeType = votePopupTime && votePopupTime.toString().indexOf('-') > 0 ? 'date' : 'seconds';
+
+
+                      if (votePopupTimeType === 'date') {
+
+                          votePopupTime = new Date(votePopupTime);
+
+                      }
+
+
                       var confirmTimeout;
 
 
                       var canSendTimeUpdateEvent = false;
 
+                      var popupSound = new Audio('/bitrix/js/im/audio/new-message-1.mp3');
+
+
 
                       $el.find('.vjs-control-bar').css('z-index', 999);
 
+                      var $overlayBanner = $el.next('.ee-video-player__overlay-banner');
 
+                      $overlayBanner.appendTo($el);
+
+                      var duration = 0;
 
                       this.on('play', function() {
+
+                        duration = player.duration();
+
+                        $overlayBanner.fadeOut();
 
                         confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
@@ -543,6 +633,8 @@
 
                       this.on('stop', function() {
 
+                        $overlayBanner.show();
+
                         clearTimeout(confirmTimeout);
 
                         sendVideoStats('stop', {});
@@ -552,7 +644,10 @@
 
                       this.on('pause', function() {
 
+                        $overlayBanner.show();
+
                         clearTimeout(confirmTimeout);
+
 
                         sendVideoStats('pause', {});
 
@@ -561,6 +656,20 @@
 
 
                       this.on('timeupdate', function(e,ee) {
+
+
+
+
+                        if (canShowVotePopup) {
+
+                            if (votePopupTimeType === 'date' && Date.now() > votePopupTime || votePopupTimeType === 'seconds' && duration && duration - player.currentTime() < votePopupTime) {
+
+                                showVotePopup();
+                                canShowVotePopup = false;
+                            }
+
+
+                        }
 
                         if (canSendTimeUpdateEvent) {
 
@@ -573,7 +682,23 @@
                       });
 
 
+                      $('#vote-popup-form').submit(function (e) {
+
+                          e.preventDefault();
+
+                          $.post($(this).attr('action'), $(this).serialize());
+
+                          $.magnificPopup.close();
+
+                          return false;
+
+
+                      });
+
+
                       $('#confirm-watching').click(function () {
+
+                          player.play();
 
                           $.magnificPopup.close();
 
@@ -598,7 +723,38 @@
 
                       function showConfirmPopup() {
 
-                          showPopup({src:'#confirm-popup', modal: true});
+                          player.pause();
+                          popupSound.play();
+
+                          if ($(window).width() <= 768) {document.exitFullscreen()};
+
+                          showPopup({src:'#confirm-popup', modal: true, prependTo: document.getElementById('my-video')});
+
+
+
+                      }
+
+                      function showVotePopup() {
+
+                          $('.ee-vote-popup-form select').barrating({
+                              theme: 'fa-stars-gold2',
+                              initialRating: 0,
+                              readonly: false,
+                              allowEmpty: true,
+                              emptyValue: 0,
+                          });
+
+
+                          popupSound.play();
+
+
+
+                          showPopup({
+                              src: '#vote-popup',
+                              modal: false,
+                              prependTo: document.getElementById('my-video')
+                          });
+
 
                       }
 

@@ -1,0 +1,55 @@
+@import "../inc/variables";
+
+.ee-popup-for-spec {
+
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+
+  display: flex;
+
+  &__text {
+    flex: 1 1 auto;
+    font-size: 19px;
+    line-height: 1.4;
+    margin-right: 80px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ee-popup-v4__close {
+    top: -30px;
+  }
+
+
+}
+
+@media @w320 {
+
+  .ee-popup-for-spec {
+
+    width: 100%;
+    padding: 10px;
+    display: block;
+
+    &__text {
+      font-size: 16px;
+      margin: 0 30px 10px 0;
+      br {
+        display: none;
+      }
+    }
+
+    .ee-popup-v4__close {
+      top: -10px;
+      right: 30px;
+    }
+  }
+
+
+
+}

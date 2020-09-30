@@ -1,0 +1,33 @@
+@import "../inc/variables";
+
+.ee-popup-v4 {
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: fade(#2e302f, 90%);
+  z-index: 999;
+  padding: 40px 0;
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #9f9c9c;
+    cursor: pointer;
+    font-size: 28px;
+  }
+
+
+
+}
+
+@media @w320 {
+
+  .ee-popup-v4 {
+    padding: 10px 0;
+
+  }
+
+}

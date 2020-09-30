@@ -687,3 +687,15 @@ window.showPopup = function (options) {
   });
 
 };
+
+window.showStickyPopup = function (options) {
+
+   $(options.src).fadeIn();
+
+};
+
+window.hideStickyPopup = function (options) {
+
+    $(options.src).hide();
+
+};

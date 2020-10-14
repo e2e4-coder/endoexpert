@@ -424,6 +424,7 @@
                                 poster="/local/assets/img/tmp/video_poster.jpg"
                                 data-youtube-src="https://www.youtube.com/embed/8T9SFZDP60Q"
                                 data-api-url="/local/assets/json/get-one.json"
+                                data-ws-url="wss://echo.websocket.org"
                                 data-stat-interval="5000"
                                 data-confirm-interval="1"
                                 data-user-id="12345"
@@ -580,6 +581,10 @@
                       var statInterval = $el.data('stat-interval');
                       var confirmInterval = $el.data('confirm-interval') * 60 * 1000;
 
+                      var wsUrl = $el.data('ws-url');
+
+                      var ws = new WebSocket(wsUrl);
+
                       var votePopupTime = $el.data('vote-popup-time');
                       var canShowVotePopup = !!votePopupTime;
 
@@ -712,12 +717,25 @@
 
                       function sendVideoStats(event, data) {
 
+
+                        /*
                         $.post(apiUrl, {
                           event: event,
                           videoId: videoId,
                           userId: userId,
                           data:data
                         });
+                        */
+
+                        ws.send(JSON.stringify({
+                          event: event,
+                          videoId: videoId,
+                          userId: userId,
+                          data:data
+                        }));
+
+
+
 
                       }
 

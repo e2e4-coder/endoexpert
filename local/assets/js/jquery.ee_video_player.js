@@ -41,7 +41,7 @@
 
       player.on('pause', function () {
 
-        if ($pauseOverlay.length) $pauseOverlay.fadeIn();
+        if ($pauseOverlay.length) $pauseOverlay.show();
 
 
 
@@ -50,7 +50,7 @@
 
       player.on('stop', function () {
 
-        if ($pauseOverlay.length) $pauseOverlay.fadeIn();
+        if ($pauseOverlay.length) $pauseOverlay.show();
 
 
       });

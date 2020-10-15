@@ -14,11 +14,23 @@
 
     var player = videojs(this[0], options, function onPlayerReady() {
 
+      var $el = $(player.el_);
+      var vjsOverlayPrepended = false;
 
-      $pauseOverlay.appendTo($(player.el_));
-      $(player.el_).find('.vjs-control-bar').css('z-index', 999);
+
+
+
+      $pauseOverlay.appendTo($el);
+      $el.find('.vjs-control-bar').css('z-index', 999);
 
       player.on('play', function () {
+
+        if (!vjsOverlayPrepended) {
+
+          $el.prepend('<div class="ee-video-js-overlay"></div>');
+        }
+
+
 
         if ($pauseOverlay.length) $pauseOverlay.fadeOut();
 

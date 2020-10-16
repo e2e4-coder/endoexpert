@@ -9,7 +9,10 @@
       "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": this.data('youtube-src')}]
     };
 
-    var $pauseOverlay = $(this.data('pause-overlay-src'));
+    var $pauseOverlayTop = $(this.data('pause-overlay-top-src'));
+    var $pauseOverlayBottom = $(this.data('pause-overlay-bottom-src'));
+
+    var pauseOverlayTopCanHide = false;
 
 
     var player = videojs(this[0], options, function onPlayerReady() {
@@ -17,10 +20,9 @@
       var $el = $(player.el_);
       var vjsOverlayPrepended = false;
 
+      $pauseOverlayTop.appendTo($el);
+      $pauseOverlayBottom.appendTo($el);
 
-
-
-      $pauseOverlay.appendTo($el);
       $el.find('.vjs-control-bar').css('z-index', 999);
 
       player.on('play', function () {
@@ -30,9 +32,23 @@
           $el.prepend('<div class="ee-video-js-overlay"></div>');
         }
 
+        if (!pauseOverlayTopCanHide && $pauseOverlayBottom.length) {
+
+          $pauseOverlayTop.show();
+
+          setTimeout(function () {
+
+            pauseOverlayTopCanHide = true;
+            $pauseOverlayTop.fadeOut();
+
+          }, 3000);
+
+        }
 
 
-        if ($pauseOverlay.length) $pauseOverlay.fadeOut();
+
+        if ($pauseOverlayTop.length && pauseOverlayTopCanHide) $pauseOverlayTop.fadeOut();
+        if ($pauseOverlayBottom.length) $pauseOverlayBottom.fadeOut();
 
 
 
@@ -41,7 +57,8 @@
 
       player.on('pause', function () {
 
-        if ($pauseOverlay.length) $pauseOverlay.show();
+        if ($pauseOverlayTop.length) $pauseOverlayTop.show();
+        if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
 
 
@@ -50,7 +67,8 @@
 
       player.on('stop', function () {
 
-        if ($pauseOverlay.length) $pauseOverlay.show();
+        if ($pauseOverlayTop.length) $pauseOverlayTop.show();
+        if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
 
       });

@@ -12,6 +12,13 @@
     var $pauseOverlayTop = $(this.data('pause-overlay-top-src'));
     var $pauseOverlayBottom = $(this.data('pause-overlay-bottom-src'));
 
+    var userId = this.data('user-id');
+    var videoId = this.data('video-id');
+
+    var statUrl = this.data('stat-url');
+    var statInterval = this.data('stat-interval')*1000;
+    var canSendTimeUpdateEvent = false;
+
     var pauseOverlayTopCanHide = false;
 
 
@@ -26,6 +33,8 @@
       $el.find('.vjs-control-bar').css('z-index', 999);
 
       player.on('play', function () {
+
+        sendVideoStats('play', {});
 
         if (!vjsOverlayPrepended) {
 
@@ -57,8 +66,12 @@
 
       player.on('pause', function () {
 
+        sendVideoStats('pause', {});
+
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
+
+
 
 
 
@@ -67,22 +80,63 @@
 
       player.on('stop', function () {
 
+        sendVideoStats('stop', {});
+
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
 
       });
 
+      player.on('timeupdate', function(e,ee) {
+
+        if (canSendTimeUpdateEvent) {
+
+          sendVideoStats('timeupdate', {currentTime: player.currentTime()});
+          canSendTimeUpdateEvent = false;
+
+        }
 
 
+      });
 
+      if (statUrl) {
 
+        setInterval(function () {
+
+          canSendTimeUpdateEvent = true;
+
+        }, statInterval);
+      }
 
 
     });
 
 
-    console.log();
+    function sendVideoStats(event, data) {
+
+      if (!statUrl) return false;
+
+      $.post(statUrl, {
+        event: event,
+        videoId: videoId,
+        userId: userId,
+        data:data
+      });
+
+      /*
+            ws.send(JSON.stringify({
+              event: event,
+              videoId: videoId,
+              userId: userId,
+              data:data
+            }));*/
+
+
+
+
+    }
+
 
     return this;
 

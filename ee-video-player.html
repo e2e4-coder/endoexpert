@@ -39,7 +39,7 @@
     <script src="/local/assets/js/common.js"></script>
     <script src="/local/assets/js/page_video_online.js"></script>
 
-    <script src="/local/assets/js/jquery.ee_video_player.js?4"></script>
+    <script src="/local/assets/js/jquery.ee_video_player.js?5"></script>
 
 
 
@@ -215,6 +215,64 @@
                   });
 
                 </script>
+
+
+                <h2><br><br>playlist</h2>
+
+
+                <div class="video-player-wrapper">
+
+                    <div class="ee-video-player">
+
+                        <video
+                                id="my-playlist"
+                                class="video-js"
+                                controls
+                                preload="auto"
+                                width="640"
+                                height="264"
+                                poster="/local/assets/img/tmp/video_poster.jpg"
+                                data-youtube-src="https://www.youtube.com/watch?list=PL-L0t4skOkWFCeHUG52U9FOkZ4zWOGaSp&v=qcxRGnLDYCY"
+                                data-pause-overlay-top-src="#overlay-4"
+                                data-pause-overlay-bottom-src="#overlay-3"
+
+                        >
+
+                        </video>
+
+                        <div id="overlay-3" class="ee-video-player__overlay-banner" style="display: none">
+
+                            Тут можно вставить любой контент...
+
+                        </div>
+
+                        <div id="overlay-4" class="ee-video-player__overlay-banner ee-video-player__overlay-banner--top" style="display: none">
+
+                            Верхний баннер....
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <script>
+
+                  $(document).ready(function () {
+
+                    $('#my-playlist').ee_video_player();
+
+                  });
+
+                </script>
+
+
+
 
 
 

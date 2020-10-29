@@ -3,11 +3,15 @@
 
   $.fn.ee_video_player = function() {
 
+    var $el;
 
     var options = {
       "playbackRates": [0.5, 1, 1.5, 2],
       "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": this.data('youtube-src')}]
     };
+
+    var m = this.data('youtube-src').match(/list=([^&]*)/);
+    var playlistId = m ? m[1] : undefined;
 
     var $pauseOverlayTop = $(this.data('pause-overlay-top-src'));
     var $pauseOverlayBottom = $(this.data('pause-overlay-bottom-src'));
@@ -24,7 +28,12 @@
 
     var player = videojs(this[0], options, function onPlayerReady() {
 
-      var $el = $(player.el_);
+      $el = $(player.el_);
+
+      if (playlistId) {
+        loadPlaylist(playlistId);
+      }
+
       var vjsOverlayPrepended = false;
 
       $pauseOverlayTop.appendTo($el);
@@ -134,6 +143,47 @@
 
 
 
+
+    }
+
+    function loadPlaylist(playlistId) {
+
+      $.getJSON('/pl.php?id=' + playlistId, function (data) {
+
+        if (data[0] && data[0].src) {
+
+          player.src({src: data[0].src, type: 'video/youtube'});
+
+          var $playlist = $('<div class="ee-video-playlist"></div>').appendTo($el.closest('.video-player-wrapper'));
+
+           for (var i=0;i<data.length;i++) {
+
+            $('<div class="ee-video-playlist__item" data-src="' + data[i].src + '">' +
+                '<div class="ee-video-playlist__item-thumb"><span><img src="'+data[i].thumbnail.url+'"></span></div>' +
+                '<div class="ee-video-playlist__item-title">'+data[i].title+'</div>' +
+              '</div>').appendTo($playlist);
+
+          }
+
+          $playlist.find('.ee-video-playlist__item').eq(0).addClass('active');
+
+          $playlist.find('.ee-video-playlist__item').click(function () {
+
+            $playlist.find('.ee-video-playlist__item').removeClass('active');
+
+            $(this).addClass('active');
+
+            player.src({src: $(this).data('src'), type: 'video/youtube'});
+            player.play();
+
+          });
+
+
+        }
+
+
+
+      });
 
     }
 

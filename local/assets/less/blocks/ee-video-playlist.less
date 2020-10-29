@@ -1,0 +1,48 @@
+@import "../inc/variables";
+
+.ee-video-playlist {
+
+  max-height: 300px;
+  overflow-y: auto;
+  background: #333333;
+  padding: 10px;
+
+  .style-scrollbars(5px);
+
+  &__item {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    &.active {
+      background: #555555;
+    }
+
+    &:hover {
+      background: #444444;
+    }
+
+    &-thumb {
+
+      width: 120px;
+      height: 66px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      margin-right: 20px;
+
+      img {
+        margin-top: -12px;
+      }
+
+    }
+
+    &-title {
+      flex: 1 1 auto;
+      padding: 5px 0 0 0;
+    }
+  }
+
+
+
+
+}

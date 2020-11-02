@@ -150,17 +150,25 @@
 
       $.getJSON('/pl.php?id=' + playlistId, function (data) {
 
-        if (data[0] && data[0].src) {
+        if (data.items && data.items[0].src) {
 
-          player.src({src: data[0].src, type: 'video/youtube'});
+          player.src({src: data.items[0].src, type: 'video/youtube'});
 
-          var $playlist = $('<div class="ee-video-playlist"></div>').appendTo($el.closest('.video-player-wrapper'));
+          var $plIcon = $('<div class="ee-video-playlist-icon"><svg height="100%" viewBox="0 0 36 36"><use class="ytp-svg-shadow" xlink:href="#ytp-id-23"></use><path d="m 22.53,21.42 0,6.85 5.66,-3.42 -5.66,-3.42 0,0 z m -11.33,0 9.06,0 0,2.28 -9.06,0 0,-2.28 0,0 z m 0,-9.14 13.6,0 0,2.28 -13.6,0 0,-2.28 0,0 z m 0,4.57 13.6,0 0,2.28 -13.6,0 0,-2.28 0,0 z" fill="#fff"></path></svg></div>').appendTo($el.closest('.video-player-wrapper'));
 
-           for (var i=0;i<data.length;i++) {
+          var $pl = $('<div class="ee-video-playlist"></div>').appendTo($el.closest('.video-player-wrapper'));
 
-            $('<div class="ee-video-playlist__item" data-src="' + data[i].src + '">' +
-                '<div class="ee-video-playlist__item-thumb"><span><img src="'+data[i].thumbnail.url+'"></span></div>' +
-                '<div class="ee-video-playlist__item-title">'+data[i].title+'</div>' +
+          var $header = $('<div class="ee-video-playlist__header"><button class="ee-video-playlist__close" aria-label="Закрыть"><svg height="100%" viewBox="0 0 24 24" width="100%"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#fff"></path></svg></button></div>').appendTo($pl);
+
+          $('<div class="ee-video-playlist__title">'+data.title+'</div>').appendTo($header);
+
+          var $playlist = $('<div class="ee-video-playlist__list"></div>').appendTo($pl);
+
+           for (var i=0;i<data.items.length;i++) {
+
+            $('<div class="ee-video-playlist__item" data-src="' + data.items[i].src + '">' +
+                '<div class="ee-video-playlist__item-thumb"><span><img src="'+data.items[i].thumbnail.url+'"></span></div>' +
+                '<div class="ee-video-playlist__item-title">'+data.items[i].title+'</div>' +
               '</div>').appendTo($playlist);
 
           }
@@ -175,6 +183,18 @@
 
             player.src({src: $(this).data('src'), type: 'video/youtube'});
             player.play();
+
+          });
+
+          $plIcon.click(function () {
+
+            $pl.css('display', 'flex');
+
+          });
+
+          $header.find('.ee-video-playlist__close').click(function () {
+
+            $pl.css('display', 'none');
 
           });
 

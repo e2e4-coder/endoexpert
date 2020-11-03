@@ -294,6 +294,18 @@ $(document).ready(function () {
 
   $('.js-add-to-learn').click(toggleEvent);
 
+  $('.js-copy-link').click(function () {
+
+      copyToClipboard($(this).data('link') ? $(this).data('link') : window.location.href);
+
+  }).tooltipster({
+      animation: 'fade',
+      delay: 200,
+      theme: 'tooltipster-punk',
+      trigger: 'click',
+      timer: 2000
+  });
+
   $('.ee-like-dislike-control i').click(function () {
 
     if ($(this).hasClass('-active')) return false;

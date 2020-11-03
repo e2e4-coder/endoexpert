@@ -177,7 +177,23 @@
                                 data-stat-interval="5"
                                 data-user-id="12345"
                                 data-video-id="54321"
+
+                                data-confirm-popup-src="#confirm-popup"
+                                data-confirm-api-url="/local/assets/json/get-one.json"
+                                data-confirm-interval="30"
+
+                                data-vote-popup-src="#vote-popup"
+                                data-vote-api-url="/local/assets/json/post-rating.json"
+                                data-vote-popup-time="2020-09-20 09:00:00"
+
+                                data-counter-src="#time-counter"
+                                data-counter-start="7"
+
                         >
+
+                            <!--
+                            data-vote-popup-time - можно задавать в виде даты или в секундах до конца видео
+                            -->
 
                         </video>
 
@@ -191,6 +207,104 @@
 
                             Верхний баннер....
 
+                        </div>
+
+                        <div id="confirm-popup" class="ee-popup mfp-hide">
+
+                            <div class="popup-header">
+                                Подтвердите Ваше присутствие
+                            </div>
+
+                            <div class="popup-body">
+
+                                <p>Какой-то текст...</p>
+
+                            </div>
+
+                            <div class="popup-footer ">
+
+                                <div class="footer-buttons">
+
+                                    <button class="js-confirm ee-button-7">Подтвердить</button>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div id="vote-popup" class="ee-popup mfp-hide">
+
+                            <form>
+
+                                <div class="popup-header">
+                                    Оцените трансляцию
+                                </div>
+
+                                <div class="popup-body">
+
+                                    <div class="ee-vote-popup-form">
+
+                                        <div class="ee-vote-popup-form__item">
+
+                                            <select title="Оцените трансляцию" name="vote">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="ee-vote-popup-form__item">
+
+                                            <textarea name="comment" placeholder="Ваш комментарий"></textarea>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="popup-footer ">
+
+                                    <div class="footer-buttons">
+
+                                        <button type="submit" class="ee-button-7">ОК</button>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <i title="Ссылка скопирована в буфер" class="js-copy-link ico-link" data-link="http://endo.sommet-test.ru/page-video-online.html#player"></i>
+
+                    <div class="ee-time-counter" id="time-counter">
+
+                        <div class="counter-label">Учёт присутствия</div>
+
+                        <div class="counter-digits">
+                            <span class="d1">0</span>
+                            <span class="d2">0</span>
+                            <span class="d3">0</span>
+                            <span class="d4">0</span>
+                            <div class="hours-label">часов</div>
+                            <div class="minutes-label">минут</div>
                         </div>
 
                     </div>

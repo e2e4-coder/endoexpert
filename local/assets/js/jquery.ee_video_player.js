@@ -24,6 +24,24 @@
     var canSendTimeUpdateEvent = false;
 
     var pauseOverlayTopCanHide = false;
+    var pauseOverlayTopTimeout;
+
+    var popupSound = new Audio('/bitrix/js/im/audio/new-message-1.mp3');
+
+    var confirmPopupSrc = this.data('confirm-popup-src');
+    var confirmInterval = this.data('confirm-interval') * 60 * 1000;
+    var confirmApiUrl = this.data('confirm-api-url');
+    var confirmTimeout;
+
+    var votePopupSrc = this.data('vote-popup-src');
+    var votePopupTime = this.data('vote-popup-time');
+    var voteApiUrl = this.data('vote-api-url');
+    var votePopupTimeIsDate = votePopupTime && votePopupTime.toString().indexOf('-') > 0;
+    if (votePopupTimeIsDate) { votePopupTime = new Date(votePopupTime); }
+    var votePopupCanShow = !!votePopupSrc;
+
+    var counterSrc = this.data('counter-src');
+    var counterStart = this.data('counter-start');
 
 
     var player = videojs(this[0], options, function onPlayerReady() {
@@ -41,7 +59,11 @@
 
       $el.find('.vjs-control-bar').css('z-index', 999);
 
+      var duration = 0;
+
       player.on('play', function () {
+
+        duration = player.duration();
 
         sendVideoStats('play', {});
 
@@ -50,23 +72,29 @@
           $el.prepend('<div class="ee-video-js-overlay"></div>');
         }
 
-        if (!pauseOverlayTopCanHide && $pauseOverlayBottom.length) {
+        if ($pauseOverlayTop.length) {
 
           $pauseOverlayTop.show();
 
-          setTimeout(function () {
+          pauseOverlayTopTimeout = setTimeout(function () {
 
             pauseOverlayTopCanHide = true;
             $pauseOverlayTop.fadeOut();
 
-          }, 3000);
+          }, 5000);
 
         }
 
 
 
-        if ($pauseOverlayTop.length && pauseOverlayTopCanHide) $pauseOverlayTop.fadeOut();
+        //if ($pauseOverlayTop.length && pauseOverlayTopCanHide) $pauseOverlayTop.fadeOut();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.fadeOut();
+
+        if (confirmPopupSrc) {
+          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+        }
+
+
 
 
 
@@ -80,9 +108,8 @@
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
-
-
-
+        clearTimeout(confirmTimeout);
+        clearTimeout(pauseOverlayTopTimeout);
 
 
       });
@@ -93,6 +120,9 @@
 
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
+
+        clearTimeout(confirmTimeout);
+        clearTimeout(pauseOverlayTopTimeout);
 
 
       });
@@ -106,6 +136,17 @@
 
         }
 
+        if (votePopupCanShow) {
+
+            //console.log(votePopupCanShow);
+
+            if (votePopupTimeIsDate && Date.now() > votePopupTime || !votePopupTimeIsDate && duration && duration - player.currentTime() < votePopupTime) {
+
+                showVotePopup();
+                votePopupCanShow = false;
+            }
+        }
+
 
       });
 
@@ -116,6 +157,81 @@
           canSendTimeUpdateEvent = true;
 
         }, statInterval);
+      }
+
+      if (confirmPopupSrc) {
+
+        $(confirmPopupSrc).find('.js-confirm').click(function () {
+
+          player.play();
+
+          $.magnificPopup.close();
+
+          sendVideoStats('confirm', {currentTime: player.currentTime()});
+
+          $.post(confirmApiUrl, {
+            user_id:userId,
+            video_id:videoId,
+            current_time: player.currentTime()
+          }, function () {});
+
+          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+
+        });
+
+      }
+
+      if (votePopupSrc) {
+
+          $(votePopupSrc).find('form').submit(function (e) {
+
+              e.preventDefault();
+
+              $.magnificPopup.close();
+
+              $.post(confirmApiUrl, {
+                  user_id:userId,
+                  video_id:videoId,
+                  vote: $(this).find('select[name=vote]').val(),
+                  comment: $(this).find('textarea[name=comment]').val()
+              }, function () {});
+
+          });
+
+      }
+
+      if (counterSrc) {
+
+
+          var $timeCounter = $(counterSrc);
+
+          setTime(counterStart);
+
+          setInterval(function () {
+
+              if (!player.paused()) {
+
+                  setTime(++counterStart);
+
+              }
+
+          }, 60000);
+
+
+          function setTime(t) {
+
+              var minutes = (t % 60).toString();
+
+              $timeCounter.find('.d4').text(minutes.slice(-1));
+              $timeCounter.find('.d3').text(minutes.length > 1 ? minutes.slice(0, 1) : 0);
+
+              var hours = Math.floor(t / 60).toString();
+
+              $timeCounter.find('.d2').text(hours.slice(-1));
+              $timeCounter.find('.d1').text(hours.length > 1 ? hours.slice(0, 1) : 0);
+
+          }
+
       }
 
 
@@ -206,6 +322,39 @@
       });
 
     }
+
+    function showConfirmPopup() {
+
+      player.pause();
+      popupSound.play();
+
+      if ($(window).width() <= 768) {document.exitFullscreen()}
+
+      showPopup({src:confirmPopupSrc, modal: true, prependTo: $el[0]});
+
+    }
+
+    function showVotePopup() {
+
+          $(votePopupSrc).find('select').barrating({
+              theme: 'fa-stars-gold2',
+              initialRating: 0,
+              readonly: false,
+              allowEmpty: true,
+              emptyValue: 0,
+          });
+
+          popupSound.play();
+
+
+          showPopup({
+              src: votePopupSrc,
+              modal: false,
+              prependTo: $el[0]
+          });
+
+
+      }
 
 
     return this;

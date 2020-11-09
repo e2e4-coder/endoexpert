@@ -189,7 +189,7 @@
 
               $.magnificPopup.close();
 
-              $.post(confirmApiUrl, {
+              $.post(voteApiUrl, {
                   user_id:userId,
                   video_id:videoId,
                   vote: $(this).find('select[name=vote]').val(),
@@ -325,7 +325,7 @@
 
     function showConfirmPopup() {
 
-      player.pause();
+      //player.pause();
       popupSound.play();
 
       if ($(window).width() <= 768) {document.exitFullscreen()}

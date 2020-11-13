@@ -43,8 +43,18 @@
     var counterSrc = this.data('counter-src');
     var counterStart = this.data('counter-start');
 
+    var fingerprint = '';
+
 
     var player = videojs(this[0], options, function onPlayerReady() {
+
+      FingerprintJS.load().then(function (fp) {
+         fp.get().then(function (result) {
+
+          fingerprint = result.visitorId;
+
+        });
+      });
 
       $el = $(player.el_);
 
@@ -243,6 +253,7 @@
       if (!statUrl) return false;
 
       data.userAgent = navigator.userAgent;
+      data.fingerprint = fingerprint;
 
       $.post(statUrl, {
         event: event,

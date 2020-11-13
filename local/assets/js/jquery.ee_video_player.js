@@ -242,6 +242,8 @@
 
       if (!statUrl) return false;
 
+      data.userAgent = navigator.userAgent;
+
       $.post(statUrl, {
         event: event,
         videoId: videoId,

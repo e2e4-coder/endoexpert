@@ -19,6 +19,8 @@
     var userId = this.data('user-id');
     var videoId = this.data('video-id');
 
+    var endTime = this.data('end-time') ? new Date(this.data('end-time')) : false;
+
     var statUrl = this.data('stat-url');
     var statInterval = this.data('stat-interval')*1000;
     var canSendTimeUpdateEvent = false;
@@ -337,6 +339,10 @@
     }
 
     function showConfirmPopup() {
+
+      if (endTime && Date.now() > endTime) {
+        return;
+      }
 
       //player.pause();
       popupSound.play();

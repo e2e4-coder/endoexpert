@@ -52,7 +52,7 @@
     var videoBeforeUrl = this.data('video-before');
     var videoAfterUrl = this.data('video-after');
 
-
+    var playlistVideoStartTime = this.data('playlist-video-start-time');
 
     var player = videojs(this[0], options, function onPlayerReady() {
 
@@ -85,6 +85,29 @@
 
         var videoBeforeShown = false;
 
+        $el.css('pointer-events', 'none');
+
+        $el.parent().css('cursor', 'pointer').click(function () {
+
+          if (videoBeforeShown) return;
+
+          //$el.find('.vjs-control-bar').hide();
+
+          $videoBefore.show();
+          $videoBefore.find('video')[0].play();
+          $videoBefore.find('video')[0].onended = function () {
+
+            $videoBefore.hide();
+            player.play();
+            videoBeforeShown = true;
+
+            $el.css('pointer-events', 'auto');
+            //$el.find('.vjs-control-bar').show();
+          };
+
+        });
+
+
       }
 
       if (videoAfterUrl) {
@@ -97,22 +120,9 @@
 
       player.on('play', function () {
 
+        if (playlistVideoStartTime && Math.floor(player.currentTime()) < playlistVideoStartTime) {
 
-        if (videoBeforeUrl && !videoBeforeShown) {
-
-          player.pause();
-
-          $el.find('.vjs-control-bar').hide();
-
-          $videoBefore.show();
-          $videoBefore.find('video')[0].play();
-          $videoBefore.find('video')[0].onended = function () {
-
-            $videoBefore.hide();
-            player.play();
-            videoBeforeShown = true;
-            $el.find('.vjs-control-bar').show();
-          }
+          player.currentTime(playlistVideoStartTime);
 
         }
 

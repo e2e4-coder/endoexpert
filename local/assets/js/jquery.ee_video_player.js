@@ -154,6 +154,7 @@
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.fadeOut();
 
         if (confirmPopupSrc) {
+          clearTimeout(confirmTimeout);
           confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
         }
 
@@ -215,6 +216,8 @@
 
       player.on('ended', function () {
 
+        if ($pauseOverlayTop.length) $pauseOverlayTop.show();
+
         if (videoAfterUrl) {
 
           player.pause();
@@ -267,6 +270,7 @@
             current_time: player.currentTime()
           }, function () {});
 
+          clearTimeout(confirmTimeout);
           confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
         });

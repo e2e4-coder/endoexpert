@@ -690,10 +690,21 @@ window.showPopup = function (options) {
     },
     modal: options.modal,
     prependTo: options.prependTo ? options.prependTo : document.body,
+    mainClass: options.noBg ? 'no-bg' : '',
     type: 'inline',
     tClose: 'Закрыть (Esc)',
     tLoading: 'Загрузка...',
     callbacks: {
+
+      open: function() {
+
+        if (options.noBg) {
+
+          $('html').css('overflow', 'initial');
+
+        }
+
+      },
 
     }
   });

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
-    <link rel="stylesheet" href="/local/assets/css/build.css?1">
+    <link rel="stylesheet" href="/local/assets/css/build.css?2">
 
 
 
@@ -332,6 +332,17 @@
                         <button onclick="showPopup({src:'#popup-1'})">.ee-popup</button>
                         <button onclick="showPopup({src:'#popup-3', modal: true})">.ee-popup-v3</button>
                         <button onclick="showStickyPopup({src:'#popup-4'})">.ee-popup-v4</button>
+                        <button onclick="showPopup({src:'#popup-5', noBg : true})">.ee-popup-moviprep</button>
+
+                        <script>
+
+                            $(document).ready(function () {
+
+                              showPopup({src:'#popup-5', noBg : true})
+
+                            });
+
+                        </script>
 
                     </div>
 
@@ -426,6 +437,26 @@
                             <span title="Закрыть" class="ee-popup-v4__close" onclick="hideStickyPopup({src:'#popup-4'})">×</span>
 
                         </div>
+
+                    </div>
+
+                    <div id="popup-5" class="ee-popup-moviprep mfp-hide">
+
+                        <div class="ee-popup-moviprep__text">
+
+                            <p><img src="/local/assets/img/tmp/moviprep_popup.jpg"></p>
+
+                            <p>Скидка 20% на вторую упаковку Дексилант</p>
+
+                        </div>
+
+                        <div class="ee-popup-moviprep__button">
+
+                            <a target="_blank" href="https://apteka.ru/product/moviprep-5e32717aff7fee000113644d/">Получить</a>
+
+                        </div>
+
+
 
                     </div>
 

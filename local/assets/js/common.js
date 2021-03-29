@@ -684,30 +684,36 @@ function copyFormattedToClipboard (html) {
 
 window.showPopup = function (options) {
 
-  $.magnificPopup.open({
-    items: {
-      src: options.src
-    },
-    modal: options.modal,
-    prependTo: options.prependTo ? options.prependTo : document.body,
-    mainClass: options.noBg ? 'no-bg' : '',
-    type: 'inline',
-    tClose: 'Закрыть (Esc)',
-    tLoading: 'Загрузка...',
-    callbacks: {
+    setTimeout(function () {
 
-      open: function() {
+        $.magnificPopup.open({
+            items: {
+                src: options.src
+            },
+            modal: options.modal,
+            prependTo: options.prependTo ? options.prependTo : document.body,
+            mainClass: options.noBg ? 'no-bg' : '',
+            type: 'inline',
+            tClose: 'Закрыть (Esc)',
+            tLoading: 'Загрузка...',
+            callbacks: {
 
-        if (options.noBg) {
+                open: function() {
 
-          $('html').css('overflow', 'initial');
+                    if (options.noBg) {
 
-        }
+                        $('html').css('overflow', 'initial');
 
-      },
+                    }
 
-    }
-  });
+                },
+
+            }
+        });
+
+    }, options.timeout ? options.timeout*1000 : 0);
+
+
 
 };
 

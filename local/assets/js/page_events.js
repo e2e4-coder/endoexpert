@@ -413,7 +413,7 @@ $(document).ready(function () {
 
           if (highlightDay) {
 
-            classes+= 'ui-state-highlighted';
+            classes+= 'ui-state-highlighted-' + highlightDay.color;
             title = highlightDay.caption;
 
           }
@@ -456,7 +456,7 @@ $(document).ready(function () {
 
           if (highlightDay) {
 
-              classes+= 'ui-state-highlighted';
+              classes+= 'ui-state-highlighted-' + highlightDay.color;
               title = highlightDay.caption;
 
           }

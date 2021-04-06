@@ -385,7 +385,11 @@ $(document).ready(function () {
 
     closeAll();
 
+    var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+
     var dates = getHolidays();
+
+    var highlightDays = JSON.parse($('#highlighted-days').val());
 
     $datepickerFrom.datepicker({
       showOtherMonths: true,
@@ -402,10 +406,22 @@ $(document).ready(function () {
       },
       beforeShowDay: function (date){
 
+          var classes = '';
+          var title = '';
+
+          var highlightDay = findHighlightDay(new Date(date - tzoffset).toISOString().slice(0, 10), highlightDays);
+
+          if (highlightDay) {
+
+            classes+= 'ui-state-highlighted';
+            title = highlightDay.caption;
+
+          }
+
 
         if (date <= $datepickerTo.datepicker('getDate') && date >= $datepickerFrom.datepicker('getDate')) {
 
-          return [true, 'ui-state-range'];
+            classes+= ' ui-state-range';
 
         }
 
@@ -414,11 +430,13 @@ $(document).ready(function () {
         // see if the current date should be highlighted
         for (var i=0; i < dates.length; ++i)
           if (year == dates[i][0] && month == dates[i][1] - 1 &&  day == dates[i][2])
-            return [true, 'ui-datepicker-week-end'];
+            return [true, classes + ' ui-datepicker-week-end'];
 
-        return [true];
+        return [true, classes, title];
       }
     });
+
+
 
     $datepickerTo.datepicker({
       showOtherMonths: true,
@@ -431,9 +449,21 @@ $(document).ready(function () {
       },
       beforeShowDay: function (date){
 
+          var classes = '';
+          var title = '';
+
+          var highlightDay = findHighlightDay(new Date(date - tzoffset).toISOString().slice(0, 10), highlightDays);
+
+          if (highlightDay) {
+
+              classes+= 'ui-state-highlighted';
+              title = highlightDay.caption;
+
+          }
+
         if (date <= $datepickerTo.datepicker('getDate') && date >= $datepickerFrom.datepicker('getDate')) {
 
-          return [true, 'ui-state-range'];
+            classes+= ' ui-state-range';
 
         }
 
@@ -442,9 +472,9 @@ $(document).ready(function () {
         // see if the current date should be highlighted
         for (var i=0; i < dates.length; ++i)
           if (year == dates[i][0] && month == dates[i][1] - 1 &&  day == dates[i][2])
-            return [true, 'ui-datepicker-week-end'];
+              return [true, classes + ' ui-datepicker-week-end'];
 
-        return [true];
+          return [true, classes, title];
       }
     });
 
@@ -474,6 +504,31 @@ $(document).ready(function () {
 
     $dateWindowToggle.addClass('-active');
     $dateWindow.show();
+
+  }
+
+  function findHighlightDay(day, highlightDays) {
+
+      if (!highlightDays) return false;
+
+
+      var result = false;
+
+
+      $.each(highlightDays, function () {
+
+
+
+          if (day === this.day) {
+
+              result = this;
+
+              return false;
+          }
+
+      });
+
+      return result;
 
   }
 

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css">
-    <link rel="stylesheet" href="/local/assets/css/build.css">
+    <link rel="stylesheet" href="/local/assets/css/build.css?1">
 
 
 
@@ -35,7 +35,7 @@
 
 
     <script src="/local/assets/js/common.js"></script>
-    <script src="/local/assets/js/page_events.js"></script>
+    <script src="/local/assets/js/page_events.js?1"></script>
 
 
 
@@ -475,12 +475,14 @@
 
                                     <div class="date-range-select">
 
+                                        <input id="highlighted-days" type="hidden" value='[{"day" : "2019-08-07", "caption" : "Онлайн трансляция на endoexpert.ru"}]'>
+
                                         <div class="date-from-wrapper">
 
                                             <div class="date-input">
 
                                                 <label for="date-from">с</label>
-                                                <input id="date-from" name="date-from" type="text" value="" readonly>
+                                                <input id="date-from" name="date-from" type="text" value="Пн, 12.08.2019" readonly>
 
                                             </div>
 

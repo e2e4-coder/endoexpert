@@ -120,6 +120,7 @@ $(document).ready(function () {
 
     closeAll();
 
+    /*
     specTmpValues = [];
 
     $specWindow.find('input:checked').each(function () {
@@ -129,6 +130,8 @@ $(document).ready(function () {
     });
 
 
+     */
+
 
     $specWindowToggle.addClass('-active');
     $specWindow.show();
@@ -137,12 +140,17 @@ $(document).ready(function () {
 
   function specWindowClose() {
 
+    /*
+
     $specWindow.find('input[type=checkbox]').prop('checked', false);
 
     for (var i = 0;i<specTmpValues.length;i++) {
 
       $specWindow.find('input[value='+specTmpValues[i]+']').prop('checked', true);
     }
+
+
+     */
 
     $specWindowToggle.removeClass('-active');
     $specWindow.hide();

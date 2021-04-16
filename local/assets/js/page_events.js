@@ -343,7 +343,7 @@ $(document).ready(function () {
     $geoList.find('select.-city').eq(0).attr('name', 'city[1]');
 
 
-    $geoList.find('select.-country').eq(0).trigger('change');
+    //$geoList.find('select.-country').eq(0).trigger('change');
 
     $geoWindowToggle.addClass('-active');
     $geoWindow.show();

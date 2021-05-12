@@ -1,0 +1,48 @@
+@import "../inc/variables";
+
+.ee-endoquest-pre-reg-form {
+
+  background: none;
+
+  &__header {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+
+  &__text {
+    line-height: 1.4;
+    font-size: 21px;
+    margin-bottom: 2em;
+  }
+
+  &__auth-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+@media @w768 {
+
+  .ee-endoquest-pre-reg-form {
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__auth-button {
+
+      position: relative;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+  }
+
+}

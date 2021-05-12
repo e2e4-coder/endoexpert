@@ -1,0 +1,63 @@
+@import "../inc/variables";
+
+.ee-endoquest-menu {
+
+  margin: 0;
+  padding: 9px 0;
+  box-sizing: border-box;
+  display: flex;
+  list-style: none;
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #fff;
+
+  background-color: #24488d;
+  background-image: linear-gradient(70deg, #08107b 0%, #5e145a 44%, #ed1c24 100%);
+
+  li {
+
+    text-align: center;
+
+    margin: 0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-right: 1px solid rgba(255, 255, 255, .5);
+
+    &:last-child {
+      border-right: none;
+    }
+
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+}
+
+
+@media @w768 {
+
+  .ee-endoquest-menu {
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+
+    li {
+      flex: 0 0 auto;
+      border-right: 0;
+      width: 50%;
+      margin: 6px 0;
+      box-sizing: border-box;
+    }
+
+  }
+
+}

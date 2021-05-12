@@ -1,0 +1,52 @@
+@import "../inc/variables";
+
+.ee-endoquest-news {
+
+
+  &__title {
+    text-align: center;
+    color: #24488d;
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__header {
+
+    margin-bottom: 35px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #2a56a7;
+      font-size: 16px;
+      line-height: 1.4;
+
+      li {
+        margin: 0;
+        padding: 0 0 0 40px;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #08107b;
+          background-image: linear-gradient(70deg, #08107b 0%, #5e145a 44%, #ed1c24 100%);
+          position: absolute;
+          top: 6px;
+          left: 17px;
+          border-radius: 100%;
+        }
+      }
+    }
+
+  }
+
+  .ee-endoquest-news-item {
+    margin-bottom: 25px;
+  }
+
+}

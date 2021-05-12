@@ -1,0 +1,50 @@
+@import "variables";
+
+.slider-wrapper-type-3 {
+
+  position: relative;
+
+  .swiper-button-prev {
+    .sprite(@ico-arrow-left-endoquest);
+    background-size: initial;
+    margin-top: -10px;
+    left: -25px;
+  }
+
+  .swiper-button-next {
+    .sprite(@ico-arrow-right-endoquest);
+    background-size: initial;
+    margin-top: -10px;
+    right: -25px;
+  }
+
+  @media @w768 {
+
+    .swiper-button-prev {
+
+      .sprite(@touch-arrow-left);
+      margin-top: -25px;
+
+    }
+
+    .swiper-button-next {
+
+      .sprite(@touch-arrow-right);
+      margin-top: -25px;
+    }
+
+  }
+
+  @media @w320 {
+
+    margin: 0 -8px;
+    .swiper-slide {
+      text-align: center;
+      width: auto;
+    }
+
+  }
+
+
+
+}

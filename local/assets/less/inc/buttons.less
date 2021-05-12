@@ -325,3 +325,50 @@
   cursor: pointer;
   font-family: inherit;
 }
+
+.ee-button-15 {
+
+  display: inline-block;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 6px 40px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #24488d;
+  background-image: linear-gradient(70deg, #08107b 0%, #5e145a 44%, #ed1c24 100%);
+}
+
+
+.ee-button-16 {
+
+  display: inline-block;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 7px 40px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #fd2f07;
+
+  position: relative;
+
+  &:after {
+    content: '';
+    .sprite(@pointer-red);
+    position: absolute;
+    top: -5px;
+    right: -20px;
+  }
+
+}

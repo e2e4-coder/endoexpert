@@ -1,0 +1,110 @@
+@import "../inc/variables";
+
+.ee-lk-menu {
+
+
+  position: absolute;
+  top: 0;
+  left: -240px;
+
+  width: 220px;
+
+  &__block {
+
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13px;
+    color: #a6a6a5;
+    text-align: right;
+    margin: 10px 0;
+
+    p {
+      margin: 0;
+    }
+
+    p:first-child {
+      color: #fff;
+      font-size: 14px;
+      margin: 5px 0 10px;
+    }
+
+    p:last-child {
+
+      margin-top: 35px;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background: #3498db;
+        padding: 5px 15px;
+        border-radius: 3px;
+      }
+
+    }
+  }
+
+
+  &__item {
+
+    display: block;
+    background-color: #606162;
+    text-decoration: none;
+    color: #fff;
+    text-align: right;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-bottom: 5px;
+
+    padding: 11px 5px;
+    font-size: 14px;
+    position: relative;
+
+    &:hover, &.active {
+
+      background: #030202;
+      color: @gold-color;
+
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        content: '';
+        display: block;
+      }
+
+    }
+
+
+
+  }
+
+
+}
+
+
+.ee-lk-menu__item--home { i:before {.sprite(@ico-lk-home)} &:hover i:before, &.active i:before {.sprite(@ico-lk-home-gold)}}
+.ee-lk-menu__item--stat { i:before {.sprite(@ico-lk-stat)} &:hover i:before, &.active i:before {.sprite(@ico-lk-stat-gold)}}
+.ee-lk-menu__item--tool { i:before {.sprite(@ico-lk-tool)} &:hover i:before, &.active i:before {.sprite(@ico-lk-tool-gold)}}
+.ee-lk-menu__item--tools { i:before {.sprite(@ico-lk-tools)} &:hover i:before, &.active i:before {.sprite(@ico-lk-tools-gold)}}
+.ee-lk-menu__item--calendar { i:before {.sprite(@ico-lk-calendar)} &:hover i:before, &.active i:before {.sprite(@ico-lk-calendar-gold)}}
+.ee-lk-menu__item--pubs { i:before {.sprite(@ico-lk-pubs)} &:hover i:before, &.active i:before {.sprite(@ico-lk-pubs-gold)}}
+.ee-lk-menu__item--pay { i:before {.sprite(@ico-lk-pay)} &:hover i:before, &.active i:before {.sprite(@ico-lk-pay-gold)}}
+.ee-lk-menu__item--plus { i:before {.sprite(@ico-lk-plus)} &:hover i:before, &.active i:before {.sprite(@ico-lk-plus-gold)}}
+.ee-lk-menu__item--doctor { i:before {.sprite(@ico-lk-doctor)} &:hover i:before, &.active i:before {.sprite(@ico-lk-doctor-gold)}}
+.ee-lk-menu__item--lpu { i:before {.sprite(@ico-lk-lpu)} &:hover i:before, &.active i:before {.sprite(@ico-lk-lpu-gold)}}
+.ee-lk-menu__item--learn { i:before {.sprite(@ico-lk-learn)} &:hover i:before, &.active i:before {.sprite(@ico-lk-learn-gold)}}
+.ee-lk-menu__item--profile { i:before {.sprite(@ico-lk-profile)} &:hover i:before, &.active i:before {.sprite(@ico-lk-profile-gold)}}
+.ee-lk-menu__item--help { i:before {.sprite(@ico-lk-help)} &:hover i:before, &.active i:before {.sprite(@ico-lk-help-gold)}}
+.ee-lk-menu__item--exit { i:before {.sprite(@ico-lk-exit)} &:hover i:before, &.active i:before {.sprite(@ico-lk-exit-gold)}}
+.ee-lk-menu__item--nmo { i:before {.sprite(@ico-lk-nmo)} &:hover i:before, &.active i:before {.sprite(@ico-lk-nmo-gold)}}

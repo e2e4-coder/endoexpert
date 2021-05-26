@@ -1,0 +1,62 @@
+@import "../inc/variables";
+
+.ee-lk-window {
+
+  border: 1px solid #fff;
+  padding: 40px 10px 20px;
+  position: relative;
+  background: #040505;
+
+  .ee-doctor-teaser {
+
+    border: none;
+    border-bottom: 1px solid #ffffff;
+
+  }
+
+  &__close {
+
+    font-size: 37px;
+    color: #5a5858;
+
+    border: 2px solid #5a5858;
+    border-radius: 100%;
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    line-height: 26px;
+
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    cursor: pointer;
+
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+
+    flex: 1 1 auto;
+
+    font-size: 31px;
+    color: @link-color;
+
+  }
+
+  &__header-checkboxes {
+
+    flex: 1 1 auto;
+    text-align: center;
+
+    .ee-checkbox-7 {
+      margin: 0 12px
+    }
+
+  }
+
+}

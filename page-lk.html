@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Личный кабинет</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/local/assets/css/normalize.css">
+    <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/local/assets/css/build.css">
+
+
+
+    <script src="/local/assets/local/lib/frontend/jquery-1.12.4.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/icheck-1.x/icheck.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
+    <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
+    <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/select2/js/select2.full.min.js"></script>
+
+
+
+
+    <script src="/local/assets/js/common.js"></script>
+
+    <script src="/local/assets/js/ee-select-1.js"></script>
+    <script src="/local/assets/js/ee-doctor-teaser.js"></script>
+    <script src="/local/assets/js/ee-date-time-picker.js"></script>
+    <script src="/local/assets/js/ee-upload-image-widget.js"></script>
+
+    <script src="/local/assets/js/page_lk.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+
+
+    <div class="endoexpert-header -top-visible">
+
+        <div class="header-top">
+
+            <div class="header-wrapper">
+                <div class="left-buttons">
+
+                    <a class="-share" href="#">5</a>
+                    <a class="-comments" href="#">41</a>
+                    <a class="-notify" href="#">78</a>
+
+                    <a class="-add-to-favorite" href="#" title="Добавить в избранное"></a>
+                    <a class="-add-to-learn" href="#" title="Добавить для изучения"></a>
+
+                </div>
+
+                <div class="right-buttons">
+
+                    <a class="button-add-publication" href="#">Создать публикацию</a>
+
+                    <span class="button-wrapper -no-border">
+                        <a class="-settings" href="#">Управление</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a class="-user" href="#">Дмитриенко Георгий Петрович</a>
+                    </span>
+
+                    <span class="button-wrapper">
+                        <a href="#">Выйти</a>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-body">
+
+            <div class="header-wrapper">
+
+                <div class="header-logo">
+                    <div class="logo-wrapper">
+                        <a href="/"><img src="/local/assets/img/endoexpert_logo2_color.png" width="55" height="38"></a>
+                    </div>
+
+                </div>
+
+                <div class="main-menu">
+
+                    <ul>
+                        <li><a href="/katalogi/">Каталоги</a></li>
+                        <li><a href="/sobytiya/">События</a>
+                            <ul>
+                                <li><a href="/sobytiya/">Предстоящие события</a></li>
+                                <li><a href="/sobytiya/arkhiv/">Архив</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/novosti/">Новости</a></li>
+                        <li><a href="/biblioteka/">Библиотека</a>
+                            <ul>
+                                <li><a href="/biblioteka/oborudovanie/">ОБОРУДОВАНИЕ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/patsientam/">Пациентy</a></li>
+                        <li><a href="/forum/">Форум</a></li>
+                        <li><a href="https://endoexpert.ru/biblioteka/obuchenie/obrazovatelnye-programmy-po-endoskopii-i-gastroenterologii-dlya-vrachey/quacol-kachestvennaya-kolonoskopiya-obrazovatelnyy-proekt/">QuaCol</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="search-block">
+
+                    <form action="/search/" role="search">
+
+                        <input type="text" name="q" value="" placeholder="Поиск...">
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <a name="top"></a>
+
+
+    <div class="ee-inner-page page-default page-default--dark">
+
+        <div class="wrapper-1050">
+
+            <div class="ee-main-wrapper">
+
+                <div class="ee-breadcrumbs">
+
+                    <a href="#">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Рубрика</span>
+
+                </div>
+
+
+
+
+
+                <div class="ee-lk">
+
+                    <div class="ee-lk-menu">
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--home">
+                            <i></i><span>Сводная информация</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--stat">
+                            <i></i><span>Статистика</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--tool">
+                            <i></i><span>Мои сервисы</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--tools">
+                            <i></i><span>Все сервисы</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--calendar active">
+                            <i></i><span>Мои мероприятия</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--pubs">
+                            <i></i><span>Мои публикации</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--pay">
+                            <i></i><span>Потратить баллы EE</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--plus">
+                            <i></i><span>Создать публикацию</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--doctor">
+                            <i></i><span>Вы в реестре врачей</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--lpu">
+                            <i></i><span>Ваша клиника</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--learn">
+                            <i></i><span>Мое обучение</span>
+                        </a>
+
+                        <div class="ee-lk-menu__block">
+
+                            <p>Пригласите коллег</p>
+                            <p>Реферальная программа</p>
+                            <p><a href="#">Пригласить</a></p>
+
+                        </div>
+
+                        <div class="ee-lk-menu__block">
+
+                            <p>Подписка на дайджест</p>
+                            <p>Ежемесячный электронный журнал</p>
+                            <p><a href="#">Подписаться</a></p>
+
+                        </div>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--profile">
+                            <i></i><span>Профиль</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--pay">
+                            <i></i><span>Оплатить</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--help">
+                            <i></i><span>Помощь и FAQ</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--exit">
+                            <i></i><span>Выход</span>
+                        </a>
+
+                        <a href="#" class="ee-lk-menu__item ee-lk-menu__item--nmo">
+                            <i></i><span>Ваши баллы НМО</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="ee-lk-article-teaser">
+
+                        <div class="ee-lk-article-teaser__image">
+                            <a href="/"><img src="/local/assets/img/tmp/lk-article.jpg" alt=""></a>
+                        </div>
+
+                        <div class="ee-lk-article-teaser__content">
+
+                            <p class="ee-lk-article-teaser__title">Сегодня onlinе</p>
+
+                            <p class="ee-lk-article-teaser__date">21.05.2018 в 10:00</p>
+
+                            <p class="ee-lk-article-teaser__text">XXVII Всероссийская научно-практическая монотематическая конференция «Pancreas 2018. Как сберечь жизнь больным с заболеваниями поджелудочной железы»</p>
+
+                            <div class="ee-lk-article-teaser__button-1">
+
+                                <a href="#" class="ee-button-16 ee-button-16--border ee-button-16--no-hand">Перейти к просмотру</a>
+
+                            </div>
+
+                            <div class="ee-lk-article-teaser__button-2">
+
+                                <a href="#" class="ee-button-16 ee-button-16--border">Смотреть</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-lk-window">
+
+                        <span class="ee-lk-window__close">×</span>
+
+                        <div class="ee-lk-window__header">
+
+                            <div class="ee-lk-window__title">
+
+                                <span>Информация о специалисте в реестре</span>
+
+                            </div>
+
+                            <div class="ee-lk-window__header-checkboxes">
+
+                                <label class="ee-checkbox-7"><input type="radio" name="r1" checked><span>Выводить</span></label>
+                                <label class="ee-checkbox-7"><input type="radio" name="r1"><span>Скрыть</span></label>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="ee-lk-window__body">
+
+
+
+                            <div class="ee-doctor-teaser">
+
+                                <form>
+
+                                <a href="#" class="ico-edit -edit-hide" title="Редактировать"></a>
+
+
+                                <input type="submit" class="ico-save -edit-show" title="Сохранить" value="">
+                                <a href="#" class="ico-cancel -edit-show" title="Отменить"></a>
+
+                                <div class="row-1">
+
+                                    <div class="col-1">
+
+
+                                        <div class="doctor-photo -edit-hide">
+                                            <img src="/local/assets/img/tmp/face_1.png" width="190" height="190">
+                                        </div>
+
+
+
+                                        <div class="ee-upload-image-widget -type-2 -edit-show">
+
+                                            <input type="file" name="image">
+
+                                            <div class="image-wrapper">
+
+                                                <p>
+                                                    загрузите<br>изображение<br>
+
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-2">
+
+                                        <div class="doctor-base-info">
+
+
+                                            <div class="doctor-spec -edit-hide">Эндоскопист</div>
+
+                                            <div class="doctor-spec -edit-show">
+
+                                                <select class="ee-select-1" data-placeholder="Специальность">
+                                                    <option value=""></option>
+                                                    <option value="1">Специальность 1</option>
+                                                    <option value="2">Специальность 2</option>
+
+                                                </select>
+
+                                                <select class="ee-select-1" data-placeholder="Доп. специальность">
+                                                    <option value=""></option>
+                                                    <option value="1">Доп. специальность 1</option>
+                                                    <option value="2">Доп. специальность 2</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="doctor-name">Подольская Глафира Петровна</div>
+
+                                            <div class="doctor-stage -edit-hide">Стаж 15 лет</div>
+
+                                            <div class="doctor-select-field -edit-show">
+
+                                                <label>Стаж</label>
+
+                                                <select class="ee-select-1" data-placeholder="Выберите из списка">
+                                                    <option value=""></option>
+                                                    <option value="1">Пункт 1</option>
+                                                    <option value="2">Пункт 2</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="doctor-qualification -edit-hide">Врач высшей категории</div>
+
+                                            <div class="doctor-select-field -edit-show">
+
+                                                <label><b>Категория</b></label>
+
+                                                <select class="ee-select-1" data-placeholder="Выберите из списка">
+                                                    <option value=""></option>
+                                                    <option value="1">Пункт 1</option>
+                                                    <option value="2">Пункт 2</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="doctor-rating">
+
+                                                <a href="#">Рейтинг специалиста</a><br>
+                                                <select class="js-rating-select" data-theme="fa-stars-gold2" data-voted="1" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="3">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="doctor-buttons">
+
+                                                <a href="#" class="ee-button-3 -thin">Отзывы о Вас</a>
+
+                                                <a href="#" class="ee-button-3 -thin">Входящие сообщения</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-3">
+
+                                        <div class="ee-mobile-expandable-block -schedule">
+
+                                            <div class="block-title">Расписание</div>
+
+                                            <div class="block-body">
+
+                                                <div class="ee-date-time-picker" data-api-url="/local/assets/json/doctor-times.json">
+
+                                                    <input class="js-date" name="date" type="hidden" value="2020-01-04">
+                                                    <input class="js-time" name="time" type="hidden" value="11.05">
+
+                                                    <div class="picker-title">декабрь-январь</div>
+
+                                                    <div class="day-slider">
+
+                                                        <div class="swiper-container">
+
+                                                            <div class="swiper-wrapper">
+
+                                                                <div data-date="2020-01-01" class="swiper-slide"><div>ПН</div><div>01</div></div>
+                                                                <div data-date="2020-01-02" class="swiper-slide"><div>ВТ</div><div>02</div></div>
+                                                                <div data-date="2020-01-03" class="swiper-slide"><div>СР</div><div>03</div></div>
+                                                                <div data-date="2020-01-04" class="swiper-slide -selected"><div>ЧТ</div><div>04</div></div>
+                                                                <div data-date="2020-01-05" class="swiper-slide"><div>ПТ</div><div>05</div></div>
+                                                                <div data-date="2020-01-06" class="swiper-slide -disabled"><div>СБ</div><div>06</div></div>
+                                                                <div data-date="2020-01-07" class="swiper-slide -disabled"><div>ВС</div><div>07</div></div>
+                                                                <div data-date="2020-01-08" class="swiper-slide"><div>ПН</div><div>08</div></div>
+                                                                <div data-date="2020-01-09" class="swiper-slide"><div>ВТ</div><div>09</div></div>
+                                                                <div data-date="2020-01-10" class="swiper-slide"><div>СР</div><div>10</div></div>
+                                                                <div data-date="2020-01-11" class="swiper-slide"><div>ЧТ</div><div>11</div></div>
+                                                                <div data-date="2020-01-12" class="swiper-slide"><div>ПТ</div><div>12</div></div>
+                                                                <div data-date="2020-01-13" class="swiper-slide"><div>СБ</div><div>13</div></div>
+                                                                <div data-date="2020-01-14" class="swiper-slide"><div>ВС</div><div>14</div></div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="swiper-button-prev"></div>
+                                                        <div class="swiper-button-next"></div>
+
+                                                    </div>
+
+                                                    <div class="times-list">
+                                                        <span>08.00</span>
+                                                        <span>08.45</span>
+                                                        <span>09.15</span>
+                                                        <span>10.00</span>
+                                                        <span>10.15</span>
+                                                        <span>10.45</span>
+                                                        <span class="-selected">11.05</span>
+                                                        <span class="-disabled">11.25</span>
+                                                        <span class="-disabled">11.55</span>
+                                                        <span class="-disabled">12.20</span>
+                                                        <span>12.45</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+                                                        <span>12.00</span>
+
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row-1-3">
+
+                                                    <div class="col-1 -edit-show">
+
+                                                        <table class="doctor-price-edit">
+
+                                                            <tr>
+                                                                <th colspan="2">Стоимость приёма:</th>
+                                                                <th>Скидка:</th>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td colspan="3"><span>скидка высчитывается автоматически</span></td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="ee-input-1 js-price" value="750">
+                                                                </td>
+                                                                <td>
+                                                                    <span class="doctor-old-price js-old-price">1500 р</span>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="ee-select-1 -red js-discount" data-allow-clear="false">
+                                                                        <option value="0">0%</option>
+                                                                        <option value="10">10%</option>
+                                                                        <option value="20">20%</option>
+                                                                        <option value="30">30%</option>
+                                                                        <option value="40">40%</option>
+                                                                        <option value="50" selected>50%</option>
+                                                                        <option value="60">60%</option>
+                                                                        <option value="70">70%</option>
+                                                                        <option value="80">80%</option>
+                                                                        <option value="90">90%</option>
+
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td colspan="3"><input type="text" class="ee-input-1" placeholder="Введите номер телефона"></td>
+                                                            </tr>
+
+                                                        </table>
+
+                                                    </div>
+
+                                                    <div class="col-1 -edit-hide">
+                                                        <div class="price-title">Стоимость приема:</div>
+
+                                                        <div class="price-values">
+                                                            <span class="value-main">1500 р</span>
+                                                            <span class="value-old">1000 р</span>
+                                                            <span class="value-percent">-50%</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-2 -edit-show">
+
+                                                        <p>График работы:</p>
+
+                                                        <a href="#" class="ee-button-10 js-upload-graph"><span>Загрузите</span><br>файл Excel по шаблону</a>
+
+                                                        <input type="file" name="" class="js-upload-graph-file" style="display: none">
+
+
+                                                        <a href="#" class="ee-button-3"><span>Скачать шаблон</span><br>Excel графика работы</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="hidden-part">
+
+                                    <div class="row-2">
+
+                                        <div class="col-1">
+
+                                            <div class="ee-mobile-expandable-block">
+                                                <div class="block-title">Услуги</div>
+
+                                                <div class="block-body">
+
+                                                    <div class="doctor-description">
+
+                                                        <p><b>Владение эндоскопическими методиками:</b><br>
+
+                                                            <span class="-edit-hide">
+                                                            Эзофагогастродуоденоскопия, Колоноскопия, Бронхоскопия,
+                                                            Эндоскопическая ультрасонография, ЭРХПГ, Капсульная эндоскопия,
+                                                            Эндобронхиальная ультрасонография (EBUS)
+                                                            </span>
+
+                                                            <span class="-edit-show">
+
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Эзофагогастродуоденоскопия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" checked><span>Колоноскопия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" checked><span>Бронхоскопия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" checked><span>Эндоскопическая ультрасонография</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" ><span>ЭРХПГ</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" ><span>Капсульная эндоскопия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox" checked><span>Эндобронхиальная ультрасонография (EBUS)</span></label>
+
+                                                            <input class="ee-input-1" placeholder="Добавьте еще">
+
+                                                            </span>
+
+
+
+                                                        </p>
+
+
+                                                        <p><b>Владение оперативными методиками:</b><br>
+                                                            <span class="-edit-hide">
+                                                            Полипэктомия, резекция слизистой оболочки (EMR), Стентирование желудочно-кишечного тракта, Стентирование трахеи и бронхов, Балонная дилятация/бужирование, Гастростомия, Эндоскопическая диссекция в подлизистом слое (ESD), Лигирование ВРВП,
+                                                            Папиллотомия, сфиктеротомия, ЭПТ, ПСТ литэкстракция, Литотрипсия, Пероральная эндоскопическая миотомия ПОЭМ POEM, Тонкоигольная пункция под контролем эндосонографии, Цистогастростомия (Цистодуоденостомия ) под контролем эндосонографии, Трансбронхиальная биопсия под контролем EBUS
+                                                            </span>
+
+                                                            <span class="-edit-show">
+
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Полипэктомия, резекция слизистой оболочки (EMR)</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Стентирование желудочно-кишечного тракта</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Стентирование трахеи и бронхов</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Балонная дилятация/бужирование</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Гастростомия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Эндоскопическая диссекция в подлизистом слое (ESD)</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Лигирование ВРВП</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>Папиллотомия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>сфиктеротомия</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>ЭПТ</span></label>
+                                                            <label class="ee-checkbox-8"><input type="checkbox"><span>ПСТ литэкстракция</span></label>
+
+                                                            <input class="ee-input-1" placeholder="Добавьте еще">
+
+                                                            </span>
+                                                        </p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-2">
+
+                                            <div class="ee-mobile-expandable-block">
+                                                <div class="block-title">О клинике</div>
+
+                                                <div class="block-body">
+
+                                                    <table class="info-table">
+
+
+                                                        <tr>
+                                                            <td>Клиника:</td>
+                                                            <td>
+                                                                <span class="-edit-hide">ООО "ИНТО-СТИЛ" Клиника МД-Плюс</span>
+                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите название клиники (ЛПУ)">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Адрес:</td>
+                                                            <td>
+                                                                <span class="-edit-hide">г. Москва, ул. Маршала Жукова 24/1</span>
+                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите адрес клиники (ЛПУ)">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Специализация:</td>
+                                                            <td>
+                                                                <span class="-edit-hide">эндоскопия, диагностическое, ургентная эндоскопия, оперативная эндоскопия</span>
+                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите через запятую">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Режим работы:</td>
+                                                            <td>
+                                                                <span class="-edit-hide">
+                                                                Пн-Пт с 09.00-21.00<br>Сб: 10.00-20.00, Вс: 10.30- 19.00
+                                                                </span>
+
+                                                                <span class="-edit-show">
+                                                                <input type="text" class="ee-input-1" placeholder="Пн-Пт с 00:00 по 00:00">
+                                                                <br>
+                                                                <input type="text" class="ee-input-1" placeholder="Сб с 00:00 по 00:00 Вс с 00:00 по 00:00">
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Сайт:</td>
+                                                            <td>
+                                                                <span class="-edit-hide"><a href="#">www.ufamdplus.ru</a> (подключаемый показ)</span>
+
+                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="www.site.ru">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="-edit-show">
+                                                            <td>Ключевые слова:</td>
+                                                            <td>
+
+
+                                                                <input type="text" class="ee-input-1" placeholder="Введите ключевые слова через запятую">
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+
+
+
+                                                    <div class="teaser-tags -edit-hide">
+
+                                                        <span>видеоэндоскопы</span>  |  <a href="#">cедация</a>  |  <a href="#">наркоз</a>  |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>
+
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="expand-toggle"><i class="fas fa-chevron-down"></i></div>
+
+                                </form>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

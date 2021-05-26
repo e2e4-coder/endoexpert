@@ -1,0 +1,47 @@
+@import "../inc/variables";
+
+.ee-checkbox-7 {
+
+  user-select: none;
+  font-weight: 500;
+  color: #a9a9aa;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+
+  input {display: none}
+
+  span {
+    display: inline-block;
+    position: relative;
+    padding-right: 40px;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      border: 2px solid #a9a9aa;
+
+    }
+  }
+
+  input:checked + span:after {
+
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 9px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #fc2f07;
+
+  }
+
+
+}

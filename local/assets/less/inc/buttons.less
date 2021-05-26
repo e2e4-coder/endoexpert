@@ -367,8 +367,20 @@
     content: '';
     .sprite(@pointer-red);
     position: absolute;
-    top: -5px;
+    top: 6px;
     right: -20px;
+  }
+
+  &--no-hand {
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+  &--border {
+    border: 2px solid #fff;
   }
 
 }

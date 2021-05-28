@@ -55,5 +55,46 @@ $(document).ready(function () {
   });
 
 
+  var delay = $('#banner-slider-1').data('autoplay-delay');
+  delay = delay ? {delay: delay} : false;
+
+  new Swiper ('#banner-slider-1', {
+
+    loop: true,
+
+    autoplay: delay,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+
+  });
+
+
+  delay = $('#banner-slider-2').data('autoplay-delay');
+  delay = delay ? {delay: delay} : false;
+
+  new Swiper ('#banner-slider-2', {
+
+    loop: true,
+
+    autoplay: delay,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+
+  });
+
+
+  $('.ee-from-redaction__close').click(function () {
+
+    $('.ee-from-redaction').hide();
+
+  });
+
+
 });
 

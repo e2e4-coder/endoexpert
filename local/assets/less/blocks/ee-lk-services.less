@@ -1,0 +1,56 @@
+@import "../inc/variables";
+
+.ee-lk-services {
+
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -9px;
+
+  &__item {
+
+    width: 195px;
+    height: 195px;
+    background: #2e2f2f;
+    margin: 0 9px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      font-size: 14px;
+      text-align: center;
+
+      i {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+          content: '';
+          display: block;
+
+        }
+
+      }
+
+      span {
+        height: 45px;
+        flex: 0 0 auto;
+        padding: 0 10px;
+      }
+    }
+
+    &--ico-add i:before {.sprite(@ico-serv-add); }
+    &--ico-calendar i:before {.sprite(@ico-serv-calendar); }
+    &--ico-mail i:before {.sprite(@ico-serv-mail); }
+    &--ico-poll i:before {.sprite(@ico-serv-poll); }
+    &--ico-mobile i:before {.sprite(@ico-serv-mobile); }
+
+  }
+
+
+}

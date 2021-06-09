@@ -153,6 +153,8 @@
         //if ($pauseOverlayTop.length && pauseOverlayTopCanHide) $pauseOverlayTop.fadeOut();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.fadeOut();
 
+
+
         if (confirmPopupSrc) {
           clearTimeout(confirmTimeout);
           confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
@@ -436,7 +438,13 @@
       //player.pause();
       popupSound.play();
 
-      if ($(window).width() <= 768) {document.exitFullscreen()}
+      if ($(window).width() <= 768) {
+
+        //document.exitFullscreen();
+        //document.getElementsByTagName('video')[0].webkitExitFullScreen();
+
+
+      }
 
       showPopup({src:confirmPopupSrc, modal: true, prependTo: $el[0]});
 

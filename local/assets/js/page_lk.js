@@ -96,5 +96,8 @@ $(document).ready(function () {
   });
 
 
+  $('.ee-fixed-table').ee_fixed_table();
+
+
 });
 

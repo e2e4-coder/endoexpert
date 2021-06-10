@@ -40,6 +40,7 @@
     <script src="/local/assets/js/ee-doctor-teaser.js"></script>
     <script src="/local/assets/js/ee-date-time-picker.js"></script>
     <script src="/local/assets/js/ee-upload-image-widget.js"></script>
+    <script src="/local/assets/js/jquery.ee_fixed_table.js"></script>
 
     <script src="/local/assets/js/page_lk.js"></script>
 
@@ -467,302 +468,302 @@
 
                                 <form>
 
-                                <a href="#" class="ico-edit -edit-hide" title="Редактировать"></a>
+                                    <a href="#" class="ico-edit -edit-hide" title="Редактировать"></a>
 
 
-                                <input type="submit" class="ico-save -edit-show" title="Сохранить" value="">
-                                <a href="#" class="ico-cancel -edit-show" title="Отменить"></a>
+                                    <input type="submit" class="ico-save -edit-show" title="Сохранить" value="">
+                                    <a href="#" class="ico-cancel -edit-show" title="Отменить"></a>
 
-                                <div class="row-1">
-
-                                    <div class="col-1">
-
-
-                                        <div class="doctor-photo -edit-hide">
-                                            <img src="/local/assets/img/tmp/face_1.png" width="190" height="190">
-                                        </div>
-
-
-
-                                        <div class="ee-upload-image-widget -type-2 -edit-show">
-
-                                            <input type="file" name="image">
-
-                                            <div class="image-wrapper">
-
-                                                <p>
-                                                    загрузите<br>изображение<br>
-
-                                                </p>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-2">
-
-                                        <div class="doctor-base-info">
-
-
-                                            <div class="doctor-spec -edit-hide">Эндоскопист</div>
-
-                                            <div class="doctor-spec -edit-show">
-
-                                                <select class="ee-select-1" data-placeholder="Специальность">
-                                                    <option value=""></option>
-                                                    <option value="1">Специальность 1</option>
-                                                    <option value="2">Специальность 2</option>
-
-                                                </select>
-
-                                                <select class="ee-select-1" data-placeholder="Доп. специальность">
-                                                    <option value=""></option>
-                                                    <option value="1">Доп. специальность 1</option>
-                                                    <option value="2">Доп. специальность 2</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="doctor-name">Подольская Глафира Петровна</div>
-
-                                            <div class="doctor-stage -edit-hide">Стаж 15 лет</div>
-
-                                            <div class="doctor-select-field -edit-show">
-
-                                                <label>Стаж</label>
-
-                                                <select class="ee-select-1" data-placeholder="Выберите из списка">
-                                                    <option value=""></option>
-                                                    <option value="1">Пункт 1</option>
-                                                    <option value="2">Пункт 2</option>
-                                                </select>
-
-                                            </div>
-
-                                            <div class="doctor-qualification -edit-hide">Врач высшей категории</div>
-
-                                            <div class="doctor-select-field -edit-show">
-
-                                                <label><b>Категория</b></label>
-
-                                                <select class="ee-select-1" data-placeholder="Выберите из списка">
-                                                    <option value=""></option>
-                                                    <option value="1">Пункт 1</option>
-                                                    <option value="2">Пункт 2</option>
-                                                </select>
-
-                                            </div>
-
-                                            <div class="doctor-rating">
-
-                                                <a href="#">Рейтинг специалиста</a><br>
-                                                <select class="js-rating-select" data-theme="fa-stars-gold2" data-voted="1" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="3">
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>
-
-                                            </div>
-
-                                            <div class="doctor-buttons">
-
-                                                <a href="#" class="ee-button-3 -thin">Отзывы о Вас</a>
-
-                                                <a href="#" class="ee-button-3 -thin">Входящие сообщения</a>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="col-3">
-
-                                        <div class="ee-mobile-expandable-block -schedule">
-
-                                            <div class="block-title">Расписание</div>
-
-                                            <div class="block-body">
-
-                                                <div class="ee-date-time-picker" data-api-url="/local/assets/json/doctor-times.json">
-
-                                                    <input class="js-date" name="date" type="hidden" value="2020-01-04">
-                                                    <input class="js-time" name="time" type="hidden" value="11.05">
-
-                                                    <div class="picker-title">декабрь-январь</div>
-
-                                                    <div class="day-slider">
-
-                                                        <div class="swiper-container">
-
-                                                            <div class="swiper-wrapper">
-
-                                                                <div data-date="2020-01-01" class="swiper-slide"><div>ПН</div><div>01</div></div>
-                                                                <div data-date="2020-01-02" class="swiper-slide"><div>ВТ</div><div>02</div></div>
-                                                                <div data-date="2020-01-03" class="swiper-slide"><div>СР</div><div>03</div></div>
-                                                                <div data-date="2020-01-04" class="swiper-slide -selected"><div>ЧТ</div><div>04</div></div>
-                                                                <div data-date="2020-01-05" class="swiper-slide"><div>ПТ</div><div>05</div></div>
-                                                                <div data-date="2020-01-06" class="swiper-slide -disabled"><div>СБ</div><div>06</div></div>
-                                                                <div data-date="2020-01-07" class="swiper-slide -disabled"><div>ВС</div><div>07</div></div>
-                                                                <div data-date="2020-01-08" class="swiper-slide"><div>ПН</div><div>08</div></div>
-                                                                <div data-date="2020-01-09" class="swiper-slide"><div>ВТ</div><div>09</div></div>
-                                                                <div data-date="2020-01-10" class="swiper-slide"><div>СР</div><div>10</div></div>
-                                                                <div data-date="2020-01-11" class="swiper-slide"><div>ЧТ</div><div>11</div></div>
-                                                                <div data-date="2020-01-12" class="swiper-slide"><div>ПТ</div><div>12</div></div>
-                                                                <div data-date="2020-01-13" class="swiper-slide"><div>СБ</div><div>13</div></div>
-                                                                <div data-date="2020-01-14" class="swiper-slide"><div>ВС</div><div>14</div></div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                        <div class="swiper-button-prev"></div>
-                                                        <div class="swiper-button-next"></div>
-
-                                                    </div>
-
-                                                    <div class="times-list">
-                                                        <span>08.00</span>
-                                                        <span>08.45</span>
-                                                        <span>09.15</span>
-                                                        <span>10.00</span>
-                                                        <span>10.15</span>
-                                                        <span>10.45</span>
-                                                        <span class="-selected">11.05</span>
-                                                        <span class="-disabled">11.25</span>
-                                                        <span class="-disabled">11.55</span>
-                                                        <span class="-disabled">12.20</span>
-                                                        <span>12.45</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-                                                        <span>12.00</span>
-
-
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row-1-3">
-
-                                                    <div class="col-1 -edit-show">
-
-                                                        <table class="doctor-price-edit">
-
-                                                            <tr>
-                                                                <th colspan="2">Стоимость приёма:</th>
-                                                                <th>Скидка:</th>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td colspan="3"><span>скидка высчитывается автоматически</span></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="text" class="ee-input-1 js-price" value="750">
-                                                                </td>
-                                                                <td>
-                                                                    <span class="doctor-old-price js-old-price">1500 р</span>
-                                                                </td>
-                                                                <td>
-                                                                    <select class="ee-select-1 -red js-discount" data-allow-clear="false">
-                                                                        <option value="0">0%</option>
-                                                                        <option value="10">10%</option>
-                                                                        <option value="20">20%</option>
-                                                                        <option value="30">30%</option>
-                                                                        <option value="40">40%</option>
-                                                                        <option value="50" selected>50%</option>
-                                                                        <option value="60">60%</option>
-                                                                        <option value="70">70%</option>
-                                                                        <option value="80">80%</option>
-                                                                        <option value="90">90%</option>
-
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td colspan="3"><input type="text" class="ee-input-1" placeholder="Введите номер телефона"></td>
-                                                            </tr>
-
-                                                        </table>
-
-                                                    </div>
-
-                                                    <div class="col-1 -edit-hide">
-                                                        <div class="price-title">Стоимость приема:</div>
-
-                                                        <div class="price-values">
-                                                            <span class="value-main">1500 р</span>
-                                                            <span class="value-old">1000 р</span>
-                                                            <span class="value-percent">-50%</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-2 -edit-show">
-
-                                                        <p>График работы:</p>
-
-                                                        <a href="#" class="ee-button-10 js-upload-graph"><span>Загрузите</span><br>файл Excel по шаблону</a>
-
-                                                        <input type="file" name="" class="js-upload-graph-file" style="display: none">
-
-
-                                                        <a href="#" class="ee-button-3"><span>Скачать шаблон</span><br>Excel графика работы</a>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="hidden-part">
-
-                                    <div class="row-2">
+                                    <div class="row-1">
 
                                         <div class="col-1">
 
-                                            <div class="ee-mobile-expandable-block">
-                                                <div class="block-title">Услуги</div>
+
+                                            <div class="doctor-photo -edit-hide">
+                                                <img src="/local/assets/img/tmp/face_1.png" width="190" height="190">
+                                            </div>
+
+
+
+                                            <div class="ee-upload-image-widget -type-2 -edit-show">
+
+                                                <input type="file" name="image">
+
+                                                <div class="image-wrapper">
+
+                                                    <p>
+                                                        загрузите<br>изображение<br>
+
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-2">
+
+                                            <div class="doctor-base-info">
+
+
+                                                <div class="doctor-spec -edit-hide">Эндоскопист</div>
+
+                                                <div class="doctor-spec -edit-show">
+
+                                                    <select class="ee-select-1" data-placeholder="Специальность">
+                                                        <option value=""></option>
+                                                        <option value="1">Специальность 1</option>
+                                                        <option value="2">Специальность 2</option>
+
+                                                    </select>
+
+                                                    <select class="ee-select-1" data-placeholder="Доп. специальность">
+                                                        <option value=""></option>
+                                                        <option value="1">Доп. специальность 1</option>
+                                                        <option value="2">Доп. специальность 2</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="doctor-name">Подольская Глафира Петровна</div>
+
+                                                <div class="doctor-stage -edit-hide">Стаж 15 лет</div>
+
+                                                <div class="doctor-select-field -edit-show">
+
+                                                    <label>Стаж</label>
+
+                                                    <select class="ee-select-1" data-placeholder="Выберите из списка">
+                                                        <option value=""></option>
+                                                        <option value="1">Пункт 1</option>
+                                                        <option value="2">Пункт 2</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="doctor-qualification -edit-hide">Врач высшей категории</div>
+
+                                                <div class="doctor-select-field -edit-show">
+
+                                                    <label><b>Категория</b></label>
+
+                                                    <select class="ee-select-1" data-placeholder="Выберите из списка">
+                                                        <option value=""></option>
+                                                        <option value="1">Пункт 1</option>
+                                                        <option value="2">Пункт 2</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="doctor-rating">
+
+                                                    <a href="#">Рейтинг специалиста</a><br>
+                                                    <select class="js-rating-select" data-theme="fa-stars-gold2" data-voted="1" data-api-url="/local/assets/json/post-rating.json" title="Рейтинг" data-publication-id="234234" data-current-rating="3">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="doctor-buttons">
+
+                                                    <a href="#" class="ee-button-3 -thin">Отзывы о Вас</a>
+
+                                                    <a href="#" class="ee-button-3 -thin">Входящие сообщения</a>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-3">
+
+                                            <div class="ee-mobile-expandable-block -schedule">
+
+                                                <div class="block-title">Расписание</div>
 
                                                 <div class="block-body">
 
-                                                    <div class="doctor-description">
+                                                    <div class="ee-date-time-picker" data-api-url="/local/assets/json/doctor-times.json">
 
-                                                        <p><b>Владение эндоскопическими методиками:</b><br>
+                                                        <input class="js-date" name="date" type="hidden" value="2020-01-04">
+                                                        <input class="js-time" name="time" type="hidden" value="11.05">
 
-                                                            <span class="-edit-hide">
+                                                        <div class="picker-title">декабрь-январь</div>
+
+                                                        <div class="day-slider">
+
+                                                            <div class="swiper-container">
+
+                                                                <div class="swiper-wrapper">
+
+                                                                    <div data-date="2020-01-01" class="swiper-slide"><div>ПН</div><div>01</div></div>
+                                                                    <div data-date="2020-01-02" class="swiper-slide"><div>ВТ</div><div>02</div></div>
+                                                                    <div data-date="2020-01-03" class="swiper-slide"><div>СР</div><div>03</div></div>
+                                                                    <div data-date="2020-01-04" class="swiper-slide -selected"><div>ЧТ</div><div>04</div></div>
+                                                                    <div data-date="2020-01-05" class="swiper-slide"><div>ПТ</div><div>05</div></div>
+                                                                    <div data-date="2020-01-06" class="swiper-slide -disabled"><div>СБ</div><div>06</div></div>
+                                                                    <div data-date="2020-01-07" class="swiper-slide -disabled"><div>ВС</div><div>07</div></div>
+                                                                    <div data-date="2020-01-08" class="swiper-slide"><div>ПН</div><div>08</div></div>
+                                                                    <div data-date="2020-01-09" class="swiper-slide"><div>ВТ</div><div>09</div></div>
+                                                                    <div data-date="2020-01-10" class="swiper-slide"><div>СР</div><div>10</div></div>
+                                                                    <div data-date="2020-01-11" class="swiper-slide"><div>ЧТ</div><div>11</div></div>
+                                                                    <div data-date="2020-01-12" class="swiper-slide"><div>ПТ</div><div>12</div></div>
+                                                                    <div data-date="2020-01-13" class="swiper-slide"><div>СБ</div><div>13</div></div>
+                                                                    <div data-date="2020-01-14" class="swiper-slide"><div>ВС</div><div>14</div></div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="swiper-button-prev"></div>
+                                                            <div class="swiper-button-next"></div>
+
+                                                        </div>
+
+                                                        <div class="times-list">
+                                                            <span>08.00</span>
+                                                            <span>08.45</span>
+                                                            <span>09.15</span>
+                                                            <span>10.00</span>
+                                                            <span>10.15</span>
+                                                            <span>10.45</span>
+                                                            <span class="-selected">11.05</span>
+                                                            <span class="-disabled">11.25</span>
+                                                            <span class="-disabled">11.55</span>
+                                                            <span class="-disabled">12.20</span>
+                                                            <span>12.45</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+                                                            <span>12.00</span>
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row-1-3">
+
+                                                        <div class="col-1 -edit-show">
+
+                                                            <table class="doctor-price-edit">
+
+                                                                <tr>
+                                                                    <th colspan="2">Стоимость приёма:</th>
+                                                                    <th>Скидка:</th>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td colspan="3"><span>скидка высчитывается автоматически</span></td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="text" class="ee-input-1 js-price" value="750">
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="doctor-old-price js-old-price">1500 р</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select class="ee-select-1 -red js-discount" data-allow-clear="false">
+                                                                            <option value="0">0%</option>
+                                                                            <option value="10">10%</option>
+                                                                            <option value="20">20%</option>
+                                                                            <option value="30">30%</option>
+                                                                            <option value="40">40%</option>
+                                                                            <option value="50" selected>50%</option>
+                                                                            <option value="60">60%</option>
+                                                                            <option value="70">70%</option>
+                                                                            <option value="80">80%</option>
+                                                                            <option value="90">90%</option>
+
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td colspan="3"><input type="text" class="ee-input-1" placeholder="Введите номер телефона"></td>
+                                                                </tr>
+
+                                                            </table>
+
+                                                        </div>
+
+                                                        <div class="col-1 -edit-hide">
+                                                            <div class="price-title">Стоимость приема:</div>
+
+                                                            <div class="price-values">
+                                                                <span class="value-main">1500 р</span>
+                                                                <span class="value-old">1000 р</span>
+                                                                <span class="value-percent">-50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-2 -edit-show">
+
+                                                            <p>График работы:</p>
+
+                                                            <a href="#" class="ee-button-10 js-upload-graph"><span>Загрузите</span><br>файл Excel по шаблону</a>
+
+                                                            <input type="file" name="" class="js-upload-graph-file" style="display: none">
+
+
+                                                            <a href="#" class="ee-button-3"><span>Скачать шаблон</span><br>Excel графика работы</a>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="hidden-part">
+
+                                        <div class="row-2">
+
+                                            <div class="col-1">
+
+                                                <div class="ee-mobile-expandable-block">
+                                                    <div class="block-title">Услуги</div>
+
+                                                    <div class="block-body">
+
+                                                        <div class="doctor-description">
+
+                                                            <p><b>Владение эндоскопическими методиками:</b><br>
+
+                                                                <span class="-edit-hide">
                                                             Эзофагогастродуоденоскопия, Колоноскопия, Бронхоскопия,
                                                             Эндоскопическая ультрасонография, ЭРХПГ, Капсульная эндоскопия,
                                                             Эндобронхиальная ультрасонография (EBUS)
                                                             </span>
 
-                                                            <span class="-edit-show">
+                                                                <span class="-edit-show">
 
                                                             <label class="ee-checkbox-8"><input type="checkbox"><span>Эзофагогастродуоденоскопия</span></label>
                                                             <label class="ee-checkbox-8"><input type="checkbox" checked><span>Колоноскопия</span></label>
@@ -778,16 +779,16 @@
 
 
 
-                                                        </p>
+                                                            </p>
 
 
-                                                        <p><b>Владение оперативными методиками:</b><br>
-                                                            <span class="-edit-hide">
+                                                            <p><b>Владение оперативными методиками:</b><br>
+                                                                <span class="-edit-hide">
                                                             Полипэктомия, резекция слизистой оболочки (EMR), Стентирование желудочно-кишечного тракта, Стентирование трахеи и бронхов, Балонная дилятация/бужирование, Гастростомия, Эндоскопическая диссекция в подлизистом слое (ESD), Лигирование ВРВП,
                                                             Папиллотомия, сфиктеротомия, ЭПТ, ПСТ литэкстракция, Литотрипсия, Пероральная эндоскопическая миотомия ПОЭМ POEM, Тонкоигольная пункция под контролем эндосонографии, Цистогастростомия (Цистодуоденостомия ) под контролем эндосонографии, Трансбронхиальная биопсия под контролем EBUS
                                                             </span>
 
-                                                            <span class="-edit-show">
+                                                                <span class="-edit-show">
 
                                                             <label class="ee-checkbox-8"><input type="checkbox"><span>Полипэктомия, резекция слизистой оболочки (EMR)</span></label>
                                                             <label class="ee-checkbox-8"><input type="checkbox"><span>Стентирование желудочно-кишечного тракта</span></label>
@@ -804,109 +805,513 @@
                                                             <input class="ee-input-1" placeholder="Добавьте еще">
 
                                                             </span>
-                                                        </p>
+                                                            </p>
+
+                                                        </div>
 
                                                     </div>
-
                                                 </div>
+
+
                                             </div>
 
+                                            <div class="col-2">
 
-                                        </div>
+                                                <div class="ee-mobile-expandable-block">
+                                                    <div class="block-title">О клинике</div>
 
-                                        <div class="col-2">
+                                                    <div class="block-body">
 
-                                            <div class="ee-mobile-expandable-block">
-                                                <div class="block-title">О клинике</div>
-
-                                                <div class="block-body">
-
-                                                    <table class="info-table">
+                                                        <table class="info-table">
 
 
-                                                        <tr>
-                                                            <td>Клиника:</td>
-                                                            <td>
-                                                                <span class="-edit-hide">ООО "ИНТО-СТИЛ" Клиника МД-Плюс</span>
-                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите название клиники (ЛПУ)">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Адрес:</td>
-                                                            <td>
-                                                                <span class="-edit-hide">г. Москва, ул. Маршала Жукова 24/1</span>
-                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите адрес клиники (ЛПУ)">
+                                                            <tr>
+                                                                <td>Клиника:</td>
+                                                                <td>
+                                                                    <span class="-edit-hide">ООО "ИНТО-СТИЛ" Клиника МД-Плюс</span>
+                                                                    <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите название клиники (ЛПУ)">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Адрес:</td>
+                                                                <td>
+                                                                    <span class="-edit-hide">г. Москва, ул. Маршала Жукова 24/1</span>
+                                                                    <input type="text" class="ee-input-1 -edit-show" placeholder="Введите/выберите адрес клиники (ЛПУ)">
 
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Специализация:</td>
-                                                            <td>
-                                                                <span class="-edit-hide">эндоскопия, диагностическое, ургентная эндоскопия, оперативная эндоскопия</span>
-                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="Введите через запятую">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Режим работы:</td>
-                                                            <td>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Специализация:</td>
+                                                                <td>
+                                                                    <span class="-edit-hide">эндоскопия, диагностическое, ургентная эндоскопия, оперативная эндоскопия</span>
+                                                                    <input type="text" class="ee-input-1 -edit-show" placeholder="Введите через запятую">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Режим работы:</td>
+                                                                <td>
                                                                 <span class="-edit-hide">
                                                                 Пн-Пт с 09.00-21.00<br>Сб: 10.00-20.00, Вс: 10.30- 19.00
                                                                 </span>
 
-                                                                <span class="-edit-show">
+                                                                    <span class="-edit-show">
                                                                 <input type="text" class="ee-input-1" placeholder="Пн-Пт с 00:00 по 00:00">
                                                                 <br>
                                                                 <input type="text" class="ee-input-1" placeholder="Сб с 00:00 по 00:00 Вс с 00:00 по 00:00">
                                                                 </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Сайт:</td>
-                                                            <td>
-                                                                <span class="-edit-hide"><a href="#">www.ufamdplus.ru</a> (подключаемый показ)</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Сайт:</td>
+                                                                <td>
+                                                                    <span class="-edit-hide"><a href="#">www.ufamdplus.ru</a> (подключаемый показ)</span>
 
-                                                                <input type="text" class="ee-input-1 -edit-show" placeholder="www.site.ru">
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="-edit-show">
-                                                            <td>Ключевые слова:</td>
-                                                            <td>
-
-
-                                                                <input type="text" class="ee-input-1" placeholder="Введите ключевые слова через запятую">
-                                                            </td>
-                                                        </tr>
-
-                                                    </table>
+                                                                    <input type="text" class="ee-input-1 -edit-show" placeholder="www.site.ru">
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="-edit-show">
+                                                                <td>Ключевые слова:</td>
+                                                                <td>
 
 
+                                                                    <input type="text" class="ee-input-1" placeholder="Введите ключевые слова через запятую">
+                                                                </td>
+                                                            </tr>
 
-                                                    <div class="teaser-tags -edit-hide">
+                                                        </table>
 
-                                                        <span>видеоэндоскопы</span>  |  <a href="#">cедация</a>  |  <a href="#">наркоз</a>  |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>
+
+
+                                                        <div class="teaser-tags -edit-hide">
+
+                                                            <span>видеоэндоскопы</span>  |  <a href="#">cедация</a>  |  <a href="#">наркоз</a>  |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>  |  <a href="#">вызов на дом</a> |  <a href="#">во сне</a>  | <a href="#">работа с детьми</a>
+
+                                                        </div>
+
+
 
                                                     </div>
-
-
-
                                                 </div>
-                                            </div>
 
+
+                                            </div>
 
                                         </div>
 
+
+
                                     </div>
 
-
-
-                                </div>
-
-                                <div class="expand-toggle"><i class="fas fa-chevron-down"></i></div>
+                                    <div class="expand-toggle"><i class="fas fa-chevron-down"></i></div>
 
                                 </form>
                             </div>
 
 
+
+                        </div>
+
+                    </div>
+
+                    <div class="ee-lk-window">
+
+                        <span class="ee-lk-window__close">×</span>
+
+                        <div class="ee-lk-window__body">
+
+
+                            <div class="ee-expandable-text-5">
+
+                                <div class="ee-expandable-text-5__title ee-expandable-text-5__title--active">
+                                    Пригласить коллегу
+                                </div>
+
+                                <div class="ee-expandable-text-5__text" style="display: block;">
+
+                                    <div class="ee-lk-invite">
+
+                                        <div class="ee-lk-invite__text">
+
+                                            Глубокоуважаемые коллеги, предлагаем Вам участвовать в программе "Пригласите коллегу"<br>
+                                            - реферальная программа - сервис, который позволяет Вам приглашать регистрироваться на портале ЭндоЭксперт.ру коллег по Вашему специальному персональному коду и зарабатывать баллы!<br>
+                                            Вы и приглашенный Вами коллега получите "приветственные бонусы" и сможете участвовать в ежемесячном конкурсе среди лидеров по реферальной программе. Подробнее о конкурсах и бонусной программе читайте тут.<br>
+                                            Т.е. новые зарегистрированные пользователи могут указывать Ваш код, например: "REF-O" в специальном поле при регистрации. В Вашем личном кабинете появится информация о приглашенных по коду или ссылке и начисленные баллы.
+
+                                        </div>
+
+                                        <div class="ee-lk-invite__button">
+                                            <div>
+                                                Ваш ID на портале EndoExpert.ru - XXXX XXX<br>
+                                                Ваш персональный код для приглашения коллег (реферальный код) -  REF-F
+                                            </div>
+                                            <div>
+
+                                                <button class="ee-button-17 tooltip" onclick="copyToClipboardWithTooltip(this, 'REF-F', 'Скопировано в буфер')">Скопировать код</button>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="ee-lk-invite__button">
+                                            <div>
+                                                https://endoexpert.ru/auth/?=REF-F
+                                            </div>
+                                            <div>
+
+                                                <button class="ee-button-17 tooltip" onclick="copyToClipboardWithTooltip(this, 'https://endoexpert.ru/auth/?=REF-F', 'Скопировано в буфер')">Скопировать ссылку</button>
+
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="ee-lk-window">
+
+                        <span class="ee-lk-window__close">×</span>
+
+                        <div class="ee-lk-window__header">
+
+                            <div class="ee-lk-window__title ee-lk-window__title--centered">
+                                Ваши баллы НМО<br>за участие в мероприятиях на EndoExpert
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="ee-lk-window__body">
+
+                            <div class="ee-lk-nmo">
+
+                                <div class="ee-fixed-table ee-lk-nmo-table">
+
+                                    <div class="ee-fixed-table__wrapper">
+
+                                        <table>
+
+                                            <thead>
+                                            <tr>
+                                                <th>Дата</th>
+                                                <th>Мероприятие (основание зачисления баллов)</th>
+                                                <th>Примечания</th>
+                                                <th>Просм.<br>минут</th>
+                                                <th>Контроль<br>присутствия</th>
+                                                <th>Баллы<br>кредиты</th>
+                                                <th>Код/скопируйте и вставьте<br>
+                                                    на <a href="https://www.edu.rosminzdrav.ru" target="_blank">www.edu.rosminzdrav.ru</a></th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            <tr>
+                                                <td>08.09.18 </td>
+                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                                <td>Документация по данному
+                                                    учебному мероприятию
+                                                    представлена в Комиссию
+                                                    по оценке учебных ...</td>
+                                                <td>321/345</td>
+                                                <td>16 из 54</td>
+                                                <td>34</td>
+                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>08.09.18 </td>
+                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                                <td>Документация по данному
+                                                    учебному мероприятию
+                                                    представлена в Комиссию
+                                                    по оценке учебных ...</td>
+                                                <td>321/345</td>
+                                                <td>16 из 54</td>
+                                                <td>34</td>
+                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>08.09.18 </td>
+                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                                <td>Документация по данному
+                                                    учебному мероприятию
+                                                    представлена в Комиссию
+                                                    по оценке учебных ...</td>
+                                                <td>321/345</td>
+                                                <td>16 из 54</td>
+                                                <td>34</td>
+                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>08.09.18 </td>
+                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                                <td>Документация по данному
+                                                    учебному мероприятию
+                                                    представлена в Комиссию
+                                                    по оценке учебных ...</td>
+                                                <td>321/345</td>
+                                                <td>16 из 54</td>
+                                                <td>34</td>
+                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>08.09.18 </td>
+                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                                <td>Документация по данному
+                                                    учебному мероприятию
+                                                    представлена в Комиссию
+                                                    по оценке учебных ...</td>
+                                                <td>321/345</td>
+                                                <td>16 из 54</td>
+                                                <td>34</td>
+                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                            </tr>
+
+                                            </tbody>
+
+
+                                        </table>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <div class="ee-lk-nmo__footer">
+                                    Подробнее информация о аккредитации и баллах читайте в статье <a href="#">«Часто задаваемые вопросы о баллах НМО»</a>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="ee-lk-window ee-lk-window--no-bg">
+
+                        <div class="ee-lk-window__body">
+
+                            <span class="ee-lk-window__close">×</span>
+
+                            <div class="ee-lk-social-connect">
+
+                                <div class="ee-lk-social-connect__col-1">
+
+                                    <div class="ee-social-connect">
+
+                                        <div class="ee-social-connect__title">
+
+                                            Вы можете связать свой профиль<br>
+                                            с профилями в социальных сетях и сервисах:
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg version="1.2" baseProfile="tiny"
+                                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                                                     x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" xml:space="preserve">
+                                                    <defs>
+                                                    </defs>
+                                                                                                        <rect fill="#3B5998" width="36" height="36"/>
+                                                                                                        <path fill="#FFFFFF" d="M30.895,16.535l-0.553,5.23h-4.181v15.176h-6.28V21.766H16.75v-5.23h3.131v-3.149
+                                                        c0-4.254,1.768-6.796,6.796-6.796h4.181v5.23h-2.615c-1.952,0-2.081,0.736-2.081,2.1v2.615H30.895z"/>
+                                                </svg>
+
+                                                <span>Facebook</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18">Привязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="30" height="30" fill="white"/>
+                                                    <path d="M15 8C16.6168 8 18.1013 8.55353 19.2863 9.47406L22.9235 6.00409C20.8088 4.13995 18.0406 3 15 3C10.3924 3 6.39667 5.59991 4.3858 9.40985L8.43024 12.6028C9.40997 9.91937 11.9775 8 15 8Z" fill="#F44336"/>
+                                                    <path d="M26.8961 16.5018C26.9586 16.0102 27 15.5087 27 15C27 14.1422 26.9063 13.3068 26.7352 12.5H15V17.5H21.4862C20.9615 18.8638 20.0272 20.0178 18.838 20.8195L22.8975 24.0243C25.0494 22.1354 26.522 19.4904 26.8961 16.5018Z" fill="#2196F3"/>
+                                                    <path d="M8 15C8 14.1566 8.15686 13.3516 8.43024 12.6028L4.3858 9.40985C3.50433 11.08 3 12.9802 3 15C3 16.9973 3.49506 18.8763 4.35822 20.533L8.40778 17.3359C8.14844 16.6044 8 15.8204 8 15Z" fill="#FFC107"/>
+                                                    <path d="M15 22C11.9545 22 9.37042 20.0515 8.40778 17.3359L4.35822 20.533C6.35925 24.3735 10.3698 27 15 27C18.0278 27 20.7888 25.8752 22.8975 24.0243L18.838 20.8195C17.7412 21.5589 16.4284 22 15 22Z" fill="#00B060"/>
+                                                    <path opacity="0.1" d="M15 26.75C11.4683 26.75 8.29272 25.2928 6.04755 22.9713C8.24536 25.4378 11.4365 27 15 27C18.5306 27 21.6953 25.4686 23.8881 23.0408C21.6496 25.3246 18.4981 26.75 15 26.75Z" fill="black"/>
+                                                    <path opacity="0.1" d="M15 17.25V17.5H21.4862L21.5875 17.25H15Z" fill="black"/>
+                                                    <path d="M26.9944 15.147C26.9952 15.0978 27 15.0494 27 15C27 14.986 26.9978 14.9725 26.9977 14.9586C26.9971 15.0215 26.9939 15.0838 26.9944 15.147Z" fill="#E6E6E6"/>
+                                                    <path opacity="0.2" d="M15 12.5V12.75H26.7856C26.7698 12.6675 26.7526 12.5819 26.7352 12.5H15Z" fill="white"/>
+                                                    <path d="M26.7352 12.5H15V17.5H21.4862C20.4775 20.1216 17.9772 22 15 22C11.134 22 8 18.866 8 15C8 11.134 11.134 8 15 8C16.4019 8 17.6939 8.43066 18.7885 9.14069C18.9561 9.24957 19.1289 9.35181 19.2863 9.47406L22.9235 6.00409L22.8414 5.94098C20.7369 4.11707 18.0035 3 15 3C8.37256 3 3 8.37256 3 15C3 21.6274 8.37256 27 15 27C21.1177 27 26.1555 22.4188 26.8961 16.5018C26.9586 16.0102 27 15.5087 27 15C27 14.1422 26.9063 13.3068 26.7352 12.5Z" fill="url(#paint0_linear)"/>
+                                                    <path opacity="0.1" d="M18.7885 8.89069C17.6939 8.18066 16.4019 7.75 15 7.75C11.134 7.75 8 10.884 8 14.75C8 14.7922 8.00057 14.8251 8.0013 14.8672C8.06874 11.0595 11.1762 8 15 8C16.4019 8 17.6939 8.43066 18.7885 9.14069C18.9561 9.24957 19.1289 9.35181 19.2863 9.47406L22.9235 6.00409L19.2863 9.22406C19.1289 9.10181 18.9561 8.99957 18.7885 8.89069Z" fill="black"/>
+                                                    <path opacity="0.2" d="M15 3.25C17.975 3.25 20.6829 4.34839 22.7793 6.1416L22.9235 6.00409L22.8134 5.90827C20.709 4.08436 18.0035 3 15 3C8.37256 3 3 8.37256 3 15C3 15.0422 3.00586 15.0829 3.00629 15.125C3.07404 8.55585 8.41473 3.25 15 3.25Z" fill="white"/>
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear" x1="3" y1="15" x2="27" y2="15" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="white" stop-opacity="0.2"/>
+                                                            <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+
+                                                <span>Иван Петров</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18 ee-button-18--gray">Отвязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="512" height="512" fill="#F48420"/>
+                                                    <path d="M256.005 258.475C311.915 258.475 357.234 213.15 357.234 157.237C357.234 101.327 311.915 56 256.005 56C200.085 56 154.767 101.327 154.767 157.237C154.767 213.148 200.085 258.475 256.005 258.475ZM256.005 107.433C283.505 107.433 305.809 129.728 305.809 157.237C305.809 184.747 283.505 207.042 256.005 207.042C228.495 207.042 206.192 184.747 206.192 157.237C206.192 129.728 228.495 107.433 256.005 107.433Z" fill="white"/>
+                                                    <path d="M330.116 266.368C301.676 288.779 256.005 288.779 256.005 288.779C256.005 288.779 210.324 288.779 181.887 266.368C160.847 249.793 145.018 259.339 139.304 270.829C129.34 290.842 140.595 300.519 166.005 316.826C187.709 330.761 217.525 335.967 236.779 337.911L220.702 353.985C198.061 376.618 176.209 398.475 161.049 413.637C151.982 422.699 151.982 437.406 161.049 446.466L163.784 449.2C172.854 458.267 187.55 458.267 196.612 449.2L256.272 389.549C278.913 412.189 300.765 434.04 315.925 449.2C324.992 458.267 339.688 458.267 348.758 449.2L351.493 446.466C360.554 437.393 360.554 422.699 351.493 413.637L291.828 353.977L275.706 337.855C294.978 335.875 324.478 330.645 345.994 316.825C371.4 300.517 382.662 290.841 372.696 270.827C366.984 259.341 351.145 249.793 330.116 266.368V266.368Z" fill="white"/>
+                                                </svg>
+
+
+                                                <span>Одноклассники</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18">Привязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="512" height="512" fill="#3688C8"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M251.208 178.51C272.32 178.51 292.166 187.836 306.738 202.446V202.501C306.738 195.489 311.459 190.204 318.015 190.204L319.673 190.188C329.923 190.188 332.025 199.891 332.025 202.965L332.08 312.022C331.353 319.159 339.443 322.838 343.932 318.268C361.446 300.274 382.393 225.75 333.047 182.575C287.057 142.321 225.345 148.956 192.527 171.575C157.64 195.637 135.316 248.884 157.002 298.899C180.639 353.465 248.283 369.727 288.487 353.506C308.848 345.289 318.253 372.809 297.106 381.801C265.159 395.418 176.242 394.047 134.705 322.09C106.641 273.504 108.135 188.014 182.564 143.719C239.505 109.844 314.572 119.225 359.84 166.5C407.156 215.922 404.401 308.465 358.246 344.461C337.334 360.801 306.275 344.887 306.473 321.066L306.258 313.277C291.697 327.73 272.32 336.16 251.209 336.16C209.5 336.16 172.799 299.453 172.799 257.762C172.797 215.633 209.499 178.51 251.208 178.51ZM303.702 254.738C302.13 224.199 279.462 205.832 252.084 205.832H251.053C219.461 205.832 201.94 230.676 201.94 258.894C201.94 290.494 223.139 310.456 250.932 310.456C281.921 310.456 302.3 287.753 303.772 260.903L303.702 254.738Z" fill="#FAA832"/>
+                                                </svg>
+
+
+                                                <span>Mail</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18">Привязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="512" height="512" fill="white"/>
+                                                    <path d="M250.447 299.838L186.562 443.252H140L210.172 289.898C177.205 273.157 155.203 242.823 155.203 186.758C155.13 108.253 204.909 69 264.043 69H324.202V443.252H283.926V299.838H250.447ZM283.926 102.99H262.434C229.979 102.99 198.549 124.48 198.549 186.758C198.549 246.915 227.348 266.285 262.434 266.285H283.926V102.99Z" fill="#FF0000"/>
+                                                </svg>
+
+
+                                                <span>Яндекс</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18">Привязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ee-social-connect__item">
+
+                                            <div class="ee-social-connect__item-name">
+
+                                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="64" height="64" fill="#4489C8"/>
+                                                    <path d="M9.62 19.77H17.3C17.4606 19.7698 17.6174 19.8184 17.7496 19.9095C17.8818 20.0006 17.9831 20.1299 18.04 20.28C18.89 22.47 22.42 31.04 25.65 31.74C28.05 31.74 27.2 20.34 24.15 20.34C23.35 20.34 25.57 18.92 25.72 18.86C28.5544 18.0831 31.5456 18.0831 34.38 18.86C35.91 19.5 36.17 21.29 36.21 22.81C36.25 24.33 34.51 30.81 36.8 31.51C39.8 32.43 43.66 23.02 44.56 20.71C44.6185 20.5618 44.7205 20.4347 44.8526 20.3454C44.9846 20.2562 45.1406 20.209 45.3 20.21H53.85C53.9821 20.2096 54.1123 20.2419 54.2289 20.3041C54.3455 20.3662 54.4449 20.4563 54.5182 20.5663C54.5914 20.6762 54.6364 20.8026 54.6489 20.9341C54.6614 21.0656 54.6412 21.1982 54.59 21.32C52.8288 25.3378 50.7173 29.1926 48.28 32.84C48.0728 33.141 47.9756 33.5042 48.0047 33.8684C48.0339 34.2327 48.1876 34.5758 48.44 34.84C51 37.58 58 45.34 54 45.34H45.37C45.147 45.3406 44.9263 45.2936 44.7229 45.2022C44.5194 45.1108 44.3378 44.9771 44.19 44.81C42.85 43.33 38.95 39.21 37.19 39.54C35.73 39.81 35.59 42.29 35.66 43.91C35.6821 44.328 35.5395 44.7379 35.2628 45.052C34.9861 45.3661 34.5974 45.5592 34.18 45.59C32.65 45.68 30.56 45.72 30.37 45.71C24.27 45.32 20.66 41.25 17.21 36.71C13.5961 31.8968 10.7771 26.5355 8.86 20.83C8.82082 20.7093 8.81055 20.5811 8.83003 20.4556C8.84951 20.3302 8.89819 20.2111 8.97215 20.108C9.04611 20.0048 9.14327 19.9205 9.2558 19.8618C9.36834 19.8031 9.49309 19.7717 9.62 19.77V19.77Z" fill="white"/>
+                                                </svg>
+
+
+                                                <span>Вконтакте</span>
+
+                                            </div>
+
+                                            <div class="ee-social-connect__item-button">
+
+                                                <a href="#" class="ee-button-18">Привязать</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="ee-lk-social-connect__col-2">
+
+                                    Подключаемая область
+
+
+                                </div>
+
+                            </div>
 
                         </div>
 

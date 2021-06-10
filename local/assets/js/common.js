@@ -635,6 +635,16 @@ function copyToClipboard(str) {
 
 }
 
+function copyToClipboardWithTooltip(el, str, message) {
+
+  copyToClipboard(str);
+
+  $(el).tooltipster('content', message);
+  $(el).tooltipster('open');
+
+
+}
+
 function copyFormattedToClipboard (html) {
   // Create container for the HTML
   // [1]

@@ -99,5 +99,32 @@ $(document).ready(function () {
   $('.ee-fixed-table').ee_fixed_table();
 
 
+  $('.js-subscribe').change(function () {
+
+
+    if ($(this).is(':checked')) {
+
+      $(this).closest('.ee-lk-window-v2').find('.js-on').show();
+      $(this).closest('.ee-lk-window-v2').find('.js-off').hide();
+
+      $(this).closest('.ee-lk-window-v2').css('background', '#3f3f41').find('.ee-lk-window-v2__icon').css('background', '#27a006');
+
+
+
+
+
+    } else {
+
+      $(this).closest('.ee-lk-window-v2').find('.js-on').hide();
+      $(this).closest('.ee-lk-window-v2').find('.js-off').show();
+
+      $(this).closest('.ee-lk-window-v2').css('background', '#fb1f02').find('.ee-lk-window-v2__icon').css('background', '#3f3f41');
+
+    }
+
+
+  });
+
+
 });
 

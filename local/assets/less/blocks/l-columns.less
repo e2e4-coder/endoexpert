@@ -1,0 +1,36 @@
+@import "../inc/variables";
+
+.l-columns {
+
+  display: flex;
+  margin: 0 -15px;
+
+  &__col {
+    flex: 1 1 100%;
+    margin: 0 15px;
+  }
+
+
+
+}
+
+@media @w768 {
+
+  .l-columns {
+
+    display: block;
+    margin: 0;
+
+    &__col {
+
+      margin: 0 0 30px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+}

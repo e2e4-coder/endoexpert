@@ -2,10 +2,32 @@
 
 .ee-form {
 
+  &__subtitle {
+
+    font-size: 24px;
+    margin: 0 0 1em 0;
+  }
+
   .form-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-section {
+
+
+    &.-gray {
+      padding: 20px;
+      background: #3f3f41;
+      margin-bottom: 2em;
+    }
+
   }
 
   .form-actions {

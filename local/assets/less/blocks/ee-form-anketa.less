@@ -21,6 +21,11 @@
     }
   }
 
+  .l-columns__col:first-child {
+    width: 60%;
+    flex: 0 0 auto;
+  }
+
 }
 
 @media @w768 {
@@ -28,6 +33,21 @@
   .ee-form-anketa {
     &__row-1 {
       display: block;
+
+      &-col-1 {
+        margin-bottom: 20px;
+      }
+
+      &-col-2 {
+        height: 200px;
+      }
+    }
+
+
+
+    .l-columns__col:first-child {
+      width: 100%;
+      flex: 0 0 auto;
     }
   }
 

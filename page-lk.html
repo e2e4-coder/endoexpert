@@ -30,6 +30,7 @@
     <script src="/local/assets/local/lib/frontend/includeHTML/includeHTML.js"></script>
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
     <script src="/local/assets/local/lib/frontend/select2/js/select2.full.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery.maskedinput.min.js"></script>
 
 
 
@@ -1633,113 +1634,109 @@
 
                             <div class="ee-lk-nmo">
 
-                                <div class="ee-fixed-table ee-lk-nmo-table">
+                                <div class="ee-lk-nmo-table">
 
-                                    <div class="ee-fixed-table__wrapper">
+                                    <table>
 
-                                        <table>
+                                        <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Мероприятие (основание зачисления баллов)</th>
+                                            <th>Примечания</th>
+                                            <th>Просм.<br>минут</th>
+                                            <th>Контроль<br>присутствия</th>
+                                            <th>Баллы<br>кредиты</th>
+                                            <th>Код/скопируйте и вставьте<br>
+                                                на <a href="https://www.edu.rosminzdrav.ru" target="_blank">www.edu.rosminzdrav.ru</a></th>
+                                        </tr>
+                                        </thead>
 
-                                            <thead>
-                                            <tr>
-                                                <th>Дата</th>
-                                                <th>Мероприятие (основание зачисления баллов)</th>
-                                                <th>Примечания</th>
-                                                <th>Просм.<br>минут</th>
-                                                <th>Контроль<br>присутствия</th>
-                                                <th>Баллы<br>кредиты</th>
-                                                <th>Код/скопируйте и вставьте<br>
-                                                    на <a href="https://www.edu.rosminzdrav.ru" target="_blank">www.edu.rosminzdrav.ru</a></th>
-                                            </tr>
-                                            </thead>
+                                        <tbody>
 
-                                            <tbody>
+                                        <tr>
+                                            <td>08.09.18 </td>
+                                            <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                            <td>Документация по данному
+                                                учебному мероприятию
+                                                представлена в Комиссию
+                                                по оценке учебных ...</td>
+                                            <td>321/345</td>
+                                            <td>16 из 54</td>
+                                            <td>34</td>
+                                            <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td>08.09.18 </td>
-                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
-                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
-                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
-                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
-                                                <td>Документация по данному
-                                                    учебному мероприятию
-                                                    представлена в Комиссию
-                                                    по оценке учебных ...</td>
-                                                <td>321/345</td>
-                                                <td>16 из 54</td>
-                                                <td>34</td>
-                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
-                                            </tr>
+                                        <tr>
+                                            <td>08.09.18 </td>
+                                            <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                            <td>Документация по данному
+                                                учебному мероприятию
+                                                представлена в Комиссию
+                                                по оценке учебных ...</td>
+                                            <td>321/345</td>
+                                            <td>16 из 54</td>
+                                            <td>34</td>
+                                            <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td>08.09.18 </td>
-                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
-                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
-                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
-                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
-                                                <td>Документация по данному
-                                                    учебному мероприятию
-                                                    представлена в Комиссию
-                                                    по оценке учебных ...</td>
-                                                <td>321/345</td>
-                                                <td>16 из 54</td>
-                                                <td>34</td>
-                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
-                                            </tr>
+                                        <tr>
+                                            <td>08.09.18 </td>
+                                            <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                            <td>Документация по данному
+                                                учебному мероприятию
+                                                представлена в Комиссию
+                                                по оценке учебных ...</td>
+                                            <td>321/345</td>
+                                            <td>16 из 54</td>
+                                            <td>34</td>
+                                            <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td>08.09.18 </td>
-                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
-                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
-                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
-                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
-                                                <td>Документация по данному
-                                                    учебному мероприятию
-                                                    представлена в Комиссию
-                                                    по оценке учебных ...</td>
-                                                <td>321/345</td>
-                                                <td>16 из 54</td>
-                                                <td>34</td>
-                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
-                                            </tr>
+                                        <tr>
+                                            <td>08.09.18 </td>
+                                            <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                            <td>Документация по данному
+                                                учебному мероприятию
+                                                представлена в Комиссию
+                                                по оценке учебных ...</td>
+                                            <td>321/345</td>
+                                            <td>16 из 54</td>
+                                            <td>34</td>
+                                            <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td>08.09.18 </td>
-                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
-                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
-                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
-                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
-                                                <td>Документация по данному
-                                                    учебному мероприятию
-                                                    представлена в Комиссию
-                                                    по оценке учебных ...</td>
-                                                <td>321/345</td>
-                                                <td>16 из 54</td>
-                                                <td>34</td>
-                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
-                                            </tr>
+                                        <tr>
+                                            <td>08.09.18 </td>
+                                            <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
+                                                ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
+                                                «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
+                                                ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
+                                            <td>Документация по данному
+                                                учебному мероприятию
+                                                представлена в Комиссию
+                                                по оценке учебных ...</td>
+                                            <td>321/345</td>
+                                            <td>16 из 54</td>
+                                            <td>34</td>
+                                            <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td>08.09.18 </td>
-                                                <td>«МУЛЬТИДИСЦИПЛИНАРНЫЙ ПОДХОД В
-                                                    ДИАГНОСТИКЕ И ЛЕЧЕНИИ РАКА ПИЩЕВОДА»
-                                                    «ЭНДОСКОПИЧЕСКАЯ ДИАГНОСТИКА И
-                                                    ЛЕЧЕНИЕ АДЕНОКАРЦИНОМ ПРИ ПИЩЕВОДЕ...</td>
-                                                <td>Документация по данному
-                                                    учебному мероприятию
-                                                    представлена в Комиссию
-                                                    по оценке учебных ...</td>
-                                                <td>321/345</td>
-                                                <td>16 из 54</td>
-                                                <td>34</td>
-                                                <td>88888888 <button class="ee-button-8 tooltip" onclick="copyToClipboardWithTooltip(this, '88888888', 'Скопировано в буфер')">скопировать</button> </td>
-                                            </tr>
-
-                                            </tbody>
+                                        </tbody>
 
 
-                                        </table>
-
-                                    </div>
+                                    </table>
 
 
 
@@ -2176,115 +2173,118 @@
 
                             <div class="form-wrapper">
 
+                                <div class="l-columns">
 
-                                <div class="form-item">
-                                    <label>Фамилия <sup class="-required">*</sup></label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
+                                    <div class="l-columns__col">
+
+                                        <div class="form-item">
+                                            <label>Фамилия <sup class="-required">*</sup></label>
+                                            <input class="form-text" type="text" name="">
+                                        </div>
 
 
-                                <div class="form-item">
-                                    <label>Имя <sup class="-required">*</sup></label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
+                                        <div class="form-item">
+                                            <label>Имя <sup class="-required">*</sup></label>
+                                            <input class="form-text" type="text" name="">
+                                        </div>
 
-                                <div class="form-item">
-                                    <label>Отчество <sup class="-required">*</sup></label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
+                                        <div class="form-item">
+                                            <label>Отчество <sup class="-required">*</sup></label>
+                                            <input class="form-text" type="text" name="">
+                                        </div>
 
-                                <div class="form-item">
-                                    <label>Дата рождения <sup class="-required">*</sup></label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
+                                        <div class="form-item">
+                                            <label>Дата рождения <sup class="-required">*</sup></label>
+                                            <input class="form-text js-input-mask-date" type="text" name="">
+                                        </div>
 
-                                <div class="form-item">
-                                    <label>Страна <sup class="-required">*</sup></label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-                                            <option value="439" selected="">Российская Федерация</option>
-                                            <option value="219">Беларусь</option>
-                                            <option value="411">Украина</option>
-                                            <option value="287">Казахстан</option>
+                                        <div class="form-item">
+                                            <label>Страна <sup class="-required">*</sup></label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+                                                    <option value="439" selected="">Российская Федерация</option>
+                                                    <option value="219">Беларусь</option>
+                                                    <option value="411">Украина</option>
+                                                    <option value="287">Казахстан</option>
 
-                                        </select>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Город</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Специальность</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Дополнительная специальность</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="form-item">
+                                            <label>Стаж по основной специальности</label>
+                                            <input class="form-text" type="text" name="">
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Ваш номер мобильного телефона</label>
+                                            <input class="form-text" type="text" name="">
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Должность в ЛПУ (больница\пол-ка)</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-item">
+                                            <label>Ученая степень</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-select" name="" >
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="l-columns__col">
+                                        Подключаемая область
                                     </div>
 
                                 </div>
-
-                                <div class="form-item">
-                                    <label>Город</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Специальность</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Дополнительная специальность</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="form-item">
-                                    <label>Стаж по основной специальности</label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Ваш номер мобильного телефона</label>
-                                    <input class="form-text" type="text" name="">
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Должность в ЛПУ (больница\пол-ка)</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Ученая степень</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-select" name="" >
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-
-
-
-
-
-
 
 
                             </div>

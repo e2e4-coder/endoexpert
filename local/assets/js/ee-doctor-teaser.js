@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-  $('.ee-doctor-teaser .expand-toggle').click(function () {
+  $('.ee-doctor-teaser .expand-toggle, .ee-doctor-teaser-light__expand-toggle').click(function () {
 
     $(this).toggleClass('-active');
     $(this).prev().slideToggle();

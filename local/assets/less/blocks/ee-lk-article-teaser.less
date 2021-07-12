@@ -61,3 +61,47 @@
 
 
 }
+
+@media @w768 {
+
+  .ee-lk-article-teaser {
+
+    flex-direction: column-reverse;
+    position: relative;
+    padding-bottom: 70px;
+    padding-top: 50px;
+
+    &__image {
+
+      width: 100%;
+      margin-right: 0;
+
+    }
+
+    &__button-1 {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+
+    &__date {
+      position: absolute;
+      top: 0;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: -4px;
+
+        .sprite(@ico-calendar)
+
+      }
+
+    }
+
+  }
+
+}

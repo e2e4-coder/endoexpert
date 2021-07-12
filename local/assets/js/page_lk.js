@@ -67,7 +67,12 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
-    }
+    },
+
+    navigation: {
+      nextEl: '#banner-slider-1-next',
+      prevEl: '#banner-slider-1-prev',
+    },
 
   });
 
@@ -130,6 +135,13 @@ $(document).ready(function () {
   });
 
   $('.js-input-mask-date').mask('99.99.9999');
+
+  $('#lk-menu-toggle').click(function () {
+
+    $('#lk-menu').toggleClass('active');
+    $(this).toggleClass('active');
+
+  });
 
 
 });

@@ -18,6 +18,37 @@
 
   }
 
+  .swiper-button-prev {
+    .sprite(@ico-arrow-left);
+    background-size: initial;
+    margin-top: -10px;
+    left: -25px;
+  }
+
+  .swiper-button-next {
+    .sprite(@ico-arrow-right);
+    background-size: initial;
+    margin-top: -10px;
+    right: -25px;
+  }
+
+  @media @w768 {
+
+    .swiper-button-prev {
+
+      .sprite(@touch-arrow-left);
+      margin-top: -25px;
+
+    }
+
+    .swiper-button-next {
+
+      .sprite(@touch-arrow-right);
+      margin-top: -25px;
+    }
+
+  }
+
   &--pagination-top-right {
 
     .swiper-pagination {

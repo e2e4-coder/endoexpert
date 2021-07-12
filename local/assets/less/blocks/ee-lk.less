@@ -86,6 +86,33 @@
 
     }
 
+    .ee-lk-side-banner {
+      display: none;
+    }
+
+    .ee-push-block {
+      margin: 0;
+    }
+
+    .ee-lk-menu {
+
+      position: fixed;
+      left: auto;
+      right: -240px;
+      z-index: 9999;
+      background: #474543;
+      padding: 5px 5px 5px 15px;
+      height: 100vh;
+      transition: right .3s ease-in;
+
+      &.active {
+
+        right: 0;
+
+      }
+
+    }
+
   }
 
 }

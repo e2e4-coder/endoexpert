@@ -324,6 +324,7 @@
 
                     </div>
 
+                    <a name="popups"></a>
 
                     <h2 id="popups">Попапы</h2>
 
@@ -334,9 +335,16 @@
                         <button onclick="showStickyPopup({src:'#popup-4'})">.ee-popup-v4</button>
                         <button onclick="showPopup({src:'#popup-5', noBg : true})">.ee-popup-moviprep</button>
 
+                        <br><br>
+
+                        <button onclick="showPopup({src:'#popup-6'})">Вопрос библиотекарю (.ee-qtl-popup)</button>
+                        <button onclick="showPopup({src:'#popup-7'})">Вопрос библиотекарю (.ee-qtl-popup--small)</button>
+
                         <script>
 
                             $(document).ready(function () {
+
+                              //showPopup({src:'#popup-6'});
 
                                 if (!getCookie('banner-shown-12345')) { // 12345 - id баннера
 
@@ -464,6 +472,91 @@
 
 
                     </div>
+
+                    <div id="popup-6" class="ee-popup ee-qtl-popup mfp-hide">
+
+                        <div class="ee-qtl-popup__title">Вопрос Библиотекарю</div>
+
+                        <div class="ee-qtl-popup__text">
+
+
+                            <p>Не уходите!<br>
+                                Не нашли нужную медицинскую информацию на портале EndoExpert.ru?</p>
+
+                            <p class="--highlighted">Библиотекарь найдет ее для Вас и пришлет ссылку на материал в течении 2х дней!</p>
+
+                            <p>Если такой статьи нет, возможно, по этой теме напишем обзор литературы!</p>
+
+                            <form class="ee-qtl-popup__form">
+
+
+                                <div class="ee-qtl-popup__form-item">
+
+                                    <textarea name="" class="ee-qtl-popup__form-textarea" placeholder="Вопрос:"></textarea>
+
+                                </div>
+
+                                <div class="ee-qtl-popup__form-item">
+
+                                    <label class="ee-qtl-popup__form-item-label">Введите e-mail:</label>
+
+                                    <input name="" class="ee-qtl-popup__form-text" value="хххх@mail.ru">
+
+                                </div>
+
+                                <div class="ee-qtl-popup__form-item">
+
+                                    <label class="ee-checkbox-1"><input checked="" type="checkbox"><span>Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></span></label>
+
+                                </div>
+
+
+                                <div class="ee-qtl-popup__form-actions">
+
+                                    <button class="ee-button-3" type="submit">Отправить</button>
+
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div id="popup-7" class="ee-popup ee-qtl-popup ee-qtl-popup--small mfp-hide">
+
+                        <div class="ee-qtl-popup__title">Добавить скорости Библиотекарю</div>
+
+                        <div class="ee-qtl-popup__text">
+
+
+                            <p>Сюда вставть виджет для оплаты...</p>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
 
 
                     <h2>Кнопки</h2>

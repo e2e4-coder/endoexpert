@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="/local/assets/local/lib/frontend/select2/css/select2.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css">
     <link rel="stylesheet" href="/local/assets/css/build.css">
 
 
@@ -31,6 +32,7 @@
     <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
     <script src="/local/assets/local/lib/frontend/select2/js/select2.full.min.js"></script>
     <script src="/local/assets/local/lib/frontend/jquery.maskedinput.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 
 
@@ -42,6 +44,7 @@
     <script src="/local/assets/js/ee-date-time-picker.js"></script>
     <script src="/local/assets/js/ee-upload-image-widget.js"></script>
     <script src="/local/assets/js/jquery.ee_fixed_table.js"></script>
+    <script src="/local/assets/js/jquery.ee_calendar.js"></script>
 
     <script src="/local/assets/js/page_lk.js"></script>
 
@@ -329,11 +332,11 @@
                                 <div class="swiper-wrapper">
 
                                     <div class="swiper-slide">
-                                        <a href="#"><img src="https://picsum.photos/220/1000" alt=""></a>
+                                        <a href="#"><img src="http://via.placeholder.com/220x1000" alt=""></a>
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <a href="#"><img src="https://picsum.photos/220/800" alt=""></a>
+                                        <a href="#"><img src="http://via.placeholder.com/220x800" alt=""></a>
                                     </div>
 
                                 </div>
@@ -862,7 +865,7 @@
                     </div>
 
 
-                    <div class="ee-lk-banner">
+                    <div class="ee-lk__row-1">
 
                         <div class="ee-slider-3">
 
@@ -890,9 +893,41 @@
 
                         </div>
 
+                        <div>
 
+                            <div id="lk-calendar" class="ee-calendar" data-api-url="/local/assets/html_includes/ajax-events-list.html" data-highlighted-days='[{"day" : "2021-07-30", "caption" : "3 мероприятия", "color" : "red"}, {"day" : "2021-07-02", "caption" : "3 мероприятия", "color" : "blue"}]'>
+
+                                <div class="ee-calendar__controls">
+
+                                    <div class="ee-calendar__controls-day">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span></span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+
+                                    <div class="ee-calendar__controls-month">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span></span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+
+                                    <div class="ee-calendar__controls-year">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span></span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="ee-calendar__datepicker"></div>
+
+                            </div>
+
+                        </div>
 
                     </div>
+
+
 
 
                     <div class="ee-from-redaction">
@@ -2496,6 +2531,99 @@
 
 
 
+
+                    </div>
+
+                    <a name="qtl"></a>
+
+
+                    <div class="ee-lk__section">
+
+                        <div class="ee-popup ee-qtl-popup">
+
+                            <div class="ee-qtl-popup__title">Вопрос Библиотекарю</div>
+
+                            <div class="ee-qtl-popup__text">
+
+
+                                <p>Не уходите!<br>
+                                    Не нашли нужную медицинскую информацию на портале EndoExpert.ru?</p>
+
+                                <p class="--highlighted">Библиотекарь найдет ее для Вас и пришлет ссылку на материал в течении 2х дней!</p>
+
+                                <p>Если такой статьи нет, возможно, по этой теме напишем обзор литературы!</p>
+
+                                <form class="ee-qtl-popup__form">
+
+
+                                    <div class="ee-qtl-popup__form-item">
+
+                                        <textarea name="" class="ee-qtl-popup__form-textarea" placeholder="Вопрос:"></textarea>
+
+                                    </div>
+
+                                    <div class="ee-qtl-popup__form-item">
+
+                                        <label class="ee-qtl-popup__form-item-label">Введите e-mail:</label>
+
+                                        <input name="" class="ee-qtl-popup__form-text" value="хххх@mail.ru">
+
+                                    </div>
+
+                                    <div class="ee-qtl-popup__form-item">
+
+                                        <label class="ee-checkbox-1"><input checked="" type="checkbox"><span>Я даю согласие на <a href="#" target="_blank">обработку персональных данных</a></span></label>
+
+                                    </div>
+
+
+                                    <div class="ee-qtl-popup__form-actions">
+
+                                        <button class="ee-button-3" type="submit">Отправить</button>
+
+                                    </div>
+
+
+                                </form>
+
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ee-lk__section">
+
+                        <div class="ee-popup ee-qtl-popup ee-qtl-popup--small">
+
+                            <div class="ee-qtl-popup__title">Добавить скорости Библиотекарю</div>
+
+                            <div class="ee-qtl-popup__text">
+
+
+                                <p>Сюда вставть виджет для оплаты...</p>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
 
                     </div>
 

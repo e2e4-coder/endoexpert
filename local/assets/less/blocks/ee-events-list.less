@@ -1,0 +1,61 @@
+@import "../inc/variables";
+
+.ee-events-list {
+
+  &__item {
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bcb9b9;
+    margin-bottom: 15px;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    &-date {
+      color: #78797a;
+    }
+
+    &-online {
+      font-weight: 500;
+      color: #fd0000;
+      border: 2px solid #fd0000;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 14px;
+
+    }
+
+    &-title {
+
+      margin-bottom: 20px;
+
+      a {
+        color: #101011;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+    }
+
+    &-button {
+      text-align: right;
+
+      .ee-button-18 {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.77);
+      }
+    }
+
+  }
+
+
+}

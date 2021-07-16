@@ -1,0 +1,51 @@
+@import "../inc/variables";
+
+.ee-popup-v5 {
+
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  background: #fff;
+  padding: 40px 10px 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 1px solid #797a7b;
+    color: #797a7b;
+    text-align: center;
+    line-height: 19px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__arrow {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 14px;
+    margin-left: -14px;
+  }
+
+
+
+  &--events {
+
+    max-width: 400px;
+  }
+
+}

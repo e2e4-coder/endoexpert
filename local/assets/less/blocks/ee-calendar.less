@@ -1,0 +1,155 @@
+@import "../inc/variables";
+
+.ee-calendar {
+
+  background: #101011;
+  border: 2px solid #acadae;
+  padding: 10px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__controls {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11px;
+    user-select: none;
+
+    > div {
+
+      flex: 0 0 auto;
+      width: 30%;
+      color: #fff;
+      position: relative;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      height: 27px;
+      line-height: 27px;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+
+    }
+
+    &-month {
+
+      width: 36% !important;
+
+    }
+
+    i {
+      font-size: 12px;
+      position: absolute;
+      cursor: pointer;
+      top: 3px;
+      background: #78797a;
+      border-radius: 5px;
+      width: 30px;
+      height: 19px;
+      line-height: 19px;
+      &:first-child {left: 3px}
+      &:last-child {right: 3px}
+    }
+
+
+  }
+
+
+
+  .ui-datepicker-inline {width: 100%}
+  .ui-datepicker-header {display: none}
+  .ui-widget.ui-widget-content {border: none;background: #bcb9b9;border-radius: 0;font-family: inherit !important;}
+
+  .ui-datepicker th {color: #000;font-size: 16px;font-weight: 500;padding: 10px 20px}
+  .ui-datepicker th.ui-datepicker-week-end {color: #f14003;}
+  .ui-datepicker td.ui-datepicker-week-end a {color: #f14003;}
+
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+
+    background-color: #2e2f2f;
+    background-image: linear-gradient(to top, #d7d7d7 0%, white 100%);
+    border:none;
+    color: #4a4c4e;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .ui-state-active {
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  .ui-state-range {
+    background: #000 !important;
+    a {
+      background: none !important;
+      &.ui-state-default {
+        color: #fff;
+      }
+
+    }
+
+
+
+  }
+
+  .ui-state-highlighted-red {
+
+    text-align: center;
+    pointer-events: auto !important;
+    a, span {
+      padding: 7px 0 !important;
+      font-size: 23px !important;
+      background: red !important;
+      border-radius: 10px;
+      color: yellow !important;
+    }
+
+
+  }
+
+  .ui-state-highlighted-blue {
+
+    text-align: center;
+    pointer-events: auto !important;
+    a, span {
+      padding: 7px 0 !important;
+      font-size: 23px !important;
+      background: blue !important;
+      border-radius: 10px;
+      color: #fff !important;
+    }
+
+
+  }
+
+  .ui-state-highlighted-lightblue{
+
+    text-align: center;
+    pointer-events: auto !important;
+    a, span {
+      padding: 7px 0 !important;
+      font-size: 23px !important;
+      background: lightskyblue !important;
+      border-radius: 10px;
+      //color: #fff !important;
+    }
+
+
+  }
+
+}
+
+@media @w768 {
+
+  .ee-calendar {
+    padding: 0;
+    border: 0;
+  }
+
+}

@@ -4,6 +4,31 @@
 
   position: relative;
 
+  &__row-1 {
+    display: flex;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #565658;
+    justify-content: space-between;
+
+    .ee-slider-3 {
+      width: 638px;
+      flex: 0 0 auto;
+    }
+
+    .ee-calendar .ui-datepicker th {
+      padding: 10px 15px;
+    }
+
+    .ee-calendar .ui-state-default, .ee-calendar .ui-widget-content .ui-state-default, .ee-calendar .ui-widget-header .ui-state-default, .ee-calendar .ui-button, .ee-calendar html .ui-button.ui-state-disabled:hover, .ee-calendar html .ui-button.ui-state-disabled:active {
+      padding: 11px 15px;
+    }
+
+    .ee-calendar__controls i {width: 20px}
+
+
+    }
+
   &__section {
     margin-bottom: 30px;
   }
@@ -71,6 +96,23 @@
 
   .ee-lk {
 
+    &__row-1 {
+      display: block;
+
+      .ee-slider-3 {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .ee-calendar .ui-datepicker th {
+        padding: 10px 10px;
+      }
+
+      .ee-calendar .ui-state-default, .ee-calendar .ui-widget-content .ui-state-default, .ee-calendar .ui-widget-header .ui-state-default, .ee-calendar .ui-button, .ee-calendar html .ui-button.ui-state-disabled:hover, .ee-calendar html .ui-button.ui-state-disabled:active {
+        padding: 11px 10px;
+      }
+    }
+
     .ee-expandable-text-5__title {
 
       font-size: 27px;
@@ -112,6 +154,8 @@
       }
 
     }
+
+
 
   }
 

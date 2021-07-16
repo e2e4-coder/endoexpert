@@ -144,5 +144,68 @@ $(document).ready(function () {
   });
 
 
+  $('#lk-calendar').ee_calendar({
+    onSelect: function (dateText, inst) {
+
+      $('#calendar-events-popup').remove();
+
+      var $td;
+
+      inst.dpDiv.find('.ui-state-highlighted').each(function () {
+
+        if ($(this).text() == inst.selectedDay) {
+
+          $td = $(this);
+
+          return false;
+
+        }
+
+      });
+
+      if ($td) {
+
+        var tdOffset = $td.offset();
+        var tdWidth = $td.width();
+
+        var calOffset = inst.dpDiv.closest('.ee-calendar').offset();
+
+        $.get(inst.dpDiv.closest('.ee-calendar').data('api-url'), {day : inst.selectedDay, month : inst.selectedMonth, year: inst.selectedYear}, function (data) {
+
+          if (data) {
+
+            //console.log($td.offset());
+
+            $(data).appendTo($('body'))
+                .css('top', tdOffset.top + 50 + 'px').css('left', calOffset.left + 'px')
+                .find('.ee-popup-v5__arrow')
+                .css('left', tdOffset.left - calOffset.left + tdWidth / 2 + 'px');
+
+
+            $('#calendar-events-popup .ee-popup-v5__close').click(function () {
+
+              $('#calendar-events-popup').remove();
+
+            });
+          }
+
+
+
+        });
+
+
+
+
+      }
+
+
+
+    }
+  });
+
+
+
+
+
 });
 

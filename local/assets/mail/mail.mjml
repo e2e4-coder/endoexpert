@@ -1,0 +1,208 @@
+<mjml>
+  <mj-body background-color="gray">
+    <mj-section background-color="#101011" background-url="https://endoexpert.ru/local/assets/img/for_mail/logo.png" background-repeat="no-repeat" background-position="10px">
+      <mj-column>
+
+
+        <mj-text padding-left="90px" font-size="14px" color="#e5aa12" font-family="Arial">Информационно-образовательный медицинский портал EndoExpert.ru</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+
+
+
+
+    <mj-section background-color="#333332">
+      <mj-column>
+
+
+        <mj-text font-size="30px" color="#f1ad4a" font-family="Arial">Дайджест. Важные и интересные публикации за неделю</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding-bottom="0">
+      <mj-column>
+
+        <mj-text padding="10px" font-size="17px" color="#101011" font-family="Arial">Здравствуйте, Иван Иванович!</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff">
+      <mj-column width="25%">
+
+        <mj-image padding="10px" align="left" src="https://endoexpert.ru/local/assets/img/for_mail/face.png" width="97px"></mj-image>
+        <mj-text padding="10px" font-size="17px" color="#101011" font-family="Arial">Георгий<br />Дмитриенко<br /><br />
+          <span style="font-size:14px">Администратор</span>
+        </mj-text>
+
+      </mj-column>
+
+      <mj-column width="75%">
+        <mj-text padding="10px" font-size="15px" color="#101011" font-family="Arial">
+
+          <span style="font-size:19px;color:#6295d1;"><b>Важно:</b></span><br /><br />
+
+          <a href="#" style="color:#101011">- заголовки важной информации - ссылки, редактируемое текстовая область</a>
+          <br /><br />
+
+          <a href="#" style="color:#101011">- заголовки важной информации - ссылки, редактируемое текстовая область</a>
+          <br /><br />
+
+          <a href="#" style="color:#101011">- заголовки важной информации - ссылки, редактируемое текстовая область</a>
+
+
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f8fafb" padding-top="10px" padding-bottom="0">
+      <mj-column>
+
+        <mj-text padding="10px" font-size="19px" color="#101011" font-family="Arial"><a href="#" style="text-decoration:none;color:#6295d1;"><b>Приказ от 13.03.2019 г. № 124н "Об утверждении порядка проведения профилактического медицинского осмотра и диспансеризации определенных групп взрослого населения" Министерства здравоохранения Российской Федерации</b></a></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f8fafb" padding-top="0" border-bottom="11px solid #b8b8b8">
+      <mj-column>
+
+        <mj-image href="#" padding="10px" align="left" src="https://endoexpert.ru/local/assets/img/for_mail/pub.png"></mj-image>
+
+      </mj-column>
+      <mj-column>
+
+        <mj-text padding="10px" font-size="15px" color="#101011" font-family="Arial">26.06.2021 Приглашаем Вас на ЭндоЭксперт.ру принять участие в новом выпуске образовательного онлайн-проекта Endoscopy Advanced
+          В программе выпусков:
+          26.06.2021 Приглашаем Вас на ЭндоЭксперт.ру принять участие в новом выпуске образовательного онлайн-проекта Endoscopy Advanced
+          В программе выпусков:</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f8fafb" padding-top="10px" padding-bottom="0">
+      <mj-column>
+
+        <mj-text padding="10px" font-size="19px" color="#101011" font-family="Arial"><a href="#" style="text-decoration:none;color:#6295d1;"><b>Приказ от 13.03.2019 г. № 124н "Об утверждении порядка проведения профилактического медицинского осмотра и диспансеризации определенных групп взрослого населения" Министерства здравоохранения Российской Федерации</b></a></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f8fafb" padding-top="0" border-bottom="11px solid #b8b8b8">
+      <mj-column>
+
+        <mj-image href="#" padding="10px" align="left" src="https://endoexpert.ru/local/assets/img/for_mail/pub.png"></mj-image>
+
+      </mj-column>
+      <mj-column>
+
+        <mj-text padding="10px" font-size="15px" color="#101011" font-family="Arial">26.06.2021 Приглашаем Вас на ЭндоЭксперт.ру принять участие в новом выпуске образовательного онлайн-проекта Endoscopy Advanced
+          В программе выпусков:
+          26.06.2021 Приглашаем Вас на ЭндоЭксперт.ру принять участие в новом выпуске образовательного онлайн-проекта Endoscopy Advanced
+          В программе выпусков:</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" border-bottom="5px solid #101011">
+
+      <mj-column>
+
+        <mj-text align="right" font-family="Arial" font-size="12px" padding="10px">
+
+          <span style="display:inline-block;padding:5px 0 5px 30px;margin-bottom:10px;color:#808080;background: url('https://endoexpert.ru/local/assets/img/for_mail/ico_calendar.png') center left no-repeat;">26 июня 2021</span>
+
+          <span style="margin-left:20px;margin-bottom:10px;display:inline-block;padding:5px 0 5px 30px;color:#808080;background: url('https://endoexpert.ru/local/assets/img/for_mail/ico_time.png') center left no-repeat;">9:30-13:00 (МСК)</span>
+
+
+
+          <a href="#" style="display:inline-block;margin-left:20px;margin-bottom:10px;background-color:#606060;padding:5px 10px;color:#fff;text-decoration:none;border-radius:5px">Добавить в календарь</a>
+
+        </mj-text>
+
+        <mj-text font-family="Arial" font-size="17px" padding="10px" line-height="21px">
+
+          <a href="#" style="color:#101011;text-decoration:none;">26.06.21 09:00 на EndoExpert.ru ОНЛАЙН ТРАНСЛЯЦИЯ ОБРАЗОВАТЕЛЬНОГО ОНЛАЙН-ПРОЕКТА "ENDOSCOPY ADVANCED" - "ПРОДВИНУТАЯ ЭНДОСКОПИЯ"</a>
+
+        </mj-text>
+
+        <mj-image href="#" padding="10px" src="https://endoexpert.ru/local/assets/img/for_mail/pub.png"></mj-image>
+
+        <mj-text font-family="Arial" font-size="15px" padding="10px" line-height="19px">
+
+          ENDOSCOPY ADVANCED On the Way to Excellence
+          26.06.2021 Приглашаем Вас на ЭндоЭксперт.ру принять участие в новом выпуске образовательного онлайн-проекта Endoscopy Advanced
+          В программе выпусков:<br />
+          · демонстрации из операционных<br />
+          · выступления экспертов<br />
+          · дискуссия с коллегами<br />
+          Текст разного объема
+
+
+
+
+
+        </mj-text>
+
+        <mj-button href="#" background-color="#040505" border-radius="10px" font-family="Arial" font-size="14px" height="50px">Предварительная<br />
+          регистрация</mj-button>
+
+        <mj-button href="#" background-color="#df020c" border-radius="10px" font-family="Arial" font-size="14px" height="50px">К просмотру</mj-button>
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <mj-section background-color="#ffffff" border-bottom="5px solid #101011">
+
+      <mj-column>
+
+
+
+        <mj-button href="#" background-color="#040505" border-radius="10px" font-family="Arial" font-size="14px" height="50px">Написать в службу техподдержки</mj-button>
+
+
+
+      </mj-column>
+
+    </mj-section>
+
+
+    <mj-section background-color="#101011">
+
+      <mj-column width="60%">
+
+
+        <mj-text font-family="Arial" padding="10px" color="#ffffff" font-size="15px">
+
+          <b>Раздел <a href="#" style="color:#ffffff;">"Классификации" по ссылке</a></b>
+
+          <br /><br />
+
+
+
+          <span style="color:#555555;"><b>Видеозаписи лекций и операций экспертов по эндоскопии, хирургии, онкологии</b></span>
+
+        </mj-text>
+
+
+
+      </mj-column>
+
+      <mj-column width="40%">
+        <mj-image href="#" padding="10px" src="https://endoexpert.ru/local/assets/img/for_mail/class.jpg" width="197px"></mj-image>
+
+      </mj-column>
+
+    </mj-section>
+
+
+
+
+
+
+  </mj-body>
+</mjml>

@@ -1,0 +1,113 @@
+@import "../inc/variables";
+
+.ee-prereg-form-small {
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 20px;
+    font-weight: 300;
+    color: #acadaf;
+
+    span {
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+  }
+
+  &__checkbox-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .ee-checkbox-10 {
+      flex: 0 0 auto;
+      width: 150px;
+
+      span {
+        padding: 5px 10px;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__description-field {
+
+    font-size: 12px;
+    font-weight: 500;
+    color: #818282;
+    border: 1px solid #818282;
+    border-radius: 3px;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: #101011;
+    margin-bottom: 10px;
+
+
+  }
+
+  .ee-timer-small {
+
+    text-align: center;
+    margin: 20px 0;
+    white-space: normal;
+
+    .timer-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .checkboxes-wrapper {
+
+    flex-wrap: wrap;
+    height: auto !important;
+
+
+
+    .ee-checkbox-4 {
+      width: 50%;
+      flex: 0 0 auto !important;
+      margin-bottom: 10px;
+
+      span {
+        padding-left: 35px;
+
+      }
+    }
+
+    &.-booking {
+
+      .ee-checkbox-4 {
+
+        margin-bottom: 15px;
+
+        span {
+          line-height: 1em;
+          display: flex;
+          align-items: center;
+          height: 24px;
+        }
+
+      }
+
+      .ee-checkbox-4:last-child {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .form-message {
+
+    color: #c6c9cb !important;
+  }
+
+  .form-actions {
+    text-align: center !important;
+  }
+
+
+}

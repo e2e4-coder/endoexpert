@@ -1,0 +1,33 @@
+@import "../inc/variables";
+
+.ee-checkbox-10 {
+
+  display: inline-block;
+  user-select: none;
+
+
+  span {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #818282;
+    border: 1px solid #818282;
+    border-radius: 3px;
+    padding: 5px 25px;
+    cursor: pointer;
+    background: #101011;
+  }
+
+
+  input {display: none;}
+  input:checked+span {border-color: @link-color;color: @link-color;}
+
+  &--colored {
+    span {
+      color: #139ed8!important;
+    }
+  }
+
+}
+
+

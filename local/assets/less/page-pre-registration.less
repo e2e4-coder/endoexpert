@@ -10,6 +10,17 @@
     background: none !important;
   }
 
+  .l-columns {
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    &__col {
+      width: 332px;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+    }
+  }
+
 
 
 
@@ -46,6 +57,18 @@
 
     h1 {
       padding-right: 50px;
+
+      .ee-button-1 {
+        height: 38px;
+        line-height: 36px;
+        border: 1px solid #fff;
+        font-size: 18px;
+        color: #212121!important;
+        text-transform: none;
+        padding: 0 5px;
+        vertical-align: middle;
+      }
+
     }
 
 
@@ -269,13 +292,29 @@
 
   }
 
+  .ee-prereg-form-small {
+
+
+    background: #101011;
+    padding: 20px 5px;
+    border: 1px solid #606162;
+  }
+
 
 
   @media @w320 {
 
     background-image: none;
 
-    .ee-main-wrapper h1 {font-size: 24px}
+    .ee-main-wrapper h1 {
+      font-size: 24px;
+
+      span {
+        display: block;
+        margin-top: 10px;
+      }
+
+    }
 
     .ee-breadcrumbs {
       display: none;
@@ -385,6 +424,17 @@
 
 
 
+    }
+
+    .ee-prereg-form-small {
+      border: none;
+      padding: 10px;
+      margin: 0 -10px;
+    }
+
+    .l-columns__col {
+
+      margin: 0 auto 30px auto;
     }
 
 

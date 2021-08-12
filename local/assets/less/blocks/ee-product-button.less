@@ -1,0 +1,54 @@
+@import "../inc/variables";
+
+.ee-product-button {
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 63px;
+  height: 34px;
+  box-sizing: border-box;
+
+  svg {
+    height: 20px;
+    width: auto;
+  }
+
+  &--cart {
+
+    background: #f1ad4a;
+
+    svg path {
+      fill: #fff;
+    }
+
+    &:hover {
+      background: #d88a18;
+    }
+
+  }
+
+  &--star {
+
+    background: #fff;
+    border: 1px solid #f1ad4a;
+
+    svg path:nth-child(2) {
+      fill: #f1ad4a;
+    }
+
+    &:hover {
+      background: #f1ad4a;
+    }
+
+  }
+
+
+
+
+
+
+}

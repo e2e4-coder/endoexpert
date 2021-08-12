@@ -1,0 +1,44 @@
+@import "../inc/variables";
+
+.ee-products-table {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-size: 14px;
+
+    th {
+      font-weight: 500;
+      vertical-align: top;
+      border-top: 2px solid #f8f8f8;
+      border-bottom: 2px solid #f8f8f8;
+      padding: 10px 15px;
+    }
+
+    td {
+      padding: 14px 15px;
+      vertical-align: bottom;
+    }
+
+    tr:nth-child(2n+1) td {background: #f8f8f8}
+
+  }
+
+  &__col-buttons {
+    white-space: nowrap;
+    padding: 5px 15px 5px 0 !important;
+    background: none !important;
+    width: 140px;
+  }
+
+
+}
+
+@media @w768 {
+
+  .ee-products-table {
+    overflow-x: auto;
+  }
+
+}

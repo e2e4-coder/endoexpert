@@ -156,6 +156,9 @@
 
 
         if (confirmPopupSrc) {
+
+          $('#force-confirm').show();
+
           clearTimeout(confirmTimeout);
           confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
         }
@@ -271,6 +274,15 @@
             video_id:videoId,
             current_time: player.currentTime()
           }, function () {});
+
+          clearTimeout(confirmTimeout);
+          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+
+        });
+
+        $('#force-confirm').click(function () {
+
+          showConfirmPopup();
 
           clearTimeout(confirmTimeout);
           confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);

@@ -286,7 +286,7 @@
           //clearTimeout(confirmTimeout);
           //confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
-          $(this).css('transition', 'all .5s ease-in').css('background', 'darkgreen').css('color', 'white').text('Присутствие подтвержено');
+          $(this).css('transition', 'all .5s ease-in').css('background', 'darkgreen').css('color', 'white').text('Присутствие подтверждено');
 
 
           sendVideoStats('confirm', {currentTime: player.currentTime()});

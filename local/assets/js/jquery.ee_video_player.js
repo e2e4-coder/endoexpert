@@ -282,10 +282,28 @@
 
         $('#force-confirm').click(function () {
 
-          showConfirmPopup();
+          //showConfirmPopup();
+          //clearTimeout(confirmTimeout);
+          //confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
-          clearTimeout(confirmTimeout);
-          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+          $(this).css('transition', 'all .5s ease-in').css('background', 'darkgreen').css('color', 'white').text('Присутствие подтвержено');
+
+
+          sendVideoStats('confirm', {currentTime: player.currentTime()});
+
+          $.post(confirmApiUrl, {
+            user_id:userId,
+            video_id:videoId,
+            current_time: player.currentTime()
+          }, function () {});
+
+          var that = this;
+
+          setTimeout(function () {
+
+            $(that).removeAttr('style').text('Подтвердить присутствие')
+
+          }, 1000 * 10)
 
         });
 
@@ -442,6 +460,8 @@
     }
 
     function showConfirmPopup() {
+
+      return;
 
       if (endTime && Date.now() > endTime) {
         return;

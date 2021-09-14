@@ -307,6 +307,32 @@
 
         });
 
+        function startWebsocket() {
+          var ws = new WebSocket('wss://endoexpert.ru:3001');
+
+          ws.onmessage = function(e){
+
+            var data = JSON.parse(e.data);
+
+            if (data.ACTION === 'SHOW_CONFIRM') {
+              showConfirmPopup();
+              clearTimeout(confirmTimeout);
+              confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+            }
+
+
+
+          };
+
+          ws.onclose = function(){
+            ws = null;
+            setTimeout(startWebsocket, 5000);
+          }
+        }
+
+        startWebsocket();
+
+
       }
 
       if (votePopupSrc) {
@@ -461,7 +487,6 @@
 
     function showConfirmPopup() {
 
-      return;
 
       if (endTime && Date.now() > endTime) {
         return;

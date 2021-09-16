@@ -320,6 +320,12 @@
               confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
             }
 
+            if (data.ACTION === 'HIDE_CONFIRM') {
+
+              $.magnificPopup.close();
+
+            }
+
 
 
           };

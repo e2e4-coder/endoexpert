@@ -35,7 +35,7 @@
     var confirmPopupSrc = this.data('confirm-popup-src');
     var confirmInterval = this.data('confirm-interval') * 60 * 1000;
     var confirmApiUrl = this.data('confirm-api-url');
-    var confirmTimeout;
+    var confirmTimeToShow = getCookie('confirm_' + videoId + '_' + userId);
 
     var votePopupSrc = this.data('vote-popup-src');
     var votePopupTime = this.data('vote-popup-time');
@@ -159,13 +159,15 @@
 
           $('#force-confirm').show();
 
-          clearTimeout(confirmTimeout);
-          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+          if (!confirmTimeToShow) {
+
+            confirmTimeToShow = new Date().getTime() + confirmInterval;
+
+            setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
+
+          }
+
         }
-
-
-
-
 
 
       });
@@ -177,7 +179,6 @@
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
-        clearTimeout(confirmTimeout);
         clearTimeout(pauseOverlayTopTimeout);
 
 
@@ -190,7 +191,6 @@
         if ($pauseOverlayTop.length) $pauseOverlayTop.show();
         if ($pauseOverlayBottom.length) $pauseOverlayBottom.show();
 
-        clearTimeout(confirmTimeout);
         clearTimeout(pauseOverlayTopTimeout);
 
 
@@ -202,6 +202,17 @@
 
           sendVideoStats('timeupdate', {currentTime: player.currentTime()});
           canSendTimeUpdateEvent = false;
+
+          console.log(confirmTimeToShow);
+
+          if (new Date().getTime() > confirmTimeToShow) {
+
+            confirmTimeToShow = new Date().getTime() + confirmInterval;
+            setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
+
+            showConfirmPopup();
+
+          }
 
         }
 
@@ -275,16 +286,12 @@
             current_time: player.currentTime()
           }, function () {});
 
-          clearTimeout(confirmTimeout);
-          confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
         });
 
         $('#force-confirm').click(function () {
 
           //showConfirmPopup();
-          //clearTimeout(confirmTimeout);
-          //confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
 
           $(this).css('transition', 'all .5s ease-in').css('background', 'darkgreen').css('color', 'white').text('Присутствие подтверждено');
 
@@ -316,8 +323,7 @@
 
             if (data.ACTION === 'SHOW_CONFIRM') {
               showConfirmPopup();
-              clearTimeout(confirmTimeout);
-              confirmTimeout = setTimeout(showConfirmPopup, confirmInterval);
+
             }
 
             if (data.ACTION === 'HIDE_CONFIRM') {

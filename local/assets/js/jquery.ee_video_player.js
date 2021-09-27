@@ -203,9 +203,7 @@
           sendVideoStats('timeupdate', {currentTime: player.currentTime()});
           canSendTimeUpdateEvent = false;
 
-          console.log(confirmTimeToShow);
-
-          if (new Date().getTime() > confirmTimeToShow) {
+          if (confirmPopupSrc && confirmTimeToShow && new Date().getTime() > confirmTimeToShow) {
 
             confirmTimeToShow = new Date().getTime() + confirmInterval;
             setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
@@ -321,7 +319,7 @@
 
             var data = JSON.parse(e.data);
 
-            if (data.ACTION === 'SHOW_CONFIRM') {
+            if (data.ACTION === 'SHOW_CONFIRM' && confirmPopupSrc) {
               showConfirmPopup();
 
             }

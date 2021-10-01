@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ee-video-player window</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/local/assets/css/normalize.css">
+    <link rel="stylesheet" href="/local/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/fontawesome-free-5.9.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/local/assets/local/lib/frontend/jquery-bar-rating/themes/css-stars.css">
+
+
+    <link rel="stylesheet" href="/local/assets/css/build.css?1">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/swiper/js/swiper.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
+    <script src="/local/assets/local/lib/frontend/tooltipster/js/tooltipster.bundle.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/imask.js"></script>
+    <script src="/local/assets/local/lib/frontend/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/local/assets/local/lib/frontend/jquery-bar-rating/jquery.barrating.min.js"></script>
+
+
+    <link href="/local/assets/local/lib/frontend/video.js/video-js.css" rel="stylesheet" />
+    <script src="/local/assets/local/lib/frontend/video.js/video.js"></script>
+    <script src="/local/assets/local/lib/frontend/Youtube.min.js"></script>
+
+    <script src="/local/assets/js/common.js"></script>
+    <script src="/local/assets/js/page_video_online.js"></script>
+
+    <script src="/local/assets/local/lib/frontend/fingerprint.js"></script>
+    <script src="/local/assets/js/jquery.ee_video_player.js?14"></script>
+
+
+
+
+
+</head>
+<body style="background: #101011;">
+
+
+
+<div class="ee-player-window">
+
+    <div class="ee-player-window__col-1">
+
+        <div class="ee-player-window__header">
+
+            <div class="ee-player-window__header-col-1">
+
+                <div class="ee-breadcrumbs">
+                    <a href="/">Главная</a> ► <a href="#">События</a> ► <a href="#">Архив</a> ► <span>Рубрика</span>
+                </div>
+
+                <h1>Название трансляции  <i title="Ссылка скопирована в буфер" class="js-copy-link ico-link" data-link="http://endo.sommet-test.ru/page-video-online.html#player"></i>
+                </h1>
+
+            </div>
+            <div class="ee-player-window__header-col-2">
+
+
+                <div class="ee-time-counter" id="time-counter">
+
+                    <div class="counter-label">Учёт присутствия</div>
+
+                    <div class="counter-digits">
+                        <span class="d1">0</span>
+                        <span class="d2">0</span>
+                        <span class="d3">0</span>
+                        <span class="d4">0</span>
+                        <div class="hours-label">часов</div>
+                        <div class="minutes-label">минут</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="ee-player-window__body">
+
+            <div class="video-player-wrapper">
+
+                <div class="ee-video-player">
+
+                    <video
+                            id="my-video"
+                            class="video-js"
+                            controls
+                            loop
+                            playsinline
+                            preload="auto"
+                            width="640"
+                            height="264"
+                            poster="/local/assets/img/tmp/video_poster.jpg"
+                            data-youtube-src="https://www.youtube.com/embed/sWWuwXBprkA?start=60&end=120"
+                            data-pause-overlay-top-src="#overlay-2"
+                            data-pause-overlay-bottom-src="#overlay-1"
+                            data-stat-url="http://37.143.13.221:3000/log"
+                            data-stat-interval="5"
+                            data-user-id="12345"
+                            data-video-id="54321"
+                            _data-end-time="2020-11-24 12:00:00"
+
+                            data-confirm-popup-src="#confirm-popup"
+                            data-confirm-api-url="/local/assets/json/get-one.json"
+                            data-confirm-interval="1"
+
+                            data-vote-popup-src="#vote-popup"
+                            data-vote-api-url="/local/assets/json/post-rating.json"
+                            data-vote-popup-time="2022-09-21 15:59:00"
+
+                            data-counter-src="#time-counter"
+                            data-counter-start="7"
+
+                            _data-video-before="/local/assets/mp4/file_example_MP4_1920_18MG.mp4"
+                            data-video-after="/local/assets/mp4/file_example_MP4_1920_18MG.mp4"
+
+                    >
+
+                        <!--
+                        data-vote-popup-time - можно задавать в виде даты или в секундах до конца видео
+                        -->
+
+                    </video>
+
+                    <div id="overlay-1" class="ee-video-player__overlay-banner" style="display: none;background: url('/local/assets/img/tmp/overlay_banner.jpg') center center no-repeat;background-size: cover;">
+
+                        <a href="ya.ru">test</a>
+
+
+
+                    </div>
+
+                    <div id="overlay-2" class="ee-video-player__overlay-banner ee-video-player__overlay-banner--top" style="display: none">
+
+                        Верхний баннер....
+
+                    </div>
+
+                    <div id="confirm-popup" class="ee-popup mfp-hide">
+
+                        <div class="popup-header">
+                            Подтвердите Ваше присутствие
+                        </div>
+
+                        <div class="popup-body">
+
+                            <p>Какой-то текст...</p>
+
+                        </div>
+
+                        <div class="popup-footer ">
+
+                            <div class="footer-buttons">
+
+                                <button class="js-confirm ee-button-7">Подтвердить</button>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div id="vote-popup" class="ee-popup mfp-hide">
+
+                        <form>
+
+                            <div class="popup-header">
+                                Оцените трансляцию
+                            </div>
+
+                            <div class="popup-body">
+
+                                <div class="ee-vote-popup-form">
+
+                                    <div class="ee-vote-popup-form__item">
+
+                                        <select title="Оцените трансляцию" name="vote">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="ee-vote-popup-form__item">
+
+                                        <textarea name="comment" placeholder="Ваш комментарий"></textarea>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="popup-footer ">
+
+                                <div class="footer-buttons">
+
+                                    <button type="submit" class="ee-button-7">ОК</button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+            <script>
+
+
+              $(document).ready(function () {
+
+                $('#my-video').ee_video_player();
+
+              });
+
+            </script>
+
+
+        </div>
+
+        <div class="ee-player-window__footer">
+
+            <div class="ee-player-window__footer-col-1">
+                Подключаемая область...
+            </div>
+
+            <div class="ee-player-window__footer-col-2">
+
+
+
+
+                <p><button id="force-confirm" class="ee-button-9 -gold" style="display: none">Подтвердить присутствие</button></p>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="ee-player-window__col-2">
+
+        <div class="ee-player-window__chat">
+
+            <iframe src="https://facecast.net/v/chat.html?5vh9kx" width="100%" height="450" style="border: none;" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

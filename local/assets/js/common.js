@@ -341,9 +341,10 @@ $(document).ready(function () {
 
   });
 
+  var $headerWrapper = $('.header-wrapper');
 
-  var headerOffset = $('.header-wrapper')[0].offsetLeft;
-  var headerWidth = $('.header-wrapper').outerWidth();
+  //var headerOffset = $headerWrapper[0].offsetLeft;
+  var headerWidth = $headerWrapper.outerWidth();
 
 
   setTimeout(function () {

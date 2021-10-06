@@ -6,6 +6,19 @@
   box-sizing: border-box;
   padding-bottom: 56.25%;
 
+  &__preloader {
+    background: #101011;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .video-js {
 
@@ -82,4 +95,13 @@
     height: 80px;
   }
 
+}
+
+video::-webkit-media-controls-start-playback-button { display: none; }
+.video-js.vjs-controls-enabled .vjs-big-play-button { display: none; }
+.video-js.vjs-controls-enabled.vjs-paused .vjs-big-play-button { display: block; z-index: 200}
+
+
+.vjs-fullscreen .mfp-wrap {
+  top: 0 !important;
 }

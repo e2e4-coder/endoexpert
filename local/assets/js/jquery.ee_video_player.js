@@ -118,6 +118,8 @@
 
       }
 
+      $el.prev('.ee-video-player__preloader').remove();
+
       player.on('play', function () {
 
         if (playlistVideoStartTime && Math.floor(player.currentTime()) < playlistVideoStartTime) {

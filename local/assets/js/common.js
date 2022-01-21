@@ -608,6 +608,59 @@ $(document).ready(function () {
 
   });
 
+  $('form').submit(function (e) {
+
+    $(this).find('.form-text.-required, .form-select.-required').each(function () {
+
+      if (!$(this).val().trim()) {
+
+        $(this).addClass('-error');
+
+        e.preventDefault();
+
+
+      }
+
+    });
+
+    $(this).find('input[type=checkbox].-required').each(function () {
+
+
+
+      if (!$(this).is(':checked')) {
+
+        $(this).parent().addClass('-error');
+
+        e.preventDefault();
+
+      }
+
+    });
+
+  });
+
+
+
+  if (typeof IMask === 'function') {
+
+    $('.js-phone').each(function () {
+
+      IMask(
+          this,
+          {
+            mask: '+000000000000',
+
+          }
+      );
+
+    });
+
+  }
+
+
+
+
+
 
 });
 

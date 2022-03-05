@@ -657,6 +657,8 @@ $(document).ready(function () {
 
   }
 
+  $('.js-form-file').ee_form_file();
+
 
 
 

@@ -342,6 +342,19 @@
                         <button onclick="showPopup({src:'#popup-6'})">Вопрос библиотекарю (.ee-qtl-popup)</button>
                         <button onclick="showPopup({src:'#popup-7'})">Вопрос библиотекарю (.ee-qtl-popup--small)</button>
 
+                        <br><br>
+
+                        <button onclick="showPopup(
+                            {
+                            src:'#popup-5',
+                            noBg : true,
+                            timeout: 1,
+                            onOpen: function() {
+                              setCookie('testCookie', 'testValue', 7)
+                            }
+                        })">Попап с таймером</button>
+
+
                         <script>
 
                             $(document).ready(function () {

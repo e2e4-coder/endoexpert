@@ -771,6 +771,12 @@ window.showPopup = function (options) {
 
                 open: function() {
 
+                    if (options.onOpen) {
+
+                      options.onOpen();
+
+                    }
+
                     if (options.noBg) {
 
                         $('html').css('overflow', 'initial');

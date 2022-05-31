@@ -657,7 +657,12 @@ $(document).ready(function () {
 
   }
 
-  $('.js-form-file').ee_form_file();
+  if (jQuery().ee_form_file) {
+
+    $('.js-form-file').ee_form_file();
+  }
+
+
 
 
 

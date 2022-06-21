@@ -34,6 +34,7 @@
     <script src="/local/assets/js/ee-flip-card.js"></script>
     <script src="/local/assets/js/ee-single-image-slider.js"></script>
     <script src="/local/assets/js/jquery.ee_form_file.js"></script>
+    <script src="/local/assets/js/jquery.on_mouse_leave_top.js"></script>
 
     <script src="/local/assets/js/common.js?2"></script>
 
@@ -359,13 +360,36 @@
 
                             $(document).ready(function () {
 
-                              //showPopup({src:'#popup-6'});
+                              //Кастомное событие при покидании мыши страницы сверху
+                              //нужно подключить скрипт /local/assets/js/jquery.on_mouse_leave_top.js
+                              $(document).on('mouseLeaveTop', function () {
 
                                 if (!getCookie('banner-shown-12345')) { // 12345 - id баннера
 
-                                    showPopup({src:'#popup-5', noBg : true, timeout: 5}); //timeout: 5 - попап появится через 5 сек
+                                  showPopup({
+                                    src:'#popup-5',
+                                    noBg : true,
+                                    onOpen: function() {
+                                      setCookie('banner-shown-12345', '1', 7); //ствим куки на 7 дней
+                                    }
+                                  });
 
-                                    setCookie('banner-shown-12345', '1', 7); //ствим куки на 7 дней
+                                }
+
+                              });
+
+
+                                if (!getCookie('banner-shown-12345')) { // 12345 - id баннера
+
+                                    showPopup({
+                                      src:'#popup-5',
+                                      noBg : true,
+                                      timeout: 5, //попап появится через 5 сек
+                                      onOpen: function() {
+                                        setCookie('banner-shown-12345', '1', 7); //ствим куки на 7 дней
+                                      }
+                                    });
+
                                 }
 
                             });

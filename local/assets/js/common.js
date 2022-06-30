@@ -604,7 +604,7 @@ $(document).ready(function () {
 
   $('.ee-copy-link-html').click(function () {
 
-    copyFormattedToClipboard('<a style="background-color: inherit;font: inherit;" href="'+window.location.href+'">'+$(this).parent().text().trim()+'</a>');
+    copyFormattedToClipboard('<a target="_blank" style="background-color: inherit;font: inherit;" href="'+window.location.href+'">'+$(this).parent().text().trim()+'</a>');
 
   });
 

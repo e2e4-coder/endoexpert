@@ -655,6 +655,36 @@ $(document).ready(function () {
 
     });
 
+    $('.js-email').each(function () {
+
+      IMask(
+          this,
+          {
+            mask: function (value) {
+              if(/^[a-z0-9_\.-]+$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@[a-z0-9-]+$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.$/.test(value))
+                return true;
+              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.[a-z]{1,4}$/.test(value))
+                return true;
+              return false;
+            },
+
+          }
+      );
+
+
+
+    });
+
   }
 
   if (jQuery().ee_form_file) {

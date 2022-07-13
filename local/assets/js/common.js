@@ -661,19 +661,19 @@ $(document).ready(function () {
           this,
           {
             mask: function (value) {
-              if(/^[a-z0-9_\.-]+$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@[a-z0-9-]+$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@[a-z0-9-]+$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9-]+\.$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{1,4}$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{1,4}\.$/.test(value))
                 return true;
-              if(/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.[a-z]{1,4}$/.test(value))
+              if(/^[a-zA-Z0-9_\.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{1,4}\.[a-zA-Z]{1,4}$/.test(value))
                 return true;
               return false;
             },

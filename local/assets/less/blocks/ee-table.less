@@ -108,3 +108,25 @@
   }
 
 }
+
+.ee-table-scroll-wrapper {
+
+  overflow-x: auto;
+  padding-bottom: 15px;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: @gold-color;
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
+}
+

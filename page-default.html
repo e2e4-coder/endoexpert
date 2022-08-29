@@ -36,7 +36,7 @@
     <script src="/local/assets/js/jquery.ee_form_file.js"></script>
     <script src="/local/assets/js/jquery.on_mouse_leave_top.js"></script>
 
-    <script src="/local/assets/js/common.js?2"></script>
+    <script src="/local/assets/js/common.js?3"></script>
 
 
 
@@ -335,7 +335,30 @@
 
                         <button onclick="showPopup({src:'#popup-1'})">.ee-popup</button>
                         <button onclick="showPopup({src:'#popup-3', modal: true})">.ee-popup-v3</button>
-                        <button onclick="showStickyPopup({src:'#popup-4'})">.ee-popup-v4</button>
+                        <button onclick="showStickyPopup({src:'#popup-4', modal: true})">.ee-popup-v4</button>
+
+                        <script>
+
+                          $(document).ready(function () {
+
+                            setTimeout(function () {
+
+                              showStickyPopup({src:'#popup-4', onClose : function () {
+
+                                setTimeout(function () {
+
+                                  showStickyPopup({src:'#popup-4', modal: true});
+
+                                }, 5000);
+
+                              }});
+
+                            }, 1000);
+
+                          });
+
+                        </script>
+
                         <button onclick="showPopup({src:'#popup-5', noBg : true})">.ee-popup-moviprep</button>
 
                         <br><br>

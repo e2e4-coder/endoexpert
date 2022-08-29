@@ -826,6 +826,16 @@ window.showPopup = function (options) {
 
 window.showStickyPopup = function (options) {
 
+  if (options.modal) {
+    $(options.src).find('.ee-popup-v4__close').hide();
+  }
+
+  if (options.onClose) {
+
+    $(options.src).find('.ee-popup-v4__close').click(options.onClose);
+
+  }
+
    $(options.src).fadeIn();
 
 };

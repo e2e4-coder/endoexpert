@@ -122,6 +122,10 @@
 
       player.on('play', function () {
 
+        if ($.fn.ee_log_status) {
+          $('#log-status').ee_log_status();
+        }
+
         if (playlistVideoStartTime && Math.floor(player.currentTime()) < playlistVideoStartTime) {
 
           player.currentTime(playlistVideoStartTime);

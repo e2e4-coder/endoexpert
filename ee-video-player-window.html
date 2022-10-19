@@ -41,6 +41,7 @@
 
     <script src="/local/assets/local/lib/frontend/fingerprint.js"></script>
     <script src="/local/assets/js/jquery.ee_video_player.js?14"></script>
+    <script src="/local/assets/js/jquery.ee_log_status.js"></script>
 
 
 
@@ -85,6 +86,24 @@
 
                 </div>
             </div>
+
+            <div class="ee-player-window__header-col-3">
+
+                <div id="log-status" class="ee-log-status"
+                     data-user-id="12345"
+                     data-video-id="54321"
+                     data-message-check="Проверка сервиса статистики..."
+                     data-message-ok="Статистика работает"
+                     data-message-fail="Статистика не работает"
+                     data-fail-api-url="/local/assets/json/get-one.json"
+                >Статус сервиса статистики</div>
+
+            </div>
+
+
+
+
+
 
 
 
@@ -290,7 +309,7 @@
 
         <div class="ee-player-window__chat">
 
-            <iframe src="https://facecast.net/v/chat.html?5vh9kx" width="100%" height="450" style="border: none;" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            chat
 
 
         </div>

@@ -24,6 +24,7 @@
     var endTime = this.data('end-time') ? new Date(this.data('end-time')) : false;
 
     var statUrl = this.data('stat-url');
+    var statUrlAlt = this.data('stat-url-alt');
     var statInterval = this.data('stat-interval')*1000;
     var canSendTimeUpdateEvent = false;
 
@@ -410,17 +411,34 @@
 
     function sendVideoStats(event, data) {
 
-      if (!statUrl) return false;
-
       data.userAgent = navigator.userAgent;
       data.fingerprint = fingerprint;
 
-      $.post(statUrl, {
-        event: event,
-        videoId: videoId,
-        userId: userId,
-        data:data
-      });
+      if (statUrl) {
+
+        $.post(statUrl, {
+          event: event,
+          videoId: videoId,
+          userId: userId,
+          data:data
+        });
+
+      }
+
+      if (statUrlAlt) {
+
+        $.post(statUrlAlt, {
+          event: event,
+          videoId: videoId,
+          userId: userId,
+          data:data
+        });
+
+      }
+
+
+
+
 
       /*
             ws.send(JSON.stringify({

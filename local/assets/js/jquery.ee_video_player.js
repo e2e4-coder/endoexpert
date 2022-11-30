@@ -38,6 +38,8 @@
     var confirmApiUrl = this.data('confirm-api-url');
     var confirmTimeToShow = getCookie('confirm_' + videoId + '_' + userId);
 
+    var $confirmButton = $('#force-confirm');
+
     var votePopupSrc = this.data('vote-popup-src');
     var votePopupTime = this.data('vote-popup-time');
     var voteApiUrl = this.data('vote-api-url');
@@ -162,11 +164,11 @@
 
 
 
-        if (confirmPopupSrc) {
+        if (confirmInterval) {
 
-          $('#force-confirm').show();
+          $confirmButton.show();
 
-          if (!confirmTimeToShow) {
+          if (!confirmTimeToShow || confirmTimeToShow - new Date().getTime() < 0) {
 
             confirmTimeToShow = new Date().getTime() + confirmInterval;
 
@@ -205,6 +207,18 @@
 
       player.on('timeupdate', function(e,ee) {
 
+        var timeToConfirm = confirmTimeToShow - new Date().getTime();
+
+        if (timeToConfirm > 0) {
+
+          $confirmButton.css('background', 'darkgreen').css('color', 'white').css('pointer-events', 'none').text('Присутствие подтверждено (' + formatTimeInterval(timeToConfirm) + ')');
+
+        } else {
+
+          $confirmButton.css('background', 'red').css('color', 'white').css('pointer-events', '').text('Подтвердите присутствие');
+
+        }
+
         if (canSendTimeUpdateEvent) {
 
           sendVideoStats('timeupdate', {currentTime: player.currentTime()});
@@ -212,8 +226,7 @@
 
           if (confirmPopupSrc && confirmTimeToShow && new Date().getTime() > confirmTimeToShow) {
 
-            confirmTimeToShow = new Date().getTime() + confirmInterval;
-            setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
+
 
             showConfirmPopup();
 
@@ -266,6 +279,24 @@
 
       });
 
+
+      $confirmButton.click(function () {
+
+        //showConfirmPopup();
+
+        confirmTimeToShow = new Date().getTime() + confirmInterval;
+        setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
+
+        sendVideoStats('confirm', {currentTime: player.currentTime()});
+
+        $.post(confirmApiUrl, {
+          user_id:userId,
+          video_id:videoId,
+          current_time: player.currentTime()
+        }, function () {});
+
+      });
+
       if (statUrl) {
 
         setInterval(function () {
@@ -285,37 +316,14 @@
 
           sendVideoStats('confirm', {currentTime: player.currentTime()});
 
-          $.post(confirmApiUrl, {
-            user_id:userId,
-            video_id:videoId,
-            current_time: player.currentTime()
-          }, function () {});
-
-
-        });
-
-        $('#force-confirm').click(function () {
-
-          //showConfirmPopup();
-
-          $(this).css('transition', 'all .5s ease-in').css('background', 'darkgreen').css('color', 'white').text('Присутствие подтверждено');
-
-
-          sendVideoStats('confirm', {currentTime: player.currentTime()});
+          confirmTimeToShow = new Date().getTime() + confirmInterval;
+          setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
 
           $.post(confirmApiUrl, {
             user_id:userId,
             video_id:videoId,
             current_time: player.currentTime()
           }, function () {});
-
-          var that = this;
-
-          setTimeout(function () {
-
-            $(that).removeAttr('style').text('Подтвердить присутствие')
-
-          }, 1000 * 10)
 
         });
 
@@ -568,6 +576,17 @@
 
   };
 
+  function formatTimeInterval(time) {
+
+    time = Math.floor(time / 1000);
+
+    if (time < 60) {
+      return time + ' сек'
+    }
+
+    return Math.ceil(time / 60) + ' мин';
+
+  }
 
 }(jQuery));
 

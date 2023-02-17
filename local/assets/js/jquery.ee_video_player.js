@@ -35,8 +35,16 @@
 
     var confirmPopupSrc = this.data('confirm-popup-src');
     var confirmInterval = this.data('confirm-interval') * 60 * 1000;
+    var forceConfirmInterval = this.data('force-confirm-interval') * 60 * 1000;
+
+    if (!forceConfirmInterval) {
+      forceConfirmInterval = confirmInterval;
+    }
+
     var confirmApiUrl = this.data('confirm-api-url');
     var confirmTimeToShow = getCookie('confirm_' + videoId + '_' + userId);
+    var forceConfirmTimeToShow = getCookie('force_confirm_' + videoId + '_' + userId);
+
 
     var $confirmButton = $('#force-confirm');
 
@@ -178,6 +186,18 @@
 
         }
 
+        if (forceConfirmInterval) {
+
+          if (!forceConfirmTimeToShow || forceConfirmTimeToShow - new Date().getTime() < 0) {
+
+            forceConfirmTimeToShow = new Date().getTime() + forceConfirmInterval;
+
+            setCookie('force_confirm_' + videoId + '_' + userId, forceConfirmTimeToShow, 7);
+
+          }
+
+        }
+
 
       });
 
@@ -205,17 +225,29 @@
 
       });
 
+      var backgroundColor;
+
       player.on('timeupdate', function(e,ee) {
 
-        var timeToConfirm = confirmTimeToShow - new Date().getTime();
+        var timeToConfirm = forceConfirmTimeToShow - new Date().getTime();
 
         if (timeToConfirm > 0) {
 
-          $confirmButton.css('background', 'darkgreen').css('color', 'white').css('pointer-events', 'none').text('Присутствие подтверждено (' + formatTimeInterval(timeToConfirm) + ')');
+          backgroundColor = 'darkgreen';
+
+          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', 'none').text('Присутствие подтверждено (' + formatTimeInterval(timeToConfirm) + ')');
 
         } else {
 
-          $confirmButton.css('background', 'red').css('color', 'white').css('pointer-events', '').text('Подтвердите присутствие');
+          if (backgroundColor === 'darkgreen') {
+
+            popupSound.play();
+
+          }
+
+          backgroundColor = 'red';
+
+          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', '').text('Подтвердите присутствие');
 
         }
 
@@ -284,8 +316,8 @@
 
         //showConfirmPopup();
 
-        confirmTimeToShow = new Date().getTime() + confirmInterval;
-        setCookie('confirm_' + videoId + '_' + userId, confirmTimeToShow, 7);
+        forceConfirmTimeToShow = new Date().getTime() + forceConfirmInterval;
+        setCookie('force_confirm_' + videoId + '_' + userId, forceConfirmTimeToShow, 7);
 
         sendVideoStats('confirm', {currentTime: player.currentTime()});
 

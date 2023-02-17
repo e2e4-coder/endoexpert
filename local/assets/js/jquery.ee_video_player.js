@@ -36,6 +36,8 @@
     var confirmPopupSrc = this.data('confirm-popup-src');
     var confirmInterval = this.data('confirm-interval') * 60 * 1000;
     var forceConfirmInterval = this.data('force-confirm-interval') * 60 * 1000;
+    var forceConfirmShowTimer = this.data('force-confirm-show-timer') == 1;
+
 
     if (!forceConfirmInterval) {
       forceConfirmInterval = confirmInterval;
@@ -235,7 +237,15 @@
 
           backgroundColor = 'darkgreen';
 
-          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', 'none').text('Присутствие подтверждено (' + formatTimeInterval(timeToConfirm) + ')');
+          var buttonText = 'Присутствие подтверждено';
+
+          if (forceConfirmShowTimer) {
+
+            buttonText += ' (' + formatTimeInterval(timeToConfirm) + ')'
+
+          }
+
+          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', 'none').text(buttonText);
 
         } else {
 

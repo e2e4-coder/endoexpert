@@ -245,7 +245,7 @@
 
           }
 
-          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', 'none').text(buttonText);
+          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', 'none').addClass('ee-button-16--no-hand').removeClass('ee-button-16--border').text(buttonText);
 
         } else {
 
@@ -257,7 +257,7 @@
 
           backgroundColor = 'red';
 
-          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', '').text('Подтвердите присутствие');
+          $confirmButton.css('background', backgroundColor).css('color', 'white').css('pointer-events', '').removeClass('ee-button-16--no-hand').addClass('ee-button-16--border').text('Подтвердите присутствие');
 
         }
 

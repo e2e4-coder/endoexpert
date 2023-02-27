@@ -362,6 +362,7 @@
   cursor: pointer;
   font-family: inherit;
   background-color: #fd2f07;
+  white-space: nowrap;
 
   position: relative;
 
@@ -371,6 +372,7 @@
     position: absolute;
     top: 6px;
     right: -20px;
+    z-index: 100;
   }
 
   &--no-hand {
@@ -388,6 +390,12 @@
 
   &--dark {
     background: #101012;
+  }
+
+  @media @w320 {
+
+    padding: 0 35px 0 10px;
+
   }
 
 }

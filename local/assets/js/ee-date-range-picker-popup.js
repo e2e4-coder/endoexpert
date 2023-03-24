@@ -160,6 +160,8 @@ $.fn.eeDateRangePicker = function (options) {
 
       updateDateControls($.datepicker._getInst($datepicker[0]));
 
+      updateRange($datepickerFrom.datepicker('getDate'), $datepickerTo.datepicker('getDate'));
+
 
     }
 

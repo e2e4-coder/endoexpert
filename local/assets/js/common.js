@@ -187,6 +187,8 @@ $(document).ready(function () {
 
   sponsorSliderDelay = sponsorSliderDelay ? {delay: sponsorSliderDelay} : false;
 
+  var sponsorSlidesCount = $('#sponsors-slider').find('.swiper-slide').length;
+
   var sponsorSlider = new Swiper ('#sponsors-slider', {
 
 
@@ -194,6 +196,7 @@ $(document).ready(function () {
     slidesPerGroup: 4,
     spaceBetween: 10,
     loop: true,
+    loopedSlides: sponsorSlidesCount % 4 ? sponsorSlidesCount : 4,
     navigation: {
       nextEl: '#sponsors-slider-next',
       prevEl: '#sponsors-slider-prev',
@@ -211,13 +214,15 @@ $(document).ready(function () {
 
   partnersSliderDelay = partnersSliderDelay ? {delay: partnersSliderDelay} : false;
 
-  var partnersSlider = new Swiper ('#partners-slider', {
+  var partnersSlidesCount = $('#partners-slider').find('.swiper-slide').length;
 
+  var partnersSlider = new Swiper ('#partners-slider', {
 
     slidesPerView: 4,
     spaceBetween: 10,
     slidesPerGroup: 4,
     loop: true,
+    loopedSlides: partnersSlidesCount % 4 ? sponsorSlidesCount : 4,
     navigation: {
       nextEl: '#partners-slider-next',
       prevEl: '#partners-slider-prev',

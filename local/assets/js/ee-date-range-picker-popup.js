@@ -181,8 +181,8 @@ $.fn.eeDateRangePicker = function (options) {
 
       });
 
-      $datepickerFrom.datepicker('option', 'maxDate', $datepickerTo.datepicker('getDate'));
-      $datepickerTo.datepicker('option', 'minDate', $datepickerFrom.datepicker('getDate'));
+      //$datepickerFrom.datepicker('option', 'maxDate', $datepickerTo.datepicker('getDate'));
+      //$datepickerTo.datepicker('option', 'minDate', $datepickerFrom.datepicker('getDate'));
 
     }
 

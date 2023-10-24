@@ -1,0 +1,100 @@
+@import "../inc/variables";
+
+.ee-plans {
+
+  font-size: 16px;
+
+  &__tabs {
+
+    border-bottom: 1px solid #565658;
+    margin-bottom: 20px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-weight: bold;
+
+      li {
+
+        margin-right: 20px;
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+
+        &:hover, &.active {
+
+          color: @gold-color;
+          border-bottom-color: @gold-color;
+
+        }
+
+      }
+    }
+
+  }
+
+  &__wrapper {
+
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+
+    .gold-scrollbars(6px)
+
+  }
+
+  &__item {
+
+    border-left: 1px solid #565658;
+    padding: 0 15px;
+    width: 220px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+
+      font-weight: bold;
+      font-size: 1.6em;
+
+    }
+
+    &-text {
+
+      margin-bottom: 3em;
+      flex: 1 1 auto;
+
+    }
+
+    &-price {
+
+      b {
+        font-size: 1.2em;
+      }
+
+      p:nth-child(2) {
+        color: #8c8d8f;
+      }
+
+    }
+
+    &-button {
+
+      .ee-button-1 {
+        width: 100%;
+      }
+
+      .ee-button-10 {
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        background: #3498db;
+      }
+
+    }
+
+  }
+
+}

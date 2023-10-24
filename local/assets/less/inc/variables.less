@@ -135,3 +135,30 @@
   }
 
 }
+
+
+.gold-scrollbars(@size) {
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+
+  scrollbar-width: auto;
+  scrollbar-color: @gold-color #d4d8d8;
+
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: @size;
+    height: @size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d4d8d8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @gold-color;
+
+    border: 3px solid transparent;
+  }
+}

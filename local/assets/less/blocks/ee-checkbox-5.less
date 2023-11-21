@@ -43,6 +43,18 @@
 
   }
 
+  input[type=radio] + span:before {
+    border-radius: 100%;
+  }
+
+  input[type=radio]:checked + span:before {
+
+    content: '\f111';
+    font-size: 7px;
+    line-height: 17px;
+
+  }
+
   &.-bg-white {
 
     span:before {background: #fff}

@@ -14,6 +14,14 @@ $(document).ready(function () {
 
   });
 
+  $('.js-list-calc .js-reset').click(function () {
+
+    $inputs.prop('checked', false);
+
+    calc($(this).closest('.js-list-calc'));
+
+  });
+
 
   function calc($calcEl) {
 

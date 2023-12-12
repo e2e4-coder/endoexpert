@@ -16,9 +16,11 @@ $(document).ready(function () {
 
   $('.js-list-calc .js-reset').click(function () {
 
-    $inputs.prop('checked', false);
+    var $el = $(this).closest('.js-list-calc');
 
-    calc($(this).closest('.js-list-calc'));
+    $el.find('input').prop('checked', false);
+
+    calc($el);
 
   });
 

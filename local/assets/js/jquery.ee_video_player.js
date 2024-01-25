@@ -478,6 +478,20 @@
           player.currentTime(seconds);
           player.play();
 
+          if (player.readyState() !== 4) {
+
+            var interval = setInterval(function () {
+
+              if (player.readyState() === 4) {
+
+                player.currentTime(seconds);
+                clearInterval(interval);
+              }
+
+            }, 100);
+
+          }
+
         });
 
       }

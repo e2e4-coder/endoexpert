@@ -67,6 +67,8 @@
 
     var playlistVideoStartTime = this.data('playlist-video-start-time');
 
+    var $timecodes = $(this.data('timecodes-src'));
+
     var player = videojs(this[0], options, function onPlayerReady() {
 
       FingerprintJS.load().then(function (fp) {
@@ -455,6 +457,30 @@
 
       }
 
+      if ($timecodes.length) {
+
+        $timecodes.find('li').each(function () {
+
+          $(this).html($(this).text().replace(/((\d+:)?\d+:\d+)/, '<a href="">$1</a>'));
+
+        });
+
+        $timecodes.on('click', 'li', function (e) {
+
+          e.preventDefault();
+
+          var arr = $(this).find('a').text().split(':').reverse();
+
+          var seconds = parseInt(arr[0]) + parseInt(arr[1]) * 60;
+
+          if (arr[2]) seconds += parseInt(arr[2]) * 60 * 60;
+
+          player.currentTime(seconds);
+          player.play();
+
+        });
+
+      }
 
     });
 

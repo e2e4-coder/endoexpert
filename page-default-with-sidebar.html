@@ -416,6 +416,36 @@
 
                     <div class="ee-sidebar-block">
 
+                        <div id="sticky-block" style="background: #fff;padding: 10px;height: 100px;">
+                            Прилипающий блок
+                        </div>
+
+                        <script>
+
+                            $(document).ready(function () {
+
+                              var $stickyBlock = $('#sticky-block').css('z-index', '100');
+
+                              var top = $stickyBlock.offset().top;
+                              var width = $stickyBlock.width();
+
+                              $stickyBlock.css('width', width + 'px');
+
+                              $(window).scroll(function () {
+
+                                if ($(window).scrollTop() > top - 54) {
+
+                                  $stickyBlock.css('position', 'fixed').css('top', '54px')
+                                } else {
+                                  $stickyBlock.css('position', 'initial');
+                                }
+
+                              });
+
+                            });
+
+                        </script>
+
                         <div class="block-head">
                             <h2>Заголовок блока</h2>
                         </div>

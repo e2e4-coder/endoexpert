@@ -461,15 +461,15 @@
 
         $timecodes.find('li').each(function () {
 
-          $(this).html($(this).text().replace(/((\d+:)?\d+:\d+)/, '<a href="">$1</a>'));
+          $(this).html($(this).html().replace(/((\d+:)?\d+:\d+)/, '<a href="">$1</a>'));
 
         });
 
-        $timecodes.on('click', 'li', function (e) {
+        $timecodes.on('click', 'a:first-child', function (e) {
 
           e.preventDefault();
 
-          var arr = $(this).find('a').text().split(':').reverse();
+          var arr = $(this).text().split(':').reverse();
 
           var seconds = parseInt(arr[0]) + parseInt(arr[1]) * 60;
 

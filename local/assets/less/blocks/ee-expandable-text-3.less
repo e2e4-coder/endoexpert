@@ -50,12 +50,6 @@
 
   }
 
-
-
-
-
-
-
   @media print {
 
     .hidden-text {
@@ -70,11 +64,43 @@
 
   }
 
+}
 
 
+.ee-expandable-text-3--dark {
 
+  .hidden-text {
 
+    &:after {
 
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#101012 100%);
+    }
 
+  }
+
+}
+
+.ee-expandable-text-3--toggle-v2 {
+
+  border-bottom: 1px solid @link-color;
+  padding-bottom: 5px;
+
+  .expand-toggle {
+    color: transparent;
+    user-select: none;
+    cursor: default;
+    bottom: 5px;
+
+    &:after {
+      cursor: pointer;
+      color: @link-color;
+      border-radius: 100%;
+      border: 1px solid @link-color;
+      width: 21px;
+      height: 21px;
+      text-align: center;
+      line-height: 23px;
+    }
+  }
 
 }

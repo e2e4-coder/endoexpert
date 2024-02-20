@@ -459,9 +459,9 @@
 
       if ($timecodes.length) {
 
-        $timecodes.find('li').each(function () {
+        $timecodes.find('*').each(function () {
 
-          $(this).html($(this).html().replace(/((\d+:)?\d+:\d+)/, '<a href="">$1</a>'));
+          $(this).html($(this).html().replace(/((\d+:)?\d+:\d+)/, '<a class="ee-timecode-link" href="">$1</a>'));
 
         });
 

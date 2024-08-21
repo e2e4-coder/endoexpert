@@ -5,15 +5,33 @@
 
     var $el;
 
-    var options = {
-      "playbackRates": [0.5, 1, 1.5, 2],
-      "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": this.data('youtube-src')}]
-    };
+    if (this.data('youtube-src')) {
 
-    var m = this.data('youtube-src').match(/list=([^&]*)/);
-    var playlistId = m ? m[1] : undefined;
-    var playlistLength;
-    var playlistCurrentIndex;
+      var options = {
+        "playbackRates": [0.5, 1, 1.5, 2],
+        "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": this.data('youtube-src')}]
+      };
+
+    }
+
+    if (this.data('rutube-src')) {
+
+      var options = {
+        "playbackRates": [0.5, 1, 1.5, 2],
+        "techOrder": ["Rutube"], "sources": [{ "type": "video/rutube", "src": this.data('rutube-src')}]
+      };
+
+    }
+
+
+    if (this.data('youtube-src')) {
+
+      var m = this.data('youtube-src').match(/list=([^&]*)/);
+      var playlistId = m ? m[1] : undefined;
+      var playlistLength;
+      var playlistCurrentIndex;
+
+    }
 
     var $pauseOverlayTop = $(this.data('pause-overlay-top-src'));
     var $pauseOverlayBottom = $(this.data('pause-overlay-bottom-src'));

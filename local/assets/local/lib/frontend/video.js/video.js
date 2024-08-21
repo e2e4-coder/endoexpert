@@ -93,9 +93,10 @@
     /**
      * Logs plain debug messages. Similar to `console.log`.
      *
-     * Due to [limitations](https://github.com/jsdoc3/jsdoc/issues/955#issuecomment-313829149)
-     * of our JSDoc template, we cannot properly document this as both a function
-     * and a namespace, so its function signature is documented here.
+     * Due to
+     * [limitations](https://github.com/jsdoc3/jsdoc/issues/955#issuecomment-313829149)
+     * of our JSDoc template, we cannot properly document this as both a
+     * function and a namespace, so its function signature is documented here.
      *
      * #### Arguments
      * ##### *args
@@ -125,7 +126,8 @@
     /**
      * Create a new sublogger which chains the old name to the new name.
      *
-     * For example, doing `videojs.log.createLogger('player')` and then using that logger will log the following:
+     * For example, doing `videojs.log.createLogger('player')` and then using
+     * that logger will log the following:
      * ```js
      *  mylogger('foo');
      *  // > VIDEOJS: player: foo
@@ -140,18 +142,19 @@
       return createLogger(name + ': ' + subname);
     };
     /**
-     * Enumeration of available logging levels, where the keys are the level names
-     * and the values are `|`-separated strings containing logging methods allowed
-     * in that logging level. These strings are used to create a regular expression
-     * matching the function name being called.
+     * Enumeration of available logging levels, where the keys are the level
+     * names and the values are `|`-separated strings containing logging
+     * methods allowed in that logging level. These strings are used to create
+     * a regular expression matching the function name being called.
      *
      * Levels provided by Video.js are:
      *
-     * - `off`: Matches no calls. Any value that can be cast to `false` will have
-     *   this effect. The most restrictive.
+     * - `off`: Matches no calls. Any value that can be cast to `false` will
+     * have this effect. The most restrictive.
      * - `all`: Matches only Video.js-provided functions (`debug`, `log`,
      *   `log.warn`, and `log.error`).
-     * - `debug`: Matches `log.debug`, `log`, `log.warn`, and `log.error` calls.
+     * - `debug`: Matches `log.debug`, `log`, `log.warn`, and `log.error`
+     * calls.
      * - `info` (default): Matches `log`, `log.warn`, and `log.error` calls.
      * - `warn`: Matches `log.warn` and `log.error` calls.
      * - `error`: Matches only `log.error` calls.
@@ -172,8 +175,8 @@
     /**
      * Get or set the current logging level.
      *
-     * If a string matching a key from {@link module:log.levels} is provided, acts
-     * as a setter.
+     * If a string matching a key from {@link module:log.levels} is provided,
+     * acts as a setter.
      *
      * @param  {string} [lvl]
      *         Pass a valid level to set a new logging level.
@@ -194,11 +197,12 @@
       return level;
     };
     /**
-     * Returns an array containing everything that has been logged to the history.
+     * Returns an array containing everything that has been logged to the
+     * history.
      *
-     * This array is a shallow clone of the internal history record. However, its
-     * contents are _not_ cloned; so, mutating objects inside this array will
-     * mutate them in history.
+     * This array is a shallow clone of the internal history record. However,
+     * its contents are _not_ cloned; so, mutating objects inside this array
+     * will mutate them in history.
      *
      * @return {Array}
      */
@@ -225,8 +229,8 @@
       });
     };
     /**
-     * Clears the internal history tracking, but does not prevent further history
-     * tracking.
+     * Clears the internal history tracking, but does not prevent further
+     * history tracking.
      */
 
 
@@ -275,7 +279,8 @@
      * Logs warning messages. Similar to `console.warn`.
      *
      * @param {Mixed[]} args
-     *        One or more messages or objects that should be logged as a warning.
+     *        One or more messages or objects that should be logged as a
+     *     warning.
      */
 
 
@@ -287,8 +292,8 @@
       return logByType('warn', level, args);
     };
     /**
-     * Logs debug messages. Similar to `console.debug`, but may also act as a comparable
-     * log if `console.debug` is not available
+     * Logs debug messages. Similar to `console.debug`, but may also act as a
+     * comparable log if `console.debug` is not available
      *
      * @param {Mixed[]} args
      *        One or more messages or objects that should be logged as debug.
@@ -490,7 +495,8 @@
   /**
    * A safe getComputedStyle.
    *
-   * This is needed because in Firefox, if the player is loaded in an iframe with
+   * This is needed because in Firefox, if the player is loaded in an iframe
+   * with
    * `display:none`, then `getComputedStyle` returns `null`, so, we do a
    * null-check to make sure that the player doesn't break in these cases.
    *
@@ -561,15 +567,16 @@
     }
   }
   /**
-   * Produce a regular expression for matching a className within an elements className.
+   * Produce a regular expression for matching a className within an elements
+   * className.
    *
    * @private
    * @param  {string} className
    *         The className to generate the RegExp for.
    *
    * @return {RegExp}
-   *         The RegExp that will check for a specific `className` in an elements
-   *         className.
+   *         The RegExp that will check for a specific `className` in an
+   *     elements className.
    */
 
 
@@ -1184,10 +1191,17 @@
    * `string`   | The value will be normalized into a text node.
    * `Element`  | The value will be accepted as-is.
    * `TextNode` | The value will be accepted as-is.
-   * `Array`    | A one-dimensional array of strings, elements, text nodes, or functions. These functions should return a string, element, or text node (any other return value, like an array, will be ignored).
-   * `Function` | A function, which is expected to return a string, element, text node, or array - any of the other possible values described above. This means that a content descriptor could be a function that returns an array of functions, but those second-level functions must return strings, elements, or text nodes.
+   * `Array`    | A one-dimensional array of strings, elements, text nodes, or
+   * functions. These functions should return a string, element, or text node
+   * (any other return value, like an array, will be ignored).
+   * `Function` | A function, which is expected to return a string, element,
+   * text node, or array - any of the other possible values described above.
+   * This means that a content descriptor could be a function that returns an
+   * array of functions, but those second-level functions must return strings,
+   * elements, or text nodes.
    *
-   * @typedef {string|Element|TextNode|Array|Function} module:dom~ContentDescriptor
+   * @typedef {string|Element|TextNode|Array|Function}
+   *     module:dom~ContentDescriptor
    */
 
   /**
@@ -1400,7 +1414,8 @@
   var _windowLoaded = false;
   var videojs;
   /**
-   * Set up any tags that have a data-setup `attribute` when the player is started.
+   * Set up any tags that have a data-setup `attribute` when the player is
+   * started.
    */
 
   var autoSetup = function autoSetup() {
@@ -1441,8 +1456,8 @@
     }
   };
   /**
-   * Wait until the page is loaded before running autoSetup. This will be called in
-   * autoSetup if `hasLoaded` returns false.
+   * Wait until the page is loaded before running autoSetup. This will be
+   * called in autoSetup if `hasLoaded` returns false.
    *
    * @param {number} wait
    *        How long to wait in ms
@@ -1543,7 +1558,8 @@
 
   var _guid = _initialGuid;
   /**
-   * Get a unique auto-incrementing ID by number that has not been returned before.
+   * Get a unique auto-incrementing ID by number that has not been returned
+   * before.
    *
    * @return {number}
    *         A new unique ID.
@@ -1626,10 +1642,12 @@
   var DomData = window$1.WeakMap ? new WeakMap() : new FakeWeakMap();
 
   /**
-   * @file events.js. An Event System (John Resig - Secrets of a JS Ninja http://jsninja.com/)
-   * (Original book version wasn't completely usable, so fixed some things and made Closure Compiler compatible)
-   * This should work very similarly to jQuery's events, however it's based off the book version which isn't as
-   * robust as jquery's, so there's probably some differences.
+   * @file events.js. An Event System (John Resig - Secrets of a JS Ninja
+   *     http://jsninja.com/)
+   * (Original book version wasn't completely usable, so fixed some things and
+   *     made Closure Compiler compatible) This should work very similarly to
+   *     jQuery's events, however it's based off the book version which isn't
+   *     as robust as jquery's, so there's probably some differences.
    *
    * @file events.js
    * @module events
@@ -1676,7 +1694,8 @@
     }
   }
   /**
-   * Loops through an array of event types and calls the requested method for each type.
+   * Loops through an array of event types and calls the requested method for
+   * each type.
    *
    * @param {Function} fn
    *        The event method we want to use.
@@ -1943,11 +1962,12 @@
    *        Object to remove listeners from.
    *
    * @param {string|string[]} [type]
-   *        Type of listener to remove. Don't include to remove all events from element.
+   *        Type of listener to remove. Don't include to remove all events from
+   *     element.
    *
    * @param {EventTarget~EventListener} [fn]
-   *        Specific listener to remove. Don't include to remove listeners for an event
-   *        type.
+   *        Specific listener to remove. Don't include to remove listeners for
+   *     an event type.
    */
 
   function off(elem, type, fn) {
@@ -2210,7 +2230,8 @@
     return throttled;
   };
   /**
-   * Creates a debounced function that delays invoking `func` until after `wait`
+   * Creates a debounced function that delays invoking `func` until after
+   * `wait`
    * milliseconds have elapsed since the last time the debounced function was
    * invoked.
    *
@@ -2227,10 +2248,10 @@
    *           Whether or not to invoke the function immediately upon creation.
    *
    * @param    {Object} [context=window]
-   *           The "context" in which the debounced function should debounce. For
-   *           example, if this function should be tied to a Video.js player,
-   *           the player can be passed here. Alternatively, defaults to the
-   *           global `window` object.
+   *           The "context" in which the debounced function should debounce.
+   *     For example, if this function should be tied to a Video.js player, the
+   *     player can be passed here. Alternatively, defaults to the global
+   *     `window` object.
    *
    * @return   {Function}
    *           A debounced function.
@@ -2281,9 +2302,10 @@
    * @file src/js/event-target.js
    */
   /**
-   * `EventTarget` is a class that can have the same API as the DOM `EventTarget`. It
-   * adds shorthand functions that wrap around lengthy functions. For example:
-   * the `on` function is a wrapper around `addEventListener`.
+   * `EventTarget` is a class that can have the same API as the DOM
+   * `EventTarget`. It adds shorthand functions that wrap around lengthy
+   * functions. For example: the `on` function is a wrapper around
+   * `addEventListener`.
    *
    * @see [EventTarget Spec]{@link https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget}
    * @class EventTarget
@@ -2313,8 +2335,9 @@
   /**
    * An object containing event names as keys and booleans as values.
    *
-   * > NOTE: If an event name is set to a true value here {@link EventTarget#trigger}
-   *         will have extra functionality. See that function for more information.
+   * > NOTE: If an event name is set to a true value here
+   * {@link EventTarget#trigger} will have extra functionality. See that
+   * function for more information.
    *
    * @property EventTarget.prototype.allowedEvents_
    * @private
@@ -2323,8 +2346,9 @@
 
   EventTarget.prototype.allowedEvents_ = {};
   /**
-   * Adds an `event listener` to an instance of an `EventTarget`. An `event listener` is a
-   * function that will get called when an event with a certain name gets triggered.
+   * Adds an `event listener` to an instance of an `EventTarget`. An `event
+   * listener` is a function that will get called when an event with a certain
+   * name gets triggered.
    *
    * @param {string|string[]} type
    *        An event name or an array of event names.
@@ -2354,9 +2378,9 @@
 
   EventTarget.prototype.addEventListener = EventTarget.prototype.on;
   /**
-   * Removes an `event listener` for a specific event from an instance of `EventTarget`.
-   * This makes it so that the `event listener` will no longer get called when the
-   * named event happens.
+   * Removes an `event listener` for a specific event from an instance of
+   * `EventTarget`. This makes it so that the `event listener` will no longer
+   * get called when the named event happens.
    *
    * @param {string|string[]} type
    *        An event name or an array of event names.
@@ -2379,9 +2403,10 @@
 
   EventTarget.prototype.removeEventListener = EventTarget.prototype.off;
   /**
-   * This function will add an `event listener` that gets triggered only once. After the
-   * first trigger it will get removed. This is like adding an `event listener`
-   * with {@link EventTarget#on} that calls {@link EventTarget#off} on itself.
+   * This function will add an `event listener` that gets triggered only once.
+   * After the first trigger it will get removed. This is like adding an `event
+   * listener` with {@link EventTarget#on} that calls {@link EventTarget#off}
+   * on itself.
    *
    * @param {string|string[]} type
    *        An event name or an array of event names.
@@ -2412,20 +2437,22 @@
     this.addEventListener = ael;
   };
   /**
-   * This function causes an event to happen. This will then cause any `event listeners`
-   * that are waiting for that event, to get called. If there are no `event listeners`
-   * for an event then nothing will happen.
+   * This function causes an event to happen. This will then cause any `event
+   * listeners` that are waiting for that event, to get called. If there are no
+   * `event listeners` for an event then nothing will happen.
    *
-   * If the name of the `Event` that is being triggered is in `EventTarget.allowedEvents_`.
-   * Trigger will also call the `on` + `uppercaseEventName` function.
+   * If the name of the `Event` that is being triggered is in
+   * `EventTarget.allowedEvents_`. Trigger will also call the `on` +
+   * `uppercaseEventName` function.
    *
    * Example:
-   * 'click' is in `EventTarget.allowedEvents_`, so, trigger will attempt to call
+   * 'click' is in `EventTarget.allowedEvents_`, so, trigger will attempt to
+   * call
    * `onClick` if it exists.
    *
    * @param {string|EventTarget~Event|Object} event
-   *        The name of the event, an `Event`, or an object with a key of type set to
-   *        an event name.
+   *        The name of the event, an `Event`, or an object with a key of type
+   *     set to an event name.
    */
 
 
@@ -2552,7 +2579,8 @@
     );
   };
   /**
-   * Validates a value to determine if it is a valid event target. Throws if not.
+   * Validates a value to determine if it is a valid event target. Throws if
+   * not.
    *
    * @private
    * @throws {Error}
@@ -2569,7 +2597,8 @@
     }
   };
   /**
-   * Validates a value to determine if it is a valid event target. Throws if not.
+   * Validates a value to determine if it is a valid event target. Throws if
+   * not.
    *
    * @private
    * @throws {Error}
@@ -2683,8 +2712,8 @@
     }
   };
   /**
-   * Contains methods that provide event capabilities to an object which is passed
-   * to {@link module:evented|evented}.
+   * Contains methods that provide event capabilities to an object which is
+   * passed to {@link module:evented|evented}.
    *
    * @mixin EventedMixin
    */
@@ -2816,8 +2845,8 @@
 
     /**
      * Add a listener to an event (or events) on this object or another evented
-     * object. The listener will only be called once for the first event that is triggered
-     * then removed.
+     * object. The listener will only be called once for the first event that
+     * is triggered then removed.
      *
      * @param  {string|Array|Element|Object} targetOrType
      *         If this is a string or array, it represents the event type(s)
@@ -2935,7 +2964,8 @@
     }
   };
   /**
-   * Applies {@link module:evented~EventedMixin|EventedMixin} to a target object.
+   * Applies {@link module:evented~EventedMixin|EventedMixin} to a target
+   * object.
    *
    * @param  {Object} target
    *         The object to which to add event methods.
@@ -3074,14 +3104,16 @@
    * object.
    *
    * If the target object is {@link module:evented|evented} and has a
-   * `handleStateChanged` method, that method will be automatically bound to the
+   * `handleStateChanged` method, that method will be automatically bound to
+   * the
    * `statechanged` event on itself.
    *
    * @param   {Object} target
    *          The object to be made stateful.
    *
    * @param   {Object} [defaultState]
-   *          A default set of properties to populate the newly-stateful object's
+   *          A default set of properties to populate the newly-stateful
+   *     object's
    *          `state` property.
    *
    * @return {Object}
@@ -3217,8 +3249,8 @@
    */
   /**
    * Base class for all UI Components.
-   * Components are UI objects which represent both a javascript object and an element
-   * in the DOM. They can be children of other components, and can have
+   * Components are UI objects which represent both a javascript object and an
+   * element in the DOM. They can be children of other components, and can have
    * children themselves.
    *
    * Components can also use methods from {@link EventTarget}
@@ -3245,9 +3277,9 @@
      *        The key/value store of player options.
      *
      * @param {Object[]} [options.children]
-     *        An array of children objects to intialize this component with. Children objects have
-     *        a name property that will be used if more than one component of the same type needs to be
-     *        added.
+     *        An array of children objects to intialize this component with.
+     *     Children objects have a name property that will be used if more than
+     *     one component of the same type needs to be added.
      *
      * @param {Component~ReadyCallback} [ready]
      *        Function that gets called when the `Component` is ready.
@@ -3415,7 +3447,8 @@
      * Determine whether or not this component has been disposed.
      *
      * @return {boolean}
-     *         If the component has been disposed, will be `true`. Otherwise, `false`.
+     *         If the component has been disposed, will be `true`. Otherwise,
+     *     `false`.
      */
     ;
 
@@ -3435,8 +3468,9 @@
     }
     /**
      * Deep merge of options objects with new options.
-     * > Note: When both `obj` and `options` contain properties whose values are objects.
-     *         The two properties get merged using {@link module:mergeOptions}
+     * > Note: When both `obj` and `options` contain properties whose values
+     * are objects. The two properties get merged using
+     * {@link module:mergeOptions}
      *
      * @param {Object} obj
      *        The object that contains new options.
@@ -3488,13 +3522,15 @@
     /**
      * Localize a string given the string in english.
      *
-     * If tokens are provided, it'll try and run a simple token replacement on the provided string.
-     * The tokens it looks for look like `{1}` with the index being 1-indexed into the tokens array.
+     * If tokens are provided, it'll try and run a simple token replacement on
+     * the provided string. The tokens it looks for look like `{1}` with the
+     * index being 1-indexed into the tokens array.
      *
      * If a `defaultValue` is provided, it'll use that over `string`,
      * if a value isn't found in provided language files.
-     * This is useful if you want to have a descriptive key for token replacement
-     * but have a succinct localized string and not require `en.json` to be included.
+     * This is useful if you want to have a descriptive key for token
+     * replacement but have a succinct localized string and not require
+     * `en.json` to be included.
      *
      * Currently, it is used for the progress bar timing.
      * ```js
@@ -3513,15 +3549,18 @@
      *
      *
      * @param {string} string
-     *        The string to localize and the key to lookup in the language files.
+     *        The string to localize and the key to lookup in the language
+     *     files.
      * @param {string[]} [tokens]
-     *        If the current item has token replacements, provide the tokens here.
+     *        If the current item has token replacements, provide the tokens
+     *     here.
      * @param {string} [defaultValue]
-     *        Defaults to `string`. Can be a default value to use for token replacement
-     *        if the lookup key is needed to be separate.
+     *        Defaults to `string`. Can be a default value to use for token
+     *     replacement if the lookup key is needed to be separate.
      *
      * @return {string}
-     *         The localized string or if no localization exists the english string.
+     *         The localized string or if no localization exists the english
+     *     string.
      */
     ;
 
@@ -3559,8 +3598,10 @@
       return localizedString;
     }
     /**
-     * Return the `Component`s DOM element. This is where children get inserted.
-     * This will usually be the the same as the element returned in {@link Component#el}.
+     * Return the `Component`s DOM element. This is where children get
+     * inserted.
+     * This will usually be the the same as the element returned in
+     * {@link Component#el}.
      *
      * @return {Element}
      *         The content element for this `Component`.
@@ -3582,8 +3623,8 @@
       return this.id_;
     }
     /**
-     * Get the `Component`s name. The name gets used to reference the `Component`
-     * and is set during registration.
+     * Get the `Component`s name. The name gets used to reference the
+     * `Component` and is set during registration.
      *
      * @return {string}
      *         The name of this `Component`.
@@ -3644,14 +3685,16 @@
      *        The name or instance of a child to add.
      *
      * @param {Object} [options={}]
-     *        The key/value store of options that will get passed to children of
+     *        The key/value store of options that will get passed to children
+     *     of
      *        the child.
      *
      * @param {number} [index=this.children_.length]
      *        The index to attempt to add a child into.
      *
      * @return {Component}
-     *         The `Component` that gets added as a child. When using a string the
+     *         The `Component` that gets added as a child. When using a string
+     *     the
      *         `Component` will get created by this process.
      */
     ;
@@ -3731,8 +3774,8 @@
       return component;
     }
     /**
-     * Remove a child `Component` from this `Component`s list of children. Also removes
-     * the child `Component`s element from this `Component`s element.
+     * Remove a child `Component` from this `Component`s list of children. Also
+     * removes the child `Component`s element from this `Component`s element.
      *
      * @param {Component} component
      *        The child `Component` to remove.
@@ -3885,8 +3928,8 @@
     }
     /**
      * Bind a listener to the component's ready state.
-     * Different from event listeners in that if the ready event has already happened
-     * it will trigger the function immediately.
+     * Different from event listeners in that if the ready event has already
+     * happened it will trigger the function immediately.
      *
      * @return {Component}
      *         Returns itself; method can be chained.
@@ -3948,22 +3991,24 @@
       }, 1);
     }
     /**
-     * Find a single DOM element matching a `selector`. This can be within the `Component`s
+     * Find a single DOM element matching a `selector`. This can be within the
+     * `Component`s
      * `contentEl()` or another custom context.
      *
      * @param {string} selector
      *        A valid CSS selector, which will be passed to `querySelector`.
      *
      * @param {Element|string} [context=this.contentEl()]
-     *        A DOM element within which to query. Can also be a selector string in
-     *        which case the first matching element will get used as context. If
-     *        missing `this.contentEl()` gets used. If  `this.contentEl()` returns
-     *        nothing it falls back to `document`.
+     *        A DOM element within which to query. Can also be a selector
+     *     string in which case the first matching element will get used as
+     *     context. If missing `this.contentEl()` gets used. If
+     *     `this.contentEl()` returns nothing it falls back to `document`.
      *
      * @return {Element|null}
      *         the dom element that was found, or null
      *
-     * @see [Information on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
+     * @see [Information on CSS
+     *     Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
      */
     ;
 
@@ -3971,22 +4016,24 @@
       return $(selector, context || this.contentEl());
     }
     /**
-     * Finds all DOM element matching a `selector`. This can be within the `Component`s
+     * Finds all DOM element matching a `selector`. This can be within the
+     * `Component`s
      * `contentEl()` or another custom context.
      *
      * @param {string} selector
      *        A valid CSS selector, which will be passed to `querySelectorAll`.
      *
      * @param {Element|string} [context=this.contentEl()]
-     *        A DOM element within which to query. Can also be a selector string in
-     *        which case the first matching element will get used as context. If
-     *        missing `this.contentEl()` gets used. If  `this.contentEl()` returns
-     *        nothing it falls back to `document`.
+     *        A DOM element within which to query. Can also be a selector
+     *     string in which case the first matching element will get used as
+     *     context. If missing `this.contentEl()` gets used. If
+     *     `this.contentEl()` returns nothing it falls back to `document`.
      *
      * @return {NodeList}
      *         a list of dom elements that were found
      *
-     * @see [Information on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
+     * @see [Information on CSS
+     *     Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
      */
     ;
 
@@ -4032,8 +4079,10 @@
     }
     /**
      * Add or remove a CSS class name from the component's element.
-     * - `classToToggle` gets added when {@link Component#hasClass} would return false.
-     * - `classToToggle` gets removed when {@link Component#hasClass} would return true.
+     * - `classToToggle` gets added when {@link Component#hasClass} would
+     * return false.
+     * - `classToToggle` gets removed when {@link Component#hasClass} would
+     * return true.
      *
      * @param  {string} classToToggle
      *         The class to add or remove based on (@link Component#hasClass}
@@ -4065,8 +4114,8 @@
       this.addClass('vjs-hidden');
     }
     /**
-     * Lock a `Component`s element in its visible state by adding the 'vjs-lock-showing'
-     * class name to it. Used during fadeIn/fadeOut.
+     * Lock a `Component`s element in its visible state by adding the
+     * 'vjs-lock-showing' class name to it. Used during fadeIn/fadeOut.
      *
      * @private
      */
@@ -4076,8 +4125,8 @@
       this.addClass('vjs-lock-showing');
     }
     /**
-     * Unlock a `Component`s element from its visible state by removing the 'vjs-lock-showing'
-     * class name from it. Used during fadeIn/fadeOut.
+     * Unlock a `Component`s element from its visible state by removing the
+     * 'vjs-lock-showing' class name from it. Used during fadeIn/fadeOut.
      *
      * @private
      */
@@ -4094,10 +4143,10 @@
      *
      * @return {string|null}
      *         - The value of the attribute that was asked for.
-     *         - Can be an empty string on some browsers if the attribute does not exist
-     *           or has no value
-     *         - Most browsers will return null if the attibute does not exist or has
-     *           no value.
+     *         - Can be an empty string on some browsers if the attribute does
+     *     not exist or has no value
+     *         - Most browsers will return null if the attibute does not exist
+     *     or has no value.
      *
      * @see [DOM API]{@link https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute}
      */
@@ -4140,14 +4189,15 @@
      * See {@link Component#dimension} for more detailed information.
      *
      * @param {number|string} [num]
-     *        The width that you want to set postfixed with '%', 'px' or nothing.
+     *        The width that you want to set postfixed with '%', 'px' or
+     *     nothing.
      *
      * @param {boolean} [skipListeners]
      *        Skip the componentresize event trigger
      *
      * @return {number|string}
-     *         The width when getting, zero if there is no width. Can be a string
-     *           postpixed with '%' or 'px'.
+     *         The width when getting, zero if there is no width. Can be a
+     *     string postpixed with '%' or 'px'.
      */
     ;
 
@@ -4159,14 +4209,15 @@
      * See {@link Component#dimension} for more detailed information.
      *
      * @param {number|string} [num]
-     *        The height that you want to set postfixed with '%', 'px' or nothing.
+     *        The height that you want to set postfixed with '%', 'px' or
+     *     nothing.
      *
      * @param {boolean} [skipListeners]
      *        Skip the componentresize event trigger
      *
      * @return {number|string}
-     *         The width when getting, zero if there is no width. Can be a string
-     *         postpixed with '%' or 'px'.
+     *         The width when getting, zero if there is no width. Can be a
+     *     string postpixed with '%' or 'px'.
      */
     ;
 
@@ -4174,7 +4225,8 @@
       return this.dimension('height', num, skipListeners);
     }
     /**
-     * Set both the width and height of the `Component` element at the same time.
+     * Set both the width and height of the `Component` element at the same
+     * time.
      *
      * @param  {number|string} width
      *         Width to set the `Component`s element to.
@@ -4190,18 +4242,21 @@
       this.height(height);
     }
     /**
-     * Get or set width or height of the `Component` element. This is the shared code
-     * for the {@link Component#width} and {@link Component#height}.
+     * Get or set width or height of the `Component` element. This is the
+     * shared code for the {@link Component#width} and {@link
+     * Component#height}.
      *
      * Things to know:
-     * - If the width or height in an number this will return the number postfixed with 'px'.
-     * - If the width/height is a percent this will return the percent postfixed with '%'
-     * - Hidden elements have a width of 0 with `window.getComputedStyle`. This function
-     *   defaults to the `Component`s `style.width` and falls back to `window.getComputedStyle`.
-     *   See [this]{@link http://www.foliotek.com/devblog/getting-the-width-of-a-hidden-element-with-jquery-using-width/}
-     *   for more information
-     * - If you want the computed style of the component, use {@link Component#currentWidth}
-     *   and {@link {Component#currentHeight}
+     * - If the width or height in an number this will return the number
+     * postfixed with 'px'.
+     * - If the width/height is a percent this will return the percent
+     * postfixed with '%'
+     * - Hidden elements have a width of 0 with `window.getComputedStyle`. This
+     * function defaults to the `Component`s `style.width` and falls back to
+     * `window.getComputedStyle`. See
+     * [this]{@link http://www.foliotek.com/devblog/getting-the-width-of-a-hidden-element-with-jquery-using-width/} for more information
+     * - If you want the computed style of the component, use
+     * {@link Component#currentWidth} and {@link {Component#currentHeight}
      *
      * @fires Component#componentresize
      *
@@ -4275,7 +4330,8 @@
      * Uses `window.getComputedStyle`.
      *
      * @param {string} widthOrHeight
-     *        A string containing 'width' or 'height'. Whichever one you want to get.
+     *        A string containing 'width' or 'height'. Whichever one you want
+     *     to get.
      *
      * @return {number}
      *         The dimension that gets asked for or 0 if nothing was set
@@ -4407,9 +4463,10 @@
       this.handleKeyDown(event);
     }
     /**
-     * Emit a 'tap' events when touch event support gets detected. This gets used to
-     * support toggling the controls through a tap on the video. They get enabled
-     * because every sub-component would have extra overhead otherwise.
+     * Emit a 'tap' events when touch event support gets detected. This gets
+     * used to support toggling the controls through a tap on the video. They
+     * get enabled because every sub-component would have extra overhead
+     * otherwise.
      *
      * @private
      * @fires Component#tap
@@ -4497,22 +4554,24 @@
       });
     }
     /**
-     * This function reports user activity whenever touch events happen. This can get
-     * turned off by any sub-components that wants touch events to act another way.
+     * This function reports user activity whenever touch events happen. This
+     * can get turned off by any sub-components that wants touch events to act
+     * another way.
      *
-     * Report user touch activity when touch events occur. User activity gets used to
-     * determine when controls should show/hide. It is simple when it comes to mouse
-     * events, because any mouse event should show the controls. So we capture mouse
-     * events that bubble up to the player and report activity when that happens.
-     * With touch events it isn't as easy as `touchstart` and `touchend` toggle player
-     * controls. So touch events can't help us at the player level either.
+     * Report user touch activity when touch events occur. User activity gets
+     * used to determine when controls should show/hide. It is simple when it
+     * comes to mouse events, because any mouse event should show the controls.
+     * So we capture mouse events that bubble up to the player and report
+     * activity when that happens. With touch events it isn't as easy as
+     * `touchstart` and `touchend` toggle player controls. So touch events
+     * can't help us at the player level either.
      *
-     * User activity gets checked asynchronously. So what could happen is a tap event
-     * on the video turns the controls off. Then the `touchend` event bubbles up to
-     * the player. Which, if it reported user activity, would turn the controls right
-     * back on. We also don't want to completely block touch events from bubbling up.
-     * Furthermore a `touchmove` event and anything other than a tap, should not turn
-     * controls back on.
+     * User activity gets checked asynchronously. So what could happen is a tap
+     * event on the video turns the controls off. Then the `touchend` event
+     * bubbles up to the player. Which, if it reported user activity, would
+     * turn the controls right back on. We also don't want to completely block
+     * touch events from bubbling up. Furthermore a `touchmove` event and
+     * anything other than a tap, should not turn controls back on.
      *
      * @listens Component#touchstart
      * @listens Component#touchmove
@@ -4558,27 +4617,31 @@
      */
 
     /**
-     * Creates a function that runs after an `x` millisecond timeout. This function is a
-     * wrapper around `window.setTimeout`. There are a few reasons to use this one
-     * instead though:
+     * Creates a function that runs after an `x` millisecond timeout. This
+     * function is a wrapper around `window.setTimeout`. There are a few
+     * reasons to use this one instead though:
      * 1. It gets cleared via  {@link Component#clearTimeout} when
      *    {@link Component#dispose} gets called.
-     * 2. The function callback will gets turned into a {@link Component~GenericCallback}
+     * 2. The function callback will gets turned into a
+     * {@link Component~GenericCallback}
      *
-     * > Note: You can't use `window.clearTimeout` on the id returned by this function. This
-     *         will cause its dispose listener not to get cleaned up! Please use
-     *         {@link Component#clearTimeout} or {@link Component#dispose} instead.
+     * > Note: You can't use `window.clearTimeout` on the id returned by this
+     * function. This will cause its dispose listener not to get cleaned up!
+     * Please use
+     *         {@link Component#clearTimeout} or {@link Component#dispose}
+     * instead.
      *
      * @param {Component~GenericCallback} fn
      *        The function that will be run after `timeout`.
      *
      * @param {number} timeout
-     *        Timeout in milliseconds to delay before executing the specified function.
+     *        Timeout in milliseconds to delay before executing the specified
+     *     function.
      *
      * @return {number}
-     *         Returns a timeout ID that gets used to identify the timeout. It can also
-     *         get used in {@link Component#clearTimeout} to clear the timeout that
-     *         was set.
+     *         Returns a timeout ID that gets used to identify the timeout. It
+     *     can also get used in {@link Component#clearTimeout} to clear the
+     *     timeout that was set.
      *
      * @listens Component#dispose
      * @see [Similar to]{@link https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout}
@@ -4605,9 +4668,10 @@
     }
     /**
      * Clears a timeout that gets created via `window.setTimeout` or
-     * {@link Component#setTimeout}. If you set a timeout via {@link Component#setTimeout}
-     * use this function instead of `window.clearTimout`. If you don't your dispose
-     * listener will not get cleaned up until {@link Component#dispose}!
+     * {@link Component#setTimeout}. If you set a timeout via
+     * {@link Component#setTimeout} use this function instead of
+     * `window.clearTimout`. If you don't your dispose listener will not get
+     * cleaned up until {@link Component#dispose}!
      *
      * @param {number} timeoutId
      *        The id of the timeout to clear. The return value of
@@ -4629,8 +4693,9 @@
       return timeoutId;
     }
     /**
-     * Creates a function that gets run every `x` milliseconds. This function is a wrapper
-     * around `window.setInterval`. There are a few reasons to use this one instead though.
+     * Creates a function that gets run every `x` milliseconds. This function
+     * is a wrapper around `window.setInterval`. There are a few reasons to use
+     * this one instead though.
      * 1. It gets cleared via  {@link Component#clearInterval} when
      *    {@link Component#dispose} gets called.
      * 2. The function callback will be a {@link Component~GenericCallback}
@@ -4642,7 +4707,8 @@
      *        Execute the specified function every `x` milliseconds.
      *
      * @return {number}
-     *         Returns an id that can be used to identify the interval. It can also be be used in
+     *         Returns an id that can be used to identify the interval. It can
+     *     also be be used in
      *         {@link Component#clearInterval} to clear the interval.
      *
      * @listens Component#dispose
@@ -4659,9 +4725,10 @@
     }
     /**
      * Clears an interval that gets created via `window.setInterval` or
-     * {@link Component#setInterval}. If you set an inteval via {@link Component#setInterval}
-     * use this function instead of `window.clearInterval`. If you don't your dispose
-     * listener will not get cleaned up until {@link Component#dispose}!
+     * {@link Component#setInterval}. If you set an inteval via
+     * {@link Component#setInterval} use this function instead of
+     * `window.clearInterval`. If you don't your dispose listener will not get
+     * cleaned up until {@link Component#dispose}!
      *
      * @param {number} intervalId
      *        The id of the interval to clear. The return value of
@@ -4696,7 +4763,8 @@
      *   is disposed before it is called.
      *
      * @param  {Component~GenericCallback} fn
-     *         A function that will be bound to this component and executed just
+     *         A function that will be bound to this component and executed
+     *     just
      *         before the browser's next repaint.
      *
      * @return {number}
@@ -4733,15 +4801,20 @@
       return id;
     }
     /**
-     * Cancels a queued callback passed to {@link Component#requestAnimationFrame}
+     * Cancels a queued callback passed to
+     * {@link Component#requestAnimationFrame}
      * (rAF).
      *
-     * If you queue an rAF callback via {@link Component#requestAnimationFrame},
-     * use this function instead of `window.cancelAnimationFrame`. If you don't,
-     * your dispose listener will not get cleaned up until {@link Component#dispose}!
+     * If you queue an rAF callback via {@link
+     * Component#requestAnimationFrame},
+     * use this function instead of `window.cancelAnimationFrame`. If you
+     * don't,
+     * your dispose listener will not get cleaned up until
+     * {@link Component#dispose}!
      *
      * @param {number} id
-     *        The rAF ID to clear. The return value of {@link Component#requestAnimationFrame}.
+     *        The rAF ID to clear. The return value of
+     *     {@link Component#requestAnimationFrame}.
      *
      * @return {number}
      *         Returns the rAF ID that was cleared.
@@ -4796,8 +4869,8 @@
     /**
      * Register a `Component` with `videojs` given the name and the component.
      *
-     * > NOTE: {@link Tech}s should not be registered as a `Component`. {@link Tech}s
-     *         should be registered using {@link Tech.registerTech} or
+     * > NOTE: {@link Tech}s should not be registered as a `Component`.
+     * {@link Tech}s should be registered using {@link Tech.registerTech} or
      *         {@link videojs:videojs.registerTech}.
      *
      * > NOTE: This function can also be seen on videojs as
@@ -4871,10 +4944,10 @@
      * @return {Component}
      *         The `Component` that got registered under the given name.
      *
-     * @deprecated In `videojs` 6 this will not return `Component`s that were not
-     *             registered using {@link Component.registerComponent}. Currently we
-     *             check the global `videojs` object for a `Component` name and
-     *             return that if it exists.
+     * @deprecated In `videojs` 6 this will not return `Component`s that were
+     *     not registered using {@link Component.registerComponent}. Currently
+     *     we check the global `videojs` object for a `Component` name and
+     *     return that if it exists.
      */
     ;
 
@@ -5019,8 +5092,8 @@
   /**
    * Whether or not this is Google Chrome.
    *
-   * This will also be `true` for Chrome on iOS, which will have different support
-   * as it is actually Safari under the hood.
+   * This will also be `true` for Chrome on iOS, which will have different
+   * support as it is actually Safari under the hood.
    *
    * @static
    * @const
@@ -5230,7 +5303,8 @@
    * @return     {number}
    *             The time that offset at the specified index.
    *
-   * @deprecated rangeIndex must be set to a value, in the future this will throw an error.
+   * @deprecated rangeIndex must be set to a value, in the future this will
+   *     throw an error.
    * @throws     {Error} if rangeIndex is more than the length of ranges
    */
 
@@ -5380,14 +5454,16 @@
    * @file media-error.js
    */
   /**
-   * A Custom `MediaError` class which mimics the standard HTML5 `MediaError` class.
+   * A Custom `MediaError` class which mimics the standard HTML5 `MediaError`
+   * class.
    *
    * @param {number|string|Object|MediaError} value
    *        This can be of multiple types:
    *        - number: should be a standard error code
    *        - string: an error message (the code will be 0)
    *        - Object: arbitrary properties
-   *        - `MediaError` (native): used to populate a video.js `MediaError` object
+   *        - `MediaError` (native): used to populate a video.js `MediaError`
+   *     object
    *        - `MediaError` (video.js): will return itself if it's already a
    *          video.js `MediaError` object.
    *
@@ -5432,19 +5508,19 @@
 
   MediaError.prototype.code = 0;
   /**
-   * An optional message that to show with the error. Message is not part of the HTML5
-   * video spec but allows for more informative custom errors.
+   * An optional message that to show with the error. Message is not part of
+   * the HTML5 video spec but allows for more informative custom errors.
    *
    * @type {String}
    */
 
   MediaError.prototype.message = '';
   /**
-   * An optional status code that can be set by plugins to allow even more detail about
-   * the error. For example a plugin might provide a specific HTTP status code and an
-   * error message for that code. Then when the plugin gets that error this class will
-   * know how to display an error message for it. This allows a custom message to show
-   * up on the `Player` error overlay.
+   * An optional status code that can be set by plugins to allow even more
+   * detail about the error. For example a plugin might provide a specific HTTP
+   * status code and an error message for that code. Then when the plugin gets
+   * that error this class will know how to display an error message for it.
+   * This allows a custom message to show up on the `Player` error overlay.
    *
    * @type {Array}
    */
@@ -5466,7 +5542,8 @@
 
   MediaError.errorTypes = ['MEDIA_ERR_CUSTOM', 'MEDIA_ERR_ABORTED', 'MEDIA_ERR_NETWORK', 'MEDIA_ERR_DECODE', 'MEDIA_ERR_SRC_NOT_SUPPORTED', 'MEDIA_ERR_ENCRYPTED'];
   /**
-   * The default `MediaError` messages based on the {@link MediaError.errorTypes}.
+   * The default `MediaError` messages based on the {@link
+   * MediaError.errorTypes}.
    *
    * @type {Array}
    * @constant
@@ -5517,8 +5594,8 @@
   /**
    * Silence a Promise-like object.
    *
-   * This is useful for avoiding non-harmful, but potentially confusing "uncaught
-   * play promise" rejection error messages.
+   * This is useful for avoiding non-harmful, but potentially confusing
+   * "uncaught play promise" rejection error messages.
    *
    * @param  {Object} value
    *         An object that may or may not be `Promise`-like.
@@ -5531,15 +5608,15 @@
   }
 
   /**
-   * @file text-track-list-converter.js Utilities for capturing text track state and
-   * re-creating tracks based on a capture.
+   * @file text-track-list-converter.js Utilities for capturing text track
+   *     state and re-creating tracks based on a capture.
    *
    * @module text-track-list-converter
    */
 
   /**
-   * Examine a single {@link TextTrack} and return a JSON-compatible javascript object that
-   * represents the {@link TextTrack}'s state.
+   * Examine a single {@link TextTrack} and return a JSON-compatible javascript
+   * object that represents the {@link TextTrack}'s state.
    *
    * @param {TextTrack} track
    *        The text track to query.
@@ -5568,8 +5645,9 @@
     return ret;
   };
   /**
-   * Examine a {@link Tech} and return a JSON-compatible javascript array that represents the
-   * state of all {@link TextTrack}s currently configured. The return array is compatible with
+   * Examine a {@link Tech} and return a JSON-compatible javascript array that
+   * represents the state of all {@link TextTrack}s currently configured. The
+   * return array is compatible with
    * {@link text-track-list-converter:jsonToTextTracks}.
    *
    * @param {Tech} tech
@@ -5600,12 +5678,12 @@
     }).map(trackToJson_));
   };
   /**
-   * Create a set of remote {@link TextTrack}s on a {@link Tech} based on an array of javascript
-   * object {@link TextTrack} representations.
+   * Create a set of remote {@link TextTrack}s on a {@link Tech} based on an
+   * array of javascript object {@link TextTrack} representations.
    *
    * @param {Array} json
-   *        An array of `TextTrack` representation objects, like those that would be
-   *        produced by `textTracksToJson`.
+   *        An array of `TextTrack` representation objects, like those that
+   *     would be produced by `textTracksToJson`.
    *
    * @param {Tech} tech
    *        The `Tech` to create the `TextTrack`s on.
@@ -5636,7 +5714,8 @@
     // http://stackoverflow.com/questions/5603195/full-list-of-javascript-keycodes
 
     /**
-     * Conenience method returns corresponding value for given keyName or keyCode.
+     * Conenience method returns corresponding value for given keyName or
+     * keyCode.
      *
      * @param {Mixed} keyCode {Number} or keyName {String}
      * @return {Mixed}
@@ -5950,7 +6029,8 @@
       return MODAL_CLASS_NAME + " vjs-hidden " + _Component.prototype.buildCSSClass.call(this);
     }
     /**
-     * Returns the label string for this modal. Primarily used for accessibility.
+     * Returns the label string for this modal. Primarily used for
+     * accessibility.
      *
      * @return {string}
      *         the localized or raw label of this modal.
@@ -6249,7 +6329,8 @@
       return this.content_;
     }
     /**
-     * conditionally focus the modal dialog if focus was previously on the player.
+     * conditionally focus the modal dialog if focus was previously on the
+     * player.
      *
      * @private
      */
@@ -6354,7 +6435,8 @@
   Component.registerComponent('ModalDialog', ModalDialog);
 
   /**
-   * Common functionaliy between {@link TextTrackList}, {@link AudioTrackList}, and
+   * Common functionaliy between {@link TextTrackList}, {@link AudioTrackList},
+   * and
    * {@link VideoTrackList}
    *
    * @extends EventTarget
@@ -7179,7 +7261,8 @@
   };
 
   /**
-   * A Track class that contains all of the common functionality for {@link AudioTrack},
+   * A Track class that contains all of the common functionality for
+   * {@link AudioTrack},
    * {@link VideoTrack}, and {@link TextTrack}.
    *
    * > Note: This class should not be used directly
@@ -7240,7 +7323,8 @@
       /**
        * @memberof Track
        * @member {string} kind
-       *         The kind of track that this is. Cannot be changed after creation.
+       *         The kind of track that this is. Cannot be changed after
+       *     creation.
        * @instance
        *
        * @readonly
@@ -7258,8 +7342,8 @@
       /**
        * @memberof Track
        * @member {string} language
-       *         The two letter language code for this track. Cannot be changed after
-       *         creation.
+       *         The two letter language code for this track. Cannot be changed
+       *     after creation.
        * @instance
        *
        * @readonly
@@ -7398,8 +7482,8 @@
     return url;
   };
   /**
-   * Returns the extension of the passed file name. It will return an empty string
-   * if passed an invalid path.
+   * Returns the extension of the passed file name. It will return an empty
+   * string if passed an invalid path.
    *
    * @function
    * @param    {string} path
@@ -7474,9 +7558,9 @@
 
   /**
    * @license
-   * slighly modified parse-headers 2.0.2 <https://github.com/kesla/parse-headers/>
-   * Copyright (c) 2014 David Björklund
-   * Available under the MIT license
+   * slighly modified parse-headers 2.0.2
+   *     <https://github.com/kesla/parse-headers/> Copyright (c) 2014 David
+   *     Björklund Available under the MIT license
    * <https://github.com/kesla/parse-headers/blob/master/LICENCE>
    */
 
@@ -7898,8 +7982,8 @@
      *        A valid two character language code.
      *
      * @param {string} [options.srclang='']
-     *        A valid two character language code. An alternative, but deprioritized
-     *        version of `options.language`
+     *        A valid two character language code. An alternative, but
+     *     deprioritized version of `options.language`
      *
      * @param {string} [options.src]
      *        A url to TextTrack cues.
@@ -7960,8 +8044,8 @@
         /**
          * @memberof TextTrack
          * @member {boolean} default
-         *         If this track was set to be on or off by default. Cannot be changed after
-         *         creation.
+         *         If this track was set to be on or off by default. Cannot be
+         *     changed after creation.
          * @instance
          *
          * @readonly
@@ -7976,8 +8060,9 @@
         /**
          * @memberof TextTrack
          * @member {string} mode
-         *         Set the mode of this TextTrack to a valid {@link TextTrack~Mode}. Will
-         *         not be set if setting to an invalid mode.
+         *         Set the mode of this TextTrack to a valid
+         *     {@link TextTrack~Mode}. Will not be set if setting to an invalid
+         *     mode.
          * @instance
          *
          * @fires TextTrack#modechange
@@ -8042,7 +8127,8 @@
         /**
          * @memberof TextTrack
          * @member {TextTrackCueList} activeCues
-         *         The list text track cues that are currently active for this TextTrack.
+         *         The list text track cues that are currently active for this
+         *     TextTrack.
          * @instance
          */
         activeCues: {
@@ -8171,7 +8257,8 @@
     return TextTrack;
   }(Track);
   /**
-   * cuechange - One or more cues in the track have become active or stopped being active.
+   * cuechange - One or more cues in the track have become active or stopped
+   * being active.
    */
 
 
@@ -8180,8 +8267,9 @@
   };
 
   /**
-   * A representation of a single `AudioTrack`. If it is part of an {@link AudioTrackList}
-   * only one `AudioTrack` in the list will be enabled at a time.
+   * A representation of a single `AudioTrack`. If it is part of an
+   * {@link AudioTrackList} only one `AudioTrack` in the list will be enabled
+   * at a time.
    *
    * @see [Spec]{@link https://html.spec.whatwg.org/multipage/embedded-content.html#audiotrack}
    * @extends Track
@@ -8211,8 +8299,9 @@
      *        A valid two character language code.
      *
      * @param {boolean} [options.enabled]
-     *        If this track is the one that is currently playing. If this track is part of
-     *        an {@link AudioTrackList}, only one {@link AudioTrack} will be enabled.
+     *        If this track is the one that is currently playing. If this track
+     *     is part of an {@link AudioTrackList}, only one {@link AudioTrack}
+     *     will be enabled.
      */
     function AudioTrack(options) {
       var _this;
@@ -8230,7 +8319,8 @@
        * @memberof AudioTrack
        * @member {boolean} enabled
        *         If this `AudioTrack` is enabled or not. When setting this will
-       *         fire {@link AudioTrack#enabledchange} if the state of enabled is changed.
+       *         fire {@link AudioTrack#enabledchange} if the state of enabled
+       *     is changed.
        * @instance
        *
        * @fires VideoTrack#selectedchange
@@ -8323,8 +8413,10 @@
       /**
        * @memberof VideoTrack
        * @member {boolean} selected
-       *         If this `VideoTrack` is selected or not. When setting this will
-       *         fire {@link VideoTrack#selectedchange} if the state of selected changed.
+       *         If this `VideoTrack` is selected or not. When setting this
+       *     will
+       *         fire {@link VideoTrack#selectedchange} if the state of
+       *     selected changed.
        * @instance
        *
        * @fires VideoTrack#selectedchange
@@ -8342,8 +8434,9 @@
 
           selected = newSelected;
           /**
-           * An event that fires when selected changes on this track. This allows
-           * the VideoTrackList that holds this track to act accordingly.
+           * An event that fires when selected changes on this track. This
+           * allows the VideoTrackList that holds this track to act
+           * accordingly.
            *
            * > Note: This is not part of the spec! Native tracks will do
            *         this internally without an event.
@@ -8415,8 +8508,8 @@
      *        A valid two character language code.
      *
      * @param {string} [options.srclang='']
-     *        A valid two character language code. An alternative, but deprioritized
-     *        vesion of `options.language`
+     *        A valid two character language code. An alternative, but
+     *     deprioritized vesion of `options.language`
      *
      * @param {string} [options.src]
      *        A url to TextTrack cues.
@@ -10400,9 +10493,10 @@
   var browserIndex_3 = browserIndex.VTTRegion;
 
   /**
-   * An Object containing a structure like: `{src: 'url', type: 'mimetype'}` or string
-   * that just contains the src url alone.
-   * * `var SourceObject = {src: 'http://ex.com/video.mp4', type: 'video/mp4'};`
+   * An Object containing a structure like: `{src: 'url', type: 'mimetype'}` or
+   * string that just contains the src url alone.
+   * * `var SourceObject = {src: 'http://ex.com/video.mp4', type:
+   * 'video/mp4'};`
      * `var SourceString = 'http://example.com/some-video.mp4';`
    *
    * @typedef {Object|string} Tech~SourceObject
@@ -10423,7 +10517,8 @@
    *        An instance of the Tech class.
    *
    * @param {string} kind
-   *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or metadata)
+   *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or
+   *     metadata)
    *
    * @param {string} [label]
    *        Label to identify the text track
@@ -10599,7 +10694,8 @@
     ================================================================================ */
 
     /**
-     * Polyfill the `progress` event for browsers that don't support it natively.
+     * Polyfill the `progress` event for browsers that don't support it
+     * natively.
      *
      * @see {@link Tech#trackProgress}
      */
@@ -10623,9 +10719,9 @@
       this.off('durationchange', this.onDurationChange);
     }
     /**
-     * This is used to trigger a `progress` event when the buffered percent changes. It
-     * sets an interval function that will be called every 500 milliseconds to check if the
-     * buffer end percent has changed.
+     * This is used to trigger a `progress` event when the buffered percent
+     * changes. It sets an interval function that will be called every 500
+     * milliseconds to check if the buffer end percent has changed.
      *
      * > This function is called by {@link Tech#manualProgressOn}
      *
@@ -10689,8 +10785,8 @@
      * Get the percentage of the current video that is currently buffered.
      *
      * @return {number}
-     *         A number from 0 to 1 that represents the decimal percentage of the
-     *         video that is buffered.
+     *         A number from 0 to 1 that represents the decimal percentage of
+     *     the video that is buffered.
      *
      */
     ;
@@ -10701,7 +10797,8 @@
     /**
      * Turn off the polyfill for `progress` events that was created in
      * {@link Tech#manualProgressOn}
-     * Stop manually tracking progress events by clearing the interval that was set in
+     * Stop manually tracking progress events by clearing the interval that was
+     * set in
      * {@link Tech#trackProgress}.
      */
     ;
@@ -10734,7 +10831,8 @@
       this.off('pause', this.stopTrackingCurrentTime);
     }
     /**
-     * Sets up an interval function to track current time and trigger `timeupdate` every
+     * Sets up an interval function to track current time and trigger
+     * `timeupdate` every
      * 250 milliseconds.
      *
      * @listens Tech#play
@@ -10749,7 +10847,8 @@
 
       this.currentTimeInterval = this.setInterval(function () {
         /**
-         * Triggered at an interval of 250ms to indicated that time is passing in the video.
+         * Triggered at an interval of 250ms to indicated that time is passing
+         * in the video.
          *
          * @event Tech#timeupdate
          * @type {EventTarget~Event}
@@ -10762,7 +10861,8 @@
       }, 250);
     }
     /**
-     * Stop the interval function created in {@link Tech#trackCurrentTime} so that the
+     * Stop the interval function created in {@link Tech#trackCurrentTime} so
+     * that the
      * `timeupdate` event is no longer triggered.
      *
      * @listens {Tech#pause}
@@ -10781,7 +10881,8 @@
     }
     /**
      * Turn off all event polyfills, clear the `Tech`s {@link AudioTrackList},
-     * {@link VideoTrackList}, and {@link TextTrackList}, and dispose of this Tech.
+     * {@link VideoTrackList}, and {@link TextTrackList}, and dispose of this
+     * Tech.
      *
      * @fires Component#dispose
      */
@@ -10802,9 +10903,11 @@
       _Component.prototype.dispose.call(this);
     }
     /**
-     * Clear out a single `TrackList` or an array of `TrackLists` given their names.
+     * Clear out a single `TrackList` or an array of `TrackLists` given their
+     * names.
      *
-     * > Note: Techs without source handlers should call this between sources for `video`
+     * > Note: Techs without source handlers should call this between sources
+     * for `video`
      *         & `audio` tracks. You don't want to use them between tracks!
      *
      * @param {string[]|string} types
@@ -10849,7 +10952,8 @@
       }
     }
     /**
-     * Reset the tech, which will removes all sources and reset the internal readyState.
+     * Reset the tech, which will removes all sources and reset the internal
+     * readyState.
      *
      * @abstract
      */
@@ -10876,10 +10980,11 @@
       return this.error_;
     }
     /**
-     * Returns the `TimeRange`s that have been played through for the current source.
+     * Returns the `TimeRange`s that have been played through for the current
+     * source.
      *
-     * > NOTE: This implementation is incomplete. It does not track the played `TimeRange`.
-     *         It only checks whether the source has played at all or not.
+     * > NOTE: This implementation is incomplete. It does not track the played
+     * `TimeRange`. It only checks whether the source has played at all or not.
      *
      * @return {TimeRange}
      *         - A single time range if this video has played
@@ -10895,8 +11000,8 @@
       return createTimeRanges();
     }
     /**
-     * Causes a manual time update to occur if {@link Tech#manualTimeUpdatesOn} was
-     * previously called.
+     * Causes a manual time update to occur if {@link Tech#manualTimeUpdatesOn}
+     * was previously called.
      *
      * @fires Tech#timeupdate
      */
@@ -10919,10 +11024,12 @@
       }
     }
     /**
-     * Turn on listeners for {@link VideoTrackList}, {@link {AudioTrackList}, and
+     * Turn on listeners for {@link VideoTrackList}, {@link {AudioTrackList},
+     * and
      * {@link TextTrackList} events.
      *
-     * This adds {@link EventTarget~EventListeners} for `addtrack`, and  `removetrack`.
+     * This adds {@link EventTarget~EventListeners} for `addtrack`, and
+     * `removetrack`.
      *
      * @fires Tech#audiotrackchange
      * @fires Tech#videotrackchange
@@ -10934,21 +11041,24 @@
       var _this4 = this;
 
       /**
-        * Triggered when tracks are added or removed on the Tech {@link AudioTrackList}
+        * Triggered when tracks are added or removed on the Tech
+        * {@link AudioTrackList}
         *
         * @event Tech#audiotrackchange
         * @type {EventTarget~Event}
         */
 
       /**
-        * Triggered when tracks are added or removed on the Tech {@link VideoTrackList}
+        * Triggered when tracks are added or removed on the Tech
+        * {@link VideoTrackList}
         *
         * @event Tech#videotrackchange
         * @type {EventTarget~Event}
         */
 
       /**
-        * Triggered when tracks are added or removed on the Tech {@link TextTrackList}
+        * Triggered when tracks are added or removed on the Tech
+        * {@link TextTrackList}
         *
         * @event Tech#texttrackchange
         * @type {EventTarget~Event}
@@ -11097,7 +11207,8 @@
      * Create and returns a remote {@link TextTrack} object.
      *
      * @param {string} kind
-     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or metadata)
+     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or
+     *     metadata)
      *
      * @param {string} [label]
      *        Label to identify the text track
@@ -11124,10 +11235,12 @@
      * Tech in order to create native or custom TextTracks.
      *
      * @param {Object} options
-     *        The object should contain the options to initialize the TextTrack with.
+     *        The object should contain the options to initialize the TextTrack
+     *     with.
      *
      * @param {string} [options.kind]
-     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or metadata).
+     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or
+     *     metadata).
      *
      * @param {string} [options.label].
      *        Label to identify the text track
@@ -11149,22 +11262,24 @@
     /**
      * Creates a remote text track object and returns an html track element.
      *
-     * > Note: This can be an emulated {@link HTMLTrackElement} or a native one.
+     * > Note: This can be an emulated {@link HTMLTrackElement} or a native
+     * one.
      *
      * @param {Object} options
-     *        See {@link Tech#createRemoteTextTrack} for more detailed properties.
+     *        See {@link Tech#createRemoteTextTrack} for more detailed
+     *     properties.
      *
      * @param {boolean} [manualCleanup=true]
-     *        - When false: the TextTrack will be automatically removed from the video
-     *          element whenever the source changes
+     *        - When false: the TextTrack will be automatically removed from
+     *     the video element whenever the source changes
      *        - When True: The TextTrack will have to be cleaned up manually
      *
      * @return {HTMLTrackElement}
      *         An Html Track Element.
      *
-     * @deprecated The default functionality for this function will be equivalent
-     *             to "manualCleanup=false" in the future. The manualCleanup parameter will
-     *             also be removed.
+     * @deprecated The default functionality for this function will be
+     *     equivalent to "manualCleanup=false" in the future. The manualCleanup
+     *     parameter will also be removed.
      */
     ;
 
@@ -11212,8 +11327,8 @@
       this.autoRemoteTextTracks_.removeTrack(track);
     }
     /**
-     * Gets available media playback quality metrics as specified by the W3C's Media
-     * Playback Quality API.
+     * Gets available media playback quality metrics as specified by the W3C's
+     * Media Playback Quality API.
      *
      * @see [Spec]{@link https://wicg.github.io/media-playback-quality}
      *
@@ -11229,15 +11344,16 @@
     }
     /**
      * Attempt to create a floating video window always on top of other windows
-     * so that users may continue consuming media while they interact with other
+     * so that users may continue consuming media while they interact with
+     * other
      * content sites, or applications on their device.
      *
      * @see [Spec]{@link https://wicg.github.io/picture-in-picture}
      *
      * @return {Promise|undefined}
-     *         A promise with a Picture-in-Picture window if the browser supports
-     *         Promises (or one was passed in as an option). It returns undefined
-     *         otherwise.
+     *         A promise with a Picture-in-Picture window if the browser
+     *     supports Promises (or one was passed in as an option). It returns
+     *     undefined otherwise.
      *
      * @abstract
      */
@@ -11259,7 +11375,8 @@
 
     _proto.setPoster = function setPoster() {}
     /**
-     * A method to check for the presence of the 'playsinline' <video> attribute.
+     * A method to check for the presence of the 'playsinline' <video>
+     * attribute.
      *
      * @abstract
      */
@@ -11277,8 +11394,8 @@
     /**
      * Attempt to force override of native audio tracks.
      *
-     * @param {boolean} override - If set to true native audio will be overridden,
-     * otherwise native audio will potentially be used.
+     * @param {boolean} override - If set to true native audio will be
+     *     overridden, otherwise native audio will potentially be used.
      *
      * @abstract
      */
@@ -11288,8 +11405,8 @@
     /**
      * Attempt to force override of native video tracks.
      *
-     * @param {boolean} override - If set to true native video will be overridden,
-     * otherwise native video will potentially be used.
+     * @param {boolean} override - If set to true native video will be
+     *     overridden, otherwise native video will potentially be used.
      *
      * @abstract
      */
@@ -11409,7 +11526,8 @@
      *        `camelCase` or `TitleCase` name of the Tech to get
      *
      * @return {Tech|undefined}
-     *         The `Tech` or undefined if there was no tech with the name requested.
+     *         The `Tech` or undefined if there was no tech with the name
+     *     requested.
      */
     ;
 
@@ -11526,8 +11644,8 @@
 
   Tech.prototype.featuresFullscreenResize = false;
   /**
-   * Boolean indicating whether the `Tech` supports changing the speed at which the video
-   * plays. Examples:
+   * Boolean indicating whether the `Tech` supports changing the speed at which
+   * the video plays. Examples:
    *   - Set player to play 2x (twice) as fast
    *   - Set player to play 0.5x (half) as fast
    *
@@ -11537,8 +11655,9 @@
 
   Tech.prototype.featuresPlaybackRate = false;
   /**
-   * Boolean indicating whether the `Tech` supports the `progress` event. This is currently
-   * not triggered by video-js-swf. This will be used to determine if
+   * Boolean indicating whether the `Tech` supports the `progress` event. This
+   * is currently not triggered by video-js-swf. This will be used to determine
+   * if
    * {@link Tech#manualProgressOn} should be called.
    *
    * @type {boolean}
@@ -11549,9 +11668,10 @@
   /**
    * Boolean indicating whether the `Tech` supports the `sourceset` event.
    *
-   * A tech should set this to `true` and then use {@link Tech#triggerSourceset}
-   * to trigger a {@link Tech#event:sourceset} at the earliest time after getting
-   * a new source.
+   * A tech should set this to `true` and then use {@link
+   * Tech#triggerSourceset}
+   * to trigger a {@link Tech#event:sourceset} at the earliest time after
+   * getting a new source.
    *
    * @type {boolean}
    * @default
@@ -11559,8 +11679,9 @@
 
   Tech.prototype.featuresSourceset = false;
   /**
-   * Boolean indicating whether the `Tech` supports the `timeupdate` event. This is currently
-   * not triggered by video-js-swf. This will be used to determine if
+   * Boolean indicating whether the `Tech` supports the `timeupdate` event.
+   * This is currently not triggered by video-js-swf. This will be used to
+   * determine if
    * {@link Tech#manualTimeUpdates} should be called.
    *
    * @type {boolean}
@@ -11570,7 +11691,8 @@
   Tech.prototype.featuresTimeupdateEvents = false;
   /**
    * Boolean indicating whether the `Tech` supports the native `TextTrack`s.
-   * This will help us integrate with native `TextTrack`s if the browser supports them.
+   * This will help us integrate with native `TextTrack`s if the browser
+   * supports them.
    *
    * @type {boolean}
    * @default
@@ -11581,8 +11703,8 @@
    * A functional mixin for techs that want to use the Source Handler pattern.
    * Source handlers are scripts for handling specific formats.
    * The source handler pattern is used for adaptive formats (HLS, DASH) that
-   * manually load video data and feed it into a Source Buffer (Media Source Extensions)
-   * Example: `Tech.withSourceHandlers.call(MyTech);`
+   * manually load video data and feed it into a Source Buffer (Media Source
+   * Extensions) Example: `Tech.withSourceHandlers.call(MyTech);`
    *
    * @param {Tech} _Tech
    *        The tech to add source handler functions to.
@@ -11702,15 +11824,17 @@
 
     var deferrable = ['seekable', 'seeking', 'duration'];
     /**
-     * A wrapper around {@link Tech#seekable} that will call a `SourceHandler`s seekable
-     * function if it exists, with a fallback to the Techs seekable function.
+     * A wrapper around {@link Tech#seekable} that will call a `SourceHandler`s
+     * seekable function if it exists, with a fallback to the Techs seekable
+     * function.
      *
      * @method _Tech.seekable
      */
 
     /**
-     * A wrapper around {@link Tech#duration} that will call a `SourceHandler`s duration
-     * function if it exists, otherwise it will fallback to the techs duration function.
+     * A wrapper around {@link Tech#duration} that will call a `SourceHandler`s
+     * duration function if it exists, otherwise it will fallback to the techs
+     * duration function.
      *
      * @method _Tech.duration
      */
@@ -11764,7 +11888,8 @@
       this.one('dispose', this.disposeSourceHandler);
     };
     /**
-     * Clean up any existing SourceHandlers and listeners when the Tech is disposed.
+     * Clean up any existing SourceHandlers and listeners when the Tech is
+     * disposed.
      *
      * @listens Tech#dispose
      */
@@ -11870,7 +11995,8 @@
     }, 1);
   }
   /**
-   * When the tech is set, passes the tech to each middleware's `setTech` method.
+   * When the tech is set, passes the tech to each middleware's `setTech`
+   * method.
    *
    * @param {Object[]} middleware
    *        An array of middleware instances.
@@ -11902,6 +12028,7 @@
    */
 
   function get(middleware, tech, method) {
+    //console.log(method);
     return middleware.reduceRight(middlewareIterator(method), tech[method]());
   }
   /**
@@ -11925,6 +12052,7 @@
    */
 
   function set(middleware, tech, method, arg) {
+    console.log(method);
     return tech[method](middleware.reduce(middlewareIterator(method), arg));
   }
   /**
@@ -12294,8 +12422,8 @@
   }
 
   /**
-   * The `MediaLoader` is the `Component` that decides which playback technology to load
-   * when a player is initialized.
+   * The `MediaLoader` is the `Component` that decides which playback
+   * technology to load when a player is initialized.
    *
    * @extends Component
    */
@@ -12481,7 +12609,8 @@
       return this.controlTextEl_;
     }
     /**
-     * Get or set the localize text to use for the controls on the `ClickableComponent`.
+     * Get or set the localize text to use for the controls on the
+     * `ClickableComponent`.
      *
      * @param {string} [text]
      *        Control text for element.
@@ -12583,7 +12712,8 @@
      * Event handler that is called when a `ClickableComponent` receives a
      * `keydown` event.
      *
-     * By default, if the key is Space or Enter, it will trigger a `click` event.
+     * By default, if the key is Space or Enter, it will trigger a `click`
+     * event.
      *
      * @param {EventTarget~Event} event
      *        The `keydown` event that caused this function to be called.
@@ -12612,7 +12742,8 @@
   Component.registerComponent('ClickableComponent', ClickableComponent);
 
   /**
-   * A `ClickableComponent` that handles showing the poster image for the player.
+   * A `ClickableComponent` that handles showing the poster image for the
+   * player.
    *
    * @extends ClickableComponent
    */
@@ -12670,7 +12801,8 @@
       return el;
     }
     /**
-     * An {@link EventTarget~EventListener} for {@link Player#posterchange} events.
+     * An {@link EventTarget~EventListener} for {@link Player#posterchange}
+     * events.
      *
      * @listens Player#posterchange
      *
@@ -12709,8 +12841,10 @@
       this.el_.style.backgroundImage = backgroundImage;
     }
     /**
-     * An {@link EventTarget~EventListener} for clicks on the `PosterImage`. See
-     * {@link ClickableComponent#handleClick} for instances where this will be triggered.
+     * An {@link EventTarget~EventListener} for clicks on the `PosterImage`.
+     * See
+     * {@link ClickableComponent#handleClick} for instances where this will be
+     * triggered.
      *
      * @listens tap
      * @listens click
@@ -12786,8 +12920,8 @@
     return 'rgba(' + parseInt(hex.slice(0, 2), 16) + ',' + parseInt(hex.slice(2, 4), 16) + ',' + parseInt(hex.slice(4, 6), 16) + ',' + opacity + ')';
   }
   /**
-   * Try to update the style of a DOM element. Some style changes will throw an error,
-   * particularly in IE8. Those should be noops.
+   * Try to update the style of a DOM element. Some style changes will throw an
+   * error, particularly in IE8. Those should be noops.
    *
    * @param {Element} el
    *        The DOM element to be styled.
@@ -12928,8 +13062,8 @@
       }
     }
     /**
-     * Turn display of {@link TextTrack}'s from the current state into the other state.
-     * There are only two states:
+     * Turn display of {@link TextTrack}'s from the current state into the
+     * other state. There are only two states:
      * - 'shown'
      * - 'hidden'
      *
@@ -12971,8 +13105,9 @@
       }
     }
     /**
-     * Update the displayed TextTrack when a either a {@link Player#texttrackchange} or
-     * a {@link Player#fullscreenchange} is fired.
+     * Update the displayed TextTrack when a either a
+     * {@link Player#texttrackchange} or a {@link Player#fullscreenchange} is
+     * fired.
      *
      * @listens Player#texttrackchange
      * @listens Player#fullscreenchange
@@ -13035,7 +13170,8 @@
       }
     }
     /**
-     * Style {@Link TextTrack} activeCues according to {@Link TextTrackSettings}.
+     * Style {@Link TextTrack} activeCues according to {@Link
+     * TextTrackSettings}.
      *
      * @param {TextTrack} track
      *        Text track object containing active cues to style.
@@ -13269,11 +13405,13 @@
      *        The name or instance of a child to add.
      *
      * @param {Object} [options={}]
-     *        The key/value store of options that will get passed to children of
+     *        The key/value store of options that will get passed to children
+     *     of
      *        the child.
      *
      * @return {Component}
-     *         The `Component` that gets added as a child. When using a string the
+     *         The `Component` that gets added as a child. When using a string
+     *     the
      *         `Component` will get created by this process.
      *
      * @deprecated since version 5
@@ -13291,7 +13429,8 @@
       return Component.prototype.addChild.call(this, child, options);
     }
     /**
-     * Enable the `Button` element so that it can be activated or clicked. Use this with
+     * Enable the `Button` element so that it can be activated or clicked. Use
+     * this with
      * {@link Button#disable}.
      */
     ;
@@ -13302,7 +13441,8 @@
       this.el_.removeAttribute('disabled');
     }
     /**
-     * Disable the `Button` element so that it cannot be activated or clicked. Use this with
+     * Disable the `Button` element so that it cannot be activated or clicked.
+     * Use this with
      * {@link Button#enable}.
      */
     ;
@@ -13313,8 +13453,8 @@
       this.el_.setAttribute('disabled', 'disabled');
     }
     /**
-     * This gets called when a `Button` has focus and `keydown` is triggered via a key
-     * press.
+     * This gets called when a `Button` has focus and `keydown` is triggered
+     * via a key press.
      *
      * @param {EventTarget~Event} event
      *        The event that caused this function to get called.
@@ -13344,7 +13484,8 @@
   Component.registerComponent('Button', Button);
 
   /**
-   * The initial play button that shows before the video has played. The hiding of the
+   * The initial play button that shows before the video has played. The hiding
+   * of the
    * `BigPlayButton` get done via CSS and `Player` states.
    *
    * @extends Button
@@ -13369,7 +13510,8 @@
      * Builds the default DOM `className`.
      *
      * @return {string}
-     *         The DOM `className` for this object. Always returns 'vjs-big-play-button'.
+     *         The DOM `className` for this object. Always returns
+     *     'vjs-big-play-button'.
      */
 
 
@@ -13379,12 +13521,13 @@
       return 'vjs-big-play-button';
     }
     /**
-     * This gets called when a `BigPlayButton` "clicked". See {@link ClickableComponent}
-     * for more detailed information on what a click can be.
+     * This gets called when a `BigPlayButton` "clicked". See
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} event
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -13440,7 +13583,8 @@
     return BigPlayButton;
   }(Button);
   /**
-   * The text that should display over the `BigPlayButton`s controls. Added to for localization.
+   * The text that should display over the `BigPlayButton`s controls. Added to
+   * for localization.
    *
    * @type {string}
    * @private
@@ -13499,8 +13643,8 @@
      * this will be triggered
      *
      * @param {EventTarget~Event} event
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -13610,11 +13754,12 @@
     }
     /**
      * This gets called when an `PlayToggle` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -13629,8 +13774,8 @@
       }
     }
     /**
-     * This gets called once after the video has ended and the user seeks so that
-     * we can change the replay button back to a play button.
+     * This gets called once after the video has ended and the user seeks so
+     * that we can change the replay button back to a play button.
      *
      * @param {EventTarget~Event} [event]
      *        The event that caused this function to run.
@@ -13703,7 +13848,8 @@
     return PlayToggle;
   }(Button);
   /**
-   * The text that should display over the `PlayToggle`s controls. Added for localization.
+   * The text that should display over the `PlayToggle`s controls. Added for
+   * localization.
    *
    * @type {string}
    * @private
@@ -13760,7 +13906,8 @@
 
   var implementation = defaultImplementation;
   /**
-   * Replaces the default formatTime implementation with a custom implementation.
+   * Replaces the default formatTime implementation with a custom
+   * implementation.
    *
    * @param {Function} customImplementation
    *        A function which will be used in place of the default formatTime
@@ -13943,12 +14090,14 @@
 
   TimeDisplay.prototype.labelText_ = 'Time';
   /**
-   * The text that should display over the `TimeDisplay`s controls. Added to for localization.
+   * The text that should display over the `TimeDisplay`s controls. Added to
+   * for localization.
    *
    * @type {string}
    * @private
    *
-   * @deprecated in v7; controlText_ is not used in non-active display Components
+   * @deprecated in v7; controlText_ is not used in non-active display
+   *     Components
    */
 
   TimeDisplay.prototype.controlText_ = 'Time';
@@ -14015,12 +14164,14 @@
 
   CurrentTimeDisplay.prototype.labelText_ = 'Current Time';
   /**
-   * The text that should display over the `CurrentTimeDisplay`s controls. Added to for localization.
+   * The text that should display over the `CurrentTimeDisplay`s controls.
+   * Added to for localization.
    *
    * @type {string}
    * @private
    *
-   * @deprecated in v7; controlText_ is not used in non-active display Components
+   * @deprecated in v7; controlText_ is not used in non-active display
+   *     Components
    */
 
   CurrentTimeDisplay.prototype.controlText_ = 'Current Time';
@@ -14084,8 +14235,8 @@
      * Update duration time display.
      *
      * @param {EventTarget~Event} [event]
-     *        The `durationchange`, `timeupdate`, or `loadedmetadata` event that caused
-     *        this function to be called.
+     *        The `durationchange`, `timeupdate`, or `loadedmetadata` event
+     *     that caused this function to be called.
      *
      * @listens Player#durationchange
      * @listens Player#timeupdate
@@ -14110,12 +14261,14 @@
 
   DurationDisplay.prototype.labelText_ = 'Duration';
   /**
-   * The text that should display over the `DurationDisplay`s controls. Added to for localization.
+   * The text that should display over the `DurationDisplay`s controls. Added
+   * to for localization.
    *
    * @type {string}
    * @private
    *
-   * @deprecated in v7; controlText_ is not used in non-active display Components
+   * @deprecated in v7; controlText_ is not used in non-active display
+   *     Components
    */
 
   DurationDisplay.prototype.controlText_ = 'Duration';
@@ -14205,7 +14358,8 @@
       return 'vjs-remaining-time';
     }
     /**
-     * Create the `Component`'s DOM element with the "minus" characted prepend to the time
+     * Create the `Component`'s DOM element with the "minus" characted prepend
+     * to the time
      *
      * @return {Element}
      *         The element that was created.
@@ -14224,7 +14378,8 @@
      * Update remaining time display.
      *
      * @param {EventTarget~Event} [event]
-     *        The `timeupdate` or `durationchange` event that caused this to run.
+     *        The `timeupdate` or `durationchange` event that caused this to
+     *     run.
      *
      * @listens Player#timeupdate
      * @listens Player#durationchange
@@ -14253,7 +14408,8 @@
     return RemainingTimeDisplay;
   }(TimeDisplay);
   /**
-   * The text that is added to the `RemainingTimeDisplay` for screen reader users.
+   * The text that is added to the `RemainingTimeDisplay` for screen reader
+   * users.
    *
    * @type {string}
    * @private
@@ -14262,12 +14418,14 @@
 
   RemainingTimeDisplay.prototype.labelText_ = 'Remaining Time';
   /**
-   * The text that should display over the `RemainingTimeDisplay`s controls. Added to for localization.
+   * The text that should display over the `RemainingTimeDisplay`s controls.
+   * Added to for localization.
    *
    * @type {string}
    * @private
    *
-   * @deprecated in v7; controlText_ is not used in non-active display Components
+   * @deprecated in v7; controlText_ is not used in non-active display
+   *     Components
    */
 
   RemainingTimeDisplay.prototype.controlText_ = 'Remaining Time';
@@ -14335,11 +14493,12 @@
       _Component.prototype.dispose.call(this);
     }
     /**
-     * Check the duration to see if the LiveDisplay should be showing or not. Then show/hide
-     * it accordingly
+     * Check the duration to see if the LiveDisplay should be showing or not.
+     * Then show/hide it accordingly
      *
      * @param {EventTarget~Event} [event]
-     *        The {@link Player#durationchange} event that caused this function to run.
+     *        The {@link Player#durationchange} event that caused this function
+     *     to run.
      *
      * @listens Player#durationchange
      */
@@ -14668,14 +14827,16 @@
       this.handleMouseMove(event);
     }
     /**
-     * Handle the `mousemove`, `touchmove`, and `mousedown` events on this `Slider`.
-     * The `mousemove` and `touchmove` events will only only trigger this function during
-     * `mousedown` and `touchstart`. This is due to {@link Slider#handleMouseDown} and
+     * Handle the `mousemove`, `touchmove`, and `mousedown` events on this
+     * `Slider`. The `mousemove` and `touchmove` events will only only trigger
+     * this function during
+     * `mousedown` and `touchstart`. This is due to
+     * {@link Slider#handleMouseDown} and
      * {@link Slider#handleMouseUp}.
      *
      * @param {EventTarget~Event} event
-     *        `mousedown`, `mousemove`, `touchstart`, or `touchmove` event that triggered
-     *        this function
+     *        `mousedown`, `mousemove`, `touchstart`, or `touchmove` event that
+     *     triggered this function
      *
      * @listens mousemove
      * @listens touchmove
@@ -14785,8 +14946,9 @@
       return position.x;
     }
     /**
-     * Handle a `keydown` event on the `Slider`. Watches for left, rigth, up, and down
-     * arrow keys. This function will only be called when the slider has focus. See
+     * Handle a `keydown` event on the `Slider`. Watches for left, rigth, up,
+     * and down arrow keys. This function will only be called when the slider
+     * has focus. See
      * {@link Slider#handleFocus} and {@link Slider#handleBlur}.
      *
      * @param {EventTarget~Event} event
@@ -15124,7 +15286,8 @@
      *
      * @param {Function} cb
      *        A function that will be called during the request animation frame
-     *        for tooltips that need to do additional animations from the default
+     *        for tooltips that need to do additional animations from the
+     *     default
      */
     ;
 
@@ -15650,8 +15813,10 @@
 
       this.player_.scrubbing(false);
       /**
-       * Trigger timeupdate because we're done seeking and the time has changed.
-       * This is particularly useful for if the player is paused to time the time displays.
+       * Trigger timeupdate because we're done seeking and the time has
+       * changed.
+       * This is particularly useful for if the player is paused to time the
+       * time displays.
        *
        * @event Tech#timeupdate
        * @type {EventTarget~Event}
@@ -15864,7 +16029,8 @@
       }
     }
     /**
-     * A throttled version of the {@link ProgressControl#handleMouseSeek} listener.
+     * A throttled version of the {@link ProgressControl#handleMouseSeek}
+     * listener.
      *
      * @method ProgressControl#throttledHandleMouseSeek
      * @param {EventTarget~Event} event
@@ -16059,11 +16225,13 @@
       return "vjs-picture-in-picture-control " + _Button.prototype.buildCSSClass.call(this);
     }
     /**
-     * Handles enterpictureinpicture and leavepictureinpicture on the player and change control text accordingly.
+     * Handles enterpictureinpicture and leavepictureinpicture on the player
+     * and change control text accordingly.
      *
      * @param {EventTarget~Event} [event]
-     *        The {@link Player#enterpictureinpicture} or {@link Player#leavepictureinpicture} event that caused this function to be
-     *        called.
+     *        The {@link Player#enterpictureinpicture} or
+     *     {@link Player#leavepictureinpicture} event that caused this function
+     *     to be called.
      *
      * @listens Player#enterpictureinpicture
      * @listens Player#leavepictureinpicture
@@ -16079,11 +16247,12 @@
     }
     /**
      * This gets called when an `PictureInPictureToggle` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -16101,7 +16270,8 @@
     return PictureInPictureToggle;
   }(Button);
   /**
-   * The text that should display over the `PictureInPictureToggle`s controls. Added for localization.
+   * The text that should display over the `PictureInPictureToggle`s controls.
+   * Added for localization.
    *
    * @type {string}
    * @private
@@ -16158,11 +16328,12 @@
       return "vjs-fullscreen-control " + _Button.prototype.buildCSSClass.call(this);
     }
     /**
-     * Handles fullscreenchange on the player and change control text accordingly.
+     * Handles fullscreenchange on the player and change control text
+     * accordingly.
      *
      * @param {EventTarget~Event} [event]
-     *        The {@link Player#fullscreenchange} event that caused this function to be
-     *        called.
+     *        The {@link Player#fullscreenchange} event that caused this
+     *     function to be called.
      *
      * @listens Player#fullscreenchange
      */
@@ -16177,11 +16348,12 @@
     }
     /**
      * This gets called when an `FullscreenToggle` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -16199,7 +16371,8 @@
     return FullscreenToggle;
   }(Button);
   /**
-   * The text that should display over the `FullscreenToggle`s controls. Added for localization.
+   * The text that should display over the `FullscreenToggle`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -16272,7 +16445,8 @@
   Component.registerComponent('VolumeLevel', VolumeLevel);
 
   /**
-   * The bar that contains the volume level and can be clicked on to adjust the level
+   * The bar that contains the volume level and can be clicked on to adjust the
+   * level
    *
    * @extends Slider
    */
@@ -16462,7 +16636,8 @@
     barName: 'volumeLevel'
   };
   /**
-   * Call the update event for this Slider when this event happens on the player.
+   * Call the update event for this Slider when this event happens on the
+   * player.
    *
    * @type {string}
    */
@@ -16694,11 +16869,12 @@
     }
     /**
      * This gets called when an `MuteToggle` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -16793,7 +16969,8 @@
     return MuteToggle;
   }(Button);
   /**
-   * The text that should display over the `MuteToggle`s controls. Added for localization.
+   * The text that should display over the `MuteToggle`s controls. Added for
+   * localization.
    *
    * @type {string}
    * @private
@@ -16942,8 +17119,8 @@
       _Component.prototype.dispose.call(this);
     }
     /**
-     * Handles `keyup` events on the `VolumeControl`, looking for ESC, which closes
-     * the volume panel and sets focus on `MuteToggle`.
+     * Handles `keyup` events on the `VolumeControl`, looking for ESC, which
+     * closes the volume panel and sets focus on `MuteToggle`.
      *
      * @param {EventTarget~Event} event
      *        The `keyup` event that caused this function to be called.
@@ -16958,8 +17135,8 @@
       }
     }
     /**
-     * This gets called when a `VolumePanel` gains hover via a `mouseover` event.
-     * Turns on listening for `mouseover` event. When they happen it
+     * This gets called when a `VolumePanel` gains hover via a `mouseover`
+     * event. Turns on listening for `mouseover` event. When they happen it
      * calls `this.handleMouseOver`.
      *
      * @param {EventTarget~Event} event
@@ -16990,8 +17167,8 @@
       off(document, 'keyup', bind(this, this.handleKeyPress));
     }
     /**
-     * Handles `keyup` event on the document or `keydown` event on the `VolumePanel`,
-     * looking for ESC, which hides the `VolumeControl`.
+     * Handles `keyup` event on the document or `keydown` event on the
+     * `VolumePanel`, looking for ESC, which hides the `VolumeControl`.
      *
      * @param {EventTarget~Event} event
      *        The keypress that triggered this event.
@@ -17229,7 +17406,8 @@
       }
     }
     /**
-     * Handle a `keydown` event on this menu. This listener is added in the constructor.
+     * Handle a `keydown` event on this menu. This listener is added in the
+     * constructor.
      *
      * @param {EventTarget~Event} event
      *        A `keydown` event that happened on the menu.
@@ -17427,9 +17605,10 @@
         menuButton: this
       });
       /**
-       * Hide the menu if the number of items is less than or equal to this threshold. This defaults
-       * to 0 and whenever we add items which can be hidden to the menu we'll increment it. We list
-       * it here because every time we run `createMenu` we need to reset the value.
+       * Hide the menu if the number of items is less than or equal to this
+       * threshold. This defaults to 0 and whenever we add items which can be
+       * hidden to the menu we'll increment it. We list it here because every
+       * time we run `createMenu` we need to reset the value.
        *
        * @protected
        * @type {Number}
@@ -17523,7 +17702,8 @@
       return "vjs-menu-button " + menuButtonClass + " " + _Component.prototype.buildCSSClass.call(this);
     }
     /**
-     * Get or set the localized control text that will be used for accessibility.
+     * Get or set the localized control text that will be used for
+     * accessibility.
      *
      * > NOTE: This will come from the internal `menuButton_` element.
      *
@@ -17557,11 +17737,12 @@
     }
     /**
      * Handle a click on a `MenuButton`.
-     * See {@link ClickableComponent#handleClick} for instances where this is called.
+     * See {@link ClickableComponent#handleClick} for instances where this is
+     * called.
      *
      * @param {EventTarget~Event} event
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -17607,7 +17788,8 @@
     }
     /**
      * Handle tab, escape, down arrow, and up arrow keys for `MenuButton`. See
-     * {@link ClickableComponent#handleKeyDown} for instances where this is called.
+     * {@link ClickableComponent#handleKeyDown} for instances where this is
+     * called.
      *
      * @param {EventTarget~Event} event
      *        The `keydown` event that caused this function to be called.
@@ -17638,8 +17820,8 @@
       }
     }
     /**
-     * Handle a `keyup` event on a `MenuButton`. The listener for this is added in
-     * the constructor.
+     * Handle a `keyup` event on a `MenuButton`. The listener for this is added
+     * in the constructor.
      *
      * @param {EventTarget~Event} event
      *        Key press event
@@ -17755,7 +17937,8 @@
   Component.registerComponent('MenuButton', MenuButton);
 
   /**
-   * The base class for buttons that toggle specific  track types (e.g. subtitles).
+   * The base class for buttons that toggle specific  track types (e.g.
+   * subtitles).
    *
    * @extends MenuButton
    */
@@ -17812,9 +17995,10 @@
    */
 
   /**
-    * All keys used for operation of a menu (`MenuButton`, `Menu`, and `MenuItem`)
-    * Note that 'Enter' and 'Space' are not included here (otherwise they would
-    * prevent the `MenuButton` and `MenuItem` from being keyboard-clickable)
+    * All keys used for operation of a menu (`MenuButton`, `Menu`, and
+    * `MenuItem`) Note that 'Enter' and 'Space' are not included here
+    * (otherwise they would prevent the `MenuButton` and `MenuItem` from being
+    * keyboard-clickable)
     * @typedef MenuKeys
     * @array
     */
@@ -17893,7 +18077,8 @@
     }
     /**
      * Ignore keys which are used by the menu, but pass any other ones up. See
-     * {@link ClickableComponent#handleKeyDown} for instances where this is called.
+     * {@link ClickableComponent#handleKeyDown} for instances where this is
+     * called.
      *
      * @param {EventTarget~Event} event
      *        The `keydown` event that caused this function to be called.
@@ -17912,11 +18097,12 @@
     }
     /**
      * Any click on a `MenuItem` puts it into the selected state.
-     * See {@link ClickableComponent#handleClick} for instances where this is called.
+     * See {@link ClickableComponent#handleClick} for instances where this is
+     * called.
      *
      * @param {EventTarget~Event} event
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -17959,7 +18145,8 @@
   Component.registerComponent('MenuItem', MenuItem);
 
   /**
-   * The specific menu item type for selecting a language within a text track kind
+   * The specific menu item type for selecting a language within a text track
+   * kind
    *
    * @extends MenuItem
    */
@@ -18052,11 +18239,12 @@
     }
     /**
      * This gets called when an `TextTrackMenuItem` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} event
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -18249,7 +18437,8 @@
   Component.registerComponent('OffTextTrackMenuItem', OffTextTrackMenuItem);
 
   /**
-   * The base class for buttons that toggle specific text track types (e.g. subtitles)
+   * The base class for buttons that toggle specific text track types (e.g.
+   * subtitles)
    *
    * @extends MenuButton
    */
@@ -18384,11 +18573,12 @@
     }
     /**
      * This gets called when an `ChaptersTrackMenuItem` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -18493,8 +18683,8 @@
      * Set the currently selected track for the chapters button.
      *
      * @param {TextTrack} track
-     *        The new track to select. Nothing will change if this is the currently selected
-     *        track.
+     *        The new track to select. Nothing will change if this is the
+     *     currently selected track.
      */
     ;
 
@@ -18551,8 +18741,9 @@
       }
     }
     /**
-     * Get the caption for the ChaptersButton based on the track label. This will also
-     * use the current tracks localized kind as a fallback if a label does not exist.
+     * Get the caption for the ChaptersButton based on the track label. This
+     * will also use the current tracks localized kind as a fallback if a label
+     * does not exist.
      *
      * @return {string}
      *         The tracks current label or the localized track kind.
@@ -18623,7 +18814,8 @@
 
   ChaptersButton.prototype.kind_ = 'chapters';
   /**
-   * The text that should display over the `ChaptersButton`s controls. Added for localization.
+   * The text that should display over the `ChaptersButton`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -18729,7 +18921,8 @@
 
   DescriptionsButton.prototype.kind_ = 'descriptions';
   /**
-   * The text that should display over the `DescriptionsButton`s controls. Added for localization.
+   * The text that should display over the `DescriptionsButton`s controls.
+   * Added for localization.
    *
    * @type {string}
    * @private
@@ -18794,7 +18987,8 @@
 
   SubtitlesButton.prototype.kind_ = 'subtitles';
   /**
-   * The text that should display over the `SubtitlesButton`s controls. Added for localization.
+   * The text that should display over the `SubtitlesButton`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -18847,11 +19041,12 @@
     }
     /**
      * This gets called when an `CaptionSettingsMenuItem` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -18945,7 +19140,8 @@
 
   CaptionsButton.prototype.kind_ = 'captions';
   /**
-   * The text that should display over the `CaptionsButton`s controls. Added for localization.
+   * The text that should display over the `CaptionsButton`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -19153,12 +19349,13 @@
       return el;
     }
     /**
-     * This gets called when an `AudioTrackMenuItem is "clicked". See {@link ClickableComponent}
-     * for more detailed information on what a click can be.
+     * This gets called when an `AudioTrackMenuItem is "clicked". See
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -19276,7 +19473,8 @@
     return AudioTrackButton;
   }(TrackButton);
   /**
-   * The text that should display over the `AudioTrackButton`s controls. Added for localization.
+   * The text that should display over the `AudioTrackButton`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -19326,11 +19524,12 @@
     }
     /**
      * This gets called when an `PlaybackRateMenuItem` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -19361,7 +19560,8 @@
     return PlaybackRateMenuItem;
   }(MenuItem);
   /**
-   * The text that should display over the `PlaybackRateMenuItem`s controls. Added for localization.
+   * The text that should display over the `PlaybackRateMenuItem`s controls.
+   * Added for localization.
    *
    * @type {string}
    * @private
@@ -19480,11 +19680,12 @@
     }
     /**
      * This gets called when an `PlaybackRateMenuButton` is "clicked". See
-     * {@link ClickableComponent} for more detailed information on what a click can be.
+     * {@link ClickableComponent} for more detailed information on what a click
+     * can be.
      *
      * @param {EventTarget~Event} [event]
-     *        The `keydown`, `tap`, or `click` event that caused this function to be
-     *        called.
+     *        The `keydown`, `tap`, or `click` event that caused this function
+     *     to be called.
      *
      * @listens tap
      * @listens click
@@ -19531,7 +19732,8 @@
       return this.player().tech_ && this.player().tech_.featuresPlaybackRate && this.playbackRates() && this.playbackRates().length > 0;
     }
     /**
-     * Hide playback rate controls when they're no playback rate options to select
+     * Hide playback rate controls when they're no playback rate options to
+     * select
      *
      * @param {EventTarget~Event} [event]
      *        The event that caused this function to run.
@@ -19566,7 +19768,8 @@
     return PlaybackRateMenuButton;
   }(MenuButton);
   /**
-   * The text that should display over the `FullscreenToggle`s controls. Added for localization.
+   * The text that should display over the `FullscreenToggle`s controls. Added
+   * for localization.
    *
    * @type {string}
    * @private
@@ -19577,8 +19780,9 @@
   Component.registerComponent('PlaybackRateMenuButton', PlaybackRateMenuButton);
 
   /**
-   * Just an empty spacer element that can be used as an append point for plugins, etc.
-   * Also can be used to create space between elements when necessary.
+   * Just an empty spacer element that can be used as an append point for
+   * plugins, etc. Also can be used to create space between elements when
+   * necessary.
    *
    * @extends Component
    */
@@ -19623,7 +19827,8 @@
   Component.registerComponent('Spacer', Spacer);
 
   /**
-   * Spacer specifically meant to be used as an insertion point for new plugins, etc.
+   * Spacer specifically meant to be used as an insertion point for new
+   * plugins, etc.
    *
    * @extends Spacer
    */
@@ -20300,12 +20505,16 @@
   Component.registerComponent('TextTrackSettings', TextTrackSettings);
 
   /**
-   * A Resize Manager. It is in charge of triggering `playerresize` on the player in the right conditions.
+   * A Resize Manager. It is in charge of triggering `playerresize` on the
+   * player in the right conditions.
    *
-   * It'll either create an iframe and use a debounced resize handler on it or use the new {@link https://wicg.github.io/ResizeObserver/|ResizeObserver}.
+   * It'll either create an iframe and use a debounced resize handler on it or
+   * use the new {@link https://wicg.github.io/ResizeObserver/|ResizeObserver}.
    *
-   * If the ResizeObserver is available natively, it will be used. A polyfill can be passed in as an option.
-   * If a `playerresize` event is not needed, the ResizeManager component can be removed from the player, see the example below.
+   * If the ResizeObserver is available natively, it will be used. A polyfill
+   * can be passed in as an option. If a `playerresize` event is not needed,
+   * the ResizeManager component can be removed from the player, see the
+   * example below.
    * @example <caption>How to disable the resize manager</caption>
    * const player = videojs('#vid', {
    *   resizeManager: false
@@ -20332,7 +20541,8 @@
      *
      * @param {Object} [options.ResizeObserver]
      *        A polyfill for ResizeObserver can be passed in here.
-     *        If this is set to null it will ignore the native ResizeObserver and fall back to the iframe fallback.
+     *        If this is set to null it will ignore the native ResizeObserver
+     *     and fall back to the iframe fallback.
      */
     function ResizeManager(player, options) {
       var _this;
@@ -20397,7 +20607,8 @@
       });
     }
     /**
-     * Called when a resize is triggered on the iframe or a resize is observed via the ResizeObserver
+     * Called when a resize is triggered on the iframe or a resize is observed
+     * via the ResizeObserver
      *
      * @fires Player#playerresize
      */
@@ -20795,10 +21006,11 @@
 
   /**
    * This function is used to fire a sourceset when there is something
-   * similar to `mediaEl.load()` being called. It will try to find the source via
-   * the `src` attribute and then the `<source>` elements. It will then fire `sourceset`
-   * with the source that was found or empty string if we cannot know. If it cannot
-   * find a source then `sourceset` will not be fired.
+   * similar to `mediaEl.load()` being called. It will try to find the source
+   * via the `src` attribute and then the `<source>` elements. It will then
+   * fire `sourceset` with the source that was found or empty string if we
+   * cannot know. If it cannot find a source then `sourceset` will not be
+   * fired.
    *
    * @param {Html5} tech
    *        The tech object that sourceset was setup on
@@ -20815,16 +21027,19 @@
       return true;
     }
     /**
-     * Since there isn't a src property on the media element, source elements will be used for
-     * implementing the source selection algorithm. This happens asynchronously and
-     * for most cases were there is more than one source we cannot tell what source will
-     * be loaded, without re-implementing the source selection algorithm. At this time we are not
-     * going to do that. There are three special cases that we do handle here though:
+     * Since there isn't a src property on the media element, source elements
+     * will be used for implementing the source selection algorithm. This
+     * happens asynchronously and for most cases were there is more than one
+     * source we cannot tell what source will be loaded, without
+     * re-implementing the source selection algorithm. At this time we are not
+     * going to do that. There are three special cases that we do handle here
+     * though:
      *
      * 1. If there are no sources, do not fire `sourceset`.
-     * 2. If there is only one `<source>` with a `src` property/attribute that is our `src`
-     * 3. If there is more than one `<source>` but all of them have the same `src` url.
-     *    That will be our src.
+     * 2. If there is only one `<source>` with a `src` property/attribute that
+     * is our `src`
+     * 3. If there is more than one `<source>` but all of them have the same
+     * `src` url. That will be our src.
      */
 
 
@@ -20923,12 +21138,17 @@
    * - The page has just loaded and the media element does not have a source.
    * - The media element was emptied of all sources, then `load()` was called.
    *
-   * It does this by patching the following functions/properties when they are supported:
+   * It does this by patching the following functions/properties when they are
+   * supported:
    *
-   * - `append()` - can be used to add a `<source>` element to the media element
-   * - `appendChild()` - can be used to add a `<source>` element to the media element
-   * - `insertAdjacentHTML()` -  can be used to add a `<source>` element to the media element
-   * - `innerHTML` -  can be used to add a `<source>` element to the media element
+   * - `append()` - can be used to add a `<source>` element to the media
+   * element
+   * - `appendChild()` - can be used to add a `<source>` element to the media
+   * element
+   * - `insertAdjacentHTML()` -  can be used to add a `<source>` element to the
+   * media element
+   * - `innerHTML` -  can be used to add a `<source>` element to the media
+   * element
    *
    * @param {Html5} tech
    *        The tech object that sourceset is being setup on.
@@ -21015,8 +21235,8 @@
    * - `load()` - this re-triggers the source selection algorithm, and can
    *              cause a sourceset.
    *
-   * If there is no source when we are adding `sourceset` support or during a `load()`
-   * we also patch the functions listed in `firstSourceWatch`.
+   * If there is no source when we are adding `sourceset` support or during a
+   * `load()` we also patch the functions listed in `firstSourceWatch`.
    *
    * @param {Html5} tech
    *        The tech to patch
@@ -21089,12 +21309,13 @@
   };
 
   /**
-   * Object.defineProperty but "lazy", which means that the value is only set after
-   * it retrieved the first time, rather than being set right away.
+   * Object.defineProperty but "lazy", which means that the value is only set
+   * after it retrieved the first time, rather than being set right away.
    *
    * @param {Object} obj the object to set the property on
    * @param {string} key the key for the property to set
-   * @param {Function} getValue the function used to get the value when it is needed.
+   * @param {Function} getValue the function used to get the value when it is
+   *     needed.
    * @param {boolean} setter wether a setter shoould be allowed or not
    */
   var defineLazyProperty = function defineLazyProperty(obj, key, getValue, setter) {
@@ -21249,7 +21470,8 @@
     }
     /**
      * Modify the media element so that we can detect when
-     * the source is changed. Fires `sourceset` just after the source has changed
+     * the source is changed. Fires `sourceset` just after the source has
+     * changed
      */
     ;
 
@@ -21257,10 +21479,11 @@
       setupSourceset(this);
     }
     /**
-     * When a captions track is enabled in the iOS Safari native player, all other
-     * tracks are disabled (including metadata tracks), which nulls all of their
-     * associated cue points. This will restore metadata tracks to their pre-fullscreen
-     * state in those cases so that cue points are not needlessly lost.
+     * When a captions track is enabled in the iOS Safari native player, all
+     * other tracks are disabled (including metadata tracks), which nulls all
+     * of their associated cue points. This will restore metadata tracks to
+     * their pre-fullscreen state in those cases so that cue points are not
+     * needlessly lost.
      *
      * @private
      */
@@ -21326,10 +21549,11 @@
     /**
      * Attempt to force override of tracks for the given type
      *
-     * @param {string} type - Track type to override, possible values include 'Audio',
+     * @param {string} type - Track type to override, possible values include
+     *     'Audio',
      * 'Video', and 'Text'.
-     * @param {boolean} override - If set to true native audio/video will be overridden,
-     * otherwise native audio/video will potentially be used.
+     * @param {boolean} override - If set to true native audio/video will be
+     *     overridden, otherwise native audio/video will potentially be used.
      * @private
      */
     ;
@@ -21359,8 +21583,8 @@
     /**
      * Attempt to force override of native audio tracks.
      *
-     * @param {boolean} override - If set to true native audio will be overridden,
-     * otherwise native audio will potentially be used.
+     * @param {boolean} override - If set to true native audio will be
+     *     overridden, otherwise native audio will potentially be used.
      */
     ;
 
@@ -21370,8 +21594,8 @@
     /**
      * Attempt to force override of native video tracks.
      *
-     * @param {boolean} override - If set to true native video will be overridden,
-     * otherwise native video will potentially be used.
+     * @param {boolean} override - If set to true native video will be
+     *     overridden, otherwise native video will potentially be used.
      */
     ;
 
@@ -21382,7 +21606,8 @@
      * Proxy native track list events for the given type to our track
      * lists if the browser we are playing in supports that type of track list.
      *
-     * @param {string} name - Track type; values include 'audio', 'video', and 'text'
+     * @param {string} name - Track type; values include 'audio', 'video', and
+     *     'text'
      * @private
      */
     ;
@@ -21454,8 +21679,8 @@
       });
     }
     /**
-     * Proxy all native track list events to our track lists if the browser we are playing
-     * in supports that type of track list.
+     * Proxy all native track list events to our track lists if the browser we
+     * are playing in supports that type of track list.
      *
      * @private
      */
@@ -21539,8 +21764,8 @@
       return el;
     }
     /**
-     * This will be triggered if the loadstart event has already fired, before videojs was
-     * ready. Two known examples of when this can happen are:
+     * This will be triggered if the loadstart event has already fired, before
+     * videojs was ready. Two known examples of when this can happen are:
      * 1. If we're loading the playback object after it has started loading
      * 2. The media is already playing the (often with autoplay on) then
      *
@@ -21793,9 +22018,9 @@
       this.el_.webkitExitFullScreen();
     }
     /**
-     * Create a floating video window always on top of other windows so that users may
-     * continue consuming media while they interact with other content sites, or
-     * applications on their device.
+     * Create a floating video window always on top of other windows so that
+     * users may continue consuming media while they interact with other
+     * content sites, or applications on their device.
      *
      * @see [Spec]{@link https://wicg.github.io/picture-in-picture}
      *
@@ -21840,12 +22065,12 @@
       Html5.resetMediaElement(this.el_);
     }
     /**
-     * Get the current source on the `HTML5` Tech. Falls back to returning the source from
-     * the HTML5 media element.
+     * Get the current source on the `HTML5` Tech. Falls back to returning the
+     * source from the HTML5 media element.
      *
      * @return {Tech~SourceObject}
-     *         The current source object from the HTML5 tech. With a fallback to the
-     *         elements source.
+     *         The current source object from the HTML5 tech. With a fallback
+     *     to the elements source.
      */
     ;
 
@@ -21871,7 +22096,8 @@
      * Create and returns a remote {@link TextTrack} object.
      *
      * @param {string} kind
-     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or metadata)
+     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or
+     *     metadata)
      *
      * @param {string} [label]
      *        Label to identify the text track
@@ -21896,10 +22122,12 @@
      * on the value of `featuresNativeTextTracks`
      *
      * @param {Object} options
-     *        The object should contain the options to initialize the TextTrack with.
+     *        The object should contain the options to initialize the TextTrack
+     *     with.
      *
      * @param {string} [options.kind]
-     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or metadata).
+     *        `TextTrack` kind (subtitles, captions, descriptions, chapters, or
+     *     metadata).
      *
      * @param {string} [options.label]
      *        Label to identify the text track
@@ -21959,12 +22187,13 @@
      *
      * @param {Object} options The object should contain values for
      * kind, language, label, and src (location of the WebVTT file)
-     * @param {boolean} [manualCleanup=true] if set to false, the TextTrack will be
-     * automatically removed from the video element whenever the source changes
+     * @param {boolean} [manualCleanup=true] if set to false, the TextTrack
+     *     will be automatically removed from the video element whenever the
+     *     source changes
      * @return {HTMLTrackElement} An Html Track Element.
      * This can be an emulated {@link HTMLTrackElement} or a native one.
-     * @deprecated The default value of the "manualCleanup" parameter will default
-     * to "false" in upcoming versions of Video.js
+     * @deprecated The default value of the "manualCleanup" parameter will
+     *     default to "false" in upcoming versions of Video.js
      */
     ;
 
@@ -22000,8 +22229,8 @@
       }
     }
     /**
-     * Gets available media playback quality metrics as specified by the W3C's Media
-     * Playback Quality API.
+     * Gets available media playback quality metrics as specified by the W3C's
+     * Media Playback Quality API.
      *
      * @see [Spec]{@link https://wicg.github.io/media-playback-quality}
      *
@@ -22274,8 +22503,8 @@
    */
 
   /**
-   * Boolean indicating whether the `Tech` supports changing the speed at which the media
-   * plays. Examples:
+   * Boolean indicating whether the `Tech` supports changing the speed at which
+   * the media plays. Examples:
    *   - Set player to play 2x (twice) as fast
    *   - Set player to play 0.5x (half) as fast
    *
@@ -22291,21 +22520,24 @@
    */
 
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports native `TextTrack`s.
+   * Boolean indicating whether the `HTML5` tech currently supports native
+   * `TextTrack`s.
    *
    * @type {boolean}
    * @default {@link Html5.supportsNativeTextTracks}
    */
 
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports native `VideoTrack`s.
+   * Boolean indicating whether the `HTML5` tech currently supports native
+   * `VideoTrack`s.
    *
    * @type {boolean}
    * @default {@link Html5.supportsNativeVideoTracks}
    */
 
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports native `AudioTrack`s.
+   * Boolean indicating whether the `HTML5` tech currently supports native
+   * `AudioTrack`s.
    *
    * @type {boolean}
    * @default {@link Html5.supportsNativeAudioTracks}
@@ -22319,9 +22551,9 @@
     }, true);
   });
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports the media element
-   * moving in the DOM. iOS breaks if you move the media element, so this is set this to
-   * false there. Everywhere else this should be true.
+   * Boolean indicating whether the `HTML5` tech currently supports the media
+   * element moving in the DOM. iOS breaks if you move the media element, so
+   * this is set this to false there. Everywhere else this should be true.
    *
    * @type {boolean}
    * @default
@@ -22331,8 +22563,8 @@
   //       Is this true?
 
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports automatic media resize
-   * when going into fullscreen.
+   * Boolean indicating whether the `HTML5` tech currently supports automatic
+   * media resize when going into fullscreen.
    *
    * @type {boolean}
    * @default
@@ -22340,8 +22572,9 @@
 
   Html5.prototype.featuresFullscreenResize = true;
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports the progress event.
-   * If this is false, manual `progress` events will be triggered instead.
+   * Boolean indicating whether the `HTML5` tech currently supports the
+   * progress event. If this is false, manual `progress` events will be
+   * triggered instead.
    *
    * @type {boolean}
    * @default
@@ -22349,8 +22582,9 @@
 
   Html5.prototype.featuresProgressEvents = true;
   /**
-   * Boolean indicating whether the `HTML5` tech currently supports the timeupdate event.
-   * If this is false, manual `timeupdate` events will be triggered instead.
+   * Boolean indicating whether the `HTML5` tech currently supports the
+   * timeupdate event. If this is false, manual `timeupdate` events will be
+   * triggered instead.
    *
    * @default
    */
@@ -22455,22 +22689,23 @@
   [
   /**
    * Get the value of `muted` from the media element. `muted` indicates
-   * that the volume for the media should be set to silent. This does not actually change
-   * the `volume` attribute.
+   * that the volume for the media should be set to silent. This does not
+   * actually change the `volume` attribute.
    *
    * @method Html5#muted
    * @return {boolean}
-   *         - True if the value of `volume` should be ignored and the audio set to silent.
+   *         - True if the value of `volume` should be ignored and the audio
+   *     set to silent.
    *         - False if the value of `volume` should be used.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-muted}
    */
   'muted',
   /**
-   * Get the value of `defaultMuted` from the media element. `defaultMuted` indicates
-   * whether the media should start muted or not. Only changes the default state of the
-   * media. `muted` and `defaultMuted` can have different values. {@link Html5#muted} indicates the
-   * current state.
+   * Get the value of `defaultMuted` from the media element. `defaultMuted`
+   * indicates whether the media should start muted or not. Only changes the
+   * default state of the media. `muted` and `defaultMuted` can have different
+   * values. {@link Html5#muted} indicates the current state.
    *
    * @method Html5#defaultMuted
    * @return {boolean}
@@ -22488,8 +22723,10 @@
    * @method Html5#autoplay
    * @return {boolean}
    *         - The value of `autoplay` from the media element.
-   *         - True indicates that the media should start as soon as the page loads.
-   *         - False indicates that the media should not start as soon as the page loads.
+   *         - True indicates that the media should start as soon as the page
+   *     loads.
+   *         - False indicates that the media should not start as soon as the
+   *     page loads.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-autoplay}
    */
@@ -22509,24 +22746,24 @@
   'controls',
   /**
    * Get the value of `loop` from the media element. `loop` indicates
-   * that the media should return to the start of the media and continue playing once
-   * it reaches the end.
+   * that the media should return to the start of the media and continue
+   * playing once it reaches the end.
    *
    * @method Html5#loop
    * @return {boolean}
    *         - The value of `loop` from the media element.
    *         - True indicates that playback should seek back to start once
    *           the end of a media is reached.
-   *         - False indicates that playback should not loop back to the start when the
-   *           end of the media is reached.
+   *         - False indicates that playback should not loop back to the start
+   *     when the end of the media is reached.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-loop}
    */
   'loop',
   /**
-   * Get the value of `playsinline` from the media element. `playsinline` indicates
-   * to the browser that non-fullscreen playback is preferred when fullscreen
-   * playback is the native default, such as in iOS Safari.
+   * Get the value of `playsinline` from the media element. `playsinline`
+   * indicates to the browser that non-fullscreen playback is preferred when
+   * fullscreen playback is the native default, such as in iOS Safari.
    *
    * @method Html5#playsinline
    * @return {boolean}
@@ -22547,8 +22784,8 @@
 
   [
   /**
-   * Set the value of `muted` on the media element. `muted` indicates that the current
-   * audio level should be silent.
+   * Set the value of `muted` on the media element. `muted` indicates that the
+   * current audio level should be silent.
    *
    * @method Html5#setMuted
    * @param {boolean} muted
@@ -22559,8 +22796,9 @@
    */
   'muted',
   /**
-   * Set the value of `defaultMuted` on the media element. `defaultMuted` indicates that the current
-   * audio level should be silent, but will only effect the muted level on intial playback..
+   * Set the value of `defaultMuted` on the media element. `defaultMuted`
+   * indicates that the current audio level should be silent, but will only
+   * effect the muted level on intial playback..
    *
    * @method Html5.prototype.setDefaultMuted
    * @param {boolean} defaultMuted
@@ -22576,31 +22814,33 @@
    *
    * @method Html5#setAutoplay
    * @param {boolean} autoplay
-   *         - True indicates that the media should start as soon as the page loads.
-   *         - False indicates that the media should not start as soon as the page loads.
+   *         - True indicates that the media should start as soon as the page
+   *     loads.
+   *         - False indicates that the media should not start as soon as the
+   *     page loads.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-autoplay}
    */
   'autoplay',
   /**
    * Set the value of `loop` on the media element. `loop` indicates
-   * that the media should return to the start of the media and continue playing once
-   * it reaches the end.
+   * that the media should return to the start of the media and continue
+   * playing once it reaches the end.
    *
    * @method Html5#setLoop
    * @param {boolean} loop
    *         - True indicates that playback should seek back to start once
    *           the end of a media is reached.
-   *         - False indicates that playback should not loop back to the start when the
-   *           end of the media is reached.
+   *         - False indicates that playback should not loop back to the start
+   *     when the end of the media is reached.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-loop}
    */
   'loop',
   /**
-   * Set the value of `playsinline` from the media element. `playsinline` indicates
-   * to the browser that non-fullscreen playback is preferred when fullscreen
-   * playback is the native default, such as in iOS Safari.
+   * Set the value of `playsinline` from the media element. `playsinline`
+   * indicates to the browser that non-fullscreen playback is preferred when
+   * fullscreen playback is the native default, such as in iOS Safari.
    *
    * @method Html5#setPlaysinline
    * @param {boolean} playsinline
@@ -22627,8 +22867,8 @@
 
   [
   /**
-   * Get the value of `paused` from the media element. `paused` indicates whether the media element
-   * is currently paused or not.
+   * Get the value of `paused` from the media element. `paused` indicates
+   * whether the media element is currently paused or not.
    *
    * @method Html5#paused
    * @return {boolean}
@@ -22638,8 +22878,8 @@
    */
   'paused',
   /**
-   * Get the value of `currentTime` from the media element. `currentTime` indicates
-   * the current second that the media is at in playback.
+   * Get the value of `currentTime` from the media element. `currentTime`
+   * indicates the current second that the media is at in playback.
    *
    * @method Html5#currentTime
    * @return {number}
@@ -22649,9 +22889,9 @@
    */
   'currentTime',
   /**
-   * Get the value of `buffered` from the media element. `buffered` is a `TimeRange`
-   * object that represents the parts of the media that are already downloaded and
-   * available for playback.
+   * Get the value of `buffered` from the media element. `buffered` is a
+   * `TimeRange` object that represents the parts of the media that are already
+   * downloaded and available for playback.
    *
    * @method Html5#buffered
    * @return {TimeRange}
@@ -22662,80 +22902,86 @@
   'buffered',
   /**
    * Get the value of `volume` from the media element. `volume` indicates
-   * the current playback volume of audio for a media. `volume` will be a value from 0
+   * the current playback volume of audio for a media. `volume` will be a value
+   * from 0
    * (silent) to 1 (loudest and default).
    *
    * @method Html5#volume
    * @return {number}
-   *         The value of `volume` from the media element. Value will be between 0-1.
+   *         The value of `volume` from the media element. Value will be
+   *     between 0-1.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-a-volume}
    */
   'volume',
   /**
    * Get the value of `poster` from the media element. `poster` indicates
-   * that the url of an image file that can/will be shown when no media data is available.
+   * that the url of an image file that can/will be shown when no media data is
+   * available.
    *
    * @method Html5#poster
    * @return {string}
-   *         The value of `poster` from the media element. Value will be a url to an
-   *         image.
+   *         The value of `poster` from the media element. Value will be a url
+   *     to an image.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-video-poster}
    */
   'poster',
   /**
    * Get the value of `preload` from the media element. `preload` indicates
-   * what should download before the media is interacted with. It can have the following
-   * values:
+   * what should download before the media is interacted with. It can have the
+   * following values:
    * - none: nothing should be downloaded
-   * - metadata: poster and the first few frames of the media may be downloaded to get
-   *   media dimensions and other metadata
+   * - metadata: poster and the first few frames of the media may be downloaded
+   * to get media dimensions and other metadata
    * - auto: allow the media and metadata for the media to be downloaded before
    *    interaction
    *
    * @method Html5#preload
    * @return {string}
-   *         The value of `preload` from the media element. Will be 'none', 'metadata',
-   *         or 'auto'.
+   *         The value of `preload` from the media element. Will be 'none',
+   *     'metadata', or 'auto'.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-preload}
    */
   'preload',
   /**
    * Get the value of the `error` from the media element. `error` indicates any
-   * MediaError that may have occurred during playback. If error returns null there is no
-   * current error.
+   * MediaError that may have occurred during playback. If error returns null
+   * there is no current error.
    *
    * @method Html5#error
    * @return {MediaError|null}
-   *         The value of `error` from the media element. Will be `MediaError` if there
-   *         is a current error and null otherwise.
+   *         The value of `error` from the media element. Will be `MediaError`
+   *     if there is a current error and null otherwise.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-error}
    */
   'error',
   /**
-   * Get the value of `seeking` from the media element. `seeking` indicates whether the
-   * media is currently seeking to a new position or not.
+   * Get the value of `seeking` from the media element. `seeking` indicates
+   * whether the media is currently seeking to a new position or not.
    *
    * @method Html5#seeking
    * @return {boolean}
    *         - The value of `seeking` from the media element.
-   *         - True indicates that the media is currently seeking to a new position.
-   *         - False indicates that the media is not seeking to a new position at this time.
+   *         - True indicates that the media is currently seeking to a new
+   *     position.
+   *         - False indicates that the media is not seeking to a new position
+   *     at this time.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-seeking}
    */
   'seeking',
   /**
    * Get the value of `seekable` from the media element. `seekable` returns a
-   * `TimeRange` object indicating ranges of time that can currently be `seeked` to.
+   * `TimeRange` object indicating ranges of time that can currently be
+   * `seeked` to.
    *
    * @method Html5#seekable
    * @return {TimeRange}
-   *         The value of `seekable` from the media element. A `TimeRange` object
-   *         indicating the current ranges of time that can be seeked to.
+   *         The value of `seekable` from the media element. A `TimeRange`
+   *     object indicating the current ranges of time that can be seeked to.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-seekable}
    */
@@ -22754,23 +23000,26 @@
    */
   'ended',
   /**
-   * Get the value of `playbackRate` from the media element. `playbackRate` indicates
-   * the rate at which the media is currently playing back. Examples:
+   * Get the value of `playbackRate` from the media element. `playbackRate`
+   * indicates the rate at which the media is currently playing back. Examples:
    *   - if playbackRate is set to 2, media will play twice as fast.
    *   - if playbackRate is set to 0.5, media will play half as fast.
    *
    * @method Html5#playbackRate
    * @return {number}
-   *         The value of `playbackRate` from the media element. A number indicating
-   *         the current playback speed of the media, where 1 is normal speed.
+   *         The value of `playbackRate` from the media element. A number
+   *     indicating the current playback speed of the media, where 1 is normal
+   *     speed.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-playbackrate}
    */
   'playbackRate',
   /**
-   * Get the value of `defaultPlaybackRate` from the media element. `defaultPlaybackRate` indicates
-   * the rate at which the media is currently playing back. This value will not indicate the current
-   * `playbackRate` after playback has started, use {@link Html5#playbackRate} for that.
+   * Get the value of `defaultPlaybackRate` from the media element.
+   * `defaultPlaybackRate` indicates the rate at which the media is currently
+   * playing back. This value will not indicate the current
+   * `playbackRate` after playback has started, use {@link Html5#playbackRate}
+   * for that.
    *
    * Examples:
    *   - if defaultPlaybackRate is set to 2, media will play twice as fast.
@@ -22778,27 +23027,30 @@
    *
    * @method Html5.prototype.defaultPlaybackRate
    * @return {number}
-   *         The value of `defaultPlaybackRate` from the media element. A number indicating
-   *         the current playback speed of the media, where 1 is normal speed.
+   *         The value of `defaultPlaybackRate` from the media element. A
+   *     number indicating the current playback speed of the media, where 1 is
+   *     normal speed.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-playbackrate}
    */
   'defaultPlaybackRate',
   /**
-   * Get the value of `played` from the media element. `played` returns a `TimeRange`
-   * object representing points in the media timeline that have been played.
+   * Get the value of `played` from the media element. `played` returns a
+   * `TimeRange` object representing points in the media timeline that have
+   * been played.
    *
    * @method Html5#played
    * @return {TimeRange}
-   *         The value of `played` from the media element. A `TimeRange` object indicating
-   *         the ranges of time that have been played.
+   *         The value of `played` from the media element. A `TimeRange` object
+   *     indicating the ranges of time that have been played.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-played}
    */
   'played',
   /**
-   * Get the value of `networkState` from the media element. `networkState` indicates
-   * the current network state. It returns an enumeration from the following list:
+   * Get the value of `networkState` from the media element. `networkState`
+   * indicates the current network state. It returns an enumeration from the
+   * following list:
    * - 0: NETWORK_EMPTY
    * - 1: NETWORK_IDLE
    * - 2: NETWORK_LOADING
@@ -22806,16 +23058,17 @@
    *
    * @method Html5#networkState
    * @return {number}
-   *         The value of `networkState` from the media element. This will be a number
-   *         from the list in the description.
+   *         The value of `networkState` from the media element. This will be a
+   *     number from the list in the description.
    *
-   * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-networkstate}
+   * @see [Spec]
+   *     {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-networkstate}
    */
   'networkState',
   /**
-   * Get the value of `readyState` from the media element. `readyState` indicates
-   * the current state of the media element. It returns an enumeration from the
-   * following list:
+   * Get the value of `readyState` from the media element. `readyState`
+   * indicates the current state of the media element. It returns an
+   * enumeration from the following list:
    * - 0: HAVE_NOTHING
    * - 1: HAVE_METADATA
    * - 2: HAVE_CURRENT_DATA
@@ -22824,34 +23077,38 @@
    *
    * @method Html5#readyState
    * @return {number}
-   *         The value of `readyState` from the media element. This will be a number
-   *         from the list in the description.
+   *         The value of `readyState` from the media element. This will be a
+   *     number from the list in the description.
    *
-   * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#ready-states}
+   * @see [Spec]
+   *     {@link
+   *     https://www.w3.org/TR/html5/embedded-content-0.html#ready-states}
    */
   'readyState',
   /**
-   * Get the value of `videoWidth` from the video element. `videoWidth` indicates
-   * the current width of the video in css pixels.
+   * Get the value of `videoWidth` from the video element. `videoWidth`
+   * indicates the current width of the video in css pixels.
    *
    * @method Html5#videoWidth
    * @return {number}
-   *         The value of `videoWidth` from the video element. This will be a number
-   *         in css pixels.
+   *         The value of `videoWidth` from the video element. This will be a
+   *     number in css pixels.
    *
-   * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth}
+   * @see [Spec]
+   *     {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth}
    */
   'videoWidth',
   /**
-   * Get the value of `videoHeight` from the video element. `videoHeight` indicates
-   * the current height of the video in css pixels.
+   * Get the value of `videoHeight` from the video element. `videoHeight`
+   * indicates the current height of the video in css pixels.
    *
    * @method Html5#videoHeight
    * @return {number}
-   *         The value of `videoHeight` from the video element. This will be a number
-   *         in css pixels.
+   *         The value of `videoHeight` from the video element. This will be a
+   *     number in css pixels.
    *
-   * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth}
+   * @see [Spec]
+   *     {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth}
    */
   'videoHeight'].forEach(function (prop) {
     Html5.prototype[prop] = function () {
@@ -22864,9 +23121,9 @@
 
   [
   /**
-   * Set the value of `volume` on the media element. `volume` indicates the current
-   * audio level as a percentage in decimal form. This means that 1 is 100%, 0.5 is 50%, and
-   * so on.
+   * Set the value of `volume` on the media element. `volume` indicates the
+   * current audio level as a percentage in decimal form. This means that 1 is
+   * 100%, 0.5 is 50%, and so on.
    *
    * @method Html5#setVolume
    * @param {number} percentAsDecimal
@@ -22892,48 +23149,50 @@
    *
    * @method Html5#setPoster
    * @param {string} poster
-   *        The url to an image that should be used as the `poster` for the media
-   *        element.
+   *        The url to an image that should be used as the `poster` for the
+   *     media element.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-poster}
    */
   'poster',
   /**
    * Set the value of `preload` on the media element. `preload` indicates
-   * what should download before the media is interacted with. It can have the following
-   * values:
+   * what should download before the media is interacted with. It can have the
+   * following values:
    * - none: nothing should be downloaded
-   * - metadata: poster and the first few frames of the media may be downloaded to get
-   *   media dimensions and other metadata
+   * - metadata: poster and the first few frames of the media may be downloaded
+   * to get media dimensions and other metadata
    * - auto: allow the media and metadata for the media to be downloaded before
    *    interaction
    *
    * @method Html5#setPreload
    * @param {string} preload
-   *         The value of `preload` to set on the media element. Must be 'none', 'metadata',
-   *         or 'auto'.
+   *         The value of `preload` to set on the media element. Must be
+   *     'none', 'metadata', or 'auto'.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#attr-media-preload}
    */
   'preload',
   /**
-   * Set the value of `playbackRate` on the media element. `playbackRate` indicates
-   * the rate at which the media should play back. Examples:
+   * Set the value of `playbackRate` on the media element. `playbackRate`
+   * indicates the rate at which the media should play back. Examples:
    *   - if playbackRate is set to 2, media will play twice as fast.
    *   - if playbackRate is set to 0.5, media will play half as fast.
    *
    * @method Html5#setPlaybackRate
    * @return {number}
-   *         The value of `playbackRate` from the media element. A number indicating
-   *         the current playback speed of the media, where 1 is normal speed.
+   *         The value of `playbackRate` from the media element. A number
+   *     indicating the current playback speed of the media, where 1 is normal
+   *     speed.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-playbackrate}
    */
   'playbackRate',
   /**
-   * Set the value of `defaultPlaybackRate` on the media element. `defaultPlaybackRate` indicates
-   * the rate at which the media should play back upon initial startup. Changing this value
-   * after a video has started will do nothing. Instead you should used {@link Html5#setPlaybackRate}.
+   * Set the value of `defaultPlaybackRate` on the media element.
+   * `defaultPlaybackRate` indicates the rate at which the media should play
+   * back upon initial startup. Changing this value after a video has started
+   * will do nothing. Instead you should used {@link Html5#setPlaybackRate}.
    *
    * Example Values:
    *   - if playbackRate is set to 2, media will play twice as fast.
@@ -22941,8 +23200,9 @@
    *
    * @method Html5.prototype.setDefaultPlaybackRate
    * @return {number}
-   *         The value of `defaultPlaybackRate` from the media element. A number indicating
-   *         the current playback speed of the media, where 1 is normal speed.
+   *         The value of `defaultPlaybackRate` from the media element. A
+   *     number indicating the current playback speed of the media, where 1 is
+   *     normal speed.
    *
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-defaultplaybackrate}
    */
@@ -22956,24 +23216,24 @@
 
   [
   /**
-   * A wrapper around the media elements `pause` function. This will call the `HTML5`
-   * media elements `pause` function.
+   * A wrapper around the media elements `pause` function. This will call the
+   * `HTML5` media elements `pause` function.
    *
    * @method Html5#pause
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-pause}
    */
   'pause',
   /**
-   * A wrapper around the media elements `load` function. This will call the `HTML5`s
-   * media element `load` function.
+   * A wrapper around the media elements `load` function. This will call the
+   * `HTML5`s media element `load` function.
    *
    * @method Html5#load
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-load}
    */
   'load',
   /**
-   * A wrapper around the media elements `play` function. This will call the `HTML5`s
-   * media element `play` function.
+   * A wrapper around the media elements `play` function. This will call the
+   * `HTML5`s media element `play` function.
    *
    * @method Html5#play
    * @see [Spec]{@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-play}
@@ -22985,7 +23245,8 @@
   });
   Tech.withSourceHandlers(Html5);
   /**
-   * Native source handler for Html5, simply passes the source to the media element.
+   * Native source handler for Html5, simply passes the source to the media
+   * element.
    *
    * @property {Tech~SourceObject} source
    *        The source object
@@ -23134,7 +23395,8 @@
    */
   'emptied',
   /**
-   * Fires when the browser is trying to get media data, but data is not available.
+   * Fires when the browser is trying to get media data, but data is not
+   * available.
    *
    * @event Player#stalled
    * @type {EventTarget~Event}
@@ -23237,7 +23499,8 @@
    */
 
   /**
-   * Retrigger the `texttrackchange` event that was triggered by the {@link Tech}.
+   * Retrigger the `texttrackchange` event that was triggered by the {@link
+   * Tech}.
    *
    * @private
    * @method Player#handleTechTexttrackchange_
@@ -23277,10 +23540,11 @@
     huge: Infinity
   };
   /**
-   * An instance of the `Player` class is created when any of the Video.js setup methods
-   * are used to initialize a video.
+   * An instance of the `Player` class is created when any of the Video.js
+   * setup methods are used to initialize a video.
    *
-   * After an instance has been created it can be accessed globally in two ways:
+   * After an instance has been created it can be accessed globally in two
+   * ways:
    * 1. By calling `videojs('example_video_1');`
    * 2. By using it directly via  `videojs.players.example_video_1;`
    *
@@ -23539,8 +23803,8 @@
     /**
      * Destroys the video player and does any necessary cleanup.
      *
-     * This is especially helpful if you are dynamically adding and removing videos
-     * to/from the DOM.
+     * This is especially helpful if you are dynamically adding and removing
+     * videos to/from the DOM.
      *
      * @fires Player#dispose
      */
@@ -23759,8 +24023,8 @@
       return el;
     }
     /**
-     * A getter/setter for the `Player`'s width. Returns the player's configured value.
-     * To get the current width use `currentWidth()`.
+     * A getter/setter for the `Player`'s width. Returns the player's
+     * configured value. To get the current width use `currentWidth()`.
      *
      * @param {number} [value]
      *        The value to set the `Player`'s width to.
@@ -23774,8 +24038,8 @@
       return this.dimension('width', value);
     }
     /**
-     * A getter/setter for the `Player`'s height. Returns the player's configured value.
-     * To get the current height use `currentheight()`.
+     * A getter/setter for the `Player`'s height. Returns the player's
+     * configured value. To get the current height use `currentheight()`.
      *
      * @param {number} [value]
      *        The value to set the `Player`'s heigth to.
@@ -24179,8 +24443,8 @@
     }
     /**
      * Return a reference to the current {@link Tech}.
-     * It will print a warning by default about the danger of using the tech directly
-     * but any argument that is passed in will silence the warning.
+     * It will print a warning by default about the danger of using the tech
+     * directly but any argument that is passed in will silence the warning.
      *
      * @param {*} [safety]
      *        Anything passed in to silence the warning
@@ -24205,16 +24469,18 @@
      *   which is done by toggling the user state between active and
      *   inactive
      * - A tap can signal that a user has become active or has become inactive
-     *   e.g. a quick tap on an iPhone movie should reveal the controls. Another
+     *   e.g. a quick tap on an iPhone movie should reveal the controls.
+     * Another
      *   quick tap should hide them again (signaling the user is in an inactive
      *   viewing state)
-     * - In addition to this, we still want the user to be considered inactive after
-     *   a few seconds of inactivity.
+     * - In addition to this, we still want the user to be considered inactive
+     * after a few seconds of inactivity.
      *
      * > Note: the only part of iOS interaction we can't mimic with this setup
-     * is a touch and hold on the video element counting as activity in order to
-     * keep the controls showing, but that shouldn't be an issue. A touch and hold
-     * on any controls will still keep the user active
+     * is a touch and hold on the video element counting as activity in order
+     * to
+     * keep the controls showing, but that shouldn't be an issue. A touch and
+     * hold on any controls will still keep the user active
      *
      * @private
      */
@@ -24277,9 +24543,9 @@
       this.handleTechDurationChange_();
     }
     /**
-     * Retrigger the `loadstart` event that was triggered by the {@link Tech}. This
-     * function will also trigger {@link Player#firstplay} if it is the first loadstart
-     * for a video.
+     * Retrigger the `loadstart` event that was triggered by the {@link Tech}.
+     * This function will also trigger {@link Player#firstplay} if it is the
+     * first loadstart for a video.
      *
      * @fires Player#loadstart
      * @fires Player#firstplay
@@ -24386,11 +24652,12 @@
       });
     }
     /**
-     * Update the internal source caches so that we return the correct source from
+     * Update the internal source caches so that we return the correct source
+     * from
      * `src()`, `currentSource()`, and `currentSources()`.
      *
-     * > Note: `currentSources` will not be updated if the source that is passed in exists
-     *         in the current `currentSources` cache.
+     * > Note: `currentSources` will not be updated if the source that is
+     * passed in exists in the current `currentSources` cache.
      *
      *
      * @param {Tech~SourceObject} srcObj
@@ -24454,32 +24721,32 @@
       this.cache_.src = src;
     }
     /**
-     * *EXPERIMENTAL* Fired when the source is set or changed on the {@link Tech}
-     * causing the media element to reload.
+     * *EXPERIMENTAL* Fired when the source is set or changed on the {@link
+     * Tech} causing the media element to reload.
      *
      * It will fire for the initial source and each subsequent source.
-     * This event is a custom event from Video.js and is triggered by the {@link Tech}.
+     * This event is a custom event from Video.js and is triggered by the
+     * {@link Tech}.
      *
-     * The event object for this event contains a `src` property that will contain the source
-     * that was available when the event was triggered. This is generally only necessary if Video.js
-     * is switching techs while the source was being changed.
+     * The event object for this event contains a `src` property that will
+     * contain the source that was available when the event was triggered. This
+     * is generally only necessary if Video.js is switching techs while the
+     * source was being changed.
      *
      * It is also fired when `load` is called on the player (or media element)
-     * because the {@link https://html.spec.whatwg.org/multipage/media.html#dom-media-load|specification for `load`}
-     * says that the resource selection algorithm needs to be aborted and restarted.
-     * In this case, it is very likely that the `src` property will be set to the
-     * empty string `""` to indicate we do not know what the source will be but
-     * that it is changing.
+     * because the
+     * {@link https://html.spec.whatwg.org/multipage/media.html#dom-media-load|specification for `load`} says that the resource selection algorithm needs to be aborted and restarted. In this case, it is very likely that the `src` property will be set to the empty string `""` to indicate we do not know what the source will be but that it is changing.
      *
-     * *This event is currently still experimental and may change in minor releases.*
+     * *This event is currently still experimental and may change in minor
+     * releases.*
      * __To use this, pass `enableSourceset` option to the player.__
      *
      * @event Player#sourceset
      * @type {EventTarget~Event}
      * @prop {string} src
-     *                The source url available when the `sourceset` was triggered.
-     *                It will be an empty string if we cannot know what the source is
-     *                but know that the source will change.
+     *                The source url available when the `sourceset` was
+     *     triggered. It will be an empty string if we cannot know what the
+     *     source is but know that the source will change.
      */
 
     /**
@@ -24692,7 +24959,8 @@
       this.trigger('canplay');
     }
     /**
-     * Retrigger the `canplaythrough` event that was triggered by the {@link Tech}.
+     * Retrigger the `canplaythrough` event that was triggered by the
+     * {@link Tech}.
      *
      * @fires Player#canplaythrough
      * @listens Tech#canplaythrough
@@ -24703,8 +24971,8 @@
     _proto.handleTechCanPlayThrough_ = function handleTechCanPlayThrough_() {
       this.removeClass('vjs-waiting');
       /**
-       * The media has a readyState of HAVE_ENOUGH_DATA or greater. This means that the
-       * entire media file can be played without buffering.
+       * The media has a readyState of HAVE_ENOUGH_DATA or greater. This means
+       * that the entire media file can be played without buffering.
        *
        * @event Player#canplaythrough
        * @type {EventTarget~Event}
@@ -24779,7 +25047,8 @@
      * @fires Player#firstplay
      * @listens Tech#firstplay
      * @deprecated As of 6.0 firstplay event is deprecated.
-     *             As of 6.0 passing the `starttime` option to the player and the firstplay event are deprecated.
+     *             As of 6.0 passing the `starttime` option to the player and
+     *     the firstplay event are deprecated.
      * @private
      */
     ;
@@ -24794,9 +25063,10 @@
 
       this.addClass('vjs-has-started');
       /**
-       * Fired the first time a video is played. Not part of the HLS spec, and this is
-       * probably not the best implementation yet, so use sparingly. If you don't have a
-       * reason to prevent playback, use `myPlayer.one('play');` instead.
+       * Fired the first time a video is played. Not part of the HLS spec, and
+       * this is probably not the best implementation yet, so use sparingly. If
+       * you don't have a reason to prevent playback, use
+       * `myPlayer.one('play');` instead.
        *
        * @event Player#firstplay
        * @deprecated As of 6.0 firstplay event is deprecated.
@@ -24845,7 +25115,8 @@
         this.pause();
       }
       /**
-       * Fired when the end of the media resource is reached (currentTime == duration)
+       * Fired when the end of the media resource is reached (currentTime ==
+       * duration)
        *
        * @event Player#ended
        * @type {EventTarget~Event}
@@ -25230,8 +25501,10 @@
 
 
       try {
+
         return this.tech_[method]();
       } catch (e) {
+        console.log(method);
         // When building additional tech libs, an expected method may not be defined yet
         if (this.tech_[method] === undefined) {
           log("Video.js: " + method + " method not defined for " + this.techName_ + " playback technology.", e);
@@ -25256,9 +25529,9 @@
      * @return {Promise|undefined}
      *         Returns a promise if the browser supports Promises (or one
      *         was passed in as an option). This promise will be resolved on
-     *         the return value of play. If this is undefined it will fulfill the
-     *         promise chain otherwise the promise chain will be fulfilled when
-     *         the promise from play is fulfilled.
+     *         the return value of play. If this is undefined it will fulfill
+     *     the promise chain otherwise the promise chain will be fulfilled when
+     *     the promise from play is fulfilled.
      */
     ;
 
@@ -25277,12 +25550,13 @@
     }
     /**
      * The actual logic for play, takes a callback that will be resolved on the
-     * return value of play. This allows us to resolve to the play promise if there
-     * is one on modern browsers.
+     * return value of play. This allows us to resolve to the play promise if
+     * there is one on modern browsers.
      *
      * @private
      * @param {Function} [callback]
-     *        The callback that should be called when the techs play is actually called
+     *        The callback that should be called when the techs play is
+     *     actually called
      */
     ;
 
@@ -25386,12 +25660,12 @@
       return this.techGet_('paused') === false ? false : true;
     }
     /**
-     * Get a TimeRange object representing the current ranges of time that the user
-     * has played.
+     * Get a TimeRange object representing the current ranges of time that the
+     * user has played.
      *
      * @return {TimeRange}
-     *         A time range object that represents all the increments of time that have
-     *         been played.
+     *         A time range object that represents all the increments of time
+     *     that have been played.
      */
     ;
 
@@ -25456,11 +25730,12 @@
     }
     /**
      * Normally gets the length in time of the video in seconds;
-     * in all but the rarest use cases an argument will NOT be passed to the method
+     * in all but the rarest use cases an argument will NOT be passed to the
+     * method
      *
-     * > **NOTE**: The video must have started loading before the duration can be
-     * known, and in the case of Flash, may not be known until the video starts
-     * playing.
+     * > **NOTE**: The video must have started loading before the duration can
+     * be known, and in the case of Flash, may not be known until the video
+     * starts playing.
      *
      * @fires Player#durationchange
      *
@@ -25647,8 +25922,8 @@
       return this.techGet_('muted') || false;
     }
     /**
-     * Get the current defaultMuted state, or turn defaultMuted on or off. defaultMuted
-     * indicates the state of muted on initial playback.
+     * Get the current defaultMuted state, or turn defaultMuted on or off.
+     * defaultMuted indicates the state of muted on initial playback.
      *
      * ```js
      *   var myPlayer = videojs('some-player-id');
@@ -25721,9 +25996,9 @@
      * Check if the player is in fullscreen mode or tell the player that it
      * is or is not in fullscreen mode.
      *
-     * > NOTE: As of the latest HTML5 spec, isFullscreen is no longer an official
-     * property and instead document.fullscreenElement is used. But isFullscreen is
-     * still a valuable property for internal player workings.
+     * > NOTE: As of the latest HTML5 spec, isFullscreen is no longer an
+     * official property and instead document.fullscreenElement is used. But
+     * isFullscreen is still a valuable property for internal player workings.
      *
      * @param  {boolean} [isFS]
      *         Set the players current fullscreen state
@@ -25760,9 +26035,9 @@
      * In some browsers, full screen is not supported natively, so it enters
      * "full window mode", where the video fills the browser window.
      * In browsers and devices that support native full screen, sometimes the
-     * browser's default controls will be shown, and not the Video.js custom skin.
-     * This includes most mobile devices (iOS, Android) and older versions of
-     * Safari.
+     * browser's default controls will be shown, and not the Video.js custom
+     * skin. This includes most mobile devices (iOS, Android) and older
+     * versions of Safari.
      *
      * @param  {Object} [fullscreenOptions]
      *         Override the player fullscreen options
@@ -25909,8 +26184,8 @@
       this.trigger('exitFullWindow');
     }
     /**
-     * Check if the player is in Picture-in-Picture mode or tell the player that it
-     * is or is not in Picture-in-Picture mode.
+     * Check if the player is in Picture-in-Picture mode or tell the player
+     * that it is or is not in Picture-in-Picture mode.
      *
      * @param  {boolean} [isPiP]
      *         Set the players current Picture-in-Picture state
@@ -25931,9 +26206,9 @@
       return !!this.isInPictureInPicture_;
     }
     /**
-     * Create a floating video window always on top of other windows so that users may
-     * continue consuming media while they interact with other content sites, or
-     * applications on their device.
+     * Create a floating video window always on top of other windows so that
+     * users may continue consuming media while they interact with other
+     * content sites, or applications on their device.
      *
      * @see [Spec]{@link https://wicg.github.io/picture-in-picture}
      *
@@ -26125,8 +26400,8 @@
     }
     /**
      * Select source based on tech-order or source-order
-     * Uses source-order selection if `options.sourceOrder` is truthy. Otherwise,
-     * defaults to tech-order selection
+     * Uses source-order selection if `options.sourceOrder` is truthy.
+     * Otherwise, defaults to tech-order selection
      *
      * @param {Array} sources
      *        The sources for a media asset
@@ -26286,8 +26561,8 @@
       });
     }
     /**
-     * Set the source object on the tech, returns a boolean that indicates whether
-     * there is a tech that can play the source or not
+     * Set the source object on the tech, returns a boolean that indicates
+     * whether there is a tech that can play the source or not
      *
      * @param {Tech~SourceObject} source
      *        The source object to set on the Tech
@@ -26459,8 +26734,9 @@
       return this.cache_.source || {};
     }
     /**
-     * Returns the fully qualified URL of the current source value e.g. http://mysite.com/video.mp4
-     * Can be used in conjunction with `currentType` to assist in rebuilding the current source object.
+     * Returns the fully qualified URL of the current source value e.g.
+     * http://mysite.com/video.mp4 Can be used in conjunction with
+     * `currentType` to assist in rebuilding the current source object.
      *
      * @return {string}
      *         The current source
@@ -26472,8 +26748,8 @@
     }
     /**
      * Get the current source type e.g. video/mp4
-     * This can allow you rebuild the current source object so that you could load the same
-     * source and tech later
+     * This can allow you rebuild the current source object so that you could
+     * load the same source and tech later
      *
      * @return {string}
      *         The source MIME type
@@ -26507,15 +26783,18 @@
     /**
      * Get or set the autoplay option. When this is a boolean it will
      * modify the attribute on the tech. When this is a string the attribute on
-     * the tech will be removed and `Player` will handle autoplay on loadstarts.
+     * the tech will be removed and `Player` will handle autoplay on
+     * loadstarts.
      *
      * @param {boolean|string} [value]
      *        - true: autoplay using the browser behavior
      *        - false: do not autoplay
      *        - 'play': call play() on every loadstart
      *        - 'muted': call muted() then play() on every loadstart
-     *        - 'any': call play() on every loadstart. if that fails call muted() then play().
-     *        - *: values other than those listed here will be set `autoplay` to true
+     *        - 'any': call play() on every loadstart. if that fails call
+     *     muted() then play().
+     *        - *: values other than those listed here will be set `autoplay`
+     *     to true
      *
      * @return {boolean|string}
      *         The current value of autoplay when getting
@@ -26556,9 +26835,9 @@
      *
      * @param {boolean} [value]
      *        - true means that we should try to play inline by default
-     *        - false means that we should use the browser's default playback mode,
-     *          which in most cases is inline. iOS Safari is a notable exception
-     *          and plays fullscreen by default.
+     *        - false means that we should use the browser's default playback
+     *     mode, which in most cases is inline. iOS Safari is a notable
+     *     exception and plays fullscreen by default.
      *
      * @return {string|Player}
      *         - the current value of playsinline
@@ -26727,11 +27006,11 @@
       }
     }
     /**
-     * Toggle native controls on/off. Native controls are the controls built into
-     * devices (e.g. default iPhone controls), Flash, or other techs
+     * Toggle native controls on/off. Native controls are the controls built
+     * into devices (e.g. default iPhone controls), Flash, or other techs
      * (e.g. Vimeo Controls)
-     * **This should only be set by the current tech, because only the tech knows
-     * if it can support native controls**
+     * **This should only be set by the current tech, because only the tech
+     * knows if it can support native controls**
      *
      * @fires Player#usingnativecontrols
      * @fires Player#usingcustomcontrols
@@ -27046,10 +27325,11 @@
       return 1.0;
     }
     /**
-     * Gets or sets the current default playback rate. A default playback rate of
-     * 1.0 represents normal speed and 0.5 would indicate half-speed playback, for instance.
-     * defaultPlaybackRate will only represent what the initial playbackRate of a video was, not
-     * not the current playbackRate.
+     * Gets or sets the current default playback rate. A default playback rate
+     * of
+     * 1.0 represents normal speed and 0.5 would indicate half-speed playback,
+     * for instance. defaultPlaybackRate will only represent what the initial
+     * playbackRate of a video was, not not the current playbackRate.
      *
      * @see https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-defaultplaybackrate
      *
@@ -27097,7 +27377,8 @@
      * A helper method for adding a {@link TextTrack} to our
      * {@link TextTrackList}.
      *
-     * In addition to the W3C settings we allow adding additional info through options.
+     * In addition to the W3C settings we allow adding additional info through
+     * options.
      *
      * @see http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#dom-media-addtexttrack
      *
@@ -27122,23 +27403,25 @@
       }
     }
     /**
-     * Create a remote {@link TextTrack} and an {@link HTMLTrackElement}. It will
-     * automatically removed from the video element whenever the source changes, unless
-     * manualCleanup is set to false.
+     * Create a remote {@link TextTrack} and an {@link HTMLTrackElement}. It
+     * will automatically removed from the video element whenever the source
+     * changes, unless manualCleanup is set to false.
      *
      * @param {Object} options
      *        Options to pass to {@link HTMLTrackElement} during creation. See
-     *        {@link HTMLTrackElement} for object properties that you should use.
+     *        {@link HTMLTrackElement} for object properties that you should
+     *     use.
      *
-     * @param {boolean} [manualCleanup=true] if set to false, the TextTrack will be
+     * @param {boolean} [manualCleanup=true] if set to false, the TextTrack
+     *     will be
      *
      * @return {HtmlTrackElement}
      *         the HTMLTrackElement that was created and added
      *         to the HtmlTrackElementList and the remote
      *         TextTrackList
      *
-     * @deprecated The default value of the "manualCleanup" parameter will default
-     *             to "false" in upcoming versions of Video.js
+     * @deprecated The default value of the "manualCleanup" parameter will
+     *     default to "false" in upcoming versions of Video.js
      */
     ;
 
@@ -27178,14 +27461,14 @@
       }
     }
     /**
-     * Gets available media playback quality metrics as specified by the W3C's Media
-     * Playback Quality API.
+     * Gets available media playback quality metrics as specified by the W3C's
+     * Media Playback Quality API.
      *
      * @see [Spec]{@link https://wicg.github.io/media-playback-quality}
      *
      * @return {Object|undefined}
-     *         An object with supported media playback quality metrics or undefined if there
-     *         is no tech or the tech does not support it.
+     *         An object with supported media playback quality metrics or
+     *     undefined if there is no tech or the tech does not support it.
      */
     ;
 
@@ -27237,8 +27520,9 @@
     }
     /**
      * Get the player's language dictionary
-     * Merge every time, because a newly added plugin might call videojs.addLanguage() at any time
-     * Languages specified directly in the player options have precedence
+     * Merge every time, because a newly added plugin might call
+     * videojs.addLanguage() at any time Languages specified directly in the
+     * player options have precedence
      *
      * @return {Array}
      *         An array of of supported languages
@@ -27451,8 +27735,9 @@
      * Get current breakpoint name, if any.
      *
      * @return {string}
-     *         If there is currently a breakpoint set, returns a the key from the
-     *         breakpoints object matching it. Otherwise, returns an empty string.
+     *         If there is currently a breakpoint set, returns a the key from
+     *     the breakpoints object matching it. Otherwise, returns an empty
+     *     string.
      */
     ;
 
@@ -27475,8 +27760,8 @@
     /**
      * An object that describes a single piece of media.
      *
-     * Properties that are not part of this type description will be retained; so,
-     * this can be viewed as a generic metadata storage mechanism as well.
+     * Properties that are not part of this type description will be retained;
+     * so, this can be viewed as a generic metadata storage mechanism as well.
      *
      * @see      {@link https://wicg.github.io/mediasession/#the-mediametadata-interface}
      * @typedef  {Object} Player~MediaObject
@@ -27498,9 +27783,12 @@
      *           URL to an image that will display before playback.
      *
      * @property {Tech~SourceObject|Tech~SourceObject[]|string} [src]
-     *           A single source object, an array of source objects, or a string
-     *           referencing a URL to a media source. It is _highly recommended_
-     *           that an object or array of objects is used here, so that source
+     *           A single source object, an array of source objects, or a
+     *     string
+     *           referencing a URL to a media source. It is _highly
+     *     recommended_
+     *           that an object or array of objects is used here, so that
+     *     source
      *           selection algorithms can take the `type` into account.
      *
      * @property {string} [title]
@@ -27508,10 +27796,10 @@
      *           API.
      *
      * @property {Object[]} [textTracks]
-     *           An array of objects to be used to create text tracks, following
-     *           the {@link https://www.w3.org/TR/html50/embedded-content-0.html#the-track-element|native track element format}.
-     *           For ease of removal, these will be created as "remote" text
-     *           tracks and set to automatically clean up on source changes.
+     *           An array of objects to be used to create text tracks,
+     *     following
+     *           the
+     *     {@link https://www.w3.org/TR/html50/embedded-content-0.html#the-track-element|native track element format}. For ease of removal, these will be created as "remote" text tracks and set to automatically clean up on source changes.
      *
      *           These objects may have properties like `src`, `kind`, `label`,
      *           and `language`, see {@link Tech#createRemoteTextTrack}.
@@ -28188,7 +28476,8 @@
     /**
      * Creates an instance of this class.
      *
-     * Sub-classes should call `super` to ensure plugins are properly initialized.
+     * Sub-classes should call `super` to ensure plugins are properly
+     * initialized.
      *
      * @param {Player} player
      *        A Video.js player instance.
@@ -28269,16 +28558,16 @@
       return trigger(this.eventBusEl_, event, this.getEventHash(hash));
     }
     /**
-     * Handles "statechanged" events on the plugin. No-op by default, override by
-     * subclassing.
+     * Handles "statechanged" events on the plugin. No-op by default, override
+     * by subclassing.
      *
      * @abstract
      * @param    {Event} e
      *           An event object provided by a "statechanged" event.
      *
      * @param    {Object} e.changes
-     *           An object describing changes that occurred with the "statechanged"
-     *           event.
+     *           An object describing changes that occurred with the
+     *     "statechanged" event.
      */
     ;
 
@@ -28316,11 +28605,12 @@
       player[name] = createPluginFactory(name, pluginStorage[name]);
     }
     /**
-     * Determines if a plugin is a basic plugin (i.e. not a sub-class of `Plugin`).
+     * Determines if a plugin is a basic plugin (i.e. not a sub-class of
+     * `Plugin`).
      *
      * @param   {string|Function} plugin
-     *          If a string, matches the name of a plugin. If a function, will be
-     *          tested directly.
+     *          If a string, matches the name of a plugin. If a function, will
+     *     be tested directly.
      *
      * @return {boolean}
      *          Whether or not a plugin is a basic plugin.
@@ -28402,8 +28692,8 @@
      * Gets an object containing multiple Video.js plugins.
      *
      * @param   {Array} [names]
-     *          If provided, should be an array of plugin names. Defaults to _all_
-     *          plugin names.
+     *          If provided, should be an array of plugin names. Defaults to
+     *     _all_ plugin names.
      *
      * @return {Object|undefined}
      *          An object containing plugin(s) associated with their name(s) or
@@ -28522,13 +28812,15 @@
    *
    * @property {string} instance
    *           For basic plugins, the return value of the plugin function. For
-   *           advanced plugins, the plugin instance on which the event is fired.
+   *           advanced plugins, the plugin instance on which the event is
+   *     fired.
    *
    * @property {string} name
    *           The name of the plugin.
    *
    * @property {string} plugin
-   *           For basic plugins, the plugin function. For advanced plugins, the
+   *           For basic plugins, the plugin function. For advanced plugins,
+   *     the
    *           plugin class/constructor.
    */
 
@@ -28632,14 +28924,17 @@
     return id.indexOf('#') === 0 ? id.slice(1) : id;
   };
   /**
-   * The `videojs()` function doubles as the main function for users to create a
+   * The `videojs()` function doubles as the main function for users to create
+   * a
    * {@link Player} instance as well as the main library namespace.
    *
-   * It can also be used as a getter for a pre-existing {@link Player} instance.
+   * It can also be used as a getter for a pre-existing {@link Player}
+   * instance.
    * However, we _strongly_ recommend using `videojs.getPlayer()` for this
    * purpose because it avoids any potential for unintended initialization.
    *
-   * Due to [limitations](https://github.com/jsdoc3/jsdoc/issues/955#issuecomment-313829149)
+   * Due to
+   * [limitations](https://github.com/jsdoc3/jsdoc/issues/955#issuecomment-313829149)
    * of our JSDoc template, we cannot properly document this as both a function
    * and a namespace, so its function signature is documented here.
    *
@@ -28658,7 +28953,8 @@
    * ##### ready
    * {@link Component~ReadyCallback}, optional
    *
-   * A function to be called when the {@link Player} and {@link Tech} are ready.
+   * A function to be called when the {@link Player} and {@link Tech} are
+   * ready.
    *
    * #### Return Value
    *
@@ -28701,11 +28997,12 @@
    *
    * @param  {Object} [options]
    *         Options object for providing settings.
-   *         See: [Options Guide](https://docs.videojs.com/tutorial-options.html).
+   *         See: [Options
+   *     Guide](https://docs.videojs.com/tutorial-options.html).
    *
    * @param  {Component~ReadyCallback} [ready]
-   *         A function to be called when the {@link Player} and {@link Tech} are
-   *         ready.
+   *         A function to be called when the {@link Player} and {@link Tech}
+   *     are ready.
    *
    * @return {Player}
    *         The `videojs()` function returns a {@link Player|Player} instance.
@@ -28779,7 +29076,8 @@
    *         the lifecyle to get hooks from
    *
    * @param  {Function|Function[]} [fn]
-   *         Optionally add a hook (or hooks) to the lifecycle that your are getting.
+   *         Optionally add a hook (or hooks) to the lifecycle that your are
+   *     getting.
    *
    * @return {Array}
    *         an array of hooks, or an empty array if there are none.
@@ -28809,7 +29107,8 @@
     videojs$1.hooks(type, fn);
   };
   /**
-   * Add a function hook that will only run once to a specific videojs lifecycle.
+   * Add a function hook that will only run once to a specific videojs
+   * lifecycle.
    *
    * @param {string} type
    *        the lifecycle to hook the function to.
@@ -28876,7 +29175,8 @@
 
   autoSetupTimeout(1, videojs$1);
   /**
-   * Current Video.js version. Follows [semantic versioning](https://semver.org/).
+   * Current Video.js version. Follows [semantic
+   * versioning](https://semver.org/).
    *
    * @type {string}
    */
@@ -28967,9 +29267,10 @@
   videojs$1.players = Player.players;
   videojs$1.getComponent = Component.getComponent;
   /**
-   * Register a component so it can referred to by name. Used when adding to other
-   * components, either through addChild `component.addChild('myComponent')` or through
-   * default children options  `{ children: ['myComponent'] }`.
+   * Register a component so it can referred to by name. Used when adding to
+   * other components, either through addChild
+   * `component.addChild('myComponent')` or through default children options
+   * `{ children: ['myComponent'] }`.
    *
    * > NOTE: You could also just initialize the component before adding.
    * `component.addChild(new MyComponent());`
@@ -29014,7 +29315,8 @@
     enumerable: true
   });
   /**
-   * A reference to the {@link module:browser|browser utility module} as an object.
+   * A reference to the {@link module:browser|browser utility module} as an
+   * object.
    *
    * @type {Object}
    * @see  {@link module:browser|browser}
@@ -29022,10 +29324,11 @@
 
   videojs$1.browser = browser;
   /**
-   * Use {@link module:browser.TOUCH_ENABLED|browser.TOUCH_ENABLED} instead; only
-   * included for backward-compatibility with 4.x.
+   * Use {@link module:browser.TOUCH_ENABLED|browser.TOUCH_ENABLED} instead;
+   * only included for backward-compatibility with 4.x.
    *
-   * @deprecated Since version 5.0, use {@link module:browser.TOUCH_ENABLED|browser.TOUCH_ENABLED instead.
+   * @deprecated Since version 5.0, use {@link
+   *     module:browser.TOUCH_ENABLED|browser.TOUCH_ENABLED instead.
    * @type {boolean}
    */
 
@@ -29038,7 +29341,8 @@
   /**
    * Deprecated method to register a plugin with Video.js
    *
-   * @deprecated videojs.plugin() is deprecated; use videojs.registerPlugin() instead
+   * @deprecated videojs.plugin() is deprecated; use videojs.registerPlugin()
+   *     instead
    *
    * @param {string} name
    *        The plugin name
@@ -29356,7 +29660,8 @@
    */
 
   /**
-   * A lightweight readable stream implementation that handles event dispatching.
+   * A lightweight readable stream implementation that handles event
+   * dispatching.
    *
    * @class Stream
    */
@@ -29455,7 +29760,8 @@
      * destination stream should provide a method `push` to receive the data
      * events as they arrive.
      *
-     * @param {Stream} destination the stream that will receive all `data` events
+     * @param {Stream} destination the stream that will receive all `data`
+     *     events
      * @see http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
      */
     ;
@@ -30080,11 +30386,16 @@
     /**
      * Add a parser for custom headers
      *
-     * @param {Object}   options              a map of options for the added parser
-     * @param {RegExp}   options.expression   a regular expression to match the custom header
-     * @param {string}   options.customType   the custom type to register to the output
-     * @param {Function} [options.dataParser] function to parse the line into an object
-     * @param {boolean}  [options.segment]    should tag data be attached to the segment object
+     * @param {Object}   options              a map of options for the added
+     *     parser
+     * @param {RegExp}   options.expression   a regular expression to match the
+     *     custom header
+     * @param {string}   options.customType   the custom type to register to
+     *     the output
+     * @param {Function} [options.dataParser] function to parse the line into
+     *     an object
+     * @param {boolean}  [options.segment]    should tag data be attached to
+     *     the segment object
      */
     ;
 
@@ -30121,8 +30432,10 @@
      * Add a custom header mapper
      *
      * @param {Object}   options
-     * @param {RegExp}   options.expression   a regular expression to match the custom header
-     * @param {Function} options.map          function to translate tag into a different tag
+     * @param {RegExp}   options.expression   a regular expression to match the
+     *     custom header
+     * @param {Function} options.map          function to translate tag into a
+     *     different tag
      */
     ;
 
@@ -30157,7 +30470,8 @@
   /**
    * A parser for M3U8 files. The current interpretation of the input is
    * exposed as a property `manifest` on parser objects. It's just two lines to
-   * create and parse a manifest once you have the contents available as a string:
+   * create and parse a manifest once you have the contents available as a
+   * string:
    *
    * ```js
    * var parser = new m3u8.Parser();
@@ -30614,11 +30928,16 @@
     /**
      * Add an additional parser for non-standard tags
      *
-     * @param {Object}   options              a map of options for the added parser
-     * @param {RegExp}   options.expression   a regular expression to match the custom header
-     * @param {string}   options.type         the type to register to the output
-     * @param {Function} [options.dataParser] function to parse the line into an object
-     * @param {boolean}  [options.segment]    should tag data be attached to the segment object
+     * @param {Object}   options              a map of options for the added
+     *     parser
+     * @param {RegExp}   options.expression   a regular expression to match the
+     *     custom header
+     * @param {string}   options.type         the type to register to the
+     *     output
+     * @param {Function} [options.dataParser] function to parse the line into
+     *     an object
+     * @param {boolean}  [options.segment]    should tag data be attached to
+     *     the segment object
      */
     ;
 
@@ -30629,8 +30948,10 @@
      * Add a custom header mapper
      *
      * @param {Object}   options
-     * @param {RegExp}   options.expression   a regular expression to match the custom header
-     * @param {Function} options.map          function to translate tag into a different tag
+     * @param {RegExp}   options.expression   a regular expression to match the
+     *     custom header
+     * @param {Function} options.map          function to translate tag into a
+     *     different tag
      */
     ;
 
@@ -30924,8 +31245,8 @@
    * @typedef {Object} SingleUri
    * @property {string} uri - relative location of segment
    * @property {string} resolvedUri - resolved location of segment
-   * @property {Object} byterange - Object containing information on how to make byte range
-   *   requests following byte-range-spec per RFC2616.
+   * @property {Object} byterange - Object containing information on how to
+   *     make byte range requests following byte-range-spec per RFC2616.
    * @property {String} byterange.length - length of range request
    * @property {String} byterange.offset - byte offset of range request
    *
@@ -30942,8 +31263,8 @@
    * @param {string} source - source url for segment
    * @param {string} range - optional range used for range calls,
    *   follows  RFC 2616, Clause 14.35.1
-   * @return {SingleUri} full segment information transformed into a format similar
-   *   to m3u8-parser
+   * @return {SingleUri} full segment information transformed into a format
+   *     similar to m3u8-parser
    */
 
 
@@ -30984,8 +31305,8 @@
     return byterange.offset + "-" + endRange;
   };
   /**
-   * Functions for calculating the range of available segments in static and dynamic
-   * manifests.
+   * Functions for calculating the range of available segments in static and
+   * dynamic manifests.
    */
 
 
@@ -31010,7 +31331,8 @@
     },
 
     /**
-     * Returns the current live window range of available segments for a dynamic MPD
+     * Returns the current live window range of available segments for a
+     * dynamic MPD
      *
      * @param {Object} attributes
      *        Inheritied MPD attributes
@@ -31044,8 +31366,8 @@
     }
   };
   /**
-   * Maps a range of numbers to objects with information needed to build the corresponding
-   * segment list
+   * Maps a range of numbers to objects with information needed to build the
+   * corresponding segment list
    *
    * @name toSegmentsCallback
    * @function
@@ -31053,13 +31375,13 @@
    *        Number of the segment
    * @param {number} index
    *        Index of the number in the range list
-   * @return {{ number: Number, duration: Number, timeline: Number, time: Number }}
-   *         Object with segment timing and duration info
+   * @return {{ number: Number, duration: Number, timeline: Number, time:
+   *     Number }} Object with segment timing and duration info
    */
 
   /**
-   * Returns a callback for Array.prototype.map for mapping a range of numbers to
-   * information needed to build the segment list.
+   * Returns a callback for Array.prototype.map for mapping a range of numbers
+   * to information needed to build the segment list.
    *
    * @param {Object} attributes
    *        Inherited MPD attributes
@@ -31084,14 +31406,14 @@
     };
   };
   /**
-   * Returns a list of objects containing segment timing and duration info used for
-   * building the list of segments. This uses the @duration attribute specified
-   * in the MPD manifest to derive the range of segments.
+   * Returns a list of objects containing segment timing and duration info used
+   * for building the list of segments. This uses the @duration attribute
+   * specified in the MPD manifest to derive the range of segments.
    *
    * @param {Object} attributes
    *        Inherited MPD attributes
-   * @return {{number: number, duration: number, time: number, timeline: number}[]}
-   *         List of Objects with segment timing and duration info
+   * @return {{number: number, duration: number, time: number, timeline:
+   *     number}[]} List of Objects with segment timing and duration info
    */
 
 
@@ -31123,8 +31445,8 @@
    * node should be translated into segment.
    *
    * @param {Object} attributes
-   *   Object containing all inherited attributes from parent elements with attribute
-   *   names as keys
+   *   Object containing all inherited attributes from parent elements with
+   *     attribute names as keys
    * @return {Object.<Array>} list of segments
    */
 
@@ -31174,8 +31496,8 @@
     return [segment];
   };
   /**
-   * Given a playlist, a sidx box, and a baseUrl, update the segment list of the playlist
-   * according to the sidx information given.
+   * Given a playlist, a sidx box, and a baseUrl, update the segment list of
+   * the playlist according to the sidx information given.
    *
    * playlist.sidx has metadadata about the sidx where-as the sidx param
    * is the parsed sidx box itself.
@@ -31534,12 +31856,12 @@
     return master;
   };
   /**
-   * Calculates the R (repetition) value for a live stream (for the final segment
-   * in a manifest where the r value is negative 1)
+   * Calculates the R (repetition) value for a live stream (for the final
+   * segment in a manifest where the r value is negative 1)
    *
    * @param {Object} attributes
-   *        Object containing all inherited attributes from parent elements with attribute
-   *        names as keys
+   *        Object containing all inherited attributes from parent elements
+   *     with attribute names as keys
    * @param {number} time
    *        current time (typically the total time up until the final segment)
    * @param {number} duration
@@ -31567,17 +31889,18 @@
     return Math.ceil((periodDuration * timescale - time) / duration);
   };
   /**
-   * Uses information provided by SegmentTemplate.SegmentTimeline to determine segment
-   * timing and duration
+   * Uses information provided by SegmentTemplate.SegmentTimeline to determine
+   * segment timing and duration
    *
    * @param {Object} attributes
-   *        Object containing all inherited attributes from parent elements with attribute
-   *        names as keys
+   *        Object containing all inherited attributes from parent elements
+   *     with attribute names as keys
    * @param {Object[]} segmentTimeline
-   *        List of objects representing the attributes of each S element contained within
+   *        List of objects representing the attributes of each S element
+   *     contained within
    *
-   * @return {{number: number, duration: number, time: number, timeline: number}[]}
-   *         List of Objects with segment timing and duration info
+   * @return {{number: number, duration: number, time: number, timeline:
+   *     number}[]} List of Objects with segment timing and duration info
    */
 
 
@@ -31672,8 +31995,8 @@
 
   var identifierPattern = /\$([A-z]*)(?:(%0)([0-9]+)d)?\$/g;
   /**
-   * Replaces template identifiers with corresponding values. To be used as the callback
-   * for String.prototype.replace
+   * Replaces template identifiers with corresponding values. To be used as the
+   * callback for String.prototype.replace
    *
    * @name replaceCallback
    * @function
@@ -31684,18 +32007,19 @@
    * @param {string} format
    *        Format tag string. Its presence indicates that padding is expected
    * @param {string} width
-   *        Desired length of the replaced value. Values less than this width shall be left
-   *        zero padded
+   *        Desired length of the replaced value. Values less than this width
+   *     shall be left zero padded
    * @return {string}
    *         Replacement for the matched identifier
    */
 
   /**
-   * Returns a function to be used as a callback for String.prototype.replace to replace
-   * template identifiers
+   * Returns a function to be used as a callback for String.prototype.replace
+   * to replace template identifiers
    *
    * @param {Obect} values
-   *        Object containing values that shall be used to replace known identifiers
+   *        Object containing values that shall be used to replace known
+   *     identifiers
    * @param {number} values.RepresentationID
    *        Value of the Representation@id attribute
    * @param {number} values.Number
@@ -31705,7 +32029,8 @@
    * @param {number} values.Time
    *        Timestamp value of the corresponding segment
    * @return {replaceCallback}
-   *         Callback to be used with String.prototype.replace to replace identifiers
+   *         Callback to be used with String.prototype.replace to replace
+   *     identifiers
    */
 
   var identifierReplacement = function identifierReplacement(values) {
@@ -31745,7 +32070,8 @@
    * @param {string} url
    *        Template string to construct url from
    * @param {Obect} values
-   *        Object containing values that shall be used to replace known identifiers
+   *        Object containing values that shall be used to replace known
+   *     identifiers
    * @param {number} values.RepresentationID
    *        Value of the Representation@id attribute
    * @param {number} values.Number
@@ -31763,17 +32089,18 @@
     return url.replace(identifierPattern, identifierReplacement(values));
   };
   /**
-   * Generates a list of objects containing timing and duration information about each
-   * segment needed to generate segment uris and the complete segment object
+   * Generates a list of objects containing timing and duration information
+   * about each segment needed to generate segment uris and the complete
+   * segment object
    *
    * @param {Object} attributes
-   *        Object containing all inherited attributes from parent elements with attribute
-   *        names as keys
+   *        Object containing all inherited attributes from parent elements
+   *     with attribute names as keys
    * @param {Object[]|undefined} segmentTimeline
-   *        List of objects representing the attributes of each S element contained within
-   *        the SegmentTimeline element
-   * @return {{number: number, duration: number, time: number, timeline: number}[]}
-   *         List of Objects with segment timing and duration info
+   *        List of objects representing the attributes of each S element
+   *     contained within the SegmentTimeline element
+   * @return {{number: number, duration: number, time: number, timeline:
+   *     number}[]} List of Objects with segment timing and duration info
    */
 
 
@@ -31796,14 +32123,15 @@
     return parseByTimeline(attributes, segmentTimeline);
   };
   /**
-   * Generates a list of segments using information provided by the SegmentTemplate element
+   * Generates a list of segments using information provided by the
+   * SegmentTemplate element
    *
    * @param {Object} attributes
-   *        Object containing all inherited attributes from parent elements with attribute
-   *        names as keys
+   *        Object containing all inherited attributes from parent elements
+   *     with attribute names as keys
    * @param {Object[]|undefined} segmentTimeline
-   *        List of objects representing the attributes of each S element contained within
-   *        the SegmentTimeline element
+   *        List of objects representing the attributes of each S element
+   *     contained within the SegmentTimeline element
    * @return {Object[]}
    *         List of segment objects
    */
@@ -31840,12 +32168,13 @@
     });
   };
   /**
-   * Converts a <SegmentUrl> (of type URLType from the DASH spec 5.3.9.2 Table 14)
-   * to an object that matches the output of a segment in videojs/mpd-parser
+   * Converts a <SegmentUrl> (of type URLType from the DASH spec 5.3.9.2 Table
+   * 14) to an object that matches the output of a segment in
+   * videojs/mpd-parser
    *
    * @param {Object} attributes
-   *   Object containing all inherited attributes from parent elements with attribute
-   *   names as keys
+   *   Object containing all inherited attributes from parent elements with
+   *     attribute names as keys
    * @param {Object} segmentUrl
    *   <SegmentURL> node to translate into a segment object
    * @return {Object} translated segment object
@@ -31870,16 +32199,16 @@
     return segment;
   };
   /**
-   * Generates a list of segments using information provided by the SegmentList element
-   * SegmentList (DASH SPEC Section 5.3.9.3.2) contains a set of <SegmentURL> nodes.  Each
-   * node should be translated into segment.
+   * Generates a list of segments using information provided by the SegmentList
+   * element SegmentList (DASH SPEC Section 5.3.9.3.2) contains a set of
+   * <SegmentURL> nodes.  Each node should be translated into segment.
    *
    * @param {Object} attributes
-   *   Object containing all inherited attributes from parent elements with attribute
-   *   names as keys
+   *   Object containing all inherited attributes from parent elements with
+   *     attribute names as keys
    * @param {Object[]|undefined} segmentTimeline
-   *        List of objects representing the attributes of each S element contained within
-   *        the SegmentTimeline element
+   *        List of objects representing the attributes of each S element
+   *     contained within the SegmentTimeline element
    * @return {Object.<Array>} list of segments
    */
 
@@ -32035,8 +32364,8 @@
 
   var parsers = {
     /**
-     * Specifies the duration of the entire Media Presentation. Format is a duration string
-     * as specified in ISO 8601
+     * Specifies the duration of the entire Media Presentation. Format is a
+     * duration string as specified in ISO 8601
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32048,9 +32377,10 @@
     },
 
     /**
-     * Specifies the Segment availability start time for all Segments referred to in this
-     * MPD. For a dynamic manifest, it specifies the anchor for the earliest availability
-     * time. Format is a date string as specified in ISO 8601
+     * Specifies the Segment availability start time for all Segments referred
+     * to in this MPD. For a dynamic manifest, it specifies the anchor for the
+     * earliest availability time. Format is a date string as specified in ISO
+     * 8601
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32062,8 +32392,8 @@
     },
 
     /**
-     * Specifies the smallest period between potential changes to the MPD. Format is a
-     * duration string as specified in ISO 8601
+     * Specifies the smallest period between potential changes to the MPD.
+     * Format is a duration string as specified in ISO 8601
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32075,8 +32405,9 @@
     },
 
     /**
-     * Specifies the duration of the smallest time shifting buffer for any Representation
-     * in the MPD. Format is a duration string as specified in ISO 8601
+     * Specifies the duration of the smallest time shifting buffer for any
+     * Representation in the MPD. Format is a duration string as specified in
+     * ISO 8601
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32088,8 +32419,9 @@
     },
 
     /**
-     * Specifies the PeriodStart time of the Period relative to the availabilityStarttime.
-     * Format is a duration string as specified in ISO 8601
+     * Specifies the PeriodStart time of the Period relative to the
+     * availabilityStarttime. Format is a duration string as specified in ISO
+     * 8601
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32137,7 +32469,8 @@
     },
 
     /**
-     * Specifies the number of the first Media Segment in this Representation in the Period
+     * Specifies the number of the first Media Segment in this Representation
+     * in the Period
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32162,10 +32495,10 @@
 
     /**
      * Specifies the constant approximate Segment duration
-     * NOTE: The <Period> element also contains an @duration attribute. This duration
-     *       specifies the duration of the Period. This attribute is currently not
-     *       supported by the rest of the parser, however we still check for it to prevent
-     *       errors.
+     * NOTE: The <Period> element also contains an @duration attribute. This
+     * duration specifies the duration of the Period. This attribute is
+     * currently not supported by the rest of the parser, however we still
+     * check for it to prevent errors.
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32195,8 +32528,8 @@
     },
 
     /**
-     * Specifies the MPD start time, in @timescale units, the first Segment in the series
-     * starts relative to the beginning of the Period
+     * Specifies the MPD start time, in @timescale units, the first Segment in
+     * the series starts relative to the beginning of the Period
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32208,8 +32541,8 @@
     },
 
     /**
-     * Specifies the repeat count of the number of following contiguous Segments with the
-     * same duration expressed by the value of @d
+     * Specifies the repeat count of the number of following contiguous
+     * Segments with the same duration expressed by the value of @d
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32221,8 +32554,8 @@
     },
 
     /**
-     * Default parser for all other attributes. Acts as a no-op and just returns the value
-     * as a string
+     * Default parser for all other attributes. Acts as a no-op and just
+     * returns the value as a string
      *
      * @param {string} value
      *        value of attribute as a string
@@ -32234,8 +32567,9 @@
     }
   };
   /**
-   * Gets all the attributes and values of the provided node, parses attributes with known
-   * types, and returns an object with attribute names mapped to values.
+   * Gets all the attributes and values of the provided node, parses attributes
+   * with known types, and returns an object with attribute names mapped to
+   * values.
    *
    * @param {Node} el
    *        The node to parse attributes from
@@ -32273,7 +32607,8 @@
     'urn:uuid:f239e769-efa3-4850-9c16-a903c6932efb': 'com.adobe.primetime'
   };
   /**
-   * Builds a list of urls that is the product of the reference urls and BaseURL values
+   * Builds a list of urls that is the product of the reference urls and
+   * BaseURL values
    *
    * @param {string[]} referenceUrls
    *        List of reference urls to resolve to
@@ -32301,7 +32636,8 @@
    * @property {Object|undefined} template
    *           Contains the attributes for the SegmentTemplate node
    * @property {Object[]|undefined} timeline
-   *           Contains a list of atrributes for each S node within the SegmentTimeline node
+   *           Contains a list of atrributes for each S node within the
+   *     SegmentTimeline node
    * @property {Object|undefined} list
    *           Contains the attributes for the SegmentList node
    * @property {Object|undefined} base
@@ -32309,12 +32645,14 @@
    */
 
   /**
-   * Returns all available Segment information contained within the AdaptationSet node
+   * Returns all available Segment information contained within the
+   * AdaptationSet node
    *
    * @param {Node} adaptationSet
    *        The AdaptationSet node to get Segment information from
    * @return {SegmentInformation}
-   *         The Segment information contained within the provided AdaptationSet
+   *         The Segment information contained within the provided
+   *     AdaptationSet
    */
 
 
@@ -32370,8 +32708,8 @@
     return segmentInfo;
   };
   /**
-   * Contains Segment information and attributes needed to construct a Playlist object
-   * from a Representation
+   * Contains Segment information and attributes needed to construct a Playlist
+   * object from a Representation
    *
    * @typedef {Object} RepresentationInformation
    * @property {SegmentInformation} segmentInfo
@@ -32381,7 +32719,8 @@
    */
 
   /**
-   * Maps a Representation node to an object containing Segment information and attributes
+   * Maps a Representation node to an object containing Segment information and
+   * attributes
    *
    * @name inheritBaseUrlsCallback
    * @function
@@ -32392,8 +32731,8 @@
    */
 
   /**
-   * Returns a callback for Array.prototype.map for mapping Representation nodes to
-   * Segment information and attributes using inherited BaseURL nodes.
+   * Returns a callback for Array.prototype.map for mapping Representation
+   * nodes to Segment information and attributes using inherited BaseURL nodes.
    *
    * @param {Object} adaptationSetAttributes
    *        Contains attributes inherited by the AdaptationSet
@@ -32466,8 +32805,8 @@
    */
 
   /**
-   * Returns a callback for Array.prototype.map for mapping AdaptationSet nodes to a list of
-   * Representation information objects
+   * Returns a callback for Array.prototype.map for mapping AdaptationSet nodes
+   * to a list of Representation information objects
    *
    * @param {Object} periodAttributes
    *        Contains attributes inherited by the Period
@@ -32518,8 +32857,8 @@
    */
 
   /**
-   * Returns a callback for Array.prototype.map for mapping Period nodes to a list of
-   * Representation information objects
+   * Returns a callback for Array.prototype.map for mapping Period nodes to a
+   * list of Representation information objects
    *
    * @param {Object} mpdAttributes
    *        Contains attributes inherited by the mpd
@@ -32546,8 +32885,8 @@
     };
   };
   /**
-   * Traverses the mpd xml tree to generate a list of Representation information objects
-   * that have inherited attributes from parent nodes
+   * Traverses the mpd xml tree to generate a list of Representation
+   * information objects that have inherited attributes from parent nodes
    *
    * @param {Node} mpd
    *        The root node of the mpd
@@ -32556,7 +32895,8 @@
    * @param {string} options.manifestUri
    *        The uri source of the mpd
    * @param {number} options.NOW
-   *        Current time per DASH IOP.  Default is current time in ms since epoch
+   *        Current time per DASH IOP.  Default is current time in ms since
+   *     epoch
    * @param {number} options.clientOffset
    *        Client time difference from NOW (in milliseconds)
    * @return {RepresentationInformation[]}
@@ -32606,12 +32946,14 @@
     return mpd;
   };
   /**
-   * Parses the manifest for a UTCTiming node, returning the nodes attributes if found
+   * Parses the manifest for a UTCTiming node, returning the nodes attributes
+   * if found
    *
    * @param {string} mpd
    *        XML string of the MPD manifest
    * @return {Object|null}
-   *         Attributes of UTCTiming node specified in the manifest. Null if none found
+   *         Attributes of UTCTiming node specified in the manifest. Null if
+   *     none found
    */
 
 
@@ -32661,12 +33003,14 @@
     return toM3u8(toPlaylists(inheritAttributes(stringToMpdXml(manifestString), options)), options.sidxMapping);
   };
   /**
-   * Parses the manifest for a UTCTiming node, returning the nodes attributes if found
+   * Parses the manifest for a UTCTiming node, returning the nodes attributes
+   * if found
    *
    * @param {string} manifestString
    *        XML string of the MPD manifest
    * @return {Object|null}
-   *         Attributes of UTCTiming node specified in the manifest. Null if none found
+   *         Attributes of UTCTiming node specified in the manifest. Null if
+   *     none found
    */
 
 
@@ -33714,12 +34058,14 @@
    * The composition start time of a fragment can be calculated using the base
    * media decode time, composition time offset, and timescale, as follows:
    *
-   * compositionStartTime = (baseMediaDecodeTime + compositionTimeOffset) / timescale
+   * compositionStartTime = (baseMediaDecodeTime + compositionTimeOffset) /
+   * timescale
    *
-   * All of the aforementioned information is contained within a media fragment's
+   * All of the aforementioned information is contained within a media
+   * fragment's
    * `traf` box, except for timescale info, which comes from the initialization
-   * segment, so a track id (also contained within a `traf`) is also necessary to
-   * associate it with a timescale
+   * segment, so a track id (also contained within a `traf`) is also necessary
+   * to associate it with a timescale
    *
    *
    * @param timescales {object} - a hash of track ids to timescale values.
@@ -34185,8 +34531,8 @@
    * destination stream should provide a method `push` to receive the data
    * events as they arrive.
    * @param destination {stream} the stream that will receive all `data` events
-   * @param autoFlush {boolean} if false, we will not call `flush` on the destination
-   *                            when the current stream emits a 'done' event
+   * @param autoFlush {boolean} if false, we will not call `flush` on the
+   *     destination when the current stream emits a 'done' event
    * @see http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
    */
 
@@ -35146,11 +35492,12 @@
   var discardEmulationPreventionBytes$1 = captionPacketParser.discardEmulationPreventionBytes;
   var CaptionStream$1 = captionStream.CaptionStream;
   /**
-    * Maps an offset in the mdat to a sample based on the the size of the samples.
-    * Assumes that `parseSamples` has been called first.
+    * Maps an offset in the mdat to a sample based on the the size of the
+    * samples. Assumes that `parseSamples` has been called first.
     *
     * @param {Number} offset - The offset into the mdat
-    * @param {Object[]} samples - An array of samples, parsed using `parseSamples`
+    * @param {Object[]} samples - An array of samples, parsed using
+    *     `parseSamples`
     * @return {?Object} The matching sample, or null if no match was found.
     *
     * @see ISO-BMFF-12/2015, Section 8.8.8
@@ -35343,16 +35690,23 @@
     * caption objects that can be used by WebVTT and the TextTrack API.
     * @see https://developer.mozilla.org/en-US/docs/Web/API/VTTCue
     * @see https://developer.mozilla.org/en-US/docs/Web/API/TextTrack
-    * Assumes that `probe.getVideoTrackIds` and `probe.timescale` have been called first
+    * Assumes that `probe.getVideoTrackIds` and `probe.timescale` have been
+    *     called first
     *
-    * @param {Uint8Array} segment - The fmp4 segment containing embedded captions
+    * @param {Uint8Array} segment - The fmp4 segment containing embedded
+    *     captions
     * @param {Number} trackId - The id of the video track to parse
-    * @param {Number} timescale - The timescale for the video track from the init segment
+    * @param {Number} timescale - The timescale for the video track from the
+    *     init segment
     *
-    * @return {?Object[]} parsedCaptions - A list of captions or null if no video tracks
-    * @return {Number} parsedCaptions[].startTime - The time to show the caption in seconds
-    * @return {Number} parsedCaptions[].endTime - The time to stop showing the caption in seconds
-    * @return {String} parsedCaptions[].text - The visible content of the caption
+    * @return {?Object[]} parsedCaptions - A list of captions or null if no
+    *     video tracks
+    * @return {Number} parsedCaptions[].startTime - The time to show the
+    *     caption in seconds
+    * @return {Number} parsedCaptions[].endTime - The time to stop showing the
+    *     caption in seconds
+    * @return {String} parsedCaptions[].text - The visible content of the
+    *     caption
    **/
 
 
@@ -35432,9 +35786,12 @@
       * Parses out SEI captions and interacts with underlying
       * CaptionStream to return dispatched captions
       *
-      * @param {Uint8Array} segment - The fmp4 segment containing embedded captions
-      * @param {Number[]} videoTrackIds - A list of video tracks found in the init segment
-      * @param {Object.<Number, Number>} timescales - The timescales found in the init segment
+      * @param {Uint8Array} segment - The fmp4 segment containing embedded
+      *     captions
+      * @param {Number[]} videoTrackIds - A list of video tracks found in the
+      *     init segment
+      * @param {Object.<Number, Number>} timescales - The timescales found in
+      *     the init segment
       * @see parseEmbeddedCaptions
       * @see m2ts/caption-stream.js
      **/
@@ -35478,8 +35835,9 @@
     };
     /**
       * Pushes SEI NALUs onto CaptionStream
-      * @param {Object[]} nals - A list of SEI nals parsed using `parseCaptionNals`
-      * Assumes that `parseCaptionNals` has been called first
+      * @param {Object[]} nals - A list of SEI nals parsed using
+      *     `parseCaptionNals` Assumes that `parseCaptionNals` has been called
+      *     first
       * @see m2ts/caption-stream.js
       **/
 
@@ -35494,7 +35852,8 @@
       });
     };
     /**
-      * Flushes underlying CaptionStream to dispatch processed, displayable captions
+      * Flushes underlying CaptionStream to dispatch processed, displayable
+      * captions
       * @see m2ts/caption-stream.js
      **/
 
@@ -36223,8 +36582,8 @@
     }
   };
   /**
-   * walks through the segment data from the start and end to get timing information
-   * for the first and last audio pes packets
+   * walks through the segment data from the start and end to get timing
+   * information for the first and last audio pes packets
    */
 
 
@@ -36332,9 +36691,9 @@
     }
   };
   /**
-   * walks through the segment data from the start and end to get timing information
-   * for the first and last video pes packets as well as timing information for the first
-   * key frame.
+   * walks through the segment data from the start and end to get timing
+   * information for the first and last video pes packets as well as timing
+   * information for the first key frame.
    */
 
 
@@ -36628,9 +36987,9 @@
     return result;
   };
   /**
-   * inspects the transport stream segment data for start and end time information
-   * of the audio and video tracks (when present) as well as the first key frame's
-   * start time.
+   * inspects the transport stream segment data for start and end time
+   * information of the audio and video tracks (when present) as well as the
+   * first key frame's start time.
    */
 
 
@@ -36676,12 +37035,15 @@
     return result;
   };
   /**
-   * Inspects segment byte data and returns an object with start and end timing information
+   * Inspects segment byte data and returns an object with start and end timing
+   * information
    *
    * @param {Uint8Array} bytes The segment byte data
-   * @param {Number} baseTimestamp Relative reference timestamp used when adjusting frame
-   *  timestamps for rollover. This value must be in 90khz clock.
-   * @return {Object} Object containing start and end frame timing info of segment.
+   * @param {Number} baseTimestamp Relative reference timestamp used when
+   *     adjusting frame timestamps for rollover. This value must be in 90khz
+   *     clock.
+   * @return {Object} Object containing start and end frame timing info of
+   *     segment.
    */
 
 
@@ -37103,7 +37465,8 @@
      * destination stream should provide a method `push` to receive the data
      * events as they arrive.
      *
-     * @param {Stream} destination the stream that will receive all `data` events
+     * @param {Stream} destination the stream that will receive all `data`
+     *     events
      * @see http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
      */
 
@@ -37637,7 +38000,8 @@
    * @param {Object} media
    *        The current media
    * @param {Boolean} update
-   *        True if there were any updates from the last refresh, false otherwise
+   *        True if there were any updates from the last refresh, false
+   *     otherwise
    * @return {Number}
    *         The time in ms to wait before refreshing the live playlist
    */
@@ -38326,15 +38690,15 @@
     return durations;
   };
   /**
-   * Determines the media index of the segment corresponding to the safe edge of the live
-   * window which is the duration of the last segment plus 2 target durations from the end
-   * of the playlist.
+   * Determines the media index of the segment corresponding to the safe edge
+   * of the live window which is the duration of the last segment plus 2 target
+   * durations from the end of the playlist.
    *
    * @param {Object} playlist
    *        a media playlist object
    * @return {Number}
-   *         The media index of the segment at the safe live point. 0 if there is no "safe"
-   *         point.
+   *         The media index of the segment at the safe live point. 0 if there
+   *     is no "safe" point.
    * @function safeLiveIndex
    */
 
@@ -38364,10 +38728,11 @@
    * @param {Object} playlist a media playlist object
    * @param {Number=} expired the amount of time that has
    *                  dropped off the front of the playlist in a live scenario
-   * @param {Boolean|false} useSafeLiveEnd a boolean value indicating whether or not the
-   *                        playlist end calculation should consider the safe live end
-   *                        (truncate the playlist end by three segments). This is normally
-   *                        used for calculating the end of the playlist's seekable range.
+   * @param {Boolean|false} useSafeLiveEnd a boolean value indicating whether
+   *     or not the playlist end calculation should consider the safe live end
+   *                        (truncate the playlist end by three segments). This
+   *     is normally used for calculating the end of the playlist's seekable
+   *     range.
    * @returns {Number} the end time of playlist
    * @function playlistEnd
    */
@@ -38537,8 +38902,8 @@
     return playlist.excludeUntil && playlist.excludeUntil > Date.now();
   };
   /**
-   * Check whether the playlist is compatible with current playback configuration or has
-   * been blacklisted permanently for being incompatible.
+   * Check whether the playlist is compatible with current playback
+   * configuration or has been blacklisted permanently for being incompatible.
    *
    * @param {Object} playlist the media playlist object
    * @return {boolean} whether the playlist is incompatible or not
@@ -38563,7 +38928,8 @@
     return !playlist.disabled && !blacklisted;
   };
   /**
-   * Check whether the playlist has been manually disabled through the representations api.
+   * Check whether the playlist has been manually disabled through the
+   * representations api.
    *
    * @param {Object} playlist the media playlist object
    * @return {boolean} whether the playlist is disabled manually or not
@@ -38623,7 +38989,8 @@
     return playlist.attributes && playlist.attributes[attr];
   };
   /**
-   * Estimates the time required to complete a segment download from the specified playlist
+   * Estimates the time required to complete a segment download from the
+   * specified playlist
    *
    * @param {Number} segmentDuration
    *        Duration of requested segment
@@ -38634,8 +39001,8 @@
    * @param {Number=} bytesReceived
    *        Number of bytes already received for the request. Defaults to 0
    * @return {Number|NaN}
-   *         The estimated time to request the segment. NaN if bandwidth information for
-   *         the given playlist is unavailable
+   *         The estimated time to request the segment. NaN if bandwidth
+   *     information for the given playlist is unavailable
    * @function estimateSegmentRequestTime
    */
 
@@ -38765,8 +39132,8 @@
    * Turns segment byterange into a string suitable for use in
    * HTTP Range requests
    *
-   * @param {Object} byterange - an object with two values defining the start and end
-   *                             of a byte-range
+   * @param {Object} byterange - an object with two values defining the start
+   *     and end of a byte-range
    */
 
 
@@ -38832,8 +39199,9 @@
     return '.';
   };
   /**
-   * Creates an object for sending to a web worker modifying properties that are TypedArrays
-   * into a new object with seperated properties for the buffer, byteOffset, and byteLength.
+   * Creates an object for sending to a web worker modifying properties that
+   * are TypedArrays into a new object with seperated properties for the
+   * buffer, byteOffset, and byteLength.
    *
    * @param {Object} message
    *        Object of properties and values to send to the web worker
@@ -38933,15 +39301,18 @@
 
   var SEGMENT_END_FUDGE_PERCENT = 0.25;
   /**
-   * Converts a player time (any time that can be gotten/set from player.currentTime(),
-   * e.g., any time within player.seekable().start(0) to player.seekable().end(0)) to a
-   * program time (any time referencing the real world (e.g., EXT-X-PROGRAM-DATE-TIME)).
+   * Converts a player time (any time that can be gotten/set from
+   * player.currentTime(), e.g., any time within player.seekable().start(0) to
+   * player.seekable().end(0)) to a program time (any time referencing the real
+   * world (e.g., EXT-X-PROGRAM-DATE-TIME)).
    *
-   * The containing segment is required as the EXT-X-PROGRAM-DATE-TIME serves as an "anchor
-   * point" (a point where we have a mapping from program time to player time, with player
-   * time being the post transmux start of the segment).
+   * The containing segment is required as the EXT-X-PROGRAM-DATE-TIME serves
+   * as an "anchor point" (a point where we have a mapping from program time to
+   * player time, with player time being the post transmux start of the
+   * segment).
    *
-   * For more details, see [this doc](../../docs/program-time-from-player-time.md).
+   * For more details, see [this
+   * doc](../../docs/program-time-from-player-time.md).
    *
    * @param {Number} playerTime the player time
    * @param {Object} segment the segment which contains the player time
@@ -38967,8 +39338,8 @@
     return videoTimingInfo.transmuxedPresentationEnd - videoTimingInfo.transmuxedPresentationStart - videoTimingInfo.transmuxerPrependedSeconds;
   };
   /**
-   * Finds a segment that contains the time requested given as an ISO-8601 string. The
-   * returned segment might be an estimate or an accurate match.
+   * Finds a segment that contains the time requested given as an ISO-8601
+   * string. The returned segment might be an estimate or an accurate match.
    *
    * @param {String} programTime The ISO-8601 programTime to find a match for
    * @param {Object} playlist A playlist object to search within
@@ -39096,12 +39467,13 @@
     };
   };
   /**
-   * Gives the offset of the comparisonTimestamp from the programTime timestamp in seconds.
-   * If the offset returned is positive, the programTime occurs after the
-   * comparisonTimestamp.
-   * If the offset is negative, the programTime occurs before the comparisonTimestamp.
+   * Gives the offset of the comparisonTimestamp from the programTime timestamp
+   * in seconds. If the offset returned is positive, the programTime occurs
+   * after the comparisonTimestamp. If the offset is negative, the programTime
+   * occurs before the comparisonTimestamp.
    *
-   * @param {String} comparisonTimeStamp An ISO-8601 timestamp to compare against
+   * @param {String} comparisonTimeStamp An ISO-8601 timestamp to compare
+   *     against
    * @param {String} programTime The programTime as an ISO-8601 string
    * @return {Number} offset
    */
@@ -39145,9 +39517,9 @@
   };
   /**
    * Returns the programTime of the media given a playlist and a playerTime.
-   * The playlist must have programDateTime tags for a programDateTime tag to be returned.
-   * If the segments containing the time requested have not been buffered yet, an estimate
-   * may be returned to the callback.
+   * The playlist must have programDateTime tags for a programDateTime tag to
+   * be returned. If the segments containing the time requested have not been
+   * buffered yet, an estimate may be returned to the callback.
    *
    * @param {Object} args
    * @param {Object} args.playlist A playlist object to search within
@@ -39156,7 +39528,8 @@
    * @returns {String} err.message A detailed error message
    * @returns {Object} programTime
    * @returns {Number} programTime.mediaSeconds The streamTime in seconds
-   * @returns {String} programTime.programDateTime The programTime as an ISO-8601 String
+   * @returns {String} programTime.programDateTime The programTime as an
+   *     ISO-8601 String
    */
 
 
@@ -39203,16 +39576,21 @@
     return callback(null, programTimeObject);
   };
   /**
-   * Seeks in the player to a time that matches the given programTime ISO-8601 string.
+   * Seeks in the player to a time that matches the given programTime ISO-8601
+   * string.
    *
    * @param {Object} args
-   * @param {String} args.programTime A programTime to seek to as an ISO-8601 String
+   * @param {String} args.programTime A programTime to seek to as an ISO-8601
+   *     String
    * @param {Object} args.playlist A playlist to look within
-   * @param {Number} args.retryCount The number of times to try for an accurate seek. Default is 2.
+   * @param {Number} args.retryCount The number of times to try for an accurate
+   *     seek. Default is 2.
    * @param {Function} args.seekTo A method to perform a seek
-   * @param {Boolean} args.pauseAfterSeek Whether to end in a paused state after seeking. Default is true.
+   * @param {Boolean} args.pauseAfterSeek Whether to end in a paused state
+   *     after seeking. Default is true.
    * @param {Object} args.tech The tech to seek on
-   * @param {Function} args.callback(err, newTime) A callback to return the new time to
+   * @param {Function} args.callback(err, newTime) A callback to return the new
+   *     time to
    * @returns {String} err.message A detailed error message
    * @returns {Number} newTime The exact time that was seeked to in seconds
    */
@@ -39406,8 +39784,8 @@
     return strArr.join(', ');
   };
   /**
-   * Calculates the amount of time left in seconds until the player hits the end of the
-   * buffer and causes a rebuffer
+   * Calculates the amount of time left in seconds until the player hits the
+   * end of the buffer and causes a rebuffer
    *
    * @param {TimeRange} buffered
    *        The state of the buffer
@@ -39773,10 +40151,12 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        *
-       * A lightweight readable stream implemention that handles event dispatching.
-       * Objects that inherit from streams should call init in their constructors.
+       * A lightweight readable stream implemention that handles event
+       * dispatching. Objects that inherit from streams should call init in
+       * their constructors.
        */
       var Stream = function Stream() {
         this.init = function () {
@@ -39784,8 +40164,8 @@
           /**
            * Add a listener for a specified event type.
            * @param type {string} the event name
-           * @param listener {function} the callback to be invoked when an event of
-           * the specified type occurs
+           * @param listener {function} the callback to be invoked when an
+           *     event of the specified type occurs
            */
 
           this.on = function (type, listener) {
@@ -39798,8 +40178,8 @@
           /**
            * Remove a listener for a specified event type.
            * @param type {string} the event name
-           * @param listener {function} a function previously registered for this
-           * type of event through `on`
+           * @param listener {function} a function previously registered for
+           *     this type of event through `on`
            */
 
 
@@ -39816,8 +40196,9 @@
             return index > -1;
           };
           /**
-           * Trigger an event of the specified type on this stream. Any additional
-           * arguments to this function are passed as parameters to event listeners.
+           * Trigger an event of the specified type on this stream. Any
+           * additional arguments to this function are passed as parameters to
+           * event listeners.
            * @param type {string} the event name
            */
 
@@ -39866,12 +40247,13 @@
         };
       };
       /**
-       * Forwards all `data` events on this stream to the destination stream. The
-       * destination stream should provide a method `push` to receive the data
-       * events as they arrive.
-       * @param destination {stream} the stream that will receive all `data` events
-       * @param autoFlush {boolean} if false, we will not call `flush` on the destination
-       *                            when the current stream emits a 'done' event
+       * Forwards all `data` events on this stream to the destination stream.
+       * The destination stream should provide a method `push` to receive the
+       * data events as they arrive.
+       * @param destination {stream} the stream that will receive all `data`
+       *     events
+       * @param autoFlush {boolean} if false, we will not call `flush` on the
+       *     destination when the current stream emits a 'done' event
        * @see http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
        */
 
@@ -39924,7 +40306,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        *
        * Functions that generate fragmented MP4s suitable for use with Media
        * Source Extensions.
@@ -40506,7 +40889,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
       // Convert an array of nal units into an array of frames with each frame being
       // composed of the nal units that make up that frame
@@ -40809,7 +41193,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       var highPrefix = [33, 16, 5, 32, 164, 27];
@@ -40853,7 +41238,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       var ONE_SECOND_IN_TS = 90000,
@@ -40913,7 +41299,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       /**
@@ -41055,7 +41442,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       var ONE_SECOND_IN_TS$1 = clock.ONE_SECOND_IN_TS;
@@ -41161,7 +41549,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        *
        * Reads in-band caption information from a video elementary
        * stream. Captions must follow the CEA-708 standard for injection
@@ -42145,8 +42534,8 @@
        * Configures roll-up
        *
        * @param  {Integer} pts         Current PTS
-       * @param  {Integer} newBaseRow  Used by PACs to slide the current window to
-       *                               a new position
+       * @param  {Integer} newBaseRow  Used by PACs to slide the current window
+       *     to a new position
        */
 
 
@@ -42249,7 +42638,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       var streamTypes = {
@@ -42634,7 +43024,8 @@
           }
         };
         /**
-         * Passes identified M2TS packets to the TransportParseStream to be parsed
+         * Passes identified M2TS packets to the TransportParseStream to be
+         * parsed
         **/
 
 
@@ -42899,7 +43290,8 @@
         },
 
         /**
-          * Pass completely parsed PES packets to the next stream in the pipeline
+          * Pass completely parsed PES packets to the next stream in the
+          * pipeline
          **/
         flushStream = function flushStream(stream$$1, type, forceFlush) {
           var packetData = new Uint8Array(stream$$1.size),
@@ -43198,13 +43590,14 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        */
 
       var ExpGolomb;
       /**
-       * Parser for exponential Golomb codes, a variable-bitwidth number encoding
-       * scheme used by h264.
+       * Parser for exponential Golomb codes, a variable-bitwidth number
+       * encoding scheme used by h264.
        */
 
       ExpGolomb = function ExpGolomb(workingData) {
@@ -43907,7 +44300,8 @@
        * mux.js
        *
        * Copyright (c) Brightcove
-       * Licensed Apache-2.0 https://github.com/videojs/mux.js/blob/master/LICENSE
+       * Licensed Apache-2.0
+       * https://github.com/videojs/mux.js/blob/master/LICENSE
        *
        * Utilities to detect basic properties and metadata about Aac data.
        */
@@ -44217,8 +44611,9 @@
        * configured with a suitable initialization segment.
        * @param track {object} track metadata configuration
        * @param options {object} transmuxer options object
-       * @param options.keepOriginalTimestamps {boolean} If true, keep the timestamps
-       *        in the source; false to adjust the first segment to start at 0.
+       * @param options.keepOriginalTimestamps {boolean} If true, keep the
+       *     timestamps in the source; false to adjust the first segment to
+       *     start at 0.
        */
 
 
@@ -44314,10 +44709,11 @@
        * configured with a suitable initialization segment.
        * @param track {object} track metadata configuration
        * @param options {object} transmuxer options object
-       * @param options.alignGopsAtEnd {boolean} If true, start from the end of the
-       *        gopsToAlignWith list when attempting to align gop pts
-       * @param options.keepOriginalTimestamps {boolean} If true, keep the timestamps
-       *        in the source; false to adjust the first segment to start at 0.
+       * @param options.alignGopsAtEnd {boolean} If true, start from the end of
+       *     the gopsToAlignWith list when attempting to align gop pts
+       * @param options.keepOriginalTimestamps {boolean} If true, keep the
+       *     timestamps in the source; false to adjust the first segment to
+       *     start at 0.
        */
 
       _VideoSegmentStream = function VideoSegmentStream(track, options) {
@@ -44715,8 +45111,9 @@
        * into a single output segment for MSE. Also supports audio-only
        * and video-only streams.
        * @param options {object} transmuxer options object
-       * @param options.keepOriginalTimestamps {boolean} If true, keep the timestamps
-       *        in the source; false to adjust the first segment to start at media timeline start.
+       * @param options.keepOriginalTimestamps {boolean} If true, keep the
+       *     timestamps in the source; false to adjust the first segment to
+       *     start at media timeline start.
        */
 
       _CoalesceStream = function CoalesceStream(options, metadataStream) {
@@ -45319,8 +45716,8 @@
             wireTransmuxerEvents(this.self, this.transmuxer);
           }
           /**
-           * Adds data (a ts segment) to the start of the transmuxer pipeline for
-           * processing.
+           * Adds data (a ts segment) to the start of the transmuxer pipeline
+           * for processing.
            *
            * @param {ArrayBuffer} data data to push into the muxer
            */
@@ -45343,9 +45740,10 @@
             this.init();
           }
           /**
-           * Set the value that will be used as the `baseMediaDecodeTime` time for the
-           * next segment pushed in. Subsequent segments will have their `baseMediaDecodeTime`
-           * set relative to the first based on the PTS values.
+           * Set the value that will be used as the `baseMediaDecodeTime` time
+           * for the next segment pushed in. Subsequent segments will have
+           * their `baseMediaDecodeTime` set relative to the first based on the
+           * PTS values.
            *
            * @param {Object} data used to set the timestamp offset in the muxer
            */
@@ -45362,8 +45760,8 @@
             this.transmuxer.setAudioAppendStart(Math.ceil(data.appendStart * 90000));
           }
           /**
-           * Forces the pipeline to finish processing the last segment and emit it's
-           * results.
+           * Forces the pipeline to finish processing the last segment and emit
+           * it's results.
            *
            * @param {Object} data event data, not really used
            */
@@ -45419,8 +45817,9 @@
     }();
   });
   /**
-   * @file - codecs.js - Handles tasks regarding codec strings such as translating them to
-   * codec strings, or translating codec strings into objects that can be examined.
+   * @file - codecs.js - Handles tasks regarding codec strings such as
+   *     translating them to codec strings, or translating codec strings into
+   *     objects that can be examined.
    */
   // Default codec parameters if none were provided for video and/or audio
 
@@ -45476,8 +45875,8 @@
     return result;
   };
   /**
-   * Replace codecs in the codec string with the old apple-style `avc1.<dd>.<dd>` to the
-   * standard `avc1.<hhhhhh>`.
+   * Replace codecs in the codec string with the old apple-style
+   * `avc1.<dd>.<dd>` to the standard `avc1.<hhhhhh>`.
    *
    * @param codecString {String} the codec string
    * @return {String} the codec string with old apple-style codecs replaced
@@ -45731,8 +46130,8 @@
     return /avc1\.[\da-f]+/i.test(codec);
   };
   /**
-   * Returns a list of gops in the buffer that have a pts value of 3 seconds or more in
-   * front of current time.
+   * Returns a list of gops in the buffer that have a pts value of 3 seconds or
+   * more in front of current time.
    *
    * @param {Array} buffer
    *        The current buffer of gop information
@@ -45763,16 +46162,17 @@
     return buffer.slice(i);
   };
   /**
-   * Appends gop information (timing and byteLength) received by the transmuxer for the
-   * gops appended in the last call to appendBuffer
+   * Appends gop information (timing and byteLength) received by the transmuxer
+   * for the gops appended in the last call to appendBuffer
    *
    * @param {Array} buffer
    *        The current buffer of gop information
    * @param {Array} gops
    *        List of new gop information
    * @param {boolean} replace
-   *        If true, replace the buffer with the new gop information. If false, append the
-   *        new gop information to the buffer in the right location of time.
+   *        If true, replace the buffer with the new gop information. If false,
+   *     append the new gop information to the buffer in the right location of
+   *     time.
    * @return {Array}
    *         Updated list of gop information
    */
@@ -45983,8 +46383,8 @@
    * VirtualSourceBuffers exist so that we can transmux non native formats
    * into a native format, but keep the same api as a native source buffer.
    * It creates a transmuxer, that works in its own thread (a web worker) and
-   * that transmuxer muxes the data into a native format. VirtualSourceBuffer will
-   * then send all of that data to the naive sourcebuffer so that it is
+   * that transmuxer muxes the data into a native format. VirtualSourceBuffer
+   * will then send all of that data to the naive sourcebuffer so that it is
    * indestinguishable from a natively supported format.
    *
    * @param {HtmlMediaSource} mediaSource the parent mediaSource
@@ -46308,8 +46708,8 @@
         });
       }
       /**
-       * Appends gop information (timing and byteLength) received by the transmuxer for the
-       * gops appended in the last call to appendBuffer
+       * Appends gop information (timing and byteLength) received by the
+       * transmuxer for the gops appended in the last call to appendBuffer
        *
        * @param {Event} event
        *        The gopInfo event from the transmuxer
@@ -46486,7 +46886,8 @@
        * to the destination buffer
        *
        * @param {Object} segmentObj
-       * @param {SourceBuffer} destinationBuffer native source buffer to append data to
+       * @param {SourceBuffer} destinationBuffer native source buffer to append
+       *     data to
        * @private
        */
 
@@ -47008,16 +47409,16 @@
   var EventTarget$1$1 = videojs$1.EventTarget,
       mergeOptions$2 = videojs$1.mergeOptions;
   /**
-   * Returns a new master manifest that is the result of merging an updated master manifest
-   * into the original version.
+   * Returns a new master manifest that is the result of merging an updated
+   * master manifest into the original version.
    *
    * @param {Object} oldMaster
    *        The old parsed mpd object
    * @param {Object} newMaster
    *        The updated parsed mpd object
    * @return {Object}
-   *         A new object representing the original master manifest with the updated media
-   *         playlists merged in
+   *         A new object representing the original master manifest with the
+   *     updated media playlists merged in
    */
 
   var updateMaster$1 = function updateMaster$$1(oldMaster, newMaster) {
@@ -47103,13 +47504,15 @@
     return newSidxMapping;
   };
   /**
-   *  A function that filters out changed items as they need to be requested separately.
+   *  A function that filters out changed items as they need to be requested
+   * separately.
    *
    *  The method is exported for testing
    *
    *  @param {Object} masterXml the mpd XML
    *  @param {string} srcUrl the mpd url
-   *  @param {Date} clientOffset a time difference between server and client (passed through and not used)
+   *  @param {Date} clientOffset a time difference between server and client
+   *     (passed through and not used)
    *  @param {Object} oldSidxMapping the SIDX to compare against
    */
 
@@ -47514,8 +47917,9 @@
         });
       }
       /**
-       * Parses the master xml for UTCTiming node to sync the client clock to the server
-       * clock. If the UTCTiming node requires a HEAD or GET request, that request is made.
+       * Parses the master xml for UTCTiming node to sync the client clock to
+       * the server clock. If the UTCTiming node requires a HEAD or GET
+       * request, that request is made.
        *
        * @param {Function} done
        *        Function to call when clock sync has completed
@@ -47594,8 +47998,8 @@
         }
       }
       /**
-       * Handler for after client/server clock synchronization has happened. Sets up
-       * xml refresh timer if specificed by the manifest.
+       * Handler for after client/server clock synchronization has happened.
+       * Sets up xml refresh timer if specificed by the manifest.
        */
 
     }, {
@@ -47622,8 +48026,9 @@
         }
       }
       /**
-       * Sends request to refresh the master xml and updates the parsed master manifest
-       * TODO: Does the client offset need to be recalculated when the xml is refreshed?
+       * Sends request to refresh the master xml and updates the parsed master
+       * manifest TODO: Does the client offset need to be recalculated when the
+       * xml is refreshed?
        */
 
     }, {
@@ -47707,9 +48112,9 @@
         });
       }
       /**
-       * Refreshes the media playlist by re-parsing the master xml and updating playlist
-       * references. If this is an alternate loader, the updated parsed manifest is retrieved
-       * from the master loader.
+       * Refreshes the media playlist by re-parsing the master xml and updating
+       * playlist references. If this is an alternate loader, the updated
+       * parsed manifest is retrieved from the master loader.
        */
 
     }, {
@@ -47783,8 +48188,8 @@
    * SourceBuffer from
    * @param {String} mimeType the desired MIME type of the underlying
    * SourceBuffer
-   * @param {Object} sourceBufferEmitter an event emitter that fires when a source buffer is
-   * added to the media source
+   * @param {Object} sourceBufferEmitter an event emitter that fires when a
+   *     source buffer is added to the media source
    */
 
 
@@ -47923,8 +48328,8 @@
        *
        * @param {Number} start where to start the removal
        * @param {Number} end where to end the removal
-       * @param {Function} [done=noop] optional callback to be executed when the remove
-       * operation is complete
+       * @param {Function} [done=noop] optional callback to be executed when
+       *     the remove operation is complete
        * @see http://www.w3.org/TR/media-source/#widl-SourceBuffer-remove-void-double-start-unrestricted-double-end
        */
 
@@ -48105,8 +48510,10 @@
    * Handle all error conditions in one place and return an object
    * with all the information
    *
-   * @param {Error|null} error - if non-null signals an error occured with the XHR
-   * @param {Object} request -  the XHR request that possibly generated the error
+   * @param {Error|null} error - if non-null signals an error occured with the
+   *     XHR
+   * @param {Object} request -  the XHR request that possibly generated the
+   *     error
    */
 
 
@@ -48141,13 +48548,13 @@
     return null;
   };
   /**
-   * Handle responses for key data and convert the key data to the correct format
-   * for the decryption step later
+   * Handle responses for key data and convert the key data to the correct
+   * format for the decryption step later
    *
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} finishProcessingFn - a callback to execute to continue processing
-   *                                        this request
+   * @param {Function} finishProcessingFn - a callback to execute to continue
+   *     processing this request
    */
 
 
@@ -48179,8 +48586,8 @@
    *
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} finishProcessingFn - a callback to execute to continue processing
-   *                                        this request
+   * @param {Function} finishProcessingFn - a callback to execute to continue
+   *     processing this request
    */
 
 
@@ -48221,8 +48628,8 @@
    *
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} finishProcessingFn - a callback to execute to continue processing
-   *                                        this request
+   * @param {Function} finishProcessingFn - a callback to execute to continue
+   *     processing this request
    */
 
 
@@ -48276,10 +48683,12 @@
   /**
    * Decrypt the segment via the decryption web worker
    *
-   * @param {WebWorker} decrypter - a WebWorker interface to AES-128 decryption routines
+   * @param {WebWorker} decrypter - a WebWorker interface to AES-128 decryption
+   *     routines
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} doneFn - a callback that is executed after decryption has completed
+   * @param {Function} doneFn - a callback that is executed after decryption
+   *     has completed
    */
 
 
@@ -48312,15 +48721,17 @@
     }), [segment.encryptedBytes.buffer, keyBytes.buffer]);
   };
   /**
-   * This function waits for all XHRs to finish (with either success or failure)
-   * before continueing processing via it's callback. The function gathers errors
-   * from each request into a single errors array so that the error status for
-   * each request can be examined later.
+   * This function waits for all XHRs to finish (with either success or
+   * failure)
+   * before continueing processing via it's callback. The function gathers
+   * errors from each request into a single errors array so that the error
+   * status for each request can be examined later.
    *
    * @param {Object} activeXhrs - an object that tracks all XHR requests
-   * @param {WebWorker} decrypter - a WebWorker interface to AES-128 decryption routines
-   * @param {Function} doneFn - a callback that is executed after all resources have been
-   *                            downloaded and any decryption completed
+   * @param {WebWorker} decrypter - a WebWorker interface to AES-128 decryption
+   *     routines
+   * @param {Function} doneFn - a callback that is executed after all resources
+   *     have been downloaded and any decryption completed
    */
 
 
@@ -48371,8 +48782,8 @@
    *
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} progressFn - a callback that is executed each time a progress event
-   *                                is received
+   * @param {Function} progressFn - a callback that is executed each time a
+   *     progress event is received
    * @param {Event} event - the progress event object from XMLHttpRequest
    */
 
@@ -48424,15 +48835,16 @@
    * ...where [name] denotes optional properties
    *
    * @param {Function} xhr - an instance of the xhr wrapper in xhr.js
-   * @param {Object} xhrOptions - the base options to provide to all xhr requests
+   * @param {Object} xhrOptions - the base options to provide to all xhr
+   *     requests
    * @param {WebWorker} decryptionWorker - a WebWorker interface to AES-128
    *                                       decryption routines
    * @param {Object} segment - a simplified copy of the segmentInfo object
    *                           from SegmentLoader
-   * @param {Function} progressFn - a callback that receives progress events from the main
-   *                                segment's xhr request
-   * @param {Function} doneFn - a callback that is executed only once all requests have
-   *                            succeeded or failed
+   * @param {Function} progressFn - a callback that receives progress events
+   *     from the main segment's xhr request
+   * @param {Function} doneFn - a callback that is executed only once all
+   *     requests have succeeded or failed
    * @returns {Function} a function that, when invoked, immediately aborts all
    *                     outstanding requests
    */
@@ -48601,7 +49013,8 @@
    * @param {Number} playerHeight
    *        Current height of the player element
    * @param {Boolean} limitRenditionByPlayerDimensions
-   *        True if the player width and height should be used during the selection, false otherwise
+   *        True if the player width and height should be used during the
+   *     selection, false otherwise
    * @return {Playlist} the highest bitrate playlist less than the
    * currently detected bandwidth, accounting for some amount of
    * bandwidth variance
@@ -48744,13 +49157,16 @@
    * @param {Number} settings.currentTimeline
    *        The current timeline segments are being loaded from
    * @param {SyncController} settings.syncController
-   *        SyncController for determining if we have a sync point for a given playlist
+   *        SyncController for determining if we have a sync point for a given
+   *     playlist
    * @return {Object|null}
    *         {Object} return.playlist
-   *         The highest bandwidth playlist with the least amount of rebuffering
+   *         The highest bandwidth playlist with the least amount of
+   *     rebuffering
    *         {Number} return.rebufferingImpact
-   *         The amount of time in seconds switching to this playlist will rebuffer. A
-   *         negative value means that switching will cause zero rebuffering.
+   *         The amount of time in seconds switching to this playlist will
+   *     rebuffer. A negative value means that switching will cause zero
+   *     rebuffering.
    */
 
 
@@ -48812,15 +49228,16 @@
     return rebufferingEstimates[0] || null;
   };
   /**
-   * Chooses the appropriate media playlist, which in this case is the lowest bitrate
-   * one with video.  If no renditions with video exist, return the lowest audio rendition.
+   * Chooses the appropriate media playlist, which in this case is the lowest
+   * bitrate one with video.  If no renditions with video exist, return the
+   * lowest audio rendition.
    *
    * Expects to be called within the context of an instance of HlsHandler
    *
    * @return {Object|null}
    *         {Object} return.playlist
-   *         The lowest bitrate playlist that contains a video codec.  If no such rendition
-   *         exists pick the lowest audio rendition.
+   *         The lowest bitrate playlist that contains a video codec.  If no
+   *     such rendition exists pick the lowest audio rendition.
    */
 
 
@@ -48962,8 +49379,8 @@
     return null;
   };
   /**
-   * Calculates a time value that is safe to remove from the back buffer without interupting
-   * playback.
+   * Calculates a time value that is safe to remove from the back buffer
+   * without interupting playback.
    *
    * @param {TimeRange} seekable
    *        The current seekable range
@@ -48972,7 +49389,8 @@
    * @param {Number} targetDuration
    *        The target duration of the current playlist
    * @return {Number}
-   *         Time that is safe to remove from the back buffer without interupting playback
+   *         Time that is safe to remove from the back buffer without
+   *     interupting playback
    */
 
 
@@ -49316,7 +49734,8 @@
         return result;
       }
       /**
-       * Returns true if all configuration required for loading is present, otherwise false.
+       * Returns true if all configuration required for loading is present,
+       * otherwise false.
        *
        * @return {Boolean} True if the all configuration is ready for loading
        * @private
@@ -49493,8 +49912,8 @@
        * SourceUpdater
        *
        * @param {String} mimeType the mime type string to use
-       * @param {Object} sourceBufferEmitter an event emitter that fires when a source buffer
-       * is added to the media source
+       * @param {Object} sourceBufferEmitter an event emitter that fires when a
+       *     source buffer is added to the media source
        */
 
     }, {
@@ -49514,8 +49933,8 @@
       }
       /**
        * Delete all the buffered data and reset the SegmentLoader
-       * @param {Function} [done] an optional callback to be executed when the remove
-       * operation is complete
+       * @param {Function} [done] an optional callback to be executed when the
+       *     remove operation is complete
        */
 
     }, {
@@ -49532,8 +49951,8 @@
         this.trigger('reseteverything');
       }
       /**
-       * Force the SegmentLoader to resync and start loading around the currentTime instead
-       * of starting at the end of the buffer
+       * Force the SegmentLoader to resync and start loading around the
+       * currentTime instead of starting at the end of the buffer
        *
        * Useful for fast quality changes
        */
@@ -49545,8 +49964,8 @@
         this.resyncLoader();
       }
       /**
-       * Force the SegmentLoader to restart synchronization and make a conservative guess
-       * before returning to the simple walk-forward method
+       * Force the SegmentLoader to restart synchronization and make a
+       * conservative guess before returning to the simple walk-forward method
        */
 
     }, {
@@ -49558,10 +49977,12 @@
       }
       /**
        * Remove any data in the source buffer between start and end times
-       * @param {Number} start - the start time of the region to remove from the buffer
-       * @param {Number} end - the end time of the region to remove from the buffer
-       * @param {Function} [done] - an optional callback to be executed when the remove
-       * operation is complete
+       * @param {Number} start - the start time of the region to remove from
+       *     the buffer
+       * @param {Number} end - the end time of the region to remove from the
+       *     buffer
+       * @param {Function} [done] - an optional callback to be executed when
+       *     the remove operation is complete
        */
 
     }, {
@@ -49693,10 +50114,12 @@
        * @param {TimeRanges} buffered - the state of the buffer
        * @param {Object} playlist - the playlist object to fetch segments from
        * @param {Number} mediaIndex - the previous mediaIndex fetched or null
-       * @param {Boolean} hasPlayed - a flag indicating whether we have played or not
+       * @param {Boolean} hasPlayed - a flag indicating whether we have played
+       *     or not
        * @param {Number} currentTime - the playback position in seconds
        * @param {Object} syncPoint - a segment info object that describes the
-       * @returns {Object} a segment request object that describes the segment to load
+       * @returns {Object} a segment request object that describes the segment
+       *     to load
        */
 
     }, {
@@ -49831,9 +50254,9 @@
         };
       }
       /**
-       * Determines if the network has enough bandwidth to complete the current segment
-       * request in a timely manner. If not, the request will be aborted early and bandwidth
-       * updated to trigger a playlist switch.
+       * Determines if the network has enough bandwidth to complete the current
+       * segment request in a timely manner. If not, the request will be
+       * aborted early and bandwidth updated to trigger a playlist switch.
        *
        * @param {Object} stats
        *        Object containing stats about the request timing and size
@@ -50327,8 +50750,8 @@
         this.throughput.rate += (segmentProcessingThroughput - rate) / ++this.throughput.count;
       }
       /**
-       * Adds a cue to the segment-metadata track with some metadata information about the
-       * segment
+       * Adds a cue to the segment-metadata track with some metadata
+       * information about the segment
        *
        * @private
        * @param {Object} segmentInfo
@@ -50473,7 +50896,8 @@
         return storedMap || map;
       }
       /**
-       * Returns true if all configuration required for loading is present, otherwise false.
+       * Returns true if all configuration required for loading is present,
+       * otherwise false.
        *
        * @return {Boolean} True if the all configuration is ready for loading
        * @private
@@ -50526,8 +50950,10 @@
       }
       /**
        * Remove any data in the source buffer between start and end times
-       * @param {Number} start - the start time of the region to remove from the buffer
-       * @param {Number} end - the end time of the region to remove from the buffer
+       * @param {Number} start - the start time of the region to remove from
+       *     the buffer
+       * @param {Number} end - the end time of the region to remove from the
+       *     buffer
        */
 
     }, {
@@ -50582,9 +51008,9 @@
         this.loadSegment_(segmentInfo);
       }
       /**
-       * Prevents the segment loader from requesting segments we know contain no subtitles
-       * by walking forward until we find the next segment that we don't know whether it is
-       * empty or not.
+       * Prevents the segment loader from requesting segments we know contain
+       * no subtitles by walking forward until we find the next segment that we
+       * don't know whether it is empty or not.
        *
        * @param {Object} segmentInfo
        *        a segment info object that describes the current segment
@@ -50742,9 +51168,9 @@
         parser.flush();
       }
       /**
-       * Updates the start and end times of any cues parsed by the WebVTT parser using
-       * the information parsed from the X-TIMESTAMP-MAP header and a TS to media time mapping
-       * from the SyncController
+       * Updates the start and end times of any cues parsed by the WebVTT
+       * parser using the information parsed from the X-TIMESTAMP-MAP header
+       * and a TS to media time mapping from the SyncController
        *
        * @param {Object} segmentInfo
        *        a segment info object that describes the current segment
@@ -51088,15 +51514,17 @@
         });
       }
       /**
-       * Calculate the amount of time that has expired off the playlist during playback
+       * Calculate the amount of time that has expired off the playlist during
+       * playback
        *
        * @param {Playlist} playlist
        *        Playlist object to calculate expired from
        * @param {Number} duration
-       *        Duration of the MediaSource (Infinity if playling a live source)
+       *        Duration of the MediaSource (Infinity if playling a live
+       *     source)
        * @returns {Number|null}
-       *          The amount of time that has expired off the playlist during playback. Null
-       *          if no sync-points for the playlist can be found.
+       *          The amount of time that has expired off the playlist during
+       *     playback. Null if no sync-points for the playlist can be found.
        */
 
     }, {
@@ -51125,8 +51553,8 @@
         return Math.abs(syncPoint.time + sumDurations(playlist, syncPoint.segmentIndex, 0));
       }
       /**
-       * Runs each sync-point strategy and returns a list of sync-points returned by the
-       * strategies
+       * Runs each sync-point strategy and returns a list of sync-points
+       * returned by the strategies
        *
        * @private
        * @param {Playlist} playlist
@@ -51168,7 +51596,8 @@
        * @param {Object} target
        *        Object specifying the property and value we are targeting
        * @param {String} target.key
-       *        Specifies the property to target. Must be either 'time' or 'segmentIndex'
+       *        Specifies the property to target. Must be either 'time' or
+       *     'segmentIndex'
        * @param {Number} target.value
        *        The value to target for the specified key.
        * @returns {Object}
@@ -51225,8 +51654,8 @@
         }
       }
       /**
-       * Save the mapping from playlist's ProgramDateTime to display. This should
-       * only ever happen once at the start of playback.
+       * Save the mapping from playlist's ProgramDateTime to display. This
+       * should only ever happen once at the start of playback.
        *
        * @param {Playlist} playlist - The currently active playlist
        */
@@ -51255,7 +51684,8 @@
        * mappings from that internal "media time" to the display time that is
        * shown on the player.
        *
-       * @param {SegmentInfo} segmentInfo - The current active request information
+       * @param {SegmentInfo} segmentInfo - The current active request
+       *     information
        */
 
     }, {
@@ -51293,8 +51723,10 @@
        * media decode time plus the composition time offset value
        *
        * @private
-       * @param {SegmentInfo} segmentInfo - The current active request information
-       * @return {object} The start and end time of the current segment in "composition time"
+       * @param {SegmentInfo} segmentInfo - The current active request
+       *     information
+       * @return {object} The start and end time of the current segment in
+       *     "composition time"
        */
 
     }, {
@@ -51317,12 +51749,15 @@
         };
       }
       /**
-       * Probe an mpeg2-ts segment to determine the start and end of the segment
+       * Probe an mpeg2-ts segment to determine the start and end of the
+       * segment
        * in it's internal "media time".
        *
        * @private
-       * @param {SegmentInfo} segmentInfo - The current active request information
-       * @return {object} The start and end time of the current segment in "media time"
+       * @param {SegmentInfo} segmentInfo - The current active request
+       *     information
+       * @return {object} The start and end time of the current segment in
+       *     "media time"
        */
 
     }, {
@@ -51377,8 +51812,8 @@
         return this.timelines[timeline].mapping;
       }
       /**
-       * Use the "media time" for a segment to generate a mapping to "display time" and
-       * save that display time to the segment.
+       * Use the "media time" for a segment to generate a mapping to "display
+       * time" and save that display time to the segment.
        *
        * @private
        * @param {SegmentInfo} segmentInfo
@@ -51415,12 +51850,14 @@
         return true;
       }
       /**
-       * Each time we have discontinuity in the playlist, attempt to calculate the location
-       * in display of the start of the discontinuity and save that. We also save an accuracy
-       * value so that we save values with the most accuracy (closest to 0.)
+       * Each time we have discontinuity in the playlist, attempt to calculate
+       * the location in display of the start of the discontinuity and save
+       * that. We also save an accuracy value so that we save values with the
+       * most accuracy (closest to 0.)
        *
        * @private
-       * @param {SegmentInfo} segmentInfo - The current active request information
+       * @param {SegmentInfo} segmentInfo - The current active request
+       *     information
        */
 
     }, {
@@ -51772,7 +52209,8 @@
        */
 
       /**
-       * A lightweight readable stream implemention that handles event dispatching.
+       * A lightweight readable stream implemention that handles event
+       * dispatching.
        *
        * @class Stream
        */
@@ -51787,8 +52225,8 @@
          * Add a listener for a specified event type.
          *
          * @param {String} type the event name
-         * @param {Function} listener the callback to be invoked when an event of
-         * the specified type occurs
+         * @param {Function} listener the callback to be invoked when an event
+         *     of the specified type occurs
          */
 
 
@@ -51819,8 +52257,10 @@
           return index > -1;
         };
         /**
-         * Trigger an event of the specified type on this stream. Any additional
-         * arguments to this function are passed as parameters to event listeners.
+         * Trigger an event of the specified type on this stream. Any
+         * additional
+         * arguments to this function are passed as parameters to event
+         * listeners.
          *
          * @param {String} type the event name
          */
@@ -51861,11 +52301,12 @@
           this.listeners = {};
         };
         /**
-         * Forwards all `data` events on this stream to the destination stream. The
-         * destination stream should provide a method `push` to receive the data
-         * events as they arrive.
+         * Forwards all `data` events on this stream to the destination stream.
+         * The destination stream should provide a method `push` to receive the
+         * data events as they arrive.
          *
-         * @param {Stream} destination the stream that will receive all `data` events
+         * @param {Stream} destination the stream that will receive all `data`
+         *     events
          * @see http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
          */
 
@@ -52086,8 +52527,9 @@
        */
 
       /**
-       * Creates an object for sending to a web worker modifying properties that are TypedArrays
-       * into a new object with seperated properties for the buffer, byteOffset, and byteLength.
+       * Creates an object for sending to a web worker modifying properties
+       * that are TypedArrays into a new object with seperated properties for
+       * the buffer, byteOffset, and byteLength.
        *
        * @param {Object} message
        *        Object of properties and values to send to the web worker
@@ -52199,18 +52641,20 @@
     playlistLoader.load();
   };
   /**
-   * Returns a function to be called when the media group changes. It performs a
-   * non-destructive (preserve the buffer) resync of the SegmentLoader. This is because a
-   * change of group is merely a rendition switch of the same content at another encoding,
-   * rather than a change of content, such as switching audio from English to Spanish.
+   * Returns a function to be called when the media group changes. It performs
+   * a
+   * non-destructive (preserve the buffer) resync of the SegmentLoader. This is
+   * because a change of group is merely a rendition switch of the same content
+   * at another encoding, rather than a change of content, such as switching
+   * audio from English to Spanish.
    *
    * @param {String} type
    *        MediaGroup type
    * @param {Object} settings
    *        Object containing required information for media groups
    * @return {Function}
-   *         Handler for a non-destructive resync of SegmentLoader when the active media
-   *         group changes.
+   *         Handler for a non-destructive resync of SegmentLoader when the
+   *     active media group changes.
    * @function onGroupChanged
    */
 
@@ -52249,17 +52693,18 @@
     };
   };
   /**
-   * Returns a function to be called when the media track changes. It performs a
-   * destructive reset of the SegmentLoader to ensure we start loading as close to
-   * currentTime as possible.
+   * Returns a function to be called when the media track changes. It performs
+   * a
+   * destructive reset of the SegmentLoader to ensure we start loading as close
+   * to currentTime as possible.
    *
    * @param {String} type
    *        MediaGroup type
    * @param {Object} settings
    *        Object containing required information for media groups
    * @return {Function}
-   *         Handler for a destructive reset of SegmentLoader when the active media
-   *         track changes.
+   *         Handler for a destructive reset of SegmentLoader when the active
+   *     media track changes.
    * @function onTrackChanged
    */
 
@@ -52309,16 +52754,16 @@
 
   var onError = {
     /**
-     * Returns a function to be called when a SegmentLoader or PlaylistLoader encounters
-     * an error.
+     * Returns a function to be called when a SegmentLoader or PlaylistLoader
+     * encounters an error.
      *
      * @param {String} type
      *        MediaGroup type
      * @param {Object} settings
      *        Object containing required information for media groups
      * @return {Function}
-     *         Error handler. Logs warning (or error if the playlist is blacklisted) to
-     *         console and switches back to default audio track.
+     *         Error handler. Logs warning (or error if the playlist is
+     *     blacklisted) to console and switches back to default audio track.
      * @function onError.AUDIO
      */
     AUDIO: function AUDIO(type, settings) {
@@ -52355,15 +52800,16 @@
     },
 
     /**
-     * Returns a function to be called when a SegmentLoader or PlaylistLoader encounters
-     * an error.
+     * Returns a function to be called when a SegmentLoader or PlaylistLoader
+     * encounters an error.
      *
      * @param {String} type
      *        MediaGroup type
      * @param {Object} settings
      *        Object containing required information for media groups
      * @return {Function}
-     *         Error handler. Logs warning to console and disables the active subtitle track
+     *         Error handler. Logs warning to console and disables the active
+     *     subtitle track
      * @function onError.SUBTITLES
      */
     SUBTITLES: function SUBTITLES(type, settings) {
@@ -52664,10 +53110,10 @@
    * @param {Object} settings
    *        Object containing required information for media groups
    * @return {Function}
-   *         Function that returns the active media group for the provided type. Takes an
-   *         optional parameter {TextTrack} track. If no track is provided, a list of all
-   *         variants in the group, otherwise the variant corresponding to the provided
-   *         track is returned.
+   *         Function that returns the active media group for the provided
+   *     type. Takes an optional parameter {TextTrack} track. If no track is
+   *     provided, a list of all variants in the group, otherwise the variant
+   *     corresponding to the provided track is returned.
    * @function activeGroup
    */
 
@@ -52714,8 +53160,8 @@
      * @param {Object} settings
      *        Object containing required information for media groups
      * @return {Function}
-     *         Function that returns the active media track for the provided type. Returns
-     *         null if no track is active
+     *         Function that returns the active media track for the provided
+     *     type. Returns null if no track is active
      * @function activeTrack.AUDIO
      */
     AUDIO: function AUDIO(type, settings) {
@@ -52740,8 +53186,8 @@
      * @param {Object} settings
      *        Object containing required information for media groups
      * @return {Function}
-     *         Function that returns the active media track for the provided type. Returns
-     *         null if no track is active
+     *         Function that returns the active media track for the provided
+     *     type. Returns null if no track is active
      * @function activeTrack.SUBTITLES
      */
     SUBTITLES: function SUBTITLES(type, settings) {
@@ -52763,7 +53209,8 @@
    * Closed-Captions) specified in the master manifest.
    *
    * @param {Object} settings
-   *        Object containing required information for setting up the media groups
+   *        Object containing required information for setting up the media
+   *     groups
    * @param {SegmentLoader} settings.segmentLoaders.AUDIO
    *        Audio segment loader
    * @param {SegmentLoader} settings.segmentLoaders.SUBTITLES
@@ -52781,7 +53228,8 @@
    * @param {Object} settings.master
    *        The parsed master manifest
    * @param {Object} settings.mediaTypes
-   *        Object to store the loaders, tracks, and utility methods for each media type
+   *        Object to store the loaders, tracks, and utility methods for each
+   *     media type
    * @param {Function} settings.blacklistCurrentPlaylist
    *        Blacklists the current rendition and forces a rendition switch.
    * @function setupMediaGroups
@@ -52838,11 +53286,12 @@
     }
   };
   /**
-   * Creates skeleton object used to store the loaders, tracks, and utility methods for each
-   * media type
+   * Creates skeleton object used to store the loaders, tracks, and utility
+   * methods for each media type
    *
    * @return {Object}
-   *         Object to store the loaders, tracks, and utility methods for each media type
+   *         Object to store the loaders, tracks, and utility methods for each
+   *     media type
    * @function createMediaTypes
    */
 
@@ -53557,8 +54006,8 @@
         this.trigger('sourceopen');
       }
       /**
-       * Calls endOfStream on the media source when all active stream types have called
-       * endOfStream
+       * Calls endOfStream on the media source when all active stream types
+       * have called endOfStream
        *
        * @param {string} streamType
        *        Stream type of the segment loader that called endOfStream
@@ -53636,13 +54085,13 @@
       }
       /**
        * Blacklists a playlist when an error occurs for a set amount of time
-       * making it unavailable for selection by the rendition selection algorithm
-       * and then forces a new playlist (rendition) selection.
+       * making it unavailable for selection by the rendition selection
+       * algorithm and then forces a new playlist (rendition) selection.
        *
        * @param {Object=} error an optional error that may include the playlist
        * to blacklist
-       * @param {Number=} blacklistDuration an optional number of seconds to blacklist the
-       * playlist
+       * @param {Number=} blacklistDuration an optional number of seconds to
+       *     blacklist the playlist
        */
 
     }, {
@@ -54228,11 +54677,13 @@
   /**
    * @file playback-watcher.js
    *
-   * Playback starts, and now my watch begins. It shall not end until my death. I shall
-   * take no wait, hold no uncleared timeouts, father no bad seeks. I shall wear no crowns
-   * and win no glory. I shall live and die at my post. I am the corrector of the underflow.
-   * I am the watcher of gaps. I am the shield that guards the realms of seekable. I pledge
-   * my life and honor to the Playback Watch, for this Player and all the Players to come.
+   * Playback starts, and now my watch begins. It shall not end until my death.
+   *     I shall take no wait, hold no uncleared timeouts, father no bad seeks.
+   *     I shall wear no crowns and win no glory. I shall live and die at my
+   *     post. I am the corrector of the underflow. I am the watcher of gaps. I
+   *     am the shield that guards the realms of seekable. I pledge my life and
+   *     honor to the Playback Watch, for this Player and all the Players to
+   *     come.
    */
   // Set of events that reset the playback-watcher time check logic and clear the timeout
 
@@ -54467,8 +54918,8 @@
        * Handler for situations when the tech fires a `waiting` event
        *
        * @return {Boolean}
-       *         True if an action (or none) was needed to correct the waiting. False if no
-       *         checks passed
+       *         True if an action (or none) was needed to correct the waiting.
+       *     False if no checks passed
        * @private
        */
 
@@ -54694,7 +55145,8 @@
     /**
      * Set the source on the player element, play, and seek if necessary
      *
-     * @param {Object} sourceObj An object specifying the source url and mime-type to play
+     * @param {Object} sourceObj An object specifying the source url and
+     *     mime-type to play
      * @private
      */
 
@@ -54817,7 +55269,8 @@
    * @file videojs-http-streaming.js
    *
    * The main file for the HLS project.
-   * License: https://github.com/videojs/videojs-http-streaming/blob/master/LICENSE
+   * License:
+   *     https://github.com/videojs/videojs-http-streaming/blob/master/LICENSE
    */
 
   var Hls$1 = {
@@ -54870,10 +55323,12 @@
     return null;
   };
   /**
-   * Updates the selectedIndex of the QualityLevelList when a mediachange happens in hls.
+   * Updates the selectedIndex of the QualityLevelList when a mediachange
+   * happens in hls.
    *
    * @param {QualityLevelList} qualityLevels The QualityLevelList to update.
-   * @param {PlaylistLoader} playlistLoader PlaylistLoader containing the new media info.
+   * @param {PlaylistLoader} playlistLoader PlaylistLoader containing the new
+   *     media info.
    * @function handleHlsMediaChange
    */
 
@@ -54898,7 +55353,8 @@
   /**
    * Adds quality levels to list once playlist metadata is available
    *
-   * @param {QualityLevelList} qualityLevels The QualityLevelList to attach events to.
+   * @param {QualityLevelList} qualityLevels The QualityLevelList to attach
+   *     events to.
    * @param {Object} hls Hls object to listen to for media events.
    * @function handleHlsLoadedMetadata
    */
@@ -55327,13 +55783,14 @@
           },
 
           /**
-           * `systemBandwidth` is a combination of two serial processes bit-rates. The first
-           * is the network bitrate provided by `bandwidth` and the second is the bitrate of
-           * the entire process after that - decryption, transmuxing, and appending - provided
-           * by `throughput`.
+           * `systemBandwidth` is a combination of two serial processes
+           * bit-rates. The first is the network bitrate provided by
+           * `bandwidth` and the second is the bitrate of the entire process
+           * after that - decryption, transmuxing, and appending - provided by
+           * `throughput`.
            *
-           * Since the two process are serial, the overall system bandwidth is given by:
-           *   sysBandwidth = 1 / (1 / bandwidth + 1 / throughput)
+           * Since the two process are serial, the overall system bandwidth is
+           * given by: sysBandwidth = 1 / (1 / bandwidth + 1 / throughput)
            */
           systemBandwidth: {
             get: function get$$1() {

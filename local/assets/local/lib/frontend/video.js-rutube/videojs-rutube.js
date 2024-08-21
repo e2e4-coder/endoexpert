@@ -84,8 +84,9 @@
 
     getVideoId(src) {
 
-      let match = src.match(/rutube\.ru\/video\/([a-zA-Z0-9]+)/);
-      return match ? match[1] : null;
+      let match = src.match(/rutube\.ru\/video\/(.*)/);
+
+      return match ? match[1].replace('private/', '') : null;
     }
 
     onMessage(event) {

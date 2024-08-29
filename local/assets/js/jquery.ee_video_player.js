@@ -23,6 +23,15 @@
 
     }
 
+    if (this.data('vk-src')) {
+
+      var options = {
+        "playbackRates": [0.5, 1, 1.5, 2],
+        techOrder: ['VK'], "sources": [{ "type": "video/vk", "src": this.data('vk-src')}]
+      };
+
+    }
+
 
     if (this.data('youtube-src')) {
 

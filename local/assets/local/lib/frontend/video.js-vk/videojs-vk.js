@@ -51,13 +51,15 @@
       this.iframeEl.frameBorder = '0';
       this.iframeEl.allow = 'autoplay; fullscreen';
       this.iframeEl.setAttribute('allowfullscreen', '');
-      this.iframeEl.setAttribute('style', 'width:100%;height:100%;top:0;left:0;position:absolute');
+      this.iframeEl.setAttribute('style', 'width:100%;height:100%;top:0;left:0;position:absolute;pointer-events:none;');
 
 
       el.appendChild(this.iframeEl);
 
 
       this.initVKPlayer();
+
+      this.iframeEl.blur();
 
       return el;
     }

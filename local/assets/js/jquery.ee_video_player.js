@@ -30,9 +30,6 @@
         techOrder: ['VK'], "sources": [{ "type": "video/vk", "src": this.data('vk-src')}]
       };
 
-      var $vkFixedOverlayBottom = $(this.data('vk-fixed-overlay-bottom-src'));
-
-      var $vkFixedOverlayTop = $(this.data('vk-fixed-overlay-top-src'));
 
 
     }
@@ -113,6 +110,13 @@
 
       $el = $(player.el_);
 
+      if ($el.data('vk-src')) {
+
+        $el.addClass('vjs-vk');
+
+      }
+
+
       if (playlistId) {
         loadPlaylist(playlistId);
       }
@@ -168,9 +172,6 @@
       $el.prev('.ee-video-player__preloader').remove();
 
       player.on('play', function () {
-
-        $vkFixedOverlayBottom.show();
-        $vkFixedOverlayTop.show();
 
         if ($.fn.ee_log_status) {
           $('#log-status').ee_log_status();

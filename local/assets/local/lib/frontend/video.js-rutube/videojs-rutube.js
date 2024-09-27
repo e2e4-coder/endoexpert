@@ -94,7 +94,7 @@
       try {
         const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
 
-        if (message.type !== 'player:currentTime') console.log(message);
+        //if (message.type !== 'player:currentTime') console.log(message);
 
         switch (message.type) {
           case 'player:ready':

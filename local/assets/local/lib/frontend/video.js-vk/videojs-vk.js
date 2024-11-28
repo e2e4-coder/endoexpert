@@ -46,7 +46,7 @@
       el.style.backgroundSize = 'cover';
 
       this.iframeEl = document.createElement('iframe');
-      this.iframeEl.src = `https://vk.com/video_ext.php?${this.getVideoParams(this.options_.source.src)}&js_api=1`;
+      this.iframeEl.src = `${this.options_.source.src.replace('vkvideo.ru', 'vk.com')}&js_api=1`;
       this.iframeEl.id = 'vk-player';
       this.iframeEl.frameBorder = '0';
       this.iframeEl.allow = 'autoplay; fullscreen';
@@ -224,7 +224,7 @@
   };
 
   VK.canPlaySource = function(srcObj) {
-    return srcObj.src.indexOf('vk.com/video_ext.php') !== -1;
+    return srcObj.src.indexOf('vk.com/video_ext.php') !== -1 || srcObj.src.indexOf('vkvideo.ru/video_ext.php') !== -1;
   };
 
   VK.canPlayType = function(e) {

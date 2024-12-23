@@ -692,6 +692,36 @@ $(document).ready(function () {
 
   }
 
+  $('.js-email-validate').each(function () {
+
+    var el = this;
+
+    $(this).change(function () {
+
+      $(el).val($(el).val().replace('mailto:', '').trim());
+
+      if ($(el).val() && !validateEmail($(el).val())) {
+
+        $(el).addClass('-error');
+
+        $(el).siblings('.ee-field-validate-error').remove();
+
+        $('<div class="ee-field-validate-error"><span>Неверный email</span></div>').insertAfter($(el));
+
+      } else {
+
+        $(el).removeClass('-error');
+
+        $(el).siblings('.ee-field-validate-error').remove();
+
+      }
+
+    });
+
+
+
+  });
+
   if (jQuery().ee_form_file) {
 
     $('.js-form-file').ee_form_file();
@@ -872,4 +902,13 @@ function getCookie(name) {
 }
 function eraseCookie(name) {
   document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+
+function validateEmail(email) {
+  return String(email)
+      .toLowerCase()
+      .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
 }

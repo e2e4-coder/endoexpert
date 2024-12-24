@@ -696,17 +696,25 @@ $(document).ready(function () {
 
     var el = this;
 
+    var errorText = 'Неверный email или ошибка'
+
+    if ($(el).data('help-link')) {
+
+      errorText += '. <a target="_blank" href="' + $(el).data('help-link') +  '">Подробнее</a>'
+
+    }
+
     $(this).change(function () {
 
       $(el).val($(el).val().replace('mailto:', '').trim());
 
-      if ($(el).val() && !validateEmail($(el).val())) {
+      if ($(el).val() && !validateEmail($(el).val(), $(el).data('black-list'))) {
 
         $(el).addClass('-error');
 
         $(el).siblings('.ee-field-validate-error').remove();
 
-        $('<div class="ee-field-validate-error"><span>Неверный email</span></div>').insertAfter($(el));
+        $('<div class="ee-field-validate-error"><span>' + errorText + '</span></div>').insertAfter($(el));
 
       } else {
 
@@ -905,10 +913,38 @@ function eraseCookie(name) {
 }
 
 
-function validateEmail(email) {
-  return String(email)
+function validateEmail(email, bl) {
+
+  var result = String(email)
       .toLowerCase()
       .match(
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
+
+  if (!result) return false;
+
+  var blackList = [
+    '@mail.com',
+    '@mail.ru.com',
+    '@gmail.ru',
+    '@gimail.ru',
+    '@gmail.com',
+    '@gmail.ru',
+    '@meil.ru',
+    '@mail.tu',
+    '@icloud.com',
+    '@yahoo.com',
+  ];
+
+  if (bl) {
+
+    bl = bl.split(',');
+    bl.forEach(function (value) { blackList.push(value.trim())});
+
+  }
+
+  var parts = email.split('@');
+
+  return blackList.indexOf('@' + parts[1]) === -1;
+
 }
